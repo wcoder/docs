@@ -15,10 +15,10 @@ ms.workload:
 ---
 # Asynchronous Programming
 
-This topic discusses support for asynchronous programming in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (SqlClient) including enhancements made to support asynchronous programming functionality that was introduced in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+This topic discusses support for asynchronous programming in the [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (SqlClient) including enhancements made to support asynchronous programming functionality that was introduced in [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)].  
   
 ## Legacy Asynchronous Programming  
- Prior to [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], asynchronous programming with SqlClient was done with the following methods and the `Asynchronous Processing=true` connection property:  
+ Prior to [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)], asynchronous programming with SqlClient was done with the following methods and the `Asynchronous Processing=true` connection property:  
   
 1.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>  
   
@@ -26,14 +26,14 @@ This topic discusses support for asynchronous programming in the [!INCLUDE[dnprd
   
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
- This functionality remains in SqlClient in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+ This functionality remains in SqlClient in [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)].  
   
- Beginning in the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], these methods no longer require `Asynchronous Processing=true` in the connection string.  
+ Beginning in the [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)], these methods no longer require `Asynchronous Processing=true` in the connection string.  
   
-## Asynchronous Programming Features Added in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
+## Asynchronous Programming Features Added in [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)]  
  The new asynchronous programming feature provides a simple technique to make code asynchronous.  
   
- For more information about the asynchronous programming feature that was introduced in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], see:  
+ For more information about the asynchronous programming feature that was introduced in [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)], see:  
   
 - [Asynchronous programming in C#](../../../csharp/async.md)
 
@@ -54,7 +54,7 @@ This topic discusses support for asynchronous programming in the [!INCLUDE[dnprd
   
  Calling an `async` method does not allocate any additional threads. It may use the existing I/O completion thread briefly at the end.  
   
- The following methods were added in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] to support asynchronous programming:  
+ The following methods were added in [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)] to support asynchronous programming:  
   
 -   <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>  
   

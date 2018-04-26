@@ -18,21 +18,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ---
 # How to: Invoke the Command-Line Compiler (Visual Basic)
-You can invoke the command-line compiler by typing the name of its executable file into the command line, also known as the MS-DOS prompt. If you compile from the default Windows Command Prompt, you must type the fully qualified path to the executable file. To override this default behavior, you can either use the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Command Prompt, or modify the PATH environment variable. Both allow you to compile from any directory by simply typing the compiler name.  
+You can invoke the command-line compiler by typing the name of its executable file into the command line, also known as the MS-DOS prompt. If you compile from the default Windows Command Prompt, you must type the fully qualified path to the executable file. To override this default behavior, you can either use the [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)] Command Prompt, or modify the PATH environment variable. Both allow you to compile from any directory by simply typing the compiler name.  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE [note_settings_general](~/includes/note-settings-general-md.md)]
   
 ### To invoke the compiler using the Visual Studio Command Prompt  
   
-1.  Open the Visual Studio Tools program folder within the Microsoft Visual Studio program group.  
+1. Open the Visual Studio Tools program folder within the Microsoft Visual Studio program group.  
   
-2.  You can use the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Command Prompt to access the compiler from any directory on your machine, if Visual Studio is installed.  
+2. You can use the [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)] Command Prompt to access the compiler from any directory on your machine, if Visual Studio is installed.  
   
-3.  Invoke the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Command Prompt.  
+3. Invoke the [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)] Command Prompt.  
   
-4.  At the command line, type `vbc.exe` *sourceFileName* and then press ENTER.  
+4. At the command line, type `vbc.exe` *sourceFileName* and then press ENTER.  
   
-     For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.  
+    For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.  
   
 ### To set the PATH environment variable to the compiler for the Windows Command Prompt  
   

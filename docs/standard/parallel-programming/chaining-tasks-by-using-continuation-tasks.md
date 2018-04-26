@@ -125,7 +125,7 @@ In asynchronous programming, it is very common for one asynchronous operation, o
   
  Continuation state is useful when you convert existing code that uses the [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) to use the TPL. In the APM, you typically provide object state in the **Begin***Method* method and later access that state by using the <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> property. By using the <xref:System.Threading.Tasks.Task.ContinueWith%2A> method, you can preserve this state when you convert code that uses the APM to use the TPL.  
   
- Continuation state can also be useful when you work with <xref:System.Threading.Tasks.Task> objects in the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] debugger. For example, in the **Parallel Tasks** window, the **Task** column displays the string representation of the state object for each task. For more information about the **Parallel Tasks** window, see [Using the Tasks Window](/visualstudio/debugger/using-the-tasks-window).  
+ Continuation state can also be useful when you work with <xref:System.Threading.Tasks.Task> objects in the [!INCLUDE [vsprvs](../../../includes/vsprvs-md.md)] debugger. For example, in the **Parallel Tasks** window, the **Task** column displays the string representation of the state object for each task. For more information about the **Parallel Tasks** window, see [Using the Tasks Window](/visualstudio/debugger/using-the-tasks-window).  
   
  The following example shows how to use continuation state. It creates a chain of continuation tasks. Each task provides the current time, a <xref:System.DateTime> object, for the `state` parameter of the <xref:System.Threading.Tasks.Task.ContinueWith%2A> method. Each <xref:System.DateTime> object represents the time at which the continuation task is created. Each task produces as its result a second <xref:System.DateTime> object that represents the time at which the task finishes. After all tasks finish, this example displays the creation time and the time at which each continuation task finishes.  
   
@@ -135,24 +135,24 @@ In asynchronous programming, it is very common for one asynchronous operation, o
 ## Handling Exceptions Thrown from Continuations  
  An antecedent-continuation relationship is not a parent-child relationship. Exceptions thrown by continuations are not propagated to the antecedent. Therefore, handle exceptions thrown by continuations as you would handle them in any other task, as follows:  
   
--   You can use the <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>, or <xref:System.Threading.Tasks.Task.WaitAny%2A> method, or its generic counterpart, to wait on the continuation. You can wait for an antecedent and its continuations in the same `try` statement, as shown in the following example.  
+- You can use the <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>, or <xref:System.Threading.Tasks.Task.WaitAny%2A> method, or its generic counterpart, to wait on the continuation. You can wait for an antecedent and its continuations in the same `try` statement, as shown in the following example.  
   
-     [!code-csharp[TPL_Continuations#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception1.cs#6)]
-     [!code-vb[TPL_Continuations#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception1.vb#6)]  
+   [!code-csharp[TPL_Continuations#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception1.cs#6)]
+   [!code-vb[TPL_Continuations#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception1.vb#6)]  
   
--   You can use a second continuation to observe the <xref:System.Threading.Tasks.Task.Exception%2A> property of the first continuation. In the following example, a task attempts to read from a non-existent file. The continuation then displays information about the exception in the antecedent task.  
+- You can use a second continuation to observe the <xref:System.Threading.Tasks.Task.Exception%2A> property of the first continuation. In the following example, a task attempts to read from a non-existent file. The continuation then displays information about the exception in the antecedent task.  
   
-     [!code-csharp[TPL_Continuations#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#4)]
-     [!code-vb[TPL_Continuations#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#4)]  
+   [!code-csharp[TPL_Continuations#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#4)]
+   [!code-vb[TPL_Continuations#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#4)]  
   
-     Because it was run with the <xref:System.Threading.Tasks.TaskContinuationOptions.OnlyOnFaulted?displayProperty=nameWithType> option, the continuation executes only if an exception occurs in the antecedent, and therefore it can assume that the antecedent's <xref:System.Threading.Tasks.Task.Exception%2A> property is not `null`. If the continuation executes whether or not an exception is thrown in the antecedent, it would have to check whether the antecedent's <xref:System.Threading.Tasks.Task.Exception%2A> property is not `null` before attempting to handle the exception, as the following code fragment shows.  
+   Because it was run with the <xref:System.Threading.Tasks.TaskContinuationOptions.OnlyOnFaulted?displayProperty=nameWithType> option, the continuation executes only if an exception occurs in the antecedent, and therefore it can assume that the antecedent's <xref:System.Threading.Tasks.Task.Exception%2A> property is not `null`. If the continuation executes whether or not an exception is thrown in the antecedent, it would have to check whether the antecedent's <xref:System.Threading.Tasks.Task.Exception%2A> property is not `null` before attempting to handle the exception, as the following code fragment shows.  
   
-     [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
-     [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
+   [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
+   [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     For more information, see [Exception Handling](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) and [NIB: How to: Handle Exceptions Thrown by Tasks](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+   For more information, see [Exception Handling](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) and [NIB: How to: Handle Exceptions Thrown by Tasks](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
--   If the continuation is an attached child task that was created by using the <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> option, its exceptions will be propagated by the parent back to the calling thread, as is the case in any other attached child. For more information, see [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+- If the continuation is an attached child task that was created by using the <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> option, its exceptions will be propagated by the parent back to the calling thread, as is the case in any other attached child. For more information, see [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
 ## See Also  
  [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

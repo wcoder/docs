@@ -41,41 +41,41 @@ You can use styles in HTML to control the appearance of a document and its eleme
   
 ### To process style changes in a Windows Forms application  
   
-1.  Create a new Windows Forms project.  
+1. Create a new Windows Forms project.  
   
-2.  Create a new class file ending in the extension appropriate for your programming language.  
+2. Create a new class file ending in the extension appropriate for your programming language.  
   
-3.  Copy the `StyleGenerator` class code in the Example section of this topic into the class file, and save the code.  
+3. Copy the `StyleGenerator` class code in the Example section of this topic into the class file, and save the code.  
   
-4.  Save the following HTML to a file named Test.htm.  
+4. Save the following HTML to a file named Test.htm.  
   
-    ```  
-    <HTML>  
-        <BODY>  
+   ```  
+   <HTML>  
+       <BODY>  
   
-            <DIV style="font-face:arial;font-weight:bold;">  
-                Hello, world!  
-            </DIV><P>  
+           <DIV style="font-face:arial;font-weight:bold;">  
+               Hello, world!  
+           </DIV><P>  
   
-            <DIV>  
-                Hello again, world!  
-            </DIV><P>  
+           <DIV>  
+               Hello again, world!  
+           </DIV><P>  
   
-        </BODY>  
-    </HTML>  
-    ```  
+       </BODY>  
+   </HTML>  
+   ```  
   
-5.  Add a <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1` to the main form of your project.  
+5. Add a <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1` to the main form of your project.  
   
-6.  Add the following code to your project's code file.  
+6. Add the following code to your project's code file.  
   
-    > [!IMPORTANT]
-    >  Ensure that the `webBrowser1_DocumentCompleted` event hander is configured as a listener for the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event. In [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], double-click on the <xref:System.Windows.Forms.WebBrowser> control; in a text editor, configure the listener programmatically.  
+   > [!IMPORTANT]
+   >  Ensure that the `webBrowser1_DocumentCompleted` event hander is configured as a listener for the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event. In [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)], double-click on the <xref:System.Windows.Forms.WebBrowser> control; in a text editor, configure the listener programmatically.  
   
-     [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
-     [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
+    [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
+    [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
   
-7.  Run the project. Run your cursor over the first `DIV` to observe the effects of the code.  
+7. Run the project. Run your cursor over the first `DIV` to observe the effects of the code.  
   
 ## Example  
  The following code example shows the full code for the `StyleGenerator` class, which parses an existing style value, supports adding, changing, and removing styles, and returns a new style value with the requested changes.  

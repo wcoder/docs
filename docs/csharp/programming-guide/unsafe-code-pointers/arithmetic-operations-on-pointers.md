@@ -34,7 +34,7 @@ This topic discusses using the arithmetic operators `+` and **-** to manipulate 
  [!code-csharp[csProgGuidePointers#15](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_2.cs)]  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Programming Guide](../../../csharp/programming-guide/index.md)  

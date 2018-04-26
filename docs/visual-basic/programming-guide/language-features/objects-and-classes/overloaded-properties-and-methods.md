@@ -63,19 +63,19 @@ Overloading is the creation of more than one procedure, instance constructor, or
   
 #### To use this example to create an overloaded method
   
-1.  Open a new project and add a class named `TaxClass`.  
+1. Open a new project and add a class named `TaxClass`.  
   
-2.  Add the following code to the `TaxClass` class.  
+2. Add the following code to the `TaxClass` class.  
   
-     [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
+    [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
   
-3.  Add the following procedure to your form.  
+3. Add the following procedure to your form.  
   
-     [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
+    [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
   
-4.  Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.  
+4. Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.  
   
-5.  Run the project and click the button on the form to test the overloaded `ShowTax` procedure.  
+5. Run the project and click the button on the form to test the overloaded `ShowTax` procedure.  
   
  At run time, the compiler chooses the appropriate overloaded function that matches the parameters being used. When you click the button, the overloaded method is called first with a `Price` parameter that is a string and the message, "Price is a String. Tax is $5.12" is displayed. `TaxAmount` is called with a `Decimal` value the second time and the message, "Price is a Decimal. Tax is $5.12" is displayed.  
   

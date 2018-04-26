@@ -27,7 +27,7 @@ ms.workload:
 # GetCurrentApartmentType function
 Retrieves the type of apartment in which the caller is executing.   
   
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
 ## Syntax  
   
@@ -67,7 +67,7 @@ This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](h
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

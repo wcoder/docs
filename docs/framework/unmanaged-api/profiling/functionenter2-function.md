@@ -82,7 +82,7 @@ void __stdcall FunctionEnter2 (
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  [FunctionLeave2 Function](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  

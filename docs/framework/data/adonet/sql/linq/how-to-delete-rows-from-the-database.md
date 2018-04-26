@@ -21,9 +21,9 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Delete Rows From the Database
-You can delete rows in a database by removing the corresponding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objects from their table-related collection. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates your changes to the appropriate SQL `DELETE` commands.  
+You can delete rows in a database by removing the corresponding [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objects from their table-related collection. [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates your changes to the appropriate SQL `DELETE` commands.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support or recognize cascade-delete operations. If you want to delete a row in a table that has constraints against it, you must complete either of the following tasks:  
+ [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support or recognize cascade-delete operations. If you want to delete a row in a table that has constraints against it, you must complete either of the following tasks:  
   
 -   Set the `ON DELETE CASCADE` rule in the foreign-key constraint in the database.  
   
@@ -32,9 +32,9 @@ You can delete rows in a database by removing the corresponding [!INCLUDE[vbtecd
  Otherwise, an exception is thrown. See the second code example later in this topic.  
   
 > [!NOTE]
->  You can override [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default methods for `Insert`, `Update`, and `Delete` database operations. For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
->   
->  Developers using Visual Studio can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to develop stored procedures for the same purpose.  
+>  You can override [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default methods for `Insert`, `Update`, and `Delete` database operations. For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+> 
+>  Developers using Visual Studio can use the [!INCLUDE [vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to develop stored procedures for the same purpose.  
   
  The following steps assume that a valid <xref:System.Data.Linq.DataContext> connects you to the Northwind database. For more information, see [How to: Connect to a Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md).  
   

@@ -24,7 +24,7 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Customize Feeds with the Reflection Provider (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enables you to customize the Atom serialization in a data service response so that properties of an entity may be mapped to unused elements that are defined in the AtomPub protocol. This topic shows how to define mapping attributes for the entity types in a data model that is defined by using the reflection provider. For more information, see [Feed Customization](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
+[!INCLUDE [ssAstoria](../../../../includes/ssastoria-md.md)] enables you to customize the Atom serialization in a data service response so that properties of an entity may be mapped to unused elements that are defined in the AtomPub protocol. This topic shows how to define mapping attributes for the entity types in a data model that is defined by using the reflection provider. For more information, see [Feed Customization](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
   
  The data model for this example is defined in the topic [How to: Create a Data Service Using the Reflection Provider](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
   

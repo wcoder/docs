@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Transport: UDP
-The UDP Transport sample demonstrates how to implement UDP unicast and multicast as a custom [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transport. The sample describes the recommended procedure for creating a custom transport in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], by using the channel framework and following [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] best practices. The steps to create a custom transport are as follows:  
+The UDP Transport sample demonstrates how to implement UDP unicast and multicast as a custom [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] transport. The sample describes the recommended procedure for creating a custom transport in [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)], by using the channel framework and following [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] best practices. The steps to create a custom transport are as follows:  
   
 1.  Decide which of the channel [Message Exchange Patterns](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel, or IReplyChannel) your ChannelFactory and ChannelListener will support. Then decide whether you will support the sessionful variations of these interfaces.  
   
@@ -58,7 +58,7 @@ The UDP Transport sample demonstrates how to implement UDP unicast and multicast
 >  For the UDP transport, the only MEP that is supported is Datagram, because UDP is inherently a "fire and forget" protocol.  
   
 ### The ICommunicationObject and the WCF object lifecycle  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] has a common state machine that is used for managing the lifecycle of objects like <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, and <xref:System.ServiceModel.Channels.IChannelListener> that are used for communication. There are five states in which these communication objects can exist. These states are represented by the <xref:System.ServiceModel.CommunicationState> enumeration, and are as follows:  
+ [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] has a common state machine that is used for managing the lifecycle of objects like <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, and <xref:System.ServiceModel.Channels.IChannelListener> that are used for communication. There are five states in which these communication objects can exist. These states are represented by the <xref:System.ServiceModel.CommunicationState> enumeration, and are as follows:  
   
 -   Created: This is the state of a <xref:System.ServiceModel.ICommunicationObject> when it is first instantiated. No input/output (I/O) occurs in this state.  
   
@@ -76,15 +76,15 @@ The UDP Transport sample demonstrates how to implement UDP unicast and multicast
   
 <a name="ChannelAndChannelListener"></a>   
 ## Channel Factory and Channel Listener  
- The next step in writing a custom transport is to create an implementation of <xref:System.ServiceModel.Channels.IChannelFactory> for client channels and of <xref:System.ServiceModel.Channels.IChannelListener> for service channels. The channel layer uses a factory pattern for constructing channels. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides base class helpers for this process.  
+ The next step in writing a custom transport is to create an implementation of <xref:System.ServiceModel.Channels.IChannelFactory> for client channels and of <xref:System.ServiceModel.Channels.IChannelListener> for service channels. The channel layer uses a factory pattern for constructing channels. [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] provides base class helpers for this process.  
   
--   The <xref:System.ServiceModel.Channels.CommunicationObject> class implements <xref:System.ServiceModel.ICommunicationObject> and enforces the state machine previously described in Step 2. 
+- The <xref:System.ServiceModel.Channels.CommunicationObject> class implements <xref:System.ServiceModel.ICommunicationObject> and enforces the state machine previously described in Step 2. 
 
--   The``<xref:System.ServiceModel.Channels.ChannelManagerBase> class implements <xref:System.ServiceModel.Channels.CommunicationObject> and provides a unified base class for <xref:System.ServiceModel.Channels.ChannelFactoryBase> and <xref:System.ServiceModel.Channels.ChannelListenerBase>. The <xref:System.ServiceModel.Channels.ChannelManagerBase> class works in conjunction with <xref:System.ServiceModel.Channels.ChannelBase>, which is a base class that implements <xref:System.ServiceModel.Channels.IChannel>.  
+- The``<xref:System.ServiceModel.Channels.ChannelManagerBase> class implements <xref:System.ServiceModel.Channels.CommunicationObject> and provides a unified base class for <xref:System.ServiceModel.Channels.ChannelFactoryBase> and <xref:System.ServiceModel.Channels.ChannelListenerBase>. The <xref:System.ServiceModel.Channels.ChannelManagerBase> class works in conjunction with <xref:System.ServiceModel.Channels.ChannelBase>, which is a base class that implements <xref:System.ServiceModel.Channels.IChannel>.  
   
--   The``<xref:System.ServiceModel.Channels.ChannelFactoryBase> class implements <xref:System.ServiceModel.Channels.ChannelManagerBase> and <xref:System.ServiceModel.Channels.IChannelFactory> and consolidates the `CreateChannel` overloads into one `OnCreateChannel` abstract method.  
+- The``<xref:System.ServiceModel.Channels.ChannelFactoryBase> class implements <xref:System.ServiceModel.Channels.ChannelManagerBase> and <xref:System.ServiceModel.Channels.IChannelFactory> and consolidates the `CreateChannel` overloads into one `OnCreateChannel` abstract method.  
   
--   The <xref:System.ServiceModel.Channels.ChannelListenerBase> class implements <xref:System.ServiceModel.Channels.IChannelListener>. It takes care of basic state management.  
+- The <xref:System.ServiceModel.Channels.ChannelListenerBase> class implements <xref:System.ServiceModel.Channels.IChannelListener>. It takes care of basic state management.  
   
  In this sample, the factory implementation is contained in UdpChannelFactory.cs and the listener implementation is contained in UdpChannelListener.cs. The <xref:System.ServiceModel.Channels.IChannel> implementations are in UdpOutputChannel.cs and UdpInputChannel.cs.  
   
@@ -263,9 +263,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## Adding a Standard Binding  
  Our binding element can be used in the following two ways:  
   
--   Through a custom binding: A custom binding allows the user to create their own binding based on an arbitrary set of binding elements.  
+- Through a custom binding: A custom binding allows the user to create their own binding based on an arbitrary set of binding elements.  
   
--   By using a system-provided binding that includes our binding element. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides a number of these system-defined bindings, such as `BasicHttpBinding`, `NetTcpBinding`, and `WsHttpBinding`. Each of these bindings is associated with a well-defined profile.  
+- By using a system-provided binding that includes our binding element. [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] provides a number of these system-defined bindings, such as `BasicHttpBinding`, `NetTcpBinding`, and `WsHttpBinding`. Each of these bindings is associated with a well-defined profile.  
   
  The sample implements profile binding in `SampleProfileUdpBinding`, which derives from <xref:System.ServiceModel.Channels.Binding>. The `SampleProfileUdpBinding` contains up to four binding elements within it: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement`, and `ReliableSessionBindingElement`.  
   
@@ -482,9 +482,9 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

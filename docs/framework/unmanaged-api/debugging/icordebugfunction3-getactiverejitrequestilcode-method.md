@@ -56,7 +56,7 @@ HRESULT GetActiveReJitRequestILCode(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## See Also  
  [ICorDebugFunction3 Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)  

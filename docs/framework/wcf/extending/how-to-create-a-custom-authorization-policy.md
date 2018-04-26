@@ -21,7 +21,7 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Create a Custom Authorization Policy
-The Identity Model infrastructure in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supports a claim-based authorization model. Claims are extracted from tokens, optionally processed by custom authorization policy, and then placed into an <xref:System.IdentityModel.Policy.AuthorizationContext> that can then be examined to make authorization decisions. A custom policy can be used to transform claims from incoming tokens into claims expected by the application. In this way, the application layer can be insulated from the details on the differing claims served up by the different token types that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supports. This topic shows how to implement a custom authorization policy and how to add that policy to the collection of policies used by a service.  
+The Identity Model infrastructure in [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] supports a claim-based authorization model. Claims are extracted from tokens, optionally processed by custom authorization policy, and then placed into an <xref:System.IdentityModel.Policy.AuthorizationContext> that can then be examined to make authorization decisions. A custom policy can be used to transform claims from incoming tokens into claims expected by the application. In this way, the application layer can be insulated from the details on the differing claims served up by the different token types that [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] supports. This topic shows how to implement a custom authorization policy and how to add that policy to the collection of policies used by a service.  
   
 ### To implement a custom authorization policy  
   
@@ -64,18 +64,18 @@ The Identity Model infrastructure in [!INCLUDE[indigo1](../../../../includes/ind
   
 ### To specify a custom authorization policy through code  
   
-1.  Create a <xref:System.Collections.Generic.List%601> of <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
+1. Create a <xref:System.Collections.Generic.List%601> of <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
   
-2.  Create an instance of the custom authorization policy.  
+2. Create an instance of the custom authorization policy.  
   
-3.  Add the authorization policy instance to the list.  
+3. Add the authorization policy instance to the list.  
   
-4.  Repeat steps 2 and 3 for each custom authorization policy.  
+4. Repeat steps 2 and 3 for each custom authorization policy.  
   
-5.  Assign a read-only version of the list to the <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A> property.  
+5. Assign a read-only version of the list to the <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A> property.  
   
-     [!code-csharp[c_CustomAuthPol#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#8)]
-     [!code-vb[c_CustomAuthPol#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#8)]  
+    [!code-csharp[c_CustomAuthPol#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#8)]
+    [!code-vb[c_CustomAuthPol#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#8)]  
   
 ## Example  
  The following example shows a complete <xref:System.IdentityModel.Policy.IAuthorizationPolicy> implementation.  

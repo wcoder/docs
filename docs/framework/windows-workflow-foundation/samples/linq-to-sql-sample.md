@@ -19,12 +19,12 @@ ms.workload:
 This sample demonstrates how to create an activity to use LINQ to SQL query entities from tables in SQL Server databases.  
   
 > [!IMPORTANT]
->  The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+>  The [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] samples may already be installed on your machine. Check for the following (default) directory before continuing.  
+> 
 >  `<InstallDrive>:\Samples\WCFWFCardspace`  
->   
->  If this directory does not exist, click the download sample link at the top of this page. Note that this link downloads and installs all of the [!INCLUDE[wf1](../../../../includes/wf1-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], and [!INCLUDE[infocard](../../../../includes/infocard-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, click the download sample link at the top of this page. Note that this link downloads and installs all of the [!INCLUDE [wf1](../../../../includes/wf1-md.md)], [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)], and [!INCLUDE [infocard](../../../../includes/infocard-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
   
 ## Activity details for FindInSqlTable  
@@ -50,32 +50,32 @@ new FindInSqlTable<Employee>
   
 #### To use this sample  
   
-1.  Open a command prompt.  
+1. Open a command prompt.  
   
-2.  Navigate to the folder that contains this sample.  
+2. Navigate to the folder that contains this sample.  
   
-3.  Run the Setup.cmd command file.  
+3. Run the Setup.cmd command file.  
   
-    > [!NOTE]
-    >  The Setup.cmd script attempts to install the sample database in your local machine SQL Server Express. If you want to install it in other SQL server instance, edit Setup.cmd.  
+   > [!NOTE]
+   >  The Setup.cmd script attempts to install the sample database in your local machine SQL Server Express. If you want to install it in other SQL server instance, edit Setup.cmd.  
   
-     The Setup.cmd script does the following actions.:  
+    The Setup.cmd script does the following actions.:  
   
-    -   Creates a database called LinqToSqlSample.  
+   -   Creates a database called LinqToSqlSample.  
   
-    -   Creates a Roles table.  
+   -   Creates a Roles table.  
   
-    -   Creates an Employees table.  
+   -   Creates an Employees table.  
   
-    -   Inserts 3 records into the Roles table.  
+   -   Inserts 3 records into the Roles table.  
   
-    -   Inserts 12 records into the Employees table.  
+   -   Inserts 12 records into the Employees table.  
   
-4.  Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the LinqToSQL.sln solution file.  
+4. Using [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)], open the LinqToSQL.sln solution file.  
   
-5.  To build the solution, press CTRL+SHIFT+B.  
+5. To build the solution, press CTRL+SHIFT+B.  
   
-6.  To run the solution, press F5.  
+6. To run the solution, press F5.  
   
 #### To uninstall the LinqToSql sample database  
   
@@ -87,11 +87,11 @@ new FindInSqlTable<Employee>
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Liiinq\LinqToSql`  
   
 ## See Also  

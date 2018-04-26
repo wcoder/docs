@@ -41,7 +41,7 @@ The `override` modifier is required to extend or modify the abstract or virtual 
  [!code-csharp[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Reference](../../../csharp/language-reference/index.md)  

@@ -15,7 +15,7 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ---
 # Sample XML File: Customers and Orders in a Namespace
-The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. This file contains customers and orders. The XML is in a namespace.  
+The following XML file is used in various examples in the [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. This file contains customers and orders. The XML is in a namespace.  
   
 ## CustomersOrdersInNamespace.xml  
   

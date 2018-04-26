@@ -80,7 +80,7 @@ HRESULT GetCodeInfo3(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## See Also  
  [GetCodeInfo2 Method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)  

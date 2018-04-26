@@ -316,16 +316,16 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 #### To run the sample on the same computer  
   
-1.  Run Setup.bat from the sample install folder inside a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt opened with administrator privileges. This installs all the certificates required for running the sample.  
+1. Run Setup.bat from the sample install folder inside a [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt opened with administrator privileges. This installs all the certificates required for running the sample.  
   
-    > [!IMPORTANT]
-    >  The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt. The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.  
+   > [!IMPORTANT]
+   >  The Setup.bat batch file is designed to be run from a [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt. The PATH environment variable set within the [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.  
   
-2.  Launch Service.exe from service\bin.  
+2. Launch Service.exe from service\bin.  
   
-3.  Launch Client.exe from \client\bin. Client activity is displayed on the client console application.  
+3. Launch Client.exe from \client\bin. Client activity is displayed on the client console application.  
   
-4.  If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4. If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### To run the sample across computers  
   
@@ -362,6 +362,6 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 1.  Run Cleanup.bat in the samples folder once you have finished running the sample. This removes the server and client certificates from the certificate store.  
   
 > [!NOTE]
->  This script does not remove service certificates on a client when running this sample across computers. If you have run [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store. To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  This script does not remove service certificates on a client when running this sample across computers. If you have run [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store. To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## See Also

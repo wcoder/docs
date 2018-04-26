@@ -62,7 +62,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## See Also  
  [ICorDebugInternalFrame2 Interface](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  

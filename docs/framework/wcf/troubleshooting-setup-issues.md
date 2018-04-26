@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Troubleshooting Setup Issues
-This topic describes how to troubleshoot [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] set up issues.  
+This topic describes how to troubleshoot [!INCLUDE [indigo1](../../../includes/indigo1-md.md)] set up issues.  
   
 ## Some Windows Communication Foundation Registry Keys are not Repaired by Performing an MSI Repair Operation on the .NET Framework 3.0  
  If you delete any of the following registry keys:  
@@ -60,22 +60,22 @@ This topic describes how to troubleshoot [!INCLUDE[indigo1](../../../includes/in
   
  The following steps must be followed to resolve the problem described previously.  
   
-1.  Run [the WMI Diagnosis Utility, version 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) to repair the WMI service. [!INCLUDE[crabout](../../../includes/crabout-md.md)] using this tool, see the [WMI Diagnosis Utility](http://go.microsoft.com/fwlink/?LinkId=94686) topic.  
+1. Run [the WMI Diagnosis Utility, version 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) to repair the WMI service. [!INCLUDE [crabout](../../../includes/crabout-md.md)] using this tool, see the [WMI Diagnosis Utility](http://go.microsoft.com/fwlink/?LinkId=94686) topic.  
   
  Repair the .NET Framework 3.0 installation by using the **Add/Remove Programs** applet located in **Control Panel**, or uninstall/reinstall the .NET Framework 3.0.  
   
 ## Repairing .NET Framework 3.0 after .NET Framework 3.5 Installation Removes Configuration Elements Introduced by .NET Framework 3.5 in machine.config  
- If you do a repair of .NET Framework 3.0 after you installed [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], configuration elements introduced by [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] in machine.config are removed. However, the web.config remains intact. The workaround is to repair [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] after this via ARP, or use the [WorkFlow Service Registration Tool (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) with the `/c` switch.  
+ If you do a repair of .NET Framework 3.0 after you installed [!INCLUDE [netfx35_short](../../../includes/netfx35-short-md.md)], configuration elements introduced by [!INCLUDE [netfx35_short](../../../includes/netfx35-short-md.md)] in machine.config are removed. However, the web.config remains intact. The workaround is to repair [!INCLUDE [netfx35_short](../../../includes/netfx35-short-md.md)] after this via ARP, or use the [WorkFlow Service Registration Tool (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) with the `/c` switch.  
   
  [WorkFlow Service Registration Tool (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) can be found at %windir%\Microsoft.NET\framework\v3.5\ or %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## Configure IIS Properly for WCF/WF Webhost after Installing .NET Framework 3.5  
- When [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] installation fails to configure additional [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-related IIS configuration settings, it logs an error in the installation log and continues. Any attempt to run WorkflowServices applications will fail, since the required configuration settings are missing. For example, loading xoml or rules service can fail.  
+ When [!INCLUDE [netfx35_short](../../../includes/netfx35-short-md.md)] installation fails to configure additional [!INCLUDE [indigo2](../../../includes/indigo2-md.md)]-related IIS configuration settings, it logs an error in the installation log and continues. Any attempt to run WorkflowServices applications will fail, since the required configuration settings are missing. For example, loading xoml or rules service can fail.  
   
  To workaround this problem, use the [WorkFlow Service Registration Tool (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) with the `/c` switch to properly configure IIS script maps on the machine. [WorkFlow Service Registration Tool (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) can be found at %windir%\Microsoft.NET\framework\v3.5\ or %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## Could not load type ‘System.ServiceModel.Activation.HttpModule’ from assembly ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’  
- This error occurs if [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] is installed and then [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)] HTTP Activation is enabled. To resolve the issue run the following command-line from inside the [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] Command Prompt:  
+ This error occurs if [!INCLUDE [netfx40_short](../../../includes/netfx40-short-md.md)] is installed and then [!INCLUDE [netfx35_short](../../../includes/netfx35-short-md.md)][!INCLUDE [indigo2](../../../includes/indigo2-md.md)] HTTP Activation is enabled. To resolve the issue run the following command-line from inside the [!INCLUDE [vs2010](../../../includes/vs2010-md.md)] Command Prompt:  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

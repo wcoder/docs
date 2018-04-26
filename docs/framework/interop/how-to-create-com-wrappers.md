@@ -21,13 +21,13 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Create COM Wrappers
-You can create Component Object Model (COM) wrappers by using [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] features or the .NET Framework tools Tlbimp.exe and Regasm.exe. Both methods generate two types of COM wrappers:  
+You can create Component Object Model (COM) wrappers by using [!INCLUDE [vsprvsext](../../../includes/vsprvsext-md.md)] features or the .NET Framework tools Tlbimp.exe and Regasm.exe. Both methods generate two types of COM wrappers:  
   
 -   A [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) from a type library to run a COM object in managed code.  
   
 -   A [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md) with the required registry settings to run a managed object in a native application.  
   
- In [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], you can add the COM wrapper as a reference to your project.  
+ In [!INCLUDE [vsprvslong](../../../includes/vsprvslong-md.md)], you can add the COM wrapper as a reference to your project.  
   
 ## Wrapping COM Objects in a Managed Application  
   
@@ -43,7 +43,7 @@ You can create Component Object Model (COM) wrappers by using [!INCLUDE[vsprvsex
   
      In **Solution Explorer**, note that the COM component is added to the References folder in your project.  
   
- You can now write code to access the COM object. You can begin by declaring the object, such as with an `Imports` statement for [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] or a `Using` statement for [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].  
+ You can now write code to access the COM object. You can begin by declaring the object, such as with an `Imports` statement for [!INCLUDE [vbprvblong](../../../includes/vbprvblong-md.md)] or a `Using` statement for [!INCLUDE [csprcslong](../../../includes/csprcslong-md.md)].  
   
 > [!NOTE]
 >  If you want to program Microsoft Office components, first install the [Microsoft Office Primary Interop Assemblies](http://go.microsoft.com/fwlink/?LinkId=50479) (PIAs) from the Microsoft Download Center. In step 4, select the latest version of the object library available for the Office product you want, such as the **Microsoft Word 11.0 Object Library**.  
@@ -68,7 +68,7 @@ You can create Component Object Model (COM) wrappers by using [!INCLUDE[vsprvsex
   
 4.  Select the **Register for COM interop** check box.  
   
- When you build the project, the assembly is automatically registered for COM interop. If you are building a native application in [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], you can use the assembly by clicking **Add Reference** on the **Project** menu.  
+ When you build the project, the assembly is automatically registered for COM interop. If you are building a native application in [!INCLUDE [vsprvslong](../../../includes/vsprvslong-md.md)], you can use the assembly by clicking **Add Reference** on the **Project** menu.  
   
 #### To create a COM callable wrapper using .NET Framework tools  
   

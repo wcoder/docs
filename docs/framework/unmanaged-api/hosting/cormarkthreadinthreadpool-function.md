@@ -30,7 +30,7 @@ ms.workload:
   - "dotnet"
 ---
 # CorMarkThreadInThreadPool Function
-Marks the currently executing thread-pool thread for the execution of managed code. Starting with the .NET Framework version 2.0, this function has no effect. It is not required, and can be removed from your code.This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+Marks the currently executing thread-pool thread for the execution of managed code. Starting with the .NET Framework version 2.0, this function has no effect. It is not required, and can be removed from your code.This function is deprecated in the [!INCLUDE [net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## Syntax  
   
@@ -45,7 +45,7 @@ void CorMarkThreadInThreadPool ();
   
  **Library:** MSCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## See Also  
  [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

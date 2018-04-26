@@ -27,7 +27,7 @@ Some C# compiler errors have corresponding topics that explain why the error is 
   
  For information about how to configure error and warning options in C#, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE [note_settings_general](~/includes/note-settings-general-md.md)]
   
 ## See Also  
  [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  

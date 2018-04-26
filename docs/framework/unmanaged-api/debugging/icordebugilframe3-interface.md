@@ -46,7 +46,7 @@ Provides a method that encapsulates the return value of a function. `ICorDebugIL
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## See Also  
  [ICorDebugCode3 Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  

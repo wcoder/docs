@@ -64,7 +64,7 @@ Determines whether the runtime preserves legacy behavior in formatting operation
 |`runtime`|Contains information about runtime initialization options.|  
   
 ## Remarks  
- Starting with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], the <xref:System.TimeSpan?displayProperty=nameWithType> structure implements the <xref:System.IFormattable> interface and supports formatting operations with standard and custom format strings. If a parsing method encounters an unsupported format specifier or format string, it throws a <xref:System.FormatException>.  
+ Starting with the [!INCLUDE [net_v40_long](../../../../../includes/net-v40-long-md.md)], the <xref:System.TimeSpan?displayProperty=nameWithType> structure implements the <xref:System.IFormattable> interface and supports formatting operations with standard and custom format strings. If a parsing method encounters an unsupported format specifier or format string, it throws a <xref:System.FormatException>.  
   
  In previous versions of the .NET Framework, the <xref:System.TimeSpan> structure did not implement <xref:System.IFormattable> and did not support format strings. However, many developers mistakenly assumed that <xref:System.TimeSpan> did support a set of format strings and used them in [composite formatting operations](../../../../../docs/standard/base-types/composite-formatting.md) with methods such as <xref:System.String.Format%2A?displayProperty=nameWithType>. Ordinarily, if a type implements <xref:System.IFormattable> and supports format strings, calls to formatting methods with unsupported format strings usually throw a <xref:System.FormatException>. However, because <xref:System.TimeSpan> did not implement <xref:System.IFormattable>, the runtime ignored the format string and instead called the <xref:System.TimeSpan.ToString?displayProperty=nameWithType> method. This means that, although the format strings had no effect on the formatting operation, their presence did not result in a <xref:System.FormatException>.  
   
@@ -76,19 +76,19 @@ Determines whether the runtime preserves legacy behavior in formatting operation
  [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]
  [!code-vb[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/timespan.breakingchanges/vb/legacyformatmode1.vb#1)]  
   
- When you run the example on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] or on an earlier version, it displays the following output:  
+ When you run the example on the [!INCLUDE [net_v35_short](../../../../../includes/net-v35-short-md.md)] or on an earlier version, it displays the following output:  
   
 ```  
 12:30:45  
 ```  
   
- This differs markedly from the output if you run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version:  
+ This differs markedly from the output if you run the example on the [!INCLUDE [net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version:  
   
 ```  
 Invalid Format  
 ```  
   
- However, if you add the following configuration file to the example's directory and then run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version, the output is identical to that produced by the example when it is run on [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ However, if you add the following configuration file to the example's directory and then run the example on the [!INCLUDE [net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version, the output is identical to that produced by the example when it is run on [!INCLUDE [net_v35_short](../../../../../includes/net-v35-short-md.md)].  
   
 ```xml  
 <?xml version ="1.0"?>  

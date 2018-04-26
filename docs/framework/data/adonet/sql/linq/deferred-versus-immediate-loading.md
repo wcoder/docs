@@ -35,7 +35,7 @@ When you query for an object, you actually retrieve only the object you requeste
   
  You can also join customers and orders in a query by forming the cross-product and retrieving all the relative bits of data as one large projection. But these results are not entities. (For more information, see [The LINQ to SQL Object Model](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)). Entities are objects that have identity and that you can modify, whereas these results would be projections that cannot be changed and persisted. Even worse, you would be retrieving lots of redundant data as each customer repeats for each order in the flattened join output.  
   
- What you really need is a way to retrieve a set of related objects at the same time. The set is a delineated section of a graph so that you would never be retrieving more or less than was necessary for your intended use. For this purpose, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides <xref:System.Data.Linq.DataLoadOptions> for immediate loading of a region of your object model. Methods include:  
+ What you really need is a way to retrieve a set of related objects at the same time. The set is a delineated section of a graph so that you would never be retrieving more or less than was necessary for your intended use. For this purpose, [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides <xref:System.Data.Linq.DataLoadOptions> for immediate loading of a region of your object model. Methods include:  
   
 -   The  <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> method, to immediately load data related to the main target.  
   

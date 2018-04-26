@@ -1,3 +1,4 @@
+
 ---
 title: Designing the infrastructure persistence layer
 description: .NET Microservices Architecture for Containerized .NET Applications | Designing the infrastructure persistence layer
@@ -165,6 +166,6 @@ In the upcoming sections, it is explained how to implement the Specification pat
 -   **Specifications. Martin Fowler**
     [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
->[!div class="step-by-step"]
-[Previous] (domain-events-design-implementation.md)
-[Next] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+> [!div class="step-by-step"]
+> [Previous](domain-events-design-implementation.md)
+> [Next](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

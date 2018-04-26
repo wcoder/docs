@@ -65,7 +65,7 @@ Starting with C# 7.0, both the get and set accessor can be an implemented as exp
 -   [Restricting Accessor Accessibility](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Programming Guide](../../../csharp/programming-guide/index.md)  

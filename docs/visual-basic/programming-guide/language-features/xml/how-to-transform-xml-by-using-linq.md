@@ -22,7 +22,7 @@ ms.author: dotnetcontent
   
  The example in this topic transforms content from an XML source document to HTML to be viewed in a browser.  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE [note_settings_general](~/includes/note-settings-general-md.md)]
   
 ### To transform an XML document  
   

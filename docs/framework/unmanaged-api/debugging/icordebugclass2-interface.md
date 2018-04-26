@@ -51,7 +51,7 @@ Represents a generic class or a class with a method parameter of type <xref:Syst
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  [ICorDebugClass Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  

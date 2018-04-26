@@ -27,7 +27,7 @@ ms.workload:
 # Get function
 Retrieves the specified property value if it exists.
 
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
 ## Syntax  
   
@@ -97,7 +97,7 @@ The `pVal` argument is assigned the correct type and value for the qualifier and
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

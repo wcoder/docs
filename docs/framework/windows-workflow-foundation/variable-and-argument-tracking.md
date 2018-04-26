@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # Variable and Argument Tracking
-When tracking the execution of a workflow, it is often useful to extract data. This provides additional context when accessing a tracking record post execution. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], you can extract any visible variable or argument within the scope of any activity in a workflow using tracking. Tracking profiles make it easy to extract data.  
+When tracking the execution of a workflow, it is often useful to extract data. This provides additional context when accessing a tracking record post execution. In [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)], you can extract any visible variable or argument within the scope of any activity in a workflow using tracking. Tracking profiles make it easy to extract data.  
   
 ## Variables and Arguments  
  Variables and arguments are extracted when an activity emits an ActivityStateRecord.  A variable is available for extraction only if it is within the scope of the activity. A variable to be extracted within an activity is specified in the following manner:  

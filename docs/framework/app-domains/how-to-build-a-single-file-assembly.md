@@ -29,10 +29,10 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Build a Single-File Assembly
-A single-file assembly, which is the simplest type of assembly, contains type information and implementation, as well as the [assembly manifest](../../../docs/framework/app-domains/assembly-manifest.md). You can use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] to create a single-file assembly. By default, the compiler creates an assembly file with an .exe extension.  
+A single-file assembly, which is the simplest type of assembly, contains type information and implementation, as well as the [assembly manifest](../../../docs/framework/app-domains/assembly-manifest.md). You can use command-line compilers or [!INCLUDE [vsprvslong](../../../includes/vsprvslong-md.md)] to create a single-file assembly. By default, the compiler creates an assembly file with an .exe extension.  
   
 > [!NOTE]
->  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for C# and Visual Basic can be used only to create single-file assemblies. If you want to create multifile assemblies, you must use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for Visual C++.  
+>  [!INCLUDE [vsprvslong](../../../includes/vsprvslong-md.md)] for C# and Visual Basic can be used only to create single-file assemblies. If you want to create multifile assemblies, you must use command-line compilers or [!INCLUDE [vsprvslong](../../../includes/vsprvslong-md.md)] for Visual C++.  
   
  The following procedures show how to create single-file assemblies using command-line compilers.  
   

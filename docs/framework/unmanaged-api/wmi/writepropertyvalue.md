@@ -27,7 +27,7 @@ ms.workload:
 # WritePropertyValue function
 Writes a specified number of bytes to a property identified by a property handle.
 
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
 ## Syntax  
   
@@ -81,7 +81,7 @@ For nonstring property values, `lNumBytes` must be the correct data size of the 
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

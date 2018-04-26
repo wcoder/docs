@@ -45,7 +45,7 @@ Represents a single assembly in the global assembly cache.
   
  **Header:** Fusion.h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  [Fusion Interfaces](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  

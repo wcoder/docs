@@ -18,13 +18,13 @@ ms.workload:
   - "dotnet"
 ---
 # Input Character Set (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] accepts UNICODE characters encoded in UTF-16.  
+[!INCLUDE [esql](../../../../../../includes/esql-md.md)] accepts UNICODE characters encoded in UTF-16.  
   
  String literals can contain any UTF-16 character enclosed in single quotes. For example, N'文字列リテラル'. When string literals are compared, the original UTF-16 values are used. For example, N'ABC' is different in Japanese and Latin codepages.  
   
  Comments can contain any UTF-16 character.  
   
- Escaped identifiers can contain any UTF-16 character enclosed in square brackets. For example, [エスケープされた識別子]. The comparison of UTF-16 escaped identifiers is case insensitive. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] treats versions of letters that appear the same but are from different code pages as different characters. For example, [ABC] is equivalent to [abc] if the corresponding characters are from the same code page. However, if the same two identifiers are from different code pages, they are not equivalent.  
+ Escaped identifiers can contain any UTF-16 character enclosed in square brackets. For example, [エスケープされた識別子]. The comparison of UTF-16 escaped identifiers is case insensitive. [!INCLUDE [esql](../../../../../../includes/esql-md.md)] treats versions of letters that appear the same but are from different code pages as different characters. For example, [ABC] is equivalent to [abc] if the corresponding characters are from the same code page. However, if the same two identifiers are from different code pages, they are not equivalent.  
   
  White space is any UTF-16 white space character.  
   

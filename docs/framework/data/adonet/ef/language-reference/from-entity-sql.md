@@ -36,7 +36,7 @@ FROM expression [ ,...n ] as C
  `FROM C as c`  
   
 ## FROM Clause Items  
- Each `FROM` clause item refers to a source collection in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports the following classes of `FROM` clause items: simple `FROM` clause items, `JOIN FROM` clause items, and `APPLY FROM` clause items. Each of these `FROM` clause items is described in more detail in the following sections.  
+ Each `FROM` clause item refers to a source collection in the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] query. [!INCLUDE [esql](../../../../../../includes/esql-md.md)] supports the following classes of `FROM` clause items: simple `FROM` clause items, `JOIN FROM` clause items, and `APPLY FROM` clause items. Each of these `FROM` clause items is described in more detail in the following sections.  
   
 ### Simple FROM Clause Item  
  The simplest `FROM` clause item is a single expression that identifies a collection and an alias. The expression can simply be an entity set, or a subquery, or any other expression that is a collection type. The following is an example:  
@@ -51,10 +51,10 @@ LOB.Customers as c
 LOB.Customers  
 ```  
   
- If no alias is specified, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] attempts to generate an alias based on the collection expression.  
+ If no alias is specified, [!INCLUDE [esql](../../../../../../includes/esql-md.md)] attempts to generate an alias based on the collection expression.  
   
 ### JOIN FROM Clause Item  
- A `JOIN FROM` clause item represents a join between two `FROM` clause items. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports cross joins, inner joins, left and right outer joins, and full outer joins. All these joins are supported similar to the way that they are supported in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. As in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], the two `FROM` clause items involved in the `JOIN` must be independent. That is, they cannot be correlated. A `CROSS APPLY` or `OUTER APPLY` can be used for these cases.  
+ A `JOIN FROM` clause item represents a join between two `FROM` clause items. [!INCLUDE [esql](../../../../../../includes/esql-md.md)] supports cross joins, inner joins, left and right outer joins, and full outer joins. All these joins are supported similar to the way that they are supported in [!INCLUDE [tsql](../../../../../../includes/tsql-md.md)]. As in [!INCLUDE [tsql](../../../../../../includes/tsql-md.md)], the two `FROM` clause items involved in the `JOIN` must be independent. That is, they cannot be correlated. A `CROSS APPLY` or `OUTER APPLY` can be used for these cases.  
   
 #### Cross Joins  
  A `CROSS JOIN` query expression produces the Cartesian product of the two collections, as illustrated in the following example:  
@@ -85,10 +85,10 @@ LOB.Customers
  The previous query expression processes a combination of every element of the collection on the left paired against every element of the collection on the right, where the `ON` condition is true. If the `ON` condition is false, the expression still processes one instance of the element on the left paired against the element on the right, with the value null. It also processes one instance of the element on the right paired against the element on the left, with the value null.  
   
 > [!NOTE]
->  To preserve compatibility with SQL-92, in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] the OUTER keyword is optional. Therefore, `LEFT JOIN`, `RIGHT JOIN`, and `FULL JOIN` are synonyms for `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, and `FULL OUTER JOIN`.  
+>  To preserve compatibility with SQL-92, in [!INCLUDE [tsql](../../../../../../includes/tsql-md.md)] the OUTER keyword is optional. Therefore, `LEFT JOIN`, `RIGHT JOIN`, and `FULL JOIN` are synonyms for `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, and `FULL OUTER JOIN`.  
   
 ### APPLY Clause Item  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports two kinds of `APPLY`: `CROSS APPLY` and `OUTER APPLY`.  
+ [!INCLUDE [esql](../../../../../../includes/esql-md.md)] supports two kinds of `APPLY`: `CROSS APPLY` and `OUTER APPLY`.  
   
  A `CROSS APPLY` produces a unique pairing of each element of the collection on the left with an element of the collection produced by evaluating the expression on the right. With a `CROSS APPLY`, the expression on the right is functionally dependent on the element on the left, as illustrated in the following associated collection example:  
   
@@ -101,11 +101,11 @@ LOB.Customers
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  Unlike in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], there is no need for an explicit unnest step in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+>  Unlike in [!INCLUDE [tsql](../../../../../../includes/tsql-md.md)], there is no need for an explicit unnest step in [!INCLUDE [esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  `CROSS` and `OUTER APPLY` operators were introduced in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. In some cases, the query pipeline might produce Transact-SQL that contains `CROSS APPLY` and/or `OUTER APPLY` operators. Because some backend providers, including versions of SQL Server earlier than [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], do not support these operators, such queries cannot be executed on these backend providers.  
->   
+>  `CROSS` and `OUTER APPLY` operators were introduced in [!INCLUDE [ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. In some cases, the query pipeline might produce Transact-SQL that contains `CROSS APPLY` and/or `OUTER APPLY` operators. Because some backend providers, including versions of SQL Server earlier than [!INCLUDE [ssVersion2005](../../../../../../includes/ssversion2005-md.md)], do not support these operators, such queries cannot be executed on these backend providers.  
+> 
 >  Some typical scenarios that might lead to the presence of `CROSS APPLY` and/or `OUTER APPLY` operators in the output query are the following: a correlated subquery with paging; AnyElement over a correlated subquery or over a collection produced by navigation; LINQ queries that use grouping methods that accept an element selector; a query in which a `CROSS APPLY` or an `OUTER APPLY` are explicitly specified; a query that has a `DEREF` construct over a `REF` construct.  
   
 ## Multiple Collections in the FROM Clause  
@@ -139,13 +139,13 @@ from (C as c join D as d) cross apply c.Names as e
   
  The `FROM` clause logically produces a multiset of rows of type Row(c, d, e) where fields c, d, and e are assumed to be of the element type of `C`, `D`, and `c.Names`.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] introduces an alias for each simple `FROM` clause item in scope. For example, in the following FROM clause snippet, The names introduced into scope are c, d, and e.  
+ [!INCLUDE [esql](../../../../../../includes/esql-md.md)] introduces an alias for each simple `FROM` clause item in scope. For example, in the following FROM clause snippet, The names introduced into scope are c, d, and e.  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (unlike [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]), the `FROM` clause only introduces the aliases into scope. Any references to columns (properties) of these collections must be qualified with the alias.  
+ In [!INCLUDE [esql](../../../../../../includes/esql-md.md)] (unlike [!INCLUDE [tsql](../../../../../../includes/tsql-md.md)]), the `FROM` clause only introduces the aliases into scope. Any references to columns (properties) of these collections must be qualified with the alias.  
   
 ## Pulling Up Keys from Nested Queries  
  Certain types of queries that require pulling up keys from a nested query are not supported. For example, the following query is valid:  

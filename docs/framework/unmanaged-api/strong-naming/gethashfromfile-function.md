@@ -72,7 +72,7 @@ HRESULT GetHashFromFile (
   
  **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  [GetHashFromFile Method](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)  

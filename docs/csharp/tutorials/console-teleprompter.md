@@ -53,7 +53,7 @@ download the .NET Core framework. After this initial step, you will only
 need to run `dotnet restore` when you add new dependent packages, or update
 the versions of any of your dependencies.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE [DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 After restoring packages, you run `dotnet build`. This executes the build
 engine and creates your application executable. Finally, you execute `dotnet run` to

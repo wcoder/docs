@@ -12,9 +12,9 @@ ms.author: dotnetcontent
 ---
 # Programming Concepts (Visual Basic)
 This section explains programming concepts in the Visual Basic language.  
-  
+
 ## In This Section  
-  
+
 |Title|Description|  
 |-----------|-----------------|  
 |[Assemblies and the Global Assembly Cache (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|Describes how to create and use assemblies.|  
@@ -30,9 +30,11 @@ This section explains programming concepts in the Visual Basic language.
 |[Reflection (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Explains how to use reflection to dynamically create an instance of a type, bind the type to an existing object, or get the type from an existing object and invoke its methods or access its fields and properties.|
 |[Serialization (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|Describes key concepts in binary, XML, and SOAP serialization.|  
 |[Threading (Visual Basic)](../../../visual-basic/programming-guide/concepts/threading/index.md)|Provides an overview of the .NET threading model and shows how to write code that performs multiple tasks at the same time to improve the performance and responsiveness of your applications.|  
-  
+
 ## Related Sections  
-  
-|||  
-|---|---|  
-|[Performance Tips](../../../framework/performance/performance-tips.md) | Discusses several basic rules that may help you increase the performance of your application.|
+
+
+|                                                                        |                                                                                               |
+|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| [Performance Tips](../../../framework/performance/performance-tips.md) | Discusses several basic rules that may help you increase the performance of your application. |
+

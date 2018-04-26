@@ -23,7 +23,7 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Create a Data Service Using the Reflection Provider (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enables you to define a data model that is based on arbitrary classes as long as those classes are exposed as objects that implement the <xref:System.Linq.IQueryable%601> interface. For more information, see [Data Services Providers](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
+[!INCLUDE [ssAstoria](../../../../includes/ssastoria-md.md)] enables you to define a data model that is based on arbitrary classes as long as those classes are exposed as objects that implement the <xref:System.Linq.IQueryable%601> interface. For more information, see [Data Services Providers](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
   
 ## Example  
  The following example defines a data model that includes `Orders` and `Items`. The entity container class `OrderItemData` has two public methods that return <xref:System.Linq.IQueryable%601> interfaces. These interfaces are the entity sets of the `Orders` and `Items` entity types. An `Order` can include multiple `Items`, so the `Orders` entity type has an `Items` navigation property that returns a collection of `Items` objects. The `OrderItemData` entity container class is the generic type of the <xref:System.Data.Services.DataService%601> class from which the `OrderItems` data service is derived.  

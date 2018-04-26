@@ -47,7 +47,7 @@ The `volatile` keyword indicates that a field might be modified by multiple thre
  [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Reference](../../../csharp/language-reference/index.md)  

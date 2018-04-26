@@ -22,7 +22,7 @@ ms.workload:
   - dotnet
 ---
 # Navigation How-to Topics
-The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.  
+The following topics show how to use [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.  
   
 ## In This Section  
  [Call a Page Function](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  

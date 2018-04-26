@@ -23,7 +23,7 @@ ms.workload:
   - dotnet
 ---
 # Control Customization
-This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.  
+This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.  
   
 ## In This Section  
  [Control Authoring Overview](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  

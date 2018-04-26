@@ -24,7 +24,7 @@ ms.workload:
   - dotnet
 ---
 # Using DrawingVisual Objects
-This topic provides an overview of how to use <xref:System.Windows.Media.DrawingVisual> objects in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visual layer.  
+This topic provides an overview of how to use <xref:System.Windows.Media.DrawingVisual> objects in the [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visual layer.  
   
 <a name="drawingvisual_object"></a>   
 ## DrawingVisual Object  

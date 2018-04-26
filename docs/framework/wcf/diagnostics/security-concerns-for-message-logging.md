@@ -23,7 +23,7 @@ This topic describes how you can protect sensitive data from being exposed in me
 ## Security Concerns  
   
 ### Logging Sensitive Information  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] does not modify any data in application-specific headers and body. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] also does not track personal information in application-specific headers or body data.  
+ [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] does not modify any data in application-specific headers and body. [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] also does not track personal information in application-specific headers or body data.  
   
  When message logging is enabled, personal information in application-specific headers, such as, a query string; and body information, such as, a credit card number, can become visible in the logs. The application deployer is responsible for enforcing access control on the configuration and log files. If you do not want this kind of information to be visible, you should disable logging, or filter out part of the data if you want to share the logs.  
   
@@ -65,7 +65,7 @@ This topic describes how you can protect sensitive data from being exposed in me
  Only when both settings are `true` is PII logging enabled. The combination of two switches allows the flexibility to log known PII for each application.  
   
 > [!IMPORTANT]
->  In [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] the `logEntireMessage` and `logKnownPii` flags must also be set to `true` in the Web.config file or the App.config file to enable PII logging, as show in the following example `<system.serviceModel><messageLogging logEntireMessage="true" logKnownPii="true" …`.  
+>  In [!INCLUDE [netfx_current_long](../../../../includes/netfx-current-long-md.md)] the `logEntireMessage` and `logKnownPii` flags must also be set to `true` in the Web.config file or the App.config file to enable PII logging, as show in the following example `<system.serviceModel><messageLogging logEntireMessage="true" logKnownPii="true" …`.  
   
  You should be aware that if you specify two or more custom sources in a configuration file, only the attributes of the first source are read. The others are ignored. This means that, for the following App.config, file, PII is not logged for both sources even though PII logging is explicitly enabled for the second source.  
   

@@ -17,7 +17,7 @@ caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ---
-# XML namespace URI &#39;http://www.w3.org/XML/1998/namespace&#39; can be bound only to &#39;xmlns&#39;
+# XML namespace URI &#39;<http://www.w3.org/XML/1998/namespace&#39>; can be bound only to &#39;xmlns&#39;
 The URI http://www.w3.org/XML/1998/namespace is used in an XML namespace declaration. This URI is a reserved namespace and cannot be included in an XML namespace declaration.  
   
  **Error ID:** BC31183  

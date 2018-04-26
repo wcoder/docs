@@ -46,7 +46,7 @@ Provides methods that display current binding information about the running appl
   
  **Library:** BindingDisplay.idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  [Diagnostics Symbol Store Interfaces](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

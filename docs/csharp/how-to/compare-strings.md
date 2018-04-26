@@ -24,7 +24,7 @@ comparisons:
 - You can choose culture specific comparisons.
 - Linguistic comparisions are culture and platform dependent.
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
+[!INCLUDE [interactive-note](~/includes/csharp-interactive-note.md)]
 
 When you compare strings, you define an order among them. Comparisons are
 used to sort a sequence of strings. Once the sequence is in a known order,

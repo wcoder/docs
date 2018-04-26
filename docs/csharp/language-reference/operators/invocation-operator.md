@@ -19,13 +19,13 @@ ms.author: "wiwagn"
 # () Operator (C# Reference)
 In addition to being used to specify the order of operations in an expression, parentheses are used to perform the following tasks:  
   
-1.  Specify casts, or type conversions.  
+1. Specify casts, or type conversions.  
   
-     [!code-csharp[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
+    [!code-csharp[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
   
-2.  Invoke methods or delegates.  
+2. Invoke methods or delegates.  
   
-     [!code-csharp[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
+    [!code-csharp[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
   
 ## Remarks  
  A cast explicitly invokes the conversion operator from one type to another; the cast fails if no such conversion operator is defined. To define a conversion operator, see [explicit](../../../csharp/language-reference/keywords/explicit.md) and [implicit](../../../csharp/language-reference/keywords/implicit.md).  
@@ -39,7 +39,7 @@ In addition to being used to specify the order of operations in an expression, p
  For more information about method invocation, see [Methods](../../../csharp/programming-guide/classes-and-structs/methods.md).  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Reference](../../../csharp/language-reference/index.md)  

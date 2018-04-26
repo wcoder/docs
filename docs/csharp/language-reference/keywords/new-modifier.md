@@ -50,7 +50,7 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 ```  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Reference](../../../csharp/language-reference/index.md)  

@@ -43,17 +43,17 @@ This sample shows how to use <xref:System.Activities.Statements.CompensableActiv
   
 #### To set up, build, and run the sample  
   
-1.  Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the CustomCompensation.sln solution. It is located in the \WF\Basic\Compensation\CustomCompensation directory.  
+1. Using [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)], open the CustomCompensation.sln solution. It is located in the \WF\Basic\Compensation\CustomCompensation directory.  
   
-2.  Press CTRL+SHIFT+B to build the solution.  
+2. Press CTRL+SHIFT+B to build the solution.  
   
-3.  Press CTRL + F5 to run the application.  
+3. Press CTRL + F5 to run the application.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`

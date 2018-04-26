@@ -19,46 +19,47 @@ ms.workload:
 ---
 # &lt;add&gt; of &lt;authorizationPolicies&gt;
 Specifies an authorization policy for claim transformation.  
-  
+
  \<system.ServiceModel>  
 \<behaviors>  
 \<behavior>  
 \<serviceAuthorization>  
 \<authorizationPolicies>  
 \<add>  
-  
+
 ## Syntax  
-  
+
 ```xml  
 <authorizationPolicies>  
    <add policyType="String" />  
 </authorizationPolicies>  
 ```  
-  
+
 ## Type  
  `Type`  
-  
+
 ## Attributes and Elements  
  The following sections describe attributes, child elements, and parent elements.  
-  
+
 ### Attributes  
-  
-|Attribute|Description|  
-|---------------|-----------------|  
-|`policyType`|A required String attribute.<br /><br /> The [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] access control model supports provisioning a set of authorization policies as types. This attribute specifies an authorization policy, which enables transformation of one set of input claims into another set of claims. Access control can be granted or denied based on that.|  
-  
+
+
+|  Attribute   |                                                                                                                                                                                        Description                                                                                                                                                                                         |
+|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `policyType` | A required String attribute.<br /><br /> The [!INCLUDE [indigo1](../../../../../includes/indigo1-md.md)] access control model supports provisioning a set of authorization policies as types. This attribute specifies an authorization policy, which enables transformation of one set of input claims into another set of claims. Access control can be granted or denied based on that. |
+
 ### Child Elements  
  None.  
-  
+
 ### Parent Elements  
-  
+
 |Element|Description|  
 |-------------|-----------------|  
 |[\<authorizationPolicies>](../../../../../docs/framework/configure-apps/file-schema/wcf/authorizationpolicies.md)|Specifies a collection of authorization policy types.|  
-  
+
 ## Remarks  
  Each authorization policy contains a single required `policyType` attribute that is a string. The attribute specifies an authorization policy, which enables transformation of one set of input claims into another set of claims. Access control can be granted or denied based on that. For more information on how an authorization policy works, see <xref:System.IdentityModel.Policy.IAuthorizationPolicy> and [Authorization Policy](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
-  
+
 ## See Also  
  <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
  <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>  

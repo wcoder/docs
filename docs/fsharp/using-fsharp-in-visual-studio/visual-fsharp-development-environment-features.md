@@ -15,17 +15,19 @@ ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
 # Visual F# Development Environment Features
 
 > [!NOTE]
-This article is not up to date with the latest Visual Studio.  It will be updated.
+> This article is not up to date with the latest Visual Studio.  It will be updated.
 
 This topic includes information about which features of Visual Studio 2012 are supported in F#.
 
 ## Project Features
 The following table summarizes the templates that are available for use in F# projects. For information about project and item templates, see [NIB Creating Projects from Templates](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2).
 
-|Template type|Description|Supported templates|
-|-------------|-----------|-------------------|
-|Project templates|Types of projects available in the **New Project** dialog box.|<ul><li>F# Application<br /></li><li>F# Library<br /></li><li>F# Tutorial<br /></li><li>F# Portable Library<br /></li><ul/>|
-|Item templates|File types available in the **Add New Item** dialog box.|<ul><li>F# source file (.fs)<br /></li><li>F# script (.fsx)<br /></li><li>F# signature file (.fsi)<br /></li><li>Configuration file (.config)<br /></li><li>SQL Database Connection (LINQ-to-SQL type provider)<br /></li><li>SQL Database Connection (LINQ to Entities type provider)<br /></li><li>OData Service Connection (LINQ type provider)<br /></li><li>WSDL Service Connection (type provider)<br /></li><li>XML file (.xml)<br /></li><li>Text file<br /></li><ul/>|
+
+|   Template type   |                          Description                           |                                                                                                                                                                                                                              Supported templates                                                                                                                                                                                                                               |
+|-------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Project templates | Types of projects available in the **New Project** dialog box. |                                                                                                                                                                          <ul><li>F# Application<br /></li><li>F# Library<br /></li><li>F# Tutorial<br /></li><li>F# Portable Library<br /></li><ul/>                                                                                                                                                                           |
+|  Item templates   |    File types available in the **Add New Item** dialog box.    | <ul><li>F# source file (.fs)<br /></li><li>F# script (.fsx)<br /></li><li>F# signature file (.fsi)<br /></li><li>Configuration file (.config)<br /></li><li>SQL Database Connection (LINQ-to-SQL type provider)<br /></li><li>SQL Database Connection (LINQ to Entities type provider)<br /></li><li>OData Service Connection (LINQ type provider)<br /></li><li>WSDL Service Connection (type provider)<br /></li><li>XML file (.xml)<br /></li><li>Text file<br /></li><ul/> |
+
 To create an application that can run as a standalone executable, choose the F# Application project type. To create a library (that is, a managed assembly or .DLL file) for use on the Windows desktop platform, choose F# Library. To create a portable library that can be used on any supported platform, choose F# Portable Library. F# Portable Library projects reference a version of FSharp.Core.dll that is appropriate to create an F# library that can be used with applications that run on platforms such as Windows Store apps, the .NET Framework 4.5, Xamarin.iOS and Xamarin.Android.
 
 For more information about the item templates for data access, see [Type Providers](../tutorials/type-providers/index.md).
@@ -67,17 +69,19 @@ The following features of the Visual Studiocode and text editors are supported i
 ## IntelliSense Features
 The following table summarizes IntelliSense features supported and not supported in F#. For general information about IntelliSense, see [Using IntelliSense](/visualstudio/ide/using-intellisense).
 
-|Feature|Description|Supported in F#?|
-|-------|-----------|----------------|
-|Automatically implement interfaces|Generates code stubs for interface methods.|No|
-|Code snippets|Injects code from a library of common coding constructs into topics.|No|
-|Complete Word|Saves typing by completing words and names as you type.|Yes|
-|Consume-first completion mode|When enabled, causes the word completion to select the first match as you type, instead of waiting for you to select one or press **CTRL+SPACE**.|No|
-|Generate code elements|Enables you to generate stub code for a variety of constructs.|No|
-|List Members|When you type the member access operator (.), shows members for a type.|Yes|
-|Organize Usings/Open|Organizes namespaces referenced by **using** statements in C# or **open** directives in F#.|No|
-|Parameter Info|Shows helpful information about parameters as you type a function call.|Yes|
-|Quick Info|Displays the complete declaration for any identifier in your code.|Yes|
+
+|              Feature               |                                                                    Description                                                                    | Supported in F#? |
+|------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| Automatically implement interfaces |                                                    Generates code stubs for interface methods.                                                    |        No        |
+|           Code snippets            |                                       Injects code from a library of common coding constructs into topics.                                        |        No        |
+|           Complete Word            |                                              Saves typing by completing words and names as you type.                                              |       Yes        |
+|   Consume-first completion mode    | When enabled, causes the word completion to select the first match as you type, instead of waiting for you to select one or press **CTRL+SPACE**. |        No        |
+|       Generate code elements       |                                          Enables you to generate stub code for a variety of constructs.                                           |        No        |
+|            List Members            |                                      When you type the member access operator (.), shows members for a type.                                      |       Yes        |
+|        Organize Usings/Open        |                            Organizes namespaces referenced by **using** statements in C# or **open** directives in F#.                            |        No        |
+|           Parameter Info           |                                      Shows helpful information about parameters as you type a function call.                                      |       Yes        |
+|             Quick Info             |                                        Displays the complete declaration for any identifier in your code.                                         |       Yes        |
+
 Refactoring of F# code isn't supported in Visual Studio 2012.
 
 ## Debugging Features

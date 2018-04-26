@@ -27,7 +27,7 @@ ms.workload:
 # Put function
 Sets a named property to a new value.
 
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
 ## Syntax  
   
@@ -99,7 +99,7 @@ For an example, see the [IWbemClassObject::Put](https://msdn.microsoft.com/libra
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

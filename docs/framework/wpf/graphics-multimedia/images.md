@@ -25,7 +25,7 @@ ms.workload:
   - dotnet
 ---
 # Images
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.  
+[!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.  
   
 ## In This Section  
  [Imaging Overview](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  

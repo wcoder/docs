@@ -27,7 +27,7 @@ ms.workload:
 # InheritsFrom function
 Determines whether the current class or instance derives from a specified parent class.
 
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
 ## Syntax  
   
@@ -69,7 +69,7 @@ This function wraps a call to the [IWbemClassObject::InheritsFrom](https://msdn.
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

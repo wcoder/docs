@@ -36,7 +36,7 @@ boolean_expression || boolean_expression
  `true` when either of the conditions is `true`; otherwise, `false`.  
   
 ## Remarks  
- OR is an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] logical operator. It is used to combine two conditions. When more than one logical operator is used in a statement, OR operators are evaluated after AND operators. However, you can change the order of evaluation by using parentheses.  
+ OR is an [!INCLUDE [esql](../../../../../../includes/esql-md.md)] logical operator. It is used to combine two conditions. When more than one logical operator is used in a statement, OR operators are evaluated after AND operators. However, you can change the order of evaluation by using parentheses.  
   
  Double vertical bars (&#124;&#124;) have the same functionality as the OR operator.  
   

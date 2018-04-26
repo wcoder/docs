@@ -17,8 +17,10 @@ ms.workload:
 
 # Retargeting Changes in the .NET Framework
 
-[!INCLUDE[introduction](../../../../includes/migration-guide/retargeting/introduction.md)]
+[!INCLUDE [introduction](../../../../includes/migration-guide/retargeting/introduction.md)]
+
 ## Usage
 Select the .NET Framework you are currently targeting and then the .NET Framework you wish to migrate to:
 
-[!INCLUDE[versionselector](../../../../includes/migration-guide/retargeting/versionselector.md)]
+[!INCLUDE [versionselector](../../../../includes/migration-guide/retargeting/versionselector.md)]
+

@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # Built-in Activities
-This section contains samples that demonstrate built-in [!INCLUDE[wf](../../../../includes/wf-md.md)] activities.  
+This section contains samples that demonstrate built-in [!INCLUDE [wf](../../../../includes/wf-md.md)] activities.  
   
 ## In This Section  
  [Fault Handling in a Flowchart Activity Using TryCatch](../../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
@@ -29,7 +29,7 @@ This section contains samples that demonstrate built-in [!INCLUDE[wf](../../../.
  Demonstrates two different ways to create an activity at runtime using the <xref:System.Activities.DynamicActivity> activity.  
   
  [Using Variables with a .NET Framework 3.5 Ruleset](../../../../docs/framework/windows-workflow-foundation/samples/using-variables-with-dotnet-ruleset.md)  
- Demonstrates how to create a workflow that uses the <xref:System.Activities.Statements.Interop> activity to integrate a custom activity written in [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] that uses policy and rules.  
+ Demonstrates how to create a workflow that uses the <xref:System.Activities.Statements.Interop> activity to integrate a custom activity written in [!INCLUDE [netfx35_short](../../../../includes/netfx35-short-md.md)] that uses policy and rules.  
   
  [Load From XAML](../../../../docs/framework/windows-workflow-foundation/samples/load-from-xaml.md)  
  Demonstrates how to dynamically load a XAML workflow without having to run the XamlBuildTask tool.  
@@ -56,4 +56,4 @@ This section contains samples that demonstrate built-in [!INCLUDE[wf](../../../.
  Describes how to enable a <xref:System.Activities.Statements.Switch%601> activity to evaluate a user-defined complex type at runtime.  
   
  [Interop with 3.5 Rule Set](../../../../docs/framework/windows-workflow-foundation/samples/interop-with-3-5-rule-set.md)  
- Demonstrates the use of the <xref:System.Activities.Statements.Interop> activity to integrate with a custom activity in [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] using <xref:System.Workflow.Activities.PolicyActivity> and rules.
+ Demonstrates the use of the <xref:System.Activities.Statements.Interop> activity to integrate with a custom activity in [!INCLUDE [netfx35_short](../../../../includes/netfx35-short-md.md)] using <xref:System.Workflow.Activities.PolicyActivity> and rules.

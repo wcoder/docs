@@ -21,17 +21,17 @@ ms.workload:
   - "dotnet"
 ---
 # Building Clients
-The topics in this section demonstrate how to create and use a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] client.  
+The topics in this section demonstrate how to create and use a [!INCLUDE [indigo1](../../../includes/indigo1-md.md)] client.  
   
 ## In This Section  
  [WCF Client Overview](../../../docs/framework/wcf/wcf-client-overview.md)  
- Provides an overview of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients and how they work.  
+ Provides an overview of [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] clients and how they work.  
   
  [Accessing Services Using a WCF Client](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- Outlines the basic method of creating a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client object for use in a client application.  
+ Outlines the basic method of creating a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client object for use in a client application.  
   
  [Securing Clients](../../../docs/framework/wcf/securing-clients.md)  
- Describes how to configure security for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients.  
+ Describes how to configure security for [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] clients.  
   
 ## Reference  
  <xref:System.ServiceModel.ClientBase%601>  

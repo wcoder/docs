@@ -65,18 +65,18 @@ In many applications, a date and time value is intended to unambiguously identif
   
 ### To round-trip a date and time value with its time zone  
   
-1.  Define a class or a structure with two fields. The first field is either a <xref:System.DateTime> or a <xref:System.DateTimeOffset> object, and the second is a <xref:System.TimeZoneInfo> object. The following example is a simple version of such a type.  
+1. Define a class or a structure with two fields. The first field is either a <xref:System.DateTime> or a <xref:System.DateTimeOffset> object, and the second is a <xref:System.TimeZoneInfo> object. The following example is a simple version of such a type.  
   
-     [!code-csharp[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#3)]
-     [!code-vb[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#3)]  
+    [!code-csharp[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#3)]
+    [!code-vb[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#3)]  
   
-2.  Mark the class with the <xref:System.SerializableAttribute> attribute.  
+2. Mark the class with the <xref:System.SerializableAttribute> attribute.  
   
-3.  Serialize the object using the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> method.  
+3. Serialize the object using the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> method.  
   
-4.  Restore the object using the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> method.  
+4. Restore the object using the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> method.  
   
-5.  Cast (in C#) or convert (in Visual Basic) the deserialized object to an object of the appropriate type.  
+5. Cast (in C#) or convert (in Visual Basic) the deserialized object to an object of the appropriate type.  
   
  The following example illustrates how to round-trip an object that stores both date and time and time zone information.  
   

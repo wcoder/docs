@@ -32,4 +32,4 @@ ms.workload:
  [!code-csharp[TextOverview#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextOverview/CSharp/Window1.xaml.cs#100)]
  [!code-vb[TextOverview#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextOverview/visualbasic/window1.xaml.vb#100)]  
   
- If multiple versions of the same font family reside in the same directory, the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] font enumeration returns the most recent version of the font. If the version information does not provide resolution, the font with latest timestamp is returned. If the timestamp information is equivalent, the font file that is first in alphabetical order is returned.
+ If multiple versions of the same font family reside in the same directory, the [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] font enumeration returns the most recent version of the font. If the version information does not provide resolution, the font with latest timestamp is returned. If the timestamp information is equivalent, the font file that is first in alphabetical order is returned.

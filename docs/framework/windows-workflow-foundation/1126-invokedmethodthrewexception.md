@@ -17,24 +17,26 @@ ms.workload:
 ---
 # 1126 - InvokedMethodThrewException
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|1126|  
 |Keywords|WFRuntime|  
 |Level|Information|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates an exception was thrown by the method called by the InvokeMethod activity.  
-  
+
 ## Message  
  An exception was thrown in the method called by the activity '%1'. %2  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|InvokeMethod|xs:string|The display name of the InvokeMethod activity.|  
-|Exception|xs:string|The exception details for the exception|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|  InvokeMethod  |   xs:string    |        The display name of the InvokeMethod activity.        |
+|   Exception    |   xs:string    |           The exception details for the exception            |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

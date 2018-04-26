@@ -70,9 +70,9 @@ SELECT customers.Name FROM customers AS c
  It is also possible to use JOIN syntax (FULL, INNER, LEFT, OUTER, ON, and RIGHT). ON is required for inner joins and is nto allowed for cross joins.  
   
 ## Row and Value Select Clauses  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports two variants of the SELECT clause. The first variant, row select, is identified by the SELECT keyword, and can be used to specify one or more values that should be projected out. Because a row wrapper is implicitly added around the values returned, the result of the query expression is always a multiset of rows.  
+ [!INCLUDE [esql](../../../../../../includes/esql-md.md)] supports two variants of the SELECT clause. The first variant, row select, is identified by the SELECT keyword, and can be used to specify one or more values that should be projected out. Because a row wrapper is implicitly added around the values returned, the result of the query expression is always a multiset of rows.  
   
- Each query expression in a row select must specify an alias. If no alias is specified,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] attempts to generate an alias by using the alias generation rules.  
+ Each query expression in a row select must specify an alias. If no alias is specified,[!INCLUDE [esql](../../../../../../includes/esql-md.md)] attempts to generate an alias by using the alias generation rules.  
   
  The other variant of the SELECT clause, value select, is identified by the SELECT VALUE keyword. It allows only one value to be specified, and does not add a row wrapper.  
   
@@ -84,16 +84,16 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 ```  
   
 ## All and Distinct Modifiers  
- Both variants of SELECT in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allow the specification of an ALL or DISTINCT modifier. If the DISTINCT modifier is specified, duplicates are eliminated from the collection produced by the query expression (up to and including the SELECT clause). If the ALL modifier is specified, no duplicate elimination is performed; ALL is the default.  
+ Both variants of SELECT in [!INCLUDE [esql](../../../../../../includes/esql-md.md)] allow the specification of an ALL or DISTINCT modifier. If the DISTINCT modifier is specified, duplicates are eliminated from the collection produced by the query expression (up to and including the SELECT clause). If the ALL modifier is specified, no duplicate elimination is performed; ALL is the default.  
   
 ## Differences from Transact-SQL  
- Unlike Transact-SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] does not support use of the * argument in the SELECT clause.  Instead, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allows queries to project out entire records by referencing the collection aliases from the FROM clause, as illustrated in the following example.  
+ Unlike Transact-SQL, [!INCLUDE [esql](../../../../../../includes/esql-md.md)] does not support use of the * argument in the SELECT clause.  Instead, [!INCLUDE [esql](../../../../../../includes/esql-md.md)] allows queries to project out entire records by referencing the collection aliases from the FROM clause, as illustrated in the following example.  
   
 ```  
 SELECT * FROM T1, T2  
 ```  
   
- The previous [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] query expression is expressed in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] in the following way.  
+ The previous [!INCLUDE [tsql](../../../../../../includes/tsql-md.md)] query expression is expressed in [!INCLUDE [esql](../../../../../../includes/esql-md.md)] in the following way.  
   
 ```  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  

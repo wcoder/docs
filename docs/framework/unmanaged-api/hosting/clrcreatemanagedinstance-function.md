@@ -35,7 +35,7 @@ ms.workload:
 # ClrCreateManagedInstance Function
 Creates an instance of the specified managed type.  
   
- This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Use COM activation to create an instance of the managed type, or use hosting (see [CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
+ This function has been deprecated in the [!INCLUDE [net_v40_long](../../../../includes/net-v40-long-md.md)]. Use COM activation to create an instance of the managed type, or use hosting (see [CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
   
 ## Syntax  
   
@@ -67,7 +67,7 @@ STDAPI ClrCreateManagedInstance (
   
  **Library:** MSCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## See Also  
  [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  

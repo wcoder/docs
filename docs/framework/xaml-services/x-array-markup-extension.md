@@ -59,7 +59,7 @@ Provides general support for arrays of objects in XAML through a markup extensio
  In XAML 2009, `x:Array` is defined as a language primitive instead of a markup extension. For more information, see [Built-in Types for Common XAML Language Primitives](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).  
   
 ## WPF Usage Notes  
- Typically, the object elements that populate an `x:Array` are not elements that exist in the [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML namespace, and require a prefix mapping to a non-default XAML namespace.  
+ Typically, the object elements that populate an `x:Array` are not elements that exist in the [!INCLUDE [TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML namespace, and require a prefix mapping to a non-default XAML namespace.  
   
  For example, the following is a simple array of two strings, with the `sys` prefix (and also `x`) defined at the level of the array.  
   

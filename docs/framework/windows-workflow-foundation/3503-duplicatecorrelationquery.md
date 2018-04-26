@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 3503 - DuplicateCorrelationQuery
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|3503|  
 |Keywords|WFServices|  
 |Level|Warning|  
 |Channel|Microsoft-Windows-Application Server-Applications/Analytic|  
-  
+
 ## Description  
  Indicates a duplicate CorrelationQuery was found. The duplicate query will not be used when calculating correlation.  
-  
+
 ## Message  
  A duplicate CorrelationQuery was found with Where='%1'. This duplicate query will not be used when calculating correlation.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|Where|xs:string|The Where portion of the correlation query.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|     Where      |   xs:string    |         The Where portion of the correlation query.          |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

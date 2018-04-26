@@ -26,14 +26,14 @@ ms.workload:
 # Synchronous and Asynchronous Operations
 This topic discusses implementing and calling asynchronous service operations.  
   
- Many applications call methods asynchronously because it enables the application to continue doing useful work while the method call runs. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] services and clients can participate in asynchronous operation calls at two distinct levels of the application, which provide [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications even more flexibility to maximize throughput balanced against interactivity.  
+ Many applications call methods asynchronously because it enables the application to continue doing useful work while the method call runs. [!INCLUDE [indigo1](../../../includes/indigo1-md.md)] services and clients can participate in asynchronous operation calls at two distinct levels of the application, which provide [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] applications even more flexibility to maximize throughput balanced against interactivity.  
   
 ## Types of Asynchronous Operations  
- All service contracts in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], no matter the parameters types and return values, use [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] attributes to specify a particular message exchange pattern between client and service. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] automatically routes inbound and outbound messages to the appropriate service operation or running client code.  
+ All service contracts in [!INCLUDE [indigo2](../../../includes/indigo2-md.md)], no matter the parameters types and return values, use [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] attributes to specify a particular message exchange pattern between client and service. [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] automatically routes inbound and outbound messages to the appropriate service operation or running client code.  
   
  The client possesses only the service contract, which specifies the message exchange pattern for a particular operation. Clients can offer the developer any programming model they choose, so long as the underlying message exchange pattern is observed. So, too, can services implement operations in any manner, so long as the specified message pattern is observed.  
   
- The independence of the service contract from either the service or client implementation enables the following forms of asynchronous execution in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications:  
+ The independence of the service contract from either the service or client implementation enables the following forms of asynchronous execution in [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] applications:  
   
 -   Clients can invoke request/response operations asynchronously using a synchronous message exchange.  
   
@@ -44,15 +44,15 @@ This topic discusses implementing and calling asynchronous service operations.
 ### Suggested Asynchronous Scenarios  
  Use an asynchronous approach in a service operation implementation if the operation service implementation makes a blocking call, such as doing I/O work. When you are in an asynchronous operation implementation, try to call asynchronous operations and methods to extend the asynchronous call path as far as possible. For example, call a `BeginOperationTwo()` from within `BeginOperationOne()`.  
   
--   Use an asynchronous approach in a client or calling application in the following cases:  
+- Use an asynchronous approach in a client or calling application in the following cases:  
   
--   If you are invoking operations from a middle-tier application. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] such scenarios, see [Middle-Tier Client Applications](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+- If you are invoking operations from a middle-tier application. ([!INCLUDE [crabout](../../../includes/crabout-md.md)] such scenarios, see [Middle-Tier Client Applications](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
   
--   If you are invoking operations within an ASP.NET page, use asynchronous pages.  
+- If you are invoking operations within an ASP.NET page, use asynchronous pages.  
   
--   If you are invoking operations from any application that is single threaded, such as Windows Forms or Windows Presentation Foundation (WPF). When using the event-based asynchronous calling model, the result event is raised on the UI thread, adding responsiveness to the application without requiring you to handle multiple threads yourself.  
+- If you are invoking operations from any application that is single threaded, such as Windows Forms or Windows Presentation Foundation (WPF). When using the event-based asynchronous calling model, the result event is raised on the UI thread, adding responsiveness to the application without requiring you to handle multiple threads yourself.  
   
--   In general, if you have a choice between a synchronous and asynchronous call, choose the asynchronous call.  
+- In general, if you have a choice between a synchronous and asynchronous call, choose the asynchronous call.  
   
 ### Implementing an Asynchronous Service Operation  
  Asynchronous operations can be implemented by using one of the three following methods:  
@@ -118,7 +118,7 @@ public class AsyncExample
  For more information about the Event-based Asynchronous Pattern, see [The Event-Based Asynchronous Pattern](http://go.microsoft.com/fwlink/?LinkId=232515).  
   
 #### IAsyncResult Asynchronous Pattern  
- A service operation can be implemented in an asynchronous fashion using the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] asynchronous programming pattern and marking the `<Begin>` method with the <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> property set to `true`. In this case, the asynchronous operation is exposed in metadata in the same form as a synchronous operation: It is exposed as a single operation with a request message and a correlated response message. Client programming models then have a choice. They can represent this pattern as a synchronous operation or as an asynchronous one, so long as when the service is invoked a request-response message exchange takes place.  
+ A service operation can be implemented in an asynchronous fashion using the [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)] asynchronous programming pattern and marking the `<Begin>` method with the <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> property set to `true`. In this case, the asynchronous operation is exposed in metadata in the same form as a synchronous operation: It is exposed as a single operation with a request message and a correlated response message. Client programming models then have a choice. They can represent this pattern as a synchronous operation or as an asynchronous one, so long as when the service is invoked a request-response message exchange takes place.  
   
  In general, with the asynchronous nature of the systems, you should not take a dependency on the threads.  The most reliable way of passing data to various stages of operation dispatch processing is to use extensions.  
   
@@ -156,7 +156,7 @@ Function DoWork(ByVal data As String, ByRef inout As String, _out outonly As out
 >  The <xref:System.ServiceModel.OperationContractAttribute> attribute is applied only to the `BeginDoWork` method. The resulting contract has one WSDL operation named `DoWork`.  
   
 ### Client-Side Asynchronous Invocations  
- A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client application can use any of three asynchronous calling models described previously  
+ A [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client application can use any of three asynchronous calling models described previously  
   
  When using the task-based model, simply call the operation using the await keyword as shown in the following code snippet.  
   
@@ -170,9 +170,9 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- When this is done, Svcutil.exe generates a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client class with the event infrastructure that enables the calling application to implement and assign an event handler to receive the response and take the appropriate action. For a complete example, see [How to: Call Service Operations Asynchronously](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ When this is done, Svcutil.exe generates a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client class with the event infrastructure that enables the calling application to implement and assign an event handler to receive the response and take the appropriate action. For a complete example, see [How to: Call Service Operations Asynchronously](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- The event-based asynchronous model, however, is only available in [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. In addition, it is not supported even in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] when a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client channel is created by using a <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. With [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client channel objects, you must use <xref:System.IAsyncResult?displayProperty=nameWithType> objects to invoke your operations asynchronously. To use this approach, specify the **/async** command option with the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), as in the following example.  
+ The event-based asynchronous model, however, is only available in [!INCLUDE [netfx35_long](../../../includes/netfx35-long-md.md)]. In addition, it is not supported even in [!INCLUDE [netfx35_short](../../../includes/netfx35-short-md.md)] when a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client channel is created by using a <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. With [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client channel objects, you must use <xref:System.IAsyncResult?displayProperty=nameWithType> objects to invoke your operations asynchronously. To use this approach, specify the **/async** command option with the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), as in the following example.  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   

@@ -24,7 +24,7 @@ ms.workload:
 Use the <xref:System.Linq.Enumerable.OrderBy%2A> operator to sort a sequence according to one or more keys.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] is designed to support ordering by simple primitive types, such as `string`, `int`, and so on. It does not support ordering for complex multi-valued classes, such as anonymous types. It also does not support `byte` datatypes.  
+>  [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] is designed to support ordering by simple primitive types, such as `string`, `int`, and so on. It does not support ordering for complex multi-valued classes, such as anonymous types. It also does not support `byte` datatypes.  
   
 ## Example  
  The following example sorts `Employees` by date of hire.  

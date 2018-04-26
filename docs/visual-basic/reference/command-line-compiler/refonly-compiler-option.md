@@ -19,7 +19,7 @@ ms.author: "ronpet"
 
 The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly. The `-refonly` parameter silently disables outputting PDBs, as reference assemblies cannot be executed.
 
-[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
+[!INCLUDE [compiler-options](~/includes/compiler-options.md)]
 
 ## Syntax
 

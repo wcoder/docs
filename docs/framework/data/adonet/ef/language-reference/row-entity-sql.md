@@ -31,13 +31,13 @@ ROW ( expression [ AS alias ] [,...] )
  Any valid query expression that returns a value to construct in a row type.  
   
  `alias`  
- Specifies an alias for the value specified in a row type. If an alias is not provided, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tries to generate an alias based on the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] alias generation rules.  
+ Specifies an alias for the value specified in a row type. If an alias is not provided, [!INCLUDE [esql](../../../../../../includes/esql-md.md)] tries to generate an alias based on the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] alias generation rules.  
   
 ## Return Value  
  A row type.  
   
 ## Remarks  
- You use row constructors in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to construct anonymous, structurally typed records from one or more values. The result type of a row constructor is a row type whose field types correspond to the types of the values that were used to construct the row. For example, the following expression constructs a value of type `Record(a int, b string, c int)`.  
+ You use row constructors in the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] to construct anonymous, structurally typed records from one or more values. The result type of a row constructor is a row type whose field types correspond to the types of the values that were used to construct the row. For example, the following expression constructs a value of type `Record(a int, b string, c int)`.  
   
 ```  
 ROW(1 AS a, "abc" AS b, a+34 AS c)  

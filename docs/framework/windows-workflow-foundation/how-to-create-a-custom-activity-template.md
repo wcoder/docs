@@ -16,31 +16,31 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Create a Custom Activity Template
-Custom activity templates are used to customize the configuration of activities, including custom composite activities, so that users do not have to create each activity individually and configure their properties and other settings manually. These custom templates can be made available in the **Toolbox** on the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] or from a rehosted designer, from which users can drag them onto the preconfigured design surface. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] ships with good examples of such templates: the [SendAndReceiveReply Template Designer](/visualstudio/workflow-designer/sendandreceivereply-template-designer) and the [ReceiveAndSendReply Template Designer](/visualstudio/workflow-designer/receiveandsendreply-template-designer) in the [Messaging Activity Designers](/visualstudio/workflow-designer/messaging-activity-designers) category.  
+Custom activity templates are used to customize the configuration of activities, including custom composite activities, so that users do not have to create each activity individually and configure their properties and other settings manually. These custom templates can be made available in the **Toolbox** on the [!INCLUDE [wfd1](../../../includes/wfd1-md.md)] or from a rehosted designer, from which users can drag them onto the preconfigured design surface. [!INCLUDE [wfd2](../../../includes/wfd2-md.md)] ships with good examples of such templates: the [SendAndReceiveReply Template Designer](/visualstudio/workflow-designer/sendandreceivereply-template-designer) and the [ReceiveAndSendReply Template Designer](/visualstudio/workflow-designer/receiveandsendreply-template-designer) in the [Messaging Activity Designers](/visualstudio/workflow-designer/messaging-activity-designers) category.  
   
- The first procedure in this topic describes how to create a custom activity template for a **Delay** activity and the second procedure describes briefly how to make it available in a [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] to verify that the custom template works.  
+ The first procedure in this topic describes how to create a custom activity template for a **Delay** activity and the second procedure describes briefly how to make it available in a [!INCLUDE [wfd2](../../../includes/wfd2-md.md)] to verify that the custom template works.  
   
  Custom activity templates must implement the <xref:System.Activities.Presentation.IActivityTemplateFactory>. The interface has a single <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> method with which you can create and configure the activity instances used in the template.  
   
 ### To create a template for the Delay activity  
   
-1.  Start [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1. Start [!INCLUDE [vs2010](../../../includes/vs2010-md.md)].  
   
-2.  On the **File** menu, point to **New**, and then select **Project**.  
+2. On the **File** menu, point to **New**, and then select **Project**.  
   
-     The **New Project** dialog box opens.  
+    The **New Project** dialog box opens.  
   
-3.  In the **Project Types** pane, select **Workflow** from either the **Visual C#** projects or **Visual Basic** groupings depending on your language preference.  
+3. In the **Project Types** pane, select **Workflow** from either the **Visual C#** projects or **Visual Basic** groupings depending on your language preference.  
   
-4.  In the **Templates** pane, select **Activity Library**.  
+4. In the **Templates** pane, select **Activity Library**.  
   
-5.  In the **Name** box, enter `DelayActivityTemplate`.  
+5. In the **Name** box, enter `DelayActivityTemplate`.  
   
-6.  Accept the defaults in the **Location** and **Solution name** text boxes, and then click **OK**.  
+6. Accept the defaults in the **Location** and **Solution name** text boxes, and then click **OK**.  
   
-7.  Right-click the References directory of the DelayActivityTemplate project in **Solution Explorer** and choose **Add Reference** to open the **Add Reference** dialog box.  
+7. Right-click the References directory of the DelayActivityTemplate project in **Solution Explorer** and choose **Add Reference** to open the **Add Reference** dialog box.  
   
-8.  Go to the **.NET** tab and select **PresentationFramework** from the **Component Name** column on the left and click **OK** to add a reference to the PresentationFramework.dll file.  
+8. Go to the **.NET** tab and select **PresentationFramework** from the **Component Name** column on the left and click **OK** to add a reference to the PresentationFramework.dll file.  
   
 9. Repeat this procedure to add references to the System.Activities.Presentation.dll and the WindowsBase.dll files.  
   

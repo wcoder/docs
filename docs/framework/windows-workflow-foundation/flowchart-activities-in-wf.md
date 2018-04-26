@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # Flowchart Activities in WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] provides several system-provided activities for controlling execution and branching within a Flowchart.  
+[!INCLUDE [netfx_current_long](../../../includes/netfx-current-long-md.md)] provides several system-provided activities for controlling execution and branching within a Flowchart.  
   
 |||  
 |-|-|  

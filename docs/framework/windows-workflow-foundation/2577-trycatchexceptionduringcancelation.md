@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 2577 - TryCatchExceptionDuringCancelation
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|2577|  
 |Keywords|WFActivities|  
 |Level|Warning|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates a child activity of the TryCatch activity has thrown an exception during cancelation.  
-  
+
 ## Message  
  A child activity of the TryCatch activity '%1' has thrown an exception during cancelation.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|DisplayName|xs:string|The display name of the activity.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|  DisplayName   |   xs:string    |              The display name of the activity.               |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

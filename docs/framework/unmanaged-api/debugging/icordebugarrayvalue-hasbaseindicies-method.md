@@ -52,4 +52,4 @@ HRESULT HasBaseIndicies (
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+ **.NET Framework Versions:** [!INCLUDE [net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]

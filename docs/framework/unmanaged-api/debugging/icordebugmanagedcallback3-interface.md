@@ -51,7 +51,7 @@ Provides a callback method that indicates that an enabled custom debugger notifi
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## See Also  
  [ICorDebugManagedCallback Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)  

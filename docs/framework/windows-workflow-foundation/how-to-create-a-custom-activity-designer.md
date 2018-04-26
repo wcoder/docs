@@ -22,7 +22,7 @@ Custom activity designers are typically implemented so that their associated act
   
  <xref:System.Activities.Presentation.ActivityDesigner> uses two helper controls, <xref:System.Activities.Presentation.WorkflowItemPresenter> and <xref:System.Activities.Presentation.WorkflowItemsPresenter> to make it easier to develop custom activity designers. They handle common functionality like dragging and dropping of child elements, deletion, selection, and addition of those child elements. The <xref:System.Activities.Presentation.WorkflowItemPresenter> allows a single child UI element inside, providing the "drop zone", it while the <xref:System.Activities.Presentation.WorkflowItemsPresenter> can provide support multiple UI elements, including additional functionality like the ordering, moving, deleting, and adding of child elements.  
   
- The other key part of the story that needs highlighting in the implementation of a custom activity designer concerns the way in which the visual edits are bound using [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] data binding to the instance stored in memory of what we are editing in the designer. This is accomplished by the Model Item tree, which is also responsible for enabling change notification and the tracking of events like changes in states.  
+ The other key part of the story that needs highlighting in the implementation of a custom activity designer concerns the way in which the visual edits are bound using [!INCLUDE [avalon2](../../../includes/avalon2-md.md)] data binding to the instance stored in memory of what we are editing in the designer. This is accomplished by the Model Item tree, which is also responsible for enabling change notification and the tracking of events like changes in states.  
   
  This topic outlines two procedures.  
   
@@ -32,23 +32,23 @@ Custom activity designers are typically implemented so that their associated act
   
 ### To create a custom activity designer with a drop zone using WorkflowItemPresenter  
   
-1.  Start [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1. Start [!INCLUDE [vs2010](../../../includes/vs2010-md.md)].  
   
-2.  On the **File** menu, point to **New**, and then select **Project…**.  
+2. On the **File** menu, point to **New**, and then select **Project…**.  
   
-     The **New Project** dialog box opens.  
+    The **New Project** dialog box opens.  
   
-3.  In the **Installed Templates** pane, select **Windows** from your preferred language category.  
+3. In the **Installed Templates** pane, select **Windows** from your preferred language category.  
   
-4.  In the **Templates** pane, select **WPF Application**.  
+4. In the **Templates** pane, select **WPF Application**.  
   
-5.  In the **Name** box, enter `UsingWorkflowItemPresenter`.  
+5. In the **Name** box, enter `UsingWorkflowItemPresenter`.  
   
-6.  In the **Location** box, enter the directory in which you want to save your project, or click **Browse** to navigate to it.  
+6. In the **Location** box, enter the directory in which you want to save your project, or click **Browse** to navigate to it.  
   
-7.  In the **Solution** box, accept the default value.  
+7. In the **Solution** box, accept the default value.  
   
-8.  Click **OK**.  
+8. Click **OK**.  
   
 9. Right-click the MainWindows.xaml file in the **Solution Explorer**, select **Delete** and confirm **OK** in the **Microsoft Visual Studio** dialogue box.  
   

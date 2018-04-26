@@ -18,10 +18,10 @@ ms.workload:
   - "dotnet"
 ---
 # Null Literals and Type Inference (Entity SQL)
-Null literals are compatible with any type in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] type system. However, for the type of a null literal to be inferred correctly, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] imposes certain constraints on where a null literal can be used.  
+Null literals are compatible with any type in the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] type system. However, for the type of a null literal to be inferred correctly, [!INCLUDE [esql](../../../../../../includes/esql-md.md)] imposes certain constraints on where a null literal can be used.  
   
 ## Typed Nulls  
- Typed nulls can be used anywhere. Type inference is not required for typed nulls because the type is known. For example, you can construct a null of type Int16 with the following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] construct:  
+ Typed nulls can be used anywhere. Type inference is not required for typed nulls because the type is known. For example, you can construct a null of type Int16 with the following [!INCLUDE [esql](../../../../../../includes/esql-md.md)] construct:  
   
  `(cast(null as Int16))`  
   

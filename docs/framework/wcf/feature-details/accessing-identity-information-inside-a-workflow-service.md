@@ -22,41 +22,41 @@ To access identity information inside a workflow service, you must implement the
   
 ### Implement IReceiveMessageCallback  
   
-1.  Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.  
+1. Create an empty [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] solution.  
   
-2.  Add a new console application called `Service` to the solution.  
+2. Add a new console application called `Service` to the solution.  
   
-3.  Add references to the following assemblies:  
+3. Add references to the following assemblies:  
   
-    1.  System.Runtime.Serialization  
+   1.  System.Runtime.Serialization  
   
-    2.  System.ServiceModel  
+   2.  System.ServiceModel  
   
-    3.  System.ServiceModel.Activities  
+   3.  System.ServiceModel.Activities  
   
-4.  Add a new class called `AccessIdentityCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.  
+4. Add a new class called `AccessIdentityCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.  
   
-    ```csharp  
-    class AccessIdentityCallback : IReceiveMessageCallback  
-    {  
-       public void OnReceiveMessage(System.ServiceModel.OperationContext operationContext, System.Activities.ExecutionProperties activityExecutionProperties)  
-       {  
-          try  
-          {  
-             Console.WriteLine("Received a message from a workflow with the following identity");  
-             Console.WriteLine("Windows Identity Name: {0}", operationContext.ServiceSecurityContext.WindowsIdentity.Name);  
-             Console.WriteLine("Windows Identity User: {0}", operationContext.ServiceSecurityContext.WindowsIdentity.User);  
-             Console.WriteLine("Windows Identity IsAuthenticated: {0}", operationContext.ServiceSecurityContext.WindowsIdentity.IsAuthenticated);  
-          }            
-          catch (Exception ex)  
-          {  
-             Console.WriteLine("An exception occurred: " + ex.Message);  
-          }  
-        }  
-    }  
-    ```  
+   ```csharp  
+   class AccessIdentityCallback : IReceiveMessageCallback  
+   {  
+      public void OnReceiveMessage(System.ServiceModel.OperationContext operationContext, System.Activities.ExecutionProperties activityExecutionProperties)  
+      {  
+         try  
+         {  
+            Console.WriteLine("Received a message from a workflow with the following identity");  
+            Console.WriteLine("Windows Identity Name: {0}", operationContext.ServiceSecurityContext.WindowsIdentity.Name);  
+            Console.WriteLine("Windows Identity User: {0}", operationContext.ServiceSecurityContext.WindowsIdentity.User);  
+            Console.WriteLine("Windows Identity IsAuthenticated: {0}", operationContext.ServiceSecurityContext.WindowsIdentity.IsAuthenticated);  
+         }            
+         catch (Exception ex)  
+         {  
+            Console.WriteLine("An exception occurred: " + ex.Message);  
+         }  
+       }  
+   }  
+   ```  
   
-     This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access identity information.  
+    This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access identity information.  
   
 ### Implement a Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext  
   

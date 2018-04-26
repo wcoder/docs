@@ -56,7 +56,7 @@ HRESULT GetNextString (
   
  **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## See Also  
  [IMetaDataTables Interface](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  

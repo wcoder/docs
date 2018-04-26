@@ -66,7 +66,7 @@ HRESULT GetTypeID(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## See Also  
  [ICorDebugType2 Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)

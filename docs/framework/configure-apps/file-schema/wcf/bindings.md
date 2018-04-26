@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # &lt;bindings&gt;
-This section holds a collection of standard and custom bindings. Each entry is a `binding` element that can be identified by its unique `name`. Services use bindings by linking them using the `name`. Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name. For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+This section holds a collection of standard and custom bindings. Each entry is a `binding` element that can be identified by its unique `name`. Services use bindings by linking them using the `name`. Starting with [!INCLUDE [netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name. For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## System-Provided Binding  
  System-provided bindings hide the complexity of the WCF messaging stack. Applications using system-provided bindings do not require full control over the stack. The attributes exposed on each system-provided binding are the ones most appropriate for the usage scenario the binding addresses.  

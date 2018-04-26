@@ -22,13 +22,13 @@ The <xref:Microsoft.VisualBasic.MyServices> namespace (`My` in Visual Basic) pro
   
 #### To add a reference to the Visual Basic library  
   
-1.  In **Solution Explorer**, right-click the **References** node, and select **Add Reference**.  
+1. In **Solution Explorer**, right-click the **References** node, and select **Add Reference**.  
   
-2.  When the **References** dialog box appears, scroll down the list, and select Microsoft.VisualBasic.dll.  
+2. When the **References** dialog box appears, scroll down the list, and select Microsoft.VisualBasic.dll.  
   
-     You might also want to include the following line in the `using` section at the start of your program.  
+    You might also want to include the following line in the `using` section at the start of your program.  
   
-     [!code-csharp[csProgGuideNamespaces#18](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_1.cs)]  
+    [!code-csharp[csProgGuideNamespaces#18](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_1.cs)]  
   
 ## Example  
  This example calls various static methods contained in the `MyServices` namespace. For this code to compile, a reference to Microsoft.VisualBasic.DLL must be added to the project.  

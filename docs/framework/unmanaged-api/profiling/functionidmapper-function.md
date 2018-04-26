@@ -67,7 +67,7 @@ UINT_PTR __stdcall FunctionIDMapper (
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## See Also  
  [SetFunctionIDMapper Method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)  

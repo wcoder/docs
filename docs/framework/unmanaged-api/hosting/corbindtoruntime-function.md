@@ -33,7 +33,7 @@ ms.workload:
 # CorBindToRuntime Function
 Enables unmanaged hosts to load the common language runtime (CLR) into a process.  
   
- This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ This function has been deprecated in the [!INCLUDE [net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## Syntax  
   
@@ -99,7 +99,7 @@ HRESULT CorBindToRuntime (
   
  **Library:** MSCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## See Also  
  [CorBindToCurrentRuntime Function](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  

@@ -24,7 +24,7 @@ ms.workload:
   - dotnet
 ---
 # Events (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.  
+[!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.  
   
 ## In This Section  
  [Routed Events Overview](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  

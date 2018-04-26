@@ -20,7 +20,7 @@ ms.workload:
   - dotnet
 ---
 # Controls by Category
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] controls can be logically grouped into several categories. These categories can be used to select the appropriate control for your scenario by helping you see which controls have similar usage patterns or functionality.  
+[!INCLUDE [TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] controls can be logically grouped into several categories. These categories can be used to select the appropriate control for your scenario by helping you see which controls have similar usage patterns or functionality.  
   
 ## Layout  
  Layout controls are used to manage the size, dimensions, position, and arrangement of child elements.  
@@ -148,7 +148,7 @@ ms.workload:
 -   <xref:System.Windows.Controls.ToolTip>  
   
 ## Documents  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] includes several specialized controls for viewing documents. These controls optimize the reading experience, based on the targeted user scenario.  
+ [!INCLUDE [TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] includes several specialized controls for viewing documents. These controls optimize the reading experience, based on the targeted user scenario.  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -170,7 +170,7 @@ ms.workload:
 -   <xref:System.Windows.Controls.PasswordBox>  
   
 ## Media  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] includes integrated support for hosting both audio and video content, as well as [codecs] for most popular image formats.  
+ [!INCLUDE [TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] includes integrated support for hosting both audio and video content, as well as [codecs] for most popular image formats.  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -179,7 +179,7 @@ ms.workload:
 -   <xref:System.Windows.Controls.SoundPlayerAction>  
   
 ## Digital Ink  
- Digital ink controls provide integrated support for [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] features, such as ink viewing and ink input.  
+ Digital ink controls provide integrated support for [!INCLUDE [TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] features, such as ink viewing and ink input.  
   
 -   <xref:System.Windows.Controls.InkCanvas>  
   

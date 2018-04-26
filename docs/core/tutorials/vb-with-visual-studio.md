@@ -1,3 +1,4 @@
+
 ---
 title: Building a Hello World application with .NET Core and Visual Basic in Visual Studio 2017
 description: Learn how to build a simple .NET Core console application with Visual Basic using Visual Studio 2017.
@@ -30,7 +31,7 @@ Begin by creating a simple "Hello World" console application. Follow these steps
 1. Launch Visual Studio 2017. Select **File** > **New** > **Project** from the menu bar. In the *New Project** dialog, select the **Visual Basic** node followed by the **.NET Core** node. Then select the **Console App (.NET Core)** project template. In the **Name** text box, type "HelloWorld". Select the **OK** button.
 
    ![New Project dialog with Console App selected](./media/vb-with-visual-studio/new-project.png)
-   
+
 1. Visual Studio uses the template to create your project. The Visual Basic Console Application template for .NET Core automatically defines a class, `Program`, with a single method, `Main`, that takes a <xref:System.String> array as an argument. `Main` is the application entry point, the method that's called automatically by the runtime when it launches the application. Any command-line arguments supplied when the application is launched are available in the *args* array.
 
    ![Visual Studio and the new HelloWorld project](./media/vb-with-visual-studio/devenv.png)
@@ -67,13 +68,13 @@ Enhance your application to prompt the user for his or her name and to display i
 
    This code displays "What is your name?" in the console window and waits until the user enters a string followed by the Enter key. It stores this string into a variable named `name`. It also retrieves the value of the <xref:System.DateTime.Now?displayProperty=nameWithType> property, which contains the current local time, and assigns it to a variable named `currentDate`. Finally, it uses an [interpolated string](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) to display these values in the console window.
 
-1. Compile the program by choosing **Build** > **Build Solution**.
+2. Compile the program by choosing **Build** > **Build Solution**.
 
-1. Run the program in Debug mode in Visual Studio by selecting the green arrow on the toolbar, pressing F5, or choosing the **Debug** > **Start Debugging** menu item. Respond to the prompt by entering a name and pressing the Enter key.
+3. Run the program in Debug mode in Visual Studio by selecting the green arrow on the toolbar, pressing F5, or choosing the **Debug** > **Start Debugging** menu item. Respond to the prompt by entering a name and pressing the Enter key.
 
    ![Console window with modified program output](./media/with-visual-studio/helloworld2.png)
 
-1. Press any key to close the console window.
+4. Press any key to close the console window.
 
 You've created and run your application. To develop a professional application, take some additional steps to make your application ready for release:
 

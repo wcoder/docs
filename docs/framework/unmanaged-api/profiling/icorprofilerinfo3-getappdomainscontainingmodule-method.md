@@ -67,7 +67,7 @@ HRESULT GetAppDomainsContainingModule(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## See Also  
  [ICorProfilerFunctionEnum Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  

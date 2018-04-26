@@ -25,7 +25,7 @@ ms.workload:
   - dotnet
 ---
 # Layout
-This topic describes the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] layout system. Understanding how and when layout calculations occur is essential for creating user interfaces in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+This topic describes the [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] layout system. Understanding how and when layout calculations occur is essential for creating user interfaces in [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  This topic contains the following sections:  
   
@@ -45,13 +45,13 @@ This topic describes the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlash
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## Element Bounding Boxes  
- When thinking about layout in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], it is important to understand the bounding box that surrounds all elements. Each <xref:System.Windows.FrameworkElement> consumed by the layout system can be thought of as a rectangle that is slotted into the layout. The <xref:System.Windows.Controls.Primitives.LayoutInformation> class returns the boundaries of an element's layout allocation, or slot. The size of the rectangle is determined by calculating the available screen space, the size of any constraints, layout-specific properties (such as margin and padding), and the individual behavior of the parent <xref:System.Windows.Controls.Panel> element. Processing this data, the layout system is able to calculate the position of all the children of a particular <xref:System.Windows.Controls.Panel>. It is important to remember that sizing characteristics defined on the parent element, such as a <xref:System.Windows.Controls.Border>, affect its children.  
+ When thinking about layout in [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], it is important to understand the bounding box that surrounds all elements. Each <xref:System.Windows.FrameworkElement> consumed by the layout system can be thought of as a rectangle that is slotted into the layout. The <xref:System.Windows.Controls.Primitives.LayoutInformation> class returns the boundaries of an element's layout allocation, or slot. The size of the rectangle is determined by calculating the available screen space, the size of any constraints, layout-specific properties (such as margin and padding), and the individual behavior of the parent <xref:System.Windows.Controls.Panel> element. Processing this data, the layout system is able to calculate the position of all the children of a particular <xref:System.Windows.Controls.Panel>. It is important to remember that sizing characteristics defined on the parent element, such as a <xref:System.Windows.Controls.Border>, affect its children.  
   
  The following illustration shows a simple layout.  
   
  ![A typical Grid, no bounding box superimposed.](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
   
- This layout can be achieved by using the following [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ This layout can be achieved by using the following [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
@@ -109,7 +109,7 @@ This topic describes the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlash
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## Panel Elements and Custom Layout Behaviors  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] includes a group of elements that derive from <xref:System.Windows.Controls.Panel>. These <xref:System.Windows.Controls.Panel> elements enable many complex layouts. For example, stacking elements can easily be achieved by using the <xref:System.Windows.Controls.StackPanel> element, while more complex and free flowing layouts are possible by using a <xref:System.Windows.Controls.Canvas>.  
+ [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] includes a group of elements that derive from <xref:System.Windows.Controls.Panel>. These <xref:System.Windows.Controls.Panel> elements enable many complex layouts. For example, stacking elements can easily be achieved by using the <xref:System.Windows.Controls.StackPanel> element, while more complex and free flowing layouts are possible by using a <xref:System.Windows.Controls.Canvas>.  
   
  The following table summarizes the available layout <xref:System.Windows.Controls.Panel> elements.  
   
@@ -128,27 +128,27 @@ This topic describes the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlash
 ## Layout Performance Considerations  
  Layout is a recursive process. Each child element in a <xref:System.Windows.Controls.Panel.Children%2A> collection gets processed during each invocation of the layout system. As a result, triggering the layout system should be avoided when it is not necessary. The following considerations can help you achieve better performance.  
   
--   Be aware of which property value changes will force a recursive update by the layout system.  
+- Be aware of which property value changes will force a recursive update by the layout system.  
   
-     Dependency properties whose values can cause the layout system to be initialized are marked with public flags. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> and <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> provide useful clues as to which property value changes will force a recursive update by the layout system. In general, any property that can affect the size of an element's bounding box should have a <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flag set to true. For more information, see [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+   Dependency properties whose values can cause the layout system to be initialized are marked with public flags. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> and <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> provide useful clues as to which property value changes will force a recursive update by the layout system. In general, any property that can affect the size of an element's bounding box should have a <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flag set to true. For more information, see [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
   
--   When possible, use a <xref:System.Windows.UIElement.RenderTransform%2A> instead of a <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
+- When possible, use a <xref:System.Windows.UIElement.RenderTransform%2A> instead of a <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
-     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> can be a very useful way to affect the content of a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. However, if the effect of the transform does not have to impact the position of other elements, it is best to use a <xref:System.Windows.UIElement.RenderTransform%2A> instead, because <xref:System.Windows.UIElement.RenderTransform%2A> does not invoke the layout system. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> applies its transformation and forces a recursive layout update to account for the new position of the affected element.  
+   A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> can be a very useful way to affect the content of a [!INCLUDE [TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. However, if the effect of the transform does not have to impact the position of other elements, it is best to use a <xref:System.Windows.UIElement.RenderTransform%2A> instead, because <xref:System.Windows.UIElement.RenderTransform%2A> does not invoke the layout system. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> applies its transformation and forces a recursive layout update to account for the new position of the affected element.  
   
--   Avoid unnecessary calls to <xref:System.Windows.UIElement.UpdateLayout%2A>.  
+- Avoid unnecessary calls to <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   
-     The <xref:System.Windows.UIElement.UpdateLayout%2A> method forces a recursive layout update, and is frequently not necessary. Unless you are sure that a full update is required, rely on the layout system to call this method for you.  
+   The <xref:System.Windows.UIElement.UpdateLayout%2A> method forces a recursive layout update, and is frequently not necessary. Unless you are sure that a full update is required, rely on the layout system to call this method for you.  
   
--   When working with a large <xref:System.Windows.Controls.Panel.Children%2A> collection, consider using a <xref:System.Windows.Controls.VirtualizingStackPanel> instead of a regular <xref:System.Windows.Controls.StackPanel>.  
+- When working with a large <xref:System.Windows.Controls.Panel.Children%2A> collection, consider using a <xref:System.Windows.Controls.VirtualizingStackPanel> instead of a regular <xref:System.Windows.Controls.StackPanel>.  
   
-     By virtualizing the child collection, the <xref:System.Windows.Controls.VirtualizingStackPanel> only keeps objects in memory that are currently within the parent's ViewPort. As a result, performance is substantially improved in most scenarios.  
+   By virtualizing the child collection, the <xref:System.Windows.Controls.VirtualizingStackPanel> only keeps objects in memory that are currently within the parent's ViewPort. As a result, performance is substantially improved in most scenarios.  
   
 <a name="LayoutSystem_LayoutRounding"></a>   
 ## Sub-pixel Rendering and Layout Rounding  
- The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] graphics system uses device-independent units to enable resolution and device independence. Each device independent pixel automatically scales with the system's [!INCLUDE[TLA#tla_dpi](../../../../includes/tlasharptla-dpi-md.md)] setting. This provides [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications proper scaling for different [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)] settings and makes the application automatically [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)]-aware.  
+ The [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] graphics system uses device-independent units to enable resolution and device independence. Each device independent pixel automatically scales with the system's [!INCLUDE [TLA#tla_dpi](../../../../includes/tlasharptla-dpi-md.md)] setting. This provides [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications proper scaling for different [!INCLUDE [TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)] settings and makes the application automatically [!INCLUDE [TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)]-aware.  
   
- However, this [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)] independence can create irregular edge rendering because of anti-aliasing. These artifacts, typically seen as blurry or semi-transparent edges, can occur when the location of an edge falls in the middle of a device pixel instead of between device pixels. The layout system provides a way to adjust for this with layout rounding. Layout rounding is where the layout system rounds any non-integral pixel values during the layout pass.  
+ However, this [!INCLUDE [TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)] independence can create irregular edge rendering because of anti-aliasing. These artifacts, typically seen as blurry or semi-transparent edges, can occur when the location of an edge falls in the middle of a device pixel instead of between device pixels. The layout system provides a way to adjust for this with layout rounding. Layout rounding is where the layout system rounds any non-integral pixel values during the layout pass.  
   
  Layout rounding is disabled by default. To enable layout rounding, set the <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> property to `true` on any <xref:System.Windows.FrameworkElement>. Because it is a dependency property, the value will propagate to all the children in the visual tree. To enable layout rounding for the entire UI, set <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> to `true` on the root container. For an example, see <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>.  
   

@@ -14,7 +14,7 @@ author: "BillWagner"
 ms.author: "wiwagn"
 ---
 # Sample XML File: Test Configuration (LINQ to XML)
-The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. This is a test configuration file.  
+The following XML file is used in various examples in the [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. This is a test configuration file.  
   
 ## TestConfig.xml  
   

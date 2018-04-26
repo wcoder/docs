@@ -85,15 +85,15 @@ Properties combine aspects of both fields and methods. To the user of an object,
   
  The following are important points in the previous example:  
   
--   The property `Name` in the derived class hides the property `Name` in the base class. In such a case, the `new` modifier is used in the declaration of the property in the derived class:  
+- The property `Name` in the derived class hides the property `Name` in the base class. In such a case, the `new` modifier is used in the declaration of the property in the derived class:  
   
-     [!code-csharp[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_10.cs)]  
+   [!code-csharp[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_10.cs)]  
   
--   The cast `(Employee)` is used to access the hidden property in the base class:  
+- The cast `(Employee)` is used to access the hidden property in the base class:  
   
-     [!code-csharp[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_11.cs)]  
+   [!code-csharp[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_11.cs)]  
   
-     For more information about hiding members, see the [new Modifier](../../../csharp/language-reference/keywords/new-modifier.md).  
+   For more information about hiding members, see the [new Modifier](../../../csharp/language-reference/keywords/new-modifier.md).  
   
 ## Example  
  In this example, two classes, `Cube` and `Square`, implement an abstract class, `Shape`, and override its abstract `Area` property. Note the use of the [override](../../../csharp/language-reference/keywords/override.md) modifier on the properties. The program accepts the side as an input and calculates the areas for the square and cube. It also accepts the area as an input and calculates the corresponding side for the square and cube.  

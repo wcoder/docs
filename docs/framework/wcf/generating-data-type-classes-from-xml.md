@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Generating Data Type Classes from XML
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] includes a new feature to generate data type classes from XML. This topic describes how to automatically generate data types for the .NET Blog RSS feed.  
+[!INCLUDE [net_v45](../../../includes/net-v45-md.md)] includes a new feature to generate data type classes from XML. This topic describes how to automatically generate data types for the .NET Blog RSS feed.  
   
 ### Obtaining the XML from the .NET Blog RSS feed  
   
@@ -30,13 +30,13 @@ ms.workload:
   
 ### Creating the data types  
   
-1.  Open a code file where the proxy is to be used. This file should be part of a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] project.  
+1. Open a code file where the proxy is to be used. This file should be part of a [!INCLUDE [net_v45](../../../includes/net-v45-md.md)] project.  
   
-2.  Place the cursor in a location in the file outside any existing classes.  
+2. Place the cursor in a location in the file outside any existing classes.  
   
-3.  Select **Edit**, **Paste Special**, **Paste XML as Classes**.  
+3. Select **Edit**, **Paste Special**, **Paste XML as Classes**.  
   
-4.  Classes called `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` and `rssChannelItemGuid` are created with the necessary members for accessing the elements in the RSS feed.  
+4. Classes called `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` and `rssChannelItemGuid` are created with the necessary members for accessing the elements in the RSS feed.  
   
 ### Using the generated classes  
   

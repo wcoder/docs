@@ -54,7 +54,7 @@ The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace supports 
 ## Prerequisites  
  In order to complete this walkthrough, you will need:  
   
--   Sufficient permissions to be able to create and run Windows Forms application projects on the computer where [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] is installed.  
+- Sufficient permissions to be able to create and run Windows Forms application projects on the computer where [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)] is installed.  
   
 ## Creating the Project  
  The first step is to create the project and set up the form.  
@@ -74,26 +74,26 @@ The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace supports 
   
 #### To create the Main menu  
   
-1.  From the **Toolbox**, drag a <xref:System.Windows.Forms.MenuStrip> control onto the form.  
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.MenuStrip> control onto the form.  
   
-2.  Add a <xref:System.Windows.Forms.ToolStripMenuItem> to the <xref:System.Windows.Forms.MenuStrip> control and name it **Window**.  
+2. Add a <xref:System.Windows.Forms.ToolStripMenuItem> to the <xref:System.Windows.Forms.MenuStrip> control and name it **Window**.  
   
-3.  Select the <xref:System.Windows.Forms.MenuStrip> control.  
+3. Select the <xref:System.Windows.Forms.MenuStrip> control.  
   
-4.  In the Properties window, set the value of the <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property to `ToolStripMenuItem1`.  
+4. In the Properties window, set the value of the <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property to `ToolStripMenuItem1`.  
   
-5.  Add a subitem to the **Window** menu item, and then name the subitem **New**.  
+5. Add a subitem to the **Window** menu item, and then name the subitem **New**.  
   
-6.  In the Properties window, click **Events**.  
+6. In the Properties window, click **Events**.  
   
-7.  Double-click the <xref:System.Windows.Forms.ToolStripItem.Click> event.  
+7. Double-click the <xref:System.Windows.Forms.ToolStripItem.Click> event.  
   
-     The Windows Forms Designer generates an event handler for the <xref:System.Windows.Forms.ToolStripItem.Click> event.  
+    The Windows Forms Designer generates an event handler for the <xref:System.Windows.Forms.ToolStripItem.Click> event.  
   
-8.  Insert the following code into the event handler.  
+8. Insert the following code into the event handler.  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/VB/Form1.vb#2)]  
+    [!code-csharp[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/CS/Form1.cs#2)]
+    [!code-vb[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/VB/Form1.vb#2)]  
   
 ## Adding the ToolStripPanel Control to the Toolbox  
  When you use <xref:System.Windows.Forms.MenuStrip> controls with an MDI form you must have the <xref:System.Windows.Forms.ToolStripPanel> control. You must add the <xref:System.Windows.Forms.ToolStripPanel> control to the **Toolbox** to build your MDI form in the Windows Forms Designer.  

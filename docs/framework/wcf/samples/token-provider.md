@@ -18,13 +18,13 @@ ms.workload:
   - "dotnet"
 ---
 # Token Provider
-This sample demonstrates how to implement a custom token provider. A token provider in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is used for supplying credentials to the security infrastructure. The token provider in general examines the target and issues appropriate credentials so that the security infrastructure can secure the message. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ships with the default Credential Manager Token Provider. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] also ships with an [!INCLUDE[infocard](../../../../includes/infocard-md.md)] token provider. Custom token providers are useful in the following cases:  
+This sample demonstrates how to implement a custom token provider. A token provider in [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] is used for supplying credentials to the security infrastructure. The token provider in general examines the target and issues appropriate credentials so that the security infrastructure can secure the message. [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] ships with the default Credential Manager Token Provider. [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] also ships with an [!INCLUDE [infocard](../../../../includes/infocard-md.md)] token provider. Custom token providers are useful in the following cases:  
   
--   If you have a credential store that these token providers cannot operate with.  
+- If you have a credential store that these token providers cannot operate with.  
   
--   If you want to provide your own custom mechanism for transforming the credentials from the point when the user provides the details to when the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client framework uses the credentials.  
+- If you want to provide your own custom mechanism for transforming the credentials from the point when the user provides the details to when the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] client framework uses the credentials.  
   
--   If you are building a custom token.  
+- If you are building a custom token.  
   
  This sample shows how to build a custom token provider that transforms the input from the user into a different format.  
   
@@ -115,7 +115,7 @@ This sample demonstrates how to implement a custom token provider. A token provi
 </system.serviceModel>  
 ```  
   
- The following steps show how to develop a custom token provider and integrate it with the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security framework:  
+ The following steps show how to develop a custom token provider and integrate it with the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] security framework:  
   
 1.  Write a custom token provider.  
   
@@ -260,20 +260,20 @@ static void DisplayIdentityInformation()
   
 #### To run the sample on the same computer  
   
-1.  Run Setup.bat from the sample installation folder inside a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt opened with administrator privileges. This installs all the certificates required for running the sample.  
+1. Run Setup.bat from the sample installation folder inside a [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt opened with administrator privileges. This installs all the certificates required for running the sample.  
   
-    > [!NOTE]
-    >  The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt. The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.  
+   > [!NOTE]
+   >  The Setup.bat batch file is designed to be run from a [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt. The PATH environment variable set within the [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.  
   
-2.  Launch service.exe from service\bin.  
+2. Launch service.exe from service\bin.  
   
-3.  Launch Client.exe from \client\bin. Client activity is displayed on the client console application.  
+3. Launch Client.exe from \client\bin. Client activity is displayed on the client console application.  
   
-4.  At the username prompt, type a user name.  
+4. At the username prompt, type a user name.  
   
-5.  At the password prompt, use the same string that was typed for the username prompt.  
+5. At the password prompt, use the same string that was typed for the username prompt.  
   
-6.  If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+6. If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### To run the sample across computers  
   

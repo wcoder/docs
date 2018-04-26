@@ -27,7 +27,7 @@ ms.workload:
 # GetNames function
 Retrieves either a subset or all of the names of the properties of an object. 
 
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
 ## Syntax  
   
@@ -110,7 +110,7 @@ The function always allocates a new `SAFEARRAY` if it returns `WBEM_S_NO_ERROR`,
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

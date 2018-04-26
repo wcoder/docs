@@ -22,11 +22,11 @@ This sample shows how to use a <xref:System.Workflow.Activities.PolicyActivity> 
   
 ### To build the sample  
   
-1.  Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1. Open the solution in [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Build the solution by pressing CTRL+SHIFT+B.  
+2. Build the solution by pressing CTRL+SHIFT+B.  
   
-3.  Run the solution without debugging by pressing CTRL+F5.  
+3. Run the solution without debugging by pressing CTRL+F5.  
   
 ### To run the sample  
   
@@ -34,11 +34,11 @@ This sample shows how to use a <xref:System.Workflow.Activities.PolicyActivity> 
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing:  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory:  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory:  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\SimplePolicy`  
   
 ## See Also  

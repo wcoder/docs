@@ -17,22 +17,24 @@ ms.workload:
 ---
 # 4203 - RenewLockSystemError
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|4203|  
 |Keywords|WFInstanceStore|  
 |Level|Error|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates SQL provider has failed to extend lock expiration due to either lock expiration already passed or the lock owner was deleted. The SqlWorkflowInstanceStore will be aborted.  
-  
+
 ## Message  
  Failed to extend lock expiration, lock expiration already passed or the lock owner was deleted. Aborting SqlWorkflowInstanceStore.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

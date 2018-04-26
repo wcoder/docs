@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 1141 - FlowchartEmpty
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|1141|  
 |Keywords|WFActivities|  
 |Level|Warning|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates a Flowchart was executed with no nodes.  
-  
+
 ## Message  
  Flowchart '%1' - was executed with no Nodes.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|FlowChart|xs:string|The display name of the FlowChart.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|   FlowChart    |   xs:string    |              The display name of the FlowChart.              |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

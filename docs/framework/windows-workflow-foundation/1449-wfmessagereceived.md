@@ -17,22 +17,24 @@ ms.workload:
 ---
 # 1449 - WfMessageReceived
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|1449|  
 |Keywords|WFServices|  
 |Level|Information|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates a message has been received by a workflow.  
-  
+
 ## Message  
  Message received by workflow  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

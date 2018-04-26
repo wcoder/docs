@@ -29,7 +29,7 @@ Provides a property and methods to write event and exception information to the 
   
  **Class:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **Assembly:** [!INCLUDE [vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## See Also  
  [My.Application Object](../../../visual-basic/language-reference/objects/my-application-object.md)

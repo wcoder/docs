@@ -110,11 +110,11 @@ To make this combined use of *Ildasm.exe* and *Ilasm.exe* as accurate as possibl
 > [!NOTE]
 > *Ildasm.exe* only operates on files on disk. It does not operate on files installed in the global assembly cache.
 
-For more information about the grammar of IL, see the asmparse.grammar file in the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+For more information about the grammar of IL, see the asmparse.grammar file in the [!INCLUDE [winsdklong](../../../includes/winsdklong-md.md)].
 
 ## Version Information
 
-Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], you can attach a custom attribute to an interface implementation by using code similar to the following:
+Starting with the [!INCLUDE [net_v45](../../../includes/net-v45-md.md)], you can attach a custom attribute to an interface implementation by using code similar to the following:
 
 ```
 .class interface public abstract auto ansi IMyInterface
@@ -134,7 +134,7 @@ Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], you can 
       …
 ```
 
-Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], you can specify an arbitrary marshal BLOB (binary large object) by using its raw binary representation, as shown in the following code:
+Starting with the [!INCLUDE [net_v45](../../../includes/net-v45-md.md)], you can specify an arbitrary marshal BLOB (binary large object) by using its raw binary representation, as shown in the following code:
 
 ```
 .method public hidebysig abstract virtual
@@ -143,7 +143,7 @@ Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], you can 
         Test(object A_1) cil managed
 ```
 
-For more information about the grammar of IL, see the asmparse.grammar file in the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+For more information about the grammar of IL, see the asmparse.grammar file in the [!INCLUDE [winsdklong](../../../includes/winsdklong-md.md)].
 
 ## Examples
 

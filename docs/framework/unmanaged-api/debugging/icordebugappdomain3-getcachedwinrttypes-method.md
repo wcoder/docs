@@ -31,7 +31,7 @@ ms.workload:
   - "dotnet"
 ---
 # ICorDebugAppDomain3::GetCachedWinRTTypes Method
-Gets an enumerator for all cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types.  
+Gets an enumerator for all cached [!INCLUDE [wrt](../../../../includes/wrt-md.md)] types.  
   
 ## Syntax  
   
@@ -43,16 +43,16 @@ HRESULT GetCachedWinRTTypes (
   
 #### Parameters  
  `ppGuidToTypeEnum`  
- [out] A pointer to an [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) interface object that can enumerate the managed representations of [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types currently loaded in the application domain.  
+ [out] A pointer to an [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) interface object that can enumerate the managed representations of [!INCLUDE [wrt](../../../../includes/wrt-md.md)] types currently loaded in the application domain.  
   
 ## Requirements  
- **Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **Platforms:** [!INCLUDE [wrt](../../../../includes/wrt-md.md)]  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## See Also  
  [ICorDebugAppDomain3 Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)

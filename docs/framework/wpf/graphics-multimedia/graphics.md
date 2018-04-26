@@ -23,7 +23,7 @@ ms.workload:
   - dotnet
 ---
 # Graphics
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.  
+[!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.  
   
 ## In This Section  
  [Bitmap Effects](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  

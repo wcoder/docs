@@ -52,15 +52,15 @@ where T : IExtensibleObject<T>
  The <xref:System.ServiceModel.IExtensionCollection%601> interface is a collection of the <xref:System.ServiceModel.IExtension%601> objects that allow for retrieving the <xref:System.ServiceModel.IExtension%601> by its type. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> returns the most recently added object that is an <xref:System.ServiceModel.IExtension%601> of that type.  
   
 ### Extensible Objects in Windows Communication Foundation  
- There are four extensible objects in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]:  
+ There are four extensible objects in [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)]:  
   
--   <xref:System.ServiceModel.ServiceHostBase> – This is the base class for the service’s host.  Extensions of this class can be used to extend the behavior of the <xref:System.ServiceModel.ServiceHostBase> itself or to store the state for each service.  
+- <xref:System.ServiceModel.ServiceHostBase> – This is the base class for the service’s host.  Extensions of this class can be used to extend the behavior of the <xref:System.ServiceModel.ServiceHostBase> itself or to store the state for each service.  
   
--   <xref:System.ServiceModel.InstanceContext> – This class connects an instance of the service’s type with the service runtime.  It contains information about the instance as well as a reference to the <xref:System.ServiceModel.InstanceContext>'s containing <xref:System.ServiceModel.ServiceHostBase>. Extensions of this class can be used to extend the behavior of the <xref:System.ServiceModel.InstanceContext> or to store the state for each service.  
+- <xref:System.ServiceModel.InstanceContext> – This class connects an instance of the service’s type with the service runtime.  It contains information about the instance as well as a reference to the <xref:System.ServiceModel.InstanceContext>'s containing <xref:System.ServiceModel.ServiceHostBase>. Extensions of this class can be used to extend the behavior of the <xref:System.ServiceModel.InstanceContext> or to store the state for each service.  
   
--   <xref:System.ServiceModel.OperationContext> – This class represents the operation information that the runtime gathers for each operation.  This includes information such as the incoming message headers, the incoming message properties, the incoming security identity, and other information.  Extensions of this class can either extend the behavior of <xref:System.ServiceModel.OperationContext> or store the state for each operation.  
+- <xref:System.ServiceModel.OperationContext> – This class represents the operation information that the runtime gathers for each operation.  This includes information such as the incoming message headers, the incoming message properties, the incoming security identity, and other information.  Extensions of this class can either extend the behavior of <xref:System.ServiceModel.OperationContext> or store the state for each operation.  
   
--   <xref:System.ServiceModel.IContextChannel> – This interface allows for the inspection of each state for the channels and proxies built by the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] runtime.  Extensions of this class can either extend the behavior of <xref:System.ServiceModel.IClientChannel> or can use it to store the state for each channel.  
+- <xref:System.ServiceModel.IContextChannel> – This interface allows for the inspection of each state for the channels and proxies built by the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] runtime.  Extensions of this class can either extend the behavior of <xref:System.ServiceModel.IClientChannel> or can use it to store the state for each channel.  
   
 -  
   

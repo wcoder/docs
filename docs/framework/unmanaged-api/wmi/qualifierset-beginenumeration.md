@@ -27,7 +27,7 @@ ms.workload:
 # QualifierSet_BeginEnumeration function
 Resets an enumerator of the qualifiers of an object to the beginning of the enumeration.  
 
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
 ## Syntax  
   
@@ -80,7 +80,7 @@ The flags that can be passed as the `lEnumFlags` argument are defined in the *Wb
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

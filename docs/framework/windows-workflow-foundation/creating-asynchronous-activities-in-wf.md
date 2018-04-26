@@ -37,7 +37,7 @@ ms.workload:
  [!code-csharp[CFX_ActivityExample#10](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### Invoking Asynchronous Methods on a Class  
- Many of the classes in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provide asynchronous functionality, and this functionality can be asynchronously invoked by using an <xref:System.Activities.AsyncCodeActivity> based activity. In the following example from the [Using AsyncOperationContext in an Activity](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md), an activity is created that asynchronously creates a file by using the <xref:System.IO.FileStream> class.  
+ Many of the classes in the [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)] provide asynchronous functionality, and this functionality can be asynchronously invoked by using an <xref:System.Activities.AsyncCodeActivity> based activity. In the following example from the [Using AsyncOperationContext in an Activity](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md), an activity is created that asynchronously creates a file by using the <xref:System.IO.FileStream> class.  
   
  [!code-csharp[CFX_ActivityExample#12](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   

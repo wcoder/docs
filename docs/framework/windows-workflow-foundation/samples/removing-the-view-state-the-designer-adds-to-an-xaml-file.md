@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # Removing the View State the Designer Adds to an XAML File
-This sample demonstrates how to create a class that derives from <xref:System.Windows.Markup.XamlWriter> and removes view state from a XAML file. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] writes information into the XAML document, which is known as view state. View state refers to the information that is required at design time, such as layout positioning, that is not required at runtime. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] inserts this information into the XAML document as it is edited. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] writes the view state into the XAML file with the `mc:Ignorable` attribute, so this information is not loaded when the runtime loads the XAML file. This sample demonstrates how to create a class that removes that view state information while processing XAML nodes.  
+This sample demonstrates how to create a class that derives from <xref:System.Windows.Markup.XamlWriter> and removes view state from a XAML file. [!INCLUDE [wfd1](../../../../includes/wfd1-md.md)] writes information into the XAML document, which is known as view state. View state refers to the information that is required at design time, such as layout positioning, that is not required at runtime. [!INCLUDE [wfd2](../../../../includes/wfd2-md.md)] inserts this information into the XAML document as it is edited. [!INCLUDE [wfd2](../../../../includes/wfd2-md.md)] writes the view state into the XAML file with the `mc:Ignorable` attribute, so this information is not loaded when the runtime loads the XAML file. This sample demonstrates how to create a class that removes that view state information while processing XAML nodes.  
   
 ## Discussion  
  This sample demonstrates how to create a custom writer.  
@@ -91,7 +91,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
   
 #### To use this sample  
   
-1. Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ViewStateCleaningWriter.sln solution file.  
+1. Using [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)], open the ViewStateCleaningWriter.sln solution file.  
   
 2. Open a command prompt and navigate to the directory where the ViewStageCleaningWriter.exe is built.  
   
@@ -110,7 +110,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
   
 #### To create a sample XAML file for use with this sample  
   
-1. Open [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1. Open [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)].  
   
 2. Create a new Workflow Console Application.  
   
@@ -122,9 +122,9 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
   
 > [!IMPORTANT]
 > The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+> If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

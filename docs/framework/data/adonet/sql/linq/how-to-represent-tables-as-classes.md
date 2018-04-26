@@ -21,7 +21,7 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Represent Tables as Classes
-Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> attribute to designate a class as an entity class associated with a database table.  
+Use the [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> attribute to designate a class as an entity class associated with a database table.  
   
 ### To map a class to a database table  
   

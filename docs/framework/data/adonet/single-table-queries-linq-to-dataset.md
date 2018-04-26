@@ -21,14 +21,14 @@ ms.workload:
   - "dotnet"
 ---
 # Single-Table Queries (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] queries work on data sources that implement the <xref:System.Collections.Generic.IEnumerable%601> interface or the <xref:System.Linq.IQueryable%601> interface. The <xref:System.Data.DataTable> class does not implement either interface, so you must call the <xref:System.Data.DataTableExtensions.AsEnumerable%2A> method if you want to use the <xref:System.Data.DataTable> as a source in the `From` clause of a [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] query.  
+[!INCLUDE [vbteclinqext](../../../../includes/vbteclinqext-md.md)] queries work on data sources that implement the <xref:System.Collections.Generic.IEnumerable%601> interface or the <xref:System.Linq.IQueryable%601> interface. The <xref:System.Data.DataTable> class does not implement either interface, so you must call the <xref:System.Data.DataTableExtensions.AsEnumerable%2A> method if you want to use the <xref:System.Data.DataTable> as a source in the `From` clause of a [!INCLUDE [vbteclinq](../../../../includes/vbteclinq-md.md)] query.  
   
  The following example gets all the online orders from the SalesOrderHeader table and outputs the order ID, order date, and order number to the console.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- The local variable query is initialized with a query expression, which operates on one or more information sources by applying one or more query operators from either the standard query operators or, in the case of [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], operators specific to the <xref:System.Data.DataSet> class. The query expression in the previous example uses two of the standard query operators: `Where` and `Select`.  
+ The local variable query is initialized with a query expression, which operates on one or more information sources by applying one or more query operators from either the standard query operators or, in the case of [!INCLUDE [linq_dataset](../../../../includes/linq-dataset-md.md)], operators specific to the <xref:System.Data.DataSet> class. The query expression in the previous example uses two of the standard query operators: `Where` and `Select`.  
   
  The `Where` clause filters the sequence based on a condition, in this case that the `OnlineOrderFlag` is set to `true`. The `Select` operator allocates and returns an enumerable object that captures the arguments passed to the operator. In this above example, an anonymous type is created with three properties: `SalesOrderID`, `OrderDate`, and `SalesOrderNumber`. The values of these three properties are set to the values of the `SalesOrderID`, `OrderDate`, and `SalesOrderNumber` columns from the `SalesOrderHeader` table.  
   

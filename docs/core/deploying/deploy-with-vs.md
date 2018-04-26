@@ -34,17 +34,17 @@ Deploying a framework-dependent deployment with no third-party dependencies simp
 
    Select **File** > **New** > **Project**. In the **New Project** dialog, select **.NET Core** in the **Installed** project types pane, and select the **Console App (.NET Core)** template in the center pane. Enter a project name, such as "FDD", in the **Name** text box. Select the **OK** button.
 
-1. Add the application's source code.
+2. Add the application's source code.
 
    Open the *Program.cs* file in the editor and replace the auto-generated code with the following code. It prompts the user to enter text and displays the individual words entered by the user. It uses the regular expression `\w+` to separate the words in the input text.
 
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
-1. Create a Debug build of your app.
+3. Create a Debug build of your app.
 
    Select **Build** > **Build Solution**. You can also compile and run the Debug build of your application by selecting **Debug** > **Start Debugging**.
 
-1. Deploy your app.
+4. Deploy your app.
 
    After you've debugged and tested the program, create the files to be deployed with your app. To publish from Visual Studio, do the following:
 
@@ -84,13 +84,13 @@ Deploying a self-contained deployment with no third-party dependencies involves 
 
    Select **File** > **New** > **Project**. In the **Add New Project** dialog, select **.NET Core** in the **Installed** project types pane, and select the **Console App (.NET Core)** template in the center pane. Enter a project name, such as "SCD", in the **Name** text box, and select the **OK** button.
 
-1. Add the application's source code.
+2. Add the application's source code.
 
    Open the *Program.cs* file in your editor, and replace the auto-generated code with the following code. It prompts the user to enter text and displays the individual words entered by the user. It uses the regular expression `\w+` to separate the words in the input text.
 
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
-1. Define the platforms that your app will target.
+3. Define the platforms that your app will target.
 
    1. Right-click on your project (not the solution) In **Solution Explorer**, and select **Edit SCD.csproj**.
 

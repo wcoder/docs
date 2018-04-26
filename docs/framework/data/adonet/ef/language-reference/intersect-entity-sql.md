@@ -34,7 +34,7 @@ expression INTERSECT expression
  A collection of the same type or of a common base or derived type as `expression`.  
   
 ## Remarks  
- INTERSECT is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators. All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right. For precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
+ INTERSECT is one of the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators. All [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right. For precedence information for the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
   
 ## Example  
  The following Entity SQL query uses the INTERSECT operator to return a collection of any distinct values that are returned by both the query expressions on the left and right sides of the INTERSECT operand. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  

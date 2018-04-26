@@ -14,7 +14,7 @@ author: "BillWagner"
 ms.author: "wiwagn"
 ---
 # Sample XML File: Test Configuration in a Namespace
-The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. This is a test configuration file. The XML is in a namespace.  
+The following XML file is used in various examples in the [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. This is a test configuration file. The XML is in a namespace.  
   
 ## TestConfigInNamespace.xml  
   

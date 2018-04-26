@@ -26,7 +26,7 @@ ms.workload:
   - dotnet
 ---
 # Glyphs
-Glyphs are a low-level depiction of a character to be drawn on-screen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides direct access to glyphs for customers who want to intercept and persist text after formatting.  
+Glyphs are a low-level depiction of a character to be drawn on-screen. [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides direct access to glyphs for customers who want to intercept and persist text after formatting.  
   
 ## In This Section  
  [Introduction to the GlyphRun Object and Glyphs Element](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  

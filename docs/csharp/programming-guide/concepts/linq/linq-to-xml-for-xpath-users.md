@@ -11,12 +11,13 @@ author: "BillWagner"
 ms.author: "wiwagn"
 ---
 # LINQ to XML for XPath Users (C#)
-This set of topics show a number of XPath expressions and their [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] equivalents.  
-  
- All of the examples use the XPath functionality in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] that is made available by the extension methods in <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>. The examples execute both the XPath expression and the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] expression. Each example then compares the results of both queries, validating that the XPath expression is functionally equivalent to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query. As both types of queries return nodes from the same XML tree, the query result comparison is made using referential identity.  
-  
+This set of topics show a number of XPath expressions and their [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] equivalents.  
+
+ All of the examples use the XPath functionality in [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] that is made available by the extension methods in <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>. The examples execute both the XPath expression and the [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] expression. Each example then compares the results of both queries, validating that the XPath expression is functionally equivalent to the [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] query. As both types of queries return nodes from the same XML tree, the query result comparison is made using referential identity.  
+
 ## In This Section  
-  
+
+
 |Topic|Description|  
 |-----------|-----------------|  
 |[Comparison of XPath and LINQ to XML](../../../../csharp/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|Provides an overview of the similarities and differences between XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
@@ -36,7 +37,7 @@ This set of topics show a number of XPath expressions and their [!INCLUDE[sqltec
 |[How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md)|Compares how to find al elements containing a specific attribute using XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> The associated XPath expression is:`"./*[@Select]"`|  
 |[How to: Find Child Elements Based on Position (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md)|Compares how to find an element based on its relative position using XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> The associated XPath expression is:`"Test[position() >= 2 and position() <= 4]"`|  
 |[How to: Find the Immediate Preceding Sibling (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|Compares how to find the immediate preceding sibling of a node using XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> The associated XPath expression is:`"preceding-sibling::*[1]"`|  
-  
+
 ## See Also  
  <xref:System.Xml.XPath?displayProperty=nameWithType>  
  [Querying XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  

@@ -52,7 +52,7 @@ HRESULT GetLoadedModules(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## See Also  
  [ICorDebugDataTarget3 Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)  

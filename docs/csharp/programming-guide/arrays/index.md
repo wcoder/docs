@@ -50,7 +50,7 @@ You can store multiple variables of the same type in an array data structure. Yo
 -   [Passing Arrays Using ref and out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Programming Guide](../../../csharp/programming-guide/index.md)  

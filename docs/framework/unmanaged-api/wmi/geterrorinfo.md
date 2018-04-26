@@ -27,7 +27,7 @@ ms.workload:
 # GetErrorInfo function
 Retrieves error information from the previous function call.  
   
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
 ## Syntax  
   
@@ -48,7 +48,7 @@ This function wraps a call to the [IComThreadingInfo::GetErrorInfo](https://msdn
   
  **Header:** WMINet_Utils.def  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

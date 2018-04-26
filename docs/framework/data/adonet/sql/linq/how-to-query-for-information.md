@@ -21,11 +21,11 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Query for Information
-Queries in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] use the same syntax as queries in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. The only difference is that the objects referenced in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries are mapped to elements in a database. For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+Queries in [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] use the same syntax as queries in [!INCLUDE [vbteclinq](../../../../../../includes/vbteclinq-md.md)]. The only difference is that the objects referenced in [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries are mapped to elements in a database. For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates the queries you write into equivalent SQL queries and sends them to the server for processing.  
+ [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates the queries you write into equivalent SQL queries and sends them to the server for processing.  
   
- Some features of [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] queries might need special attention in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications. For more information, see [Query Concepts](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md).  
+ Some features of [!INCLUDE [vbteclinq](../../../../../../includes/vbteclinq-md.md)] queries might need special attention in [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications. For more information, see [Query Concepts](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md).  
   
 ## Example  
  The following query asks for a list of customers from London. In this example, `Customers` is a table in the Northwind sample database.  

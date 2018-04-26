@@ -19,9 +19,9 @@ ms.workload:
 ---
 # ServiceAppDomain
 Maps a service to an application domain.  
-  
+
 ## Syntax  
-  
+
 ```  
 class ServiceAppDomain  
 {  
@@ -29,31 +29,33 @@ class ServiceAppDomain
   AppDomainInfo ref;  
 };  
 ```  
-  
+
 ## Methods  
  The ServiceAppDomain class does not define any methods.  
-  
+
 ## Properties  
  The ServiceAppDomain class has the following properties:  
-  
+
 ### ref  
  Data type: Service  
 Qualifiers: Key  
-  
+
  Access type: Read-only  
-  
+
  The service of this application domain.  
-  
+
 ### ref  
  Data type: AppDomainInfo  
 Qualifiers: Key  
-  
+
  Access type: Read-only  
-  
+
  Contains properties of the application domain.  
-  
+
 ## Requirements  
-  
-|MOF|Declared in Servicemodel.mof.|  
-|---------|-----------------------------------|  
-|Namespace|Defined in root\ServiceModel|
+
+
+|    MOF    | Declared in Servicemodel.mof. |
+|-----------|-------------------------------|
+| Namespace | Defined in root\ServiceModel  |
+

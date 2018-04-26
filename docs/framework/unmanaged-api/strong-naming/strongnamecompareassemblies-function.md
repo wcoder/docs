@@ -70,7 +70,7 @@ BOOLEAN StrongNameCompareAssemblies (
   
  **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## Remarks  
  The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.  

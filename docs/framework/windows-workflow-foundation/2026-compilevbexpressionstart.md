@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 2026 - CompileVbExpressionStart
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|2026|  
 |Keywords|WFRuntime|  
 |Level|Verbose|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates the start of a VB expression compilation.  
-  
+
 ## Message  
  Compiling VB expression '%1'  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|Expression|xs:string|The VisualBasic expression to compile.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|   Expression   |   xs:string    |            The VisualBasic expression to compile.            |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

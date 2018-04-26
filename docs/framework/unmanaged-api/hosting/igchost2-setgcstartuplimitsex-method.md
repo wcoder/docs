@@ -59,7 +59,7 @@ HRESULT SetGCStartupLimitsEx (
   
  **Library:** Included as a resource in MSCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## See Also  
  [IGCHost2 Interface](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)

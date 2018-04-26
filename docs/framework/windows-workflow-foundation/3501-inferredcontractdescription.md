@@ -17,24 +17,26 @@ ms.workload:
 ---
 # 3501 - InferredContractDescription
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|3501|  
 |Keywords|WFServices|  
 |Level|Information|  
 |Channel|Microsoft-Windows-Application Server-Applications/Analytic|  
-  
+
 ## Description  
  Indicates a ContractDescription has been inferred from WorkflowService.  
-  
+
 ## Message  
  ContractDescription with Name='%1' and Namespace='%2' has been inferred from WorkflowService.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|Name|xs:string|The name of the ContractDescription.|  
-|Namespace|xs:string|The namespace of the ContractDescription.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|      Name      |   xs:string    |             The name of the ContractDescription.             |
+|   Namespace    |   xs:string    |          The namespace of the ContractDescription.           |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

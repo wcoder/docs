@@ -35,7 +35,7 @@ You can use Windows Presentation Foundation (WPF) controls in your Windows Forms
  Shows how to use the Windows Forms layout features, such as anchoring and snaplines, to arrange Windows Presentation Foundation controls.  
   
  [Walkthrough: Changing Properties of a Hosted WPF Element at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time.md)  
- Shows the workflow between the Windows Forms Designer and the [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] for changing properties on WPF controls.  
+ Shows the workflow between the Windows Forms Designer and the [!INCLUDE [wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] for changing properties on WPF controls.  
   
  [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
  Shows how to create a Windows Presentation Foundation control for use in your Windows Forms-based applications.  
@@ -47,7 +47,7 @@ You can use Windows Presentation Foundation (WPF) controls in your Windows Forms
  Shows how to select the Windows Presentation Foundation control types you want to display on your form.  
   
  [Walkthrough: Styling WPF Content](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
- Shows the workflow between the Windows Forms Designer and the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] for applying styles to Windows Presentation Foundation controls.  
+ Shows the workflow between the Windows Forms Designer and the [!INCLUDE [wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] for applying styles to Windows Presentation Foundation controls.  
   
 ## Reference  
  <xref:System.Windows.Forms.Integration.ElementHost>  
@@ -61,4 +61,4 @@ You can use Windows Presentation Foundation (WPF) controls in your Windows Forms
  Describes interoperation between the Windows Presentation Foundation and Windows Forms technologies.  
   
  [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- Describes how to design Windows Presentation Foundation controls in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].
+ Describes how to design Windows Presentation Foundation controls in [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)].

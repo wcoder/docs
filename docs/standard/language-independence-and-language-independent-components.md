@@ -201,11 +201,11 @@ The .NET Framework is language independent. This means that, as a developer, you
   
  The .NET Framework Class Library or any other class library may include other types that aren't CLS-compliant; for example:  
   
--   Boxed value types. The following C# example creates a class that has a public property of type `int*` named `Value`. Because an `int*` is a boxed value type, the compiler flags it as non-CLS-compliant.  
+- Boxed value types. The following C# example creates a class that has a public property of type `int*` named `Value`. Because an `int*` is a boxed value type, the compiler flags it as non-CLS-compliant.  
   
-     [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]  
+   [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]  
   
--   Typed references, which are special constructs that contain a reference to an object and a reference to a type. Typed references are represented in the .NET Framework by the <xref:System.TypedReference> class.  
+- Typed references, which are special constructs that contain a reference to an object and a reference to a type. Typed references are represented in the .NET Framework by the <xref:System.TypedReference> class.  
   
  If a type is not CLS-compliant, you should apply the <xref:System.CLSCompliantAttribute> attribute with an `isCompliant` value of `false` to it. For more information, see [The CLSCompliantAttribute attribute](#CLSAttribute) section.  
   
@@ -280,35 +280,35 @@ The .NET Framework is language independent. This means that, as a developer, you
 ### Arrays  
  CLS-compliant arrays conform to the following rules:  
   
--   All dimensions of an array must have a lower bound of zero. The following example creates a non-CLS-compliant array with a lower bound of one. Note that, despite the presence of the <xref:System.CLSCompliantAttribute> attribute, the compiler does not detect that the array returned by the `Numbers.GetTenPrimes` method is not CLS-compliant.  
+- All dimensions of an array must have a lower bound of zero. The following example creates a non-CLS-compliant array with a lower bound of one. Note that, despite the presence of the <xref:System.CLSCompliantAttribute> attribute, the compiler does not detect that the array returned by the `Numbers.GetTenPrimes` method is not CLS-compliant.  
   
-     [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
-     [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
+   [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
+   [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
   
--   All array elements must consist of CLS-compliant types. The following example defines two methods that return non-CLS-compliant arrays. The first returns an array of <xref:System.UInt32> values. The second returns an <xref:System.Object> array that includes <xref:System.Int32> and <xref:System.UInt32> values. Although the compiler identifies the first array as non-compliant because of its <xref:System.UInt32> type, it fails to recognize that the second array includes non-CLS-compliant elements.  
+- All array elements must consist of CLS-compliant types. The following example defines two methods that return non-CLS-compliant arrays. The first returns an array of <xref:System.UInt32> values. The second returns an <xref:System.Object> array that includes <xref:System.Int32> and <xref:System.UInt32> values. Although the compiler identifies the first array as non-compliant because of its <xref:System.UInt32> type, it fails to recognize that the second array includes non-CLS-compliant elements.  
   
-     [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
-     [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
+   [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
+   [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
   
--   Overload resolution for methods that have array parameters is based on the fact that they are arrays and on their element type. For this reason, the following definition of an overloaded `GetSquares` method is CLS-compliant.  
+- Overload resolution for methods that have array parameters is based on the fact that they are arrays and on their element type. For this reason, the following definition of an overloaded `GetSquares` method is CLS-compliant.  
   
-     [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]
-     [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
+   [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]
+   [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
   
 <a name="Interfaces"></a>   
 ### Interfaces  
  CLS-compliant interfaces can define properties, events, and virtual methods (methods with no implementation). A CLS-compliant interface cannot have any of the following:  
   
--   Static methods or static fields. Both the C# and Visual Basic compilers generate compiler errors if you define a static member in an interface.  
+- Static methods or static fields. Both the C# and Visual Basic compilers generate compiler errors if you define a static member in an interface.  
   
--   Fields. Both the C# and Visual Basic compilers generate compiler errors if you define a field in an interface.  
+- Fields. Both the C# and Visual Basic compilers generate compiler errors if you define a field in an interface.  
   
--   Methods that are not CLS-compliant. For example, the following interface definition includes a method, `INumber.GetUnsigned`, that is marked as non-CLS-compliant. This example generates a compiler warning.  
+- Methods that are not CLS-compliant. For example, the following interface definition includes a method, `INumber.GetUnsigned`, that is marked as non-CLS-compliant. This example generates a compiler warning.  
   
-     [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
-     [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
+   [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
+   [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
   
-     Because of this rule, CLS-compliant types are not required to implement non-CLS-compliant members. If a CLS-compliant framework does expose a class that implements a non-CLS compliant interface, it should also provide concrete implementations of all non-CLS-compliant members.  
+   Because of this rule, CLS-compliant types are not required to implement non-CLS-compliant members. If a CLS-compliant framework does expose a class that implements a non-CLS compliant interface, it should also provide concrete implementations of all non-CLS-compliant members.  
   
  CLS-compliant language compilers must also allow a class to provide separate implementations of members that have the same name and signature in multiple interfaces.  Both C# and Visual Basic support [explicit interface implementations](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md) to provide different implementations of identically named methods. Visual Basic also supports the `Implements` keyword, which enables you to explicitly designate which interface and member a particular member implements. The following example illustrates this scenario by defining a `Temperature` class that implements the `ICelsius` and `IFahrenheit` interfaces as explicit interface implementations.  
   
@@ -319,24 +319,24 @@ The .NET Framework is language independent. This means that, as a developer, you
 ### Enumerations  
  CLS-compliant enumerations must follow these rules:  
   
--   The underlying type of the enumeration must be an intrinsic CLS-compliant integer (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32>, or <xref:System.Int64>). For example, the following code tries to define an enumeration whose underlying type is <xref:System.UInt32> and generates a compiler warning.  
+- The underlying type of the enumeration must be an intrinsic CLS-compliant integer (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32>, or <xref:System.Int64>). For example, the following code tries to define an enumeration whose underlying type is <xref:System.UInt32> and generates a compiler warning.  
   
-     [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]
-     [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
+   [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]
+   [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
   
--   An enumeration type must have a single instance field named `Value__` that is marked with the <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType> attribute. This enables you to reference the field value implicitly.  
+- An enumeration type must have a single instance field named `Value__` that is marked with the <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType> attribute. This enables you to reference the field value implicitly.  
   
--   An enumeration includes literal static fields whose types match the type of the enumeration itself. For example, if you define a `State` enumeration with values of `State.On` and `State.Off`, `State.On` and `State.Off` are both literal static fields whose type is `State`.  
+- An enumeration includes literal static fields whose types match the type of the enumeration itself. For example, if you define a `State` enumeration with values of `State.On` and `State.Off`, `State.On` and `State.Off` are both literal static fields whose type is `State`.  
   
--   There are two kinds of enumerations:  
+- There are two kinds of enumerations:  
   
-    -   An enumeration that represents a set of mutually exclusive, named integer values. This type of enumeration is indicated by the absence of the <xref:System.FlagsAttribute?displayProperty=nameWithType> custom attribute.  
+  -   An enumeration that represents a set of mutually exclusive, named integer values. This type of enumeration is indicated by the absence of the <xref:System.FlagsAttribute?displayProperty=nameWithType> custom attribute.  
   
-    -   An enumeration that represents a set of bit flags that can combine to generate an unnamed value. This type of enumeration is indicated by the presence of the <xref:System.FlagsAttribute?displayProperty=nameWithType> custom attribute.  
+  -   An enumeration that represents a set of bit flags that can combine to generate an unnamed value. This type of enumeration is indicated by the presence of the <xref:System.FlagsAttribute?displayProperty=nameWithType> custom attribute.  
   
-     For more information, see the documentation for the <xref:System.Enum> structure.  
+   For more information, see the documentation for the <xref:System.Enum> structure.  
   
--   The value of an enumeration is not limited to the range of its specified values. In other words, the range of values in an enumeration is the range of its underlying value. You can use the <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> method to determine whether a specified value is a member of an enumeration.  
+- The value of an enumeration is not limited to the range of its specified values. In other words, the range of values in an enumeration is the range of its underlying value. You can use the <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> method to determine whether a specified value is a member of an enumeration.  
   
 <a name="members"></a>   
 ### Type members in general  
@@ -395,14 +395,14 @@ The .NET Framework is language independent. This means that, as a developer, you
 ### Constructors  
  Constructors in CLS-compliant classes and structures must follow these rules:  
   
--   A constructor of a derived class must call the instance constructor of its base class before it accesses inherited instance data. This requirement is due to the fact that base class constructors are not inherited by their derived classes. This rule does not apply to structures, which do not support direct inheritance.  
+- A constructor of a derived class must call the instance constructor of its base class before it accesses inherited instance data. This requirement is due to the fact that base class constructors are not inherited by their derived classes. This rule does not apply to structures, which do not support direct inheritance.  
   
-     Typically, compilers enforce this rule independently of CLS compliance, as the following example shows. It creates a `Doctor` class that is derived from a `Person` class, but the `Doctor` class fails to call the `Person` class constructor to initialize inherited instance fields.  
+   Typically, compilers enforce this rule independently of CLS compliance, as the following example shows. It creates a `Doctor` class that is derived from a `Person` class, but the `Doctor` class fails to call the `Person` class constructor to initialize inherited instance fields.  
   
-     [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
-     [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
+   [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
+   [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
   
--   An object constructor cannot be called except to create an object. In addition, an object cannot be initialized twice. For example, this means that <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> and deserialization methods such as <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> must not call constructors.  
+- An object constructor cannot be called except to create an object. In addition, an object cannot be initialized twice. For example, this means that <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> and deserialization methods such as <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> must not call constructors.  
   
 <a name="properties"></a>   
 ### Properties  

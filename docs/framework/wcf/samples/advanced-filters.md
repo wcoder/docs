@@ -18,15 +18,15 @@ ms.workload:
   - "dotnet"
 ---
 # Advanced Filters
-This sample demonstrates a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] routing service. The routing service is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] component that makes it easy to include a content-based router in your application. This sample adapts the standard [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator sample to communicate using the routing service. This sample shows how to define content-based routing logic through the use of message filters and message filter tables.  
+This sample demonstrates a [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] routing service. The routing service is a [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] component that makes it easy to include a content-based router in your application. This sample adapts the standard [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] Calculator sample to communicate using the routing service. This sample shows how to define content-based routing logic through the use of message filters and message filter tables.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedFilters`  
   
 ## Sample Details  
@@ -57,7 +57,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- The third filter is a <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. This matches any message that showed up on an endpoint with an address that matches the address prefix (or the front portion) provided. In this example the address prefix is defined as "http://localhost/routingservice/router/rounding/". This means that any incoming messages that are addressed to "http://localhost/routingservice/router/rounding/*" are matched by this filter. In this case, it is messages that show up on the Rounding Calculator endpoint, which has the address of "http://localhost/routingservice/router/rounding/calculator".  
+ The third filter is a <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. This matches any message that showed up on an endpoint with an address that matches the address prefix (or the front portion) provided. In this example the address prefix is defined as "<http://localhost/routingservice/router/rounding/>". This means that any incoming messages that are addressed to "<http://localhost/routingservice/router/rounding/*>" are matched by this filter. In this case, it is messages that show up on the Rounding Calculator endpoint, which has the address of "<http://localhost/routingservice/router/rounding/calculator>".  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -84,69 +84,69 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 #### To use this sample  
   
-1.  Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open AdvancedFilters.sln.  
+1. Using [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)], open AdvancedFilters.sln.  
   
-2.  To open **Solution Explorer**, select **Solution Explorer** from the **View** menu.  
+2. To open **Solution Explorer**, select **Solution Explorer** from the **View** menu.  
   
-3.  Press F5 or CTRL+SHIFT+B in Visual Studio.  
+3. Press F5 or CTRL+SHIFT+B in Visual Studio.  
   
-    1.  If you would like to auto-launch the necessary projects when you press F5, right-click the solution and select **Properties**. Select the **Startup Project** node under **Common Properties** in the left pane. Select the **Multiple Startup Projects**  radio button and set all of the projects to have the **Start** action.  
+   1.  If you would like to auto-launch the necessary projects when you press F5, right-click the solution and select **Properties**. Select the **Startup Project** node under **Common Properties** in the left pane. Select the **Multiple Startup Projects**  radio button and set all of the projects to have the **Start** action.  
   
-    2.  If you build the project with CTRL+SHIFT+B, you must start the following applications:  
+   2.  If you build the project with CTRL+SHIFT+B, you must start the following applications:  
   
-        1.  Calculator Client (./CalculatorClient/bin/client.exe)  
+       1.  Calculator Client (./CalculatorClient/bin/client.exe)  
   
-        2.  Calculator Service (./CalculatorService/bin/service.exe)  
+       2.  Calculator Service (./CalculatorService/bin/service.exe)  
   
-        3.  Routing Calculator Service (./RoundingCalcService/bin/service.exe)  
+       3.  Routing Calculator Service (./RoundingCalcService/bin/service.exe)  
   
-        4.  RoutingService (./RoutingService/bin/RoutingService.exe)  
+       4.  RoutingService (./RoutingService/bin/RoutingService.exe)  
   
-4.  In the console window of the Calculator client, press ENTER to start the client. The client returns a list of destination endpoints to choose from.  
+4. In the console window of the Calculator client, press ENTER to start the client. The client returns a list of destination endpoints to choose from.  
   
-5.  Choose a destination endpoint by typing its corresponding letter and press ENTER.  
+5. Choose a destination endpoint by typing its corresponding letter and press ENTER.  
   
-6.  Next, the client asks you if you want to add a custom header. Press Y for Yes or N for No, then press ENTER.  
+6. Next, the client asks you if you want to add a custom header. Press Y for Yes or N for No, then press ENTER.  
   
-7.  Depending on the selections you made, you should see different outputs.  
+7. Depending on the selections you made, you should see different outputs.  
   
-    1.  The following is the output returned if you added a custom header to the messages.  
+   1.  The following is the output returned if you added a custom header to the messages.  
   
-        ```Output  
-        Add(100,15.99) = 116  
-        Subtract(145,76.54) = 68.5  
-        Multiply(9,81.25) = 731.3  
-        Divide(22,7) = 3.1  
-        ```  
+       ```Output  
+       Add(100,15.99) = 116  
+       Subtract(145,76.54) = 68.5  
+       Multiply(9,81.25) = 731.3  
+       Divide(22,7) = 3.1  
+       ```  
   
-    2.  The following is the output returned if you chose the Rounding Calculator endpoint without a custom header.  
+   2.  The following is the output returned if you chose the Rounding Calculator endpoint without a custom header.  
   
-        ```Output  
-        Add(100,15.99) = 116  
-        Subtract(145,76.54) = 68.5  
-        Multiply(9,81.25) = 731.3  
-        Divide(22,7) = 3.1  
-        ```  
+       ```Output  
+       Add(100,15.99) = 116  
+       Subtract(145,76.54) = 68.5  
+       Multiply(9,81.25) = 731.3  
+       Divide(22,7) = 3.1  
+       ```  
   
-    3.  The following is the output returned if you chose the Regular Calculator endpoint without a custom header.  
+   3.  The following is the output returned if you chose the Regular Calculator endpoint without a custom header.  
   
-        ```Output  
-        Add(100,15.99) = 115.99  
-        Subtract(145,76.54) = 68. 46  
-        Multiply(9,81.25) = 731.25  
-        Divide(22,7) = 3.14285714285714  
-        ```  
+       ```Output  
+       Add(100,15.99) = 115.99  
+       Subtract(145,76.54) = 68. 46  
+       Multiply(9,81.25) = 731.25  
+       Divide(22,7) = 3.14285714285714  
+       ```  
   
-    4.  The following is the output returned if you chose the Default Router endpoint without a custom header.  
+   4.  The following is the output returned if you chose the Default Router endpoint without a custom header.  
   
-        ```Output  
-        Add(100,15.99) = 116  
-        Subtract(145,76.54) = 68.46  
-        Multiply(9,81.25) = 731.3  
-        Divide(22,7) = 3.14285714285714  
-        ```  
+       ```Output  
+       Add(100,15.99) = 116  
+       Subtract(145,76.54) = 68.46  
+       Multiply(9,81.25) = 731.3  
+       Divide(22,7) = 3.14285714285714  
+       ```  
   
-8.  The Calculator Service and the Rounding Calculator Service also prints out a log of the operations invoked to their respective console windows.  
+8. The Calculator Service and the Rounding Calculator Service also prints out a log of the operations invoked to their respective console windows.  
   
 9. In the client console window, type `quit` and press ENTER to exit.  
   

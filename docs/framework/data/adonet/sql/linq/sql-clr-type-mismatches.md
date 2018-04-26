@@ -21,7 +21,7 @@ ms.workload:
   - "dotnet"
 ---
 # SQL-CLR Type Mismatches
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automates much of the translation between the object model and SQL Server. Nevertheless, some situations prevent exact translation. These key mismatches between the common language runtime (CLR) types and the SQL Server database types are summarized in the following sections. You can find more details about specific type mappings and function translation at [SQL-CLR Type Mapping](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) and [Data Types and Functions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
+[!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automates much of the translation between the object model and SQL Server. Nevertheless, some situations prevent exact translation. These key mismatches between the common language runtime (CLR) types and the SQL Server database types are summarized in the following sections. You can find more details about specific type mappings and function translation at [SQL-CLR Type Mapping](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) and [Data Types and Functions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
   
 ## Data Types  
  Translation between the CLR and SQL Server occurs when a query is being sent to the database, and when the results are sent back to your object model. For example, the following Transact-SQL query requires two value conversions:  
@@ -35,26 +35,26 @@ Select DateOfBirth From Customer Where CustomerId = @id
 ### Missing Counterparts  
  The following types do not have reasonable counterparts.  
   
--   Mismatches in the CLR <xref:System> namespace:  
+- Mismatches in the CLR <xref:System> namespace:  
   
-    -   **Unsigned integers**. These types are typically mapped to their signed counterparts of larger size to avoid overflow. Literals can be converted to a signed numeric of the same or smaller size, based on value.  
+  -   **Unsigned integers**. These types are typically mapped to their signed counterparts of larger size to avoid overflow. Literals can be converted to a signed numeric of the same or smaller size, based on value.  
   
-    -   **Boolean**. These types can be mapped to a bit or larger numeric or string. A literal can be mapped to an expression that evaluates to the same value (for example, `1=1` in SQL for `True` in CLS).  
+  -   **Boolean**. These types can be mapped to a bit or larger numeric or string. A literal can be mapped to an expression that evaluates to the same value (for example, `1=1` in SQL for `True` in CLS).  
   
-    -   **TimeSpan**. This type represents the difference between two `DateTime` values and does not correspond to the `timestamp` of SQL Server. The CLR <xref:System.TimeSpan?displayProperty=nameWithType> may also map to the SQL Server `TIME` type in some cases. The SQL Server `TIME` type was only intended to represent positive values less than 24 hours. The CLR <xref:System.TimeSpan> has a much larger range.  
+  -   **TimeSpan**. This type represents the difference between two `DateTime` values and does not correspond to the `timestamp` of SQL Server. The CLR <xref:System.TimeSpan?displayProperty=nameWithType> may also map to the SQL Server `TIME` type in some cases. The SQL Server `TIME` type was only intended to represent positive values less than 24 hours. The CLR <xref:System.TimeSpan> has a much larger range.  
   
-    > [!NOTE]
-    >  SQL Server-specific [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] types in <xref:System.Data.SqlTypes> are not included in this comparison.  
+  > [!NOTE]
+  >  SQL Server-specific [!INCLUDE [dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] types in <xref:System.Data.SqlTypes> are not included in this comparison.  
   
--   Mismatches in SQL Server:  
+- Mismatches in SQL Server:  
   
-    -   **Fixed length character types**. Transact-SQL distinguishes between Unicode and non-Unicode categories and has three distinct types in each category: fixed length `nchar`/`char`, variable length `nvarchar`/`varchar`, and larger-sized `ntext`/`text`. The fixed length character types could be mapped to the CLR <xref:System.Char?displayProperty=nameWithType> type for retrieving characters, but they do not really correspond to the same type in conversions and behavior.  
+  -   **Fixed length character types**. Transact-SQL distinguishes between Unicode and non-Unicode categories and has three distinct types in each category: fixed length `nchar`/`char`, variable length `nvarchar`/`varchar`, and larger-sized `ntext`/`text`. The fixed length character types could be mapped to the CLR <xref:System.Char?displayProperty=nameWithType> type for retrieving characters, but they do not really correspond to the same type in conversions and behavior.  
   
-    -   **Bit**. Although the `bit` domain has the same number of values as `Nullable<Boolean>`, the two are different types. `Bit` takes values `1` and `0` instead of `true`/`false`, and cannot be used as an equivalent to Boolean expressions.  
+  -   **Bit**. Although the `bit` domain has the same number of values as `Nullable<Boolean>`, the two are different types. `Bit` takes values `1` and `0` instead of `true`/`false`, and cannot be used as an equivalent to Boolean expressions.  
   
-    -   **Timestamp**. Unlike the CLR <xref:System.TimeSpan?displayProperty=nameWithType> type, the SQL Server `TIMESTAMP` type represents an 8-byte number generated by the database that is unique for each update and is not based on the difference between <xref:System.DateTime> values.  
+  -   **Timestamp**. Unlike the CLR <xref:System.TimeSpan?displayProperty=nameWithType> type, the SQL Server `TIMESTAMP` type represents an 8-byte number generated by the database that is unique for each update and is not based on the difference between <xref:System.DateTime> values.  
   
-    -   **Money** and **SmallMoney**. These types can be mapped to <xref:System.Decimal> but are basically different types and are treated as such by server-based functions and conversions.  
+  -   **Money** and **SmallMoney**. These types can be mapped to <xref:System.Decimal> but are basically different types and are treated as such by server-based functions and conversions.  
   
 ### Multiple Mappings  
  There are many SQL Server data types that you can map to one or more CLR data types. There are also many CLR types that you can map to one or more SQL Server types. Although a mapping may be supported by LINQ to SQL, it does not mean that the two types mapped between the CLR and SQL Server are a perfect match in precision, range, and semantics. Some mappings may include differences in any or all of these dimensions. You can find details about these potential differences for the various mapping possibilities at [SQL-CLR Type Mapping](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
@@ -115,11 +115,11 @@ or col1 != col2
   
  In the previous case, you can get equivalent behavior in generating SQL, but the translation might not accurately reflect your intention.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not impose C# `null` or Visual Basic `nothing` comparison semantics on SQL. Comparison operators are syntactically translated to their SQL equivalents. The semantics reflect SQL semantics as defined by server or connection settings. Two null values are considered unequal under default SQL Server settings (although you can change the settings to change the semantics). Regardless, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not consider server settings in query translation.  
+ [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not impose C# `null` or Visual Basic `nothing` comparison semantics on SQL. Comparison operators are syntactically translated to their SQL equivalents. The semantics reflect SQL semantics as defined by server or connection settings. Two null values are considered unequal under default SQL Server settings (although you can change the settings to change the semantics). Regardless, [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not consider server settings in query translation.  
   
  A comparison with the literal `null` (`nothing`) is translated to the appropriate SQL version (`is null` or `is not null`).  
   
- The value of `null` (`nothing`) in collation is defined by SQL Server; [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not change the collation.  
+ The value of `null` (`nothing`) in collation is defined by SQL Server; [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not change the collation.  
   
 ### Type Conversion and Promotion  
  SQL supports a rich set of implicit conversions in expressions. Similar expressions in C# would require an explicit cast. For example:  
@@ -159,84 +159,84 @@ Where Col1 = Col2
 ### Operator and Function Differences  
  Operators and functions that are essentially comparable have subtly different semantics. For example:  
   
--   C# specifies short circuit semantics based on lexical order of operands for logical operators `&&` and `||`. SQL on the other hand is targeted for set-based queries and therefore provides more freedom for the optimizer to decide the order of execution. Some of the implications include the following:  
+- C# specifies short circuit semantics based on lexical order of operands for logical operators `&&` and `||`. SQL on the other hand is targeted for set-based queries and therefore provides more freedom for the optimizer to decide the order of execution. Some of the implications include the following:  
   
-    -   Semantically equivalent translation would require "`CASE` … `WHEN` … `THEN`" construct in SQL to avoid reordering of operand execution.  
+  -   Semantically equivalent translation would require "`CASE` … `WHEN` … `THEN`" construct in SQL to avoid reordering of operand execution.  
   
-    -   A loose translation to `AND`/`OR` operators could cause unexpected errors if the C# expression relies on evaluation the second operand being based on the result of the evaluation of the first operand.  
+  -   A loose translation to `AND`/`OR` operators could cause unexpected errors if the C# expression relies on evaluation the second operand being based on the result of the evaluation of the first operand.  
   
--   `Round()` function has different semantics in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] and in T-SQL.  
+- `Round()` function has different semantics in [!INCLUDE [dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] and in T-SQL.  
   
--   Starting index for strings is 0 in the CLR but 1 in SQL. Therefore, any function that has index needs index translation.  
+- Starting index for strings is 0 in the CLR but 1 in SQL. Therefore, any function that has index needs index translation.  
   
--   The CLR supports modulus (‘%’) operator for floating point numbers but SQL does not.  
+- The CLR supports modulus (‘%’) operator for floating point numbers but SQL does not.  
   
--   The `Like` operator effectively acquires automatic overloads based on implicit conversions. Although the `Like` operator is defined to operate on character string types, implicit conversion from numeric types or `DateTime` types allows for those non-string types to be used with `Like` just as well. In CTS, comparable implicit conversions do not exist. Therefore, additional overloads are needed.  
+- The `Like` operator effectively acquires automatic overloads based on implicit conversions. Although the `Like` operator is defined to operate on character string types, implicit conversion from numeric types or `DateTime` types allows for those non-string types to be used with `Like` just as well. In CTS, comparable implicit conversions do not exist. Therefore, additional overloads are needed.  
   
-    > [!NOTE]
-    >  This `Like` operator behavior applies to C# only; the Visual Basic `Like` keyword is unchanged.  
+  > [!NOTE]
+  >  This `Like` operator behavior applies to C# only; the Visual Basic `Like` keyword is unchanged.  
   
--   Overflow is always checked in SQL but it has to be explicitly specified in C# (not in Visual Basic) to avoid wraparound. Given integer columns C1, C2 and C3, if C1+C2 is stored in C3 (Update T Set C3 = C1 + C2).  
+- Overflow is always checked in SQL but it has to be explicitly specified in C# (not in Visual Basic) to avoid wraparound. Given integer columns C1, C2 and C3, if C1+C2 is stored in C3 (Update T Set C3 = C1 + C2).  
   
-    ```  
-    create table T3 (  
-        Col1      integer,  
-        Col2      integer  
-    )  
-    insert into T3 (col1, col2) values (2147483647, 5)  
-    -- Valid values: max integer value and 5.  
-    select * from T3 where col1 + col2 < 0  
-    -- Produces arithmetic overflow error.  
-    ```  
+  ```  
+  create table T3 (  
+      Col1      integer,  
+      Col2      integer  
+  )  
+  insert into T3 (col1, col2) values (2147483647, 5)  
+  -- Valid values: max integer value and 5.  
+  select * from T3 where col1 + col2 < 0  
+  -- Produces arithmetic overflow error.  
+  ```  
   
  [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
  [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]  
   
--   SQL performs symmetric arithmetic rounding while [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] uses banker’s rounding. See Knowledgebase article 196652 for additional details.  
+- SQL performs symmetric arithmetic rounding while [!INCLUDE [dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] uses banker’s rounding. See Knowledgebase article 196652 for additional details.  
   
--   By default, for common locales, character-string comparisons are case-insensitive in SQL. In Visual Basic and in C#, they are case-sensitive. For example, `s == "Food"` (`s = "Food"` in Visual Basic) and `s == "Food"` can yield different results if `s` is `food`.  
+- By default, for common locales, character-string comparisons are case-insensitive in SQL. In Visual Basic and in C#, they are case-sensitive. For example, `s == "Food"` (`s = "Food"` in Visual Basic) and `s == "Food"` can yield different results if `s` is `food`.  
   
-    ```  
-    -- Assume default US-English locale (case insensitive).  
-    create table T4 (  
-        Col1      nvarchar (256)  
-    )  
-    insert into T4 values (‘Food’)   
-    insert into T4 values (‘FOOD’)  
-    select * from T4 where Col1 = ‘food’  
-    -- Both the rows are returned because of case-insensitive matching.  
-    ```  
+  ```  
+  -- Assume default US-English locale (case insensitive).  
+  create table T4 (  
+      Col1      nvarchar (256)  
+  )  
+  insert into T4 values (‘Food’)   
+  insert into T4 values (‘FOOD’)  
+  select * from T4 where Col1 = ‘food’  
+  -- Both the rows are returned because of case-insensitive matching.  
+  ```  
   
  [!code-csharp[DLinqMismatch#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#6)]
  [!code-vb[DLinqMismatch#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#6)]  
   
--   Operators/ functions applied to fixed length character type arguments in SQL have significantly different semantics than the same operators/functions applied to the CLR <xref:System.String?displayProperty=nameWithType>. This could also be viewed as an extension of the missing counterpart problem discussed in the section about types.  
+- Operators/ functions applied to fixed length character type arguments in SQL have significantly different semantics than the same operators/functions applied to the CLR <xref:System.String?displayProperty=nameWithType>. This could also be viewed as an extension of the missing counterpart problem discussed in the section about types.  
   
-    ```  
-    create table T4 (  
-        Col1      nchar(4)  
-    )  
-    Insert into T5(Col1) values ('21');  
-    Insert into T5(Col1) values ('1021');  
-    Select * from T5 where Col1 like '%1'  
-    -- Only the second row with Col1 = '1021' is returned.  
-    -- Not the first row!  
-    ```  
+  ```  
+  create table T4 (  
+      Col1      nchar(4)  
+  )  
+  Insert into T5(Col1) values ('21');  
+  Insert into T5(Col1) values ('1021');  
+  Select * from T5 where Col1 like '%1'  
+  -- Only the second row with Col1 = '1021' is returned.  
+  -- Not the first row!  
+  ```  
   
-     [!code-csharp[DLinqMismatch#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#7)]
-     [!code-vb[DLinqMismatch#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#7)]  
+   [!code-csharp[DLinqMismatch#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#7)]
+   [!code-vb[DLinqMismatch#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#7)]  
   
-     A similar problem occurs with string concatenation.  
+   A similar problem occurs with string concatenation.  
   
-    ```  
-    create table T6 (  
-        Col1      nchar(4)  
-        Col2       nchar(4)  
-    )  
-    Insert into T6 values ('a', 'b');  
-    Select Col1+Col2 from T6  
-    -- Returns concatenation of padded strings "a   b   " and not "ab".  
-    ```  
+  ```  
+  create table T6 (  
+      Col1      nchar(4)  
+      Col2       nchar(4)  
+  )  
+  Insert into T6 values ('a', 'b');  
+  Select Col1+Col2 from T6  
+  -- Returns concatenation of padded strings "a   b   " and not "ab".  
+  ```  
   
  In summary, a convoluted translation might be required for CLR expressions and additional operators/functions may be necessary to expose SQL functionality.  
   
@@ -267,37 +267,37 @@ Where Col1 + Col2 > 4
 ## Performance Issues  
  Accounting for some SQL Server-CLR type differences may resut in a decrease in performance when crossing between the CLR and SQL Server type systems. Examples of scenarios impacting performance include the following:  
   
--   Forced order of evaluation for logical and/or operators  
+- Forced order of evaluation for logical and/or operators  
   
--   Generating SQL to enforce order of predicate evaluation restricts the SQL optimizer’s ability.  
+- Generating SQL to enforce order of predicate evaluation restricts the SQL optimizer’s ability.  
   
--   Type conversions, whether introduced by a CLR compiler or by an Object-Relational query implementation, may curtail index usage.  
+- Type conversions, whether introduced by a CLR compiler or by an Object-Relational query implementation, may curtail index usage.  
   
-     For example,  
+   For example,  
   
-    ```  
-    -- Table DDL  
-    create table T5 (  
-        Col1      varchar(100)  
-    )  
-    ```  
+  ```  
+  -- Table DDL  
+  create table T5 (  
+      Col1      varchar(100)  
+  )  
+  ```  
   
-     [!code-csharp[DLinqMismatch#9](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#9)]
-     [!code-vb[DLinqMismatch#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#9)]  
+   [!code-csharp[DLinqMismatch#9](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#9)]
+   [!code-vb[DLinqMismatch#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#9)]  
   
-     Consider the translation of expression `(s = SOME_STRING_CONSTANT)`.  
+   Consider the translation of expression `(s = SOME_STRING_CONSTANT)`.  
   
-    ```  
-    -- Corresponding part of SQL where clause  
-    Where …  
-    Col1 = SOME_STRING_CONSTANT  
-    -- This expression is of the form <varchar> = <nvarchar>.  
-    -- Hence SQL introduces a conversion from varchar to nvarchar,  
-    --     resulting in  
-    Where …  
-    Convert(nvarchar(100), Col1) = SOME_STRING_CONSTANT  
-    -- Cannot use the index for column Col1 for some implementations.  
-    ```  
+  ```  
+  -- Corresponding part of SQL where clause  
+  Where …  
+  Col1 = SOME_STRING_CONSTANT  
+  -- This expression is of the form <varchar> = <nvarchar>.  
+  -- Hence SQL introduces a conversion from varchar to nvarchar,  
+  --     resulting in  
+  Where …  
+  Convert(nvarchar(100), Col1) = SOME_STRING_CONSTANT  
+  -- Cannot use the index for column Col1 for some implementations.  
+  ```  
   
  In addition to semantic differences, it is important to consider impacts to performance when crossing between the SQL Server and CLR type systems. For large data sets, such performance issues can determine whether an application is deployable.  
   

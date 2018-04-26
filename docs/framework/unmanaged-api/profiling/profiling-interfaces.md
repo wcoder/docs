@@ -65,7 +65,7 @@ This section describes the unmanaged interfaces that enable you to profile a pro
  Extends the `ICorProfilerInfo` interface with methods supported in the .NET Framework 2.0 and later versions.  
   
  [ICorProfilerInfo3 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- Extends the `ICorProfilerInfo2` interface with methods supported in the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] and later versions.  
+ Extends the `ICorProfilerInfo2` interface with methods supported in the [!INCLUDE [net_v40_short](../../../../includes/net-v40-short-md.md)] and later versions.  
   
  [ICorProfilerInfo4 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
  Provides methods that code profilers use to communicate with the CLR to control event monitoring and to request information.  

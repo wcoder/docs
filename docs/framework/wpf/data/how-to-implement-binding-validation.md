@@ -43,7 +43,7 @@ This example shows how to use an <xref:System.Windows.Controls.Validation.ErrorT
   
  For the complete example, see [Binding Validation Sample](http://go.microsoft.com/fwlink/?LinkID=159972).  
   
- Note that if you do not provide a custom <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> the default error template appears to provide visual feedback to the user when there is a validation error. See "Data Validation" in [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md) for more information. Also, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides a built-in validation rule that catches exceptions that are thrown during the update of the binding source property. For more information, see <xref:System.Windows.Controls.ExceptionValidationRule>.  
+ Note that if you do not provide a custom <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> the default error template appears to provide visual feedback to the user when there is a validation error. See "Data Validation" in [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md) for more information. Also, [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides a built-in validation rule that catches exceptions that are thrown during the update of the binding source property. For more information, see <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## See Also  
  [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md)  

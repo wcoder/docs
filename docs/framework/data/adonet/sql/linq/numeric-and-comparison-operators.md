@@ -27,7 +27,7 @@ Arithmetic and comparison operators work as expected in the common language runt
 -   Increment and decrement operators cause side-effects when you use them in expressions that cannot be replicated in SQL and are, therefore, not supported.  
   
 ## Supported Operators  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports the following operators.  
+ [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports the following operators.  
   
 -   Basic arithmetic operators:  
   

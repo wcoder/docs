@@ -30,7 +30,7 @@ Provides properties and methods for manipulating the registry.
   
  **Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **Assembly:** [!INCLUDE [vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## See Also  
  [My.Computer Object](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -25,7 +25,7 @@ ms.workload:
 There are a number of ways to expose asynchronous features to client code. The Event-based Asynchronous Pattern prescribes one way for classes to present asynchronous behavior.  
   
 > [!NOTE]
->  Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the Task Parallel Library provides a new model for asynchronous and parallel programming. For more information, see [Parallel Programming](../../../docs/standard/parallel-programming/index.md).  
+>  Starting with the [!INCLUDE [net_v40_long](../../../includes/net-v40-long-md.md)], the Task Parallel Library provides a new model for asynchronous and parallel programming. For more information, see [Parallel Programming](../../../docs/standard/parallel-programming/index.md).  
   
 ## In This Section  
  [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  

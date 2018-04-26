@@ -41,7 +41,7 @@ This section describes the unmanaged structures that the debugging API uses.
  Represents stack frame information from an exception object.  
   
  [CorDebugExceptionObjectStackFrame Structure](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- Maps a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID to its corresponding [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) object.  
+ Maps a [!INCLUDE [wrt](../../../../includes/wrt-md.md)] GUID to its corresponding [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) object.  
   
  COR_ACTIVE_FUNCTION  
  Contains information about the functions that are currently active in a thread's frames.  

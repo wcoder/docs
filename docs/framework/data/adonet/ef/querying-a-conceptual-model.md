@@ -18,4 +18,4 @@ ms.workload:
   - "dotnet"
 ---
 # Querying a Conceptual Model
-The [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] enables you to query a conceptual model. To query the conceptual model using the latest version of the Entity Framework, see [Querying Data](http://go.microsoft.com/fwlink/?LinkId=235282).
+The [!INCLUDE [vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE [adonet_ef](../../../../../includes/adonet-ef-md.md)] enables you to query a conceptual model. To query the conceptual model using the latest version of the Entity Framework, see [Querying Data](http://go.microsoft.com/fwlink/?LinkId=235282).

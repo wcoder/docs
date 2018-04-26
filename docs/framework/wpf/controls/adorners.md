@@ -22,7 +22,7 @@ ms.workload:
   - dotnet
 ---
 # Adorners
-This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.  
+This section provides information about Adorners and the [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.  
   
 ## In This Section  
  [Adorners Overview](../../../../docs/framework/wpf/controls/adorners-overview.md)  

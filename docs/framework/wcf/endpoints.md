@@ -20,7 +20,7 @@ ms.workload:
   - "dotnet"
 ---
 # Windows Communication Foundation Endpoints
-All communication with a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service occurs through the *endpoints* of the service. Endpoints provide clients access to the functionality that a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service offers.  
+All communication with a [!INCLUDE [indigo1](../../../includes/indigo1-md.md)] service occurs through the *endpoints* of the service. Endpoints provide clients access to the functionality that a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] service offers.  
   
  For an overview about how to create an endpoint, see [Endpoint Creation Overview](../../../docs/framework/wcf/endpoint-creation-overview.md). Each endpoint contains:  
   
@@ -43,7 +43,7 @@ All communication with a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] se
  Describes the structure of an endpoint and outlines how to define an endpoint in configuration and in code, as well as how to use the default endpoints, bindings, and behaviors provided by the runtime.  
   
  [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- Describes how communication with a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service occurs through endpoints.  
+ Describes how communication with a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] service occurs through endpoints.  
   
  [How to: Create a Service Endpoint in Configuration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Demonstrates how to create a service endpoint in configuration.  

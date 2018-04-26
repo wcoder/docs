@@ -23,7 +23,7 @@ ms.workload:
   - dotnet
 ---
 # Build and Deploy How-to Topics
-The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.  
+The following topics show how to create project files for the various [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.  
   
 ## In This Section  
  [Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  

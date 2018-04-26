@@ -22,7 +22,7 @@ ms.workload:
   - dotnet
 ---
 # Performance
-Achieving optimal application performance requires forethought in application design and an understanding of best practices for [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application development. The topics in this section provide additional information on building high performance [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.  
+Achieving optimal application performance requires forethought in application design and an understanding of best practices for [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application development. The topics in this section provide additional information on building high performance [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.  
   
 ## In This Section  
  [Graphics Rendering Tiers](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  

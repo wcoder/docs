@@ -22,7 +22,7 @@ ms.workload:
   - dotnet
 ---
 # Using a Brush to Fill Shapes
-A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> object is used to fill the interior of a closed shape. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] defines several fill styles: solid color, hatch pattern, image texture, and color gradient.  
+A [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> object is used to fill the interior of a closed shape. [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] defines several fill styles: solid color, hatch pattern, image texture, and color gradient.  
   
 ## In This Section  
  [How to: Fill a Shape with a Solid Color](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  

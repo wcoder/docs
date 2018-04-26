@@ -31,74 +31,74 @@ You can use a Windows Forms <xref:System.Windows.Forms.ErrorProvider> component 
   
 ### To display an error icon when a control's value is invalid  
   
-1.  Add two controls — for example, text boxes — to a Windows Form.  
+1. Add two controls — for example, text boxes — to a Windows Form.  
   
-2.  Add an <xref:System.Windows.Forms.ErrorProvider> component to the form.  
+2. Add an <xref:System.Windows.Forms.ErrorProvider> component to the form.  
   
-3.  Select the first control and add code to its <xref:System.Windows.Forms.Control.Validating> event handler. In order for this code to run properly, the procedure must be connected to the event. For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+3. Select the first control and add code to its <xref:System.Windows.Forms.Control.Validating> event handler. In order for this code to run properly, the procedure must be connected to the event. For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
-     The following code tests the validity of the data the user has entered; if the data is invalid, the <xref:System.Windows.Forms.ErrorProvider.SetError%2A> method is called. The first argument of the <xref:System.Windows.Forms.ErrorProvider.SetError%2A> method specifies which control to display the icon next to. The second argument is the error text to display.  
+    The following code tests the validity of the data the user has entered; if the data is invalid, the <xref:System.Windows.Forms.ErrorProvider.SetError%2A> method is called. The first argument of the <xref:System.Windows.Forms.ErrorProvider.SetError%2A> method specifies which control to display the icon next to. The second argument is the error text to display.  
   
-    ```vb  
-    Private Sub TextBox1_Validating(ByVal Sender As Object, _  
-       ByVal e As System.ComponentModel.CancelEventArgs) Handles _  
-       TextBox1.Validating  
-          If Not IsNumeric(TextBox1.Text) Then  
-             ErrorProvider1.SetError(TextBox1, "Not a numeric value.")  
-          Else  
-             ' Clear the error.  
-             ErrorProvider1.SetError(TextBox1, "")  
-          End If  
-    End Sub  
-    ```  
+   ```vb  
+   Private Sub TextBox1_Validating(ByVal Sender As Object, _  
+      ByVal e As System.ComponentModel.CancelEventArgs) Handles _  
+      TextBox1.Validating  
+         If Not IsNumeric(TextBox1.Text) Then  
+            ErrorProvider1.SetError(TextBox1, "Not a numeric value.")  
+         Else  
+            ' Clear the error.  
+            ErrorProvider1.SetError(TextBox1, "")  
+         End If  
+   End Sub  
+   ```  
   
-    ```csharp  
-    protected void textBox1_Validating (object sender,  
-       System.ComponentModel.CancelEventArgs e)  
-    {  
-       try  
-       {  
-          int x = Int32.Parse(textBox1.Text);  
-          errorProvider1.SetError(textBox1, "");  
-       }  
-       catch (Exception ex)  
-       {  
-          errorProvider1.SetError(textBox1, "Not an integer value.");  
-       }  
-    }  
-    ```  
+   ```csharp  
+   protected void textBox1_Validating (object sender,  
+      System.ComponentModel.CancelEventArgs e)  
+   {  
+      try  
+      {  
+         int x = Int32.Parse(textBox1.Text);  
+         errorProvider1.SetError(textBox1, "");  
+      }  
+      catch (Exception ex)  
+      {  
+         errorProvider1.SetError(textBox1, "Not an integer value.");  
+      }  
+   }  
+   ```  
   
-    ```cpp  
-    private:  
-       System::Void textBox1_Validating(System::Object ^  sender,  
-          System::ComponentModel::CancelEventArgs ^  e)  
-       {  
-          try  
-          {  
-             int x = Int32::Parse(textBox1->Text);  
-             errorProvider1->SetError(textBox1, "");  
-          }  
-          catch (System::Exception ^ ex)  
-          {  
-             errorProvider1->SetError(textBox1, "Not an integer value.");  
-          }  
-       }  
-    ```  
+   ```cpp  
+   private:  
+      System::Void textBox1_Validating(System::Object ^  sender,  
+         System::ComponentModel::CancelEventArgs ^  e)  
+      {  
+         try  
+         {  
+            int x = Int32::Parse(textBox1->Text);  
+            errorProvider1->SetError(textBox1, "");  
+         }  
+         catch (System::Exception ^ ex)  
+         {  
+            errorProvider1->SetError(textBox1, "Not an integer value.");  
+         }  
+      }  
+   ```  
   
-     (Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
+    (Visual C#, [!INCLUDE [vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
   
-    ```csharp  
-    this.textBox1.Validating += new  
-    System.ComponentModel.CancelEventHandler(this.textBox1_Validating);  
-    ```  
+   ```csharp  
+   this.textBox1.Validating += new  
+   System.ComponentModel.CancelEventHandler(this.textBox1_Validating);  
+   ```  
   
-    ```cpp  
-    this->textBox1->Validating += gcnew  
-       System::ComponentModel::CancelEventHandler  
-       (this, &Form1::textBox1_Validating);  
-    ```  
+   ```cpp  
+   this->textBox1->Validating += gcnew  
+      System::ComponentModel::CancelEventHandler  
+      (this, &Form1::textBox1_Validating);  
+   ```  
   
-4.  Run the project. Type invalid (in this example, non-numeric) data into the first control, and then tab to the second. When the error icon is displayed, point at it with the mouse pointer to see the error text.  
+4. Run the project. Type invalid (in this example, non-numeric) data into the first control, and then tab to the second. When the error icon is displayed, point at it with the mouse pointer to see the error text.  
   
 ## See Also  
  <xref:System.Windows.Forms.ErrorProvider.SetError%2A>  

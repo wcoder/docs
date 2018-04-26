@@ -26,7 +26,7 @@ ms.workload:
   - "dotnet"
 ---
 # Securing Method Access
-[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
+[!INCLUDE [net_security_note](../../../includes/net-security-note-md.md)]
   
  Some methods might not be suitable to allow arbitrary untrusted code to call. Such methods pose several risks: The method might provide some restricted information; it might believe any information passed to it; it might not do error checking on the parameters; or with the wrong parameters, it might malfunction or do something harmful. You should be aware of these cases and take action to help protect the method.  
   
@@ -66,7 +66,7 @@ public class Class1
  Use the declarations shown in this section to prevent specific classes and methods, as well as properties and events, from being used by partially trusted code. By applying these declarations to a class, you apply the protection to all its methods, properties, and events; however, note that field access is not affected by declarative security. Note also that link demands help protect against only the immediate callers and might still be subject to luring attacks.  
   
 > [!NOTE]
->  A new transparency model has been introduced in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. The [Security-Transparent Code, Level 2](../../../docs/framework/misc/security-transparent-code-level-2.md) model identifies secure code with the <xref:System.Security.SecurityCriticalAttribute> attribute. Security-critical code requires both callers and inheritors to be fully trusted. Assemblies that are running under the code access security rules from earlier .NET Framework versions can call level 2 assemblies. In this case, the security-critical attributes will be treated as link demands for full trust.  
+>  A new transparency model has been introduced in the [!INCLUDE [net_v40_long](../../../includes/net-v40-long-md.md)]. The [Security-Transparent Code, Level 2](../../../docs/framework/misc/security-transparent-code-level-2.md) model identifies secure code with the <xref:System.Security.SecurityCriticalAttribute> attribute. Security-critical code requires both callers and inheritors to be fully trusted. Assemblies that are running under the code access security rules from earlier .NET Framework versions can call level 2 assemblies. In this case, the security-critical attributes will be treated as link demands for full trust.  
   
  In strong-named assemblies, a [LinkDemand](../../../docs/framework/misc/link-demands.md) is applied to all publicly accessible methods, properties, and events therein to restrict their use to fully trusted callers. To disable this feature, you must apply the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attribute. Thus, explicitly marking classes to exclude untrusted callers is necessary only for unsigned assemblies or assemblies with this attribute; you can use these declarations to mark a subset of types therein that are not intended for untrusted callers.  
   

@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # System.String Methods
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support the following <xref:System.String> methods.  
+[!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support the following <xref:System.String> methods.  
   
 ## Unsupported System.String Methods in General  
  Unsupported <xref:System.String> methods in general:  

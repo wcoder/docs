@@ -23,25 +23,25 @@ ms.workload:
   - "dotnet"
 ---
 # Getting Started Sample
-The Getting Started sample demonstrates how to implement a typical service and a typical client using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. This sample is the basis for all other basic technology samples.  
+The Getting Started sample demonstrates how to implement a typical service and a typical client using [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)]. This sample is the basis for all other basic technology samples.  
   
 > [!NOTE]
 >  The setup procedure and build instructions for this sample are located at the end of this topic.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
  The service describes the operations it performs in a service contract that it exposes publicly as metadata. The service also contains the code to implement the operations.  
   
  The client contains a definition of the service contract and a proxy class for accessing the service. The proxy code is generated from the service metadata using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
- On [!INCLUDE[wv](../../../../includes/wv-md.md)], the service is hosted in the Windows Activation Service (WAS). On [!INCLUDE[wxp](../../../../includes/wxp-md.md)] and [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], it is hosted by Internet Information Services (IIS) and ASP.NET. Hosting a service in IIS or WAS allows the service to be activated automatically when it is accessed for the first time.  
+ On [!INCLUDE [wv](../../../../includes/wv-md.md)], the service is hosted in the Windows Activation Service (WAS). On [!INCLUDE [wxp](../../../../includes/wxp-md.md)] and [!INCLUDE [ws2003](../../../../includes/ws2003-md.md)], it is hosted by Internet Information Services (IIS) and ASP.NET. Hosting a service in IIS or WAS allows the service to be activated automatically when it is accessed for the first time.  
   
 > [!NOTE]
 >  If you would prefer to get started with a sample that hosts the service in a console application instead of IIS, see the [Self-Host](../../../../docs/framework/wcf/samples/self-host.md) sample.  

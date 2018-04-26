@@ -59,7 +59,7 @@ Provides properties that allow the host to configure an <xref:System.AppDomain?d
   
  **Library:** Included as a resource in MSCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## See Also  
  <xref:System.AppDomain>  

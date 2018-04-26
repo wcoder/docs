@@ -22,7 +22,7 @@ ms.workload:
   - dotnet
 ---
 # Annotations
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides document viewing controls that support annotating document content.  
+[!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides document viewing controls that support annotating document content.  
   
 ## In This Section  
  [Annotations Overview](../../../../docs/framework/wpf/advanced/annotations-overview.md)  

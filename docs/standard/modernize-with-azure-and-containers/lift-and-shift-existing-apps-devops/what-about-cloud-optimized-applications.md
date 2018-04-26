@@ -68,7 +68,7 @@ But even in scenarios in which microservices offer powerful capabilities-indepen
 
 Because of the complexity of a microservices architecture, only specific scenarios and certain application types are suitable for microservice-based applications. These include large and complex applications that have multiple, evolving subsystems. In these cases, it's worth investing in a more complex software architecture, for increased long-term agility and more efficient application maintenance. But for less complex scenarios, it might be better to continue with a monolithic application approach or simpler N-Tier approaches.
 
-As a final note, even at the risk of being repetitive about this concept, you shouldn't look at using microservices in your applications as "all-in or nothing at all*.*" You can extend and evolve existing monolithic applications by adding new, small scenarios based on microservices. You don't need to start from scratch to start working with a microservices architecture approach. In fact, we recommend that you evolve from using an existing monolithic or N-Tier application by adding new scenarios. Eventually, you can break down the application into autonomous components or microservices. You can start evolving your monolithic applications in a microservices direction, step by step.
+As a final note, even at the risk of being repetitive about this concept, you shouldn't look at using microservices in your applications as "all-in or nothing at all<em>.</em>" You can extend and evolve existing monolithic applications by adding new, small scenarios based on microservices. You don't need to start from scratch to start working with a microservices architecture approach. In fact, we recommend that you evolve from using an existing monolithic or N-Tier application by adding new scenarios. Eventually, you can break down the application into autonomous components or microservices. You can start evolving your monolithic applications in a microservices direction, step by step.
 
 ## When to use Azure App Service for modernizing existing .NET apps
 
@@ -126,6 +126,6 @@ The primary compute environments in Azure (in general availability, as of mid-20
 
 You also can deploy Windows Containers to other orchestrators, like Kubernetes, Docker Swarm, or DC/OS. Currently (early fall 2017), these platforms are in preview in Azure Container Service for using Windows Containers.
 
->[!div class="step-by-step"]
-[Previous](microsoft-technologies-in-cloud-devops-ready-applications.md)
-[Next](how-to-deploy-existing-net-apps-to-azure-app-service.md)
+> [!div class="step-by-step"]
+> [Previous](microsoft-technologies-in-cloud-devops-ready-applications.md)
+> [Next](how-to-deploy-existing-net-apps-to-azure-app-service.md)

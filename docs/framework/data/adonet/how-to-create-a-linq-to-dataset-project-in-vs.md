@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Create a LINQ to DataSet Project In Visual Studio
-The different types of [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] projects require certain imported namespaces (Visual Basic) or `using` directives (C#) and references. The minimum requirement is a reference to System.Core.dll and a `using` directive for <xref:System.Linq>. By default, these are supplied if you create a new [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] project. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] also requires a reference to System.Data.dll and System.Data.DataSetExtensions.dll and an `Imports` (Visual Basic) or `using` (C#) directive.  
+The different types of [!INCLUDE [vbteclinq](../../../../includes/vbteclinq-md.md)] projects require certain imported namespaces (Visual Basic) or `using` directives (C#) and references. The minimum requirement is a reference to System.Core.dll and a `using` directive for <xref:System.Linq>. By default, these are supplied if you create a new [!INCLUDE [csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] project. [!INCLUDE [linq_dataset](../../../../includes/linq-dataset-md.md)] also requires a reference to System.Data.dll and System.Data.DataSetExtensions.dll and an `Imports` (Visual Basic) or `using` (C#) directive.  
   
  If you are upgrading a project from an earlier version of Visual Studio, you might have to supply these LINQ-related references manually. You might also have to manually set the project to target the .NET Framework version 3.5.  
   
@@ -27,21 +27,21 @@ The different types of [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md
   
 ### To target the .NET Framework 3.5  
   
-1.  In [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)], create a new Visual Basic or C# project. Alternatively, you can open a Visual Basic or C# project that was created in Visual Studio 2005 and follow the prompts to convert it to a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] project.  
+1. In [!INCLUDE [vs_orcas_long](../../../../includes/vs-orcas-long-md.md)], create a new Visual Basic or C# project. Alternatively, you can open a Visual Basic or C# project that was created in Visual Studio 2005 and follow the prompts to convert it to a [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] project.  
   
-2.  For a C# project, click the **Project** menu, and then click **Properties**.  
+2. For a C# project, click the **Project** menu, and then click **Properties**.  
   
-    1.  In the **Application** property page, select .NET Framework 3.5 in the **Target Framework** drop-down list.  
+   1.  In the **Application** property page, select .NET Framework 3.5 in the **Target Framework** drop-down list.  
   
-3.  For a Visual Basic project, click the **Project** menu, and then click **Properties**.  
+3. For a Visual Basic project, click the **Project** menu, and then click **Properties**.  
   
-    1.  In the **Compile** property page, click **Advanced Compile Options** and then select .NET Framework 3.5 in the **Target Framework (all configurations)** drop-down list.  
+   1.  In the **Compile** property page, click **Advanced Compile Options** and then select .NET Framework 3.5 in the **Target Framework (all configurations)** drop-down list.  
   
-4.  On the **Project** menu, click **Add Reference**, click the **.NET** tab, scroll down to **System.Core**, click it, and then click **OK**.  
+4. On the **Project** menu, click **Add Reference**, click the **.NET** tab, scroll down to **System.Core**, click it, and then click **OK**.  
   
-5.  Add a `using` directive or imported namespace for <xref:System.Linq> to your source code file or project.  
+5. Add a `using` directive or imported namespace for <xref:System.Linq> to your source code file or project.  
   
-     For more information, see [using Directive](~/docs/csharp/language-reference/keywords/using-directive.md) or [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
+    For more information, see [using Directive](~/docs/csharp/language-reference/keywords/using-directive.md) or [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
   
 ### To enable LINQ to DataSet functionality  
   

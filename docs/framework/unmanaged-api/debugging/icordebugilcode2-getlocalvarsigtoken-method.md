@@ -53,7 +53,7 @@ HRESULT GetLocalVarSigToken(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## See Also  
  [ICorDebugILCode2 Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  

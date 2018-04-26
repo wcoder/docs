@@ -59,7 +59,7 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
   
  **Header:** Fusion.h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  [Fusion Structures](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  

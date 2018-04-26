@@ -21,23 +21,23 @@ ms.workload:
 This sample demonstrates how to implement a custom client issued token provider.  
   
 ## Discussion  
- A token provider in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is used to supply credentials to the security infrastructure. The token provider in general examines the target and issues appropriate credentials so that the security infrastructure can secure the message. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ships with a [!INCLUDE[infocard](../../../../includes/infocard-md.md)] token provider. Custom token providers are useful in the following cases:  
+ A token provider in [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] is used to supply credentials to the security infrastructure. The token provider in general examines the target and issues appropriate credentials so that the security infrastructure can secure the message. [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] ships with a [!INCLUDE [infocard](../../../../includes/infocard-md.md)] token provider. Custom token providers are useful in the following cases:  
   
--   If you have a credential store that the built-in token provider cannot operate with.  
+- If you have a credential store that the built-in token provider cannot operate with.  
   
--   If you want to provide your own custom mechanism for transforming the credentials from the point when the user provides the details to when the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client uses the credentials.  
+- If you want to provide your own custom mechanism for transforming the credentials from the point when the user provides the details to when the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] client uses the credentials.  
   
--   If you are building a custom token.  
+- If you are building a custom token.  
   
  This sample shows how to build a custom token provider that caches tokens issued by a Security Token Service (STS).  
   
  To summarize, this sample demonstrates the following:  
   
--   How a client can be configured with a custom token provider.  
+- How a client can be configured with a custom token provider.  
   
--   How issued tokens can be cached and provided to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client.  
+- How issued tokens can be cached and provided to the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] client.  
   
--   How the server is authenticated by the client using the server's X.509 certificate.  
+- How the server is authenticated by the client using the server's X.509 certificate.  
   
  This sample consists of a client console program (Client.exe), a security token service console program (Securitytokenservice.exe) and a service console program (Service.exe). The service implements a contract that defines a request-reply communication pattern. The contract is defined by the `ICalculator` interface, which exposes math operations (add, subtract, multiply, and divide). The client gets a security token from the Security Token Service (STS) and makes synchronous requests to the service for a given math operation and the service replies with the result. Client activity is visible in the console window.  
   
@@ -118,7 +118,7 @@ This sample demonstrates how to implement a custom client issued token provider.
  The Security Token Service exposes a single endpoint using the standard wsHttpBinding. The Security Token Service responds to request from clients for tokens and, provided the client authenticates using a Windows account, issues a token that contains the client's user name as a claim in the issued token. As part of creating the token, the Security Token Service signs the token using the private key associated with the CN=STS certificate. In addition, it creates a symmetric key and encrypts it using the public key associated with the CN=localhost certificate. In returning the token to the client, the Security Token Service also returns the symmetric key. The client presents the issued token to the Calculator service, and proves that it knows the symmetric key by signing the message with that key.  
   
 ## Custom Client Credentials and Token Provider  
- The following steps show how to develop a custom token provider that caches issued tokens and integrate it with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: security.  
+ The following steps show how to develop a custom token provider that caches issued tokens and integrate it with [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)]: security.  
   
 #### To develop a custom token provider  
   
@@ -255,11 +255,11 @@ This sample demonstrates how to implement a custom client issued token provider.
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
   
 ## See Also

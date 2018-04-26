@@ -54,7 +54,7 @@ public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
  which is the same error you get when you attempt to assign a value to a constant.  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Reference](../../../csharp/language-reference/index.md)  

@@ -69,7 +69,7 @@ HRESULT GetSaveSize (
   
  **Library:** Used as a resource in MSCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## See Also  
  [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

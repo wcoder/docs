@@ -25,13 +25,13 @@ The `My.Computer.FileSystem.SpecialDirectories` object allows you to access spec
   
 #### To write new text files in the My Documents directory  
   
-1.  Use the `My.Computer.FileSystem.SpecialDirectories.MyDocuments` property to supply the path.  
+1. Use the `My.Computer.FileSystem.SpecialDirectories.MyDocuments` property to supply the path.  
   
-     [!code-vb[VbFileIOWrite#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_1.vb)]  
+    [!code-vb[VbFileIOWrite#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_1.vb)]  
   
-2.  Use the `WriteAllText` method to write text to the specified file.  
+2. Use the `WriteAllText` method to write text to the specified file.  
   
-     [!code-vb[VbVbcnMyFileSystem#14](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_2.vb)]  
+    [!code-vb[VbVbcnMyFileSystem#14](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_2.vb)]  
   
 ## Example  
  [!code-vb[VbFileIOWrite#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_3.vb)]  

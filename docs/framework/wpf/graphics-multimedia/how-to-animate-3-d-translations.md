@@ -21,7 +21,7 @@ ms.workload:
   - dotnet
 ---
 # How to: Animate 3-D Translations
-This topic demonstrates how to animate a translation transformation set on a [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] model.  
+This topic demonstrates how to animate a translation transformation set on a [!INCLUDE [TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] model.  
   
  The code below shows the application of a <xref:System.Windows.Media.Media3D.TranslateTransform3D> object to the <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> property of a <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
   

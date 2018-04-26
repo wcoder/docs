@@ -58,16 +58,16 @@ This walkthrough describes how to create a pipeline for an add-in that performs 
 ## Prerequisites  
  You need the following to complete this walkthrough:  
   
--   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+- [!INCLUDE [vsprvs](../../../includes/vsprvs-md.md)].  
   
 ## Creating a Visual Studio Solution  
- Use a solution in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] to contain the projects of your pipeline segments.  
+ Use a solution in [!INCLUDE [vsprvs](../../../includes/vsprvs-md.md)] to contain the projects of your pipeline segments.  
   
 #### To create the pipeline solution  
   
-1.  In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], create a new project named `Calc1Contract`. Base it on the **Class Library** template.  
+1. In [!INCLUDE [vsprvs](../../../includes/vsprvs-md.md)], create a new project named `Calc1Contract`. Base it on the **Class Library** template.  
   
-2.  Name the solution `CalculatorV1`.  
+2. Name the solution `CalculatorV1`.  
   
 ## Creating the Pipeline Directory Structure  
  The add-in model requires the pipeline segment assemblies to be placed in a specified directory structure. For more information about the pipeline structure, see [Pipeline Development Requirements](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
@@ -99,58 +99,58 @@ This walkthrough describes how to create a pipeline for an add-in that performs 
   
 #### To create the contract  
   
-1.  In the Visual Studio solution named `CalculatorV1`, open the `Calc1Contract` project.  
+1. In the Visual Studio solution named `CalculatorV1`, open the `Calc1Contract` project.  
   
-2.  In **Solution Explorer**, add references to the following assemblies to the `Calc1Contract` project:  
+2. In **Solution Explorer**, add references to the following assemblies to the `Calc1Contract` project:  
   
-     System.AddIn.Contract.dll  
+    System.AddIn.Contract.dll  
   
-     System.AddIn.dll  
+    System.AddIn.dll  
   
-3.  In **Solution Explorer**, exclude the default class that is added to new **Class Library** projects.  
+3. In **Solution Explorer**, exclude the default class that is added to new **Class Library** projects.  
   
-4.  In **Solution Explorer**, add a new item to the project, using the **Interface** template. In the **Add New Item** dialog box, name the interface `ICalc1Contract`.  
+4. In **Solution Explorer**, add a new item to the project, using the **Interface** template. In the **Add New Item** dialog box, name the interface `ICalc1Contract`.  
   
-5.  In the interface file, add namespace references to <xref:System.AddIn.Contract> and <xref:System.AddIn.Pipeline>.  
+5. In the interface file, add namespace references to <xref:System.AddIn.Contract> and <xref:System.AddIn.Pipeline>.  
   
-6.  Use the following code to complete this contract segment. Note that this interface must have the <xref:System.AddIn.Pipeline.AddInContractAttribute> attribute.  
+6. Use the following code to complete this contract segment. Note that this interface must have the <xref:System.AddIn.Pipeline.AddInContractAttribute> attribute.  
   
-     [!code-csharp[AddInP1Contract#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AddInP1Contract/cs/ICalc1Contract.cs#1)]
-     [!code-vb[AddInP1Contract#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AddInP1Contract/vb/ICalc1Contract.vb#1)]  
+    [!code-csharp[AddInP1Contract#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AddInP1Contract/cs/ICalc1Contract.cs#1)]
+    [!code-vb[AddInP1Contract#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AddInP1Contract/vb/ICalc1Contract.vb#1)]  
   
-7.  Optionally, build the Visual Studio solution. The solution cannot be run until the final procedure, but building it after each procedure ensures that each project is correct.  
+7. Optionally, build the Visual Studio solution. The solution cannot be run until the final procedure, but building it after each procedure ensures that each project is correct.  
   
  Because the add-in view and the host view of the add-in usually have the same code, especially in the first version of an add-in, you can easily create the views at the same time. They differ by only one factor: the add-in view requires the <xref:System.AddIn.Pipeline.AddInBaseAttribute> attribute, while the host view of the add-in does not require any attributes.  
   
 #### To create the add-in view  
   
-1.  Add a new project named `Calc1AddInView` to the `CalculatorV1` solution. Base it on the **Class Library** template.  
+1. Add a new project named `Calc1AddInView` to the `CalculatorV1` solution. Base it on the **Class Library** template.  
   
-2.  In **Solution Explorer**, add a reference to System.AddIn.dll to the `Calc1AddInView` project.  
+2. In **Solution Explorer**, add a reference to System.AddIn.dll to the `Calc1AddInView` project.  
   
-3.  In **Solution Explorer**, exclude the default class that is added to new **Class Library** projects, and add a new item to the project, using the **Interface** template. In the **Add New Item** dialog box, name the interface `ICalculator`.  
+3. In **Solution Explorer**, exclude the default class that is added to new **Class Library** projects, and add a new item to the project, using the **Interface** template. In the **Add New Item** dialog box, name the interface `ICalculator`.  
   
-4.  In the interface file, add a namespace reference to <xref:System.AddIn.Pipeline>.  
+4. In the interface file, add a namespace reference to <xref:System.AddIn.Pipeline>.  
   
-5.  Use the following code to complete this add-in view. Note that this interface must have the <xref:System.AddIn.Pipeline.AddInBaseAttribute> attribute.  
+5. Use the following code to complete this add-in view. Note that this interface must have the <xref:System.AddIn.Pipeline.AddInBaseAttribute> attribute.  
   
-     [!code-csharp[AddInP1AddInViews#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AddInP1AddInViews/cs/Calc1AddInView.cs#1)]
-     [!code-vb[AddInP1AddInViews#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AddInP1AddInViews/vb/Calc1AddInView.vb#1)]  
+    [!code-csharp[AddInP1AddInViews#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AddInP1AddInViews/cs/Calc1AddInView.cs#1)]
+    [!code-vb[AddInP1AddInViews#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AddInP1AddInViews/vb/Calc1AddInView.vb#1)]  
   
-6.  Optionally, build the Visual Studio solution.  
+6. Optionally, build the Visual Studio solution.  
   
 #### To create the host view of the add-in  
   
-1.  Add a new project named `Calc1HVA` to the `CalculatorV1` solution. Base it on the **Class Library** template.  
+1. Add a new project named `Calc1HVA` to the `CalculatorV1` solution. Base it on the **Class Library** template.  
   
-2.  In **Solution Explorer**, exclude the default class that is added to new **Class Library** projects, and add a new item to the project, using the **Interface** template. In the **Add New Item** dialog box, name the interface `ICalculator`.  
+2. In **Solution Explorer**, exclude the default class that is added to new **Class Library** projects, and add a new item to the project, using the **Interface** template. In the **Add New Item** dialog box, name the interface `ICalculator`.  
   
-3.  In the interface file, use the following code to complete the host view of the add-in.  
+3. In the interface file, use the following code to complete the host view of the add-in.  
   
-     [!code-csharp[AddInP1HVA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AddInP1HVA/cs/calc1hva.cs#1)]
-     [!code-vb[AddInP1HVA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AddInP1HVA/vb/Calc1HVA.vb#1)]  
+    [!code-csharp[AddInP1HVA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AddInP1HVA/cs/calc1hva.cs#1)]
+    [!code-vb[AddInP1HVA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AddInP1HVA/vb/Calc1HVA.vb#1)]  
   
-4.  Optionally, build the Visual Studio solution.  
+4. Optionally, build the Visual Studio solution.  
   
 ## Creating the Add-in-side Adapter  
  This add-in-side adapter consists of one view-to-contract adapter. This pipeline segment converts the types from the add-in view to the contract.  
@@ -159,29 +159,29 @@ This walkthrough describes how to create a pipeline for an add-in that performs 
   
 #### To create the add-in-side adapter  
   
-1.  Add a new project named `Calc1AddInSideAdapter` to the `CalculatorV1` solution. Base it on the **Class Library** template.  
+1. Add a new project named `Calc1AddInSideAdapter` to the `CalculatorV1` solution. Base it on the **Class Library** template.  
   
-2.  In **Solution Explorer**, add references to the following assemblies to the `Calc1AddInSideAdapter` project:  
+2. In **Solution Explorer**, add references to the following assemblies to the `Calc1AddInSideAdapter` project:  
   
-     System.AddIn.dll  
+    System.AddIn.dll  
   
-     System.AddIn.Contract.dll  
+    System.AddIn.Contract.dll  
   
-3.  Add project references to the projects for the adjacent pipeline segments:  
+3. Add project references to the projects for the adjacent pipeline segments:  
   
-     `Calc1AddInView`  
+    `Calc1AddInView`  
   
-     `Calc1Contract`  
+    `Calc1Contract`  
   
-4.  Select each project reference, and in **Properties** set **Copy Local** to **False**. In Visual Basic, use the **References** tab of **Project Properties** to set **Copy Local** to **False** for the two project references.  
+4. Select each project reference, and in **Properties** set **Copy Local** to **False**. In Visual Basic, use the **References** tab of **Project Properties** to set **Copy Local** to **False** for the two project references.  
   
-5.  Rename the project's default class `CalculatorViewToContractAddInSideAdapter`.  
+5. Rename the project's default class `CalculatorViewToContractAddInSideAdapter`.  
   
-6.  In the class file, add namespace references to <xref:System.AddIn.Pipeline>.  
+6. In the class file, add namespace references to <xref:System.AddIn.Pipeline>.  
   
-7.  In the class file, add namespace references for the adjacent segments: `CalcAddInViews` and `CalculatorContracts`. (In Visual Basic, these namespace references are `Calc1AddInView.CalcAddInViews` and `Calc1Contract.CalculatorContracts`, unless you have turned off the default namespaces in your Visual Basic projects.)  
+7. In the class file, add namespace references for the adjacent segments: `CalcAddInViews` and `CalculatorContracts`. (In Visual Basic, these namespace references are `Calc1AddInView.CalcAddInViews` and `Calc1Contract.CalculatorContracts`, unless you have turned off the default namespaces in your Visual Basic projects.)  
   
-8.  Apply the <xref:System.AddIn.Pipeline.AddInAdapterAttribute> attribute to the `CalculatorViewToContractAddInSideAdapter` class, to identify it as the add-in-side adapter.  
+8. Apply the <xref:System.AddIn.Pipeline.AddInAdapterAttribute> attribute to the `CalculatorViewToContractAddInSideAdapter` class, to identify it as the add-in-side adapter.  
   
 9. Make the `CalculatorViewToContractAddInSideAdapter` class inherit <xref:System.AddIn.Pipeline.ContractBase>, which provides a default implementation of the <xref:System.AddIn.Contract.IContract> interface, and implement the contract interface for the pipeline, `ICalc1Contract`.  
   
@@ -205,29 +205,29 @@ This walkthrough describes how to create a pipeline for an add-in that performs 
   
 #### To create the host-side adapter  
   
-1.  Add a new project named `Calc1HostSideAdapter` to the `CalculatorV1` solution. Base it on the **Class Library** template.  
+1. Add a new project named `Calc1HostSideAdapter` to the `CalculatorV1` solution. Base it on the **Class Library** template.  
   
-2.  In **Solution Explorer**, add references to the following assemblies to the `Calc1HostSideAdapter` project:  
+2. In **Solution Explorer**, add references to the following assemblies to the `Calc1HostSideAdapter` project:  
   
-     System.AddIn.dll  
+    System.AddIn.dll  
   
-     System.AddIn.Contract.dll  
+    System.AddIn.Contract.dll  
   
-3.  Add project references to the projects for the adjacent segments:  
+3. Add project references to the projects for the adjacent segments:  
   
-     `Calc1Contract`  
+    `Calc1Contract`  
   
-     `Calc1HVA`  
+    `Calc1HVA`  
   
-4.  Select each project reference, and in **Properties** set **Copy Local** to **False**. In Visual Basic, use the **References** tab of **Project Properties** to set **Copy Local** to **False** for the two project references.  
+4. Select each project reference, and in **Properties** set **Copy Local** to **False**. In Visual Basic, use the **References** tab of **Project Properties** to set **Copy Local** to **False** for the two project references.  
   
-5.  Rename the project's default class `CalculatorContractToViewHostSideAdapter`.  
+5. Rename the project's default class `CalculatorContractToViewHostSideAdapter`.  
   
-6.  In the class file, add namespace references to <xref:System.AddIn.Pipeline>.  
+6. In the class file, add namespace references to <xref:System.AddIn.Pipeline>.  
   
-7.  In the class file, add namespace references for the adjacent segments: `CalcHVAs` and `CalculatorContracts`. (In Visual Basic, these namespace references are `Calc1HVA.CalcHVAs` and `Calc1Contract.CalculatorContracts`, unless you have turned off the default namespaces in your Visual Basic projects.)  
+7. In the class file, add namespace references for the adjacent segments: `CalcHVAs` and `CalculatorContracts`. (In Visual Basic, these namespace references are `Calc1HVA.CalcHVAs` and `Calc1Contract.CalculatorContracts`, unless you have turned off the default namespaces in your Visual Basic projects.)  
   
-8.  Apply the <xref:System.AddIn.Pipeline.HostAdapterAttribute> attribute to the `CalculatorContractToViewHostSideAdapter` class, to identify it as the host-side adapter segment.  
+8. Apply the <xref:System.AddIn.Pipeline.HostAdapterAttribute> attribute to the `CalculatorContractToViewHostSideAdapter` class, to identify it as the host-side adapter segment.  
   
 9. Make the `CalculatorContractToViewHostSideAdapter` class implement the interface that represents the host view of the add-in: `Calc1HVAs.ICalculator` (`Calc1HVA.CalcHVAs.ICalculator` in Visual Basic).  
   
@@ -260,21 +260,21 @@ This walkthrough describes how to create a pipeline for an add-in that performs 
   
 #### To create the host  
   
-1.  Add a new project named `Calc1Host` to the `CalculatorV1` solution. Base it on the **Console Application** template.  
+1. Add a new project named `Calc1Host` to the `CalculatorV1` solution. Base it on the **Console Application** template.  
   
-2.  In **Solution Explorer**, add a reference to the System.AddIn.dll assembly to the `Calc1Host` project.  
+2. In **Solution Explorer**, add a reference to the System.AddIn.dll assembly to the `Calc1Host` project.  
   
-3.  Add a project reference to the `Calc1HVA` project. Select the project reference, and in **Properties** set **Copy Local** to **False**. In Visual Basic, use the **References** tab of **Project Properties** to set **Copy Local** to **False**.  
+3. Add a project reference to the `Calc1HVA` project. Select the project reference, and in **Properties** set **Copy Local** to **False**. In Visual Basic, use the **References** tab of **Project Properties** to set **Copy Local** to **False**.  
   
-4.  Rename the class file (module in Visual Basic) `MathHost1`.  
+4. Rename the class file (module in Visual Basic) `MathHost1`.  
   
-5.  In Visual Basic, use the **Application** tab of the **Project Properties** dialog box to set **Startup object** to **Sub Main**.  
+5. In Visual Basic, use the **Application** tab of the **Project Properties** dialog box to set **Startup object** to **Sub Main**.  
   
-6.  In the class or module file, add a namespace reference to <xref:System.AddIn.Hosting>.  
+6. In the class or module file, add a namespace reference to <xref:System.AddIn.Hosting>.  
   
-7.  In the class or module file, add a namespace reference for the host view of the add-in: `CalcHVAs`. (In Visual Basic, this namespace reference is `Calc1HVA.CalcHVAs`, unless you have turned off the default namespaces in your Visual Basic projects.)  
+7. In the class or module file, add a namespace reference for the host view of the add-in: `CalcHVAs`. (In Visual Basic, this namespace reference is `Calc1HVA.CalcHVAs`, unless you have turned off the default namespaces in your Visual Basic projects.)  
   
-8.  In **Solution Explorer**, select the solution and from the **Project** menu choose **Properties**. In the **Solution Property Pages** dialog box, set the **Single Startup Project** to be this host application project.  
+8. In **Solution Explorer**, select the solution and from the **Project** menu choose **Properties**. In the **Solution Property Pages** dialog box, set the **Single Startup Project** to be this host application project.  
   
 9. In the class or module file, use the <xref:System.AddIn.Hosting.AddInStore.Update%2A?displayProperty=nameWithType> method to update the cache. Use the <xref:System.AddIn.Hosting.AddInStore.FindAddIn%2A?displayProperty=nameWithType> method to get a collection of tokens, and use the <xref:System.AddIn.Hosting.AddInToken.Activate%2A?displayProperty=nameWithType> method to activate an add-in.  
   
@@ -295,26 +295,26 @@ This walkthrough describes how to create a pipeline for an add-in that performs 
   
 #### To create the add-in  
   
-1.  Add a new project named `AddInCalcV1` to the `CalculatorV1` solution. Base it on the **Class Library** template.  
+1. Add a new project named `AddInCalcV1` to the `CalculatorV1` solution. Base it on the **Class Library** template.  
   
-2.  In **Solution Explorer**, add a reference to the System.AddIn.dll assembly to the project.  
+2. In **Solution Explorer**, add a reference to the System.AddIn.dll assembly to the project.  
   
-3.  Add a project reference to the `Calc1AddInView` project. Select the project reference, and in **Properties**, set **Copy Local** to **False**. In Visual Basic, use the **References** tab of **Project Properties** to set **Copy Local** to **False** for the project reference.  
+3. Add a project reference to the `Calc1AddInView` project. Select the project reference, and in **Properties**, set **Copy Local** to **False**. In Visual Basic, use the **References** tab of **Project Properties** to set **Copy Local** to **False** for the project reference.  
   
-4.  Rename the class `AddInCalcV1`.  
+4. Rename the class `AddInCalcV1`.  
   
-5.  In the class file, add a namespace reference to <xref:System.AddIn> and the add-in view segment: `CalcAddInViews` (`Calc1AddInView.CalcAddInViews` in Visual Basic).  
+5. In the class file, add a namespace reference to <xref:System.AddIn> and the add-in view segment: `CalcAddInViews` (`Calc1AddInView.CalcAddInViews` in Visual Basic).  
   
-6.  Apply the <xref:System.AddIn.AddInAttribute> attribute to the `AddInCalcV1` class, to identify the class as an add-in.  
+6. Apply the <xref:System.AddIn.AddInAttribute> attribute to the `AddInCalcV1` class, to identify the class as an add-in.  
   
-7.  Make the `AddInCalcV1` class implement the interface that represents the add-in view: `CalcAddInViews.ICalculator` (`Calc1AddInView.CalcAddInViews.ICalculator` in Visual Basic).  
+7. Make the `AddInCalcV1` class implement the interface that represents the add-in view: `CalcAddInViews.ICalculator` (`Calc1AddInView.CalcAddInViews.ICalculator` in Visual Basic).  
   
-8.  Implement the members of `ICalculator` by returning the results of the appropriate calculations.  
+8. Implement the members of `ICalculator` by returning the results of the appropriate calculations.  
   
-     The following code shows the completed add-in.  
+    The following code shows the completed add-in.  
   
-     [!code-csharp[AddInP1AddInCalcV1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AddInP1AddInCalcV1/cs/AddInCalcV1.cs#1)]
-     [!code-vb[AddInP1AddInCalcV1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AddInP1AddInCalcV1/vb/AddInCalcV1.vb#1)]  
+    [!code-csharp[AddInP1AddInCalcV1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AddInP1AddInCalcV1/cs/AddInCalcV1.cs#1)]
+    [!code-vb[AddInP1AddInCalcV1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AddInP1AddInCalcV1/vb/AddInCalcV1.vb#1)]  
   
 9. Optionally, build the Visual Studio solution.  
   

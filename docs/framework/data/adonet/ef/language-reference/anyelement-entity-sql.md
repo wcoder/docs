@@ -41,7 +41,7 @@ ANYELEMENT(Customers)
 ```  
   
 ## Example  
- The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the ANYELEMENT operator to extract an element from a multivalued collection. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  
+ The following [!INCLUDE [esql](../../../../../../includes/esql-md.md)] query uses the ANYELEMENT operator to extract an element from a multivalued collection. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  
   
 1.  Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   

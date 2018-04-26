@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Downloading Sample Databases
-A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use the Northwind sample database and SQL Server Express Edition. You can download these products free of charge from the Microsoft download site.  
+A number of samples and walkthroughs in the [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use the Northwind sample database and SQL Server Express Edition. You can download these products free of charge from the Microsoft download site.  
   
 ## Downloading the Northwind Database  
   
@@ -37,7 +37,7 @@ A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../..
      By default, the database is installed at *drive*:\SQL Server 2000 Sample Databases.  
   
 ## Downloading SQL Server Express Edition  
- SQL Server Express Edition is available without charge, and you can redistribute it with applications. If you are using [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)], SQL Server Express Edition is included in the Pro and greater editions.  
+ SQL Server Express Edition is available without charge, and you can redistribute it with applications. If you are using [!INCLUDE [vsprvs](../../../../../../includes/vsprvs-md.md)], SQL Server Express Edition is included in the Pro and greater editions.  
   
 #### To download and install SQL Server Express Edition  
   

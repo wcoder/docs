@@ -22,7 +22,7 @@ ms.workload:
   - "dotnet"
 ---
 # Extending WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] allows you to modify and extend run time components to precisely control and extend service-based applications. The topics in this section go in depth about the extensibility architecture. For more information about basic programming, see [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+[!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] allows you to modify and extend run time components to precisely control and extend service-based applications. The topics in this section go in depth about the extensibility architecture. For more information about basic programming, see [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## In This Section  
  [Extending ServiceHost and the Service Model Layer](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
@@ -35,10 +35,10 @@ ms.workload:
  The channel layer sits beneath the service model layer and is responsible for the exchange of messages between clients and services. Channel extensions can implement new protocol functionality, such as security. Channel extensions also transport functionality, such as implementing a new network transport to carry SOAP messages.  
   
  [Extending Security](../../../../docs/framework/wcf/extending/extending-security.md)  
- Security in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consists of transfer security (integrity, confidentiality, and authentication), access control (authorization) and auditing. The classes found in the `IdentityModel` namespace are used by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] for access control. Understanding the security architecture allows you to create custom claim types to accommodate custom access control systems.  
+ Security in [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] consists of transfer security (integrity, confidentiality, and authentication), access control (authorization) and auditing. The classes found in the `IdentityModel` namespace are used by [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] for access control. Understanding the security architecture allows you to create custom claim types to accommodate custom access control systems.  
   
  [Extending the Metadata System](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
- The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] metadata system is a group of classes and interfaces that represent metadata required to implement service-based applications. Modify or extend the classes or implement and configure the interfaces to export and import custom metadata such as Web Services Description Language (WSDL) extensions or custom WS-PolicyAttachments assertions.  
+ The [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] metadata system is a group of classes and interfaces that represent metadata required to implement service-based applications. Modify or extend the classes or implement and configure the interfaces to export and import custom metadata such as Web Services Description Language (WSDL) extensions or custom WS-PolicyAttachments assertions.  
   
  [Extending Encoders and Serializers](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
  Encoders and serializers translate data from one form to another. The topics in this section discuss how to extend the supplied classes to meet special requirements.  

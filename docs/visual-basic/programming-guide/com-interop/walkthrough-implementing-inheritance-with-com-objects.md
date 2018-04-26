@@ -23,7 +23,7 @@ You can derive Visual Basic classes from `Public` classes in COM objects, even t
   
  The following procedure shows how to use Visual Basic 6.0 to create a COM object that contains a class, and then use it as a base class.  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE [note_settings_general](~/includes/note-settings-general-md.md)]
   
 ### To build the COM object that is used in this walkthrough  
   
@@ -76,49 +76,49 @@ You can derive Visual Basic classes from `Public` classes in COM objects, even t
     >  Although you can also expose a class created with Visual Basic as a COM object, it is not a true COM object and cannot be used in this walkthrough. For details, see [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## Interop Assemblies  
- In the following procedure, you will create an interop assembly, which acts as a bridge between unmanaged code (such as a COM object) and the managed code [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] uses. The interop assembly that Visual Basic creates handles many of the details of working with COM objects, such as *interop marshaling*, the process of packaging parameters and return values into equivalent data types as they move to and from COM objects. The reference in the Visual Basic application points to the interop assembly, not the actual COM object.  
+ In the following procedure, you will create an interop assembly, which acts as a bridge between unmanaged code (such as a COM object) and the managed code [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)] uses. The interop assembly that Visual Basic creates handles many of the details of working with COM objects, such as *interop marshaling*, the process of packaging parameters and return values into equivalent data types as they move to and from COM objects. The reference in the Visual Basic application points to the interop assembly, not the actual COM object.  
   
 #### To use a COM object with Visual Basic 2005 and later versions  
   
-1.  Open a new Visual Basic Windows Application project.  
+1. Open a new Visual Basic Windows Application project.  
   
-2.  On the **Project** menu, click **Add Reference**.  
+2. On the **Project** menu, click **Add Reference**.  
   
-     The **Add Reference** dialog box is displayed.  
+    The **Add Reference** dialog box is displayed.  
   
-3.  On the **COM** tab, double-click `ComObject1` in the **Component Name** list and click **OK**.  
+3. On the **COM** tab, double-click `ComObject1` in the **Component Name** list and click **OK**.  
   
-4.  On the **Project** menu, click **Add New Item**.  
+4. On the **Project** menu, click **Add New Item**.  
   
-     The **Add New Item** dialog box is displayed.  
+    The **Add New Item** dialog box is displayed.  
   
-5.  In the **Templates** pane, click **Class**.  
+5. In the **Templates** pane, click **Class**.  
   
-     The default file name, `Class1.vb`, appears in the **Name** field. Change this field to MathClass.vb and click **Add**. This creates a class named `MathClass`, and displays its code.  
+    The default file name, `Class1.vb`, appears in the **Name** field. Change this field to MathClass.vb and click **Add**. This creates a class named `MathClass`, and displays its code.  
   
-6.  Add the following code to the top of `MathClass` to inherit from the COM class.  
+6. Add the following code to the top of `MathClass` to inherit from the COM class.  
   
-     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
+    [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
   
-7.  Overload the public method of the base class by adding the following code to `MathClass`:  
+7. Overload the public method of the base class by adding the following code to `MathClass`:  
   
-     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
+    [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
   
-8.  Extend the inherited class by adding the following code to `MathClass`:  
+8. Extend the inherited class by adding the following code to `MathClass`:  
   
-     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
+    [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
   
  The new class inherits the properties of the base class in the COM object, overloads a method, and defines a new method to extend the class.  
   
 #### To test the inherited class  
   
-1.  Add a button to your startup form, and then double-click it to view its code.  
+1. Add a button to your startup form, and then double-click it to view its code.  
   
-2.  In the button's `Click` event handler procedure, add the following code to create an instance of `MathClass` and call the overloaded methods:  
+2. In the button's `Click` event handler procedure, add the following code to create an instance of `MathClass` and call the overloaded methods:  
   
-     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
+    [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
   
-3.  Run the project by pressing F5.  
+3. Run the project by pressing F5.  
   
  When you click the button on the form, the `AddNumbers` method is first called with `Short` data type numbers, and Visual Basic chooses the appropriate method from the base class. The second call to `AddNumbers` is directed to the overload method from `MathClass`. The third call calls the `SubtractNumbers` method, which extends the class. The property in the base class is set, and the value is displayed.  
   

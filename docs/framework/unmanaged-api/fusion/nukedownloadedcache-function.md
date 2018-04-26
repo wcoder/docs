@@ -53,7 +53,7 @@ HRESULT NukeDownloadedCache();
   
  **Library:** Fusion.dll and Mscorwks.dll. Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## See Also  
  [CreateHistoryReader Function](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  

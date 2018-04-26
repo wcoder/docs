@@ -44,7 +44,7 @@ The SELECT clause can have an optional TOP sub-clause following the optional ALL
  TOP is non-deterministic unless the query is sorted. If you require a deterministic result, use the [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) and [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) sub-clauses in the [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) clause. The TOP and SKIP/LIMIT are mutually exclusive.  
   
 ## Example  
- The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the TOP to specify the top one row to be returned from the query result. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  
+ The following [!INCLUDE [esql](../../../../../../includes/esql-md.md)] query uses the TOP to specify the top one row to be returned from the query result. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  
   
 1.  Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   

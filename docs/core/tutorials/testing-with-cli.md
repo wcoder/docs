@@ -142,23 +142,23 @@ using Pets;
 
 public class PetTests
 {
-	[Fact]
-	public void DogTalkToOwnerReturnsWoof()
-	{
-		string expected = "Woof!";
-		string actual = new Dog().TalkToOwner();
-		
-		Assert.NotEqual(expected, actual);
-	}
-	
-	[Fact]
-	public void CatTalkToOwnerReturnsMeow()
-	{
-		string expected = "Meow!";
-		string actual = new Cat().TalkToOwner();
-		
-		Assert.NotEqual(expected, actual);
-	}
+    [Fact]
+    public void DogTalkToOwnerReturnsWoof()
+    {
+        string expected = "Woof!";
+        string actual = new Dog().TalkToOwner();
+
+        Assert.NotEqual(expected, actual);
+    }
+
+    [Fact]
+    public void CatTalkToOwnerReturnsMeow()
+    {
+        string expected = "Meow!";
+        string actual = new Cat().TalkToOwner();
+
+        Assert.NotEqual(expected, actual);
+    }
 }
 ```
 
@@ -188,11 +188,10 @@ The following shows the complete project structure:
 Start in the *test/NewTypesTests* directory. Restore the test project with the [`dotnet restore`](../tools/dotnet-restore.md) 
  command. Run the tests with the [`dotnet test`](../tools/dotnet-test.md) command. This command starts the test runner specified in the project file.
 
- [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE [DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
- 
 As expected, testing fails, and the console displays the following output:
- 
+
 ```
 Test run for C:\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp1.1\NewTypesTests.dll(.NETCoreApp,Version=v1.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.0.0.0

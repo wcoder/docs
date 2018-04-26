@@ -85,7 +85,7 @@ Simple.Add(int a, int b)
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## See Also  
  [ICorProfilerInfo6 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)

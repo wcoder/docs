@@ -18,11 +18,11 @@ ms.workload:
   - "dotnet"
 ---
 # Basic
-This section includes sections of samples that demonstrate basic [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]functionality.  
+This section includes sections of samples that demonstrate basic [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)]functionality.  
   
 ## In This Section  
  [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- Demonstrates how to implement a typical service and a typical client using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Demonstrates how to implement a typical service and a typical client using [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)].  
   
  [AJAX](../../../../docs/framework/wcf/samples/ajax.md)  
  Demonstrates Asynchronous JavaScript and XML.  
@@ -31,28 +31,28 @@ This section includes sections of samples that demonstrate basic [!INCLUDE[indig
  Demonstrates using the binding attribute of an endpoint element.  
   
  [Client](../../../../docs/framework/wcf/samples/client.md)  
- Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client applications.  
+ Demonstrates [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] client applications.  
   
  [Contract](../../../../docs/framework/wcf/samples/contract.md)  
  Demonstrates data contracts.  
   
  [Discovery](../../../../docs/framework/wcf/samples/discovery-samples.md)  
- Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] discovery.  
+ Demonstrates [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] discovery.  
   
  [Management](../../../../docs/framework/wcf/samples/management.md)  
- Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] management.  
+ Demonstrates [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] management.  
   
  [Routing Services](../../../../docs/framework/wcf/samples/routing-services.md)  
- Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] routing services.  
+ Demonstrates [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] routing services.  
   
  [Security](../../../../docs/framework/wcf/samples/security-in-wcf.md)  
- Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security.  
+ Demonstrates [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] security.  
   
  [Services](../../../../docs/framework/wcf/samples/services.md)  
- Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.  
+ Demonstrates [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] services.  
   
  [Syndication](../../../../docs/framework/wcf/samples/syndication.md)  
- Demonstrates[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] syndication.  
+ Demonstrates[!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] syndication.  
   
  [Web](../../../../docs/framework/wcf/samples/web.md)  
- Demonstrates Web-hosting in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].
+ Demonstrates Web-hosting in [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)].

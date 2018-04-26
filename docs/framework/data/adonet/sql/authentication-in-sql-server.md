@@ -47,14 +47,14 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
   
  SQL Server logins are often used in the following situations:  
   
--   If you have a workgroup.  
+- If you have a workgroup.  
   
--   Users connect from different, non-trusted domains.  
+- Users connect from different, non-trusted domains.  
   
--   Internet applications, such as [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- Internet applications, such as [!INCLUDE [vstecasp](../../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
->  Specifying Windows authentication does not disable SQL Server logins. Use the ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statement to disable highly-privileged SQL Server logins.  
+>  Specifying Windows authentication does not disable SQL Server logins. Use the ALTER LOGIN DISABLE [!INCLUDE [tsql](../../../../../includes/tsql-md.md)] statement to disable highly-privileged SQL Server logins.  
   
 ## Login Types  
  SQL Server supports three types of logins:  
@@ -74,7 +74,7 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
 > [!IMPORTANT]
 >  SQL Server installs with a SQL Server login named `sa` (an abbreviation of "system administrator"). Assign a strong password to the `sa` login and do not use the `sa` login in your application. The `sa` login maps to the `sysadmin` fixed server role, which has irrevocable administrative credentials on the whole server. There are no limits to the potential damage if an attacker gains access as a system administrator. All members of the Windows `BUILTIN\Administrators` group (the local administrator's group) are members of the `sysadmin` role by default, but can be removed from that role.  
   
- SQL Server provides Windows password policy mechanisms for SQL Server logins when it is running on [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] or later versions. Password complexity policies are designed to deter brute force attacks by increasing the number of possible passwords. SQL Server can apply the same complexity and expiration policies used in [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] to passwords used inside SQL Server.  
+ SQL Server provides Windows password policy mechanisms for SQL Server logins when it is running on [!INCLUDE [winxpsvr](../../../../../includes/winxpsvr-md.md)] or later versions. Password complexity policies are designed to deter brute force attacks by increasing the number of possible passwords. SQL Server can apply the same complexity and expiration policies used in [!INCLUDE [winxpsvr](../../../../../includes/winxpsvr-md.md)] to passwords used inside SQL Server.  
   
 > [!IMPORTANT]
 >  Concatenating connection strings from user input can leave you vulnerable to a connection string injection attack. Use the <xref:System.Data.SqlClient.SqlConnectionStringBuilder> to create syntactically valid connection strings at run time. For more information, see [Connection String Builders](../../../../../docs/framework/data/adonet/connection-string-builders.md).  

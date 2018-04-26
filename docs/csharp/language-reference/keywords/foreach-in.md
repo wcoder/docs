@@ -53,7 +53,7 @@ The `foreach` statement repeats a group of embedded statements for each element 
 [!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L51-L69)]
  
 ## C# Language Specification
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## See Also  
 

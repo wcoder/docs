@@ -18,9 +18,9 @@ ms.workload:
 # Using a Custom Expression Editor
 A custom expression editor can be implemented to provide a richer or simpler expression editing experience. There are several scenarios in which you might want to use a custom expression editor:  
   
--   To provide support for IntelliSense and other rich editing features in a rehosted workflow designer. This functionality must be provided because the default [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] expression editor cannot be used in rehosted applications.  
+- To provide support for IntelliSense and other rich editing features in a rehosted workflow designer. This functionality must be provided because the default [!INCLUDE [vsprvs](../../../includes/vsprvs-md.md)] expression editor cannot be used in rehosted applications.  
   
--   To simplify the expression editing experience for the business analyst users, so that they are not, for example, required to learn Visual Basic or deal with Visual Basic expressions.  
+- To simplify the expression editing experience for the business analyst users, so that they are not, for example, required to learn Visual Basic or deal with Visual Basic expressions.  
   
  Three basic steps are needed to implement a custom expression editor:  
   
@@ -228,7 +228,7 @@ namespace MyExpressionEditorService
 ```  
   
 ### Publishing a Custom Expression Editor in a WPF Project  
- Here is the code that shows how to rehost the designer in a [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application and how to create and publish the `MyEditorService` service. Before using this code, add a reference to the MyExpressionEditorService library project from the project that contains the avalon2 application.  
+ Here is the code that shows how to rehost the designer in a [!INCLUDE [avalon2](../../../includes/avalon2-md.md)] application and how to create and publish the `MyEditorService` service. Before using this code, add a reference to the MyExpressionEditorService library project from the project that contains the avalon2 application.  
   
 ```  
 using System.Windows;  

@@ -29,7 +29,7 @@ The Windows Forms <xref:System.Windows.Forms.NotifyIcon> component is typically 
 ## Key Properties of NotifyIcons  
  Each <xref:System.Windows.Forms.NotifyIcon> component displays a single icon in the status area. If you have three background processes and wish to display an icon for each, you must add three <xref:System.Windows.Forms.NotifyIcon> components to the form. The key properties of the <xref:System.Windows.Forms.NotifyIcon> component are <xref:System.Windows.Forms.NotifyIcon.Icon%2A> and <xref:System.Windows.Forms.NotifyIcon.Visible%2A>. The <xref:System.Windows.Forms.NotifyIcon.Icon%2A> property sets the icon that appears in the status area. In order for the icon to appear, the <xref:System.Windows.Forms.NotifyIcon.Visible%2A> property must be set to `true`.  
   
- If you are using [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], you have access to a large library of standard images that you can use with the <xref:System.Windows.Forms.NotifyIcon> control.  
+ If you are using [!INCLUDE [vsprvslong](../../../../includes/vsprvslong-md.md)], you have access to a large library of standard images that you can use with the <xref:System.Windows.Forms.NotifyIcon> control.  
   
 ## NotifyIcons Options  
  You can associate balloon tips, shortcut menus, and ToolTips with a <xref:System.Windows.Forms.NotifyIcon> to assist the user.  

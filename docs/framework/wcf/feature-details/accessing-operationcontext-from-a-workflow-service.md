@@ -22,42 +22,42 @@ To access the <xref:System.ServiceModel.OperationContext> inside a workflow serv
   
 ### Implement the Service-side IReceiveMessageCallback  
   
-1.  Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.  
+1. Create an empty [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] solution.  
   
-2.  Add a new console application called `Service` to the solution.  
+2. Add a new console application called `Service` to the solution.  
   
-3.  Add references to the following assemblies:  
+3. Add references to the following assemblies:  
   
-    1.  System.Runtime.Serialization  
+   1.  System.Runtime.Serialization  
   
-    2.  System.ServiceModel  
+   2.  System.ServiceModel  
   
-    3.  System.ServiceModel.Activities  
+   3.  System.ServiceModel.Activities  
   
-4.  Add a new class called `ReceiveInstanceIdCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.  
+4. Add a new class called `ReceiveInstanceIdCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.  
   
-    ```csharp  
-    class ReceiveInstanceIdCallback : IReceiveMessageCallback  
-    {  
-          public const string HeaderName = "InstanceIdHeader";  
-          public const string HeaderNS = "http://Microsoft.Samples.AccessingOperationContext";  
+   ```csharp  
+   class ReceiveInstanceIdCallback : IReceiveMessageCallback  
+   {  
+         public const string HeaderName = "InstanceIdHeader";  
+         public const string HeaderNS = "http://Microsoft.Samples.AccessingOperationContext";  
   
-         public void OnReceiveMessage(System.ServiceModel.OperationContext operationContext, System.Activities.ExecutionProperties activityExecutionProperties)  
-          {              
-                try  
-                {  
-                    Guid instanceId = operationContext.IncomingMessageHeaders.GetHeader<Guid>(HeaderName, HeaderNS);  
-                    Console.WriteLine("Received a message from a workflow with instanceId = {0}", instanceId);  
-                }  
-                catch (MessageHeaderException)  
-                {  
-                    Console.WriteLine("This message must not be from a workflow.");  
-                }  
-            }  
-    }  
-    ```  
+        public void OnReceiveMessage(System.ServiceModel.OperationContext operationContext, System.Activities.ExecutionProperties activityExecutionProperties)  
+         {              
+               try  
+               {  
+                   Guid instanceId = operationContext.IncomingMessageHeaders.GetHeader<Guid>(HeaderName, HeaderNS);  
+                   Console.WriteLine("Received a message from a workflow with instanceId = {0}", instanceId);  
+               }  
+               catch (MessageHeaderException)  
+               {  
+                   Console.WriteLine("This message must not be from a workflow.");  
+               }  
+           }  
+   }  
+   ```  
   
-     This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access the incoming message’s headers.  
+    This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access the incoming message’s headers.  
   
 ### Implement a Service-side Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext  
   

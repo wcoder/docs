@@ -28,23 +28,23 @@ This sample demonstrates how to discover a service that has the <xref:System.Ser
   
 ##### To use this sample  
   
-1.  Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open UniqueListenUriMode.sln.  
+1. Using [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)], open UniqueListenUriMode.sln.  
   
-2.  To build the solution, press CTRL+SHIFT+B.  
+2. To build the solution, press CTRL+SHIFT+B.  
   
-3.  Run the service application, which is generated in the [solution base directory]\service\bin\debug folder.  
+3. Run the service application, which is generated in the [solution base directory]\service\bin\debug folder.  
   
-4.  Run the client application, which is generated in the [solution base directory]\Client\bin\debug folder.  
+4. Run the client application, which is generated in the [solution base directory]\Client\bin\debug folder.  
   
-     The client locates the running service and writes to the console the metadata published by the service’s endpoint.  
+    The client locates the running service and writes to the console the metadata published by the service’s endpoint.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\UniqueListenUriMode`  
   
 ## See Also

@@ -19,10 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ---
 # Creating XML in Visual Basic
-Visual Basic enables you to use *XML literals* directly in your code. The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is similar to the XML 1.0 syntax. This makes it easier to create XML elements, documents, and fragments programmatically because your code has the same structure as the final XML.  
-  
+Visual Basic enables you to use *XML literals* directly in your code. The XML literal syntax represents [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is similar to the XML 1.0 syntax. This makes it easier to create XML elements, documents, and fragments programmatically because your code has the same structure as the final XML.  
+
 ## In This Section  
-  
+
+
 |Term|Definition|  
 |---|---|  
 |[XML Literals Overview](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Introduction to XML literals and how they relate to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
@@ -32,6 +33,6 @@ Visual Basic enables you to use *XML literals* directly in your code. The XML li
 |[XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Describes how the XML literal syntax in Visual Basic relates to the XML 1.0 specification.|  
 |[How to: Embed Expressions in XML Literals](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Describes how to use embedded expressions in XML literals to create content at run time.|  
 |[Names of Declared XML Elements and Attributes](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Describes guidelines for naming XML elements and attributes.|  
-  
+
 ## See Also  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

@@ -15,7 +15,7 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ---
 # Sample XML File: Multiple Purchase Orders in a Namespace
-The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. This file contains several purchase orders. The XML is in a namespace.  
+The following XML file is used in various examples in the [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. This file contains several purchase orders. The XML is in a namespace.  
   
 ## PurchaseOrdersInNamespace.xml  
   

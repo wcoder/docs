@@ -32,7 +32,7 @@ ms.workload:
 # GetRealProcAddress Function
 Gets the address of the specified function that is exported from the latest installed version of the common language runtime (CLR).  
   
- This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ This function has been deprecated in the [!INCLUDE [net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## Syntax  
   
@@ -66,7 +66,7 @@ HRESULT GetRealProcAddress (
   
  **Library:** MSCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## See Also  
  [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

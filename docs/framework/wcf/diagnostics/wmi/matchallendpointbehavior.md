@@ -19,20 +19,22 @@ ms.workload:
 ---
 # MatchAllEndpointBehavior
 MatchAllEndpointBehavior  
-  
+
 ## Syntax  
-  
+
 ```  
 class MatchAllEndpointBehavior : Behavior  
 {  
 };  
 ```  
-  
+
 ## Methods  
  The MatchAllEndpointBehavior class inherits from Behavior but does not define additional methods or properties.  
-  
+
 ## Requirements  
-  
-|MOF|Declared in Servicemodel.mof.|  
-|---------|-----------------------------------|  
-|Namespace|Defined in root\ServiceModel|
+
+
+|    MOF    | Declared in Servicemodel.mof. |
+|-----------|-------------------------------|
+| Namespace | Defined in root\ServiceModel  |
+

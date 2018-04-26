@@ -55,7 +55,7 @@ typedef struct _BucketParameters {
   
  **Header:** MSCorEE.idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  [Hosting Structures](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

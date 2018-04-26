@@ -26,7 +26,7 @@ ms.workload:
   - dotnet
 ---
 # How to: Create Graphics Objects for Drawing
-Before you can draw lines and shapes, render text, or display and manipulate images with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to create a <xref:System.Drawing.Graphics> object. The <xref:System.Drawing.Graphics> object represents a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] drawing surface, and is the object that is used to create graphical images.  
+Before you can draw lines and shapes, render text, or display and manipulate images with [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to create a <xref:System.Drawing.Graphics> object. The <xref:System.Drawing.Graphics> object represents a [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] drawing surface, and is the object that is used to create graphical images.  
   
  There are two steps in working with graphics:  
   

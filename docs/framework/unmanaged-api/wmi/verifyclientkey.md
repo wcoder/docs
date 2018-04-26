@@ -27,7 +27,7 @@ ms.workload:
 # VerifyClientKey function
 Ensures that the client key has the correct security.  
   
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
 ## Syntax  
   
@@ -46,7 +46,7 @@ If the function fails, the return value is a non-zero error code defined in *Win
   
  **Header:** WMINet_Utils.def  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

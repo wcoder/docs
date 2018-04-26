@@ -91,27 +91,27 @@ ms.workload:
 ## Formatting in .NET  
  The basic mechanism for formatting is the default implementation of the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method, which is discussed in the [Default Formatting Using the ToString Method](#DefaultToString) section later in this topic. However, .NET provides several ways to modify and extend its default formatting support. These include the following:  
   
--   Overriding the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method to define a custom string representation of an object’s value. For more information, see the [Overriding the ToString Method](#OverrideToString) section later in this topic.  
+- Overriding the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method to define a custom string representation of an object’s value. For more information, see the [Overriding the ToString Method](#OverrideToString) section later in this topic.  
   
--   Defining format specifiers that enable the string representation of an object’s value to take multiple forms. For example, the "X" format specifier in the following statement converts an integer to the string representation of a hexadecimal value.  
+- Defining format specifiers that enable the string representation of an object’s value to take multiple forms. For example, the "X" format specifier in the following statement converts an integer to the string representation of a hexadecimal value.  
   
-     [!code-csharp[Conceptual.Formatting.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#3)]
-     [!code-vb[Conceptual.Formatting.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#3)]  
+   [!code-csharp[Conceptual.Formatting.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#3)]
+   [!code-vb[Conceptual.Formatting.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#3)]  
   
-     For more information about format specifiers, see the [ToString Method and Format Strings](#FormatStrings) section.  
+   For more information about format specifiers, see the [ToString Method and Format Strings](#FormatStrings) section.  
   
--   Using format providers to take advantage of the formatting conventions of a specific culture. For example, the following statement displays a currency value by using the formatting conventions of the en-US culture.  
+- Using format providers to take advantage of the formatting conventions of a specific culture. For example, the following statement displays a currency value by using the formatting conventions of the en-US culture.  
   
-     [!code-csharp[Conceptual.Formatting.Overview#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#10)]
-     [!code-vb[Conceptual.Formatting.Overview#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#10)]  
+   [!code-csharp[Conceptual.Formatting.Overview#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#10)]
+   [!code-vb[Conceptual.Formatting.Overview#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#10)]  
   
-     For more information about formatting with format providers, see the [Format Providers and the IFormatProvider Interface](#FormatProviders) section.  
+   For more information about formatting with format providers, see the [Format Providers and the IFormatProvider Interface](#FormatProviders) section.  
   
--   Implementing the <xref:System.IFormattable> interface to support both string conversion with the <xref:System.Convert> class and composite formatting. For more information, see the [IFormattable Interface](#IFormattable) section.  
+- Implementing the <xref:System.IFormattable> interface to support both string conversion with the <xref:System.Convert> class and composite formatting. For more information, see the [IFormattable Interface](#IFormattable) section.  
   
--   Using composite formatting to embed the string representation of a value in a larger string. For more information, see the [Composite Formatting](#CompositeFormatting) section.  
+- Using composite formatting to embed the string representation of a value in a larger string. For more information, see the [Composite Formatting](#CompositeFormatting) section.  
   
--   Implementing <xref:System.ICustomFormatter> and <xref:System.IFormatProvider> to provide a complete custom formatting solution. For more information, see the [Custom Formatting with ICustomFormatter](#Custom) section.  
+- Implementing <xref:System.ICustomFormatter> and <xref:System.IFormatProvider> to provide a complete custom formatting solution. For more information, see the [Custom Formatting with ICustomFormatter](#Custom) section.  
   
  The following sections examine these methods for converting an object to its string representation.  
   
@@ -125,7 +125,7 @@ ms.workload:
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  Starting with [!INCLUDE[win81](../../../includes/win81-md.md)], the [!INCLUDE[wrt](../../../includes/wrt-md.md)] includes an [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) interface with a single method, [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), which provides default formatting support. However, we recommend that managed types do not implement the `IStringable` interface. For more information, see "The [!INCLUDE[wrt](../../../includes/wrt-md.md)] and the `IStringable` Interface" section on the <xref:System.Object.ToString%2A?displayProperty=nameWithType> reference page.  
+>  Starting with [!INCLUDE [win81](../../../includes/win81-md.md)], the [!INCLUDE [wrt](../../../includes/wrt-md.md)] includes an [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) interface with a single method, [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), which provides default formatting support. However, we recommend that managed types do not implement the `IStringable` interface. For more information, see "The [!INCLUDE [wrt](../../../includes/wrt-md.md)] and the `IStringable` Interface" section on the <xref:System.Object.ToString%2A?displayProperty=nameWithType> reference page.  
   
  Because all types other than interfaces are derived from <xref:System.Object>, this functionality is automatically provided to your custom classes or structures. However, the functionality offered by the default `ToString` method, is limited: Although it identifies the type, it fails to provide any information about an instance of the type. To provide a string representation of an object that provides information about that object, you must override the `ToString` method.  
   
@@ -372,14 +372,14 @@ ms.workload:
   
  In addition to replacing a format item with the string representation of its corresponding object, format items also let you control the following:  
   
--   The specific way in which an object is represented as a string, if the object implements the <xref:System.IFormattable> interface and supports format strings. You do this by following the format item's index with a `:` (colon) followed by a valid format string. The previous example did this by formatting a date value with the "d" (short date pattern) format string (e.g., `{0:d}`) and   by formatting a numeric value with the "C2" format string (e.g., `{2:C2}` to represent the number as a currency value with two fractional decimal digits.  
+- The specific way in which an object is represented as a string, if the object implements the <xref:System.IFormattable> interface and supports format strings. You do this by following the format item's index with a `:` (colon) followed by a valid format string. The previous example did this by formatting a date value with the "d" (short date pattern) format string (e.g., `{0:d}`) and   by formatting a numeric value with the "C2" format string (e.g., `{2:C2}` to represent the number as a currency value with two fractional decimal digits.  
   
--   The width of the field that contains the object's string representation, and the alignment of the string representation in that field. You do this by following the format item's index with a `,` (comma) followed the field width. The string is right-aligned in the field if the field width is a positive value, and it is left-aligned if the field width is a negative value. The following example left-aligns date values in a 20-character field, and it right-aligns decimal values with one fractional digit in an 11-character field.  
+- The width of the field that contains the object's string representation, and the alignment of the string representation in that field. You do this by following the format item's index with a `,` (comma) followed the field width. The string is right-aligned in the field if the field width is a positive value, and it is left-aligned if the field width is a negative value. The following example left-aligns date values in a 20-character field, and it right-aligns decimal values with one fractional digit in an 11-character field.  
   
-     [!code-csharp[Conceptual.Formatting.Overview#22](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite2.cs#22)]
-     [!code-vb[Conceptual.Formatting.Overview#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite2.vb#22)]  
+   [!code-csharp[Conceptual.Formatting.Overview#22](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite2.cs#22)]
+   [!code-vb[Conceptual.Formatting.Overview#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite2.vb#22)]  
   
-     Note that, if both the alignment string component and the format string component are present, the former precedes the latter (for example, `{0,-20:g}`.  
+   Note that, if both the alignment string component and the format string component are present, the former precedes the latter (for example, `{0,-20:g}`.  
   
  For more information about composite formatting, see [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md).  
   

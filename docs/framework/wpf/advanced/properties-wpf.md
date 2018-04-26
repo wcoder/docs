@@ -25,7 +25,7 @@ ms.workload:
   - dotnet
 ---
 # Properties (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property. Collectively, these services are typically referred to as the WPF property system. A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.  
+[!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides a set of services that can be used to extend the functionality of a [!INCLUDE [TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property. Collectively, these services are typically referred to as the WPF property system. A property that is backed by the [!INCLUDE [TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.  
   
 ## In This Section  
  [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  

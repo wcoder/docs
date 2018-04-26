@@ -49,30 +49,30 @@ The main scenario for this sample is to delay until a specified <xref:System.Dat
   
 #### To set up, build, and run the sample  
   
-1.  Ensure you have SQL Server Express (or higher) installed on your machine  
+1. Ensure you have SQL Server Express (or higher) installed on your machine  
   
-2.  Run setup.cmd (from WF/Basic/Services/AbsoluteDelay/CS) in a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt to create the AbsoluteDelaySampleDB database, create the persistence schema and create the persistence logic.  
+2. Run setup.cmd (from WF/Basic/Services/AbsoluteDelay/CS) in a [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] command prompt to create the AbsoluteDelaySampleDB database, create the persistence schema and create the persistence logic.  
   
-3.  Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+3. Open the solution in [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)].  
   
-4.  Specify the Duration in the Delay activity.  
+4. Specify the Duration in the Delay activity.  
   
-5.  Specify the ExpirationTime in the AbsoluteDelay activity.  
+5. Specify the ExpirationTime in the AbsoluteDelay activity.  
   
-6.  Update the SendMailTo, SendMailFrom, SendMailSubject, SendMailBody, and SmtpHost fields in the SendMail activity.  
+6. Update the SendMailTo, SendMailFrom, SendMailSubject, SendMailBody, and SmtpHost fields in the SendMail activity.  
   
-    > [!NOTE]
-    >  If you do not enter a valid SMTP host, the application will throw a SMTP exception.  
+   > [!NOTE]
+   >  If you do not enter a valid SMTP host, the application will throw a SMTP exception.  
   
-7.  Build the solution by selecting **Build**, **Build Solution**.  
+7. Build the solution by selecting **Build**, **Build Solution**.  
   
-8.  Run the solution by pressing **F5**.  
+8. Run the solution by pressing **F5**.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

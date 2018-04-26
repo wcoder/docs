@@ -1,3 +1,4 @@
+
 # [The .NET Compiler Platform SDK (Roslyn APIs)](index.md)
 ## [Understand the compiler API model](compiler-api-model.md)
 ## [Work with syntax](work-with-syntax.md)
@@ -42,4 +43,4 @@
 -->
 <!-- Look at the samples, and determinine which 
     are "How To" vs. Samples. -->
-    
+

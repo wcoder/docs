@@ -24,9 +24,9 @@ ms.workload:
 ---
 # Security-Transparent Code, Level 2
 <a name="top"></a>
-[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
+[!INCLUDE [net_security_note](../../../includes/net-security-note-md.md)]
   
- Level 2 transparency was introduced in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. The three tenets of this model are transparent code, security-safe-critical code, and security-critical code.  
+ Level 2 transparency was introduced in the [!INCLUDE [net_v40_long](../../../includes/net-v40-long-md.md)]. The three tenets of this model are transparent code, security-safe-critical code, and security-critical code.  
   
 -   Transparent code, including code that is running as full trust, can call other transparent code or security-safe-critical code only. It can only perform actions allowed by the domain’s partial trust permission set (if one exists). Transparent code cannot do the following:  
   
@@ -60,7 +60,7 @@ ms.workload:
   
 <a name="examples"></a>   
 ## Usage Examples and Behaviors  
- To specify [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] rules (level 2 transparency), use the following annotation for an assembly:  
+ To specify [!INCLUDE [net_v40_short](../../../includes/net-v40-short-md.md)] rules (level 2 transparency), use the following annotation for an assembly:  
   
 ```  
 [assembly: SecurityRules(SecurityRuleSet.Level2)]  
@@ -72,7 +72,7 @@ ms.workload:
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
- If you do not annotate an assembly, the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] rules are used by default. However, the recommended best practice is to use the <xref:System.Security.SecurityRulesAttribute> attribute instead of depending on the default.  
+ If you do not annotate an assembly, the [!INCLUDE [net_v40_short](../../../includes/net-v40-short-md.md)] rules are used by default. However, the recommended best practice is to use the <xref:System.Security.SecurityRulesAttribute> attribute instead of depending on the default.  
   
 ### Assembly-wide Annotation  
  The following rules apply to the use of attributes at the assembly level:  

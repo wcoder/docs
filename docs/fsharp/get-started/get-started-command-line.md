@@ -150,4 +150,5 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 ```
 
 <a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE [DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+

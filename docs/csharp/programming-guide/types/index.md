@@ -182,7 +182,7 @@ stringList.Add(4);
 -   [Generics](../../../csharp/programming-guide/generics/index.md)  
 
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Reference](../../../csharp/language-reference/index.md)  

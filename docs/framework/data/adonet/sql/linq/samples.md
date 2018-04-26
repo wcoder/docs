@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Samples
-This topic provides links to the Visual Basic and C# solutions that contain [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sample code.  
+This topic provides links to the Visual Basic and C# solutions that contain [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sample code.  
   
 ## In This Section  
  Visual Basic version of the SampleQueries solution  
@@ -27,13 +27,13 @@ This topic provides links to the Visual Basic and C# solutions that contain [!IN
  C# version of the SampleQueries solution  
  [LINQ C# Samples Solution](http://msdn.microsoft.com/library/23852e6b-b9a9-4a06-aedb-b27a5930ed74)  
   
- Follow these steps to find additional examples of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] code and applications:  
+ Follow these steps to find additional examples of [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] code and applications:  
   
--   Search for specific issues on Microsoft Docs.  
+- Search for specific issues on Microsoft Docs.  
   
--   Participate in the [LINQ Forum](http://go.microsoft.com/fwlink/?LinkId=76488), where you can discuss more complex topics in detail with experts.  
+- Participate in the [LINQ Forum](http://go.microsoft.com/fwlink/?LinkId=76488), where you can discuss more complex topics in detail with experts.  
   
--   Study the white paper that details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology, complete with Visual Basic and C# code examples. For more information, see [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205).  
+- Study the white paper that details [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology, complete with Visual Basic and C# code examples. For more information, see [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## See Also  
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  

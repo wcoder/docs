@@ -14,7 +14,7 @@ author: "BillWagner"
 ms.author: "wiwagn"
 ---
 # Sample XML File: Books (LINQ to XML)
-The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. The file contains information about books.  
+The following XML file is used in various examples in the [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. The file contains information about books.  
   
 ## books.xml  
   

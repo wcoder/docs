@@ -56,7 +56,7 @@ For more examples, see [Using Nullable Types](../../../csharp/programming-guide/
 -   [?? Operator](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  <xref:System.Nullable>  

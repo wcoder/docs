@@ -18,20 +18,20 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ---
 # How to: Collapse and Hide Sections of Code (Visual Basic)
-The `#Region` directive enables you to collapse and hide sections of code in Visual Basic files. The `#Region` directive lets you specify a block of code that you can expand or collapse when using the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] code editor. The ability to hide code selectively makes your files more manageable and easier to read. For more information, see [Outlining](/visualstudio/ide/outlining).  
+The `#Region` directive enables you to collapse and hide sections of code in Visual Basic files. The `#Region` directive lets you specify a block of code that you can expand or collapse when using the [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)] code editor. The ability to hide code selectively makes your files more manageable and easier to read. For more information, see [Outlining](/visualstudio/ide/outlining).  
   
  `#Region` directives support code block semantics such as `#If...#End If`. This means they cannot begin in one block and end in another; the start and end must be in the same block. `#Region` directives are not supported within functions.  
   
 ### To collapse and hide a section of code  
   
--   Place the section of code between the `#Region` and `#End Region` statements, as in the following example:  
+- Place the section of code between the `#Region` and `#End Region` statements, as in the following example:  
   
-     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/how-to-collapse-and-hide-sections-of-code_1.vb)]  
+   [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/how-to-collapse-and-hide-sections-of-code_1.vb)]  
   
-     The `#Region` block can be used multiple times in a code file; thus, users can define their own blocks of procedures and classes that can, in turn, be collapsed. `#Region` blocks can also be nested within other `#Region` blocks.  
+   The `#Region` block can be used multiple times in a code file; thus, users can define their own blocks of procedures and classes that can, in turn, be collapsed. `#Region` blocks can also be nested within other `#Region` blocks.  
   
-    > [!NOTE]
-    >  Hiding code does not prevent it from being compiled and does not affect `#If...#End If` statements.  
+  > [!NOTE]
+  >  Hiding code does not prevent it from being compiled and does not affect `#If...#End If` statements.  
   
 ## See Also  
  [Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  

@@ -19,22 +19,24 @@ ms.workload:
 ---
 # GetOperationCounterInstanceName
 Retrieves the operation performance counter instance name.  
-  
+
 ## Syntax  
-  
+
 ```  
 string GetOperationCounterInstanceName(  
   string Operation  
 );  
 ```  
-  
+
 ## Parameters  
-  
+
 ### Operation  
  [in] string  
-  
+
 ## Requirements  
-  
-|MOF|Declared in Servicemodel.mof.|  
-|---------|-----------------------------------|  
-|Namespace|Defined in root\ServiceModel|
+
+
+|    MOF    | Declared in Servicemodel.mof. |
+|-----------|-------------------------------|
+| Namespace | Defined in root\ServiceModel  |
+

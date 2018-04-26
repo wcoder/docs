@@ -22,12 +22,12 @@ ms.workload:
 ---
 # Obtaining UI Automation Elements
 > [!NOTE]
->  This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- This topic describes the various ways of obtaining <xref:System.Windows.Automation.AutomationElement> objects for [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
+ This topic describes the various ways of obtaining <xref:System.Windows.Automation.AutomationElement> objects for [!INCLUDE [TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
   
 > [!CAUTION]
->  If your client application might attempt to find elements in its own user interface, you must make all [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] calls on a separate thread. For more information, see [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+>  If your client application might attempt to find elements in its own user interface, you must make all [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] calls on a separate thread. For more information, see [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>   
 ## Root Element  
@@ -40,7 +40,7 @@ ms.workload:
   
 <a name="Using_Conditions"></a>   
 ## Conditions  
- For most techniques you can use to retrieve [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements, you must specify a <xref:System.Windows.Automation.Condition>, which is a set of criteria defining what elements you want to retrieve.  
+ For most techniques you can use to retrieve [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements, you must specify a <xref:System.Windows.Automation.Condition>, which is a set of criteria defining what elements you want to retrieve.  
   
  The simplest condition is <xref:System.Windows.Automation.Condition.TrueCondition>, a predefined object specifying that all elements within the search scope are to be returned. <xref:System.Windows.Automation.Condition.FalseCondition>, the converse of <xref:System.Windows.Automation.Condition.TrueCondition>, is less useful, as it would prevent any elements from being found.  
   
@@ -62,7 +62,7 @@ ms.workload:
 ## Finding a Known Element  
  To find a known element, identified by its <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>, or some other property or combination of properties, it is easiest to use the <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> method. If the element sought is an application window, the starting-point of the search can be the <xref:System.Windows.Automation.AutomationElement.RootElement%2A>.  
   
- This way of finding [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements is most useful in automated testing scenarios.  
+ This way of finding [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements is most useful in automated testing scenarios.  
   
 <a name="Finding_Elements_in_a_Subtree"></a>   
 ## Finding Elements in a Subtree  
@@ -91,7 +91,7 @@ ms.workload:
  In addition to searches and navigation, you can retrieve an <xref:System.Windows.Automation.AutomationElement> in the following ways.  
   
 ### From an Event  
- When your application receives a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event, the source object passed to your event handler is an <xref:System.Windows.Automation.AutomationElement>. For example, if you have subscribed to focus-changed events, the source passed to your <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> is the element that received the focus.  
+ When your application receives a [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event, the source object passed to your event handler is an <xref:System.Windows.Automation.AutomationElement>. For example, if you have subscribed to focus-changed events, the source passed to your <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> is the element that received the focus.  
   
  For more information, see [Subscribe to UI Automation Events](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
   

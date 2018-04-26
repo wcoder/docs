@@ -16,15 +16,15 @@ ms.workload:
   - "dotnet"
 ---
 # Tracking Participants
-Tracking participants are extensibility points that allow a workflow developer to access <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> objects and process them. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] includes a standard tracking participant that writes tracking records as Event Tracing for Windows (ETW) events. If that does not meet your requirements, you can also write a custom tracking participant.  
+Tracking participants are extensibility points that allow a workflow developer to access <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> objects and process them. [!INCLUDE [netfx_current_long](../../../includes/netfx-current-long-md.md)] includes a standard tracking participant that writes tracking records as Event Tracing for Windows (ETW) events. If that does not meet your requirements, you can also write a custom tracking participant.  
   
 ## Tracking Participants  
  The tracking infrastructure allows the application of a filter on the outgoing tracking records such that a participant can subscribe to a subset of the records. The mechanism to apply a filter is through a tracking profile.  
   
- [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] provides a tracking participant that writes the tracking records to an ETW session. The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file. Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer. The SDK sample for ETW-based tracking is a good way to get familiar with WF tracking using the ETW-based tracking participant.  
+ [!INCLUDE [wf](../../../includes/wf-md.md)] in [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] provides a tracking participant that writes the tracking records to an ETW session. The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file. Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer. The SDK sample for ETW-based tracking is a good way to get familiar with WF tracking using the ETW-based tracking participant.  
   
 ## ETW Tracking Participant  
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] includes an ETW Tracking Participant that writes the tracking records to an ETW session. This is done in a very efficient manner with minimal impact to the application’s performance or to the server’s throughput. An advantage of using the standard ETW tracking participant is that the tracking records it receives can be viewed with the other application and system logs in the Windows Event Viewer.  
+ [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] includes an ETW Tracking Participant that writes the tracking records to an ETW session. This is done in a very efficient manner with minimal impact to the application’s performance or to the server’s throughput. An advantage of using the standard ETW tracking participant is that the tracking records it receives can be viewed with the other application and system logs in the Windows Event Viewer.  
   
  The standard ETW tracking participant is configured in the Web.config file as shown in the following example.  
   
@@ -53,7 +53,7 @@ Tracking participants are extensibility points that allow a workflow developer t
 ```  
   
 > [!NOTE]
->  If a `trackingProfile` name is not specified, such as just `<etwTracking/>` or `<etwTracking profileName=""/>`, then the default tracking profile installed with the [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in the Machine.config file is used.  
+>  If a `trackingProfile` name is not specified, such as just `<etwTracking/>` or `<etwTracking profileName=""/>`, then the default tracking profile installed with the [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] in the Machine.config file is used.  
   
  In the Machine.config file, the default tracking profile subscribes to workflow instance records and faults.  
   

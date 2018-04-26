@@ -53,7 +53,7 @@ Provides methods that test for child and parent frame relationships.
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## See Also  
     

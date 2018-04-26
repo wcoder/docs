@@ -25,7 +25,7 @@ ms.workload:
 Shadow copying enables assemblies that are used in an application domain to be updated without unloading the application domain. This is particularly useful for applications that must be available continuously, such as ASP.NET sites.  
   
 > [!IMPORTANT]
->  Shadow copying is not supported in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.  
+>  Shadow copying is not supported in [!INCLUDE [win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.  
   
  The common language runtime locks an assembly file when the assembly is loaded, so the file cannot be updated until the assembly is unloaded. The only way to unload an assembly from an application domain is by unloading the application domain, so under normal circumstances, an assembly cannot be updated on disk until all the application domains that are using it have been unloaded.  
   
@@ -36,11 +36,11 @@ Shadow copying enables assemblies that are used in an application domain to be u
   
  This article contains the following sections:  
   
--   [Enabling and Using Shadow Copying](#EnablingAndUsing) describes the basic use and the options that are available for shadow copying.  
+- [Enabling and Using Shadow Copying](#EnablingAndUsing) describes the basic use and the options that are available for shadow copying.  
   
--   [Startup Performance](#StartupPerformance) describes the changes that are made to shadow copying in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] to improve startup performance, and how to revert to the behavior of earlier versions.  
+- [Startup Performance](#StartupPerformance) describes the changes that are made to shadow copying in the [!INCLUDE [net_v40_long](../../../includes/net-v40-long-md.md)] to improve startup performance, and how to revert to the behavior of earlier versions.  
   
--   [Obsolete Methods](#ObsoleteMethods) describes the changes that were made to the properties and methods that control shadow copying in the [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
+- [Obsolete Methods](#ObsoleteMethods) describes the changes that were made to the properties and methods that control shadow copying in the [!INCLUDE [dnprdnlong](../../../includes/dnprdnlong-md.md)].  
   
 <a name="EnablingAndUsing"></a>   
 ## Enabling and Using Shadow Copying  
@@ -73,9 +73,9 @@ Shadow copying enables assemblies that are used in an application domain to be u
   
 <a name="StartupPerformance"></a>   
 ## Startup Performance  
- When an application domain that uses shadow copying starts, there is a delay while assemblies in the application directory are copied to the shadow copy directory, or verified if they are already in that location. Before the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], all assemblies were copied to a temporary directory. Each assembly was opened to verify the assembly name, and the strong name was validated. Each assembly was checked to see whether it had been updated more recently than the copy in the shadow copy directory. If so, it was copied to the shadow copy directory. Finally, the temporary copies were discarded.  
+ When an application domain that uses shadow copying starts, there is a delay while assemblies in the application directory are copied to the shadow copy directory, or verified if they are already in that location. Before the [!INCLUDE [net_v40_short](../../../includes/net-v40-short-md.md)], all assemblies were copied to a temporary directory. Each assembly was opened to verify the assembly name, and the strong name was validated. Each assembly was checked to see whether it had been updated more recently than the copy in the shadow copy directory. If so, it was copied to the shadow copy directory. Finally, the temporary copies were discarded.  
   
- Beginning with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], the default startup behavior is to directly compare the file date and time of each assembly in the application directory with the file date and time of the copy in the shadow copy directory. If the assembly has been updated, it is copied by using the same procedure as in earlier versions of the .NET Framework; otherwise, the copy in the shadow copy directory is loaded.  
+ Beginning with the [!INCLUDE [net_v40_short](../../../includes/net-v40-short-md.md)], the default startup behavior is to directly compare the file date and time of each assembly in the application directory with the file date and time of the copy in the shadow copy directory. If the assembly has been updated, it is copied by using the same procedure as in earlier versions of the .NET Framework; otherwise, the copy in the shadow copy directory is loaded.  
   
  The resulting performance improvement is largest for applications in which assemblies do not change frequently and changes usually occur in a small subset of assemblies. If a majority of assemblies in an application change frequently, the new default behavior might cause a performance regression. You can restore the startup behavior of previous versions of the .NET Framework by adding the [\<shadowCopyVerifyByTimestamp> element](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) to the configuration file, with `enabled="false"`.  
   

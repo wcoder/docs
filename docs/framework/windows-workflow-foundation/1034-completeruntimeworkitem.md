@@ -17,25 +17,27 @@ ms.workload:
 ---
 # 1034 - CompleteRuntimeWorkItem
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|1034|  
 |Keywords|WFRuntime|  
 |Level|Verbose|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates a RuntimeWorkItem has completed.  
-  
+
 ## Message  
  A runtime work item has completed for Activity '%1', DisplayName: '%2', InstanceId: '%3'.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|Activity|xs:string|The type name of the activity.|  
-|DisplayName|xs:string|The display name of the activity.|  
-|InstanceId|xs:string|The instance id of the activity.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|    Activity    |   xs:string    |                The type name of the activity.                |
+|  DisplayName   |   xs:string    |              The display name of the activity.               |
+|   InstanceId   |   xs:string    |               The instance id of the activity.               |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

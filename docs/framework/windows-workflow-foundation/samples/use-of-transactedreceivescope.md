@@ -26,22 +26,22 @@ This sample shows how to flow a transaction from a client to a server using <xre
   
 #### To run the sample  
   
-1.  Open the TransactedReceiveScope.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1. Open the TransactedReceiveScope.sln solution in [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.  
+2. To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.  
   
-3.  Once the build has succeeded, right-click the solution and select **Set Startup Projects**. From the dialog, select **Multiple Startup Projects** and ensure the action for both projects is **Start**.  
+3. Once the build has succeeded, right-click the solution and select **Set Startup Projects**. From the dialog, select **Multiple Startup Projects** and ensure the action for both projects is **Start**.  
   
-4.  Press F5 or select **Start Debugging** from the **Debug** menu. Alternatively, you can press CTRL+F5 or select **Start Without Debugging** from the **Debug** menu to run without debugging.  
+4. Press F5 or select **Start Debugging** from the **Debug** menu. Alternatively, you can press CTRL+F5 or select **Start Without Debugging** from the **Debug** menu to run without debugging.  
   
-    > [!NOTE]
-    >  The server must be running prior to starting the client. The output from the console window hosting the service indicates when it has started.  
+   > [!NOTE]
+   >  The server must be running prior to starting the client. The output from the console window hosting the service indicates when it has started.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TransactedReceiveScope`

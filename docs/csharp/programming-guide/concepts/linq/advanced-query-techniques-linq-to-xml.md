@@ -16,10 +16,11 @@ ms.author: "wiwagn"
 
 ---
 # Advanced Query Techniques (LINQ to XML) (C#)
-This section provides examples of more advanced [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query techniques.  
-  
+This section provides examples of more advanced [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] query techniques.  
+
 ## In This Section  
-  
+
+
 |Topic|Description|  
 |-----------|-----------------|  
 |[How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)|Shows how to use the `Join` clause to take advantage of relationships in XML data.|  
@@ -31,6 +32,6 @@ This section provides examples of more advanced [!INCLUDE[sqltecxlinq](~/include
 |[How to: Retrieve Paragraphs from an Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md)|Presents code that opens an Office Open XML Document, retrieves the paragraphs in a collection of XElement objects, the text of the paragraphs, and the style of the paragraphs.|  
 |[How to: Modify an Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|Presents code that opens, modifies, and saves an Office Open XML Document.|  
 |[How to: Populate an XML Tree from the File System (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|Presents code that creates an XML tree from the file system.|  
-  
+
 ## See Also  
  [Querying XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

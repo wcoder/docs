@@ -291,7 +291,7 @@ public class EchoService : IEchoService
 ```  
   
 ## Displaying Callers' Information  
- To display the caller's information, you can use the `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` as shown in the following code. The `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contains authorization claims associated with the current caller. Those claims are supplied automatically by [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] for every token received in the message.  
+ To display the caller's information, you can use the `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` as shown in the following code. The `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contains authorization claims associated with the current caller. Those claims are supplied automatically by [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] for every token received in the message.  
   
 ```  
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string   
@@ -354,7 +354,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```  
   
 ## Running the Sample  
- When you run the sample, the client first prompts you to provide user name and password for the user name token. Be sure to provide correct values for your system account, because [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] on the service maps the values supplied in the user name token into the identity provided by the system. After that, the client displays the response from the service. Press ENTER in the client window to shut down the client.  
+ When you run the sample, the client first prompts you to provide user name and password for the user name token. Be sure to provide correct values for your system account, because [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] on the service maps the values supplied in the user name token into the identity provided by the system. After that, the client displays the response from the service. Press ENTER in the client window to shut down the client.  
   
 ## Setup Batch File  
  The Setup.bat batch file included with this sample allows you to configure the server with relevant certificates to run Internet Information Services (IIS) hosted application that requires server certificate-based security. This batch file must be modified to work across machines or to work in a non-hosted case.  
@@ -431,14 +431,14 @@ iisreset
   
 ##### To run the sample on the same machine  
   
-1.  Run Setup.bat from the sample install folder inside a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt run with administrator privileges. This installs all the certificates required for running the sample.  
+1. Run Setup.bat from the sample install folder inside a [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt run with administrator privileges. This installs all the certificates required for running the sample.  
   
-    > [!NOTE]
-    >  The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt. The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script. Be sure to remove the certificates by running Cleanup.bat when finished with the sample. Other security samples use the same certificates.  
+   > [!NOTE]
+   >  The Setup.bat batch file is designed to be run from a [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt. The PATH environment variable set within the [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script. Be sure to remove the certificates by running Cleanup.bat when finished with the sample. Other security samples use the same certificates.  
   
-2.  Launch Client.exe from \client\bin. Client activity is displayed on the client console application.  
+2. Launch Client.exe from \client\bin. Client activity is displayed on the client console application.  
   
-3.  If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3. If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ##### To run the sample across machines  
   
@@ -473,6 +473,6 @@ iisreset
 -   Run Cleanup.bat in the samples folder once you have finished running the sample.  
   
 > [!NOTE]
->  This script does not remove service certificates on a client when running this sample across machines. If you have run [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples that use certificates across machines, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store. To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  This script does not remove service certificates on a client when running this sample across machines. If you have run [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] samples that use certificates across machines, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store. To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## See Also

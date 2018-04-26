@@ -58,7 +58,7 @@ The `private protected` keyword combination is a member access modifier. A priva
  Struct members cannot be `private protected` because the struct cannot be inherited.  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Reference](../../../csharp/language-reference/index.md)   

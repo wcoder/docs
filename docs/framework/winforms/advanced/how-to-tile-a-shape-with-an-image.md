@@ -54,10 +54,10 @@ Just as tiles can be placed next to each other to cover a floor, rectangular ima
   
 ### To flip an image vertically while tiling  
   
--   This example uses the same 75×75 image to fill a 200×200 rectangle. The wrap mode is set to flip the image vertically.  
+- This example uses the same 75×75 image to fill a 200×200 rectangle. The wrap mode is set to flip the image vertically.  
   
-     [!code-csharp[System.Drawing.UsingABrush#33](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#33)]
-     [!code-vb[System.Drawing.UsingABrush#33](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#33)]  
+   [!code-csharp[System.Drawing.UsingABrush#33](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#33)]
+   [!code-vb[System.Drawing.UsingABrush#33](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#33)]  
   
 ### To flip an image horizontally and vertically while tiling  
   

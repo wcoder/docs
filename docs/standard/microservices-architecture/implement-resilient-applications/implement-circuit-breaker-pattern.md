@@ -246,6 +246,6 @@ Policy.Handle<HttpResponseException>() // etc
     https://brooker.co.za/blog/2015/03/21/backoff.html
 
 
->[!div class="step-by-step"]
-[Previous] (implement-http-call-retries-exponential-backoff-polly.md)
-[Next] (monitor-app-health.md)
+> [!div class="step-by-step"]
+> [Previous](implement-http-call-retries-exponential-backoff-polly.md)
+> [Next](monitor-app-health.md)

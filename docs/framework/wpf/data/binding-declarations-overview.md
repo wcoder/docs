@@ -101,23 +101,23 @@ This topic discusses the different ways you can declare a binding.
   
 ### Escaping Mechanism  
   
--   Inside indexers ([ ]), the caret character (^) escapes the next character.  
+- Inside indexers ([ ]), the caret character (^) escapes the next character.  
   
--   If you set <xref:System.Windows.Data.Binding.Path%2A> in XAML, you also need to escape (using XML entities) certain characters that are special to the XML language definition:  
+- If you set <xref:System.Windows.Data.Binding.Path%2A> in XAML, you also need to escape (using XML entities) certain characters that are special to the XML language definition:  
   
-    -   Use `&` to escape the character "&".  
+  -   Use `&` to escape the character "&".  
   
-    -   Use `>` to escape the end tag ">".  
+  -   Use `>` to escape the end tag ">".  
   
--   Additionally, if you describe the entire binding in an attribute using the markup extension syntax, you need to escape (using backslash \\) characters that are special to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] markup extension parser:  
+- Additionally, if you describe the entire binding in an attribute using the markup extension syntax, you need to escape (using backslash \\) characters that are special to the [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] markup extension parser:  
   
-    -   Backslash (\\) is the escape character itself.  
+  -   Backslash (\\) is the escape character itself.  
   
-    -   The equal sign (=) separates property name from property value.  
+  -   The equal sign (=) separates property name from property value.  
   
-    -   Comma (,) separates properties.  
+  -   Comma (,) separates properties.  
   
-    -   The right curly brace (}) is the end of a markup extension.  
+  -   The right curly brace (}) is the end of a markup extension.  
   
 <a name="Default"></a>   
 ## Default Behaviors  

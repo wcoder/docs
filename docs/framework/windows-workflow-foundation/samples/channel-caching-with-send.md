@@ -29,19 +29,19 @@ The <xref:System.ServiceModel.Activities.SendMessageChannelCache> enables users 
   
 #### To set up, build, and run the sample  
   
-1.  Load the project solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] and build the project.  
+1. Load the project solution in [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] and build the project.  
   
-2.  Run the EchoWorkflowService application generated in \EchoWorkflowService\bin\debug.  
+2. Run the EchoWorkflowService application generated in \EchoWorkflowService\bin\debug.  
   
-3.  Run the EchoWorkflowClient application generated in .\EchoWorkflowClient\bin\debug.  
+3. Run the EchoWorkflowClient application generated in .\EchoWorkflowClient\bin\debug.  
   
-4.  The client calls the Echo operation on the service and prints the results. When the results have been printed, press ENTER to exit the client and the service.  
+4. The client calls the Echo operation on the service and prints the results. When the results have been printed, press ENTER to exit the client and the service.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\ChannelCache`

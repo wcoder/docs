@@ -37,7 +37,7 @@ SELECT DEREF ( o.expression ) from Table as o;
  The DEREF operator dereferences a reference value and produces the result of that dereference. For example, if `r` is a reference of type ref\<T>, `Deref``(r)` is an expression of type `T` that yields the entity referenced by `r`. If the reference value is null, or is dangling (that is, the target of the reference does not exist), the result of the DEREF operator is null.  
   
 ## Example  
- The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the DEREF operator to dereference a reference value and produce the result of that dereference. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  
+ The following [!INCLUDE [esql](../../../../../../includes/esql-md.md)] query uses the DEREF operator to dereference a reference value and produce the result of that dereference. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  
   
 1.  Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   

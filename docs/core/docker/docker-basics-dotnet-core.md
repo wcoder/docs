@@ -109,7 +109,7 @@ Let's do a quick walkthrough:
    * writes the *obj/project.assets.json* file
 
 <a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE [DotNet Restore Note](~/includes/dotnet-restore-note.md)]
    
    The *project.assets.json* file is a complete set of the NuGet dependencies graph, binding resolutions, and other app metadata. This required file is used by other tools, such as [`dotnet build`](../tools/dotnet-build.md) and [`dotnet run`](../tools/dotnet-run.md), to correctly process the source code.
    

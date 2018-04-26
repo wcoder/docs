@@ -55,7 +55,7 @@ LINQ to Entities provides Language-Integrated Query (LINQ) support that enables 
   
  For information about how CLR method calls are mapped to canonical functions in the data source, see [CLR Method to Canonical Function Mapping](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
   
- For information about how to call canonical, database, and custom functions from within [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries, see [Calling Functions in LINQ to Entities Queries](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
+ For information about how to call canonical, database, and custom functions from within [!INCLUDE [linq_entities](../../../../../../includes/linq-entities-md.md)] queries, see [Calling Functions in LINQ to Entities Queries](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
   
 ## Query Execution  
  After the LINQ query is created by the user, it is converted to a representation that is compatible with the Entity Framework (in the form of command trees), which is then executed against the data source. At query execution time, all query expressions (or components of the query) are evaluated on the client or on the server. This includes expressions that are used in result materialization or entity projections. For more information, see [Query Execution](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). For information on how to improve performance by compiling a query once and then executing it several times with different parameters, see [Compiled Queries  (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
@@ -65,13 +65,13 @@ LINQ to Entities provides Language-Integrated Query (LINQ) support that enables 
   
  Query results are usually returned as one of the following:  
   
--   A collection of zero or more typed entity objects or a projection of complex types defined in the conceptual model.  
+- A collection of zero or more typed entity objects or a projection of complex types defined in the conceptual model.  
   
--   CLR types that are supported by the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- CLR types that are supported by the [!INCLUDE [adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
--   Inline collections.  
+- Inline collections.  
   
--   Anonymous types.  
+- Anonymous types.  
   
  For more information, see [Query Results](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).  
   

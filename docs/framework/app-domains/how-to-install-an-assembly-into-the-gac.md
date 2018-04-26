@@ -43,7 +43,7 @@ There are two ways to install a strong-named assembly into the global assembly c
     >  Gacutil.exe is only for development purposes and should not be used to install production assemblies into the global assembly cache.  
   
 > [!NOTE]
->  In earlier versions of the .NET Framework, the Shfusion.dll Windows shell extension enabled you to install assemblies by dragging them in File Explorer. Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll is obsolete.  
+>  In earlier versions of the .NET Framework, the Shfusion.dll Windows shell extension enabled you to install assemblies by dragging them in File Explorer. Beginning with the [!INCLUDE [net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll is obsolete.  
   
 ### To use the Global Assembly Cache tool (Gacutil.exe)  
   

@@ -27,23 +27,23 @@ This sample is a generic ReadLine host. You can load and run any workflow using 
   
 #### To set up, build, and run the sample  
   
-1.  This sample requires SQL Express to be installed. SQL Express comes with [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1. This sample requires SQL Express to be installed. SQL Express comes with [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Open a Visual Studio 2010 command prompt.  
+2. Open a Visual Studio 2010 command prompt.  
   
-3.  Navigate to the sample directory (\WF\Basic\Execution\ControllingWorkflowApplications) and run CreateInstanceStore.cmd.  
+3. Navigate to the sample directory (\WF\Basic\Execution\ControllingWorkflowApplications) and run CreateInstanceStore.cmd.  
   
-4.  The CreateInstanceStore.cmd script attempts to create the database on the default instance of SQL Server 2008 Express. If you want to install the database on a different instance, modify the script to do so.  
+4. The CreateInstanceStore.cmd script attempts to create the database on the default instance of SQL Server 2008 Express. If you want to install the database on a different instance, modify the script to do so.  
   
-5.  Compile the WorkflowApplicationReadLineHost project and run it from the command line.  
+5. Compile the WorkflowApplicationReadLineHost project and run it from the command line.  
   
-6.  Once running, you can optionally turn persistence off or on. Further, you can optionally turn detailed activity tracking on or off.  
+6. Once running, you can optionally turn persistence off or on. Further, you can optionally turn detailed activity tracking on or off.  
   
-7.  Press the ellipsis button next to the **Run** button to browse for a workflow defined in a XAML file  
+7. Press the ellipsis button next to the **Run** button to browse for a workflow defined in a XAML file  
   
-     Two samples can be found under the SampleWorkflows folder. The parallel1.xaml example goes idle.  
+    Two samples can be found under the SampleWorkflows folder. The parallel1.xaml example goes idle.  
   
-8.  Once an example is selected, press the **Run** button.  
+8. Once an example is selected, press the **Run** button.  
   
 9. If or when the workflow goes idle, the **Bookmarks** combo box is populated with available bookmarks.  
   
@@ -59,9 +59,9 @@ This sample is a generic ReadLine host. You can load and run any workflow using 
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

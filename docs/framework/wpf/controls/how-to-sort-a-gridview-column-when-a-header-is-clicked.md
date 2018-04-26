@@ -66,7 +66,7 @@ This example shows how to create a <xref:System.Windows.Controls.ListView> contr
 </ListView.ItemsSource>  
 ```  
   
- The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page. The following example shows the metadata definition.  
+ The `s` and `p` identifiers in the [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page. The following example shows the metadata definition.  
   
 ```xaml  
 <Window        

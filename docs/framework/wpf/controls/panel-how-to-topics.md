@@ -23,7 +23,7 @@ ms.workload:
   - dotnet
 ---
 # Panel How-to Topics
-The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
+The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE [TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## In This Section  
  [How to: Apply a LayoutTransform to an Element](http://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  

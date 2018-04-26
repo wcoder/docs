@@ -23,7 +23,7 @@ ms.workload:
   - dotnet
 ---
 # 3-D Graphics How-to Topics
-The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] graphics in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.  
+The topics in this section demonstrate how to use [!INCLUDE [TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] graphics in [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.  
   
 ## In This Section  
  [Create a 3-D Scene](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  

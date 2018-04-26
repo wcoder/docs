@@ -23,16 +23,16 @@ ms.workload:
   - "dotnet"
 ---
 # Configuration Editor Tool (SvcConfigEditor.exe)
-The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration Editor (SvcConfigEditor.exe) allows administrators and developers to create and modify configuration settings for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services using a graphical user interface. With this tool, you can manage settings for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bindings, behaviors, services, and diagnostics without having to directly edit XML configuration files.  
+The [!INCLUDE [indigo1](../../../includes/indigo1-md.md)] Service Configuration Editor (SvcConfigEditor.exe) allows administrators and developers to create and modify configuration settings for [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] services using a graphical user interface. With this tool, you can manage settings for [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] bindings, behaviors, services, and diagnostics without having to directly edit XML configuration files.  
   
  Service Configuration Editor can be found in the C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin folder.  
   
 ## The WCF Configuration Editor  
- Service Configuration Editor comes with a wizard that guides you through all the steps in configuring a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service or client. You are strongly advised to use the wizard instead of the editor directly.  
+ Service Configuration Editor comes with a wizard that guides you through all the steps in configuring a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] service or client. You are strongly advised to use the wizard instead of the editor directly.  
   
- If you already have some configuration files that comply with the standard System.Configuration schema, you can manage specific settings for bindings, behavior, services, and diagnostics with the user interface. The Service Configuration Editor enables you to manage the settings for existing [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration files as well as executable files, COM+ services, and Web-hosted services. When opening a Web-hosted service with Service Configuration Editor, both the service’s own configuration and inherited configurations sections of upper level nodes are shown.  
+ If you already have some configuration files that comply with the standard System.Configuration schema, you can manage specific settings for bindings, behavior, services, and diagnostics with the user interface. The Service Configuration Editor enables you to manage the settings for existing [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] configuration files as well as executable files, COM+ services, and Web-hosted services. When opening a Web-hosted service with Service Configuration Editor, both the service’s own configuration and inherited configurations sections of upper level nodes are shown.  
   
- Because [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration settings are located in the `<system.serviceModel>` section of the configuration file, the editor operates exclusively on the content of this element and does not access other elements in the same file. You can navigate to existing configuration files directly or you can select an assembly that contains a service, virtual directory, or COM+ service. The editor loads the configuration file for that particular service and allows the user to either add new elements or edit existing elements nested in the `<system.serviceModel>` section of the configuration file.  
+ Because [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] configuration settings are located in the `<system.serviceModel>` section of the configuration file, the editor operates exclusively on the content of this element and does not access other elements in the same file. You can navigate to existing configuration files directly or you can select an assembly that contains a service, virtual directory, or COM+ service. The editor loads the configuration file for that particular service and allows the user to either add new elements or edit existing elements nested in the `<system.serviceModel>` section of the configuration file.  
   
  The editor supports IntelliSense and enforces schema compliance. The resulting output is guaranteed to comply with the schema of the configuration file and to have syntactically correct data values. However, the editor does not guarantee that the configuration file is semantically valid. In other words, the editor does not guarantee that the configuration file can work with the service it configures.  
   
@@ -54,7 +54,7 @@ The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration E
   
  C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe  
   
- After you launch the Service Configuration Editor, you can use the **File/Open** menu to browse for the service or assembly you want to manage. You can open configuration files directly, browse for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] /COM+ services, and open configuration files for Web-hosted services.  
+ After you launch the Service Configuration Editor, you can use the **File/Open** menu to browse for the service or assembly you want to manage. You can open configuration files directly, browse for [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] /COM+ services, and open configuration files for Web-hosted services.  
   
  The Service Configuration Editor's user interface is divided into the following areas:  
   
@@ -66,11 +66,11 @@ The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration E
   
 ### Opening a Configuration File  
   
-1.  Start Service Configuration Editor by using a command window to navigate to your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] installation location, and then type `SvcConfigEditor.exe`.  
+1. Start Service Configuration Editor by using a command window to navigate to your [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] installation location, and then type `SvcConfigEditor.exe`.  
   
-2.  From the **File** menu, select **Open** and click the type of file you want to manage.  
+2. From the **File** menu, select **Open** and click the type of file you want to manage.  
   
-3.  In the **Open** dialog box, navigate to the specific file you want to manage and double-click it.  
+3. In the **Open** dialog box, navigate to the specific file you want to manage and double-click it.  
   
  The viewer automatically follows the configuration merge path and creates a view of the merged configuration. For example, the actual configuration of a non-hosted service is a combination of Machine.config and App.config. Any changes are applied to the active file in the SvcConfigEditor. If you want to edit a specific file in the configuration merge path, you should open it directly.  
   
@@ -119,7 +119,7 @@ The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration E
 4.  Click **OK**.  
   
 > [!NOTE]
->  You cannot edit the value of [\<baseAddressPrefixFilters>](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) inside this tool. To add or modify this element, you should use a text editor or [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+>  You cannot edit the value of [\<baseAddressPrefixFilters>](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) inside this tool. To add or modify this element, you should use a text editor or [!INCLUDE [vsprvs](../../../includes/vsprvs-md.md)].  
   
 ### Client  
  The **Client** node displays all of the client endpoints in the configuration file. Every sub-node in the tree corresponds to a sub-element of the <`client`> element in the configuration file.  
@@ -217,7 +217,7 @@ The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration E
 3.  Select the binding element extension you want to edit. The settings of the element appear in the right pane, where they can be edited.  
   
 ### Diagnostics  
- The **Diagnostics** node displays all of the diagnostic settings in the configuration file. It enables you to turn performance counters on or off, enable or disable Windows Management Instrumentation (WMI), configure [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tracing, and configure [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] message logging. The settings in the **Diagnostics** node correspond to the <`system.diagnostics`> section, and `<diagnostics>` section in `<system.serviceModel>` in the configuration file.  
+ The **Diagnostics** node displays all of the diagnostic settings in the configuration file. It enables you to turn performance counters on or off, enable or disable Windows Management Instrumentation (WMI), configure [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] tracing, and configure [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] message logging. The settings in the **Diagnostics** node correspond to the <`system.diagnostics`> section, and `<diagnostics>` section in `<system.serviceModel>` in the configuration file.  
   
  When you click the **Diagnostics** node, you can view or perform tasks on the diagnostics **Summary Page** in the **Detail Pane**.  
   
@@ -234,18 +234,18 @@ The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration E
 2.  To enable WMI provider, click the **Enable WMI Provider** link.  
   
 #### Enabling WCF Tracing  
- You can create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] trace file with standard properties or set up a custom trace file.  
+ You can create a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] trace file with standard properties or set up a custom trace file.  
   
-1.  Click the **Diagnostics** node.  
+1. Click the **Diagnostics** node.  
   
-2.  Click **Enable Tracing**.  
+2. Click **Enable Tracing**.  
   
-3.  Click the **Trace Level** link to adjust the trace level. There are six trace levels: Off, Critical, Error, Warning, Information, and Verbose. The **Activity Tracing** and **Propagate Activity** option enable you to use the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] activity tracing feature.  
+3. Click the **Trace Level** link to adjust the trace level. There are six trace levels: Off, Critical, Error, Warning, Information, and Verbose. The **Activity Tracing** and **Propagate Activity** option enable you to use the [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] activity tracing feature.  
   
-4.  Click the trace listener name to specify the trace file and options.  
+4. Click the trace listener name to specify the trace file and options.  
   
 #### Enabling WCF Logging  
- You can create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] trace file with standard properties or set up a custom trace file.  
+ You can create a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] trace file with standard properties or set up a custom trace file.  
   
 1.  Click the **Diagnostics** node.  
   
@@ -325,7 +325,7 @@ The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration E
  This section allows you to set default binding types for different protocols such as http, tcp, MSMQ or net.pipe through defined mapping between protocol address schemes and the possible bindings. You can also add new mappings to other protocols.  
   
 #### Extensions  
- New binding extensions, binding element extensions, standard endpoint extensions and behavior extensions can be registered for use in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration. Extensions are name/type pairs. The name defines the name of the extension in configuration, whereas the type implements the extension. There are four types of extensions:  
+ New binding extensions, binding element extensions, standard endpoint extensions and behavior extensions can be registered for use in [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] configuration. Extensions are name/type pairs. The name defines the name of the extension in configuration, whereas the type implements the extension. There are four types of extensions:  
   
 -   Binding extensions define an entire binding type. Example: `basicHttpBinding`.  
   
@@ -335,7 +335,7 @@ The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration E
   
 -   Behavior element extensions define an element of a behavior. Example: `clientVia`.  
   
- Extensions that have been registered in configuration can be used like any other [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] component of the same type.  
+ Extensions that have been registered in configuration can be used like any other [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] component of the same type.  
   
 ##### Adding a new extension  
  Select one of the extension nodes in the advanced nodes:  
@@ -352,19 +352,19 @@ The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration E
  This section allows you to define instantiation settings for the service hosting environment.  
   
 ### Creating a Configuration File Using the Wizard  
- One way to create a new configuration file is to use the New Service Element Wizard. The wizard finds the installed service types and other elements compatible with [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] on the computer, including COM+ and Web-hosted virtual directories, and loads them to make creating the configuration much more streamlined.  
+ One way to create a new configuration file is to use the New Service Element Wizard. The wizard finds the installed service types and other elements compatible with [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] on the computer, including COM+ and Web-hosted virtual directories, and loads them to make creating the configuration much more streamlined.  
   
 #### Creating a Configuration File  
   
-1.  Start Service Configuration Editor by using a command window to navigate to your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] installation location, and then type `SvcConfigEditor.exe`.  
+1. Start Service Configuration Editor by using a command window to navigate to your [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] installation location, and then type `SvcConfigEditor.exe`.  
   
-2.  From the **File** menu, select **Open** and click **Executable**, **COM+ Service**, or **WebHosted Service**, depending on the type of configuration file you want to create.  
+2. From the **File** menu, select **Open** and click **Executable**, **COM+ Service**, or **WebHosted Service**, depending on the type of configuration file you want to create.  
   
-3.  In the **Open** dialog box, navigate to the specific file you want to create a configuration file for and double-click it.  
+3. In the **Open** dialog box, navigate to the specific file you want to create a configuration file for and double-click it.  
   
-4.  In the **File** menu, point to **Add New Item** and click **Service**. The New Service Element Wizard opens.  
+4. In the **File** menu, point to **Add New Item** and click **Service**. The New Service Element Wizard opens.  
   
-5.  Follow the steps in the wizard to create the new service.  
+5. Follow the steps in the wizard to create the new service.  
   
 > [!NOTE]
 >  If you want to use the NetPeerTcpBinding from the configuration file generated by the Wizard, you have to manually add a binding configuration element and modify the `mode` attribute of its `security` element to "None".  
@@ -375,17 +375,17 @@ The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration E
 ### Creating a New COM+ Configuration  
  Before creating a new COM+ configuration, make sure that your COM+ application is installed in Component Services, and registered in the Global Assembly Cache (GAC).  
   
-1.  Select **File** menu -> **Integrate** -> **COM+ Application.** This operation closes the current opened file. If there is unsaved data in the current file, a Save dialog appears. The **COM+ Integration Wizard** is then launched.  
+1. Select **File** menu -> **Integrate** -> **COM+ Application.** This operation closes the current opened file. If there is unsaved data in the current file, a Save dialog appears. The **COM+ Integration Wizard** is then launched.  
   
-2.  In the first page, select the COM+ application from the tree. If you cannot find your COM+ application in the tree, verify that it is installed in the Component Services and registered in the Global Assembly Cache (GAC).  
+2. In the first page, select the COM+ application from the tree. If you cannot find your COM+ application in the tree, verify that it is installed in the Component Services and registered in the Global Assembly Cache (GAC).  
   
-3.  In the next page, select which method(s) you want to expose as [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services. All the supported methods in the COM+ application are displayed and selected by default.  
+3. In the next page, select which method(s) you want to expose as [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] services. All the supported methods in the COM+ application are displayed and selected by default.  
   
-4.  Choose a hosting method.  
+4. Choose a hosting method.  
   
-5.  Configure other settings according to the guides in the wizard.  
+5. Configure other settings according to the guides in the wizard.  
   
-6.  Service Configuration Editor utilizes ComSvcConfig.exe in the background to generate configuration file. After this is completed, you can view a summary and exit the wizard. The generated configuration file is opened so that you can edit it directly.  
+6. Service Configuration Editor utilizes ComSvcConfig.exe in the background to generate configuration file. After this is completed, you can view a summary and exit the wizard. The generated configuration file is opened so that you can edit it directly.  
   
 ### Editing an Existing COM+ Configuration  
   
@@ -399,6 +399,6 @@ The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration E
     >  You can also directly open and edit a configuration file that contains COM contracts.  
   
 ## Security  
- A service configuration file generated by the Configuration Editor is not guaranteed to be secure. Please refer to the [Security](../../../docs/framework/wcf/feature-details/security.md) documentation to find out how to secure your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services.  
+ A service configuration file generated by the Configuration Editor is not guaranteed to be secure. Please refer to the [Security](../../../docs/framework/wcf/feature-details/security.md) documentation to find out how to secure your [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] services.  
   
- In addition, the Configuration Editor can only be used to read and write valid [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration elements. The tool ignores schema-compliant, user-defined elements. It also does not attempt remove these elements from the configuration file or determine their effects on the known [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] elements. It is the user’s responsibility to determine whether these elements pose a threat to the application or the system.
+ In addition, the Configuration Editor can only be used to read and write valid [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] configuration elements. The tool ignores schema-compliant, user-defined elements. It also does not attempt remove these elements from the configuration file or determine their effects on the known [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] elements. It is the user’s responsibility to determine whether these elements pose a threat to the application or the system.

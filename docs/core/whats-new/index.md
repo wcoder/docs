@@ -1,3 +1,4 @@
+
 ---
 title: What's new in .NET Core 2.0
 description: Learn about the new features found in .NET Core.
@@ -27,7 +28,7 @@ ms.workload:
 
 In previous versions of .NET Core, you had to run the [dotnet restore](../tools/dotnet-restore.md) command to download dependencies immediately after you created a new project with the [dotnet new](../tools/dotnet-new.md) command, as well as whenever you added a new dependency to your project.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE [DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 You can also disable the automatic invocation of `dotnet restore` by passing the `--no-restore` switch to the `new`, `run`, `build`, `publish`, `pack`, and `test` commands. 
 

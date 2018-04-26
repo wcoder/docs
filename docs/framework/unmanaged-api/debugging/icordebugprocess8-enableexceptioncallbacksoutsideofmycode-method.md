@@ -20,7 +20,7 @@ ms.workload:
   - "dotnet"
 ---
 # ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode Method
-[Supported in the [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] and later versions]  
+[Supported in the [!INCLUDE [net_v46](../../../../includes/net-v46-md.md)] and later versions]  
   
  Enables or disables certain types of [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) exception callbacks.  
   
@@ -52,7 +52,7 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## See Also  
  [ICorDebugProcess8 Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-interface.md)  

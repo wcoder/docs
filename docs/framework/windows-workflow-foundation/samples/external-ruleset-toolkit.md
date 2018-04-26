@@ -23,7 +23,7 @@ Normally when rules are used within a workflow application, the rules are part o
 > [!NOTE]
 >  This sample requires [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=96181).  
   
- [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] provides a RuleSet editor as part of the Windows Workflow Foundation (WF). You can start this editor by double-clicking the `Policy` activity in a workflow; it serializes the defined RuleSet object to the .rules file associated with the workflow (a `Policy` activity runs a RuleSet instance against the workflow). The .rules file is compiled into the assembly as a resource when you build the workflow project.  
+ [!INCLUDE [vsprvsext](../../../../includes/vsprvsext-md.md)] provides a RuleSet editor as part of the Windows Workflow Foundation (WF). You can start this editor by double-clicking the `Policy` activity in a workflow; it serializes the defined RuleSet object to the .rules file associated with the workflow (a `Policy` activity runs a RuleSet instance against the workflow). The .rules file is compiled into the assembly as a resource when you build the workflow project.  
   
  The components of this sample include:  
   
@@ -41,11 +41,11 @@ Normally when rules are used within a workflow application, the rules are part o
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ExternalRuleSetToolKit`  
   
 ## RuleSet Tool  
@@ -63,7 +63,7 @@ Normally when rules are used within a workflow application, the rules are part o
   
  Figure 3: RuleSet Editor  
   
- This is a re-hosting of the editor dialog that is part of the Windows Workflow Foundation [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] add-in. It provides the same functionality, including Intellisense support. The rules are authored against a target type (such as a workflow) that is associated with the RuleSet in the tool; when you click **Browse** in the main tool dialog, the **Workflow/Type Selector** dialog appears, as shown in Figure 4.  
+ This is a re-hosting of the editor dialog that is part of the Windows Workflow Foundation [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)] add-in. It provides the same functionality, including Intellisense support. The rules are authored against a target type (such as a workflow) that is associated with the RuleSet in the tool; when you click **Browse** in the main tool dialog, the **Workflow/Type Selector** dialog appears, as shown in Figure 4.  
   
  ![Workflow &#47;Type Selection](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
@@ -79,7 +79,7 @@ Normally when rules are used within a workflow application, the rules are part o
   
  Figure 5: Validation Errors  
   
- From the **Data** menu in the tool, you can import and export RuleSets. When you click **Import**, a file-chooser dialog appears, from which you can select a .rules file. This may or may not be a file initially created in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. The .rules file should contain a serialized `RuleDefinitions` instance that contains a collection of conditions and a collection of RuleSets. The tool does not use the conditions collection, but it does use the `RuleDefinitions` .rules format to allow interaction with the [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] environment.  
+ From the **Data** menu in the tool, you can import and export RuleSets. When you click **Import**, a file-chooser dialog appears, from which you can select a .rules file. This may or may not be a file initially created in [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)]. The .rules file should contain a serialized `RuleDefinitions` instance that contains a collection of conditions and a collection of RuleSets. The tool does not use the conditions collection, but it does use the `RuleDefinitions` .rules format to allow interaction with the [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)] environment.  
   
  After selecting a .rules file, a **RuleSet Selector** dialog appears (see Figure 6). You can use the dialog to select the RuleSets from the file that you want to import (the default specifies all RuleSets). RuleSets in the .rules file do not have version numbers, because their versioning within a WF project is the same as the version of the assembly. During the importing process, the tool automatically assigns the next available major version number (which you can change after importing); you can see the assigned version numbers in the **RuleSet Selector** list.  
   
@@ -105,39 +105,39 @@ Normally when rules are used within a workflow application, the rules are part o
   
 #### To run the tool  
   
-1.  The folder that sets up the RuleSet table used by the tool and the service contains a Setup.sql file. You can run the Setup.cmd batch file to create the Rules database on SQL Express and to set up the RuleSet table.  
+1. The folder that sets up the RuleSet table used by the tool and the service contains a Setup.sql file. You can run the Setup.cmd batch file to create the Rules database on SQL Express and to set up the RuleSet table.  
   
-2.  If you edit the batch file or Setup.sql and specify not to use SQL Express or to place the table in a database named something other than `Rules`, the application configuration files in the RuleSet tool and `UsageSample` projects should be edited with the same information.  
+2. If you edit the batch file or Setup.sql and specify not to use SQL Express or to place the table in a database named something other than `Rules`, the application configuration files in the RuleSet tool and `UsageSample` projects should be edited with the same information.  
   
-3.  After you run the Setup.sql script, you can build the `ExternalRuleSetToolkit` solution and then launch the RuleSet tool from the ExternalRuleSetTool project.  
+3. After you run the Setup.sql script, you can build the `ExternalRuleSetToolkit` solution and then launch the RuleSet tool from the ExternalRuleSetTool project.  
   
-4.  The `RuleSetToolkitUsageSample` Sequential Workflow Console Application solution includes a sample workflow. The workflow consists of a `PolicyFromService` activity and two variables, `orderValue` and `discount`, against which the target RuleSet runs.  
+4. The `RuleSetToolkitUsageSample` Sequential Workflow Console Application solution includes a sample workflow. The workflow consists of a `PolicyFromService` activity and two variables, `orderValue` and `discount`, against which the target RuleSet runs.  
   
-5.  To use the sample, build the `RuleSetToolkitUsageSample` solution. Then from the RuleSet tool main menu, click **Data-Import** and point to the DiscountRuleSet.rules file in the RuleSetToolkitUsageSample folder. Click the **Rule Store-Save** menu option to save the imported RuleSet to the database.  
+5. To use the sample, build the `RuleSetToolkitUsageSample` solution. Then from the RuleSet tool main menu, click **Data-Import** and point to the DiscountRuleSet.rules file in the RuleSetToolkitUsageSample folder. Click the **Rule Store-Save** menu option to save the imported RuleSet to the database.  
   
-6.  Because the `PolicyActivities` assembly is referenced from the sample workflow project, the `PolicyFromService` activity appears in the workflow. It does not, however, appear in the toolbox by default. To add it to the toolbox, do the following:  
+6. Because the `PolicyActivities` assembly is referenced from the sample workflow project, the `PolicyFromService` activity appears in the workflow. It does not, however, appear in the toolbox by default. To add it to the toolbox, do the following:  
   
-    -   Right-click the toolbox and select **Choose Items** (this may take a while).  
+   -   Right-click the toolbox and select **Choose Items** (this may take a while).  
   
-    -   When the **Choose Toolbox Items** dialog appears, click the **Activities** tab.  
+   -   When the **Choose Toolbox Items** dialog appears, click the **Activities** tab.  
   
-    -   Browse to the `PolicyActivities` assembly in the `ExternalRuleSetToolkit` solution and click **Open**.  
+   -   Browse to the `PolicyActivities` assembly in the `ExternalRuleSetToolkit` solution and click **Open**.  
   
-    -   Ensure that the `PolicyFromService` activity is selected in the **Choose Toolbox Items** dialog and then click **OK**.  
+   -   Ensure that the `PolicyFromService` activity is selected in the **Choose Toolbox Items** dialog and then click **OK**.  
   
-    -   The activity should now appear in the toolbox in the **RuleSetToolkitUsageSample Components** category.  
+   -   The activity should now appear in the toolbox in the **RuleSetToolkitUsageSample Components** category.  
   
-7.  The RuleSet service is already configured on the console application host using the following statement in Program.cs.  
+7. The RuleSet service is already configured on the console application host using the following statement in Program.cs.  
   
-    ```  
-    workflowRuntime.AddService(new RuleSetService());  
-    ```  
+   ```  
+   workflowRuntime.AddService(new RuleSetService());  
+   ```  
   
-8.  You can also configure the service on the host using a configuration file; see the SDK documentation for details.  
+8. You can also configure the service on the host using a configuration file; see the SDK documentation for details.  
   
 9. An application configuration file is added to the workflow project to specify the connection string for the database to be used by the service. This should be the same connection string used by the RuleSet tool, which points to the database that contains the RuleSet table.  
   
-10. You can now run the `RuleSetToolkitUsageSample` project as you would any other workflow console application. Press F5 or Ctrl+F5 within [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] or run the RuleSetToolkitUsageSample.exe file directly.  
+10. You can now run the `RuleSetToolkitUsageSample` project as you would any other workflow console application. Press F5 or Ctrl+F5 within [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)] or run the RuleSetToolkitUsageSample.exe file directly.  
   
     > [!NOTE]
     >  You must close the RuleSet tool to recompile the usage sample, because the tool loads the usage sample assembly.

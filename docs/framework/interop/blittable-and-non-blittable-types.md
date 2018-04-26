@@ -77,7 +77,7 @@ Most data types have a common representation in both managed and unmanaged memor
 |[System.Valuetype](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100))|Converts to a structure with a fixed memory layout.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Converts to a C-style array or a `SAFEARRAY`.|  
   
- Class and object types are supported only by COM interop. For corresponding types in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#, and C++, see the [Class Library Overview](../../../docs/standard/class-library-overview.md).  
+ Class and object types are supported only by COM interop. For corresponding types in [!INCLUDE [vbprvblong](../../../includes/vbprvblong-md.md)], C#, and C++, see the [Class Library Overview](../../../docs/standard/class-library-overview.md).  
   
 ## See Also  
  [Default Marshaling Behavior](../../../docs/framework/interop/default-marshaling-behavior.md)

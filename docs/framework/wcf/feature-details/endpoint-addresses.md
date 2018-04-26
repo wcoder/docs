@@ -22,18 +22,18 @@ ms.workload:
   - "dotnet"
 ---
 # Endpoint Addresses
-Every endpoint has an address associated with it, which is used to locate and identify the endpoint. This address consists primarily of a Uniform Resource Identifier (URI), which specifies the location of the endpoint. The endpoint address is represented in the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] programming model by the <xref:System.ServiceModel.EndpointAddress> class, which contains an optional <xref:System.ServiceModel.EndpointAddress.Identity%2A> property that enables the authentication of the endpoint by other endpoints that exchange messages with it, and a set of optional <xref:System.ServiceModel.EndpointAddress.Headers%2A> properties, which define any other SOAP headers required to reach the service. The optional headers provide additional and more detailed addressing information to identify or interact with the service endpoint. The address of an endpoint is represented on the wire as a WS-Addressing endpoint reference (EPR).  
+Every endpoint has an address associated with it, which is used to locate and identify the endpoint. This address consists primarily of a Uniform Resource Identifier (URI), which specifies the location of the endpoint. The endpoint address is represented in the [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] programming model by the <xref:System.ServiceModel.EndpointAddress> class, which contains an optional <xref:System.ServiceModel.EndpointAddress.Identity%2A> property that enables the authentication of the endpoint by other endpoints that exchange messages with it, and a set of optional <xref:System.ServiceModel.EndpointAddress.Headers%2A> properties, which define any other SOAP headers required to reach the service. The optional headers provide additional and more detailed addressing information to identify or interact with the service endpoint. The address of an endpoint is represented on the wire as a WS-Addressing endpoint reference (EPR).  
   
 ## URI Structure of an Address  
  The address URI for most transports has four parts. For example, the four parts of the URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint can be itemized as follows:  
   
--   Scheme: http:  
+- Scheme: http:  
   
--   Machine: www.fabrikam.com  
+- Machine: www.fabrikam.com  
   
--   (optional) Port: 322  
+- (optional) Port: 322  
   
--   Path: /mathservice.svc/secureEndpoint  
+- Path: /mathservice.svc/secureEndpoint  
   
 ## Defining an Address for a Service  
  The endpoint address for a service can be specified either imperatively using code or declaratively through configuration. Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed. Generally, it is more practical to define service endpoints using configuration rather than code. Keeping the binding and addressing information out of the code allows them to change without having to recompile or redeploy the application.  
@@ -58,9 +58,9 @@ Every endpoint has an address associated with it, which is used to locate and id
   
 -   Binding Information: IP Address, Port, Host header  
   
- IIS can specify multiple bindings for each site, which results in multiple base addresses for each scheme. Prior to [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] did not support multiple addresses for a schema and, if they were specified, threw a <xref:System.ArgumentException> during activation.  
+ IIS can specify multiple bindings for each site, which results in multiple base addresses for each scheme. Prior to [!INCLUDE [netfx35_short](../../../../includes/netfx35-short-md.md)], [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] did not support multiple addresses for a schema and, if they were specified, threw a <xref:System.ArgumentException> during activation.  
   
- The [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] enables Internet service providers to host multiple applications with different base addresses for the same scheme on the same site.  
+ The [!INCLUDE [netfx35_short](../../../../includes/netfx35-short-md.md)] enables Internet service providers to host multiple applications with different base addresses for the same scheme on the same site.  
   
  For example, a site could contain the following base addresses:  
   
@@ -68,7 +68,7 @@ Every endpoint has an address associated with it, which is used to locate and id
   
 -   http://shipping.myorg.com/Service.svc  
   
- With [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], you specify a prefix filter at the AppDomain level in the configuration file. You do this with the [\<baseAddressPrefixFilters>](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) element, which contains a list of prefixes. The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list. By default, when a prefix is not specified, all addresses are passed through. Specifying the prefix results in only the matching base address for that scheme to be passed through.  
+ With [!INCLUDE [netfx35_short](../../../../includes/netfx35-short-md.md)], you specify a prefix filter at the AppDomain level in the configuration file. You do this with the [\<baseAddressPrefixFilters>](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) element, which contains a list of prefixes. The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list. By default, when a prefix is not specified, all addresses are passed through. Specifying the prefix results in only the matching base address for that scheme to be passed through.  
   
  The following is an example of configuration code that uses the prefix filters.  
   
@@ -106,7 +106,7 @@ Every endpoint has an address associated with it, which is used to locate and id
  For details and examples, see [Supporting Multiple IIS Site Bindings](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) and <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
 ## Extending Addressing in WCF Services  
- The default addressing model of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services uses the endpoint address URI for the following purposes:  
+ The default addressing model of [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] services uses the endpoint address URI for the following purposes:  
   
 -   To specify the service listening address, the location at which the endpoint listens for messages,  
   

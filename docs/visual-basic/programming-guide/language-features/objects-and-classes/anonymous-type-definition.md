@@ -58,25 +58,25 @@ End Class
   
  If an anonymous type declaration contains at least one key property, the type definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. If no key properties are declared, only <xref:System.Object.ToString%2A> is overridden. The overrides provide the following functionality:  
   
--   `Equals` returns `True` if two anonymous type instances are the same instance, or if they meet the following conditions:  
+- `Equals` returns `True` if two anonymous type instances are the same instance, or if they meet the following conditions:  
   
-    -   They have the same number of properties.  
+  -   They have the same number of properties.  
   
-    -   The properties are declared in the same order, with the same names and the same inferred types. Name comparisons are not case-sensitive.  
+  -   The properties are declared in the same order, with the same names and the same inferred types. Name comparisons are not case-sensitive.  
   
-    -   At least one of the properties is a key property, and the `Key` keyword is applied to the same properties.  
+  -   At least one of the properties is a key property, and the `Key` keyword is applied to the same properties.  
   
-    -   Comparison of each corresponding pair of key properties returns `True`.  
+  -   Comparison of each corresponding pair of key properties returns `True`.  
   
-     For example, in the following examples, `Equals` returns `True` only for `employee01` and `employee08`. The comment before each line specifies the reason why the new instance does not match `employee01`.  
+   For example, in the following examples, `Equals` returns `True` only for `employee01` and `employee08`. The comment before each line specifies the reason why the new instance does not match `employee01`.  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
+   [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
--   `GetHashcode` provides an appropriately unique GetHashCode algorithm. The algorithm uses only the key properties to compute the hash code.  
+- `GetHashcode` provides an appropriately unique GetHashCode algorithm. The algorithm uses only the key properties to compute the hash code.  
   
--   `ToString` returns a string of concatenated property values, as shown in the following example. Both key and non-key properties are included.  
+- `ToString` returns a string of concatenated property values, as shown in the following example. Both key and non-key properties are included.  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
+   [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   
  Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.  
   

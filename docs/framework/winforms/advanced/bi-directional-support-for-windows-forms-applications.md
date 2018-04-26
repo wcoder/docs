@@ -18,7 +18,7 @@ ms.workload:
   - dotnet
 ---
 # Bi-Directional Support for Windows Forms Applications
-You can use [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] to create Windows-based applications that support bi-directional (right-to-left) languages such as Arabic and Hebrew. This includes standard forms, dialog boxes, MDI forms, and all the controls you can work with in these forms—that is, all the objects in the <xref:System.Windows.Forms.Control> namespace.  
+You can use [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)] to create Windows-based applications that support bi-directional (right-to-left) languages such as Arabic and Hebrew. This includes standard forms, dialog boxes, MDI forms, and all the controls you can work with in these forms—that is, all the objects in the <xref:System.Windows.Forms.Control> namespace.  
   
 ## Culture Support  
  Culture and UI culture settings determine how an application works with dates, times, currency, and other information. Support for culture and UI culture is the same for bi-directional languages as it is for any other languages.   Also see [Culture-Specific Classes for Global Windows Forms and Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) or [Culture-Specific Classes for Global Windows Forms and Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
@@ -83,7 +83,7 @@ You can use [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] to create Wind
  Windows Forms support Unicode, so you can include any character set when you create your bi-directional applications. However, not all Windows Forms controls support Unicode on all platforms. For more information, see [Encoding and Windows Forms Globalization](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
   
 ## GDI+  
- You can use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to draw text with right-to-left reading order. The <xref:System.Drawing.Graphics.DrawString%2A> method, which is used to draw text, supports a `StringFormat` parameter that you can set to the <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> member of the <xref:System.Drawing.StringFormatFlags> enumeration in order to reverse the point of origin for the text.  
+ You can use [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to draw text with right-to-left reading order. The <xref:System.Drawing.Graphics.DrawString%2A> method, which is used to draw text, supports a `StringFormat` parameter that you can set to the <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> member of the <xref:System.Drawing.StringFormatFlags> enumeration in order to reverse the point of origin for the text.  
   
 ## Common Dialog Boxes  
  System tools such as the File Open dialog box are under the control of Windows. They inherit language elements from the operating system. If you are using a version of Windows with the correct language settings, these dialog boxes will work correctly with bi-directional languages.  

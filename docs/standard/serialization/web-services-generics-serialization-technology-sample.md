@@ -39,11 +39,11 @@ ms.workload:
 > [!NOTE]
 >  The following steps are required to build the sample.  
   
-1.  Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to the \CS subdirectory.  
+1. Open [!INCLUDE [fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to the \CS subdirectory.  
   
-2.  Right-click the icon for the GenericsService subdirectory, and select **Sharing and Security**.  
+2. Right-click the icon for the GenericsService subdirectory, and select **Sharing and Security**.  
   
-3.  In the **Web Sharing** tab, select **Share this Folder**.  
+3. In the **Web Sharing** tab, select **Share this Folder**.  
   
 > [!IMPORTANT]
 >  Take note of the virtual directory name that is listed in the **Aliases** pane, because you will need it to run the sample.  
@@ -63,9 +63,9 @@ ms.workload:
   
 ### To run the sample  
   
-1.  Open a browser window and select its address bar.  
+1. Open a browser window and select its address bar.  
   
-2.  Type **http://localhost/[virtual directory]/Service.asmx**, where [virtual directory] represents the virtual directory you created when you built the sample.  
+2. Type <strong>http://localhost/[virtual directory]/Service.asmx</strong>, where [virtual directory] represents the virtual directory you created when you built the sample.  
   
 ## Remarks  
  The sample displays a default ASP.NET page that contains links to the definition of the Web Service. You can customize the display in addition to modifying the source code for the Web service. For more information, see [Building XML Web Service Clients](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  

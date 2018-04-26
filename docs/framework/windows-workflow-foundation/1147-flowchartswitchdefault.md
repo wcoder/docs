@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 1147 - FlowchartSwitchDefault
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|1147|  
 |Keywords|WFActivities|  
 |Level|Information|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates the default case has been selected in a Flowchart switch.  
-  
+
 ## Message  
  Flowchart '%1'/FlowSwitch - Default Case was selected.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|FlowChart|xs:string|The display name of the FlowChart.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|   FlowChart    |   xs:string    |              The display name of the FlowChart.              |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

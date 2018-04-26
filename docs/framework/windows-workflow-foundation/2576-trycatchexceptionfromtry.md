@@ -17,24 +17,26 @@ ms.workload:
 ---
 # 2576 - TryCatchExceptionFromTry
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|2576|  
 |Keywords|WFActivities|  
 |Level|Information|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates the TryCatch activity has caught an exception.  
-  
+
 ## Message  
  The TryCatch activity '%1' has caught an exception of type '%2'.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|DisplayName|xs:string|The display name of the activity.|  
-|Exception|xs:string|The type name of the exception.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|  DisplayName   |   xs:string    |              The display name of the activity.               |
+|   Exception    |   xs:string    |               The type name of the exception.                |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

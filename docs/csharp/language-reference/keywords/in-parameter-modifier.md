@@ -117,7 +117,7 @@ You can't use the `in`, `ref`, and `out` keywords for the following kinds of met
 - Iterator methods, which include a [yield return](yield.md) or `yield break` statement.  
 
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Reference](../index.md)  

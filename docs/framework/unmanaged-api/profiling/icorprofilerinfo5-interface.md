@@ -45,7 +45,7 @@ ms.workload:
   
  **Header:** CorProf.idl, CorProf.h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## See Also  
  [Profiling Interfaces](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

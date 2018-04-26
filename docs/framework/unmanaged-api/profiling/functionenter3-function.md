@@ -60,7 +60,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## See Also  
  [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  

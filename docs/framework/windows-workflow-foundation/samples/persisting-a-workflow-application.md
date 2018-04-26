@@ -31,35 +31,35 @@ This sample demonstrates how to run a <xref:System.Activities.WorkflowApplicatio
   
 #### To use this sample  
   
-1.  Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.  
+1. Open a [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] command prompt.  
   
-     This sample requires SQL Server Express, which is installed by default with [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+    This sample requires SQL Server Express, which is installed by default with [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Navigate to the sample directory (\WF\Basic\Persistence\InstancePersistence\CS) and run CreateInstanceStore.cmd.  
+2. Navigate to the sample directory (\WF\Basic\Persistence\InstancePersistence\CS) and run CreateInstanceStore.cmd.  
   
-    > [!CAUTION]
-    >  The CreateInstanceStore.cmd script attempts to create the database on the default instance of SQL Server 2008 Express. If you want to install the database on a different instance, modify the script to do so.  
+   > [!CAUTION]
+   >  The CreateInstanceStore.cmd script attempts to create the database on the default instance of SQL Server 2008 Express. If you want to install the database on a different instance, modify the script to do so.  
   
-3.  Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the Persistence.sln solution file and press CTRL+SHIFT+B to build it.  
+3. Using [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)], open the Persistence.sln solution file and press CTRL+SHIFT+B to build it.  
   
-    > [!CAUTION]
-    >  If you installed the database on a non-default instance of SQL Server, update the connection string in the code prior to building the solution.  
+   > [!CAUTION]
+   >  If you installed the database on a non-default instance of SQL Server, update the connection string in the code prior to building the solution.  
   
-4.  Run the sample with administrator privileges by navigating to the project’s bin directory (\WF\Basic\Persistence\InstancePersistence\bin\Debug) in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], right-clicking Workflow.exe and selecting **Run as Administrator**.  
+4. Run the sample with administrator privileges by navigating to the project’s bin directory (\WF\Basic\Persistence\InstancePersistence\bin\Debug) in [!INCLUDE [fileExplorer](../../../../includes/fileexplorer-md.md)], right-clicking Workflow.exe and selecting **Run as Administrator**.  
   
 #### To remove the instance store database  
   
-1.  Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.  
+1. Open a [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] command prompt.  
   
-2.  Navigate to the sample directory and run RemoveInstanceStore.cmd.  
+2. Navigate to the sample directory and run RemoveInstanceStore.cmd.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\InstancePersistence`  
   
 ## See Also  

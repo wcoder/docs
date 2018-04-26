@@ -23,27 +23,27 @@ ms.workload:
 # How to: Secure Metadata Endpoints
 Metadata for a service can contain sensitive information about your application that a malicious user can leverage. Consumers of your service may also require a secure mechanism for obtaining metadata about your service. Therefore, it is sometimes necessary to publish your metadata using a secure endpoint.  
   
- Metadata endpoints are generally secured using the standard security mechanisms defined in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] for securing application endpoints. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Security Overview](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ Metadata endpoints are generally secured using the standard security mechanisms defined in [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] for securing application endpoints. ([!INCLUDE [crdefault](../../../../includes/crdefault-md.md)] [Security Overview](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
  This topic walks through the steps to create an endpoint secured by a Secure Sockets Layer (SSL) certificate or, in other words, an HTTPS endpoint.  
   
 ### To create a secure HTTPS GET metadata endpoint in code  
   
-1.  Configure a port with an appropriate X.509 certificate. The certificate must come from a trusted authority, and it must have an intended use of "Service Authorization." You must use the HttpCfg.exe tool to attach the certificate to the port. See [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1. Configure a port with an appropriate X.509 certificate. The certificate must come from a trusted authority, and it must have an intended use of "Service Authorization." You must use the HttpCfg.exe tool to attach the certificate to the port. See [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
-    > [!IMPORTANT]
-    >  The subject of the certificate or its Domain Name System (DNS) must match the name of the computer. This is essential because one of the first steps the HTTPS mechanism performs is to check that the certificate is issued to the same Uniform Resource Identifier (URI) as the address upon which it is invoked.  
+   > [!IMPORTANT]
+   >  The subject of the certificate or its Domain Name System (DNS) must match the name of the computer. This is essential because one of the first steps the HTTPS mechanism performs is to check that the certificate is issued to the same Uniform Resource Identifier (URI) as the address upon which it is invoked.  
   
-2.  Create a new instance of the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> class.  
+2. Create a new instance of the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> class.  
   
-3.  Set the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> property of the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> class to `true`.  
+3. Set the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> property of the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> class to `true`.  
   
-4.  Set the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> property to an appropriate URL. Note that if you specify an absolute address, the URL must begin with the scheme "https://". If you specify a relative address, you must supply an HTTPS base address for your service host. If this property is not set, the default address is "", or directly at the HTTPS base address for the service.  
+4. Set the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> property to an appropriate URL. Note that if you specify an absolute address, the URL must begin with the scheme "https://". If you specify a relative address, you must supply an HTTPS base address for your service host. If this property is not set, the default address is "", or directly at the HTTPS base address for the service.  
   
-5.  Add the instance to the behaviors collection that the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> property of the <xref:System.ServiceModel.Description.ServiceDescription> class returns, as shown in the following code.  
+5. Add the instance to the behaviors collection that the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> property of the <xref:System.ServiceModel.Description.ServiceDescription> class returns, as shown in the following code.  
   
-     [!code-csharp[c_HowToSecureEndpoint#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosecureendpoint/cs/source.cs#1)]
-     [!code-vb[c_HowToSecureEndpoint#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosecureendpoint/vb/source.vb#1)]  
+    [!code-csharp[c_HowToSecureEndpoint#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosecureendpoint/cs/source.cs#1)]
+    [!code-vb[c_HowToSecureEndpoint#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosecureendpoint/vb/source.vb#1)]  
   
 ### To create a secure HTTPS GET metadata endpoint in configuration  
   

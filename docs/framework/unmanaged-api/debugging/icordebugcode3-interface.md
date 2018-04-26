@@ -50,7 +50,7 @@ Provides a method that extends "ICorDebugCode" and "ICorDebugCode2" to provide i
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## See Also  
     

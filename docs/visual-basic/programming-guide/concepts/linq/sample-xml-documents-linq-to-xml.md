@@ -15,7 +15,7 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ---
 # Sample XML Documents (LINQ to XML)
-The following example files are used in the code samples and code snippets throughout the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.  
+The following example files are used in the code samples and code snippets throughout the [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.  
   
 > [!NOTE]
 >  The example companies, organizations, products, domain names, email addresses, logos, people, places, and events depicted herein are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, places, or events is intended or should be inferred.  

@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # WS Binding
-This section contains samples that demonstrate Windows Service binding in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+This section contains samples that demonstrate Windows Service binding in [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)].  
   
 ## In This Section  
  [WS Transaction Flow](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  
@@ -34,7 +34,7 @@ This section contains samples that demonstrate Windows Service binding in [!INCL
  Demonstrates the use of the Message Transmission Optimization Mechanism (MTOM) message encoding with a WSHttpBinding.  
   
  [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)  
- Demonstrates how to implement a typical service and a typical client using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Demonstrates how to implement a typical service and a typical client using [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)].  
   
  [WS Reliable Session](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
  Demonstrates the use of reliable sessions.  
@@ -43,7 +43,7 @@ This section contains samples that demonstrate Windows Service binding in [!INCL
  Demonstrates the use of SSL transport security with the <xref:System.ServiceModel.WSHttpBinding> binding.  
   
  [Message Security Binding](../../../../docs/framework/wcf/samples/message-security-binding.md)  
- Demonstrates using message security in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Demonstrates using message security in [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)].  
   
  [WS Transport With Message Credential](../../../../docs/framework/wcf/samples/ws-transport-with-message-credential.md)  
  This sample demonstrates the use of SSL transport security in combination with the client credential being carried in the message.

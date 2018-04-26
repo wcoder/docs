@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # ICorProfilerInfo7 Interface
-[Supported in the [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] and later versions]  
+[Supported in the [!INCLUDE [net_v461](../../../../includes/net-v461-md.md)] and later versions]  
   
  A subclass of [ICorProfilerInfo6](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md) that provides a method to apply newly defined metadata to a module and that provides access to an in-memory symbol stream.  
   
@@ -35,7 +35,7 @@ ms.workload:
   
  **Header:** CorProf.idl, CorProf.h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## See Also  
  [Profiling Interfaces](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

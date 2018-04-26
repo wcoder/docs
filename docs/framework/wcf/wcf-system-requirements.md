@@ -20,14 +20,14 @@ ms.workload:
   - "dotnet"
 ---
 # WCF System Requirements
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] is a communication infrastructure that is used to create distributed applications. The following lists the requirements that enable [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to run.  
+[!INCLUDE [indigo1](../../../includes/indigo1-md.md)] is a communication infrastructure that is used to create distributed applications. The following lists the requirements that enable [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] to run.  
   
 ## System Requirements  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] is installed by default on [!INCLUDE[wv](../../../includes/wv-md.md)].  
+ [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] is installed by default on [!INCLUDE [wv](../../../includes/wv-md.md)].  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] can also be installed on [!INCLUDE[wxpsp2](../../../includes/wxpsp2-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], or [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)].  
+ [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] can also be installed on [!INCLUDE [wxpsp2](../../../includes/wxpsp2-md.md)], [!INCLUDE [ws2003r2](../../../includes/ws2003r2-md.md)], or [!INCLUDE [ws2003sp1](../../../includes/ws2003sp1-md.md)].  
   
- **Note** The Message Queuing (MSMQ) functionality of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] is supported only on [!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)], and [!INCLUDE[wxppro](../../../includes/wxppro-md.md)].  
+ **Note** The Message Queuing (MSMQ) functionality of [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] is supported only on [!INCLUDE [wv](../../../includes/wv-md.md)], [!INCLUDE [ws2003r2](../../../includes/ws2003r2-md.md)], [!INCLUDE [ws2003sp1](../../../includes/ws2003sp1-md.md)], and [!INCLUDE [wxppro](../../../includes/wxppro-md.md)].  
   
 ## See Also  
  [Conceptual Overview](../../../docs/framework/wcf/conceptual-overview.md)  

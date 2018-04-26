@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 1125 - InvokeMethodIsNotStatic
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|1125|  
 |Keywords|WFRuntime|  
 |Level|Information|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  During CacheMetadata step, InvokeMethod activity indicates the method to be invoked is not static.  
-  
+
 ## Message  
  InvokeMethod '%1' - method is not Static.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|InvokeMethod|xs:string|The display name of the InvokeMethod activity.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|  InvokeMethod  |   xs:string    |        The display name of the InvokeMethod activity.        |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

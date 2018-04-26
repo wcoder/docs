@@ -18,20 +18,20 @@ ms.workload:
   - "dotnet"
 ---
 # Troubleshooting Queued Messaging
-This section contains common questions and troubleshooting help for using queues in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+This section contains common questions and troubleshooting help for using queues in [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)].  
   
 ## Common Questions  
- **Q:** I used [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beta 1 and I installed the MSMQ hotfix. Do I need to remove the hotfix?  
+ **Q:** I used [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] Beta 1 and I installed the MSMQ hotfix. Do I need to remove the hotfix?  
   
- **A:** Yes. This hotfix is no longer supported. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] now works on MSMQ without a hotfix requirement.  
+ **A:** Yes. This hotfix is no longer supported. [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] now works on MSMQ without a hotfix requirement.  
   
  **Q:** There are two bindings for MSMQ: <xref:System.ServiceModel.NetMsmqBinding> and <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. What should I use and when?  
   
- **A:** Use the <xref:System.ServiceModel.NetMsmqBinding> when you want to use MSMQ as a transport for queued communication between two [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications. Use the <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> when you want to use existing MSMQ applications to communicate with new [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications.  
+ **A:** Use the <xref:System.ServiceModel.NetMsmqBinding> when you want to use MSMQ as a transport for queued communication between two [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] applications. Use the <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> when you want to use existing MSMQ applications to communicate with new [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] applications.  
   
  **Q:** Do I have to upgrade MSMQ to use the <xref:System.ServiceModel.NetMsmqBinding> and `MsmqIntegration` bindings?  
   
- **A:** No. Both bindings work with MSMQ 3.0 on [!INCLUDE[wxp](../../../../includes/wxp-md.md)] and [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Certain features of the bindings become available when you upgrade to MSMQ 4.0 in [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+ **A:** No. Both bindings work with MSMQ 3.0 on [!INCLUDE [wxp](../../../../includes/wxp-md.md)] and [!INCLUDE [ws2003](../../../../includes/ws2003-md.md)]. Certain features of the bindings become available when you upgrade to MSMQ 4.0 in [!INCLUDE [wv](../../../../includes/wv-md.md)].  
   
  **Q:** What features of the <xref:System.ServiceModel.NetMsmqBinding> and <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> bindings are available in MSMQ 4.0 but not in MSMQ 3.0?  
   
@@ -43,13 +43,13 @@ This section contains common questions and troubleshooting help for using queues
   
 -   Only MSMQ 4.0 supports remote transacted read.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Differences in Queuing Features in Windows Vista, Windows Server 2003, and Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ [!INCLUDE [crdefault](../../../../includes/crdefault-md.md)] [Differences in Queuing Features in Windows Vista, Windows Server 2003, and Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
  **Q:** Can I use MSMQ 3.0 on one side of a queued communication and MSMQ 4.0 on the other side?  
   
  **A:** Yes.  
   
- **Q:** I want to integrate existing MSMQ applications with new [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients or servers. Do I need to upgrade both sides of my MSMQ infrastructure?  
+ **Q:** I want to integrate existing MSMQ applications with new [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] clients or servers. Do I need to upgrade both sides of my MSMQ infrastructure?  
   
  **A:** No. You do not have to upgrade to MSMQ 4.0 on either side.  
   
@@ -120,7 +120,7 @@ This section contains common questions and troubleshooting help for using queues
   
  **Q:** Where can I find answers to common questions on MSMQ?  
   
- **A:** [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, see [Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810).  
+ **A:** [!INCLUDE [crabout](../../../../includes/crabout-md.md)] MSMQ, see [Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810).  
   
  **Q:** Why does my service throw a `ProtocolException` when reading from a queue that contains both queued session messages and queued datagram messages?  
   
@@ -138,11 +138,11 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **A:** When you use the MSMQ integration binding, you must use the msmq.formatname scheme. For example, msmq.formatname:DIRECT=OS:.\private$\OrdersQueue. But when you specify the custom dead-letter queue, you must use the net.msmq scheme.  
   
- **Q:** When I use a public or private format name and open the service host on [!INCLUDE[wv](../../../../includes/wv-md.md)], I get an error. Why?  
+ **Q:** When I use a public or private format name and open the service host on [!INCLUDE [wv](../../../../includes/wv-md.md)], I get an error. Why?  
   
- **A:** The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] integration channel on [!INCLUDE[wv](../../../../includes/wv-md.md)] checks to see if a sub-queue can be opened for the main application queue for handling poison messages. The sub-queue name is derived from an msmq.formatname URI passed to the listener. The sub-queue name in MSMQ can only be a direct format name. So you see the error. Change the queue URI to a direct format name.  
+ **A:** The [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] integration channel on [!INCLUDE [wv](../../../../includes/wv-md.md)] checks to see if a sub-queue can be opened for the main application queue for handling poison messages. The sub-queue name is derived from an msmq.formatname URI passed to the listener. The sub-queue name in MSMQ can only be a direct format name. So you see the error. Change the queue URI to a direct format name.  
   
- **Q:** When receiving a message from an MSMQ application, the message sits in the queue and is not read by the receiving [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application. Why?  
+ **Q:** When receiving a message from an MSMQ application, the message sits in the queue and is not read by the receiving [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] application. Why?  
   
  **A:** Check to see whether the message has a body. If the message has no body, the MSMQ integration channel ignores the message. Implement `IErrorHandler` to be notified of exceptions and check the traces.  
   
@@ -188,21 +188,21 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
  **A:** Check the binding configuration. The default binding has MSMQ transport security turned on to sign the message. Turn it off.  
   
 ### Remote Transacted Receives  
- **Q:** When I have a queue on machine A, and a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that reads messages from a queue on machine B (the remote transacted receive scenario), messages are not read from the queue. Tracing information indicates the receive failed with the message "Transaction cannot be imported." What can I do to fix this?  
+ **Q:** When I have a queue on machine A, and a [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] service that reads messages from a queue on machine B (the remote transacted receive scenario), messages are not read from the queue. Tracing information indicates the receive failed with the message "Transaction cannot be imported." What can I do to fix this?  
   
  **A:** There are three possible reasons for this:  
   
--   If you are in domain mode, remote transacted receive requires Microsoft Distributed Transaction Coordinator (MSDTC) network access. You can enable this using **Add/Remove Components**.  
+- If you are in domain mode, remote transacted receive requires Microsoft Distributed Transaction Coordinator (MSDTC) network access. You can enable this using **Add/Remove Components**.  
   
-     ![Enabling network DTC access](../../../../docs/framework/wcf/feature-details/media/applicationserveraddcomps.jpg "ApplicationServerAddComps")  
+   ![Enabling network DTC access](../../../../docs/framework/wcf/feature-details/media/applicationserveraddcomps.jpg "ApplicationServerAddComps")  
   
--   Check the authentication mode for communicating with the transaction manager. If you are in workgroup mode, "No Authentication Required" must be selected. If you are in domain mode, then "Mutual Authentication Required" must be selected.  
+- Check the authentication mode for communicating with the transaction manager. If you are in workgroup mode, "No Authentication Required" must be selected. If you are in domain mode, then "Mutual Authentication Required" must be selected.  
   
-     ![Enabling XA transactions](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
+   ![Enabling XA transactions](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
   
--   Make sure that MSDTC is in the list of exceptions in the **Internet Connection Firewall** settings.  
+- Make sure that MSDTC is in the list of exceptions in the **Internet Connection Firewall** settings.  
   
--   Ensure that you are using [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ on [!INCLUDE[wv](../../../../includes/wv-md.md)] supports remote transacted read. MSMQ on earlier Windows releases does not support remote transacted read.  
+- Ensure that you are using [!INCLUDE [wv](../../../../includes/wv-md.md)]. MSMQ on [!INCLUDE [wv](../../../../includes/wv-md.md)] supports remote transacted read. MSMQ on earlier Windows releases does not support remote transacted read.  
   
  **Q:** When the service reading from the queue is a network service, for example, in a Web host, why do I get an access-denied exception is raised when reading from the queue?  
   

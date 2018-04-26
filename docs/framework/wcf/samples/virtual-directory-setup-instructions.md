@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Virtual Directory Setup Instructions
-The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples are intended to share a common virtual directory named servicemodelsamples that is mapped to the %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.  
+The [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] samples are intended to share a common virtual directory named servicemodelsamples that is mapped to the %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.  
   
 > [!NOTE]
 >  %SystemDrive% is usually C: or D:, depending on the drive location where Internet Information Services (IIS) is installed.  
@@ -29,52 +29,52 @@ The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples are intended
   
 #### To create a virtual directory in IIS 7.0 or 7.5  
   
-1.  From the **Start** menu, click **Run**, then type **inetmgr** to open the Internet Information Services (IIS) MMC snap-in.  
+1. From the **Start** menu, click **Run**, then type **inetmgr** to open the Internet Information Services (IIS) MMC snap-in.  
   
-2.  In the left pane, expand the node with the computer's name, and then expand the **Sites** node.  
+2. In the left pane, expand the node with the computer's name, and then expand the **Sites** node.  
   
-3.  Right-click **Default Web Site**, and then select **Add Application** to open the **Add Application window**.  
+3. Right-click **Default Web Site**, and then select **Add Application** to open the **Add Application window**.  
   
-4.  In the window, type `servicemodelsamples` as the alias for the virtual directory that you are creating.  
+4. In the window, type `servicemodelsamples` as the alias for the virtual directory that you are creating.  
   
-5.  Create the following directory: %SystemDrive%\inetpub\wwwroot\servicemodelsamples  
+5. Create the following directory: %SystemDrive%\inetpub\wwwroot\servicemodelsamples  
   
-6.  Set the physical path to %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  Most of the WCF samples copy service executable files to this location when built.  
+6. Set the physical path to %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  Most of the WCF samples copy service executable files to this location when built.  
   
-7.  Click **OK**. The Web application is now created for the WCF samples.  
+7. Click **OK**. The Web application is now created for the WCF samples.  
   
-    > [!NOTE]
-    >  This task must be performed only once, because all of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples use the same servicemodelsamples Web application.  
+   > [!NOTE]
+   >  This task must be performed only once, because all of the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] samples use the same servicemodelsamples Web application.  
   
-    > [!NOTE]
-    >  For the purpose of this documentation, the term `virtual directory` is synonymous with `Web application`.  
+   > [!NOTE]
+   >  For the purpose of this documentation, the term `virtual directory` is synonymous with `Web application`.  
   
-     In addition to creating the virtual directory, you must also set its properties to enable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services to run. See below for details.  
+    In addition to creating the virtual directory, you must also set its properties to enable [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] services to run. See below for details.  
   
 #### To create a virtual directory in IIS 5.1 or 6.0  
   
-1.  Open a command prompt window and type `start inetmgr` to open the Internet Information Services (IIS) MMC snap-in.  
+1. Open a command prompt window and type `start inetmgr` to open the Internet Information Services (IIS) MMC snap-in.  
   
-2.  In the left pane, expand the node with the computer's name, and then expand the **Web Sites** node.  
+2. In the left pane, expand the node with the computer's name, and then expand the **Web Sites** node.  
   
-3.  Right-click **Default Web Site** and select **New, Virtual Directory** to open the Virtual Directory Creation wizard.  
+3. Right-click **Default Web Site** and select **New, Virtual Directory** to open the Virtual Directory Creation wizard.  
   
-4.  In the wizard, type `servicemodelsamples` as the alias for the virtual directory that you are creating.  
+4. In the wizard, type `servicemodelsamples` as the alias for the virtual directory that you are creating.  
   
-5.  Set the path to %SystemDrive%\inetpub\wwwroot\servicemodelsamples. Most of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples copy service executable files to this location when built.  
+5. Set the path to %SystemDrive%\inetpub\wwwroot\servicemodelsamples. Most of the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] samples copy service executable files to this location when built.  
   
-6.  Click **Next**.  
+6. Click **Next**.  
   
-7.  By default, the following check boxes are selected:  
+7. By default, the following check boxes are selected:  
   
-    -   **Read**  
+   -   **Read**  
   
-    -   **Run scripts (such as ASP)**  
+   -   **Run scripts (such as ASP)**  
   
-8.  Click **Next**, and then click **Finish** to complete the wizard.  
+8. Click **Next**, and then click **Finish** to complete the wizard.  
   
-    > [!NOTE]
-    >  This task must be performed only once because all of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples use the same servicemodelsamples virtual directory.  
+   > [!NOTE]
+   >  This task must be performed only once because all of the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] samples use the same servicemodelsamples virtual directory.  
   
 #### To set additional virtual directory properties in IIS 7.0 or 7.5  
   

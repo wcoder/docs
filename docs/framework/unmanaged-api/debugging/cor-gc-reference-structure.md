@@ -76,7 +76,7 @@ typedef struct _COR_GC_REFERENCE {
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## See Also  
  [Debugging Structures](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Literals (Entity SQL)
-This topic describes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] support for literals.  
+This topic describes [!INCLUDE [esql](../../../../../../includes/esql-md.md)] support for literals.  
   
 ## Null  
  The null literal is used to represent the value null for any type. A null literal is compatible with any type.  

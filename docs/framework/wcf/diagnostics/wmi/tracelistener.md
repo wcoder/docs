@@ -19,9 +19,9 @@ ms.workload:
 ---
 # TraceListener
 TraceListener.  
-  
+
 ## Syntax  
-  
+
 ```  
 class TraceListener  
 {  
@@ -29,29 +29,31 @@ class TraceListener
   TraceListenerArgument TraceListenerArguments[];  
 };  
 ```  
-  
+
 ## Methods  
  The TraceListener class does not define any methods.  
-  
+
 ## Properties  
  The TraceListener class has the following properties:  
-  
+
 ### Name  
  Data type: string  
-  
+
  Access type: Read-only  
-  
+
  The name of the trace listener.  
-  
+
 ### TraceListenerArguments  
  Data type: TraceListenerArgument array  
-  
+
  Access type: Read-only  
-  
+
  The arguments of the trace listener.  
-  
+
 ## Requirements  
-  
-|MOF|Declared in Servicemodel.mof.|  
-|---------|-----------------------------------|  
-|Namespace|Defined in root\ServiceModel|
+
+
+|    MOF    | Declared in Servicemodel.mof. |
+|-----------|-------------------------------|
+| Namespace | Defined in root\ServiceModel  |
+

@@ -59,7 +59,7 @@ HRESULT GetAssemblyIdentityFromFile (
   
  **Header:** Fusion.h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  <<!--zzxref:IUnknown --> `IUnknown`>  

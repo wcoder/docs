@@ -22,17 +22,17 @@ This topic describes how to create a simple workflow service using messaging act
   
 ### To create a workflow service project  
   
-1.  Start [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1. Start [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-2.  Click the **File** menu, select **New**, and then **Project** to display the **New Project Dialog**. Select **Workflow** from the list of installed templates and **WCF Workflow Service Application** from the list of project types. Name the project `MyWFService` and use the default location as shown in the following illustration.  
+2. Click the **File** menu, select **New**, and then **Project** to display the **New Project Dialog**. Select **Workflow** from the list of installed templates and **WCF Workflow Service Application** from the list of project types. Name the project `MyWFService` and use the default location as shown in the following illustration.  
   
-     Click the **OK** button to dismiss the **New Project Dialog**.  
+    Click the **OK** button to dismiss the **New Project Dialog**.  
   
-3.  When the project is created, the Service1.xamlx file is opened in the designer as shown in the following illustration.  
+3. When the project is created, the Service1.xamlx file is opened in the designer as shown in the following illustration.  
   
-     ![The default workflow displayed in the designer](../../../../docs/framework/wcf/feature-details/media/defaultworkflowservice.JPG "DefaultWorkflowService")  
+    ![The default workflow displayed in the designer](../../../../docs/framework/wcf/feature-details/media/defaultworkflowservice.JPG "DefaultWorkflowService")  
   
-     Right-click the activity labeled **Sequential Service** and select **Delete**.  
+    Right-click the activity labeled **Sequential Service** and select **Delete**.  
   
 ### To implement the workflow service  
   

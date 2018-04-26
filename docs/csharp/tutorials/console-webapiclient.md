@@ -16,9 +16,9 @@ ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 
 ## Introduction
 This tutorial teaches you a number of features in .NET Core and the C# language. You’ll learn:
-*	The basics of the .NET Core Command Line Interface (CLI).
+*   The basics of the .NET Core Command Line Interface (CLI).
 *   An overview of C# Language features.
-*	Managing dependencies with NuGet
+*   Managing dependencies with NuGet
 *   HTTP Communications
 *   Processing JSON information
 *   Managing configuration with Attributes. 
@@ -111,7 +111,7 @@ build the functionality of the application. Start by opening the `program.cs` fi
 ```csharp
 private static async Task ProcessRepositories()
 {
-    
+
 }
 ```
 
@@ -503,7 +503,7 @@ Console.WriteLine(repo.LastPush);
 ```
 
 Your version should now match the [finished sample](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient).
- 
+
 ## Conclusion
 
 This tutorial showed you how to make web requests, parse the result, and display properties of
@@ -511,4 +511,5 @@ those results. You've also added new packages as dependencies in your project. Y
 the features of the C# language that support object-oriented techniques.
 
 <a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE [DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+

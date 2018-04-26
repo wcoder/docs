@@ -21,7 +21,7 @@ ms.workload:
   - "dotnet"
 ---
 # Message Security with Mutual Certificates
-The following scenario shows a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service and client secured using message security mode. The client and the service are authenticated with certificates.  
+The following scenario shows a [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] service and client secured using message security mode. The client and the service are authenticated with certificates.  
   
  This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.  
   
@@ -101,12 +101,12 @@ The following scenario shows a [!INCLUDE[indigo1](../../../../includes/indigo1-m
 ## Client  
  The following code and configuration are meant to run independently. Do one of the following:  
   
--   Create a stand-alone client using the code (and client code).  
+- Create a stand-alone client using the code (and client code).  
   
--   Create a client that does not define any endpoint addresses. Instead, use the client constructor that takes the configuration name as an argument. For example:  
+- Create a client that does not define any endpoint addresses. Instead, use the client constructor that takes the configuration name as an argument. For example:  
   
-     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
-     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
+   [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
+   [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### Code  
  The following code creates the client. The security mode is set to Message, and the client credential type is set to Certificate.  

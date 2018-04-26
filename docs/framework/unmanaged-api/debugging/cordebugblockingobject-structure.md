@@ -60,7 +60,7 @@ CorDebugBlockingReason blockingReason;
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## See Also  
  [Debugging Structures](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

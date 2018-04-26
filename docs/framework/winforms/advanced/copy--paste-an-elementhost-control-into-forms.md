@@ -37,7 +37,7 @@ This walkthrough shows you how to copy a Windows Presentation Foundation (WPF) c
 ## Prerequisites  
  You need the following components to complete this walkthrough:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+- [!INCLUDE [vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
   
 ## Creating the Project  
  The first step is to create the Windows Forms project.  

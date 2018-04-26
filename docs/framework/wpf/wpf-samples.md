@@ -21,4 +21,4 @@ ms.workload:
   - dotnet
 ---
 # WPF Samples
-For a list of samples that demonstrate [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], see [WPF Documentation Samples](http://go.microsoft.com/fwlink/?LinkID=159044) on MSDN Code Gallery.
+For a list of samples that demonstrate [!INCLUDE [TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], see [WPF Documentation Samples](http://go.microsoft.com/fwlink/?LinkID=159044) on MSDN Code Gallery.

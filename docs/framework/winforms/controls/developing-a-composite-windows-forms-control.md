@@ -25,7 +25,7 @@ ms.workload:
 # Developing a Composite Windows Forms Control
 You can develop a composite Windows Forms control by combining other Windows Forms controls. Composite controls that derive from <xref:System.Web.UI.UserControl> are called user controls. The base class, <xref:System.Windows.Forms.UserControl>, provides keyboard routing for the child controls, thus ensuring that child controls can receive focus. For an example of a user control, see the <xref:System.Windows.Forms.UserControl> sample in [How to: Apply Attributes in Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
- The Windows Forms designer in [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] provides rich design-time support for authoring user controls.  
+ The Windows Forms designer in [!INCLUDE [vsprvsext](../../../../includes/vsprvsext-md.md)] provides rich design-time support for authoring user controls.  
   
 -   [How to: Display a Control in the Choose Toolbox Items Dialog Box](http://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   

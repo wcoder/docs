@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 3552 - MaxPendingMessagesPerChannelExceeded
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|3552|  
 |Keywords|Quota, WFServices|  
 |Level|Warning|  
 |Channel|Microsoft-Windows-Application Server-Applications/Analytic|  
-  
+
 ## Description  
  Indicates the throttle 'MaxPendingMessagesPerChannel' limit was hit.  
-  
+
 ## Message  
  The throttle 'MaxPendingMessagesPerChannel' limit of  '%1' was hit. To increase this limit, adjust the MaxPendingMessagesPerChannel property on BufferedReceiveServiceBehavior.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|Limit|xs:string|The limit of the MaxPendingMessagesPerChannel throttle.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|     Limit      |   xs:string    |   The limit of the MaxPendingMessagesPerChannel throttle.    |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

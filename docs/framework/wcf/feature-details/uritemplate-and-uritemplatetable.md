@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # UriTemplate and UriTemplateTable
-Web developers require the ability to describe the shape and layout of the URIs that their services respond to. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] added two new classes to give developers control over their URIs. <xref:System.UriTemplate> and <xref:System.UriTemplateTable> form the basis of the URI-based dispatch engine in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. These classes can also be used on their own, allowing developers to take advantage of templates and the URI mapping mechanism without implementing a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.  
+Web developers require the ability to describe the shape and layout of the URIs that their services respond to. [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] added two new classes to give developers control over their URIs. <xref:System.UriTemplate> and <xref:System.UriTemplateTable> form the basis of the URI-based dispatch engine in [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)]. These classes can also be used on their own, allowing developers to take advantage of templates and the URI mapping mechanism without implementing a [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] service.  
   
 ## Templates  
  A template is a way to describe a set of relative URIs. The set of URI templates in the following table shows how a system that retrieves various types of weather information might be defined.  
@@ -30,7 +30,7 @@ Web developers require the ability to describe the shape and layout of the URIs 
 |City Forecast|weather/{state}/{city}|  
 |Activity Forecast|weather/{state}/{city}/{activity}|  
   
- This table describes a set of structurally similar URIs. Each entry is a URI template. The segments in curly braces describe variables. The segments not in curly braces describe literal strings. The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] template classes allow a developer to take an incoming URI, for example, "/weather/wa/seattle/cycling", and match it to a template that describes it, "/weather/{state}/{city}/{activity}".  
+ This table describes a set of structurally similar URIs. Each entry is a URI template. The segments in curly braces describe variables. The segments not in curly braces describe literal strings. The [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] template classes allow a developer to take an incoming URI, for example, "/weather/wa/seattle/cycling", and match it to a template that describes it, "/weather/{state}/{city}/{activity}".  
   
 ## UriTemplate  
  <xref:System.UriTemplate> is a class that encapsulates a URI template. The constructor takes a string parameter that defines the template. This string contains the template in the format described in the next section. The <xref:System.UriTemplate> class provides methods that allow you match an incoming URI to a template, generate a URI from a template, retrieve a collection of variable names used in the template, determine whether two templates are equivalent, and return the template's string.  
@@ -46,7 +46,7 @@ Web developers require the ability to describe the shape and layout of the URIs 
   
  The <xref:System.UriTemplate.PathSegmentVariableNames%2A> property contains a collection of the names of the variables used within path segments in the template string.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> takes a <xref:System.UriTemplate> as a parameter and returns a Boolean value that specifies whether the two templates are equivalent. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] the Template Equivalence section later in this topic.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> takes a <xref:System.UriTemplate> as a parameter and returns a Boolean value that specifies whether the two templates are equivalent. [!INCLUDE [crdefault](../../../../includes/crdefault-md.md)] the Template Equivalence section later in this topic.  
   
  <xref:System.UriTemplate> is designed to work with any URI scheme that conforms to the HTTP URI grammar. The following are examples of supported URI schemes.  
   
@@ -137,7 +137,7 @@ Web developers require the ability to describe the shape and layout of the URIs 
 -   /{shoe}{boat} - Variables must be separated by a literal.  
   
 ### Matching and Compound Path Segments  
- Compound path segments allow you to define a UriTemplate that has multiple variables within a single path segment. For example, in the following template string: "Addresses/{state}.{city}" two variables (state and city) are defined within the same segment. This template would match a URL such as "http://example.com/Washington.Redmond" but it will also match an URL like "http://example.com/Washington.Redmond.Microsoft". In the latter case, the state variable will contain "Washington" and the city variable will contain "Redmond.Microsoft". In this case any text (except ‘/’) will match the {city} variable. If you want a template that will not match the "extra" text, place the variable in a separate template segment, for example: "Addresses/{state}/{city}.  
+ Compound path segments allow you to define a UriTemplate that has multiple variables within a single path segment. For example, in the following template string: "Addresses/{state}.{city}" two variables (state and city) are defined within the same segment. This template would match a URL such as "<http://example.com/Washington.Redmond>" but it will also match an URL like "<http://example.com/Washington.Redmond.Microsoft>". In the latter case, the state variable will contain "Washington" and the city variable will contain "Redmond.Microsoft". In this case any text (except ‘/’) will match the {city} variable. If you want a template that will not match the "extra" text, place the variable in a separate template segment, for example: "Addresses/{state}/{city}.  
   
 ### Named Wildcard Segments  
  A named wildcard segment is any path variable segment whose variable name begins with the wildcard character ‘*’. The following template string contains a named wildcard segment named "shoe".  
@@ -229,25 +229,25 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
  When a variable is given a default value of `null` there are some additional constraints. A variable can have a default value of `null` if the variable is contained within the right most segment of the template string or if all segments to the right of the segment have default values of `null`. The following are valid template strings with default values of `null`:  
   
--   ```  
-    UriTemplate t = new UriTemplate("shoe/{boat=null}");  
-    ```  
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/{boat=null}");  
-    ```  
+- ```  
+  UriTemplate t = new UriTemplate("shoe/{boat=null}");  
+  ```  
+- ```  
+  UriTemplate t = new UriTemplate("{shoe=null}/{boat=null}");  
+  ```  
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");  
-    ```  
- The following are invalid template strings with  default values of `null`:  
+- ```  
+  UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");  
+  ```  
+  The following are invalid template strings with  default values of `null`:  
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment  
-    ```  
+- ```  
+  UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment  
+  ```  
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/{boat=x}/{bed=null}"); // shoe cannot have a null default because boat does not have a default null value  
-    ```  
+- ```  
+  UriTemplate t = new UriTemplate("{shoe=null}/{boat=x}/{bed=null}"); // shoe cannot have a null default because boat does not have a default null value  
+  ```  
 ### Default Values and Matching  
  When matching a candidate URI with a template that has default values, the default values are placed in the <xref:System.UriTemplateMatch.BoundVariables%2A> collection if values are not specified in the candidate URI.  
   

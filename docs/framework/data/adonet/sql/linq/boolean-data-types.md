@@ -20,7 +20,7 @@ ms.workload:
 # Boolean Data Types
 Boolean operators work as expected in the common language runtime (CLR), except that short-circuiting behavior is not translated. For example, the Visual Basic `AndAlso` operator behaves like the `And` operator. The C# `&&` operator behaves like the `&` operator.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports the following operators.  
+ [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports the following operators.  
   
 |Visual Basic|C#|  
 |------------------|---------|  

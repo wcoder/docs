@@ -17,7 +17,7 @@ ms.workload:
   - dotnet
 ---
 # Documents
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience. In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.  
+[!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience. In addition to enhanced capabilities and quality, [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.  
   
 ## In This Section  
  [Documents in WPF](documents-in-wpf.md)  

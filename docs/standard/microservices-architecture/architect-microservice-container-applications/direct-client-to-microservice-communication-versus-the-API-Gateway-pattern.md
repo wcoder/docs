@@ -119,6 +119,6 @@ In this guide and the reference sample application (eShopOnContainers), we are l
     [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
->[!div class="step-by-step"]
-[Previous] (identify-microservice-domain-model-boundaries.md)
-[Next] (communication-in-microservice-architecture.md)
+> [!div class="step-by-step"]
+> [Previous](identify-microservice-domain-model-boundaries.md)
+> [Next](communication-in-microservice-architecture.md)

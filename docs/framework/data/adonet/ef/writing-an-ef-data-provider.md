@@ -18,29 +18,29 @@ ms.workload:
   - "dotnet"
 ---
 # Writing an Entity Framework Data Provider
-This section discusses how to write an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider to support a data source other than SQL Server. The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] includes a provider that supports SQL Server.  
+This section discusses how to write an [!INCLUDE [adonet_ef](../../../../../includes/adonet-ef-md.md)] provider to support a data source other than SQL Server. The [!INCLUDE [adonet_ef](../../../../../includes/adonet-ef-md.md)] includes a provider that supports SQL Server.  
   
 ## Introducing the Entity Framework Provider Model  
- The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] is database independent, and you can write a provider by using the ADO.NET Provider Model to connect to a diverse set of data sources.  
+ The [!INCLUDE [adonet_ef](../../../../../includes/adonet-ef-md.md)] is database independent, and you can write a provider by using the ADO.NET Provider Model to connect to a diverse set of data sources.  
   
  The Entity Framework data provider (built using the ADO.NET Data Provider model) performs the following functions:  
   
--   Maps Entity Data Model (EDM) primitive types to provider types.  
+- Maps Entity Data Model (EDM) primitive types to provider types.  
   
--   Exposes provider-specific functions.  
+- Exposes provider-specific functions.  
   
--   Generates provider-specific commands for a given DbQueryCommandTree to support [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] queries.  
+- Generates provider-specific commands for a given DbQueryCommandTree to support [!INCLUDE [adonet_ef](../../../../../includes/adonet-ef-md.md)] queries.  
   
--   Generates provider-specific update commands for a given DbModificationCommandTree to support updates through the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+- Generates provider-specific update commands for a given DbModificationCommandTree to support updates through the [!INCLUDE [adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
--   Exposes mapping files for the store schema definition, to support generation of a model based on a database.  
+- Exposes mapping files for the store schema definition, to support generation of a model based on a database.  
   
--   Exposes metadata (tables and views, for example) via a conceptual model.  
+- Exposes metadata (tables and views, for example) via a conceptual model.  
   
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
 ## Sample  
- See the [Entity Framework Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) for a sample of an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider that supports a data source other than SQL Server.  
+ See the [Entity Framework Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) for a sample of an [!INCLUDE [adonet_ef](../../../../../includes/adonet-ef-md.md)] provider that supports a data source other than SQL Server.  
   
 ## In This Section  
  [SQL Generation](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  

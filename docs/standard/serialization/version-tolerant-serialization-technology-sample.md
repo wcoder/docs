@@ -29,15 +29,15 @@ ms.workload:
   
 ### To build the sample using Visual Studio  
   
-1.  Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.  
+1. Open [!INCLUDE [fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.  
   
-2.  Navigate to the V1 Application subdirectory of the directory you selected in the previous step.  
+2. Navigate to the V1 Application subdirectory of the directory you selected in the previous step.  
   
-3.  Double-click the icon for V1 Application.sln to open the file in Visual Studio.  
+3. Double-click the icon for V1 Application.sln to open the file in Visual Studio.  
   
-4.  On the **Build** menu, click **Build Solution**.  
+4. On the **Build** menu, click **Build Solution**.  
   
-5.  Navigate to the V2 Application subdirectory and repeat the two previous steps to build the V2 Application.  
+5. Navigate to the V2 Application subdirectory and repeat the two previous steps to build the V2 Application.  
   
  The applications will be built in the default \bin or \bin\Debug subdirectories of their respective project directories.  
   

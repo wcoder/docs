@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Mitigation: WPF Window Rendering
-In the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] running on Windows 8 and above, the entire window is rendered without clipping when it extends outside of single display in a multi-monitor scenario.  
+In the [!INCLUDE [net_v46](../../../includes/net-v46-md.md)] running on Windows 8 and above, the entire window is rendered without clipping when it extends outside of single display in a multi-monitor scenario.  
   
 ## Impact  
  In general, rendering an entire window across multiple monitors without clipping is the expected behavior. However, on Windows 7 and earlier versions, WPF windows are clipped when they extend beyond a single display because rendering a portion of the window on the second monitor has a significant performance impact.  

@@ -33,7 +33,7 @@ ms.workload:
 # GetCORVersion Function
 Returns the version number of the common language runtime (CLR) that is running in the current process.  
   
- This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ This function has been deprecated in the [!INCLUDE [net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## Syntax  
   
@@ -62,7 +62,7 @@ HRESULT GetCORVersion (
   
  **Library:** MSCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## See Also  
  [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

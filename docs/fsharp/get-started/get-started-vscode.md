@@ -82,7 +82,7 @@ This is powered by the [FORGE](https://github.com/fsharp-editing/Forge) project.
 ![](media/getting-started-vscode/vscode-new-proj.png)
 
 > [!NOTE]
-If you don't see the above, try refreshing templates by running the following command in the Command Palette: `>F#: Refresh Project Templates`.
+> If you don't see the above, try refreshing templates by running the following command in the Command Palette: `>F#: Refresh Project Templates`.
 
 Select "F#: New Project" by hitting **Enter**, which will take you to this step:
 
@@ -161,8 +161,8 @@ val it : string = "appleyay"
 
 The function appears to be working as expected.  Congratulations, you just wrote your first F# function in Visual Studio Code and evaluated it with FSI!
 
->[!NOTE]
-As you may have noticed, the lines in FSI are terminated with `;;`.  This is because FSI allows you to enter multiple lines.  The `;;` at the end lets FSI know when the code is finished.
+> [!NOTE]
+> As you may have noticed, the lines in FSI are terminated with `;;`.  This is because FSI allows you to enter multiple lines.  The `;;` at the end lets FSI know when the code is finished.
 
 ## Explaining the code
 

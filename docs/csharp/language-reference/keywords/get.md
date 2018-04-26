@@ -33,7 +33,7 @@ For simple cases in which a property's `get` and `set` accessors perform no othe
   
 ## C# Language Specification
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Reference](../../../csharp/language-reference/index.md)  

@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Comparison Semantics (Entity SQL)
-Performing any of the following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators involves comparison of type instances:  
+Performing any of the following [!INCLUDE [esql](../../../../../../includes/esql-md.md)] operators involves comparison of type instances:  
   
 ## Explicit comparison  
  Equality operations:  

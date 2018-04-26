@@ -24,5 +24,5 @@ ms.workload:
 
 Visual Studio Team Services greatly simplifies your DevOps environment designated to Docker environments from your Continuous Deployment pipelines, including simple Docker environments or more advanced microservice and container orchestrators based on Azure.
 
->[!div class="step-by-step"]
-[Previous] (../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+> [!div class="step-by-step"]
+> [Previous](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

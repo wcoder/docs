@@ -19,6 +19,6 @@ ms.workload:
 There are many approaches to implement retries logic with exponential backoff.
 
 
->[!div class="step-by-step"]
-[Previous] (partial-failure-strategies.md)
-[Next] (implement-resilient-entity-framework-core-sql-connections.md)
+> [!div class="step-by-step"]
+> [Previous](partial-failure-strategies.md)
+> [Next](implement-resilient-entity-framework-core-sql-connections.md)

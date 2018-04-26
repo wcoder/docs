@@ -58,7 +58,7 @@ This topic provides an overview of the Managed Extensibility Framework introduce
   
 <a name="where_is_mef_available"></a>   
 ## Where Is MEF Available?  
- MEF is an integral part of the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], and is available wherever the .NET Framework is used.  You can use MEF in your client applications, whether they use Windows Forms, WPF, or any other technology, or in server applications that use ASP.NET.  
+ MEF is an integral part of the [!INCLUDE [net_v40_short](../../../includes/net-v40-short-md.md)], and is available wherever the .NET Framework is used.  You can use MEF in your client applications, whether they use Windows Forms, WPF, or any other technology, or in server applications that use ASP.NET.  
   
 <a name="mef_and_maf"></a>   
 ## MEF and MAF  
@@ -73,7 +73,7 @@ This topic provides an overview of the Managed Extensibility Framework introduce
 > [!NOTE]
 >  The purpose of SimpleCalculator is to demonstrate the concepts and syntax of MEF, rather than to necessarily provide a realistic scenario for its use. Many of the applications that would benefit most from the power of MEF are more complex than SimpleCalculator. For more extensive examples, see the [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) on GitHub.
   
- To start, in [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)], create a new Console Application project named `SimpleCalculator`. Add a reference to the System.ComponentModel.Composition assembly, where MEF resides. Open Module1.vb or Program.cs and add `Imports` or `using` statements for System.ComponentModel.Composition and System.ComponentModel.Composition.Hosting. These two namespaces contain MEF types you will need to develop an extensible application. In Visual Basic, add the `Public` keyword to the line that declares the `Module1` module.  
+ To start, in [!INCLUDE [vs_dev10_long](../../../includes/vs-dev10-long-md.md)], create a new Console Application project named `SimpleCalculator`. Add a reference to the System.ComponentModel.Composition assembly, where MEF resides. Open Module1.vb or Program.cs and add `Imports` or `using` statements for System.ComponentModel.Composition and System.ComponentModel.Composition.Hosting. These two namespaces contain MEF types you will need to develop an extensible application. In Visual Basic, add the `Public` keyword to the line that declares the `Module1` module.  
   
 <a name="composition_container_and_catalogs"></a>   
 ## Composition Container and Catalogs  

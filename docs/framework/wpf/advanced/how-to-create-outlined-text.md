@@ -27,7 +27,7 @@ ms.workload:
   - dotnet
 ---
 # How to: Create Outlined Text
-In most cases, when you are adding ornamentation to text strings in your [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application, you are using text in terms of a collection of discrete characters, or glyphs. For example, you could create a linear gradient brush and apply it to the <xref:System.Windows.Controls.Control.Foreground%2A> property of a <xref:System.Windows.Controls.TextBox> object. When you display or edit the text box, the linear gradient brush is automatically applied to the current set of characters in the text string.  
+In most cases, when you are adding ornamentation to text strings in your [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application, you are using text in terms of a collection of discrete characters, or glyphs. For example, you could create a linear gradient brush and apply it to the <xref:System.Windows.Controls.Control.Foreground%2A> property of a <xref:System.Windows.Controls.TextBox> object. When you display or edit the text box, the linear gradient brush is automatically applied to the current set of characters in the text string.  
   
  ![Text displayed with a linear gradient brush](../../../../docs/framework/wpf/advanced/media/outlinedtext01.jpg "OutlinedText01")  
 Example of a linear gradient brush applied to a text box  

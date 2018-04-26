@@ -22,7 +22,7 @@ When workflow service applications communicate with other services, it is import
   
 ## In This Section  
  [Correlation Overview](../../../../docs/framework/wcf/feature-details/correlation-overview.md)  
- Provides an overview of the types of correlation available in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ Provides an overview of the types of correlation available in [!INCLUDE [netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
  [Context Exchange](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
  Describes context exchange correlation.  

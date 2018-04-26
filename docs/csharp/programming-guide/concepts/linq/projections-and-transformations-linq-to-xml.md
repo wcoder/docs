@@ -16,10 +16,11 @@ ms.author: "wiwagn"
 
 ---
 # Projections and Transformations (LINQ to XML) (C#)
-This section provides examples of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] projections and transformations.  
-  
+This section provides examples of [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] projections and transformations.  
+
 ## In This Section  
-  
+
+
 |Topic|Description|  
 |-----------|-----------------|  
 |[How to: Work with Dictionaries Using LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md)|Shows how to transform dictionaries to XML, and how to transform XML into dictionaries.|  
@@ -30,6 +31,6 @@ This section provides examples of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-
 |[How to: Project an Anonymous Type (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-project-an-anonymous-type.md)|Shows how to project a collection of anonymous objects from a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query.|  
 |[How to: Generate Text Files from XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|Shows how to transform an XML file to a non-XML text file.|  
 |[How to: Generate XML from CSV Files (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|Shows how to use [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to parse a CSV file and generate XML from it.|  
-  
+
 ## See Also  
  [Querying XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

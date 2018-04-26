@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Code Generation in LINQ to SQL
-You can generate code to represent a database by using either the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal command-line tool. In either case, end-to-end code generation occurs in three stages:  
+You can generate code to represent a database by using either the [!INCLUDE [vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal command-line tool. In either case, end-to-end code generation occurs in three stages:  
   
 1.  The *DBML Extractor* extracts schema information from the database and reassembles the information into an XML-formatted DBML file.  
   
@@ -26,13 +26,13 @@ You can generate code to represent a database by using either the [!INCLUDE[vs_o
   
 3.  If no validation errors appear, the file is passed to the Code Generator.  
   
- For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Developers using Visual Studio can also use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to generate code. See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Developers using Visual Studio can also use the [!INCLUDE [vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to generate code. See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## DBML Extractor  
- The DBML Extractor is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that takes database metadata as input and produces a DBML file as output.  
+ The DBML Extractor is a [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that takes database metadata as input and produces a DBML file as output.  
   
 ## Code Generator  
- The Code Generator is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that translates DBML files to Visual Basic, C#, or XML mapping files.  
+ The Code Generator is a [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that translates DBML files to Visual Basic, C#, or XML mapping files.  
   
 ## XML Schema Definition File  
  The DBML file must be valid against the following schema definition as an XSD file.  

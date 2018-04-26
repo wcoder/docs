@@ -38,7 +38,7 @@ Specifies groups into which objects returned by a query ([SELECT](../../../../..
   
  When a GROUP BY clause is specified, either explicitly or implicitly (for example, by a HAVING clause in the query), the current scope is hidden, and a new scope is introduced.  
   
- The SELECT clause, the HAVING clause, and the ORDER BY clause will no longer be able to refer to element names specified in the FROM clause. You can only refer to the grouping expressions themselves. To do this, you can assign new names (aliases) to each grouping expression. If no alias is specified for a grouping expression, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tries to generate one by using the alias generation rules, as illustrated in the following example.  
+ The SELECT clause, the HAVING clause, and the ORDER BY clause will no longer be able to refer to element names specified in the FROM clause. You can only refer to the grouping expressions themselves. To do this, you can assign new names (aliases) to each grouping expression. If no alias is specified for a grouping expression, [!INCLUDE [esql](../../../../../../includes/esql-md.md)] tries to generate one by using the alias generation rules, as illustrated in the following example.  
   
  `SELECT g1, g2, ...gn FROM c as c1`  
   

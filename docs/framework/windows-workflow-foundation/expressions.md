@@ -16,13 +16,13 @@ ms.workload:
   - "dotnet"
 ---
 # Expressions
-A [!INCLUDE[wf](../../../includes/wf-md.md)] expression is any activity that returns a result. All expression activities derive indirectly from <xref:System.Activities.Activity%601>, which contains an <xref:System.Activities.OutArgument> property named <xref:System.Activities.Activity%601.Result%2A> as the activity’s return value. [!INCLUDE[wf1](../../../includes/wf1-md.md)] ships with a wide range of expression activities from simple ones like <xref:System.Activities.Expressions.VariableValue%601> and <xref:System.Activities.Expressions.VariableReference%601>, which provide access to single workflow variable through operator activities, to complex activities such as <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> that offer access to the full breadth of Visual Basic language to produce the result. Additional expression activities can be created by deriving from <xref:System.Activities.CodeActivity%601> or <xref:System.Activities.NativeActivity%601>.  
+A [!INCLUDE [wf](../../../includes/wf-md.md)] expression is any activity that returns a result. All expression activities derive indirectly from <xref:System.Activities.Activity%601>, which contains an <xref:System.Activities.OutArgument> property named <xref:System.Activities.Activity%601.Result%2A> as the activity’s return value. [!INCLUDE [wf1](../../../includes/wf1-md.md)] ships with a wide range of expression activities from simple ones like <xref:System.Activities.Expressions.VariableValue%601> and <xref:System.Activities.Expressions.VariableReference%601>, which provide access to single workflow variable through operator activities, to complex activities such as <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> that offer access to the full breadth of Visual Basic language to produce the result. Additional expression activities can be created by deriving from <xref:System.Activities.CodeActivity%601> or <xref:System.Activities.NativeActivity%601>.  
   
 ## Using Expressions  
  Workflow designer uses <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> for all expressions in Visual Basic projects, and <xref:Microsoft.CSharp.Activities.CSharpValue%601> and <xref:Microsoft.CSharp.Activities.CSharpReference%601> for expressions in C# workflow projects.  
   
 > [!NOTE]
->  Support for C# expressions in workflow projects was introduced in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [C# Expressions](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+>  Support for C# expressions in workflow projects was introduced in [!INCLUDE [net_v45](../../../includes/net-v45-md.md)]. [!INCLUDE [crdefault](../../../includes/crdefault-md.md)] [C# Expressions](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
  Workflows produced by designer are saved in XAML, where expressions appear enclosed in square brackets, as in the following example.  
   
@@ -117,7 +117,7 @@ Sequence w = new Sequence
 ```  
   
 ## Extending Available Expressions with Custom Expression Activities  
- Expressions in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] are extensible allowing for additional expression activities to be created. The following example shows an activity that returns a sum of three integer values.  
+ Expressions in [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] are extensible allowing for additional expression activities to be created. The following example shows an activity that returns a sum of three integer values.  
   
 ```  
 using System;  
@@ -171,4 +171,4 @@ Sequence w = new Sequence
 };  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] using expressions in code, see [Authoring Workflows, Activities, and Expressions Using Imperative Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).
+ [!INCLUDE [crabout](../../../includes/crabout-md.md)] using expressions in code, see [Authoring Workflows, Activities, and Expressions Using Imperative Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).

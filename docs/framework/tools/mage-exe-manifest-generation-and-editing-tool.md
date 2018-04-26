@@ -21,13 +21,13 @@ ms.workload:
   - dotnet
 ---
 # Mage.exe (Manifest Generation and Editing Tool)
-The Manifest Generation and Editing Tool (Mage.exe) is a command-line tool that supports the creation and editing of application and deployment manifests. As a command-line tool, Mage.exe can be run from both batch scripts and other Windows-based applications, including [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications.  
+The Manifest Generation and Editing Tool (Mage.exe) is a command-line tool that supports the creation and editing of application and deployment manifests. As a command-line tool, Mage.exe can be run from both batch scripts and other Windows-based applications, including [!INCLUDE [vstecasp](../../../includes/vstecasp-md.md)] applications.  
   
  You can also use MageUI.exe, a graphical application, instead of Mage.exe. For more information, see [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
   
  This tool is automatically installed with Visual Studio. To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7). For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
- Two versions of Mage.exe and MageUI.exe are included as a component of the [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] setup. To see version information, run MageUI.exe, select **Help**, and select **About**. This documentation describes version 4.0.x.x of Mage.exe and MageUI.exe.  
+ Two versions of Mage.exe and MageUI.exe are included as a component of the [!INCLUDE [vs_dev10_long](../../../includes/vs-dev10-long-md.md)] setup. To see version information, run MageUI.exe, select **Help**, and select **About**. This documentation describes version 4.0.x.x of Mage.exe and MageUI.exe.  
   
  At the command prompt, type the following:  
   
@@ -111,7 +111,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
   
  Application manifests also support custom trust sections. This helps your application obey the security principle of requesting least permission, as you can configure the manifest to demand only those specific permissions that the application requires in order to execute. Mage.exe does not directly support adding a custom trust section. You can add one using a text editor, an XML parser, or the graphical tool MageUI.exe. For more information about how to use MageUI.exe to add custom trust sections, see [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
   
- New manifests that are created with version 4 of Mage.exe, which is included with [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)], target the [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. To target earlier versions of the .NET Framework, you must use an earlier version of Mage.exe. When adding or removing assemblies from an existing manifest, or re-signing an existing manifest, Mage.exe does not update the manifest to target the [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. The following tables show these features and restrictions.  
+ New manifests that are created with version 4 of Mage.exe, which is included with [!INCLUDE [vs_dev10_long](../../../includes/vs-dev10-long-md.md)], target the [!INCLUDE [net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. To target earlier versions of the .NET Framework, you must use an earlier version of Mage.exe. When adding or removing assemblies from an existing manifest, or re-signing an existing manifest, Mage.exe does not update the manifest to target the [!INCLUDE [net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. The following tables show these features and restrictions.  
   
 |Manifest version|Operation|Mage v2.0|Mage v4.0|  
 |----------------------|---------------|---------------|---------------|  
@@ -137,7 +137,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ||Add an assembly|Not supported|OK|  
 ||Remove an assembly|Not supported|OK|  
   
- Mage.exe creates new manifests that target the [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. ClickOnce applications that target the [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] can run on both the [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] and the full version of the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. If your application targets the full version of the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] and cannot run on the [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)], remove the client `<framework>` element by using a text editor and re-sign the manifest. The following is a sample `<framework>` element that targets the [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)].  
+ Mage.exe creates new manifests that target the [!INCLUDE [net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. ClickOnce applications that target the [!INCLUDE [net_client_v40_long](../../../includes/net-client-v40-long-md.md)] can run on both the [!INCLUDE [net_client_v40_long](../../../includes/net-client-v40-long-md.md)] and the full version of the [!INCLUDE [net_v40_short](../../../includes/net-v40-short-md.md)]. If your application targets the full version of the [!INCLUDE [net_v40_short](../../../includes/net-v40-short-md.md)] and cannot run on the [!INCLUDE [net_client_v40_long](../../../includes/net-client-v40-long-md.md)], remove the client `<framework>` element by using a text editor and re-sign the manifest. The following is a sample `<framework>` element that targets the [!INCLUDE [net_client_v40_long](../../../includes/net-client-v40-long-md.md)].  
   
 ```xml  
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />  

@@ -37,7 +37,7 @@ SET ( expression )
 SELECT VALUE DISTINCT c FROM c  
 ```  
   
- `SET` is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators. All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right. See [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) for precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.  
+ `SET` is one of the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators. All [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right. See [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) for precedence information for the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators.  
   
 ## Example  
  The following Entity SQL query uses the SET expression to convert a collection of objects into a set. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  

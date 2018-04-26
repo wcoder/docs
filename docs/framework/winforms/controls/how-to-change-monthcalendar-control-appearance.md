@@ -54,44 +54,44 @@ The Windows Forms <xref:System.Windows.Forms.MonthCalendar> control allows you t
   
 ### To display the current date at the bottom of the control  
   
--   Set the <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> property to `true`. The example below toggles between displaying and omitting today's date when the form is double-clicked.  
+- Set the <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> property to `true`. The example below toggles between displaying and omitting today's date when the form is double-clicked.  
   
-    ```vb  
-    Private Sub Form1_DoubleClick(ByVal sender As Object, _  
-    ByVal e As System.EventArgs) Handles MyBase.DoubleClick  
-       ' Toggle between True and False.  
-       MonthCalendar1.ShowToday = Not MonthCalendar1.ShowToday  
-    End Sub  
-    ```  
+  ```vb  
+  Private Sub Form1_DoubleClick(ByVal sender As Object, _  
+  ByVal e As System.EventArgs) Handles MyBase.DoubleClick  
+     ' Toggle between True and False.  
+     MonthCalendar1.ShowToday = Not MonthCalendar1.ShowToday  
+  End Sub  
+  ```  
   
-    ```csharp  
-    private void Form1_DoubleClick(object sender, System.EventArgs e)  
-    {  
-       // Toggle between True and False.  
-       monthCalendar1.ShowToday = !monthCalendar1.ShowToday;  
-    }  
-    ```  
+  ```csharp  
+  private void Form1_DoubleClick(object sender, System.EventArgs e)  
+  {  
+     // Toggle between True and False.  
+     monthCalendar1.ShowToday = !monthCalendar1.ShowToday;  
+  }  
+  ```  
   
-    ```cpp  
-    private:  
-       System::Void Form1_DoubleClick(System::Object ^  sender,  
-          System::EventArgs ^  e)  
-       {  
-          // Toggle between True and False.  
-          monthCalendar1->ShowToday = !monthCalendar1->ShowToday;  
-       }  
-    ```  
+  ```cpp  
+  private:  
+     System::Void Form1_DoubleClick(System::Object ^  sender,  
+        System::EventArgs ^  e)  
+     {  
+        // Toggle between True and False.  
+        monthCalendar1->ShowToday = !monthCalendar1->ShowToday;  
+     }  
+  ```  
   
-     (Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
+   (Visual C#, [!INCLUDE [vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
   
-    ```csharp  
-    this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  
-    ```  
+  ```csharp  
+  this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  
+  ```  
   
-    ```cpp  
-    this->DoubleClick += gcnew System::EventHandler(this,  
-       &Form1::Form1_DoubleClick);  
-    ```  
+  ```cpp  
+  this->DoubleClick += gcnew System::EventHandler(this,  
+     &Form1::Form1_DoubleClick);  
+  ```  
   
 ### To display week numbers  
   

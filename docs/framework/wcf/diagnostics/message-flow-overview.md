@@ -30,39 +30,39 @@ In a distributed system containing interconnected services, it is necessary to d
   
 ### To enable message flow tracing in the Getting Started tutorial  
   
-1.  Open Event Viewer by clicking **Start**, **Run**, and entering `eventvwr.exe`.  
+1. Open Event Viewer by clicking **Start**, **Run**, and entering `eventvwr.exe`.  
   
-2.  If you haven’t enabled analytic tracing, expand **Applications and Services Logs**, **Microsoft**, **Windows**, **Application Server-Applications**. Select **View**, **Show Analytic and Debug Logs**. Right-click **Analytic** and select **Enable Log**. Leave Event Viewer open so that traces can be viewed.  
+2. If you haven’t enabled analytic tracing, expand **Applications and Services Logs**, **Microsoft**, **Windows**, **Application Server-Applications**. Select **View**, **Show Analytic and Debug Logs**. Right-click **Analytic** and select **Enable Log**. Leave Event Viewer open so that traces can be viewed.  
   
-3.  Open the sample created in the [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Note that you must run [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] as an administrator so that the service can be created. If you have the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples installed, you can open the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which contains the completed project created in the tutorial.  
+3. Open the sample created in the [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)]. Note that you must run [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] as an administrator so that the service can be created. If you have the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] samples installed, you can open the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which contains the completed project created in the tutorial.  
   
-4.  Right-click the **Service** project and select **Add**, **New Item**. Select **Application Configuration File** and click **OK**.  
+4. Right-click the **Service** project and select **Add**, **New Item**. Select **Application Configuration File** and click **OK**.  
   
-5.  Add the following code to the App.Config file created in the previous step.  
+5. Add the following code to the App.Config file created in the previous step.  
   
-    ```xml  
-    <system.serviceModel>  
-      <diagnostics>  
-        <endToEndTracing propagateActivity="true" messageFlowTracing="true"/>  
-      </diagnostics>  
-    </system.serviceModel>  
-    ```  
+   ```xml  
+   <system.serviceModel>  
+     <diagnostics>  
+       <endToEndTracing propagateActivity="true" messageFlowTracing="true"/>  
+     </diagnostics>  
+   </system.serviceModel>  
+   ```  
   
-6.  Execute the server application without debugging by pressing CTRL+F5. Execute the client project by right-clicking the **Client** project and selecting **Debug**, **Start New Instance**.  
+6. Execute the server application without debugging by pressing CTRL+F5. Execute the client project by right-clicking the **Client** project and selecting **Debug**, **Start New Instance**.  
   
-7.  To trace the events from the client to the server, add the following to the application configuration file in the Client project.  
+7. To trace the events from the client to the server, add the following to the application configuration file in the Client project.  
   
-    ```xml  
-    <diagnostics>  
-      <endToEndTracing propagateActivity="true" messageFlowTracing="true"/>  
-    </diagnostics>  
-    ```  
+   ```xml  
+   <diagnostics>  
+     <endToEndTracing propagateActivity="true" messageFlowTracing="true"/>  
+   </diagnostics>  
+   ```  
   
-8.  In Program.cs in the client, add the following Using statement.  
+8. In Program.cs in the client, add the following Using statement.  
   
-    ```  
-    using System.Diagnostics;  
-    ```  
+   ```  
+   using System.Diagnostics;  
+   ```  
   
 9. In the Main method in the program.cs file in the client project, set the Trace GUID to be propagated in the event log.  
   

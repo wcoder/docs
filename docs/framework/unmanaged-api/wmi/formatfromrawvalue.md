@@ -27,7 +27,7 @@ ms.workload:
 # FormatFromRawValue function
 Converts one raw performance data value to the specified format, or two raw performance data values if the format conversion is time-based.   
   
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
 ## Syntax  
   
@@ -94,7 +94,7 @@ This function wraps a call to the [FormatFromRawValue](https://msdn.microsoft.co
   
  **Library:** PerfCounter.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

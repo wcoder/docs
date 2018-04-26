@@ -29,7 +29,7 @@ Use the <xref:System.Linq.Queryable.Except%2A> operator to return the set differ
  [!code-csharp[DLinqQueryExamples#41](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#41)]
  [!code-vb[DLinqQueryExamples#41](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#41)]  
   
- In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the <xref:System.Linq.Queryable.Except%2A> operation is well defined only on sets. The semantics for multisets is undefined.  
+ In [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the <xref:System.Linq.Queryable.Except%2A> operation is well defined only on sets. The semantics for multisets is undefined.  
   
 ## See Also  
  [Query Examples](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  

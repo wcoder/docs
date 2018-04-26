@@ -19,10 +19,10 @@ ms.workload:
 ---
 # &lt;add&gt; of &lt;issuerChannelBehaviors&gt;
 Adds an endpoint behavior to be used when communicating with an STS.  
-  
+
 > [!NOTE]
 >  If any endpoint behavior contains a [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) element, an exception will be thrown.  
-  
+
  \<system.ServiceModel>  
 \<behaviors>  
 endpointBehaviors section  
@@ -31,36 +31,37 @@ endpointBehaviors section
 \<issuedToken>  
 \<issuerChannelBehaviors> Element  
 \<add>  
-  
+
 ## Syntax  
-  
+
 ```xml  
 <add issuerAddress="string"  
      behaviorConfiguraton="string" />  
 ```  
-  
+
 ## Attributes and Elements  
  The following sections describe attributes, child elements, and parent elements  
-  
+
 ### Attributes  
-  
+
 |Attribute|Description|  
 |---------------|-----------------|  
 |issuerAddress|The URI of the security token issuer to communicate with.|  
 |behaviorConfiguration|The name of an endpoint behavior defined in the same configuration file.|  
-  
+
 ### Child Elements  
  None.  
-  
+
 ### Parent Elements  
-  
-|Element|Description|  
-|-------------|-----------------|  
-|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Contains a collection of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] client endpoint behaviors to be used when communicating with the specified Service Token Services.|  
-  
+
+
+|                                                           Element                                                           |                                                                                       Description                                                                                       |
+|-----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) | Contains a collection of [!INCLUDE [indigo1](../../../../../includes/indigo1-md.md)] client endpoint behaviors to be used when communicating with the specified Service Token Services. |
+
 ## Remarks  
- `issuerAddress` contains the URI of the Security Token Service that the client wants to communicate with. `behaviorConfiguration` points to an endpoint behavior that the application uses in the channels created by [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] to get the issued tokens from the Security Token Services.  
-  
+ `issuerAddress` contains the URI of the Security Token Service that the client wants to communicate with. `behaviorConfiguration` points to an endpoint behavior that the application uses in the channels created by [!INCLUDE [indigo1](../../../../../includes/indigo1-md.md)] to get the issued tokens from the Security Token Services.  
+
 ## See Also  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>  

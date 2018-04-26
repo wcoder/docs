@@ -25,7 +25,7 @@ ms.workload:
 The examples in this section show how to create a shadow effect for displayed text.  
   
 ## Example  
- The <xref:System.Windows.Media.Effects.DropShadowEffect> object allows you to create a variety of drop shadow effects for [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] objects. The following example shows a drop shadow effect applied to text. In this case, the shadow is a soft shadow, which means the shadow color blurs.  
+ The <xref:System.Windows.Media.Effects.DropShadowEffect> object allows you to create a variety of drop shadow effects for [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] objects. The following example shows a drop shadow effect applied to text. In this case, the shadow is a soft shadow, which means the shadow color blurs.  
   
  ![Text shadow with Softness &#61; 0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
 Example of text with a soft shadow  
@@ -35,7 +35,7 @@ Example of text with a soft shadow
  [!code-xaml[TextShadowSnippets#TextShadowSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet1)]  
   
 > [!NOTE]
->  These shadow effects do not go through the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] text rendering pipeline. As a result, ClearType is disabled when using these effects.  
+>  These shadow effects do not go through the [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] text rendering pipeline. As a result, ClearType is disabled when using these effects.  
   
  The following example shows a hard drop shadow effect applied to text. In this case, the shadow is not blurred.  
   

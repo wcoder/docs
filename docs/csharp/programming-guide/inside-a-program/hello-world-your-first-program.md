@@ -21,29 +21,29 @@ The following procedure creates a C# version of the traditional "Hello World!" p
   
  For more examples of introductory concepts, see [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE [note_settings_general](~/includes/note-settings-general-md.md)]
   
 ### To create and run a console application  
   
-1.  Start Visual Studio.  
+1. Start Visual Studio.  
   
-2.  On the menu bar, choose **File**, **New**, **Project**.  
+2. On the menu bar, choose **File**, **New**, **Project**.  
   
-     The **New Project** dialog box opens.  
+    The **New Project** dialog box opens.  
   
-3.  Expand **Installed**, expand **Templates**, expand **Visual C#**, and then choose **Console Application**.  
+3. Expand **Installed**, expand **Templates**, expand **Visual C#**, and then choose **Console Application**.  
   
-4.  In the **Name** box, specify a name for your project, and then choose the **OK** button.  
+4. In the **Name** box, specify a name for your project, and then choose the **OK** button.  
   
-     The new project appears in **Solution Explorer**.  
+    The new project appears in **Solution Explorer**.  
   
-5.  If Program.cs isn't open in the **Code Editor**, open the shortcut menu for **Program.cs** in **Solution Explorer**, and then choose **View Code**.  
+5. If Program.cs isn't open in the **Code Editor**, open the shortcut menu for **Program.cs** in **Solution Explorer**, and then choose **View Code**.  
   
-6.  Replace the contents of Program.cs with the following code.  
+6. Replace the contents of Program.cs with the following code.  
   
-     [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
+    [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
-7.  Choose the F5 key to run the project. A Command Prompt window appears that contains the line `Hello World!`  
+7. Choose the F5 key to run the project. A Command Prompt window appears that contains the line `Hello World!`  
   
  Next, the important parts of this program are examined.  
   
@@ -61,21 +61,21 @@ The following procedure creates a C# version of the traditional "Hello World!" p
   
  The `Main` method is a [static](../../../csharp/language-reference/keywords/static.md) method that resides inside a class or a struct. In the previous "Hello World!" example, it resides in a class named `Hello`. You can declare the `Main` method in one of the following ways:  
   
--   It can return `void`.  
+- It can return `void`.  
   
-     [!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
+   [!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
   
--   It can also return an integer.  
+- It can also return an integer.  
   
-     [!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
+   [!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
   
--   With either of the return types, it can take arguments.  
+- With either of the return types, it can take arguments.  
   
-     [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
+   [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
-     -or-  
+   -or-  
   
-     [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
+   [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
  The parameter of the `Main` method, `args`, is a `string` array that contains the command-line arguments used to invoke the program. Unlike in C++, the array does not include the name of the executable (exe) file.  
   

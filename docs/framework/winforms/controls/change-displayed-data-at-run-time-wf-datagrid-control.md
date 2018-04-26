@@ -33,73 +33,73 @@ ms.workload:
   
 ### To change data programmatically  
   
-1.  Specify the desired table from the <xref:System.Data.DataSet> object and the desired row and field from the table and set the cell equal to the new value.  
+1. Specify the desired table from the <xref:System.Data.DataSet> object and the desired row and field from the table and set the cell equal to the new value.  
   
-    > [!NOTE]
-    >  To specify the first table of the <xref:System.Data.DataSet> or the first row of the table, use 0.  
+   > [!NOTE]
+   >  To specify the first table of the <xref:System.Data.DataSet> or the first row of the table, use 0.  
   
-     The following example shows how to change the second entry of the first row of the first table of a dataset by clicking `Button1`. The <xref:System.Data.DataSet> (`ds`) and Tables (`0` and `1`) were previously created.  
+    The following example shows how to change the second entry of the first row of the first table of a dataset by clicking `Button1`. The <xref:System.Data.DataSet> (`ds`) and Tables (`0` and `1`) were previously created.  
   
-    ```vb  
-    Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
-       ds.tables(0).rows(0)(1) = "NewEntry"  
-    End Sub  
-    ```  
+   ```vb  
+   Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
+      ds.tables(0).rows(0)(1) = "NewEntry"  
+   End Sub  
+   ```  
   
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)  
-    {  
-       ds.Tables[0].Rows[0][1]="NewEntry";  
-    }  
-    ```  
+   ```csharp  
+   private void button1_Click(object sender, System.EventArgs e)  
+   {  
+      ds.Tables[0].Rows[0][1]="NewEntry";  
+   }  
+   ```  
   
-    ```cpp  
-    private:   
-       void button1_Click(System::Object^ sender, System::EventArgs^ e)  
-       {  
-          dataSet1->Tables[0]->Rows[0][1] = "NewEntry";  
-       }  
-    ```  
+   ```cpp  
+   private:   
+      void button1_Click(System::Object^ sender, System::EventArgs^ e)  
+      {  
+         dataSet1->Tables[0]->Rows[0][1] = "NewEntry";  
+      }  
+   ```  
   
-     (Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
+    (Visual C#, [!INCLUDE [vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
   
-    ```csharp  
-    this.button1.Click += new System.EventHandler(this.button1_Click);  
-    ```  
+   ```csharp  
+   this.button1.Click += new System.EventHandler(this.button1_Click);  
+   ```  
   
-    ```cpp  
-    this->button1->Click +=  
-       gcnew System::EventHandler(this, &Form1::button1_Click);  
-    ```  
+   ```cpp  
+   this->button1->Click +=  
+      gcnew System::EventHandler(this, &Form1::button1_Click);  
+   ```  
   
-     At run time you can use the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method to bind the <xref:System.Windows.Forms.DataGrid> control to a different data source. For example, you may have several [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] data controls, each connected to a different database.  
+    At run time you can use the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method to bind the <xref:System.Windows.Forms.DataGrid> control to a different data source. For example, you may have several [!INCLUDE [vstecado](../../../../includes/vstecado-md.md)] data controls, each connected to a different database.  
   
 ### To change the DataSource programmatically  
   
-1.  Set the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method to the name of the data source and table you want to bind to.  
+1. Set the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method to the name of the data source and table you want to bind to.  
   
-     The following example shows how to change the date source using the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method to an [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] data control (adoPubsAuthors) that is connected to the Authors table in the Pubs database.  
+    The following example shows how to change the date source using the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method to an [!INCLUDE [vstecado](../../../../includes/vstecado-md.md)] data control (adoPubsAuthors) that is connected to the Authors table in the Pubs database.  
   
-    ```vb  
-    Private Sub ResetSource()  
-       DataGrid1.SetDataBinding(adoPubsAuthors, "Authors")  
-    End Sub  
-    ```  
+   ```vb  
+   Private Sub ResetSource()  
+      DataGrid1.SetDataBinding(adoPubsAuthors, "Authors")  
+   End Sub  
+   ```  
   
-    ```csharp  
-    private void ResetSource()  
-    {  
-       DataGrid1.SetDataBinding(adoPubsAuthors, "Authors");  
-    }  
-    ```  
+   ```csharp  
+   private void ResetSource()  
+   {  
+      DataGrid1.SetDataBinding(adoPubsAuthors, "Authors");  
+   }  
+   ```  
   
-    ```cpp  
-    private:  
-       void ResetSource()  
-       {  
-          dataGrid1->SetDataBinding(adoPubsAuthors, "Authors");  
-       }  
-    ```  
+   ```cpp  
+   private:  
+      void ResetSource()  
+      {  
+         dataGrid1->SetDataBinding(adoPubsAuthors, "Authors");  
+      }  
+   ```  
   
 ## See Also  
  [ADO.NET DataSets](../../../../docs/framework/data/adonet/ado-net-datasets.md)  

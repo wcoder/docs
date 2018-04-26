@@ -1,3 +1,4 @@
+
 ---
 title: Securing .NET Microservices and Web Applications
 description: .NET Microservices Architecture for Containerized .NET Applications | Securing .NET Microservices and Web Applications
@@ -250,6 +251,6 @@ The JWT bearer authentication middleware can also support more advanced scenario
     [*https://identityserver4.readthedocs.io/en/release/*](https://identityserver4.readthedocs.io/en/release/)
 
 
->[!div class="step-by-step"]
-[Previous] (../implement-resilient-applications/monitor-app-health.md)
-[Next] (authorization-net-microservices-web-applications.md)
+> [!div class="step-by-step"]
+> [Previous](../implement-resilient-applications/monitor-app-health.md)
+> [Next](authorization-net-microservices-web-applications.md)

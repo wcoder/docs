@@ -48,7 +48,7 @@ You can provide a standard menu for your forms with the <xref:System.Windows.For
 ## Prerequisites  
  In order to complete this walkthrough, you will need:  
   
--   Sufficient permissions to be able to create and run Windows Forms application projects on the computer where [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] is installed.  
+- Sufficient permissions to be able to create and run Windows Forms application projects on the computer where [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)] is installed.  
   
 ## Creating the Project  
  The first step is to create the project and set up the form.  
@@ -90,23 +90,23 @@ You can provide a standard menu for your forms with the <xref:System.Windows.For
   
 #### To handle item selection  
   
-1.  Click the **File** menu item that you created in the Creating a Standard Menu section.  
+1. Click the **File** menu item that you created in the Creating a Standard Menu section.  
   
-2.  In the **Properties** window, click **Events**.  
+2. In the **Properties** window, click **Events**.  
   
-3.  Double-click the <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> event.  
+3. Double-click the <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> event.  
   
-     The Windows Forms Designer generates an event handler for the <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> event.  
+    The Windows Forms Designer generates an event handler for the <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> event.  
   
-4.  Insert the following code into the event handler.  
+4. Insert the following code into the event handler.  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
+    [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
+    [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  Insert the `UpdateStatus` utility method definition into the form.  
+5. Insert the `UpdateStatus` utility method definition into the form.  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
+    [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
+    [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
   
 ## Checkpoint  
   

@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # Activity Authoring Options in WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] provides several options for creating custom activities. The correct method to use for authoring a given activity depends on what run-time features are required.  
+[!INCLUDE [netfx_current_long](../../../includes/netfx-current-long-md.md)] provides several options for creating custom activities. The correct method to use for authoring a given activity depends on what run-time features are required.  
   
 ## Deciding Which Base Activity Class to Use for Authoring Custom Activities  
  The following table lists the features available in the custom activity base classes.  
@@ -29,7 +29,7 @@ ms.workload:
 |<xref:System.Activities.DynamicActivity>|Provides a DOM-like approach to constructing activities that interfaces with the WF designer and the run-time machinery through <!--zz <xref:System.ComponentModel.IcustomTypeDescriptor>--> `IcustomTypeDescriptor`, allowing new activities to be created without defining new types.|  
   
 ## Authoring Activities using Activity  
- Activities that derive from <xref:System.Activities.Activity> compose functionality by assembling other existing activities. These activities can be existing custom activities and activities from the [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] activity library. Assembling these activities is the most basic way to create custom functionality. This approach is most typically taken when using a visual design environment for authoring workflows.  
+ Activities that derive from <xref:System.Activities.Activity> compose functionality by assembling other existing activities. These activities can be existing custom activities and activities from the [!INCLUDE [netfx_current_long](../../../includes/netfx-current-long-md.md)] activity library. Assembling these activities is the most basic way to create custom functionality. This approach is most typically taken when using a visual design environment for authoring workflows.  
   
 ## Authoring Activities using CodeActivity or AsyncCodeActivity  
  Activities that derive from <xref:System.Activities.CodeActivity> or <xref:System.Activities.AsyncCodeActivity> can implement imperative functionality by overriding the <xref:System.Activities.CodeActivity%601.Execute%2A> method with custom imperative code. The custom code is executed when the activity is executed by the runtime. While activities created in this way have access to custom functionality, they do not have access to all of the features of the runtime, such as full access to the execution environment, the ability to schedule child activities, bookmark creation, or support for a Cancel or Abort method. When a <xref:System.Activities.CodeActivity> executes, it has access to a reduced version of the execution environment (through the <xref:System.Activities.CodeActivityContext> or <xref:System.Activities.AsyncCodeActivityContext> class). Activities created using <xref:System.Activities.CodeActivity> have access to argument and variable resolution, extensions, and tracking. Asynchronous activity scheduling can be done using <xref:System.Activities.AsyncCodeActivity>.  

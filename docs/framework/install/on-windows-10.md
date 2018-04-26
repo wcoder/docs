@@ -27,7 +27,7 @@ The .NET Framework 4.7.1 is included with:
 * [Windows Server, version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
 
 > [!div class="button"]
-[Download .NET Framework 4.7.1](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)
+> [Download .NET Framework 4.7.1](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)
 
 The [.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) can be used to run applications built for the .NET Framework 4.0 through 4.7.1.
 

@@ -35,43 +35,43 @@ This sample demonstrates how to use a durable delay, which is a delay that persi
   
 #### To use this sample  
   
-1.  Set up the persistence database.  
+1. Set up the persistence database.  
   
-    1.  Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.  
+   1. Open a [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] command prompt.  
   
-    2.  Navigate to the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] directory (C:\Windows\Microsoft.NET\Framework\v4.X\\).  
+   2. Navigate to the [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)] directory (C:\Windows\Microsoft.NET\Framework\v4.X\\).  
   
-    3.  Edit the WorkflowManagementService.exe.config file and add the following connection string inside the <`database`> element.  
+   3. Edit the WorkflowManagementService.exe.config file and add the following connection string inside the <`database`> element.  
   
-        ```xml  
-        <database connectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=DefaultSampleStore;Integrated Security=True;Asynchronous Processing=True" />  
-        ```  
+      ```xml  
+      <database connectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=DefaultSampleStore;Integrated Security=True;Asynchronous Processing=True" />  
+      ```  
   
-    4.  Navigate to the DurableDelay\CS directory.  
+   4. Navigate to the DurableDelay\CS directory.  
   
-    5.  Run Setup.cmd.  
+   5. Run Setup.cmd.  
   
-2.  Run [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] using elevated permissions by right-clicking the [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] icon and selecting **Run as administrator**.  
+2. Run [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] using elevated permissions by right-clicking the [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] icon and selecting **Run as administrator**.  
   
-3.  Open the Delay.sln solution file.  
+3. Open the Delay.sln solution file.  
   
-4.  Press CTRL+SHIFT+B to build the solution.  
+4. Press CTRL+SHIFT+B to build the solution.  
   
-5.  Press CTRL+F5 to run the solution.  
+5. Press CTRL+F5 to run the solution.  
   
 #### To uninstall this sample  
   
-1.  Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.  
+1. Open a [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] command prompt.  
   
-2.  Navigate to the DurableDelay\CS directory.  
+2. Navigate to the DurableDelay\CS directory.  
   
-3.  Run Cleanup.cmd.  
+3. Run Cleanup.cmd.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelay`

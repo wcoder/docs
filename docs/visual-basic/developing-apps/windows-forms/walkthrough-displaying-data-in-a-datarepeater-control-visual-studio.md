@@ -35,7 +35,7 @@ This walkthrough provides a basic start-to-finish scenario for displaying bound 
   
 -   Adding data-bound controls.  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE [note_settings_general](~/includes/note-settings-general-md.md)]
   
 ## Creating a DataRepeater Solution  
  In the first step, you create a project and solution.  
@@ -146,71 +146,71 @@ This walkthrough provides a basic start-to-finish scenario for displaying bound 
   
 #### To change the appearance of the control  
   
-1.  In the Windows Forms Designer, select the main (lower) region of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
+1. In the Windows Forms Designer, select the main (lower) region of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
   
-2.  In the Properties window, set the `BackColor` property to white.  
+2. In the Properties window, set the `BackColor` property to white.  
   
-3.  Double-click the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> to open the Code Editor.  
+3. Double-click the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> to open the Code Editor.  
   
-4.  In the Code Editor, in the Event drop-down list, click **DrawItem**.  
+4. In the Code Editor, in the Event drop-down list, click **DrawItem**.  
   
-5.  In the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> event handler, add the following code to alternate the `BackColor`:  
+5. In the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> event handler, add the following code to alternate the `BackColor`:  
   
-     [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.cs)]
-     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.vb)]  
+    [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.cs)]
+    [!code-vb[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.vb)]  
   
-6.  In the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> event handler, add the following code to change the `ForeColor` of a label depending on a condition:  
+6. In the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> event handler, add the following code to change the `ForeColor` of a label depending on a condition:  
   
-     [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.cs)]
-     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.vb)]  
+    [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.cs)]
+    [!code-vb[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.vb)]  
   
-7.  Press F5 to run the application and see the customizations.  
+7. Press F5 to run the application and see the customizations.  
   
 ## Preventing Users from Adding or Deleting Records  
  In this optional step, you add code that prevents users from adding or deleting records in the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
   
 #### To prevent users from adding and deleting records  
   
-1.  In the Windows Forms Designer, double-click the form to open the Code Editor.  
+1. In the Windows Forms Designer, double-click the form to open the Code Editor.  
   
-2.  Add the following code to the `Form_Load` event:  
+2. Add the following code to the `Form_Load` event:  
   
-     [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.cs)]
-     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.vb)]  
+    [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.cs)]
+    [!code-vb[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.vb)]  
   
-3.  In the Class Name drop-down list, click **BindingNavigatorDeleteItem**. In the Method Name drop-down list, click **EnabledChanged**.  
+3. In the Class Name drop-down list, click **BindingNavigatorDeleteItem**. In the Method Name drop-down list, click **EnabledChanged**.  
   
-4.  Add the following code to the `BindingNavigatorDeleteItem_EnabledChanged` event handler:  
+4. Add the following code to the `BindingNavigatorDeleteItem_EnabledChanged` event handler:  
   
-     [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_4.cs)]
-     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_4.vb)]  
+    [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_4.cs)]
+    [!code-vb[VbPowerPacksDataRepeaterWalkthrough#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_4.vb)]  
   
-    > [!NOTE]
-    >  This step is necessary because the <xref:System.Windows.Forms.BindingSource> will enable the **DeleteItem** button every time that the current record changes.  
+   > [!NOTE]
+   >  This step is necessary because the <xref:System.Windows.Forms.BindingSource> will enable the **DeleteItem** button every time that the current record changes.  
   
-5.  Press F5 to run the application. Notice that the **DeleteItem** button is disabled and that you cannot delete items by pressing the DELETE key.  
+5. Press F5 to run the application. Notice that the **DeleteItem** button is disabled and that you cannot delete items by pressing the DELETE key.  
   
 ## Adding Search Capability to the DataRepeater Control  
  In this optional step, you implement the capability to search for a value in the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control. If the search string is found, the control selects the item that contains the value and scrolls the item into view.  
   
 #### To add search capability  
   
-1.  Drag a <xref:System.Windows.Forms.TextBox> control from the **Toolbox** onto the form that contains the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
+1. Drag a <xref:System.Windows.Forms.TextBox> control from the **Toolbox** onto the form that contains the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
   
-     Position it under the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
+    Position it under the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
   
-2.  In the Properties window, change the **Name** property to **SearchTextBox**.  
+2. In the Properties window, change the **Name** property to **SearchTextBox**.  
   
-3.  Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto the form that contains the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control. Position it under the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
+3. Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto the form that contains the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control. Position it under the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
   
-4.  In the Properties window, change the **Name** property to **SearchButton**. Change the **Text** property to **Search**.  
+4. In the Properties window, change the **Name** property to **SearchButton**. Change the **Text** property to **Search**.  
   
-5.  Double-click the <xref:System.Windows.Forms.Button> control to open the Code Editor, and add the following code to the `SearchButton_Click` event handler.  
+5. Double-click the <xref:System.Windows.Forms.Button> control to open the Code Editor, and add the following code to the `SearchButton_Click` event handler.  
   
-     [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.cs)]
-     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.vb)]  
+    [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.cs)]
+    [!code-vb[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.vb)]  
   
-6.  Press F5 to run the application. Type a customer ID in **SearchTextBox** and click the **Search** button.  
+6. Press F5 to run the application. Type a customer ID in **SearchTextBox** and click the **Search** button.  
   
 ## Adding a Master and Detail Table to the DataRepeater  
  In this optional step, you add a second <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control to display related orders for each customer.  

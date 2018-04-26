@@ -60,7 +60,7 @@ HRESULT GetExceptionThreadID(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [v451_update](../../../../includes/v451-update-md.md)]  
   
 ## See Also  
  [ICLRDataTarget3 Interface](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  

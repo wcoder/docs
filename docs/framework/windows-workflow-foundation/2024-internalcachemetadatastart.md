@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 2024 - InternalCacheMetadataStart
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|2024|  
 |Keywords|WFRuntime|  
 |Level|Verbose|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates the start of InternalCacheMetadata on an activity.  
-  
+
 ## Message  
  InternalCacheMetadata started on activity '%1'.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|DisplayName|xs:string|The display name of the activity.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|  DisplayName   |   xs:string    |              The display name of the activity.               |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

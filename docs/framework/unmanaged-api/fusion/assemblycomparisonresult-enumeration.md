@@ -75,7 +75,7 @@ typedef enum _tagAssemblyComparisonResult {
   
  **Library:** Included as a resource in MsCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  [CompareAssemblyIdentity Function](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  

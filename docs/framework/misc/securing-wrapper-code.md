@@ -23,7 +23,7 @@ ms.workload:
   - "dotnet"
 ---
 # Securing Wrapper Code
-[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
+[!INCLUDE [net_security_note](../../../includes/net-security-note-md.md)]
   
  Wrapper code, especially where the wrapper has higher trust than code that uses it, can open a unique set of security weaknesses. Anything done on behalf of a caller, where the caller's limited permissions are not included in the appropriate security check, is a potential weakness to be exploited.  
   
@@ -77,12 +77,12 @@ ms.workload:
   
  Declarative security offers the following security checks:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> specifies the code access security stack walk. All callers on the stack must have the specified permission or identity to pass. **Demand** occurs on every call because the stack might contain different callers. If you call a method repeatedly, this security check occurs each time. **Demand** is good protection against luring attacks; unauthorized code trying to get through it will be detected.  
+- <xref:System.Security.Permissions.SecurityAction.Demand> specifies the code access security stack walk. All callers on the stack must have the specified permission or identity to pass. **Demand** occurs on every call because the stack might contain different callers. If you call a method repeatedly, this security check occurs each time. **Demand** is good protection against luring attacks; unauthorized code trying to get through it will be detected.  
   
--   [LinkDemand](../../../docs/framework/misc/link-demands.md) happens at just-in-time (JIT) compilation time and checks only the immediate caller. This security check does not check the caller's caller. Once this check passes, there is no additional security overhead no matter how many times the caller might call. However, there is also no protection from luring attacks. With **LinkDemand**, any code that passes the test and can reference your code can potentially break security by allowing malicious code to call using the authorized code. Therefore, do not use **LinkDemand** unless all the possible weaknesses can be thoroughly avoided.  
+- [LinkDemand](../../../docs/framework/misc/link-demands.md) happens at just-in-time (JIT) compilation time and checks only the immediate caller. This security check does not check the caller's caller. Once this check passes, there is no additional security overhead no matter how many times the caller might call. However, there is also no protection from luring attacks. With **LinkDemand**, any code that passes the test and can reference your code can potentially break security by allowing malicious code to call using the authorized code. Therefore, do not use **LinkDemand** unless all the possible weaknesses can be thoroughly avoided.  
   
-    > [!NOTE]
-    >  In the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], link demands have been replaced by the <xref:System.Security.SecurityCriticalAttribute> attribute in <xref:System.Security.SecurityRuleSet.Level2> assemblies. The <xref:System.Security.SecurityCriticalAttribute> is equivalent to a link demand for full trust; however, it also affects inheritance rules. For more information about this change, see [Security-Transparent Code, Level 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+  > [!NOTE]
+  >  In the [!INCLUDE [net_v40_long](../../../includes/net-v40-long-md.md)], link demands have been replaced by the <xref:System.Security.SecurityCriticalAttribute> attribute in <xref:System.Security.SecurityRuleSet.Level2> assemblies. The <xref:System.Security.SecurityCriticalAttribute> is equivalent to a link demand for full trust; however, it also affects inheritance rules. For more information about this change, see [Security-Transparent Code, Level 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
  The extra precautions required when using **LinkDemand** must be programmed individually; the security system can help with enforcement. Any mistake opens a security weakness. All authorized code that uses your code must be responsible for implementing additional security by doing the following:  
   

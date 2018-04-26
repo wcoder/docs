@@ -76,7 +76,7 @@ HRESULT GetReturnValueForILOffset(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## See Also  
  [GetReturnValueLiveOffset Method](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)  

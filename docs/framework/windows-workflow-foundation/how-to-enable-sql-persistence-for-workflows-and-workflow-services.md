@@ -21,22 +21,22 @@ ms.workload:
 # How to: Enable SQL Persistence for Workflows and Workflow Services
 This topic describes how to configure the SQL Workflow Instance Store feature to enable persistence for your workflows and workflow services both programmatically and by using a configuration file.  
   
- Windows Server App Fabric simplifies the process of configuring persistence. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [App Fabric Persistence Configuration](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ Windows Server App Fabric simplifies the process of configuring persistence. [!INCLUDE [crdefault](../../../includes/crdefault-md.md)] [App Fabric Persistence Configuration](http://go.microsoft.com/fwlink/?LinkId=201204)  
   
- Before using the SQL Workflow Instance Store feature, create a database that the feature uses to persist workflow instances. The [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] set-up program copies SQL script files associated with the SQL Workflow Instance Store feature to the %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN folder. Run these script files against a SQL Server 2005 or SQL Server 2008 database that you want the SQL Workflow Instance Store to use to persist workflow instances. Run the SqlWorkflowInstanceStoreSchema.sql file first and then run the SqlWorkflowInstanceStoreLogic.sql file.  
+ Before using the SQL Workflow Instance Store feature, create a database that the feature uses to persist workflow instances. The [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] set-up program copies SQL script files associated with the SQL Workflow Instance Store feature to the %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN folder. Run these script files against a SQL Server 2005 or SQL Server 2008 database that you want the SQL Workflow Instance Store to use to persist workflow instances. Run the SqlWorkflowInstanceStoreSchema.sql file first and then run the SqlWorkflowInstanceStoreLogic.sql file.  
   
 > [!NOTE]
 >  To clean up the persistence database to have a fresh database, run the scripts in %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN in the following order.  
->   
->  1.  SqlWorkflowInstanceStoreSchema.sql  
-> 2.  SqlWorkflowInstanceStoreLogic.sql  
+> 
+> 1. SqlWorkflowInstanceStoreSchema.sql  
+>    2.  SqlWorkflowInstanceStoreLogic.sql  
   
 > [!IMPORTANT]
 >  If you do not create a persistence database, the SQL Workflow Instance Store feature throws an exception similar to the following one when a host tries to persist workflows.  
 >   
 >  System.Data.SqlClient.SqlException: Could not find stored procedure 'System.Activities.DurableInstancing.CreateLockOwner'  
   
- The following sections describe how to enable persistence for workflows and workflow services using the SQL Workflow Instance Store. [!INCLUDE[crabout](../../../includes/crabout-md.md)] properties of the SQL Workflow Instance Store, see [Properties of SQL Workflow Instance Store](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ The following sections describe how to enable persistence for workflows and workflow services using the SQL Workflow Instance Store. [!INCLUDE [crabout](../../../includes/crabout-md.md)] properties of the SQL Workflow Instance Store, see [Properties of SQL Workflow Instance Store](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## Enabling Persistence for Self-Hosted Workflows that use WorkflowApplication  
  You can enable persistence for self-hosted workflows that use <xref:System.Activities.WorkflowApplication> programmatically by using the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> object model. The following procedure contains steps to do this.  
@@ -162,7 +162,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 >  It is recommended that you do not store sensitive information such as user names and passwords in the Web.config file. If you do store sensitive information in the Web.config file, you should secure access to the Web.config file by using file system Access Control Lists (ACLs). In addition, you can also secure the configuration values within a configuration file as mentioned in [Encrypting Configuration Information Using Protected Configuration](http://go.microsoft.com/fwlink/?LinkId=178419).  
   
 ### Machine.config Elements Related to the SQL Workflow Instance Store Feature  
- The [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] installation adds the following elements related to the SQL Workflow Instance Store feature to the Machine.config file:  
+ The [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] installation adds the following elements related to the SQL Workflow Instance Store feature to the Machine.config file:  
   
 -   Adds the following behavior extension element to the Machine.config file so that you can use the <`sqlWorkflowInstanceStore`> service behavior element in the configuration file to configure persistence for your services.  
   

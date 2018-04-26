@@ -18,10 +18,10 @@ ms.workload:
   - "dotnet"
 ---
 # Query Examples
-This section provides Visual Basic and C# examples of typical [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries. Developers using Visual Studio can find many more examples in a sample solution available in the Samples section. For more information, see [Samples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+This section provides Visual Basic and C# examples of typical [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries. Developers using Visual Studio can find many more examples in a sample solution available in the Samples section. For more information, see [Samples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
->  *db* is often used in code examples in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation. *db* is assumed to be an instance of a *Northwind* class, which inherits from <xref:System.Data.Linq.DataContext>.  
+>  *db* is often used in code examples in [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation. *db* is assumed to be an instance of a *Northwind* class, which inherits from <xref:System.Data.Linq.DataContext>.  
   
 ## In This Section  
  [Aggregate Queries](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -77,7 +77,7 @@ This section provides Visual Basic and C# examples of typical [!INCLUDE[vbtecdli
  Explains the concept of standard query operators.  
   
  [Query Concepts](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- Explains how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uses concepts that apply to queries.  
+ Explains how [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uses concepts that apply to queries.  
   
  [Programming Guide](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- Provides a portal to topics that explain programming concepts related to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
+ Provides a portal to topics that explain programming concepts related to [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].

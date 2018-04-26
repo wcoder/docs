@@ -21,7 +21,7 @@ ms.workload:
   - "dotnetcore"
 ---
 # Migrating From the XslTransform Class
-The XSLT architecture was redesigned in the [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] release. The <xref:System.Xml.Xsl.XslTransform> class has been replaced by the <xref:System.Xml.Xsl.XslCompiledTransform> class.  
+The XSLT architecture was redesigned in the [!INCLUDE [vsprvslong](../../../../includes/vsprvslong-md.md)] release. The <xref:System.Xml.Xsl.XslTransform> class has been replaced by the <xref:System.Xml.Xsl.XslCompiledTransform> class.  
   
  The following sections describe some of the main differences between the <xref:System.Xml.Xsl.XslCompiledTransform> and the <xref:System.Xml.Xsl.XslTransform> classes.  
   
@@ -68,7 +68,7 @@ writer.Close();
 ```  
   
 ### Debug Option  
- The <xref:System.Xml.Xsl.XslCompiledTransform> class can generate debug information, which enables you to debug the style sheet with the Microsoft [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Debugger. See <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29> for more information.  
+ The <xref:System.Xml.Xsl.XslCompiledTransform> class can generate debug information, which enables you to debug the style sheet with the Microsoft [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)] Debugger. See <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29> for more information.  
   
 ## Behavioral Differences  
   

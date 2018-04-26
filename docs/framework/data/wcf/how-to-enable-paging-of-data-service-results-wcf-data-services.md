@@ -23,7 +23,7 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Enable Paging of Data Service Results (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enables you to limit the number of entities returned by a data service query. Page limits are defined in the method that is called when the service is initialized and can be set separately for each entity set.  
+[!INCLUDE [ssAstoria](../../../../includes/ssastoria-md.md)] enables you to limit the number of entities returned by a data service query. Page limits are defined in the method that is called when the service is initialized and can be set separately for each entity set.  
   
  When paging is enabled, the final entry in the feed contains a link to the next page of data. For more information, see [Configuring the Data Service](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
@@ -31,10 +31,10 @@ ms.workload:
   
 ### How to enable paging of returned Customers and Orders entity sets  
   
--   In the code for the data service, replace the placeholder code in the `InitializeService` function with the following:  
+- In the code for the data service, replace the placeholder code in the `InitializeService` function with the following:  
   
-     [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind.svc.cs#dataserviceconfigpaging)]
-     [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
+   [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind.svc.cs#dataserviceconfigpaging)]
+   [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
 ## See Also  
  [Loading Deferred Content](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  

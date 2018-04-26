@@ -65,7 +65,7 @@ HRESULT GetMethodProps(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## See Also  
  [GetTypeProps Method](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)  

@@ -22,11 +22,11 @@ The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be
   
 ### To append to a text file  
   
--   Use the `WriteAllText` method, specifying the target file and string to be appended and setting the `append` parameter to `True`.  
+- Use the `WriteAllText` method, specifying the target file and string to be appended and setting the `append` parameter to `True`.  
   
-     This example writes the string `"This is a test string."` to the file named `Testfile.txt`.  
+   This example writes the string `"This is a test string."` to the file named `Testfile.txt`.  
   
-     [!code-vb[VbFileIOWrite#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-append-to-text-files_1.vb)]  
+   [!code-vb[VbFileIOWrite#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-append-to-text-files_1.vb)]  
   
 ## Robust Programming  
  The following conditions may cause an exception:  

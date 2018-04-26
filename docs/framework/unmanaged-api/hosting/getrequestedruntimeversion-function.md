@@ -33,7 +33,7 @@ ms.workload:
 # GetRequestedRuntimeVersion Function
 Gets the version number of the common language runtime (CLR) requested by the specified application. If that version is not installed, gets the most recent version that is installed before the requested version.  
   
- This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ This function has been deprecated in the [!INCLUDE [net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## Syntax  
   
@@ -75,7 +75,7 @@ HRESULT GetRequestedRuntimeVersion (
   
  **Library:** MSCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## See Also  
  [GetRequestedRuntimeInfo Function](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  

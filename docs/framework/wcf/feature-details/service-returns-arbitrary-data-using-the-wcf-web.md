@@ -18,50 +18,50 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Create a Service That Returns Arbitrary Data Using The WCF Web HTTP Programming Model
-Sometimes developers must have full control of how data is returned from a service operation. This is the case when a service operation must return data in a format not supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. This topic discusses using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP Programming Model to create such a service. This service has one operation that returns a stream.  
+Sometimes developers must have full control of how data is returned from a service operation. This is the case when a service operation must return data in a format not supported by [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)]. This topic discusses using the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] WEB HTTP Programming Model to create such a service. This service has one operation that returns a stream.  
   
 ### To implement the service contract  
   
-1.  Define the service contract. The contract is called `IImageServer` and has one method called `GetImage` that returns a <xref:System.IO.Stream>.  
+1. Define the service contract. The contract is called `IImageServer` and has one method called `GetImage` that returns a <xref:System.IO.Stream>.  
   
-    ```  
-    [ServiceContract]  
-        public interface IImageServer  
-        {  
-            [WebGet]  
-            Stream GetImage(int width, int height);  
-        }  
-    ```  
-  
-     Because the method returns a <xref:System.IO.Stream>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assumes that the operation has complete control over the bytes that are returned from the service operation and it applies no formatting to the data that is returned.  
-  
-2.  Implement the service contract. The contract has only one operation (`GetImage`). This method generates a bitmap and then save it to a <xref:System.IO.MemoryStream> in .jpg format. The operation then returns that stream to the caller.  
-  
-    ```  
-    public class Service : IImageServer  
+   ```  
+   [ServiceContract]  
+       public interface IImageServer  
        {  
-           public Stream GetImage(int width, int height)  
-           {  
-               Bitmap bitmap = new Bitmap(width, height);  
-               for (int i = 0; i < bitmap.Width; i++)  
-               {  
-                   for (int j = 0; j < bitmap.Height; j++)  
-                   {  
-                       bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);  
-                   }  
-               }  
-               MemoryStream ms = new MemoryStream();  
-               bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);  
-               ms.Position = 0;  
-               WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";  
-               return ms;  
-           }  
+           [WebGet]  
+           Stream GetImage(int width, int height);  
        }  
-    ```  
+   ```  
   
-     Notice the second to last line of code: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+    Because the method returns a <xref:System.IO.Stream>, [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] assumes that the operation has complete control over the bytes that are returned from the service operation and it applies no formatting to the data that is returned.  
   
-     This sets the content type header to `"image/jpeg"`. Although this sample shows how to return a .jpg file, it can be modified to return any type of data that is required, in any format. The operation must retrieve or generate the data and then write it to a stream.  
+2. Implement the service contract. The contract has only one operation (`GetImage`). This method generates a bitmap and then save it to a <xref:System.IO.MemoryStream> in .jpg format. The operation then returns that stream to the caller.  
+  
+   ```  
+   public class Service : IImageServer  
+      {  
+          public Stream GetImage(int width, int height)  
+          {  
+              Bitmap bitmap = new Bitmap(width, height);  
+              for (int i = 0; i < bitmap.Width; i++)  
+              {  
+                  for (int j = 0; j < bitmap.Height; j++)  
+                  {  
+                      bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);  
+                  }  
+              }  
+              MemoryStream ms = new MemoryStream();  
+              bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);  
+              ms.Position = 0;  
+              WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";  
+              return ms;  
+          }  
+      }  
+   ```  
+  
+    Notice the second to last line of code: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+  
+    This sets the content type header to `"image/jpeg"`. Although this sample shows how to return a .jpg file, it can be modified to return any type of data that is required, in any format. The operation must retrieve or generate the data and then write it to a stream.  
   
 ### To host the service  
   

@@ -19,11 +19,11 @@ ms.workload:
 ---
 # &lt;extensions&gt; section
 This configuration section contains a collection of extensions, which enable the user to create user-defined bindings, behaviors, and other aspects of extensions.  
-  
+
 \<system.ServiceModel>  
-  
+
 ## Syntax  
-  
+
 ```xml  
 <system.serviceModel>  
   <extensions>  
@@ -38,24 +38,26 @@ This configuration section contains a collection of extensions, which enable the
   </extensions>  
 </system.serviceModel>  
 ```  
-  
+
 ## Attributes and Elements  
  The following sections describe attributes, child elements, and parent elements.  
-  
+
 ### Attributes  
  None.  
-  
+
 ### Child Elements  
-  
+
 |Element|Description|  
 |-------------|-----------------|  
 |[\<behaviorExtensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)|This section contains child elements that specify behavior extensions, which enable the user to customize service or endpoint behaviors.|  
 |[\<bindingElementExtensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md)|This section enables the use of a custom binding element from a machine or application configuration file.|  
 |[\<bindingExtensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingextensions.md)|This section contains child elements that specify binding extensions, which enable the user to customize bindings.|  
 |[\<endpointExtensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointextensions.md)|This section contains child elements that registers standard endpoints.|  
-  
+
 ### Parent Elements  
-  
-|Element|Description|  
-|-------------|-----------------|  
-|system.ServiceModel|The root element of all WCF configuration elements.|
+
+
+|       Element       |                     Description                     |
+|---------------------|-----------------------------------------------------|
+| system.ServiceModel | The root element of all WCF configuration elements. |
+

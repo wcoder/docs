@@ -18,11 +18,11 @@ ms.workload:
   - "dotnet"
 ---
 # Entity SQL Reference
-This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] reference topics. This topic summarizes and groups the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators by category.  
-  
+This section contains [!INCLUDE [esql](../../../../../../includes/esql-md.md)] reference topics. This topic summarizes and groups the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] operators by category.  
+
 ## Arithmetic Operators  
- Arithmetic operators perform mathematical operations on two expressions of one or more numeric data types. The following table lists the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] arithmetic operators.  
-  
+ Arithmetic operators perform mathematical operations on two expressions of one or more numeric data types. The following table lists the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] arithmetic operators.  
+
 |Operator|Use|  
 |--------------|---------|  
 |[+ (Add)](../../../../../../docs/framework/data/adonet/ef/language-reference/add.md)|Addition.|  
@@ -31,24 +31,25 @@ This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] re
 |[* (Multiply)](../../../../../../docs/framework/data/adonet/ef/language-reference/multiply-entity-sql.md)|Multiplication.|  
 |[- (Negative)](../../../../../../docs/framework/data/adonet/ef/language-reference/negative-entity-sql.md)|Negation.|  
 |[- (Subtract)](../../../../../../docs/framework/data/adonet/ef/language-reference/subtract-entity-sql.md)|Subtraction.|  
-  
+
 ## Canonical Functions  
  Canonical functions are supported by all data providers and can be used by all querying technologies. The following table lists the canonical functions.  
-  
-|Function|Type|  
-|--------------|----------|  
-|[Aggregate Entity SQL Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|Discusses aggregate [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.|  
-|[Math Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|Discusses math [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.|  
-|[String Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|Discusses string [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.|  
-|[Date and Time Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|Discusses date and time [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.|  
-|[Bitwise Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|Discusses bitwise [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.|  
-|[Other Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)|Discusses functions not classified as bitwise, date/time, string, math, or aggregate.|  
-  
+
+
+|                                                                    Function                                                                     |                                                 Type                                                  |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| [Aggregate Entity SQL Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md) |   Discusses aggregate [!INCLUDE [esql](../../../../../../includes/esql-md.md)] canonical functions.   |
+|           [Math Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)            |     Discusses math [!INCLUDE [esql](../../../../../../includes/esql-md.md)] canonical functions.      |
+|         [String Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)          |    Discusses string [!INCLUDE [esql](../../../../../../includes/esql-md.md)] canonical functions.     |
+|  [Date and Time Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)   | Discusses date and time [!INCLUDE [esql](../../../../../../includes/esql-md.md)] canonical functions. |
+|        [Bitwise Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)         |    Discusses bitwise [!INCLUDE [esql](../../../../../../includes/esql-md.md)] canonical functions.    |
+|          [Other Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)           |         Discusses functions not classified as bitwise, date/time, string, math, or aggregate.         |
+
 ## Comparison Operators  
  Comparison operators are defined for the following types: `Byte`, `Int16`, `Int32`, `Int64`, `Double`, `Single`, `Decimal`, `String`, `DateTime`, `Date`, `Time`, `DateTimeOffset`. Implicit type promotion occurs for the operands before the comparison operator is applied. Comparison operators always yield Boolean values. When at least one of the operands is `null`, the result is `null`.  
-  
- Equality and inequality are defined for any object type that has identity, such as the `Boolean` type. Non-primitive objects with identity are considered equal if they share the same identity. The following table lists the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] comparison operators.  
-  
+
+ Equality and inequality are defined for any object type that has identity, such as the `Boolean` type. Non-primitive objects with identity are considered equal if they share the same identity. The following table lists the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] comparison operators.  
+
 |Operator|Description|  
 |--------------|-----------------|  
 |[= (Equals)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|Compares the equality of two expressions.|  
@@ -60,10 +61,10 @@ This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] re
 |[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Determines whether an expression results in a value in a specified range.|  
 |[!= (Not Equal To)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Compares two expressions to determine whether the left expression is not equal to the right expression.|  
 |[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Determines whether a specific character string matches a specified pattern.|  
-  
+
 ## Logical and Case Expression Operators  
  Logical operators test for the truth of a condition. The CASE expression evaluates a set of Boolean expressions to determine the result. The following table lists the logical and CASE expression operators.  
-  
+
 |Operator|Description|  
 |--------------|-----------------|  
 |[&& (Logical AND)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|Logical AND.|  
@@ -71,10 +72,10 @@ This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] re
 |[&#124;&#124; (Logical OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|Logical OR.|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Evaluates a set of Boolean expressions to determine the result.|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|The result of a [WHEN](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) clause when it evaluates to true.|  
-  
+
 ## Query Operators  
  Query operators are used to define query expressions that return entity data. The following table lists query operators.  
-  
+
 |Operator|Use|  
 |--------------|---------|  
 |[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)|Specifies the collection that is used in [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) statements.|  
@@ -87,10 +88,10 @@ This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] re
 |[SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)|Used with the [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) clause to performed physical paging.|  
 |[TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)|Specifies that only the first set of rows will be returned from the query result.|  
 |[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|Conditionally filters data that is returned by a query.|  
-  
+
 ## Reference Operators  
- A reference is a logical pointer (foreign key) to a specific entity in a specific entity set. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports the following operators to construct, deconstruct, and navigate through references.  
-  
+ A reference is a logical pointer (foreign key) to a specific entity in a specific entity set. [!INCLUDE [esql](../../../../../../includes/esql-md.md)] supports the following operators to construct, deconstruct, and navigate through references.  
+
 |Operator|Use|  
 |--------------|---------|  
 |[CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)|Creates references to an entity in an entity set.|  
@@ -98,10 +99,10 @@ This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] re
 |[KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)|Extracts the key of a reference or of an entity expression.|  
 |[NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)|Allows you to navigate over the relationship from one entity type to another|  
 |[REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)|Returns a reference to an entity instance.|  
-  
+
 ## Set Operators  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] provides various powerful set operations. This includes set operators similar to Transact-SQL  operators such as UNION, INTERSECT, EXCEPT, and EXISTS. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] also supports operators for duplicate elimination (SET), membership testing (IN), and joins (JOIN). The following table lists the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.  
-  
+ [!INCLUDE [esql](../../../../../../includes/esql-md.md)] provides various powerful set operations. This includes set operators similar to Transact-SQL  operators such as UNION, INTERSECT, EXCEPT, and EXISTS. [!INCLUDE [esql](../../../../../../includes/esql-md.md)] also supports operators for duplicate elimination (SET), membership testing (IN), and joins (JOIN). The following table lists the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators.  
+
 |Operator|Use|  
 |--------------|---------|  
 |[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|Extracts an element from a multivalued collection.|  
@@ -113,10 +114,10 @@ This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] re
 |[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|Determines whether two collections have common elements.|  
 |[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|Used to convert a collection of objects into a set by yielding a new collection with all duplicate elements removed.|  
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|Combines the results of two or more queries into a single collection.|  
-  
+
 ## Type Operators  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] provides operations that allow the type of an expression (value) to be constructed, queried, and manipulated. The following table lists operators that are used to work with types.  
-  
+ [!INCLUDE [esql](../../../../../../includes/esql-md.md)] provides operations that allow the type of an expression (value) to be constructed, queried, and manipulated. The following table lists operators that are used to work with types.  
+
 |Operator|Use|  
 |--------------|---------|  
 |[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|Converts an expression of one data type to another.|  
@@ -127,16 +128,17 @@ This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] re
 |[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|Creates an instance of a multiset from a list of values.|  
 |[ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)|Constructs anonymous, structurally typed records from one or more values.|  
 |[TREAT](../../../../../../docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md)|Treats an object of a particular base type as an object of the specified derived type.|  
-  
+
 ## Other Operators  
- The following table lists other [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators.  
-  
-|Operator|Use|  
-|--------------|---------|  
-|[+ (String Concatenation)](../../../../../../docs/framework/data/adonet/ef/language-reference/string-concatenation-entity-sql.md)|Used to concatenate strings in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[. (Member Access)](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)|Used to access the value of a property or field of an instance of structural conceptual model type.|  
-|[-- (Comment)](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|Include [!INCLUDE[esql](../../../../../../includes/esql-md.md)] comments.|  
-|[FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|Defines an inline function that can be executed in an Entity SQL query.|  
-  
+ The following table lists other [!INCLUDE [esql](../../../../../../includes/esql-md.md)] operators.  
+
+
+|                                                             Operator                                                              |                                                 Use                                                 |
+|-----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| [+ (String Concatenation)](../../../../../../docs/framework/data/adonet/ef/language-reference/string-concatenation-entity-sql.md) |      Used to concatenate strings in [!INCLUDE [esql](../../../../../../includes/esql-md.md)].       |
+|        [. (Member Access)](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)        | Used to access the value of a property or field of an instance of structural conceptual model type. |
+|             [-- (Comment)](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)              |             Include [!INCLUDE [esql](../../../../../../includes/esql-md.md)] comments.              |
+|               [FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)               |               Defines an inline function that can be executed in an Entity SQL query.               |
+
 ## See Also  
  [Entity SQL Language](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

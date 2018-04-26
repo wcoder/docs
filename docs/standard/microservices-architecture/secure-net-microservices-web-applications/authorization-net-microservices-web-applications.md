@@ -129,6 +129,6 @@ An example of a custom authorization requirement and handler for checking a user
 
 
 
->[!div class="step-by-step"]
-[Previous] (index.md)
-[Next] (developer-app-secrets-storage.md)
+> [!div class="step-by-step"]
+> [Previous](index.md)
+> [Next](developer-app-secrets-storage.md)

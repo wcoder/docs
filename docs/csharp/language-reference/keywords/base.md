@@ -44,7 +44,7 @@ This example shows how to specify the base-class constructor called when creatin
 [!code-csharp[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]
 
 ## C# language specification
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## See also
  [C# Reference](../../../csharp/language-reference/index.md)  

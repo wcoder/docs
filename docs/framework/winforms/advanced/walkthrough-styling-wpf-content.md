@@ -38,7 +38,7 @@ This walkthrough show you how to apply styling to a Windows Presentation Foundat
 ## Prerequisites  
  You need the following components to complete this walkthrough:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+- [!INCLUDE [vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
   
 ## Creating the Project  
  The first step is to create the Windows Forms project.  
@@ -72,19 +72,19 @@ This walkthrough show you how to apply styling to a Windows Presentation Foundat
   
 #### To apply a style to a WPF control  
   
-1.  Open `Form1` in the Windows Forms Designer.  
+1. Open `Form1` in the Windows Forms Designer.  
   
-2.  In the **Toolbox**, double-click `UserControl1` to create an instance of `UserControl1` on the form.  
+2. In the **Toolbox**, double-click `UserControl1` to create an instance of `UserControl1` on the form.  
   
-     An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.  
+    An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.  
   
-3.  In the smart tag panel for `elementHost1`, click **Edit Hosted Content** from the drop-down list.  
+3. In the smart tag panel for `elementHost1`, click **Edit Hosted Content** from the drop-down list.  
   
-     `UserControl1` opens in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+    `UserControl1` opens in the [!INCLUDE [wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
-4.  In XAML view, insert the following XAML after the `<UserControl>` opening tag.  
+4. In XAML view, insert the following XAML after the `<UserControl>` opening tag.  
   
-     This XAML creates a gradient with a contrasting gradient border. When the control is clicked, the gradients are changed to generate a pressed button look. For more information, see [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+    This XAML creates a gradient with a contrasting gradient border. When the control is clicked, the gradients are changed to generate a pressed button look. For more information, see [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
 ```xaml  
 <UserControl.Resources>  

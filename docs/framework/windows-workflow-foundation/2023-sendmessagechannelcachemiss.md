@@ -17,22 +17,24 @@ ms.workload:
 ---
 # 2023 - SendMessageChannelCacheMiss
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|2023|  
 |Keywords|WFRuntime|  
 |Level|Verbose|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates a cache miss in the SendMessageChannelCache.  
-  
+
 ## Message  
  SendMessageChannelCache miss  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

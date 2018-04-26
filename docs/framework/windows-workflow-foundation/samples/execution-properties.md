@@ -20,18 +20,18 @@ This sample shows how to define and use an execution property in a custom activi
   
 #### To set up, build, and run the sample  
   
-1.  Open the ExecutionProperties.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1. Open the ExecutionProperties.sln sample solution in [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)].  
   
-    > [!NOTE]
-    >  Viewing ThreeColors.xaml before building the solution displays an error, because the custom activities used must be built at the same time as the solution.  
+   > [!NOTE]
+   >  Viewing ThreeColors.xaml before building the solution displays an error, because the custom activities used must be built at the same time as the solution.  
   
-2.  Build and run the solution.  
+2. Build and run the solution.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\ExecutionProperties`

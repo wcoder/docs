@@ -11,7 +11,7 @@ ms.workload:
   - "dotnet"
   - "dotnetcore"
 ---
- 
+
 # Azure Hosting Recommendations for ASP.NET Core Web Apps
 
 > "Line-of-business leaders everywhere are bypassing IT departments to get applications from the cloud (aka SaaS) and paying for them like they would a magazine subscription. And when the service is no longer required, they can cancel the subscription with no equipment left unused in the corner."  
@@ -73,20 +73,21 @@ If you have an existing application that would require substantial modifications
 
 #### Feature Comparison
 
-| Feature App Service | Service Fabric | Virtual Machine |
-|---------|----------|----------|
-| Near-Instant Deployment | X | X | |
-| Scale up to larger machines without redeploy | X | X | |
-| Instances share content and configuration; no need to redeploy or reconfigure when scaling | X | X | |
-| Multiple deployment environments (production, staging) | X | X | |
-| Automatic OS update management | X | | |
-| Seamless switching between 32/64 bit platforms | X | | |
-| Deploy code with Git, FTP | X | | X |
-| Deploy code with WebDeploy | X | | X |
-| Deploy code with TFS | X | X | X |
-| Host web or web service tier of multi-tier architecture | X | X | X |
-| Access Azure services like Service Bus, Storage, SQL Database | X | X | X |
-| Install any custom MSI | | X | X |
+
+|                                    Feature App Service                                     | Service Fabric | Virtual Machine |
+|--------------------------------------------------------------------------------------------|----------------|-----------------|
+|                                  Near-Instant Deployment                                   |       X        |        X        |
+|                        Scale up to larger machines without redeploy                        |       X        |        X        |
+| Instances share content and configuration; no need to redeploy or reconfigure when scaling |       X        |        X        |
+|                   Multiple deployment environments (production, staging)                   |       X        |        X        |
+|                               Automatic OS update management                               |       X        |                 |
+|                       Seamless switching between 32/64 bit platforms                       |       X        |                 |
+|                                 Deploy code with Git, FTP                                  |       X        |                 |
+|                                 Deploy code with WebDeploy                                 |       X        |                 |
+|                                    Deploy code with TFS                                    |       X        |        X        |
+|                  Host web or web service tier of multi-tier architecture                   |       X        |        X        |
+|               Access Azure services like Service Bus, Storage, SQL Database                |       X        |        X        |
+|                                   Install any custom MSI                                   |                |        X        |
 
 ## Logical Processes
 
@@ -126,5 +127,5 @@ Figure 11-2 shows an example reference architecture. This diagram describes a re
 -   Azure App Service, Virtual Machines, Service Fabric and Cloud Services Comparison\
     <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
->[!div class="step-by-step"]
-[Previous] (development-process-for-azure.md)
+> [!div class="step-by-step"]
+> [Previous](development-process-for-azure.md)

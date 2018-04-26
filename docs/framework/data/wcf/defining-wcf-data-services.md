@@ -20,11 +20,11 @@ ms.workload:
   - "dotnet"
 ---
 # Defining WCF Data Services
-This section describes how to create and configure [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to expose data as an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] the basic steps required to create a data service, see [Exposing Your Data as a Service](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).  
+This section describes how to create and configure [!INCLUDE [ssAstoria](../../../../includes/ssastoria-md.md)] to expose data as an [!INCLUDE [ssODataFull](../../../../includes/ssodatafull-md.md)] feed. [!INCLUDE [crabout](../../../../includes/crabout-md.md)] the basic steps required to create a data service, see [Exposing Your Data as a Service](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).  
   
 ## In This Section  
  [Configuring the Data Service](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)  
- Describes the data service configuration options provided by [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Describes the data service configuration options provided by [!INCLUDE [ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Data Services Providers](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  Describes the provider models for exposing data as a data service.  
@@ -48,10 +48,10 @@ This section describes how to create and configure [!INCLUDE[ssAstoria](../../..
  Describes how to select a host for your data service.  
   
  [Data Service Versioning](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)  
- Describes how to work with different versions of the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+ Describes how to work with different versions of the [!INCLUDE [ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
  [WCF Data Services Protocol Implementation Details](../../../../docs/framework/data/wcf/wcf-data-services-protocol-implementation-details.md)  
- Describes optional functionalities of the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocol that are not currently implemented by WCF Data Services.  
+ Describes optional functionalities of the [!INCLUDE [ssODataShort](../../../../includes/ssodatashort-md.md)] protocol that are not currently implemented by WCF Data Services.  
   
 ## See Also  
  [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  

@@ -22,10 +22,10 @@ ms.workload:
   - dotnet
 ---
 # Walkthrough: Create a Button by Using Microsoft Expression Blend
-This walkthrough steps you through the process of creating a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] customized button using Microsoft Expression Blend.  
+This walkthrough steps you through the process of creating a [!INCLUDE [TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] customized button using Microsoft Expression Blend.  
   
 > [!IMPORTANT]
->  Microsoft Expression Blend works by generating [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] that is then compiled to make the executable program. If you would rather work with [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] directly, there is another walkthrough that creates the same application as this one using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] with Visual Studio rather than Blend. See [Create a Button by Using XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) for more information.  
+>  Microsoft Expression Blend works by generating [!INCLUDE [TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] that is then compiled to make the executable program. If you would rather work with [!INCLUDE [TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] directly, there is another walkthrough that creates the same application as this one using [!INCLUDE [TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] with Visual Studio rather than Blend. See [Create a Button by Using XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) for more information.  
   
  The following illustration shows the customized button that you will create.  
   
@@ -46,7 +46,7 @@ This walkthrough steps you through the process of creating a [!INCLUDE[TLA2#tla_
   
 5.  Name the project `CustomButton` and press **OK**.  
   
- At this point you have a blank [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] project. You can press F5 to run the application. As you might expect, the application consists of only a blank window. Next, you create a rounded rectangle and convert it into a button.  
+ At this point you have a blank [!INCLUDE [TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] project. You can press F5 to run the application. As you might expect, the application consists of only a blank window. Next, you create a rounded rectangle and convert it into a button.  
   
 #### To convert a Rectangle to a Button  
   

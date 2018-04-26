@@ -18,9 +18,9 @@ ms.workload:
   - "dotnet"
 ---
 # HttpCookieSession
-This sample demonstrates how to build a custom protocol channel to use HTTP cookies for session management. This channel enables communication between [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services and ASMX clients or between [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients and ASMX services.  
+This sample demonstrates how to build a custom protocol channel to use HTTP cookies for session management. This channel enables communication between [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] services and ASMX clients or between [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] clients and ASMX services.  
   
- When a client calls a Web method in an ASMX Web service that is session-based, the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] engine does the following:  
+ When a client calls a Web method in an ASMX Web service that is session-based, the [!INCLUDE [vstecasp](../../../../includes/vstecasp-md.md)] engine does the following:  
   
 -   Generates a unique ID (session ID).  
   
@@ -34,11 +34,11 @@ This sample demonstrates how to build a custom protocol channel to use HTTP cook
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
 ## HttpCookieSession Channel Message Exchange Pattern  
@@ -83,7 +83,7 @@ This sample demonstrates how to build a custom protocol channel to use HTTP cook
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- In the case when someone calls the <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> method and there are no messages in the message queue, the channel waits for a specified amount of time before shutting itself down. This cleans up the session channels created for non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients.  
+ In the case when someone calls the <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> method and there are no messages in the message queue, the channel waits for a specified amount of time before shutting itself down. This cleans up the session channels created for non-[!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] clients.  
   
  We use the `channelMapping` to track the `ReplySessionChannels`, and we do not close our underlying `innerChannel` until all the accepted channels have been closed. This way `HttpCookieReplySessionChannel` can exist beyond the lifetime of `HttpCookieReplySessionChannelListener`. We also do not have to worry about the listener getting garbage collected underneath us because the accepted channels keep a reference to their listener through the `OnClosed` callback.  
   
@@ -91,7 +91,7 @@ InputQueue<RequestContext> requestQueue;
  The corresponding client channel is in the `HttpCookieSessionChannelFactory` class. During channel creation, the channel factory wraps the inner request channel with an `HttpCookieRequestSessionChannel`. The `HttpCookieRequestSessionChannel` class forwards the calls to the underlying request channel. When the client closes the proxy, `HttpCookieRequestSessionChannel` sends a message to the service that indicates that the channel is being closed. Thus, the service channel stack can gracefully shutdown the session channel that is in use.  
   
 ## Binding and Binding Element  
- After creating the service and client channels, the next step is to integrate them into the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] runtime. Channels are exposed to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] through bindings and binding elements. A binding consists of one or many binding elements. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offers several system-defined bindings; for example, BasicHttpBinding or WSHttpBinding. The `HttpCookieSessionBindingElement` class contains the implementation for the binding element. It overrides the channel listener and channel factory creation methods to do the necessary channel listener or channel factory instantiations.  
+ After creating the service and client channels, the next step is to integrate them into the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] runtime. Channels are exposed to [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] through bindings and binding elements. A binding consists of one or many binding elements. [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] offers several system-defined bindings; for example, BasicHttpBinding or WSHttpBinding. The `HttpCookieSessionBindingElement` class contains the implementation for the binding element. It overrides the channel listener and channel factory creation methods to do the necessary channel listener or channel factory instantiations.  
   
  The sample uses policy assertions for the service description. This allows the sample to publish its channel requirements to other clients that can consume the service. For example, this binding element publishes policy assertions to let potential clients know that it supports sessions. Because the sample enables the `ExchangeTerminateMessage` property in the binding element configuration, it adds the necessary assertions to show that the service supports an extra message exchange action to terminate the session conversation. Clients can then use this action. The following WSDL code shows the policy assertions created from the `HttpCookieSessionBindingElement`.  
   
@@ -166,16 +166,16 @@ Press <ENTER> to terminate client.
   
 #### To set up, build, and run the sample  
   
-1.  Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.  
+1. Install [!INCLUDE [vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.  
   
-    ```  
-    %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-    ```  
+   ```  
+   %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
+   ```  
   
-2.  Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## See Also

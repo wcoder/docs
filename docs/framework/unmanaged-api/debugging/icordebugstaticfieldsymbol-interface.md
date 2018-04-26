@@ -41,7 +41,7 @@ Represents the debug symbol information for a static field.
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## See Also  
  [ICorDebugInstanceFieldSymbol Interface](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)  

@@ -24,7 +24,7 @@ ms.workload:
   - dotnet
 ---
 # Brushes
-The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen  
+The following topics describe how to use [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen  
   
 ## In This Section  
  [WPF Brushes Overview](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  

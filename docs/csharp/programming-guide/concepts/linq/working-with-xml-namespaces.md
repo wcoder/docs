@@ -14,7 +14,7 @@ author: "BillWagner"
 ms.author: "wiwagn"
 ---
 # Working with XML Namespaces (C#)
-The topics in this section describe how [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supports namespaces.  
+The topics in this section describe how [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] supports namespaces.  
   
 ## In This Section  
   

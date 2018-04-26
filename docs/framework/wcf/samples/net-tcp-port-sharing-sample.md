@@ -22,16 +22,16 @@ The TCP/IP protocol uses a 16-bit number, called a port, to differentiate connec
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
  Many protocols have a standard or default port number that they use. For example, the HTTP protocol typically uses TCP port 80. Internet Information Services (IIS) has a listener to share a port between multiple HTTP applications. IIS listens on the port directly and forwards messages to the appropriate application based on information inside the message stream. This allows multiple HTTP applications to use the same port number without having to compete to reserve the port for receiving messages.  
   
- NetTcp Port Sharing is a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]feature that similarly allows multiple network applications to share a single port. The NetTcp Port Sharing Service accepts connections using the net.tcp protocol and forwards messages based on their destination address.  
+ NetTcp Port Sharing is a [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)]feature that similarly allows multiple network applications to share a single port. The NetTcp Port Sharing Service accepts connections using the net.tcp protocol and forwards messages based on their destination address.  
   
  The NetTcp Port Sharing Service is not enabled by default. Before running this sample, you must manually enable the service. For more information, see [How to: Enable the Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). If the service is disabled, an exception is thrown when the server application is started.  
   
@@ -134,18 +134,18 @@ Press <ENTER> to terminate client.
   
 #### To set up, build, and run the sample  
   
-1.  Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.  
+1. Install [!INCLUDE [vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.  
   
-    ```  
-    %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-    ```  
+   ```  
+   %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
+   ```  
   
-2.  Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Enable the NetTcp Port Sharing Service as previously described in the introduction section.  
+3. Enable the NetTcp Port Sharing Service as previously described in the introduction section.  
   
-4.  To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md). Specific details for running this sample are included previously in the Running the Sample section.  
+5. To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md). Specific details for running this sample are included previously in the Running the Sample section.  
   
 ## See Also

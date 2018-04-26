@@ -18,18 +18,18 @@ ms.workload:
   - "dotnet"
 ---
 # Using the WCF Moniker with COM Clients
-This sample demonstrates how to use the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service moniker to integrate Web services into COM-based development environments, such as Microsoft Office Visual Basic for Applications (Office VBA) or Visual Basic 6.0. This sample consists of a Windows Script Host client (.vbs), a supporting client library (.dll), and a service library (.dll) hosted by Internet Information Services (IIS). The service is a calculator service and the COM client calls math operations—Add, Subtract, Multiply, and Divide—on the service. Client activity is visible in the message box windows.  
+This sample demonstrates how to use the [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] service moniker to integrate Web services into COM-based development environments, such as Microsoft Office Visual Basic for Applications (Office VBA) or Visual Basic 6.0. This sample consists of a Windows Script Host client (.vbs), a supporting client library (.dll), and a service library (.dll) hosted by Internet Information Services (IIS). The service is a calculator service and the COM client calls math operations—Add, Subtract, Multiply, and Divide—on the service. Client activity is visible in the message box windows.  
   
 > [!NOTE]
 >  The set-up procedure and build instructions for this sample are located at the end of this topic.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   
  The service implements an `ICalculator` contract defined as shown in the following code example.  
@@ -108,7 +108,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
   
- When you run the sample, the operation response is displayed in a Windows Script Host message box window. This demonstrates a COM client making COM calls using the typed moniker to communicate with a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service. Despite the use of COM in the client application, the communication with the service consists only of Web service calls.  
+ When you run the sample, the operation response is displayed in a Windows Script Host message box window. This demonstrates a COM client making COM calls using the typed moniker to communicate with a [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] service. Despite the use of COM in the client application, the communication with the service consists only of Web service calls.  
   
 ## WSDL Contract  
  To use the moniker with a WSDL contract, no client library registration is required but the WSDL contract for the service must be retrieved through an out-of-band mechanism such as using a browser to access the WSDL endpoint for the service. The moniker can then access that contract at execution time.  
@@ -135,16 +135,16 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  The parameters used by the moniker specify:  
   
--   The address of the service endpoint.  
+- The address of the service endpoint.  
   
--   The binding that the client should use to connect with that endpoint and the namespace in which that binding is defined. In this case, the `wsHttpBinding_ICalculator` is used.  
+- The binding that the client should use to connect with that endpoint and the namespace in which that binding is defined. In this case, the `wsHttpBinding_ICalculator` is used.  
   
--   The WSDL that defines the contract. In this case this is the string that has been read from the serviceWsdl.xml file.  
+- The WSDL that defines the contract. In this case this is the string that has been read from the serviceWsdl.xml file.  
   
--   The name and namespace of the contract. This identification is required because the WSDL may contain more than one contract.  
+- The name and namespace of the contract. This identification is required because the WSDL may contain more than one contract.  
   
-    > [!NOTE]
-    >  By default, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services generate separate WSDL files for each namespace that the use. These are linked with the use of the WSDL import construct. Because the moniker expects a single WSDL definition, the service must either use a single namespace as demonstrated in this sample or the separate files must be manually merged.  
+  > [!NOTE]
+  >  By default, [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] services generate separate WSDL files for each namespace that the use. These are linked with the use of the WSDL import construct. Because the moniker expects a single WSDL definition, the service must either use a single namespace as demonstrated in this sample or the separate files must be manually merged.  
   
  Having constructed the proxy instance with the service moniker, the client application can call methods on the proxy, which results in the service moniker infrastructure calling the corresponding service operations.  
   
@@ -153,7 +153,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
   
- When you run the sample, the operation response is displayed in a Windows Script Host message box window. This demonstrates a COM client making COM calls using the moniker with a WSDL contract to communicate with a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.  
+ When you run the sample, the operation response is displayed in a Windows Script Host message box window. This demonstrates a COM client making COM calls using the moniker with a WSDL contract to communicate with a [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] service.  
   
 ## Metadata Exchange Contract  
  To use the moniker with a MEX contract, as with the WSDL contract, no client registration is required. The contract for the service is retrieved at execution time through the internal use of Metadata Exchange.  
@@ -188,24 +188,24 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
   
- When you run the sample, the operation response is displayed in a Windows Script Host message box window. This demonstrates a COM client making COM calls using the moniker with a MEX contract to communicate with a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.  
+ When you run the sample, the operation response is displayed in a Windows Script Host message box window. This demonstrates a COM client making COM calls using the moniker with a MEX contract to communicate with a [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] service.  
   
 #### To set up and build the sample  
   
-1.  Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  From a [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] command prompt, open the \client\bin folder, under the language-specific folder.  
+3. From a [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)] command prompt, open the \client\bin folder, under the language-specific folder.  
   
-    > [!NOTE]
-    >  If you are using [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7, or Windows Server 2008 R2, make sure that you run the command prompt with administrator privileges.  
+   > [!NOTE]
+   >  If you are using [!INCLUDE [wv](../../../../includes/wv-md.md)], [!INCLUDE [lserver](../../../../includes/lserver-md.md)], Windows 7, or Windows Server 2008 R2, make sure that you run the command prompt with administrator privileges.  
   
-4.  Type in `tlbexp.exe client.dll /out:CalcProxy.tlb` to export the dll to a tlb file. A "Type library exporter warning" is expected but is not an issue because the generic type is not required.  
+4. Type in `tlbexp.exe client.dll /out:CalcProxy.tlb` to export the dll to a tlb file. A "Type library exporter warning" is expected but is not an issue because the generic type is not required.  
   
-5.  Type in `regasm.exe /tlb:CalcProxy.tlb client.dll` to register the types with COM. A "Type library exporter warning" is expected but is not an issue because the generic type is not required.  
+5. Type in `regasm.exe /tlb:CalcProxy.tlb client.dll` to register the types with COM. A "Type library exporter warning" is expected but is not an issue because the generic type is not required.  
   
-6.  Type in `gacutil.exe /i client.dll` to add the assembly to the Global Assembly Cache.  
+6. Type in `gacutil.exe /i client.dll` to add the assembly to the Global Assembly Cache.  
   
 #### To run the sample on the same computer  
   
@@ -217,21 +217,21 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### To run the sample across computers  
   
-1.  On the service computer, create a virtual directory named ServiceModelSamples. The Setupvroot.bat script included with the sample can be used to create the disk directory and virtual directory.  
+1. On the service computer, create a virtual directory named ServiceModelSamples. The Setupvroot.bat script included with the sample can be used to create the disk directory and virtual directory.  
   
-2.  Copy the service program files from %SystemDrive%\Inetpub\wwwroot\servicemodelsamples to the ServiceModelSamples virtual directory on the service computer. Be sure to include the files in the \bin directory.  
+2. Copy the service program files from %SystemDrive%\Inetpub\wwwroot\servicemodelsamples to the ServiceModelSamples virtual directory on the service computer. Be sure to include the files in the \bin directory.  
   
-3.  Copy the client script file from the \client folder, under the language-specific folder, to the client computer.  
+3. Copy the client script file from the \client folder, under the language-specific folder, to the client computer.  
   
-4.  In the script file, change the address value of the endpoint definition to match the new address of your service. Replace any references to "localhost" with a fully-qualified domain name in the address.  
+4. In the script file, change the address value of the endpoint definition to match the new address of your service. Replace any references to "localhost" with a fully-qualified domain name in the address.  
   
-5.  Copy the WSDL file to the client computer. In the WSDL file, serviceWsdl.xml, replace any references to "localhost" with a fully-qualified domain name in the address.  
+5. Copy the WSDL file to the client computer. In the WSDL file, serviceWsdl.xml, replace any references to "localhost" with a fully-qualified domain name in the address.  
   
-6.  Copy the Client.dll library from the \client\bin folder, under the language-specific folder, to a directory on the client computer.  
+6. Copy the Client.dll library from the \client\bin folder, under the language-specific folder, to a directory on the client computer.  
   
-7.  From a command prompt, navigate to that destination directory on the client computer. If using [!INCLUDE[wv](../../../../includes/wv-md.md)] or [!INCLUDE[lserver](../../../../includes/lserver-md.md)], make sure to run the command prompt as Administrator.  
+7. From a command prompt, navigate to that destination directory on the client computer. If using [!INCLUDE [wv](../../../../includes/wv-md.md)] or [!INCLUDE [lserver](../../../../includes/lserver-md.md)], make sure to run the command prompt as Administrator.  
   
-8.  Type in `tlbexp.exe client.dll /out:CalcProxy.tlb` to export the dll to a tlb file. A "Type library exporter warning" is expected but is not an issue because the generic type is not required.  
+8. Type in `tlbexp.exe client.dll /out:CalcProxy.tlb` to export the dll to a tlb file. A "Type library exporter warning" is expected but is not an issue because the generic type is not required.  
   
 9. Type in `regasm.exe /tlb:CalcProxy.tlb client.dll` to register the types with COM. Ensure that path has been set to the folder that contains `regasm.exe` before you run the command.  
   

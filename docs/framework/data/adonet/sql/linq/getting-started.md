@@ -21,7 +21,7 @@ ms.workload:
   - "dotnet"
 ---
 # Getting Started
-By using [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], you can use the [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] technology to access SQL databases just as you would access an in-memory collection.  
+By using [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], you can use the [!INCLUDE [vbteclinq](../../../../../../includes/vbteclinq-md.md)] technology to access SQL databases just as you would access an in-memory collection.  
   
  For example, the `nw` object in the following code is created to represent the `Northwind` database, the `Customers` table is targeted, the rows are filtered for `Customers` from `London`, and a string for `CompanyName` is selected for retrieval.  
   
@@ -33,9 +33,9 @@ By using [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], yo
 ## Next Steps  
  For some additional examples, including inserting and updating, see [What You Can Do With LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/what-you-can-do-with-linq-to-sql.md).  
   
- Next, try some walkthroughs and tutorials to have a hands-on experience of using [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. See [Learning by Walkthroughs](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+ Next, try some walkthroughs and tutorials to have a hands-on experience of using [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. See [Learning by Walkthroughs](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
- Finally, learn how to get started on your own [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project by reading [Typical Steps for Using LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/typical-steps-for-using-linq-to-sql.md).  
+ Finally, learn how to get started on your own [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project by reading [Typical Steps for Using LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/typical-steps-for-using-linq-to-sql.md).  
   
 ## See Also  
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  

@@ -23,7 +23,7 @@ ms.workload:
   - dotnet
 ---
 # TextBlock
-The <xref:System.Windows.Controls.TextBlock> control provides flexible text support for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications. The element is targeted primarily toward basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios that do not require more than one paragraph of text.  
+The <xref:System.Windows.Controls.TextBlock> control provides flexible text support for [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications. The element is targeted primarily toward basic [!INCLUDE [TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios that do not require more than one paragraph of text.  
   
 ## In This Section  
  [TextBlock Overview](../../../../docs/framework/wpf/controls/textblock-overview.md)  

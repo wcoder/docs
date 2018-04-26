@@ -25,7 +25,7 @@ ms.workload:
 # Deprecated CLR Hosting Functions
 This section describes the unmanaged global static functions that earlier versions of the hosting API used.  
   
- With the exception of the infrastructure functions (`_Cor*` functions), which are used only by the .NET Framework, these functions have been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ With the exception of the infrastructure functions (`_Cor*` functions), which are used only by the .NET Framework, these functions have been deprecated in the [!INCLUDE [net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## Activation functions  
  [ClrCreateManagedInstance Function](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  

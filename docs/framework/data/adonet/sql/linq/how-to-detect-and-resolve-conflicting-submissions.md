@@ -21,7 +21,7 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Detect and Resolve Conflicting Submissions
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides many resources for detecting and resolving conflicts that stem from multi-user changes to the database. For more information, see [How to: Manage Change Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+[!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides many resources for detecting and resolving conflicts that stem from multi-user changes to the database. For more information, see [How to: Manage Change Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
 ## Example  
  The following example shows a `try`/`catch` block that catches a <xref:System.Data.Linq.ChangeConflictException> exception. Entity and member information for each conflict is displayed in the console window.  

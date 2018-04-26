@@ -24,7 +24,7 @@ This sample demonstrates how to handle and process messages that have failed del
 >  The setup procedure and build instructions for this sample are located at the end of this topic.  
   
 > [!NOTE]
->  This sample demonstrates each application dead letter queue that is only available on [!INCLUDE[wv](../../../../includes/wv-md.md)]. The sample can be modified to use the default system-wide queues for MSMQ 3.0 on [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] and [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+>  This sample demonstrates each application dead letter queue that is only available on [!INCLUDE [wv](../../../../includes/wv-md.md)]. The sample can be modified to use the default system-wide queues for MSMQ 3.0 on [!INCLUDE [ws2003](../../../../includes/ws2003-md.md)] and [!INCLUDE [wxp](../../../../includes/wxp-md.md)].  
   
  In queued communication, the client communicates to the service using a queue. More precisely, the client sends messages to a queue. The service receives messages from the queue. The service and client therefore, do not have to be running at the same time to communicate using a queue.  
   
@@ -32,15 +32,15 @@ This sample demonstrates how to handle and process messages that have failed del
   
  The dead-letter queue in the `NetMsmqBinding` binding is expressed in the following properties:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> property to express the kind of dead-letter queue required by the client. This enumeration has the following values:  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> property to express the kind of dead-letter queue required by the client. This enumeration has the following values:  
   
--   `None`: No dead-letter queue is required by the client.  
+- `None`: No dead-letter queue is required by the client.  
   
--   `System`: The system dead-letter queue is used to store dead messages. The system dead-letter queue is shared by all applications running on the computer.  
+- `System`: The system dead-letter queue is used to store dead messages. The system dead-letter queue is shared by all applications running on the computer.  
   
--   `Custom`: A custom dead-letter queue specified using the <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property is used to store dead messages. This feature is only available on [!INCLUDE[wv](../../../../includes/wv-md.md)]. This is used when the application must use its own dead letter queue instead of sharing it with other applications running on the same computer.  
+- `Custom`: A custom dead-letter queue specified using the <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property is used to store dead messages. This feature is only available on [!INCLUDE [wv](../../../../includes/wv-md.md)]. This is used when the application must use its own dead letter queue instead of sharing it with other applications running on the same computer.  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property to express the specific queue to use as a dead-letter queue. This is available only in [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property to express the specific queue to use as a dead-letter queue. This is available only in [!INCLUDE [wv](../../../../includes/wv-md.md)].  
   
  In this sample, the client sends a batch of messages to the service from within the scope of a transaction and specifies an arbitrarily low value for "time-to-live" for these messages (about 2 seconds). The client also specifies a custom dead-letter queue to use to enqueue the messages that have expired.  
   
@@ -177,7 +177,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }  
 ```  
   
- Messages in the dead-letter queue are messages that are addressed to the service that is processing the message. Therefore, when the dead-letter message service reads messages from the queue, the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] channel layer finds the mismatch in endpoints and does not dispatch the message. In this case, the message is addressed to the order processing service but is received by the dead-letter message service. To receive a message that is addressed to a different endpoint, an address filter to match any address is specified in the `ServiceBehavior`. This is required to successfully process messages that are read from the dead-letter queue.  
+ Messages in the dead-letter queue are messages that are addressed to the service that is processing the message. Therefore, when the dead-letter message service reads messages from the queue, the [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] channel layer finds the mismatch in endpoints and does not dispatch the message. In this case, the message is addressed to the order processing service but is received by the dead-letter message service. To receive a message that is addressed to a different endpoint, an address filter to match any address is specified in the `ServiceBehavior`. This is required to successfully process messages that are read from the dead-letter queue.  
   
  In this sample, the dead-letter message service resends the message if the reason for failure is that the message timed out. For all other reasons, it displays the delivery failure, as shown in the following sample code:  
   
@@ -318,23 +318,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
   
 ### To set up, build, and run the sample  
   
-1.  Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  If the service is run first, it will check to ensure that the queue is present. If the queue is not present, the service will create one. You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager. Follow these steps to create a queue in Windows 2008.  
+2. If the service is run first, it will check to ensure that the queue is present. If the queue is not present, the service will create one. You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager. Follow these steps to create a queue in Windows 2008.  
   
-    1.  Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+   1. Open Server Manager in [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Expand the **Features** tab.  
+   2. Expand the **Features** tab.  
   
-    3.  Right-click **Private Message Queues**, and select **New**, **Private Queue**.  
+   3. Right-click **Private Message Queues**, and select **New**, **Private Queue**.  
   
-    4.  Check the **Transactional** box.  
+   4. Check the **Transactional** box.  
   
-    5.  Enter `ServiceModelSamplesTransacted` as the name of the new queue.  
+   5. Enter `ServiceModelSamplesTransacted` as the name of the new queue.  
   
-3.  To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  To run the sample in a single- or cross-computer configuration change queue names appropriately, replacing localhost with full name of the computer and follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. To run the sample in a single- or cross-computer configuration change queue names appropriately, replacing localhost with full name of the computer and follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### To run the sample on a computer joined to a workgroup  
   
@@ -362,11 +362,11 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   
 ## See Also

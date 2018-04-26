@@ -117,6 +117,6 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 However, this code is suitable only as a proof of concept. The next topic explains how to use more sophisticated and proven libraries.
 
 
->[!div class="step-by-step"]
-[Previous] (implement-resilient-entity-framework-core-sql-connections.md)
-[Next] (implement-http-call-retries-exponential-backoff-polly.md)
+> [!div class="step-by-step"]
+> [Previous](implement-resilient-entity-framework-core-sql-connections.md)
+> [Next](implement-http-call-retries-exponential-backoff-polly.md)

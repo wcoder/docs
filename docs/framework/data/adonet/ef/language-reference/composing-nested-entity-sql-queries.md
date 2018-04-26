@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Composing Nested Entity SQL Queries
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] is a rich functional language. The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression. Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions. A value in the expression can be parameterized or composed of some other expression.  
+[!INCLUDE [esql](../../../../../../includes/esql-md.md)] is a rich functional language. The building block of [!INCLUDE [esql](../../../../../../includes/esql-md.md)] is an expression. Unlike conventional SQL, [!INCLUDE [esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE [esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions. A value in the expression can be parameterized or composed of some other expression.  
   
 ## Nested Expressions  
  A nested expression can be placed anywhere a value of the type it returns is accepted. For example:  
@@ -43,7 +43,7 @@ SELECT address, (SELECT DEREF(soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:  
+ In [!INCLUDE [esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:  
   
 ```  
 -- Pseudo-Entity SQL  
@@ -54,7 +54,7 @@ UNION ALL
 FROM … );  
 ```  
   
- The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
+ The following example demonstrates how to properly nest expressions in [!INCLUDE [esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
   
 ## Nested Queries in Projection  
  Nested queries in the project clause might get translated into Cartesian product queries on the server. In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.  

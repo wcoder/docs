@@ -19,15 +19,15 @@ ms.workload:
 ---
 # &lt;security&gt; of &lt;webHttpBinding&gt;
 Specifies the security requirements for an endpoint configured with a [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
-  
+
  \<system.ServiceModel>  
 \<bindings>  
 \<webHttpBinding>  
 \<binding>  
 \<security>  
-  
+
 ## Syntax  
-  
+
 ```xml  
 <system.ServiceModel>  
     <bindings>  
@@ -43,36 +43,38 @@ Specifies the security requirements for an endpoint configured with a [\<wsHttpB
     </bindings>  
 </system.ServiceModel>  
 ```  
-  
+
 ## Attributes and Elements  
  The following sections describe attributes, child elements, and parent elements.  
-  
+
 ### Attributes  
-  
+
 |Attribute|Description|  
 |---------------|-----------------|  
 |mode|Specifies whether transport-level security or no security is used by an endpoint. The default is `None`. This attribute is of type <xref:System.ServiceModel.WebHttpSecurityMode>.|  
-  
+
 ## Mode Attribute  
-  
-|Value|Description|  
-|-----------|-----------------|  
-|None|Security is disabled.|  
-|Transport|Security is provided using HTTPS. The service needs to be configured with SSL certificates. The message is entirely secured using HTTPS and the service is authenticated by the client using the service’s SSL certificate. The client authentication is controlled through the `ClientCredentialType` attribute of the [\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md).|  
-|TransportCredentialOnly|This mode does not provide message integrity and confidentiality. It provides HTTP-based client authentication. This mode should be used with caution. It should be used in environments where the transport security is being provided by other means (such as IPSec) and only client authentication is provided by the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] infrastructure.|  
-  
+
+
+|          Value          |                                                                                                                                                                                                             Description                                                                                                                                                                                                              |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|          None           |                                                                                                                                                                                                        Security is disabled.                                                                                                                                                                                                         |
+|        Transport        | Security is provided using HTTPS. The service needs to be configured with SSL certificates. The message is entirely secured using HTTPS and the service is authenticated by the client using the service’s SSL certificate. The client authentication is controlled through the `ClientCredentialType` attribute of the [\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md). |
+| TransportCredentialOnly |                 This mode does not provide message integrity and confidentiality. It provides HTTP-based client authentication. This mode should be used with caution. It should be used in environments where the transport security is being provided by other means (such as IPSec) and only client authentication is provided by the [!INCLUDE [indigo2](../../../../../includes/indigo2-md.md)] infrastructure.                 |
+
 ### Child Elements  
-  
+
 |Element|Description|  
 |-------------|-----------------|  
 |[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)|Defines the transport security settings. This element corresponds to the <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> type.|  
-  
+
 ### Parent Elements  
-  
-|Element|Description|  
-|-------------|-----------------|  
-|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|A binding element that is used to configure endpoints for [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Web services that respond to HTTP requests instead of SOAP messages.|  
-  
+
+
+|                                               Element                                               |                                                                                        Description                                                                                         |
+|-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) | A binding element that is used to configure endpoints for [!INCLUDE [indigo1](../../../../../includes/indigo1-md.md)] Web services that respond to HTTP requests instead of SOAP messages. |
+
 ## See Also  
  <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
  <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  

@@ -16,52 +16,52 @@ ms.workload:
   - "dotnet"
 ---
 # Windows Workflow Foundation Feature Specifics
-[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] adds a number of features to Windows Workflow Foundation. This document describes a number of the new features, and gives details about scenarios in which they may be useful.  
+[!INCLUDE [netfx40_long](../../../includes/netfx40-long-md.md)] adds a number of features to Windows Workflow Foundation. This document describes a number of the new features, and gives details about scenarios in which they may be useful.  
   
 ## Messaging Activities  
- The messaging activities (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) are used to send and receive [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] messages from your workflow.  <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply> activities are used to form a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service operation that is exposed via WSDL just like standard [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] web services.  <xref:System.ServiceModel.Activities.Send> and <xref:System.ServiceModel.Activities.ReceiveReply> are used to consume a web service similar to a WCF <xref:System.ServiceModel.ChannelFactory>; an **Add Service Reference** experience also exists for Workflow Foundation that generates pre-configured activities.  
+ The messaging activities (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) are used to send and receive [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] messages from your workflow.  <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply> activities are used to form a [!INCLUDE [indigo1](../../../includes/indigo1-md.md)] service operation that is exposed via WSDL just like standard [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] web services.  <xref:System.ServiceModel.Activities.Send> and <xref:System.ServiceModel.Activities.ReceiveReply> are used to consume a web service similar to a WCF <xref:System.ServiceModel.ChannelFactory>; an **Add Service Reference** experience also exists for Workflow Foundation that generates pre-configured activities.  
   
 ### Getting Started with Messaging Activities  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], create a WCF Workflow Service Application project. A <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply> pair will be placed on your canvas.  
+- In [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)], create a WCF Workflow Service Application project. A <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply> pair will be placed on your canvas.  
   
--   Right-click on the project and select **Add Service Reference**.  Point to an existing web service WSDL and click **OK**.  Build your project to show the generated activities (implemented using <xref:System.ServiceModel.Activities.Send> and <xref:System.ServiceModel.Activities.ReceiveReply>) in your toolbox.  
+- Right-click on the project and select **Add Service Reference**.  Point to an existing web service WSDL and click **OK**.  Build your project to show the generated activities (implemented using <xref:System.ServiceModel.Activities.Send> and <xref:System.ServiceModel.Activities.ReceiveReply>) in your toolbox.  
   
--   Samples for these activities can be found in the following sections:  
+- Samples for these activities can be found in the following sections:  
   
-    -   Basic: [Services](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+  -   Basic: [Services](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
   
-    -   Scenarios: [Services](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+  -   Scenarios: [Services](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
   
--   [Conceptual documentation](http://go.microsoft.com/fwlink/?LinkId=204801)  
+- [Conceptual documentation](http://go.microsoft.com/fwlink/?LinkId=204801)  
   
--   [Messaging activities designer documentation](http://go.microsoft.com/fwlink/?LinkId=204802)  
+- [Messaging activities designer documentation](http://go.microsoft.com/fwlink/?LinkId=204802)  
   
 ### Messaging Activities Example Scenario  
  A `BestPriceFinder` service calls out to multiple airline services to find the best ticket price for a particular route.  Implementing this scenario would require you to use the message activities to receive the price request, retrieve the prices from the back-end services, and reply to the price request with the best price.  It would also require you to use other out-of-box activities to create the business logic for calculating the best price.  
   
 ## WorkflowServiceHost  
- The <xref:System.ServiceModel.WorkflowServiceHost> is the out-of-box workflow host that supports multiple instances, configuration, and [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] messaging (although the workflows aren’t required to use messaging in order to be hosted).  It also integrates with persistence, tracking, and instance control through a set of service behaviors.  Just like [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]’s <xref:System.ServiceModel.ServiceHost>, the <xref:System.ServiceModel.WorkflowServiceHost> can be self-hosted in a console/WinForms/WPF application or Windows service, or web-hosted (as a .xamlx file) in IIS or WAS.  
+ The <xref:System.ServiceModel.WorkflowServiceHost> is the out-of-box workflow host that supports multiple instances, configuration, and [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] messaging (although the workflows aren’t required to use messaging in order to be hosted).  It also integrates with persistence, tracking, and instance control through a set of service behaviors.  Just like [!INCLUDE [indigo2](../../../includes/indigo2-md.md)]’s <xref:System.ServiceModel.ServiceHost>, the <xref:System.ServiceModel.WorkflowServiceHost> can be self-hosted in a console/WinForms/WPF application or Windows service, or web-hosted (as a .xamlx file) in IIS or WAS.  
   
 ### Getting Started with Workflow Service Host  
   
--   In Visual Studio 2010, create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Workflow Service Application project: this project will be set up to use <xref:System.ServiceModel.WorkflowServiceHost> in a web-host environment.  
+- In Visual Studio 2010, create a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] Workflow Service Application project: this project will be set up to use <xref:System.ServiceModel.WorkflowServiceHost> in a web-host environment.  
   
--   In order to host a non-messaging workflow, add a custom <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> that will create the instance based on a message.  
+- In order to host a non-messaging workflow, add a custom <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> that will create the instance based on a message.  
   
--   Workflow instances can be controlled (e.g. suspended or terminated) by adding a <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> to the <xref:System.ServiceModel.WorkflowServiceHost> and then using a <xref:System.ServiceModel.Activities.WorkflowControlClient>.  
+- Workflow instances can be controlled (e.g. suspended or terminated) by adding a <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> to the <xref:System.ServiceModel.WorkflowServiceHost> and then using a <xref:System.ServiceModel.Activities.WorkflowControlClient>.  
   
--   Samples for the <xref:System.ServiceModel.WorkflowServiceHost> can be found in the following sections:  
+- Samples for the <xref:System.ServiceModel.WorkflowServiceHost> can be found in the following sections:  
   
-    -   [Execution](../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
+  -   [Execution](../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
   
-    -   Basic: [Services](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+  -   Basic: [Services](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
   
-    -   Scenarios: [Services](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+  -   Scenarios: [Services](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
   
-    -   Application: [Suspended Instance Management](../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
+  -   Application: [Suspended Instance Management](../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
   
--   [WorkflowServiceHost Conceptual Documentation](http://go.microsoft.com/fwlink/?LinkId=204807)  
+- [WorkflowServiceHost Conceptual Documentation](http://go.microsoft.com/fwlink/?LinkId=204807)  
   
 ### WorkflowServiceHost Scenario  
  A BestPriceFinder service calls out to multiple airline services to find the best ticket price for a particular route.  Implementing this scenario would require you to host the workflow in <xref:System.ServiceModel.WorkflowServiceHost>.  It would also use the message activities to receive the price request, retrieve the prices from the back-end services, and reply to the price request with the best price.  
@@ -99,15 +99,15 @@ ms.workload:
  An order-processing workflow is used to handle new order creation and updating existing orders that are in process.  Implementing this scenario would require you to host the workflow in <xref:System.ServiceModel.WorkflowServiceHost> and use the messaging activities.  It would also require correlation based on the `orderId` to ensure that updates are made to the correct workflow.  
   
 ## Simplified Configuration  
- The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration schema is complex and provides users with many hard to find features. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], we have focused on helping [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] users configure their services with the following features:  
+ The [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] configuration schema is complex and provides users with many hard to find features. In [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)], we have focused on helping [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] users configure their services with the following features:  
   
--   Removing the need for explicit per-service configuration. If you do not configure any \<service> elements for your service, and your service does not define programmatically any endpoint, then a set of endpoints will be automatically added to your service, one per service base address and per contract implemented by your service.  
+- Removing the need for explicit per-service configuration. If you do not configure any \<service> elements for your service, and your service does not define programmatically any endpoint, then a set of endpoints will be automatically added to your service, one per service base address and per contract implemented by your service.  
   
--   Enables the user to define default values for WCF bindings and behaviors, which will be applied to services with no explicit configuration.  
+- Enables the user to define default values for WCF bindings and behaviors, which will be applied to services with no explicit configuration.  
   
--   Standard endpoints define reusable preconfigured endpoints, which have fixed values for one or more of the endpoint properties (address, binding and contract), and allow defining custom properties.  
+- Standard endpoints define reusable preconfigured endpoints, which have fixed values for one or more of the endpoint properties (address, binding and contract), and allow defining custom properties.  
   
--   Finally, the <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> allows you to do central management of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client configuration, useful in scenarios in which configuration is selected or changed after the application domain load time.  
+- Finally, the <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> allows you to do central management of [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client configuration, useful in scenarios in which configuration is selected or changed after the application domain load time.  
   
 ### Getting Started  
   
@@ -123,9 +123,9 @@ ms.workload:
   
 ### Simplified Configuration Scenarios  
   
--   An experienced ASMX developer wants to start using [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. However, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] seems way too complicated! What is all that information that I need to write in a configuration file? In .NET 4, you can even decide to not have a configuration file at all.  
+- An experienced ASMX developer wants to start using [!INCLUDE [indigo2](../../../includes/indigo2-md.md)]. However, [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] seems way too complicated! What is all that information that I need to write in a configuration file? In .NET 4, you can even decide to not have a configuration file at all.  
   
--   An existing set of WCF services are very difficult to configure and maintain. The configuration file has thousands of lines of XML code that are extremely dangerous to touch. Help is needed to reduce that amount of code to something more manageable.  
+- An existing set of WCF services are very difficult to configure and maintain. The configuration file has thousands of lines of XML code that are extremely dangerous to touch. Help is needed to reduce that amount of code to something more manageable.  
   
 ## Data Contract Resolver  
  In .NET 3.5, there were a few limitations in the design of known types:  
@@ -161,31 +161,31 @@ ms.workload:
   
 ### Getting Started  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], create a workflow console application. Add a Flowchart in the workflow designer.  
+- In [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)], create a workflow console application. Add a Flowchart in the workflow designer.  
   
--   The flowchart feature uses the following classes:  
+- The flowchart feature uses the following classes:  
   
-    -   <xref:System.Activities.Statements.Flowchart>  
+  -   <xref:System.Activities.Statements.Flowchart>  
   
-    -   <xref:System.Activities.Statements.FlowNode>  
+  -   <xref:System.Activities.Statements.FlowNode>  
   
-    -   <xref:System.Activities.Statements.FlowDecision>  
+  -   <xref:System.Activities.Statements.FlowDecision>  
   
-    -   <xref:System.Activities.Statements.FlowStep>  
+  -   <xref:System.Activities.Statements.FlowStep>  
   
-    -   <xref:System.Activities.Statements.FlowSwitch%601>  
+  -   <xref:System.Activities.Statements.FlowSwitch%601>  
   
--   Samples:  
+- Samples:  
   
-    -   [Fault Handling in a Flowchart Activity Using TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+  -   [Fault Handling in a Flowchart Activity Using TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    -   [StateMachine Scenario Using a Combination of FlowChart and Pick](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+  -   [StateMachine Scenario Using a Combination of FlowChart and Pick](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
   
-    -   [Hiring Process](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
+  -   [Hiring Process](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
--   Designer Documentation:  
+- Designer Documentation:  
   
-    -   [Flowchart Activity Designers](/visualstudio/workflow-designer/flowchart-activity-designers)  
+  -   [Flowchart Activity Designers](/visualstudio/workflow-designer/flowchart-activity-designers)  
   
 ### Flowchart Scenarios  
  A flowchart activity can be used to implement a guessing game. The guessing game is very simple: the computer selects a random number and the player has to guess that number. When the player submits each guess, the computer shows him a hint (i.e. "try a lower number"). If the player finds the number in less than 7 attempts, he receives a special congratulation from the computer. This game can be implemented with a combination of the following procedural activities:  
@@ -207,19 +207,19 @@ ms.workload:
   
 ### Getting Started  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], create a workflow console application. Add procedural activities in the workflow designer.  
+- In [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)], create a workflow console application. Add procedural activities in the workflow designer.  
   
--   Samples:  
+- Samples:  
   
-    -   [Hiring Process](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
+  -   [Hiring Process](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
-    -   [Corporate Purchase Process](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)  
+  -   [Corporate Purchase Process](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)  
   
--   Designer Documentation:  
+- Designer Documentation:  
   
-    -   [Parallel Activity Designer](/visualstudio/workflow-designer/parallel-activity-designer)  
+  -   [Parallel Activity Designer](/visualstudio/workflow-designer/parallel-activity-designer)  
   
-    -   [ParallelForEach\<T> Activity Designer](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)  
+  -   [ParallelForEach\<T> Activity Designer](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)  
   
 ### Procedural Activity Scenarios  
   
@@ -232,13 +232,13 @@ ms.workload:
   
 ### Getting Started  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], create a workflow console application. Add an <xref:System.Activities.Statements.InvokeMethod> activity in the workflow designer, and configure static and instance methods on it.  
+- In [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)], create a workflow console application. Add an <xref:System.Activities.Statements.InvokeMethod> activity in the workflow designer, and configure static and instance methods on it.  
   
--   Samples:  
+- Samples:  
   
-    -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+  -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
   
--   Designer Documentation: [InvokeMethod Activity Designer](/visualstudio/workflow-designer/invokemethod-activity-designer)  
+- Designer Documentation: [InvokeMethod Activity Designer](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   
 ### InvokeMethod Scenarios  
   
@@ -251,15 +251,15 @@ ms.workload:
   
 ### Getting Started  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], create a workflow console application. Add a <xref:System.Activities.Statements.TryCatch> activity in the workflow designer.  
+- In [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)], create a workflow console application. Add a <xref:System.Activities.Statements.TryCatch> activity in the workflow designer.  
   
--   Samples:  
+- Samples:  
   
-    1.  [Fault Handling in a Flowchart Activity Using TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+  1.  [Fault Handling in a Flowchart Activity Using TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    2.  [Using Procedural Activities](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+  2.  [Using Procedural Activities](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
   
--   Designer Documentation: [Error Handling Activity Designers](/visualstudio/workflow-designer/error-handling-activity-designers)  
+- Designer Documentation: [Error Handling Activity Designers](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
 ### Error handling scenarios  
  A set of activities needs to be executed, and specific logic needs to be executed when an error occurs. If during that error handling logic it is found that the error is not recoverable, the exception will be rethrown, and the parent activity (or the host) will deal with the problem.  
@@ -269,17 +269,17 @@ ms.workload:
   
 ### Getting Started  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], create a workflow console application. Add a <xref:System.Activities.Statements.Pick> activity in the workflow designer.  
+- In [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)], create a workflow console application. Add a <xref:System.Activities.Statements.Pick> activity in the workflow designer.  
   
--   Sample: [Using the Pick Activity](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)  
+- Sample: [Using the Pick Activity](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)  
   
--   Designer documentation: [Pick Activity Designer](/visualstudio/workflow-designer/pick-activity-designer)  
+- Designer documentation: [Pick Activity Designer](/visualstudio/workflow-designer/pick-activity-designer)  
   
 ### Pick Scenario  
  A user needs to be prompted for input. Under normal circumstances, the developer would use a method call like <xref:System.Console.ReadLine%2A> to prompt for a user’s input. The problem with this setup is that the program waits until the user enters something. In this scenario, a time-out is needed to unblock a blocking activity. A common scenario is one that requires a task to be completed within a given time duration. Timing out a blocking activity is a scenario where Pick adds a lot of value.  
   
 ## WCF Routing Service  
- The Routing Service is designed to be a generic software Router that allows you to control how [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]messages flow in between your clients and services.  The Routing Service allows you to decouple your clients from your services, which gives you much more freedom in terms of the configurations that you can support and the flexibility you have when considering how to host your services.  In .NET 3.5, clients and services were tightly coupled; a client had to know about all of the services it needed to talk to and where they were located. In addition, WCF in .Net Framework 3.5 had the following limitations:  
+ The Routing Service is designed to be a generic software Router that allows you to control how [!INCLUDE [indigo2](../../../includes/indigo2-md.md)]messages flow in between your clients and services.  The Routing Service allows you to decouple your clients from your services, which gives you much more freedom in terms of the configurations that you can support and the flexibility you have when considering how to host your services.  In .NET 3.5, clients and services were tightly coupled; a client had to know about all of the services it needed to talk to and where they were located. In addition, WCF in .Net Framework 3.5 had the following limitations:  
   
 -   Error handling was complex, as this logic had to be hard-coded into the client.  
   
@@ -319,7 +319,7 @@ ms.workload:
 -   Clients can be enabled to be more robust against failure or the unavailability of services.  
   
 ## WCF Discovery  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Discovery is a framework technology that allows you to incorporate a discovery mechanism to your application infrastructure. You can use this to make your service discoverable, and configure your clients to search for services. Clients no longer need to be hard coded with endpoint, making your application more robust and fault tolerant. Discovery is the perfect platform to build auto-configuration capabilities into your application.  
+ [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] Discovery is a framework technology that allows you to incorporate a discovery mechanism to your application infrastructure. You can use this to make your service discoverable, and configure your clients to search for services. Clients no longer need to be hard coded with endpoint, making your application more robust and fault tolerant. Discovery is the perfect platform to build auto-configuration capabilities into your application.  
   
  The product is built on top of the WS-Discovery standard. It’s designed to be interoperable, extensible, and generic. The product supports two modes of operation:  
   
@@ -343,29 +343,29 @@ ms.workload:
   
 ### Getting Started  
   
-1.  In [!INCLUDE[vs2010](../../../includes/vs2010-md.md)], create a WCF Workflow Service Application project. A <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply> pair will be placed on your canvas to start.  
+1. In [!INCLUDE [vs2010](../../../includes/vs2010-md.md)], create a WCF Workflow Service Application project. A <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply> pair will be placed on your canvas to start.  
   
-2.  Open the web.config and add an ETW tracking behavior with no profile.  
+2. Open the web.config and add an ETW tracking behavior with no profile.  
   
-    1.  The default profile is used.  
+   1.  The default profile is used.  
   
-    2.  Open event viewer and enable the analytic channel in the following node: **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, **Application Server-Applications**. Right-click **Analytic** and select **Enable Log**.  
+   2.  Open event viewer and enable the analytic channel in the following node: **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, **Application Server-Applications**. Right-click **Analytic** and select **Enable Log**.  
   
-    3.  Run the workflow service.  
+   3.  Run the workflow service.  
   
-    4.  Observe the workflow tracking events in event viewer.  
+   4.  Observe the workflow tracking events in event viewer.  
   
-3.  Samples: [Tracking](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
+3. Samples: [Tracking](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
   
-4.  Conceptual documentation: [Workflow Tracking and Tracing](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+4. Conceptual documentation: [Workflow Tracking and Tracing](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
   
 ## SQL Workflow Instance Store  
  The <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> is a SQL Server-based implementation of an instance store. An instance store stores the state of a running instance together with all data necessary to load and resume that instance. The service host instructs the instance store to save the instance state if the workflow persists, and it instructs the instance store to load the instance state when a message arrives for that instance or a delay activity expires.  
   
 ### Getting Started  
   
-1.  In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], create a Workflow that contains an implicit or explicit <xref:System.Activities.Statements.Persist> activity. Add the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> behavior to your workflow service host. This can be done in code or in the application configuration file.  
+1. In [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)], create a Workflow that contains an implicit or explicit <xref:System.Activities.Statements.Persist> activity. Add the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> behavior to your workflow service host. This can be done in code or in the application configuration file.  
   
-2.  Samples: [Persistence](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
+2. Samples: [Persistence](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   
-3.  Conceptual documentation: [SQL Workflow Instance Store](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).
+3. Conceptual documentation: [SQL Workflow Instance Store](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).

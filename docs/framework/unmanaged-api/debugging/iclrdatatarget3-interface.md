@@ -46,7 +46,7 @@ A subclass of [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debuggi
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [v451_update](../../../../includes/v451-update-md.md)]  
   
 ## See Also  
  [ICLRDataTarget Interface](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)  

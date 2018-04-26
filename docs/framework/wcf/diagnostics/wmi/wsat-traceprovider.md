@@ -19,20 +19,22 @@ ms.workload:
 ---
 # WSAT_TraceProvider
 WSAT_TraceProvider  
-  
+
 ## Syntax  
-  
+
 ```  
 class WSAT_TraceProvider : EventTrace  
 {  
 };  
 ```  
-  
+
 ## Methods  
  The WSAT_TraceProvider class inherits from EventTrace but does not define additional methods or properties.  
-  
+
 ## Requirements  
-  
-|MOF|Declared in Servicemodel.mof.|  
-|---------|-----------------------------------|  
-|Namespace|Defined in root\ServiceModel|
+
+
+|    MOF    | Declared in Servicemodel.mof. |
+|-----------|-------------------------------|
+| Namespace | Defined in root\ServiceModel  |
+

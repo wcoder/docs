@@ -28,10 +28,10 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ---
 # Troubleshooting Interoperability (Visual Basic)
-When you interoperate between COM and the managed code of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], you may encounter one or more of the following common issues.  
+When you interoperate between COM and the managed code of the [!INCLUDE [dnprdnshort](~/includes/dnprdnshort-md.md)], you may encounter one or more of the following common issues.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor1"></a> Interop Marshaling  
- At times, you may have to use data types that are not part of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Interop assemblies handle most of the work for COM objects, but you may have to control the data types that are used when managed objects are exposed to COM. For example, structures in class libraries must specify the `BStr` unmanaged type on strings sent to COM objects created by Visual Basic 6.0 and earlier versions. In such cases, you can use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to cause managed types to be exposed as unmanaged types.  
+ At times, you may have to use data types that are not part of the [!INCLUDE [dnprdnshort](~/includes/dnprdnshort-md.md)]. Interop assemblies handle most of the work for COM objects, but you may have to control the data types that are used when managed objects are exposed to COM. For example, structures in class libraries must specify the `BStr` unmanaged type on strings sent to COM objects created by Visual Basic 6.0 and earlier versions. In such cases, you can use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to cause managed types to be exposed as unmanaged types.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor2"></a> Exporting Fixed-Length Strings to Unmanaged Code  
  In Visual Basic 6.0 and earlier versions, strings are exported to COM objects as sequences of bytes without a null termination character. For compatibility with other languages, Visual Basic .NET includes a termination character when exporting strings. The best way to address this incompatibility is to export strings that lack the termination character as arrays of `Byte` or `Char`.  
@@ -59,7 +59,7 @@ When you interoperate between COM and the managed code of the [!INCLUDE[dnprdnsh
  Unlike classes in standard assemblies, COM classes are exposed in interop assemblies as both an interface and a class that represents the COM class. The interface's name is identical to that of the COM class. The name of the interop class is the same as that of the original COM class, but with the word "Class" appended. For example, suppose you have a project with a reference to an interop assembly for a COM object. If the COM class is named `MyComClass`, IntelliSense and the Object Browser show an interface named `MyComClass` and a class named `MyComClassClass`.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor6"></a> Creating Instances of a .NET Framework Class  
- Generally, you create an instance of a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class using the `New` statement with a class name. Having a COM class represented by an interop assembly is the one case in which you can use the `New` statement with an interface. Unless you are using the COM class with an `Inherits` statement, you can use the interface just as you would a class. The following code demonstrates how to create a `Command` object in a project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object:  
+ Generally, you create an instance of a [!INCLUDE [dnprdnshort](~/includes/dnprdnshort-md.md)] class using the `New` statement with a class name. Having a COM class represented by an interop assembly is the one case in which you can use the `New` statement with an interface. Unless you are using the COM class with an `Inherits` statement, you can use the interface just as you would a class. The following code demonstrates how to create a `Command` object in a project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object:  
   
  [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
   
@@ -71,7 +71,7 @@ When you interoperate between COM and the managed code of the [!INCLUDE[dnprdnsh
 >  Interop assemblies implicitly implement interfaces that represent COM classes. You should not try to use the `Implements` statement to implement these interfaces or an error will result.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor7"></a> Data Types for Parameters and Return Values  
- Unlike members of standard assemblies, interop assembly members may have data types that differ from those used in the  original object declaration. Although interop assemblies implicitly convert COM types to compatible common language runtime types, you should pay attention to the data types that are used by both sides to prevent runtime errors. For example, in COM objects created in Visual Basic 6.0 and earlier versions, values of type `Integer` assume the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] equivalent type, `Short`. It is recommended that you use the Object Browser to examine the characteristics of imported members before you use them.  
+ Unlike members of standard assemblies, interop assembly members may have data types that differ from those used in the  original object declaration. Although interop assemblies implicitly convert COM types to compatible common language runtime types, you should pay attention to the data types that are used by both sides to prevent runtime errors. For example, in COM objects created in Visual Basic 6.0 and earlier versions, values of type `Integer` assume the [!INCLUDE [dnprdnshort](~/includes/dnprdnshort-md.md)] equivalent type, `Short`. It is recommended that you use the Object Browser to examine the characteristics of imported members before you use them.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor8"></a> Module level COM methods  
  Most COM objects are used by creating an instance of a COM class using the `New` keyword and then calling methods of the object. One exception to this rule involves COM objects that contain `AppObj` or `GlobalMultiUse` COM classes. Such classes resemble module level methods in Visual Basic .NET classes. Visual Basic 6.0 and earlier versions implicitly create instances of such objects for you the first time that you call one of their methods. For example, in Visual Basic 6.0 you can add a reference to the Microsoft DAO 3.6 Object Library and call the `DBEngine` method without first creating an instance:  
@@ -102,7 +102,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  You can find information such as the error description, HRESULT, and the source of COM errors by examining the contents of the exception object.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX Control Issues  
- Most ActiveX controls that work with Visual Basic 6.0 work with Visual Basic .NET without trouble. The main exceptions are container controls, or controls that visually contain other controls. Some examples of older controls that do not work correctly with [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] are as follows:  
+ Most ActiveX controls that work with Visual Basic 6.0 work with Visual Basic .NET without trouble. The main exceptions are container controls, or controls that visually contain other controls. Some examples of older controls that do not work correctly with [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)] are as follows:  
   
 -   Microsoft Forms 2.0 Frame control  
   
@@ -110,7 +110,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 -   Sheridan Tab Control  
   
- There are only a few workarounds for unsupported ActiveX control problems. You can migrate existing controls to [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] if you own the original source code. Otherwise, you can check with software vendors for updated .NET-compatible versions of controls to replace unsupported ActiveX controls.  
+ There are only a few workarounds for unsupported ActiveX control problems. You can migrate existing controls to [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)] if you own the original source code. Otherwise, you can check with software vendors for updated .NET-compatible versions of controls to replace unsupported ActiveX controls.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor11"></a> Passing ReadOnly Properties of Controls ByRef  
  Visual Basic .NET sometimes raises COM errors such as, "Error 0x800A017F CTL_E_SETNOTSUPPORTED", when you pass `ReadOnly` properties of some older ActiveX controls as `ByRef` parameters to other procedures. Similar procedure calls from Visual Basic 6.0 do not raise an error, and the parameters are treated as if you passed them by value. The Visual Basic .NET error message indicates that you are trying to change a property that does not have a property `Set` procedure.  

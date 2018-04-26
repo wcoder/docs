@@ -18,11 +18,11 @@ ms.workload:
   - "dotnet"
 ---
 # Querying the Database
-This group of topics describes how to develop and execute queries in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projects.  
+This group of topics describes how to develop and execute queries in [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projects.  
   
 ## In This Section  
  [How to: Query for Information](../../../../../../docs/framework/data/adonet/sql/linq/how-to-query-for-information.md)  
- Briefly shows how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries are basically the same as [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] queries generally.  
+ Briefly shows how [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries are basically the same as [!INCLUDE [vbteclinq](../../../../../../includes/vbteclinq-md.md)] queries generally.  
   
  [How to: Retrieve Information As Read-Only](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)  
  Describes how to increase query performance when no change to the data is planned.  

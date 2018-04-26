@@ -29,35 +29,35 @@ The .NET Framework for Windows Store apps is a subset of the full .NET Framework
 ## Converting from a Windows Runtime stream to a .NET Framework stream  
  You can convert from a Windows Runtime stream to a .NET Framework stream by using one of the following <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions` methods:  
   
- <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStream`  
+ &lt;!--zz &lt;xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A&gt; --&gt; `System.IO.WindowsRuntimeStreamExtensions.AsStream`  
  Converts a random-access stream in the Windows Runtime to a managed stream in the .NET for Windows Store apps subset.  
   
- <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForWrite%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStreamForWrite`
+ &lt;!--zz &lt;xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForWrite%2A&gt; --&gt; `System.IO.WindowsRuntimeStreamExtensions.AsStreamForWrite`
  Converts an output stream in the Windows Runtime to a managed stream in the .NET for Windows Store apps subset.  
   
- <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead`  
+ &lt;!--zz &lt;xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A&gt; --&gt; `System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead`  
  Converts an input stream in the Windows Runtime to a managed stream in the .NET for Windows Store apps subset.  
   
  The Windows Runtime offers stream types that support reading only, writing only or reading and writing, and these capabilities are maintained when you convert a Windows Runtime stream to a .NET Framework stream. Furthermore, if you convert a Windows Runtime stream to a .NET Framework stream and back, you get the original Windows Runtime instance back. It’s best practice to use the conversion method that matches the capabilities of the Windows Runtime stream you would like to convert. However, since [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx) is readable and writeable (it implements both [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx) and [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx)), you can use any of the conversion methods and the capabilities of the original stream are maintained. For example, using <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead` to convert an [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx) will not limit the converted .NET Framework stream to being readable only; it will also be writable.  
   
 #### To convert from a Windows Runtime random-access stream to a .NET Framework stream  
   
--   Use the <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStream` method.  
+- Use the <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStream` method.  
   
-     The following code example shows how to prompt the user to select a file, open it with Windows Runtime APIs, and then convert it to a .NET Framework stream, which is read and output to a text block. In this scenario, you would typically manipulate the stream with .NET Framework APIs before outputting the results.  
+   The following code example shows how to prompt the user to select a file, open it with Windows Runtime APIs, and then convert it to a .NET Framework stream, which is read and output to a text block. In this scenario, you would typically manipulate the stream with .NET Framework APIs before outputting the results.  
   
-     To run this example, you must create a Windows Store XAML app that contains a text block named `TextBlock1` and a button named  `Button1`. The button click event must be associated with the `button1_Click` method shown in the example.  
+   To run this example, you must create a Windows Store XAML app that contains a text block named `TextBlock1` and a button named  `Button1`. The button click event must be associated with the `button1_Click` method shown in the example.  
   
-     [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#imports)]
-     [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#imports)]  
-    [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#1)]
-    [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#1)]  
+   [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#imports)]
+   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#imports)]  
+  [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#1)]
+  [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#1)]  
   
 <a name="BKMK_ConvertingfromaNETFrameworkstreamtoaWindowsRuntimestream"></a>   
 ## Converting from a .NET Framework stream to a Windows Runtime stream  
  You can convert from a .NET Framework stream to a Windows Runtime stream by using one of the following <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions` methods:  
   
- <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsInputStream`  
+ &lt;!--zz &lt;xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A&gt; --&gt; `System.IO.WindowsRuntimeStreamExtensions.AsInputStream`  
  Converts a managed stream in the .NET for Windows Store apps subset to an input stream in the Windows Runtime.  
   
 <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A>  --> `System.IO.WindowsRuntimeStreamExtensions.AsOutputStream`
@@ -72,17 +72,17 @@ The .NET Framework for Windows Store apps is a subset of the full .NET Framework
   
 #### To convert from a .NET Framework stream to a Windows Runtime random-access stream  
   
--   Use the [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) method, as shown in the following example.  
+- Use the [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) method, as shown in the following example.  
   
-    > [!IMPORTANT]
-    >  Ensure that the .NET Framework stream you are using supports seeking, or copy it to a stream that does. You can use the <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> property to determine this.  
+  > [!IMPORTANT]
+  >  Ensure that the .NET Framework stream you are using supports seeking, or copy it to a stream that does. You can use the <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> property to determine this.  
   
-     To run this example, you must create a Windows Store XAML app that targets the .NET Framework 4.5.1 and contains a text block named `TextBlock2` and a button named `Button2`. The button click event must be associated with the `button2_Click` method shown in this example.  
+   To run this example, you must create a Windows Store XAML app that targets the .NET Framework 4.5.1 and contains a text block named `TextBlock2` and a button named `Button2`. The button click event must be associated with the `button2_Click` method shown in this example.  
   
-     [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#imports)]
-     [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#imports)]  
-    [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#2)]
-    [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#2)]  
+   [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#imports)]
+   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#imports)]  
+  [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#2)]
+  [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#2)]  
   
 ## See Also  
  [Quickstart: Reading and writing a file (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  

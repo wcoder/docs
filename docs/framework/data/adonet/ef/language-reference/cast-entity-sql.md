@@ -37,7 +37,7 @@ CAST ( expression AS data_type )
  Returns the same value as `data_type`.  
   
 ## Remarks  
- The cast expression has similar semantics to the [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] CONVERT expression. The cast expression is used to convert a value of one type into a value of another type.  
+ The cast expression has similar semantics to the [!INCLUDE [tsql](../../../../../../includes/tsql-md.md)] CONVERT expression. The cast expression is used to convert a value of one type into a value of another type.  
   
 ```  
 CAST( e as T )  
@@ -59,7 +59,7 @@ CAST( e as T )
 >  CAST is only supported over primitive types and enumeration member types.  
   
 ## Example  
- The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the CAST operator to cast an expression of one data type to another. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  
+ The following [!INCLUDE [esql](../../../../../../includes/esql-md.md)] query uses the CAST operator to cast an expression of one data type to another. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  
   
 1.  Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   

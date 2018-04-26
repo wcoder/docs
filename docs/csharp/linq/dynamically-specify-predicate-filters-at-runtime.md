@@ -17,33 +17,33 @@ In some cases you do not know until run time how many predicates you have to app
   
 ## To filter by using the Contains method  
   
-1.  Open a new console application and name it `PredicateFilters`.  
+1. Open a new console application and name it `PredicateFilters`.  
   
-2.  Copy the `StudentClass` class from [Query a collection of objects](query-a-collection-of-objects.md) and paste it into namespace `PredicateFilters` underneath class `Program`. `StudentClass` provides a list of `Student` objects.  
+2. Copy the `StudentClass` class from [Query a collection of objects](query-a-collection-of-objects.md) and paste it into namespace `PredicateFilters` underneath class `Program`. `StudentClass` provides a list of `Student` objects.  
   
-3.  Comment out the `Main` method in `StudentClass`.  
+3. Comment out the `Main` method in `StudentClass`.  
   
-4.  Replace class `Program` with the following code.  
+4. Replace class `Program` with the following code.  
   
-     [!code-csharp[csProgGuideLINQ#26](../../../samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
+    [!code-csharp[csProgGuideLINQ#26](../../../samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
   
-5.  Add the following line to the `Main` method in class `DynamicPredicates`, under the declaration of `ids`.  
+5. Add the following line to the `Main` method in class `DynamicPredicates`, under the declaration of `ids`.  
   
-     ```csharp
-     QueryById(ids);
-     ```
+    ```csharp
+    QueryById(ids);
+    ```
 
-6.  Run the project.  
+6. Run the project.  
   
-7.  The following output is displayed in a console window:  
+7. The following output is displayed in a console window:  
   
-     Garcia: 114  
+    Garcia: 114  
   
-     O'Donnell: 112  
+    O'Donnell: 112  
   
-     Omelchenko: 111  
+    Omelchenko: 111  
   
-8.  The next step is to run the project again, this time by using input entered at run time instead of array `ids`. Change `QueryByID(ids)` to `QueryByID(args)` in the `Main` method.  
+8. The next step is to run the project again, this time by using input entered at run time instead of array `ids`. Change `QueryByID(ids)` to `QueryByID(args)` in the `Main` method.  
   
 9. Run the project with the command line arguments `122 117 120 115`. When the project is run, those values become elements of `args`, the parameter of the `Main` method..  
   
@@ -59,15 +59,15 @@ In some cases you do not know until run time how many predicates you have to app
   
 ## To filter by using a switch statement  
   
-1.  You can use a `switch` statement to select among predetermined alternative queries. In the following example, `studentQuery` uses a different `where` clause depending on which grade level, or year, is specified at run time.  
+1. You can use a `switch` statement to select among predetermined alternative queries. In the following example, `studentQuery` uses a different `where` clause depending on which grade level, or year, is specified at run time.  
   
-2.  Copy the following method and paste it into class `DynamicPredicates`.  
+2. Copy the following method and paste it into class `DynamicPredicates`.  
   
-     [!code-csharp[csProgGuideLINQ#27](../../../samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
+    [!code-csharp[csProgGuideLINQ#27](../../../samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
   
-3.  In the `Main` method, replace the call to `QueryByID` with the following call, which sends the first element from the `args` array as its argument: `QueryByYear(args[0])`.  
+3. In the `Main` method, replace the call to `QueryByID` with the following call, which sends the first element from the `args` array as its argument: `QueryByYear(args[0])`.  
   
-4.  Run the project with a command line argument of an integer value between 1 and 4.  
+4. Run the project with a command line argument of an integer value between 1 and 4.  
   
  
 ## See Also  

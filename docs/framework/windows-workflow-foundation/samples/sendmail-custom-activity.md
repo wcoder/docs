@@ -111,7 +111,7 @@ new SendMail
 ## Set-Up Instructions  
  Access to a SMTP server is required for this sample.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] setting up a SMTP server, see the following links.  
+ [!INCLUDE [crabout](../../../../includes/crabout-md.md)] setting up a SMTP server, see the following links.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   
@@ -125,23 +125,23 @@ new SendMail
   
 ##### To run this sample  
   
-1.  Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the SendMail.sln solution file.  
+1. Using [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)], open the SendMail.sln solution file.  
   
-2.  Ensure that you have access to a valid SMTP server. See the set-up instructions.  
+2. Ensure that you have access to a valid SMTP server. See the set-up instructions.  
   
-3.  Configure the program with your server address, and From and To email addresses.  
+3. Configure the program with your server address, and From and To email addresses.  
   
-     To correctly run this sample, you may need to configure the value of From and To email addresses and the address of the SMTP server in  Program.cs and in Sequence.xaml. You will need to change the address in both locations since the program sends mail in two different ways  
+    To correctly run this sample, you may need to configure the value of From and To email addresses and the address of the SMTP server in  Program.cs and in Sequence.xaml. You will need to change the address in both locations since the program sends mail in two different ways  
   
-4.  To build the solution, press CTRL+SHIFT+B.  
+4. To build the solution, press CTRL+SHIFT+B.  
   
-5.  To run the solution, press CTRL+F5.  
+5. To run the solution, press CTRL+F5.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SendMail`

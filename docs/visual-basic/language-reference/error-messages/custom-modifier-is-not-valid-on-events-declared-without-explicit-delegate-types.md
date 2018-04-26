@@ -26,17 +26,17 @@ Unlike a non-custom event, a `Custom Event` declaration requires an `As` clause 
   
 ## To correct this error  
   
-1.  Define a delegate with the same parameter list as the custom event.  
+1. Define a delegate with the same parameter list as the custom event.  
   
-     For example, if the `Custom Event` was defined by `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, then the corresponding delegate would be the following.  
+    For example, if the `Custom Event` was defined by `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, then the corresponding delegate would be the following.  
   
-     [!code-vb[VbVbalrEventError#18](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_1.vb)]  
+    [!code-vb[VbVbalrEventError#18](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_1.vb)]  
   
-2.  Replace the parameter list of the custom event with an `As` clause specifying the delegate type.  
+2. Replace the parameter list of the custom event with an `As` clause specifying the delegate type.  
   
-     Continuing with the example, `Custom Event` declaration would be rewritten as follows.  
+    Continuing with the example, `Custom Event` declaration would be rewritten as follows.  
   
-     [!code-vb[VbVbalrEventError#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_2.vb)]  
+    [!code-vb[VbVbalrEventError#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_2.vb)]  
   
 ## Example  
  This example declares a `Custom Event` and specifies the required `As` clause with a delegate type.  

@@ -37,7 +37,7 @@ Determines if a collection is empty.
  `true` if the collection is not empty; otherwise, `false`.  
   
 ## Remarks  
- EXISTS is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators. All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right. For precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
+ EXISTS is one of the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators. All [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right. For precedence information for the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
   
 ## Example  
  The following Entity SQL query uses the EXISTS operator to determine whether the collection is empty. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  

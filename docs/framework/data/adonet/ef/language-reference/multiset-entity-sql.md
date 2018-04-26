@@ -36,7 +36,7 @@ or
  A collection of type MULTISET\<T>.  
   
 ## Remarks  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] provides three kinds of constructors: row constructors, object constructors, and multiset (or collection) constructors. For more information, see [Constructing Types](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ [!INCLUDE [esql](../../../../../../includes/esql-md.md)] provides three kinds of constructors: row constructors, object constructors, and multiset (or collection) constructors. For more information, see [Constructing Types](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
   
  The multiset constructor creates an instance of a multiset from a list of values. All the values in the constructor must be of a compatible type.  
   

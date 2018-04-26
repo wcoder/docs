@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # .NET Framework 4.5 Built-In Activity Library
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] includes a new activity library with expanded functionality. The types of activities include the following:  
+[!INCLUDE [netfx_current_long](../../../includes/netfx-current-long-md.md)] includes a new activity library with expanded functionality. The types of activities include the following:  
   
 -   [Control Flow](../../../docs/framework/windows-workflow-foundation/control-flow-activities-in-wf.md)  
   

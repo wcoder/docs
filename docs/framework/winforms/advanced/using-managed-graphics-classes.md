@@ -22,11 +22,11 @@ ms.workload:
   - dotnet
 ---
 # Using Managed Graphics Classes
-The following topics describe how to use the [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API in the managed class framework.  
+The following topics describe how to use the [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API in the managed class framework.  
   
 ## In This Section  
  [Getting Started with Graphics Programming](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- Describes how to accomplish basic tasks with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Describes how to accomplish basic tasks with [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
  [Using a Pen to Draw Lines and Shapes](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
  Demonstrates how to construct a pen and use it to draw a variety of lines and shapes.  

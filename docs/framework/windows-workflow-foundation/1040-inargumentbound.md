@@ -17,27 +17,29 @@ ms.workload:
 ---
 # 1040 - InArgumentBound
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|1040|  
 |Keywords|WFActivities|  
 |Level|Verbose|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates an In argument has been bound.  
-  
+
 ## Message  
  In argument '%1' on Activity '%2', DisplayName: '%3', InstanceId: '%4' has been bound with value: %5.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|InArgument|xs:string|The name of the InArgument.|  
-|Activity|xs:string|The type name of the activity.|  
-|DisplayName|xs:string|The display name of the activity.|  
-|InstanceId|xs:string|The instance id of the activity.|  
-|Value|xs:string|The value bound to the InArgument.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|   InArgument   |   xs:string    |                 The name of the InArgument.                  |
+|    Activity    |   xs:string    |                The type name of the activity.                |
+|  DisplayName   |   xs:string    |              The display name of the activity.               |
+|   InstanceId   |   xs:string    |               The instance id of the activity.               |
+|     Value      |   xs:string    |              The value bound to the InArgument.              |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

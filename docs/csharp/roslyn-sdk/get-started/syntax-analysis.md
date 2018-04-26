@@ -40,7 +40,7 @@ That brief description provides an overview of the kind of information accessibl
 
 To get started, you'll need to install the **.NET Compiler Platform SDK**:
 
-[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+[!INCLUDE [interactive-note](~/includes/roslyn-installation.md)]
 
 ## Understanding syntax trees
 

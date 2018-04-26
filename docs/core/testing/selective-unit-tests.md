@@ -99,8 +99,10 @@ In the code example, the defined traits with keys `Category` and `Priority` can 
 
 **Using conditional operators | and &amp;**
 
-| Expression | Result |
-| ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | Runs tests which has `TestClass1` in `FullyQualifiedName` **or** `Category` is `Nightly`. |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"` | Runs tests which has `TestClass1` in `FullyQualifiedName` **and** `Category` is `Nightly`. |
+
+|                                              Expression                                              |                                                               Result                                                                |
+|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+|       <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code>        |                      Runs tests which has `TestClass1` in `FullyQualifiedName` **or** `Category` is `Nightly`.                      |
+|               `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"`                |                     Runs tests which has `TestClass1` in `FullyQualifiedName` **and** `Category` is `Nightly`.                      |
 | <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | Runs tests which have either `FullyQualifiedName` containing `TestClass1` **and** `Category` is `CategoryA` **or** `Priority` is 1. |
+

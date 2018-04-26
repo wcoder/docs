@@ -18,13 +18,13 @@ ms.workload:
   - "dotnet"
 ---
 # Learning by Walkthroughs
-The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation provides several walkthroughs. This topic addresses some general walkthrough issues (including troubleshooting), and provides links to several entry-level walkthroughs for learning about [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+The [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation provides several walkthroughs. This topic addresses some general walkthrough issues (including troubleshooting), and provides links to several entry-level walkthroughs for learning about [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 > [!NOTE]
->  The walkthroughs in this Getting Started section expose you to the basic code that supports [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology. In actual practice, you will typically use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] and Windows Forms projects to implement your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications. The [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] documentation provides examples and walkthroughs for this purpose.  
+>  The walkthroughs in this Getting Started section expose you to the basic code that supports [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology. In actual practice, you will typically use the [!INCLUDE [vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] and Windows Forms projects to implement your [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications. The [!INCLUDE [vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] documentation provides examples and walkthroughs for this purpose.  
   
 ## Getting Started Walkthroughs  
- Several walkthroughs are available in this section. These walkthroughs are based on the sample Northwind database, and present [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] features at a gentle pace with minimal complexities.  
+ Several walkthroughs are available in this section. These walkthroughs are based on the sample Northwind database, and present [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] features at a gentle pace with minimal complexities.  
   
  A typical progression to follow would be as follows:  
   
@@ -38,20 +38,20 @@ The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] document
 ## General  
  The following information pertains to these walkthroughs in general:  
   
--   Environment: Each [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] walkthrough uses Visual Studio as its integrated development environment (IDE).  
+- Environment: Each [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] walkthrough uses Visual Studio as its integrated development environment (IDE).  
   
--   SQL engines: These walkthroughs are written to be implemented by using SQL Server Express. If you do not have SQL Server Express, you can download it free of charge. For more information, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- SQL engines: These walkthroughs are written to be implemented by using SQL Server Express. If you do not have SQL Server Express, you can download it free of charge. For more information, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
-    > [!NOTE]
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] walkthroughs use a file name as a connection string. Simply specifying a file name is a convenience that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for SQL Server Express users. Always pay attention to security issues. For more information, see [Security in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+  > [!NOTE]
+  >  [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] walkthroughs use a file name as a connection string. Simply specifying a file name is a convenience that [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for SQL Server Express users. Always pay attention to security issues. For more information, see [Security in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] walkthroughs typically require the Northwind sample database. For more information, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] walkthroughs typically require the Northwind sample database. For more information, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   The dialog boxes and menu commands you see in walkthroughs might differ from those described in Help, depending on your active settings or Visual Studio edition. To change your settings, click **Import and Export Settings** on the **Tools** menu. For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+- The dialog boxes and menu commands you see in walkthroughs might differ from those described in Help, depending on your active settings or Visual Studio edition. To change your settings, click **Import and Export Settings** on the **Tools** menu. For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
--   For walkthroughs that address multi-tier scenarios, a server must be located on a computer that is distinct from the development computer, and you must have appropriate permissions to access the server.  
+- For walkthroughs that address multi-tier scenarios, a server must be located on a computer that is distinct from the development computer, and you must have appropriate permissions to access the server.  
   
--   The name of the class that typically represents the Orders table in the Northwind sample database is `[Order]`. The escaping is required because `Order` is a keyword in Visual Basic.  
+- The name of the class that typically represents the Orders table in the Northwind sample database is `[Order]`. The escaping is required because `Order` is a keyword in Visual Basic.  
   
 ## Troubleshooting  
  Run-time errors can occur because you do not have sufficient permissions to access the databases used in these walkthroughs. See the following steps to help resolve the most common of these issues.  
@@ -74,7 +74,7 @@ The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] document
      If you make a change, click **Restart** to restart the service.  
   
 ### Protocols  
- At times, protocols might not be set correctly for your application to access the database. For example, the **Named Pipes** protocol, which is required for walkthroughs in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], is not enabled by default.  
+ At times, protocols might not be set correctly for your application to access the database. For example, the **Named Pipes** protocol, which is required for walkthroughs in [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], is not enabled by default.  
   
 ##### To enable the Named Pipes protocol  
   

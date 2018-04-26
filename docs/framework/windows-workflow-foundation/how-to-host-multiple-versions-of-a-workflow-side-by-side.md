@@ -49,26 +49,26 @@ ms.workload:
   
 ###  <a name="BKMK_BackupCopy"></a> To make a copy of the NumberGuessWorkflowActivities project  
   
-1.  Open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] if it is not open.  
+1. Open the **WF45GettingStartedTutorial** solution in [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)] if it is not open.  
   
-2.  Press CTRL+SHIFT+B to build the solution.  
+2. Press CTRL+SHIFT+B to build the solution.  
   
-3.  Close the **WF45GettingStartedTutorial** solution.  
+3. Close the **WF45GettingStartedTutorial** solution.  
   
-4.  Open Windows Explorer and navigate to the folder where the tutorial solution file and the project folders are located.  
+4. Open Windows Explorer and navigate to the folder where the tutorial solution file and the project folders are located.  
   
-5.  Create a new folder named **PreviousVersions** in the same folder as **NumberGuessWorkflowHost** and **NumberGuessWorkflowActivities**. This folder is used to contain the assemblies that contain the different versions of the workflows used in the subsequent tutorial steps.  
+5. Create a new folder named **PreviousVersions** in the same folder as **NumberGuessWorkflowHost** and **NumberGuessWorkflowActivities**. This folder is used to contain the assemblies that contain the different versions of the workflows used in the subsequent tutorial steps.  
   
-6.  Navigate to the **NumberGuessWorkflowActivities\bin\debug** folder (or **bin\release** depending on your project settings). Copy **NumberGuessWorkflowActivities.dll** and paste it into the **PreviousVersions** folder.  
+6. Navigate to the **NumberGuessWorkflowActivities\bin\debug** folder (or **bin\release** depending on your project settings). Copy **NumberGuessWorkflowActivities.dll** and paste it into the **PreviousVersions** folder.  
   
-7.  Rename **NumberGuessWorkflowActivities.dll** in the **PreviousVersions** folder to **NumberGuessWorkflowActivities_v1.dll**.  
+7. Rename **NumberGuessWorkflowActivities.dll** in the **PreviousVersions** folder to **NumberGuessWorkflowActivities_v1.dll**.  
   
-    > [!NOTE]
-    >  The steps in this topic demonstrate one way to manage the assemblies used to contain multiple versions of the workflows. Other methods such as strong naming the assemblies and registering them in the global assembly cache could also be used.  
+   > [!NOTE]
+   >  The steps in this topic demonstrate one way to manage the assemblies used to contain multiple versions of the workflows. Other methods such as strong naming the assemblies and registering them in the global assembly cache could also be used.  
   
-8.  Create a new folder named **NumberGuessWorkflowActivities_du** in the same folder as **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, and the newly added **PreviousVersions** folder, and copy all of the files and subfolders from the **NumberGuessWorkflowActivities** folder into the new **NumberGuessWorkflowActivities_du** folder. This backup copy of the project for the initial version of the activities is used in [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).  
+8. Create a new folder named **NumberGuessWorkflowActivities_du** in the same folder as **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, and the newly added **PreviousVersions** folder, and copy all of the files and subfolders from the **NumberGuessWorkflowActivities** folder into the new **NumberGuessWorkflowActivities_du** folder. This backup copy of the project for the initial version of the activities is used in [How to: Update the Definition of a Running Workflow Instance](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).  
   
-9. Re-open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+9. Re-open the **WF45GettingStartedTutorial** solution in [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)].  
   
 ###  <a name="BKMK_UpdateWorkflows"></a> To update the workflows  
  In this section, the workflow definitions are updated. The two `WriteLine` activities that give feedback on the user's guess are updated, and a new `WriteLine` activity is added that provides additional information about the game once the number is guessed.  

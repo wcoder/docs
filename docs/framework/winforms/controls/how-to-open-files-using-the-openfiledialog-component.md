@@ -34,152 +34,152 @@ The <xref:System.Windows.Forms.OpenFileDialog> component allows users to browse 
   
 ### To open a file as a stream using the OpenFileDialog component  
   
-1.  Display the **Open File** dialog box and call a method to open the file selected by the user.  
+1. Display the **Open File** dialog box and call a method to open the file selected by the user.  
   
-     One approach is to use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the Open File dialog box, and use an instance of the <xref:System.IO.StreamReader> class to open the file.  
+    One approach is to use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the Open File dialog box, and use an instance of the <xref:System.IO.StreamReader> class to open the file.  
   
-     The example below uses the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler to open an instance of the <xref:System.Windows.Forms.OpenFileDialog> component. When a file is chosen and the user clicks **OK**, the file selected in the dialog box opens. In this case, the contents are displayed in a message box, just to show that the file stream has been read.  
+    The example below uses the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler to open an instance of the <xref:System.Windows.Forms.OpenFileDialog> component. When a file is chosen and the user clicks **OK**, the file selected in the dialog box opens. In this case, the contents are displayed in a message box, just to show that the file stream has been read.  
   
-    > [!IMPORTANT]
-    >  To get or set the <xref:System.Windows.Forms.FileDialog.FileName%2A> property, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> class. If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges. For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).  
+   > [!IMPORTANT]
+   >  To get or set the <xref:System.Windows.Forms.FileDialog.FileName%2A> property, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> class. If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges. For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).  
   
-     The example assumes your form has a <xref:System.Windows.Forms.Button> control and an <xref:System.Windows.Forms.OpenFileDialog> component.  
+    The example assumes your form has a <xref:System.Windows.Forms.Button> control and an <xref:System.Windows.Forms.OpenFileDialog> component.  
   
-    ```vb  
-    Private Sub Button1_Click(ByVal sender As System.Object, _  
-       ByVal e As System.EventArgs) Handles Button1.Click  
-       If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then  
-         Dim sr As New System.IO.StreamReader(OpenFileDialog1.FileName)  
-         MessageBox.Show(sr.ReadToEnd)  
-         sr.Close()  
-       End If  
-    End Sub  
-    ```  
+   ```vb  
+   Private Sub Button1_Click(ByVal sender As System.Object, _  
+      ByVal e As System.EventArgs) Handles Button1.Click  
+      If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then  
+        Dim sr As New System.IO.StreamReader(OpenFileDialog1.FileName)  
+        MessageBox.Show(sr.ReadToEnd)  
+        sr.Close()  
+      End If  
+   End Sub  
+   ```  
   
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)  
-    {  
-       if(openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)  
-       {  
-          System.IO.StreamReader sr = new   
-             System.IO.StreamReader(openFileDialog1.FileName);  
-          MessageBox.Show(sr.ReadToEnd());  
-          sr.Close();  
-       }  
-    }  
-    ```  
+   ```csharp  
+   private void button1_Click(object sender, System.EventArgs e)  
+   {  
+      if(openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)  
+      {  
+         System.IO.StreamReader sr = new   
+            System.IO.StreamReader(openFileDialog1.FileName);  
+         MessageBox.Show(sr.ReadToEnd());  
+         sr.Close();  
+      }  
+   }  
+   ```  
   
-    ```cpp  
-    private:  
-       void button1_Click(System::Object ^ sender,  
-          System::EventArgs ^ e)  
-       {  
-          if(openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)  
-          {  
-             System::IO::StreamReader ^ sr = gcnew  
-                System::IO::StreamReader(openFileDialog1->FileName);  
-             MessageBox::Show(sr->ReadToEnd());  
-             sr->Close();  
-          }  
-       }  
-    ```  
+   ```cpp  
+   private:  
+      void button1_Click(System::Object ^ sender,  
+         System::EventArgs ^ e)  
+      {  
+         if(openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)  
+         {  
+            System::IO::StreamReader ^ sr = gcnew  
+               System::IO::StreamReader(openFileDialog1->FileName);  
+            MessageBox::Show(sr->ReadToEnd());  
+            sr->Close();  
+         }  
+      }  
+   ```  
   
-     (Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
+    (Visual C# and [!INCLUDE [vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
   
-    ```csharp  
-    this.button1.Click += new System.EventHandler(this.button1_Click);  
-    ```  
+   ```csharp  
+   this.button1.Click += new System.EventHandler(this.button1_Click);  
+   ```  
   
-    ```cpp  
-    this->button1->Click += gcnew  
-       System::EventHandler(this, &Form1::button1_Click);  
-    ```  
+   ```cpp  
+   this->button1->Click += gcnew  
+      System::EventHandler(this, &Form1::button1_Click);  
+   ```  
   
-    > [!NOTE]
-    >  For more information about reading from file streams, see <xref:System.IO.FileStream.BeginRead%2A> and <xref:System.IO.FileStream.Read%2A>.  
+   > [!NOTE]
+   >  For more information about reading from file streams, see <xref:System.IO.FileStream.BeginRead%2A> and <xref:System.IO.FileStream.Read%2A>.  
   
 ### To open a file as a file using the OpenFileDialog component  
   
-1.  Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box and the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method to open the file.  
+1. Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box and the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method to open the file.  
   
-     The <xref:System.Windows.Forms.OpenFileDialog> component's <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method returns the bytes that compose the file. These bytes give you a stream to read from. In the example below, an <xref:System.Windows.Forms.OpenFileDialog> component is instantiated with a "cursor" filter on it, allowing the user to choose only files with the file name extension`.cur`. If a`.cur` file is chosen, the form's cursor is set to the selected cursor.  
+    The <xref:System.Windows.Forms.OpenFileDialog> component's <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method returns the bytes that compose the file. These bytes give you a stream to read from. In the example below, an <xref:System.Windows.Forms.OpenFileDialog> component is instantiated with a "cursor" filter on it, allowing the user to choose only files with the file name extension`.cur`. If a`.cur` file is chosen, the form's cursor is set to the selected cursor.  
   
-    > [!IMPORTANT]
-    >  To call the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> class. If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges. For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).  
+   > [!IMPORTANT]
+   >  To call the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> class. If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges. For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).  
   
-     The example assumes your form has a <xref:System.Windows.Forms.Button> control.  
+    The example assumes your form has a <xref:System.Windows.Forms.Button> control.  
   
-    ```vb  
-    Private Sub Button1_Click(ByVal sender As System.Object, _  
-       ByVal e As System.EventArgs) Handles Button1.Click  
-       ' Displays an OpenFileDialog so the user can select a Cursor.  
-       Dim openFileDialog1 As New OpenFileDialog()  
-       openFileDialog1.Filter = "Cursor Files|*.cur"  
-       openFileDialog1.Title = "Select a Cursor File"  
+   ```vb  
+   Private Sub Button1_Click(ByVal sender As System.Object, _  
+      ByVal e As System.EventArgs) Handles Button1.Click  
+      ' Displays an OpenFileDialog so the user can select a Cursor.  
+      Dim openFileDialog1 As New OpenFileDialog()  
+      openFileDialog1.Filter = "Cursor Files|*.cur"  
+      openFileDialog1.Title = "Select a Cursor File"  
   
-       ' Show the Dialog.  
-       ' If the user clicked OK in the dialog and   
-       ' a .CUR file was selected, open it.  
-       If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then  
-         ' Assign the cursor in the Stream to the Form's Cursor property.  
-         Me.Cursor = New Cursor(openFileDialog1.OpenFile())  
-       End If  
-    End Sub  
-    ```  
+      ' Show the Dialog.  
+      ' If the user clicked OK in the dialog and   
+      ' a .CUR file was selected, open it.  
+      If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then  
+        ' Assign the cursor in the Stream to the Form's Cursor property.  
+        Me.Cursor = New Cursor(openFileDialog1.OpenFile())  
+      End If  
+   End Sub  
+   ```  
   
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)  
-    {  
-       // Displays an OpenFileDialog so the user can select a Cursor.  
-       OpenFileDialog openFileDialog1 = new OpenFileDialog();  
-       openFileDialog1.Filter = "Cursor Files|*.cur";  
-       openFileDialog1.Title = "Select a Cursor File";  
+   ```csharp  
+   private void button1_Click(object sender, System.EventArgs e)  
+   {  
+      // Displays an OpenFileDialog so the user can select a Cursor.  
+      OpenFileDialog openFileDialog1 = new OpenFileDialog();  
+      openFileDialog1.Filter = "Cursor Files|*.cur";  
+      openFileDialog1.Title = "Select a Cursor File";  
   
-       // Show the Dialog.  
-       // If the user clicked OK in the dialog and  
-       // a .CUR file was selected, open it.  
-        if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)  
-       {  
-          // Assign the cursor in the Stream to the Form's Cursor property.  
-          this.Cursor = new Cursor(openFileDialog1.OpenFile());  
-       }  
-    }  
-    ```  
+      // Show the Dialog.  
+      // If the user clicked OK in the dialog and  
+      // a .CUR file was selected, open it.  
+       if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)  
+      {  
+         // Assign the cursor in the Stream to the Form's Cursor property.  
+         this.Cursor = new Cursor(openFileDialog1.OpenFile());  
+      }  
+   }  
+   ```  
   
-    ```cpp  
-    private:  
-       void button1_Click(System::Object ^ sender,  
-          System::EventArgs ^ e)  
-       {  
-          // Displays an OpenFileDialog so the user can select a Cursor.  
-          OpenFileDialog ^ openFileDialog1 = new OpenFileDialog();  
-          openFileDialog1->Filter = "Cursor Files|*.cur";  
-          openFileDialog1->Title = "Select a Cursor File";  
+   ```cpp  
+   private:  
+      void button1_Click(System::Object ^ sender,  
+         System::EventArgs ^ e)  
+      {  
+         // Displays an OpenFileDialog so the user can select a Cursor.  
+         OpenFileDialog ^ openFileDialog1 = new OpenFileDialog();  
+         openFileDialog1->Filter = "Cursor Files|*.cur";  
+         openFileDialog1->Title = "Select a Cursor File";  
   
-          // Show the Dialog.  
-          // If the user clicked OK in the dialog and  
-          // a .CUR file was selected, open it.  
-          if (openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)  
-          {  
-             // Assign the cursor in the Stream to  
-             // the Form's Cursor property.  
-             this->Cursor = gcnew  
-                System::Windows::Forms::Cursor(  
-                openFileDialog1->OpenFile());  
-          }  
-       }  
-    ```  
+         // Show the Dialog.  
+         // If the user clicked OK in the dialog and  
+         // a .CUR file was selected, open it.  
+         if (openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)  
+         {  
+            // Assign the cursor in the Stream to  
+            // the Form's Cursor property.  
+            this->Cursor = gcnew  
+               System::Windows::Forms::Cursor(  
+               openFileDialog1->OpenFile());  
+         }  
+      }  
+   ```  
   
-     (Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
+    (Visual C# and [!INCLUDE [vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
   
-    ```csharp  
-    this.button1.Click += new System.EventHandler(this.button1_Click);  
-    ```  
+   ```csharp  
+   this.button1.Click += new System.EventHandler(this.button1_Click);  
+   ```  
   
-    ```cpp  
-    this->button1->Click += gcnew  
-       System::EventHandler(this, &Form1::button1_Click);  
-    ```  
+   ```cpp  
+   this->button1->Click += gcnew  
+      System::EventHandler(this, &Form1::button1_Click);  
+   ```  
   
 ## See Also  
  <xref:System.Windows.Forms.OpenFileDialog>  

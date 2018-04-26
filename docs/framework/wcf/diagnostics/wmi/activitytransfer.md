@@ -19,9 +19,9 @@ ms.workload:
 ---
 # ActivityTransfer
 Activity Transfer Event  
-  
+
 ## Syntax  
-  
+
 ```  
 class ActivityTransfer : WSAT_TraceEvent  
 {  
@@ -29,29 +29,31 @@ class ActivityTransfer : WSAT_TraceEvent
   object RelatedActivityID;  
 };  
 ```  
-  
+
 ## Methods  
  The ActivityTransfer class does not define any methods.  
-  
+
 ## Properties  
  The ActivityTransfer class has the following properties:  
-  
+
 ### ActivityID  
-  
+
 -   Data type: object  
     Access type: Read-only  
-  
+
 -   Activity ID  
-  
+
 ### RelatedActivityID  
-  
+
 -   Data type: object  
     Access type: Read-only  
-  
+
 -   Related Activity ID  
-  
+
 ## Requirements  
-  
-|MOF|Declared in Servicemodel.mof.|  
-|---------|-----------------------------------|  
-|Namespace|Defined in root\ServiceModel.|
+
+
+|    MOF    | Declared in Servicemodel.mof. |
+|-----------|-------------------------------|
+| Namespace | Defined in root\ServiceModel. |
+

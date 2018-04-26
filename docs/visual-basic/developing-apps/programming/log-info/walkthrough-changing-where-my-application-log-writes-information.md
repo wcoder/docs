@@ -173,17 +173,17 @@ You can use the `My.Application.Log` and `My.Log` objects to log information abo
   
 ### To reference a strongly named type  
   
-1.  To ensure that the right type is used for your log listener, make sure to use the fully qualified type name and the strongly named assembly name. The syntax of a strongly named type is as follows:  
+1. To ensure that the right type is used for your log listener, make sure to use the fully qualified type name and the strongly named assembly name. The syntax of a strongly named type is as follows:  
   
-     \<*type name*>, \<*assembly name*>, \<*version number*>, \<*culture*>, \<*strong name*>  
+    \<*type name*>, \<*assembly name*>, \<*version number*>, \<*culture*>, \<*strong name*>  
   
-2.  This code example shows how to determine the strongly named type name for a fully qualified type—"System.Diagnostics.FileLogTraceListener" in this case.  
+2. This code example shows how to determine the strongly named type name for a fully qualified type—"System.Diagnostics.FileLogTraceListener" in this case.  
   
-     [!code-vb[VbVbalrMyApplicationLog#15](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-changing-where-my-application-log-writes-information_1.vb)]  
+    [!code-vb[VbVbalrMyApplicationLog#15](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-changing-where-my-application-log-writes-information_1.vb)]  
   
-     This is the output, and it can be used to uniquely reference a strongly named type, as in the "To add listeners" procedure above.  
+    This is the output, and it can be used to uniquely reference a strongly named type, as in the "To add listeners" procedure above.  
   
-     `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`  
+    `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`  
   
 ## See Also  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  

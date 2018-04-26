@@ -27,7 +27,7 @@ ms.workload:
 > [!IMPORTANT]
 >  The <xref:System.Windows.Forms.ToolStripProgressBar> control replaces and adds functionality to the <xref:System.Windows.Forms.ProgressBar> control; however, the <xref:System.Windows.Forms.ProgressBar> control is retained for both backward compatibility and future use, if you choose.  
   
- The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] gives you several different ways to display a given value within the <xref:System.Windows.Forms.ProgressBar> control. Which approach you choose will depend on the task at hand or the problem you are solving. The following table shows the approaches you can choose.  
+ The [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)] gives you several different ways to display a given value within the <xref:System.Windows.Forms.ProgressBar> control. Which approach you choose will depend on the task at hand or the problem you are solving. The following table shows the approaches you can choose.  
   
 |Approach|Description|  
 |--------------|-----------------|  

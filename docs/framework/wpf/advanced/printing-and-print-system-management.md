@@ -21,14 +21,14 @@ ms.workload:
   - dotnet
 ---
 # Printing and Print System Management
-[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] and Microsoft .NET Framework introduce a new print path — an alternative to [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] printing — and a vastly expanded set of print system management [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
+[!INCLUDE [TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] and Microsoft .NET Framework introduce a new print path — an alternative to [!INCLUDE [TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] printing — and a vastly expanded set of print system management [!INCLUDE [TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## In This Section  
  [Printing Overview](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- A discussion of the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
+ A discussion of the new print path and [!INCLUDE [TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
  [How-to Topics](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
- A set of articles showing how to use the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
+ A set of articles showing how to use the new print path and [!INCLUDE [TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## See Also  
  <xref:System.Printing>  

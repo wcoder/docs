@@ -24,7 +24,7 @@ ms.workload:
 Use the <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> method to specify which data related to your main target should be retrieved at the same time. For example, if you know you will need information about customers' orders, you can use <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> to make sure that the order information is retrieved at the same time as the customer information. This approach results in only one trip to the database for both sets of information.  
   
 > [!NOTE]
->  You can retrieve data related to the main target of your query by retrieving a cross-product as one large projection, such as retrieving orders when you target customers. But this approach often has disadvantages. For example, the results are just projections and not entities that can be changed and persisted by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. And you can be retrieving lots of data that you do not need.  
+>  You can retrieve data related to the main target of your query by retrieving a cross-product as one large projection, such as retrieving orders when you target customers. But this approach often has disadvantages. For example, the results are just projections and not entities that can be changed and persisted by [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. And you can be retrieving lots of data that you do not need.  
   
 ## Example  
  In the following example, all the `Orders` for all the `Customers` who are located in London are retrieved when the query is executed. As a result, successive access to the `Orders` property on a `Customer` object does not trigger a new database query.  

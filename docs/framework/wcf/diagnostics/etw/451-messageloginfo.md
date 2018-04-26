@@ -19,23 +19,25 @@ ms.workload:
 ---
 # 451 - MessageLogInfo
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|451|  
 |Keywords|Troubleshooting, WCFMessageLogging|  
 |Level|Information|  
 |Channel|Microsoft-Windows-Application Server-Applications/Analytic|  
-  
+
 ## Description  
  This event is emitted when the message log information is sent.  
-  
+
 ## Message  
  %1  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|data1|`xs:string`||  
-|AppDomain|`xs:string`|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|     data1      |  `xs:string`   |                                                              |
+|   AppDomain    |  `xs:string`   | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

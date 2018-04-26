@@ -18,10 +18,10 @@ ms.workload:
   - "dotnet"
 ---
 # String Canonical Functions
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] includes string canonical functions.  
+[!INCLUDE [esql](../../../../../../includes/esql-md.md)] includes string canonical functions.  
   
 ## Remarks  
- The following table shows the string [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.  
+ The following table shows the string [!INCLUDE [esql](../../../../../../includes/esql-md.md)] canonical functions.  
   
 |Function|Description|  
 |--------------|-----------------|  

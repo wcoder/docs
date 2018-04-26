@@ -34,67 +34,67 @@ Sometimes you might want to place quotation marks (" ") in a string of text. For
   
 ### To place quotation marks in a string in your code  
   
-1.  In Visual Basic, insert two quotation marks in a row as an embedded quotation mark. In Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], insert the escape sequence \\" as an embedded quotation mark. For example, to create the preceding string, use the following code.  
+1. In Visual Basic, insert two quotation marks in a row as an embedded quotation mark. In Visual C# and [!INCLUDE [vcprvc](../../../../includes/vcprvc-md.md)], insert the escape sequence \\" as an embedded quotation mark. For example, to create the preceding string, use the following code.  
   
-    ```vb  
-    Private Sub InsertQuote()  
-       TextBox1.Text = "She said, ""You deserve a treat!"" "  
-    End Sub  
-    ```  
+   ```vb  
+   Private Sub InsertQuote()  
+      TextBox1.Text = "She said, ""You deserve a treat!"" "  
+   End Sub  
+   ```  
   
-    ```csharp  
-    private void InsertQuote(){  
-       textBox1.Text = "She said, \"You deserve a treat!\" ";  
-    }  
-    ```  
+   ```csharp  
+   private void InsertQuote(){  
+      textBox1.Text = "She said, \"You deserve a treat!\" ";  
+   }  
+   ```  
   
-    ```cpp  
-    private:  
-       void InsertQuote()  
-       {  
-          textBox1->Text = "She said, \"You deserve a treat!\" ";  
-       }  
-    ```  
+   ```cpp  
+   private:  
+      void InsertQuote()  
+      {  
+         textBox1->Text = "She said, \"You deserve a treat!\" ";  
+      }  
+   ```  
   
-     -or-  
+    -or-  
   
-2.  Insert the ASCII or Unicode character for a quotation mark. In Visual Basic, use the ASCII character (34). In Visual C#, use the Unicode character (\u0022).  
+2. Insert the ASCII or Unicode character for a quotation mark. In Visual Basic, use the ASCII character (34). In Visual C#, use the Unicode character (\u0022).  
   
-    ```vb  
-    Private Sub InsertAscii()  
-       TextBox1.Text = "She said, " & Chr(34) & "You deserve a treat!" & Chr(34)  
-    End Sub  
-    ```  
+   ```vb  
+   Private Sub InsertAscii()  
+      TextBox1.Text = "She said, " & Chr(34) & "You deserve a treat!" & Chr(34)  
+   End Sub  
+   ```  
   
-    ```csharp  
-    private void InsertAscii(){  
-       textBox1.Text = "She said, " + '\u0022' + "You deserve a treat!" + '\u0022';  
-    }  
-    ```  
+   ```csharp  
+   private void InsertAscii(){  
+      textBox1.Text = "She said, " + '\u0022' + "You deserve a treat!" + '\u0022';  
+   }  
+   ```  
   
-    > [!NOTE]
-    >  In this example, you cannot use \u0022 because you cannot use a universal character name that designates a character in the basic character set. Otherwise, you produce C3851. For more information, see [Compiler Error C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
+   > [!NOTE]
+   >  In this example, you cannot use \u0022 because you cannot use a universal character name that designates a character in the basic character set. Otherwise, you produce C3851. For more information, see [Compiler Error C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     -or-  
+    -or-  
   
-3.  You can also define a constant for the character, and use it where needed.  
+3. You can also define a constant for the character, and use it where needed.  
   
-    ```vb  
-    Const quote As String = """"  
-    TextBox1.Text = "She said, " & quote & "You deserve a treat!" & quote  
-    ```  
+   ```vb  
+   Const quote As String = """"  
+   TextBox1.Text = "She said, " & quote & "You deserve a treat!" & quote  
+   ```  
   
-    ```csharp  
-    const string quote = "\"";  
-    textBox1.Text = "She said, " + quote +  "You deserve a treat!"+ quote ;  
-    ```  
+   ```csharp  
+   const string quote = "\"";  
+   textBox1.Text = "She said, " + quote +  "You deserve a treat!"+ quote ;  
+   ```  
   
-    ```cpp  
-    const String^ quote = "\"";  
-    textBox1->Text = String::Concat("She said, ",  
-       const_cast<String^>(quote), "You deserve a treat!",  
-       const_cast<String^>(quote));  
-    ```  
+   ```cpp  
+   const String^ quote = "\"";  
+   textBox1->Text = String::Concat("She said, ",  
+      const_cast<String^>(quote), "You deserve a treat!",  
+      const_cast<String^>(quote));  
+   ```  
   
 ## See Also  
  <xref:System.Windows.Forms.TextBox>  

@@ -28,7 +28,7 @@ The Windows Workflow Foundation data model is composed of three concepts: variab
  Describes expressions and how they are used in workflow development.  
   
  [C# Expressions](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)  
- Describes C# expressions in workflows, introduced with [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+ Describes C# expressions in workflows, introduced with [!INCLUDE [net_v45](../../../includes/net-v45-md.md)].  
   
  [Properties vs. Arguments](../../../docs/framework/windows-workflow-foundation/properties-vs-arguments.md)  
  Describes how to select which type to use for activity input.  

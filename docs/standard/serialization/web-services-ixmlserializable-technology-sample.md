@@ -23,21 +23,21 @@ ms.workload:
   
 ### To build the sample using Visual Studio  
   
-1.  Open [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] and select **New Web Site** from the **File** menu.  
+1. Open [!INCLUDE [vsprvslong](../../../includes/vsprvslong-md.md)] and select **New Web Site** from the **File** menu.  
   
-2.  In the left pane of the **New Web Site** dialog, select your desired programming language, then from the right pane, select **ASP.NET Web Service**.  
+2. In the left pane of the **New Web Site** dialog, select your desired programming language, then from the right pane, select **ASP.NET Web Service**.  
   
-3.  Type **IXmlSerializable** as the name of the new Web service.  
+3. Type **IXmlSerializable** as the name of the new Web service.  
   
-4.  In the Solution Explorer window, right-click the icon for Service.asmx and select **Delete**; repeat this step for the Service.asmx codebehind file.  
+4. In the Solution Explorer window, right-click the icon for Service.asmx and select **Delete**; repeat this step for the Service.asmx codebehind file.  
   
-5.  Right-click the project directory and select **Add Existing Item**. In the dialog, navigate to the Service subdirectory of the language-specific directory.  
+5. Right-click the project directory and select **Add Existing Item**. In the dialog, navigate to the Service subdirectory of the language-specific directory.  
   
-6.  Select Service.asmx, then repeat this step for the Service.asmx codebehind file.  
+6. Select Service.asmx, then repeat this step for the Service.asmx codebehind file.  
   
-7.  Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to the directory that contains IXmlSerializable directory that you created in step 3 above.  
+7. Open [!INCLUDE [fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to the directory that contains IXmlSerializable directory that you created in step 3 above.  
   
-8.  Right-click the icon for the IXmlSerializable directory and select **Sharing and Security**.  
+8. Right-click the icon for the IXmlSerializable directory and select **Sharing and Security**.  
   
 9. In the Web Sharing tab, select **Share this Folder**, and confirm the default settings, including the name IXmlSerializable.  
   

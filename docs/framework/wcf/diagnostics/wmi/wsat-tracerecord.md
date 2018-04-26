@@ -19,9 +19,9 @@ ms.workload:
 ---
 # WSAT_TraceRecord
 WSAT_TraceRecord  
-  
+
 ## Syntax  
-  
+
 ```  
 class WSAT_TraceRecord : WSAT_TraceEvent  
 {  
@@ -30,33 +30,35 @@ class WSAT_TraceRecord : WSAT_TraceEvent
   string TraceRecord;  
 };  
 ```  
-  
+
 ## Methods  
  The WSAT_TraceRecord class does not define any methods.  
-  
+
 ## Properties  
  The WSAT_TraceRecord class has the following properties:  
-  
+
 ### ActivityID  
  Data type: object  
 Access type: Read-only  
-  
+
  The activity ID of the trace record.  
-  
+
 ### EventID  
  Data type: sint32  
 Access type: Read-only  
-  
+
  The event ID of the trace record.  
-  
+
 ### TraceRecord  
  Data type: string  
 Access type: Read-only  
-  
+
  Trace Record  
-  
+
 ## Requirements  
-  
-|MOF|Declared in Servicemodel.mof.|  
-|---------|-----------------------------------|  
-|Namespace|Defined in root\ServiceModel|
+
+
+|    MOF    | Declared in Servicemodel.mof. |
+|-----------|-------------------------------|
+| Namespace | Defined in root\ServiceModel  |
+

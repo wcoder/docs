@@ -31,61 +31,61 @@ In this example, an `ICalculator` contract is defined for a basic calculator ser
   
 ### To specify the BasicHttpBinding to use to configure the service  
   
-1.  Define a service contract for the type of service.  
+1. Define a service contract for the type of service.  
   
-     [!code-csharp[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#1)]
-     [!code-vb[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#1)]  
+    [!code-csharp[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#1)]
+    [!code-vb[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#1)]  
   
-2.  Implement the service contract in a service class.  
+2. Implement the service contract in a service class.  
   
-     [!code-csharp[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#2)]
-     [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
+    [!code-csharp[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#2)]
+    [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
   
-    > [!NOTE]
-    >  Address or binding information is not specified inside the implementation of the service. Also, code does not have to be written to fetch that information from the configuration file.  
+   > [!NOTE]
+   >  Address or binding information is not specified inside the implementation of the service. Also, code does not have to be written to fetch that information from the configuration file.  
   
-3.  Create a Web.config file to configure an endpoint for the `CalculatorService` that uses the <xref:System.ServiceModel.WSHttpBinding>.  
+3. Create a Web.config file to configure an endpoint for the `CalculatorService` that uses the <xref:System.ServiceModel.WSHttpBinding>.  
   
-    ```xml  
-    <?xml version="1.0" encoding="utf-8" ?>  
-    <configuration>  
-      <system.serviceModel>  
-        <services>  
-          <service name=" CalculatorService" >  
-            <endpoint   
-            <-- Leave the address blank to be populated by default-->  
-            <--from the hosting environment,in this case IIS, so -->  
-            <-- the address will just be that of the IIS Virtual -->  
-            <--Directory.-->  
-                address=""   
-            <--Specify the binding type -->  
-                binding="wsHttpBinding"  
-            <--Specify the binding configuration name for that -->  
-            <--binding type. This is optional but useful if you  -->  
-            <--want to modify the properties of the binding. -->  
-            <--The bindingConfiguration name Binding1 is defined  -->  
-            <--below in the bindings element.  -->  
-                bindingConfiguration="Binding1"  
-                contract="ICalculator" />  
-          </service>  
-        </services>  
-        <bindings>  
-          <wsHttpBinding>  
-            <binding name="Binding1">  
-              <-- Binding property values can be modified here. -->  
-              <--See the next procedure. -->  
-            </binding>  
-          </wsHttpBinding>  
-       </bindings>  
-      </system.serviceModel>  
-    </configuration>  
-    ```  
+   ```xml  
+   <?xml version="1.0" encoding="utf-8" ?>  
+   <configuration>  
+     <system.serviceModel>  
+       <services>  
+         <service name=" CalculatorService" >  
+           <endpoint   
+           <-- Leave the address blank to be populated by default-->  
+           <--from the hosting environment,in this case IIS, so -->  
+           <-- the address will just be that of the IIS Virtual -->  
+           <--Directory.-->  
+               address=""   
+           <--Specify the binding type -->  
+               binding="wsHttpBinding"  
+           <--Specify the binding configuration name for that -->  
+           <--binding type. This is optional but useful if you  -->  
+           <--want to modify the properties of the binding. -->  
+           <--The bindingConfiguration name Binding1 is defined  -->  
+           <--below in the bindings element.  -->  
+               bindingConfiguration="Binding1"  
+               contract="ICalculator" />  
+         </service>  
+       </services>  
+       <bindings>  
+         <wsHttpBinding>  
+           <binding name="Binding1">  
+             <-- Binding property values can be modified here. -->  
+             <--See the next procedure. -->  
+           </binding>  
+         </wsHttpBinding>  
+      </bindings>  
+     </system.serviceModel>  
+   </configuration>  
+   ```  
   
-4.  Create a Service.svc file that contains the following line and place it in your Internet Information Services (IIS) virtual directory.  
+4. Create a Service.svc file that contains the following line and place it in your Internet Information Services (IIS) virtual directory.  
   
-    ```  
-    <%@ServiceHost language=c# Service="CalculatorService" %>   
-    ```  
+   ```  
+   <%@ServiceHost language=c# Service="CalculatorService" %>   
+   ```  
   
 ### To modify the default values of the binding properties  
   

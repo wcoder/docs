@@ -18,9 +18,9 @@ ms.workload:
   - "dotnet"
 ---
 # Stored Procedures
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uses methods in your object model to represent stored procedures in the database. You designate methods as stored procedures by applying the <xref:System.Data.Linq.Mapping.FunctionAttribute> attribute and, where required, the <xref:System.Data.Linq.Mapping.ParameterAttribute> attribute. For more information, see [The LINQ to SQL Object Model](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
+[!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uses methods in your object model to represent stored procedures in the database. You designate methods as stored procedures by applying the <xref:System.Data.Linq.Mapping.FunctionAttribute> attribute and, where required, the <xref:System.Data.Linq.Mapping.ParameterAttribute> attribute. For more information, see [The LINQ to SQL Object Model](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
   
- Developers using Visual Studio would typically use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to map stored procedures. The topics in this section show how to form and call these methods in your application if you write the code yourself.  
+ Developers using Visual Studio would typically use the [!INCLUDE [vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to map stored procedures. The topics in this section show how to form and call these methods in your application if you write the code yourself.  
   
 ## In This Section  
  [How to: Return Rowsets](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)  
@@ -43,7 +43,7 @@ ms.workload:
   
 ## Related Sections  
  [Programming Guide](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- Provides information about how to create and use your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model.  
+ Provides information about how to create and use your [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model.  
   
  [Walkthrough: Using Only Stored Procedures (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)  
  Includes procedures that illustrate how to use stored procedures in Visual Basic.  

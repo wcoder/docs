@@ -32,7 +32,7 @@ ms.workload:
 # LoadStringRC Function
 Translates an HRESULT value into an error message by using the default culture of the current thread.  
   
- This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ This function has been deprecated in the [!INCLUDE [net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## Syntax  
   
@@ -76,7 +76,7 @@ HRESULT LoadStringRC (
   
  **Library:** MSCorEE.dll and Mscorwks.dll. Use MSCorEE.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  [LoadStringRCEx Function](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  

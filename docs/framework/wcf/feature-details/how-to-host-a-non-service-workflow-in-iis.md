@@ -22,23 +22,23 @@ Workflows that are not workflow services can be hosted under IIS/WAS. This is us
   
 ### Create a simple workflow  
   
-1.  Create a new [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] empty solution called `CreationEndpointTest`.  
+1. Create a new [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] empty solution called `CreationEndpointTest`.  
   
-2.  Add a new WCF Workflow Service Application project called `SimpleWorkflow` to the solution. The workflow designer will open.  
+2. Add a new WCF Workflow Service Application project called `SimpleWorkflow` to the solution. The workflow designer will open.  
   
-3.  Delete the ReceiveRequest and SendResponse activities. These activities are what makes a workflow a workflow service. Since we are not working with a workflow service, we no longer need them.  
+3. Delete the ReceiveRequest and SendResponse activities. These activities are what makes a workflow a workflow service. Since we are not working with a workflow service, we no longer need them.  
   
-4.  Set the DisplayName for the sequence activity to "Sequential Workflow".  
+4. Set the DisplayName for the sequence activity to "Sequential Workflow".  
   
-5.  Rename Service1.xamlx to Workflow1.xamlx.  
+5. Rename Service1.xamlx to Workflow1.xamlx.  
   
-6.  Click the designer outside of the sequence activity, and set the Name and ConfigurationName properties to "Workflow1"  
+6. Click the designer outside of the sequence activity, and set the Name and ConfigurationName properties to "Workflow1"  
   
-7.  Drag a <xref:System.Activities.Statements.WriteLine> activity into the <xref:System.Activities.Statements.Sequence>. The <xref:System.Activities.Statements.WriteLine> activity can be found in the **Primitives** section of the toolbox. Set the <xref:System.Activities.Statements.WriteLine.Text%2A> property of the <xref:System.Activities.Statements.WriteLine> activity to "Hello, world".  
+7. Drag a <xref:System.Activities.Statements.WriteLine> activity into the <xref:System.Activities.Statements.Sequence>. The <xref:System.Activities.Statements.WriteLine> activity can be found in the **Primitives** section of the toolbox. Set the <xref:System.Activities.Statements.WriteLine.Text%2A> property of the <xref:System.Activities.Statements.WriteLine> activity to "Hello, world".  
   
-     The workflow should now look like the following diagram.  
+    The workflow should now look like the following diagram.  
   
-     ![A simple workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")  
+    ![A simple workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")  
   
 ### Create the workflow creation service contract  
   

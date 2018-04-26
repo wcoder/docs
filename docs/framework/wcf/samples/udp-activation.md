@@ -29,7 +29,7 @@ This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samp
 -   A service (hosted in a worker process activated by WAS) that receives messages over the UDP custom transport.  
   
 ## UDP Protocol Activator  
- The UDP Protocol Activator is a bridge between the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client and the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service. It provides data communication through the UDP protocol at the transport layer. It has two major functions:  
+ The UDP Protocol Activator is a bridge between the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] client and the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] service. It provides data communication through the UDP protocol at the transport layer. It has two major functions:  
   
 -   WAS Listener Adapter (LA), which collaborates with WAS to activate processes in response to incoming messages.  
   
@@ -64,7 +64,7 @@ This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samp
  The UDP protocol listener is a module inside the protocol activator that listens at a UDP endpoint on behalf of the virtual application. It is implemented in the class `UdpSocketListener`. The endpoint is represented as `IPEndpoint` for which the port number is extracted from the binding of the protocol for the site.  
   
 ### Control Service  
- In this sample, we use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to communicate between the activator and the WAS worker process. The service that resides in the activator is called the Control Service.  
+ In this sample, we use [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] to communicate between the activator and the WAS worker process. The service that resides in the activator is called the Control Service.  
   
 ## Protocol Handlers  
  After the listener adapter calls `WebhostOpenListenerChannelInstance`, the WAS process manager starts the worker process if it is not started. The application manager inside the worker process then loads the UDP Process Protocol Handler (PPH) with the request for that `ListenerChannelId`. The PPH in turns calls `IAdphManager`.`StartAppDomainProtocolListenerChannel` to start the UDP AppDomain Protocol Handler (ADPH).  
@@ -83,30 +83,30 @@ This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samp
   
 #### To set up this sample  
   
-1.  Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.  
+1. Install [!INCLUDE [vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.  
   
-    ```  
-    %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-    ```  
+   ```  
+   %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
+   ```  
   
-2.  Build the project on Windows Vista. After compilation, it also performs the following operations in the post-build phase:  
+2. Build the project on Windows Vista. After compilation, it also performs the following operations in the post-build phase:  
   
-    -   Installs the UDP binding to the site "Default Web Site".  
+   -   Installs the UDP binding to the site "Default Web Site".  
   
-    -   Creates the virtual application "ServiceModelSamples" to point to the physical path: "%SystemDrive%\inetpub\wwwroot\servicemodelsamples".  
+   -   Creates the virtual application "ServiceModelSamples" to point to the physical path: "%SystemDrive%\inetpub\wwwroot\servicemodelsamples".  
   
-    -   It also enables "net.udp" protocol for this virtual application.  
+   -   It also enables "net.udp" protocol for this virtual application.  
   
-3.  Start the user interface application "WasNetActivator.exe". Click the **Setup** tab, check the following check boxes and then click **Install** to install them:  
+3. Start the user interface application "WasNetActivator.exe". Click the **Setup** tab, check the following check boxes and then click **Install** to install them:  
   
-    -   UDP Listener Adapter  
+   -   UDP Listener Adapter  
   
-    -   UDP Protocol Handlers  
+   -   UDP Protocol Handlers  
   
-4.  Click the **Activation** tab of the user interface application "WasNetActivator.exe". Click the **Start** button to start the listener adapter. Now you are ready to run the program.  
+4. Click the **Activation** tab of the user interface application "WasNetActivator.exe". Click the **Start** button to start the listener adapter. Now you are ready to run the program.  
   
-    > [!NOTE]
-    >  When you are finished with this sample, you must run Cleanup.bat to remove the net.udp binding from the "Default Web Site".  
+   > [!NOTE]
+   >  When you are finished with this sample, you must run Cleanup.bat to remove the net.udp binding from the "Default Web Site".  
   
 ## Sample Usage  
  After compilation, there are four different binaries generated:  
@@ -163,11 +163,11 @@ This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samp
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
   
 ## See Also

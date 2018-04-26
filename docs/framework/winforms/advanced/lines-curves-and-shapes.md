@@ -24,7 +24,7 @@ ms.workload:
   - dotnet
 ---
 # Lines, Curves, and Shapes
-The vector graphics portion of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is used to draw lines, draw curves, and to draw and fill shapes.  
+The vector graphics portion of [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is used to draw lines, draw curves, and to draw and fill shapes.  
   
 ## In This Section  
  [Vector Graphics Overview](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)  

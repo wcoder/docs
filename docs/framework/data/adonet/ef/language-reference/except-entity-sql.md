@@ -34,7 +34,7 @@ expression EXCEPT expression
  A collection of the same type or of a common base or derived type as `expression`.  
   
 ## Remarks  
- EXCEPT is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators. All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right. The following table shows the precedence of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.  
+ EXCEPT is one of the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators. All [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right. The following table shows the precedence of the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] set operators.  
   
 |Precedence|Operators|  
 |----------------|---------------|  

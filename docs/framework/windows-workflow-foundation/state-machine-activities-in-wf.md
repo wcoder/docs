@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # State Machine Activities in WF
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] provides several system-provided activities and activity designers for creating state machine workflows.  
+[!INCLUDE [net_v45](../../../includes/net-v45-md.md)] provides several system-provided activities and activity designers for creating state machine workflows.  
   
 |||  
 |-|-|  

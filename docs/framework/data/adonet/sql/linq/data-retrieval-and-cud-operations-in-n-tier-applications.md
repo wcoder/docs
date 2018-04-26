@@ -23,12 +23,12 @@ ms.workload:
 # Data Retrieval and CUD Operations in N-Tier Applications (LINQ to SQL)
 When you serialize entity objects such as Customers or Orders to a client over a network, those entities are detached from their data context. The data context no longer tracks their changes or their associations with other objects. This is not an issue as long as the clients are only reading the data. It is also relatively simple to enable clients to add new rows to a database. However, if your application requires that clients be able to update or delete data, then you must attach the entities to a new data context before you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. In addition, if you are using an optimistic concurrency check with original values, then you will also need a way to provide the database both the original entity and the entity as modified. The `Attach` methods are provided to enable you to put entities into a new data context after they have been detached.  
   
- Even if you are serializing proxy objects in place of the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] entities, you still have to construct an entity on the data access layer (DAL), and attach it to a new <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>, in order to submit the data to the database.  
+ Even if you are serializing proxy objects in place of the [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] entities, you still have to construct an entity on the data access layer (DAL), and attach it to a new <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>, in order to submit the data to the database.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] is completely indifferent about how entities are serialized. For more information about how to use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] and SQLMetal tools to generate classes that are serializable by using Windows Communication Foundation (WCF), see [How to: Make Entities Serializable](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
+ [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] is completely indifferent about how entities are serialized. For more information about how to use the [!INCLUDE [vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] and SQLMetal tools to generate classes that are serializable by using Windows Communication Foundation (WCF), see [How to: Make Entities Serializable](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
   
 > [!NOTE]
->  Only call the `Attach` methods on new or deserialized entities. The only way for an entity to be detached from its original data context is for it to be serialized. If you try to attach an undetached entity to a new data context, and that entity still has deferred loaders from its previous data context, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] will thrown an exception. An entity with deferred loaders from two different data contexts could cause unwanted results when you perform insert, update, and delete operations on that entity. For more information about deferred loaders, see [Deferred versus Immediate Loading](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+>  Only call the `Attach` methods on new or deserialized entities. The only way for an entity to be detached from its original data context is for it to be serialized. If you try to attach an undetached entity to a new data context, and that entity still has deferred loaders from its previous data context, [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] will thrown an exception. An entity with deferred loaders from two different data contexts could cause unwanted results when you perform insert, update, and delete operations on that entity. For more information about deferred loaders, see [Deferred versus Immediate Loading](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
   
 ## Retrieving Data  
   
@@ -216,7 +216,7 @@ public void DeleteOrder(Order order)
 ```  
   
 ## Updating Data  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports updates in these scenarios involving optimistic concurrency:  
+ [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports updates in these scenarios involving optimistic concurrency:  
   
 -   Optimistic concurrency based on timestamps or RowVersion numbers.  
   

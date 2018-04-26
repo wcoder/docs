@@ -19,7 +19,7 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ---
 # Manipulating XML in Visual Basic
-You can use *XML literals* to load XML from an external source such as a string, file, or stream. You can then use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to manipulate the XML and use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] to query the XML.  
+You can use *XML literals* to load XML from an external source such as a string, file, or stream. You can then use [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] to manipulate the XML and use [!INCLUDE [vbteclinqext](~/includes/vbteclinqext-md.md)] to query the XML.  
   
 ## In This Section  
  [How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
@@ -36,7 +36,7 @@ You can use *XML literals* to load XML from an external source such as a string,
  Provides links to sections that describe the various XML access properties.  
   
  [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ Provides an introduction to using [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
   
  [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  Provides an introduction to using XML literals in Visual Basic.  
@@ -45,7 +45,7 @@ You can use *XML literals* to load XML from an external source such as a string,
  Demonstrates how to access parts of an XML element or document in Visual Basic.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Provides links to sections that describe how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ Provides links to sections that describe how to use [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
   
 ## See Also  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  

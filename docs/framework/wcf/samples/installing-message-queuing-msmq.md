@@ -21,7 +21,7 @@ ms.workload:
 The following procedures show how to install Message Queuing 4.0 and Message Queuing 3.0.  
   
 > [!NOTE]
->  Message Queuing 4.0 is not available in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] and [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+>  Message Queuing 4.0 is not available in [!INCLUDE [wxp](../../../../includes/wxp-md.md)] and [!INCLUDE [ws2003](../../../../includes/ws2003-md.md)].  
   
 #### To install Message Queuing 4.0 on Windows Server 2008 or Windows Server 2008 R2  
   
@@ -55,20 +55,20 @@ The following procedures show how to install Message Queuing 4.0 and Message Que
   
 #### To install Message Queuing 3.0 on Windows XP and Windows Server 2003  
   
-1.  Open **Control Panel**.  
+1. Open **Control Panel**.  
   
-2.  Click **Add Remove Programs** and then click **Add Windows Components**.  
+2. Click **Add Remove Programs** and then click **Add Windows Components**.  
   
-3.  Select Message Queuing and click **Details**.  
+3. Select Message Queuing and click **Details**.  
   
-    > [!NOTE]
-    >  If you are running [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], select Application Server to access Message Queuing.  
+   > [!NOTE]
+   >  If you are running [!INCLUDE [ws2003](../../../../includes/ws2003-md.md)], select Application Server to access Message Queuing.  
   
-4.  Ensure that the option MSMQ HTTP Support is selected on the details page.  
+4. Ensure that the option MSMQ HTTP Support is selected on the details page.  
   
-5.  Click **OK** to exit the details page, and then click **Next**. Complete the installation.  
+5. Click **OK** to exit the details page, and then click **Next**. Complete the installation.  
   
-6.  If you are prompted to restart the computer, click **OK** to complete the installation.  
+6. If you are prompted to restart the computer, click **OK** to complete the installation.  
   
 ## See Also  
  [Set-Up Instructions](../../../../docs/framework/wcf/samples/set-up-instructions.md)

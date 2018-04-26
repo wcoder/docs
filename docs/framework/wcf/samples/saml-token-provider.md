@@ -18,25 +18,25 @@ ms.workload:
   - "dotnet"
 ---
 # SAML Token Provider
-This sample demonstrates how to implement a custom client SAML token provider. A token provider in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is used for supplying credentials to the security infrastructure. The token provider in general examines the target and issues appropriate credentials so that the security infrastructure can secure the message. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ships with the default Credential Manager Token Provider. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] also ships with an [!INCLUDE[infocard](../../../../includes/infocard-md.md)] token provider. Custom token providers are useful in the following cases:  
+This sample demonstrates how to implement a custom client SAML token provider. A token provider in [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] is used for supplying credentials to the security infrastructure. The token provider in general examines the target and issues appropriate credentials so that the security infrastructure can secure the message. [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] ships with the default Credential Manager Token Provider. [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] also ships with an [!INCLUDE [infocard](../../../../includes/infocard-md.md)] token provider. Custom token providers are useful in the following cases:  
   
--   If you have a credential store that these token providers cannot operate with.  
+- If you have a credential store that these token providers cannot operate with.  
   
--   If you want to provide your own custom mechanism for transforming the credentials from the point when the user provides the details to when the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client framework uses the credentials.  
+- If you want to provide your own custom mechanism for transforming the credentials from the point when the user provides the details to when the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] client framework uses the credentials.  
   
--   If you are building a custom token.  
+- If you are building a custom token.  
   
- This sample shows how to build a custom token provider that allows a SAML token obtained from outside of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client framework to be used.  
+ This sample shows how to build a custom token provider that allows a SAML token obtained from outside of the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] client framework to be used.  
   
  To summarize, this sample demonstrates the following:  
   
--   How a client can be configured with a custom token provider.  
+- How a client can be configured with a custom token provider.  
   
--   How a SAML token can be passed to the custom client credentials.  
+- How a SAML token can be passed to the custom client credentials.  
   
--   How the SAML token is provided to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client framework.  
+- How the SAML token is provided to the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] client framework.  
   
--   How the server is authenticated by the client using the server's X.509 certificate.  
+- How the server is authenticated by the client using the server's X.509 certificate.  
   
  The service exposes two endpoints for communicating with the service, defined using the configuration file App.config. Each endpoint consists of an address, a binding, and a contract. The binding is configured with a standard `wsFederationHttpBinding`, which uses Message security. One endpoint expects the client to authenticate with a SAML token that uses a symmetric proof key while the other expects the client to authenticate with a SAML token that uses an asymmetric proof key. The service also configures the service certificate using `serviceCredentials` behavior. The `serviceCredentials` behavior allows you to configure a service certificate. A service certificate is used by a client to authenticate the service and provide message protection. The following configuration references the "localhost" certificate installed during the sample setup as described in the setup instructions at the end of this topic. The `serviceCredentials` behavior also allows you to configure certificates that are trusted to sign SAML tokens. The following configuration references the 'Alice' certificate installed during the sample.  
   
@@ -119,7 +119,7 @@ This sample demonstrates how to implement a custom client SAML token provider. A
 </system.serviceModel>  
 ```  
   
- The following steps show how to develop a custom SAML token provider and integrate it with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: security framework:  
+ The following steps show how to develop a custom SAML token provider and integrate it with [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)]: security framework:  
   
 1.  Write a custom SAML token provider.  
   
@@ -370,16 +370,16 @@ This sample demonstrates how to implement a custom client SAML token provider. A
   
 #### To run the sample on the same computer  
   
-1.  Run Setup.bat from the sample installation folder inside a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt run with administrator privileges. This installs all the certificates required for running the sample.  
+1. Run Setup.bat from the sample installation folder inside a [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt run with administrator privileges. This installs all the certificates required for running the sample.  
   
-    > [!NOTE]
-    >  The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt. The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.  
+   > [!NOTE]
+   >  The Setup.bat batch file is designed to be run from a [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt. The PATH environment variable set within the [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.  
   
-2.  Launch Service.exe from service\bin.  
+2. Launch Service.exe from service\bin.  
   
-3.  Launch Client.exe from \client\bin. Client activity is displayed on the client console application.  
+3. Launch Client.exe from \client\bin. Client activity is displayed on the client console application.  
   
-4.  If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4. If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### To run the sample across computers  
   

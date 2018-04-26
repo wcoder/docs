@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 1140 - FlowchartStart
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|1140|  
 |Keywords|WFActivities|  
 |Level|Information|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates a Flowchart start has been scheduled.  
-  
+
 ## Message  
  Flowchart '%1' - Start has been scheduled.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|FlowChart|xs:string|The display name of the FlowChart.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|   FlowChart    |   xs:string    |              The display name of the FlowChart.              |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

@@ -17,22 +17,24 @@ ms.workload:
 ---
 # 2022 - ExecuteWorkItemStop
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|2022|  
 |Keywords|WFRuntime|  
 |Level|Verbose|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates an ExecuteWorkItem has completed.  
-  
+
 ## Message  
  Execute work item stop  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

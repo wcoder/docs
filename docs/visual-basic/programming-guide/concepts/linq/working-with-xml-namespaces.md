@@ -15,7 +15,7 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ---
 # Working with XML Namespaces (Visual Basic)
-The topics in this section describe how [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supports namespaces.  
+The topics in this section describe how [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] supports namespaces.  
   
 ## In This Section  
   

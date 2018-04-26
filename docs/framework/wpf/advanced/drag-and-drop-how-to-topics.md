@@ -22,7 +22,7 @@ ms.workload:
   - dotnet
 ---
 # Drag and Drop How-to Topics
-The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.  
+The following examples demonstrate how to accomplish common tasks using the [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.  
   
 ## In This Section  
  [Open a File That is Dropped on a RichTextBox Control](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  

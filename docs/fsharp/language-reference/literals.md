@@ -15,7 +15,7 @@ ms.assetid: 4b1d6e9d-f933-4cd4-966d-d643152c27e4
 # Literals
 
 > [!NOTE]
-The API reference links in this article will take you to MSDN (for now).
+> The API reference links in this article will take you to MSDN (for now).
 
 This topic provides a table that shows how to specify the type of a literal in F#.
 

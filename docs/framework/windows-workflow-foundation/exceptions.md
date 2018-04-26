@@ -21,13 +21,13 @@ Workflows can use the <xref:System.Activities.Statements.TryCatch> activity to h
 ## Causes of Exceptions  
  In a workflow, exceptions can be generated in the following ways:  
   
--   A time-out of transactions in <xref:System.Activities.Statements.TransactionScope>.  
+- A time-out of transactions in <xref:System.Activities.Statements.TransactionScope>.  
   
--   An explicit exception thrown by the workflow using the <xref:System.Activities.Statements.Throw> activity.  
+- An explicit exception thrown by the workflow using the <xref:System.Activities.Statements.Throw> activity.  
   
--   A [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] exception thrown from an activity.  
+- A [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] exception thrown from an activity.  
   
--   An exception thrown from external code, such as libraries, components, or services that are used in the workflow.  
+- An exception thrown from external code, such as libraries, components, or services that are used in the workflow.  
   
 ## Handling Exceptions  
  If an exception is thrown by an activity and is unhandled, the default behavior is to terminate the workflow instance. If a custom <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> handler is present, it can override this default behavior. This handler gives the workflow host author an opportunity to provide the appropriate handling, such as custom logging, aborting the workflow, canceling the workflow, or terminating the workflow.  If a workflow raises an exception that is not handled, the <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> handler is invoked. There are three possible actions returned from <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> which determine the final outcome of the workflow.  
@@ -54,7 +54,7 @@ Workflows can use the <xref:System.Activities.Statements.TryCatch> activity to h
 -   The exception is not handled by a higher level <xref:System.Activities.Statements.TryCatch>, escapes the root of the workflow, and the workflow is configured to cancel instead of terminate or abort. Workflows hosted using <xref:System.Activities.WorkflowApplication> can configure this by handling <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> and returning <xref:System.Activities.UnhandledExceptionAction.Cancel>. An example of handling <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> is provided previously in this topic. Workflow services can configure this by using <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> and specifying <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>. For an example of configuring <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, see [Workflow Service Host Extensibility](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## Exception Handling versus Compensation  
- The difference between exception handling and compensation is that exception handling occurs during the execution of an activity. Compensation occurs after an activity has successfully completed. Exception handling provides an opportunity to clean up after the activity raises the exception, whereas compensation provides a mechanism by which the successfully completed work of a previously completed activity can be undone. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Compensation](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+ The difference between exception handling and compensation is that exception handling occurs during the execution of an activity. Compensation occurs after an activity has successfully completed. Exception handling provides an opportunity to clean up after the activity raises the exception, whereas compensation provides a mechanism by which the successfully completed work of a previously completed activity can be undone. [!INCLUDE [crdefault](../../../includes/crdefault-md.md)] [Compensation](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## See Also  
  <xref:System.Activities.Statements.TryCatch>  

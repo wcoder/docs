@@ -17,14 +17,14 @@ ms.workload:
 ---
 # &lt;behavior&gt; of &lt;serviceBehaviors&gt; of workflow
 The **behavior** element contains a collection of settings for the behavior of a service. Each behavior is indexed by its **name**. Services can link to each behavior through this name using the **behaviorConfiguration**attribute of the [\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element. This allows endpoints to share common behavior configurations without redefining the settings.  
-  
+
 \<system.ServiceModel>  
 \<behaviors>  
 \<serviceBehaviors>  
 \<behavior>  
-  
+
 ## Syntax  
-  
+
 ```xml  
 <system.ServiceModel>  
   <behaviors>  
@@ -54,18 +54,18 @@ The **behavior** element contains a collection of settings for the behavior of a
   </behaviors>  
 </system.ServiceModel>  
 ```  
-  
+
 ## Attributes and Elements  
  The following sections describe attributes, child elements, and parent elements.  
-  
+
 ### Attributes  
-  
+
 |Attribute|Description|  
 |---------------|-----------------|  
 |name|A unique string that contains the configuration name of the behavior. This value is a user-defined string that must be unique, since it acts as the identification string for the element.|  
-  
+
 ### Child Elements  
-  
+
 |Element|Description|  
 |-------------|-----------------|  
 |[\<bufferReceive>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/bufferreceive.md)|A service behavior that enables a service to use buffered receive processing, which enables a workflow service to process out-of-order messages.|  
@@ -75,9 +75,11 @@ The **behavior** element contains a collection of settings for the behavior of a
 |[\<workflowIdle>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowidle.md)|A service behavior that controls when idle workflow instances are unloaded and persisted.|  
 |[\<workflowInstanceManagement>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancemanagement.md)|A service behavior that enables you to specify settings that control how workflow instances are run, including persistence, unhandled Exception behavior and idle behavior.|  
 |[\<workflowUnhandledException>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowunhandledexception.md)|A service behavior that enables you to specify the action to take when an unhandled exception occurs within a workflow service.|  
-  
+
 ### Parent Elements  
-  
-|Element|Description|  
-|-------------|-----------------|  
-|[\<serviceBehaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/servicebehaviors-of-workflow.md)|A collection of service behavior elements.|
+
+
+|                                                                   Element                                                                   |                Description                 |
+|---------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| [\<serviceBehaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/servicebehaviors-of-workflow.md) | A collection of service behavior elements. |
+

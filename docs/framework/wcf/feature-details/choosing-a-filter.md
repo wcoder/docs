@@ -24,7 +24,7 @@ When configuring the Routing Service, it is important to select correct message 
  When selecting the filters that are used by the Routing Service, it is important that you understand how each filter works as well as what information is available as part of the incoming messages. For instance, if all messages are received over the same endpoint, the Address and EndpointName filters are not useful because all messages match these filters.  
   
 ### Action  
- The Action filter inspects the <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> property. If the contents of the Action header in the message match the filter data value specified in the filter configuration, then this filter returns `true`. The following example defines a `FilterElement` that uses the Action filter to match messages with an action header that contains a value of "http://namespace/contract/operation/".  
+ The Action filter inspects the <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> property. If the contents of the Action header in the message match the filter data value specified in the filter configuration, then this filter returns `true`. The following example defines a `FilterElement` that uses the Action filter to match messages with an action header that contains a value of "<http://namespace/contract/operation/>".  
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -98,7 +98,7 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
 MyCustomMsgFilter custom1=new MyCustomMsgFilter("Custom Data");  
 ```  
   
- If you need to perform custom matching logic against a message that is not covered by the filters provided with [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], you must create a custom filter that is an implementation of the **MessageFilter** class. For example, you might create a custom filter that compares a field in the incoming message against a list of known values given to the filter as configuration, or that hashes a particular message element and then examines that value to determine whether the filter should return `true` or `false`.  
+ If you need to perform custom matching logic against a message that is not covered by the filters provided with [!INCLUDE [netfx_current_short](../../../../includes/netfx-current-short-md.md)], you must create a custom filter that is an implementation of the **MessageFilter** class. For example, you might create a custom filter that compares a field in the incoming message against a list of known values given to the filter as configuration, or that hashes a particular message element and then examines that value to determine whether the filter should return `true` or `false`.  
   
 ### EndpointName  
  The EndpointName filter inspects the name of the endpoint that received the message. The following example defines a `FilterElement` that uses the EndpointName filter to route messages received on the "SvcEndpoint".  
@@ -139,9 +139,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  This filter is useful if you know that the messages you are receiving contain a specific value. For example, if you are hosting two versions of the same service and you know that messages addressed to the newer version of the service contain a unique value in a custom header, you can create a filter that uses XPath to navigate to this header and compares the value present in the header to another given in the filter configuration to determine if the filter matches.  
   
- Because XPath queries often contain unique namespaces, which are often lengthy or complex string values, the XPath filter allows you to use the namespace table to define unique prefixes for your namespaces. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] the namespace table, see [Message Filters](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Because XPath queries often contain unique namespaces, which are often lengthy or complex string values, the XPath filter allows you to use the namespace table to define unique prefixes for your namespaces. [!INCLUDE [crabout](../../../../includes/crabout-md.md)] the namespace table, see [Message Filters](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] designing XPath queries, see [XPath Syntax](http://go.microsoft.com/fwlink/?LinkId=164592).  
+ [!INCLUDE [crabout](../../../../includes/crabout-md.md)] designing XPath queries, see [XPath Syntax](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## See Also  
  [Message Filters](../../../../docs/framework/wcf/feature-details/message-filters.md)  

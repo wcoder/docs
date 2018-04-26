@@ -27,7 +27,7 @@ ms.workload:
 # EndMethodEnumeration function
 Terminates an enumeration sequence started with a call to the [BeginMethodEnumeration function](beginmethodenumeration.md).  
 
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
 ## Syntax  
   
@@ -66,7 +66,7 @@ The caller begins the enumeration sequence using [BeginMethodEnumeration functio
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

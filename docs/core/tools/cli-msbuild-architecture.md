@@ -61,7 +61,7 @@ These commands still do what you expect them to do (new up a project, build it, 
 From an execution perspective, the CLI commands will take their parameters and construct a call to "raw" MSBuild that will set the needed properties and run the desired target. To better illustrate this, consider the following command: 
 
    `dotnet publish -o pub -c Release`
-    
+
 This command is publishing an application into a `pub` folder using the "Release" configuration. Internally, this command gets translated into the following MSBuild invocation: 
 
    `dotnet msbuild /t:Publish /p:OutputPath=pub /p:Configuration=Release`
@@ -69,4 +69,5 @@ This command is publishing an application into a `pub` folder using the "Release
 The notable exception to this rule are `new` and `run` commands, as they have not been implemented as MSBuild targets.
 
 <a name="dotnet-restore-note"></a>
- [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE [DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+

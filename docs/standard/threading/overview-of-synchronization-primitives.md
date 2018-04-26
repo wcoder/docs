@@ -78,7 +78,7 @@ ms.workload:
  For a conceptual overview, see [Mutexes](../../../docs/standard/threading/mutexes.md).  
   
 #### SpinLock Class  
- Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can use the <xref:System.Threading.SpinLock> class when the overhead required by <xref:System.Threading.Monitor> degrades performance. When <xref:System.Threading.SpinLock> encounters a locked critical section, it simply spins in a loop until the lock becomes available. If the lock is held for a very short time, spinning can provide better performance than blocking. However, if the lock is held for more than a few tens of cycles, <xref:System.Threading.SpinLock> performs just as well as <xref:System.Threading.Monitor>, but will use more CPU cycles and thus can degrade the performance of other threads or processes.  
+ Starting with the [!INCLUDE [net_v40_long](../../../includes/net-v40-long-md.md)], you can use the <xref:System.Threading.SpinLock> class when the overhead required by <xref:System.Threading.Monitor> degrades performance. When <xref:System.Threading.SpinLock> encounters a locked critical section, it simply spins in a loop until the lock becomes available. If the lock is held for a very short time, spinning can provide better performance than blocking. However, if the lock is held for more than a few tens of cycles, <xref:System.Threading.SpinLock> performs just as well as <xref:System.Threading.Monitor>, but will use more CPU cycles and thus can degrade the performance of other threads or processes.  
   
 ### Other Locks  
  Locks need not be exclusive. It is often useful to allow a limited number of threads concurrent access to a resource. Semaphores and reader-writer locks are designed to control this kind of pooled resource access.  
@@ -139,7 +139,7 @@ ms.workload:
   
 <a name="lightweight_synchronization_types"></a>   
 ## Lightweight Synchronization Types  
- Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], you can use synchronization primitives that provide fast performance by avoiding expensive reliance on Win32 kernel objects such as wait handles whenever possible. In general, you should use these types when wait times are short and only when the original synchronization types have been tried and found to be unsatisfactory. The lightweight types cannot be used in scenarios that require cross-process communication.  
+ Starting with the [!INCLUDE [net_v40_short](../../../includes/net-v40-short-md.md)], you can use synchronization primitives that provide fast performance by avoiding expensive reliance on Win32 kernel objects such as wait handles whenever possible. In general, you should use these types when wait times are short and only when the original synchronization types have been tried and found to be unsatisfactory. The lightweight types cannot be used in scenarios that require cross-process communication.  
   
 -   <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> is a lightweight version of <xref:System.Threading.Semaphore?displayProperty=nameWithType>.  
   
@@ -153,7 +153,7 @@ ms.workload:
   
 <a name="spinwait"></a>   
 ## SpinWait  
- Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], you can use the <xref:System.Threading.SpinWait?displayProperty=nameWithType> structure when a thread has to wait for an event to be signaled or a condition to be met, but when the actual wait time is expected to be less than the waiting time required by using a wait handle or by otherwise blocking the current thread. By using <xref:System.Threading.SpinWait>, you can specify a short period of time to spin while waiting, and then yield (for example, by waiting or sleeping) only if the condition was not met in the specified time.  
+ Starting with the [!INCLUDE [net_v40_short](../../../includes/net-v40-short-md.md)], you can use the <xref:System.Threading.SpinWait?displayProperty=nameWithType> structure when a thread has to wait for an event to be signaled or a condition to be met, but when the actual wait time is expected to be less than the waiting time required by using a wait handle or by otherwise blocking the current thread. By using <xref:System.Threading.SpinWait>, you can specify a short period of time to spin while waiting, and then yield (for example, by waiting or sleeping) only if the condition was not met in the specified time.  
   
  [Back to top](#top)  
   

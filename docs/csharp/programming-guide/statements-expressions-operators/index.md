@@ -45,7 +45,7 @@ The C# code that comprises an application consists of statements made up of keyw
 -   [Equality Comparisons](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Programming Guide](../../../csharp/programming-guide/index.md)  

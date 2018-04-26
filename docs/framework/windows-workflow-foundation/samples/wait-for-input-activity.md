@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # Wait For Input Activity
-This sample demonstrates how to create named bookmarks in a workflow. [!INCLUDE[wf](../../../../includes/wf-md.md)] does not provide an activity for declarative bookmark creation. Therefore, when you want to create a bookmark in your workflow, you must write a custom activity that creates it. The `WaitForInput` activity defined in this sample provides this functionality, so that users can create bookmarks declaratively within a workflow.  
+This sample demonstrates how to create named bookmarks in a workflow. [!INCLUDE [wf](../../../../includes/wf-md.md)] does not provide an activity for declarative bookmark creation. Therefore, when you want to create a bookmark in your workflow, you must write a custom activity that creates it. The `WaitForInput` activity defined in this sample provides this functionality, so that users can create bookmarks declaratively within a workflow.  
   
 ## Projects in this sample  
   
@@ -52,17 +52,17 @@ This sample demonstrates how to create named bookmarks in a workflow. [!INCLUDE[
   
 #### To use this sample  
   
-1.  Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the WaitForInput.sln file.  
+1. Using [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)], open the WaitForInput.sln file.  
   
-2.  To build the solution, press CTRL+SHIFT+B.  
+2. To build the solution, press CTRL+SHIFT+B.  
   
-3.  To start the sample without debugging, press CTRL+F5.  
+3. To start the sample without debugging, press CTRL+F5.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`

@@ -18,11 +18,11 @@ ms.workload:
   - "dotnet"
 ---
 # Using and Creating Activities
-The topics in this section describe the system-provided activities available in [!INCLUDE[wf](../../../includes/wf-md.md)].  
+The topics in this section describe the system-provided activities available in [!INCLUDE [wf](../../../includes/wf-md.md)].  
   
 ## In This Section  
  [Built-In Activity Library](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)  
- Describes the system-provided activities available in [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
+ Describes the system-provided activities available in [!INCLUDE [wf1](../../../includes/wf1-md.md)].  
   
  [Designing and Implementing Custom Activities](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  
  Describes how to create custom activities with the <xref:System.Activities.CodeActivity> or the <xref:System.Activities.NativeActivity> methods.

@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Function Overload Resolution (Entity SQL)
-This topic describes how [!INCLUDE[esql](../../../../../../includes/esql-md.md)] functions are resolved.  
+This topic describes how [!INCLUDE [esql](../../../../../../includes/esql-md.md)] functions are resolved.  
   
  More than one function can be defined with the same name, as long as the functions have unique signatures.  
   

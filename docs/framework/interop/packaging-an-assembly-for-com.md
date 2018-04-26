@@ -29,39 +29,39 @@ ms.workload:
 # Packaging an Assembly for COM
 COM developers can benefit from the following information about the managed types they plan to incorporate in their application:  
   
--   A list of types that COM applications can consume  
+- A list of types that COM applications can consume  
   
-     Some managed types are invisible to COM; some are visible but not creatable; and some are both visible and creatable. An assembly can comprise any combination of invisible, visible, not creatable, and creatable types. For completeness, identify the types in an assembly that you intend to expose to COM, especially when those types are a subset of the types exposed to the .NET Framework.  
+   Some managed types are invisible to COM; some are visible but not creatable; and some are both visible and creatable. An assembly can comprise any combination of invisible, visible, not creatable, and creatable types. For completeness, identify the types in an assembly that you intend to expose to COM, especially when those types are a subset of the types exposed to the .NET Framework.  
   
-     For additional information, see [Qualifying .NET Types for Interoperation](qualifying-net-types-for-interoperation.md).  
+   For additional information, see [Qualifying .NET Types for Interoperation](qualifying-net-types-for-interoperation.md).  
   
--   Versioning instructions  
+- Versioning instructions  
   
-     Managed classes that implement the class interface (a COM interop-generated interface) are subject to versioning restrictions.  
+   Managed classes that implement the class interface (a COM interop-generated interface) are subject to versioning restrictions.  
   
-     For guidelines on using the class interface, see [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface).  
+   For guidelines on using the class interface, see [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface).  
   
--   Deployment instructions  
+- Deployment instructions  
   
-     Strong-named assemblies that are signed by a publisher can be installed into the global assembly cache. Unsigned assemblies must be installed on the user's machine as private assemblies.  
+   Strong-named assemblies that are signed by a publisher can be installed into the global assembly cache. Unsigned assemblies must be installed on the user's machine as private assemblies.  
   
-     For additional information, see [Assembly Security Considerations](../app-domains/assembly-security-considerations.md).  
+   For additional information, see [Assembly Security Considerations](../app-domains/assembly-security-considerations.md).  
   
--   Type library inclusion  
+- Type library inclusion  
   
-     Most types require a type library when consumed by a COM application. You can generate a type library or have COM developers perform this task. The [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] provides the following options for generating a type library:  
+   Most types require a type library when consumed by a COM application. You can generate a type library or have COM developers perform this task. The [!INCLUDE [winsdklong](../../../includes/winsdklong-md.md)] provides the following options for generating a type library:  
   
-    -   [Type Library Exporter](#cpconpackagingassemblyforcomanchor1)  
+  -   [Type Library Exporter](#cpconpackagingassemblyforcomanchor1)  
   
-    -   [TypeLibConverter Class](#cpconpackagingassemblyforcomanchor2)  
+  -   [TypeLibConverter Class](#cpconpackagingassemblyforcomanchor2)  
   
-    -   [Assembly Registration Tool](#cpconpackagingassemblyforcomanchor3)  
+  -   [Assembly Registration Tool](#cpconpackagingassemblyforcomanchor3)  
   
-    -   [.NET Services Installation Tool](#cpconpackagingassemblyforcomanchor4)  
+  -   [.NET Services Installation Tool](#cpconpackagingassemblyforcomanchor4)  
   
-     Regardless of the mechanism you choose, only public types defined in the assembly you supply are included in the generated type library.  
+   Regardless of the mechanism you choose, only public types defined in the assembly you supply are included in the generated type library.  
   
-     You can package a type library as a separate file or embed it as Win32 resource file within a .NET-based application. Microsoft Visual Basic 6.0 performed this task for you automatically; however, when using [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], you must embed your type library manually. For instructions, see [How to: Embed Type Libraries as Win32 Resources in .NET-Based Applications](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
+   You can package a type library as a separate file or embed it as Win32 resource file within a .NET-based application. Microsoft Visual Basic 6.0 performed this task for you automatically; however, when using [!INCLUDE [vbprvbext](../../../includes/vbprvbext-md.md)], you must embed your type library manually. For instructions, see [How to: Embed Type Libraries as Win32 Resources in .NET-Based Applications](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## Type Library Exporter  

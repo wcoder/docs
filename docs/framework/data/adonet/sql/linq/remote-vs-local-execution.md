@@ -21,7 +21,7 @@ ms.workload:
   - "dotnet"
 ---
 # Remote vs. Local Execution
-You can decide to execute your queries either remotely (that is, the database engine executes the query against the database) or locally ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] executes the query against a local cache).  
+You can decide to execute your queries either remotely (that is, the database engine executes the query against the database) or locally ([!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] executes the query against a local cache).  
   
 ## Remote Execution  
  Consider the following query:  
@@ -29,7 +29,7 @@ You can decide to execute your queries either remotely (that is, the database en
  [!code-csharp[DLinqQueryConcepts#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#7)]
  [!code-vb[DLinqQueryConcepts#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#7)]  
   
- If your database has thousands of rows of orders, you do not want to retrieve them all to process a small subset. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the <xref:System.Data.Linq.EntitySet%601> class implements the <xref:System.Linq.IQueryable> interface. This approach makes sure that such queries can be executed remotely. Two major benefits flow from this technique:  
+ If your database has thousands of rows of orders, you do not want to retrieve them all to process a small subset. In [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the <xref:System.Data.Linq.EntitySet%601> class implements the <xref:System.Linq.IQueryable> interface. This approach makes sure that such queries can be executed remotely. Two major benefits flow from this technique:  
   
 -   Unnecessary data is not retrieved.  
   

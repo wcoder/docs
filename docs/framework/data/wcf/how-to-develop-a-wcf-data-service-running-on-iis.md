@@ -25,7 +25,7 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Develop a WCF Data Service Running on IIS
-This topic shows how to use [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to create a data service that is based on the Northwind sample database that is hosted by an ASP.NET Web application that is running on Internet Information Services (IIS). For an example of how to create the same Northwind data service as an ASP.NET Web application that runs on the ASP.NET Development Server, see the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+This topic shows how to use [!INCLUDE [ssAstoria](../../../../includes/ssastoria-md.md)] to create a data service that is based on the Northwind sample database that is hosted by an ASP.NET Web application that is running on Internet Information Services (IIS). For an example of how to create the same Northwind data service as an ASP.NET Web application that runs on the ASP.NET Development Server, see the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 > [!NOTE]
 >  To create the Northwind data service, you must have installed the Northwind sample database on the local computer. To download this sample database, see the download page, [Sample Databases for SQL Server](http://go.microsoft.com/fwlink/?linkid=24758).  
@@ -154,18 +154,18 @@ This topic shows how to use [!INCLUDE[ssAstoria](../../../../includes/ssastoria-
   
 ### To create the data service  
   
-1.  In **Solution Explorer**, right-click the name of your ASP.NET project, and then click **Add New Item**.  
+1. In **Solution Explorer**, right-click the name of your ASP.NET project, and then click **Add New Item**.  
   
-2.  In the **Add New Item** dialog box, select **ADO.NET Data Service**.  
+2. In the **Add New Item** dialog box, select **ADO.NET Data Service**.  
   
-3.  For the name of the service, type `Northwind`.  
+3. For the name of the service, type `Northwind`.  
   
-     Visual Studio creates the XML markup and code files for the new service. By default, the code-editor window opens. In **Solution Explorer**, the service will have the name, Northwind, with the extension .svc.cs or .svc.vb.  
+    Visual Studio creates the XML markup and code files for the new service. By default, the code-editor window opens. In **Solution Explorer**, the service will have the name, Northwind, with the extension .svc.cs or .svc.vb.  
   
-4.  In the code for the data service, replace the comment `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is `NorthwindEntities`. The class definition should look this the following:  
+4. In the code for the data service, replace the comment `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is `NorthwindEntities`. The class definition should look this the following:  
   
-     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
-     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]  
+    [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
+    [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]  
   
 ## See Also  
  [Exposing Your Data as a Service](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)

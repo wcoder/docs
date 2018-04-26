@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Aggregate Queries
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports the `Average`, `Count`, `Max`, `Min`, and `Sum` aggregate operators. Note the following characteristics of aggregate operators in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
+[!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports the `Average`, `Count`, `Max`, `Min`, and `Sum` aggregate operators. Note the following characteristics of aggregate operators in [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
 -   Aggregate queries are executed immediately.  
   
@@ -50,10 +50,10 @@ ms.workload:
   
 ## Related Sections  
  [Query Examples](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- Provides links to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries in Visual Basic and C#.  
+ Provides links to [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries in Visual Basic and C#.  
   
  [Query Concepts](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- Provides links to topics that explain concepts for designing [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] queries in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ Provides links to topics that explain concepts for designing [!INCLUDE [vbteclinq](../../../../../../includes/vbteclinq-md.md)] queries in [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- Explains how queries work in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].
+ Explains how queries work in [!INCLUDE [vbteclinq](../../../../../../includes/vbteclinq-md.md)].

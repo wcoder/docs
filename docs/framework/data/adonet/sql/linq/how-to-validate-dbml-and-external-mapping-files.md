@@ -20,7 +20,7 @@ ms.workload:
 # How to: Validate DBML and External Mapping Files
 External mapping files and .dbml files that you modify must be validated against their respective schema definitions. This topic provides Visual Studio users with the steps to implement the validation process.  
   
- [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
+[!INCLUDE [note_settings_general](../../../../../../includes/note-settings-general-md.md)]
   
 ### To validate a .dbml or XML file  
   

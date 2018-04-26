@@ -18,27 +18,27 @@ ms.workload:
   - "dotnet"
 ---
 # Configuration-Based Activation
-This sample demonstrates how to activate [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services without requiring a .svc file.  
+This sample demonstrates how to activate [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] services without requiring a .svc file.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
 ## Sample Details  
- In this sample, the client is the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test client and the service is hosted in IIS.  
+ In this sample, the client is the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] test client and the service is hosted in IIS.  
   
 > [!NOTE]
 >  The setup and build instructions for this sample are located at the end of this topic.  
   
 ### Activation of services without requiring a .svc file  
- In [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], a .svc file was required for activating a service. This caused additional management overhead, because an additional file was required to be deployed and maintained along with the application. With the release of [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)], the activation components can be configured using the application configuration file.  
+ In [!INCLUDE [netfx35_short](../../../../includes/netfx35-short-md.md)], a .svc file was required for activating a service. This caused additional management overhead, because an additional file was required to be deployed and maintained along with the application. With the release of [!INCLUDE [netfx40_long](../../../../includes/netfx40-long-md.md)], the activation components can be configured using the application configuration file.  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] introduces a new configuration element (<xref:System.ServiceModel.Configuration.ServiceActivationElement>), in the <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> of the application configuration file. The <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> collection accepts a collection of services to activate, as shown in the following code example.  
+ [!INCLUDE [netfx40_short](../../../../includes/netfx40-short-md.md)] introduces a new configuration element (<xref:System.ServiceModel.Configuration.ServiceActivationElement>), in the <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> of the application configuration file. The <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> collection accepts a collection of services to activate, as shown in the following code example.  
   
 ```xml  
 <serviceActivations>  
@@ -54,21 +54,21 @@ This sample demonstrates how to activate [!INCLUDE[indigo1](../../../../includes
   
 #### To use this sample  
   
-1.  Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the Service.csproj file.  
+1. Using [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)], open the Service.csproj file.  
   
-2.  To build the solution, press CTRL+SHIFT+B.  
+2. To build the solution, press CTRL+SHIFT+B.  
   
-3.  Test the service by running WCFTestClient.exe.  
+3. Test the service by running WCFTestClient.exe.  
   
-4.  Using [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], navigate to the %SystemDrive%\Program Files\Microsoft Visual Studio 10.0\Common7\IDE folder.  
+4. Using [!INCLUDE [fileExplorer](../../../../includes/fileexplorer-md.md)], navigate to the %SystemDrive%\Program Files\Microsoft Visual Studio 10.0\Common7\IDE folder.  
   
-5.  Run WcfTestClient.exe.  
+5. Run WcfTestClient.exe.  
   
-6.  Set the MEX address of the service.  
+6. Set the MEX address of the service.  
   
-7.  Press CTRL+SHIFT+A to set the service address.  
+7. Press CTRL+SHIFT+A to set the service address.  
   
-8.  Set the address to http://localhost/ServiceModelSamples/Calculator.svc.  
+8. Set the address to http://localhost/ServiceModelSamples/Calculator.svc.  
   
 9. Perform the `Add` operation. Set value on the `n1` parameter to 10 and set value on the `n2` parameter to 15.  
   

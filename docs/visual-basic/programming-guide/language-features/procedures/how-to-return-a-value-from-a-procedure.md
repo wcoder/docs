@@ -22,19 +22,19 @@ A `Function` procedure returns a value to the calling code either by executing a
   
 ### To return a value using the Return statement  
   
-1.  Put a `Return` statement at the point where the procedure's task is completed.  
+1. Put a `Return` statement at the point where the procedure's task is completed.  
   
-2.  Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.  
+2. Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.  
   
-3.  You can have more than one `Return` statement in the same procedure.  
+3. You can have more than one `Return` statement in the same procedure.  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.  
+    The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.  
   
-     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
+    [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
   
-     The following example shows a typical call to `hypotenuse`, which stores the returned value.  
+    The following example shows a typical call to `hypotenuse`, which stores the returned value.  
   
-     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
+    [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
   
 ### To return a value using Exit Function or End Function  
   

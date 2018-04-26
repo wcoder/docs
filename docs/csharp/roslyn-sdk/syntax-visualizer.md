@@ -13,7 +13,7 @@ ms.custom: mvc
 
 This article provides an overview of the Syntax Visualizer tool that ships as part of the .NET Compiler Platform ("Roslyn") SDK. The Syntax Visualizer is a tool window that helps you inspect and explore syntax trees. It's an essential tool to understand the models for code you want to analyze. It's also a debugging aid when you develop your own applications using the .NET Compiler Platform (“Roslyn”) SDK. Open this tool as you create your first analyzers. The visualizer helps you understand the models used by the APIs. You can also use tools like [SharpLab](https://sharplab.io) or [LINQPad](https://www.linqpad.net/) to inspect code and understand syntax trees.
 
-[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+[!INCLUDE [interactive-note](~/includes/roslyn-installation.md)]
 
 Familiarize yourself with the concepts used in the .NET Compiler Platform SDK by reading the [overview](compiler-api-model.md) article. It provides an introduction to syntax trees, nodes, tokens, and trivia.
 

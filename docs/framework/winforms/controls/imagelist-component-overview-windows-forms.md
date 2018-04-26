@@ -32,7 +32,7 @@ The Windows Forms <xref:System.Windows.Forms.ImageList> component is used to sto
 ## Key Properties  
  The key property of the <xref:System.Windows.Forms.ImageList> component is <xref:System.Windows.Forms.ImageList.Images%2A>, which contains the pictures to be used by the associated control. Each individual image can be accessed by its index value or by its key. The <xref:System.Windows.Forms.ImageList.ColorDepth%2A> property determines the number of colors that the images are rendered with. The images will all be displayed at the same size, set by the <xref:System.Windows.Forms.ImageList.ImageSize%2A> property. Images that are larger will be scaled to fit.  
   
- If you are using [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], you have access to a large library of standard images that you can use in your applications.  
+ If you are using [!INCLUDE [vsprvslong](../../../../includes/vsprvslong-md.md)], you have access to a large library of standard images that you can use in your applications.  
   
 ## See Also  
  <xref:System.Windows.Forms.ImageList>  

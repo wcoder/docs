@@ -1,3 +1,4 @@
+
 ---
 title: The .NET Compiler Platform SDK (Roslyn APIs)
 description: Learn to use the .NET Compiler Platform SDK (also called the Roslyn APIs) to understand .NET code, spot errors, and fix those errors.
@@ -135,10 +136,10 @@ You can learn more about the concepts in the .NET Compiler Platform SDK in these
  - [Work with syntax](work-with-syntax.md)
  - [Work with semantics](work-with-semantics.md)
  - [Work with a workspace](work-with-workspace.md)
- 
+
 To get started, you'll need to install the **.NET Compiler Platform SDK**:
 
-[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+[!INCLUDE [interactive-note](~/includes/roslyn-installation.md)]
 
 <!--
 

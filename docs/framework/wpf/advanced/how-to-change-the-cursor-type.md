@@ -26,7 +26,7 @@ ms.workload:
 # How to: Change the Cursor Type
 This example shows how to change the <xref:System.Windows.Input.Cursor> of the mouse pointer for a specific element and for the application.  
   
- This example consists of a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file and a code behind file.  
+ This example consists of a [!INCLUDE [TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file and a code behind file.  
   
 ## Example  
  The user interface is created, which consists of a <xref:System.Windows.Controls.ComboBox> to select the desired <xref:System.Windows.Input.Cursor>, a pair of <xref:System.Windows.Controls.RadioButton> objects to determine if the cursor change applies to only a single element or applies to the entire application, and a <xref:System.Windows.Controls.Border> which is the element that the new cursor is applied to.  

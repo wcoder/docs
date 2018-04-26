@@ -42,7 +42,7 @@ Retrieves the debug symbol information for a variable.
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## See Also  
  [Debugging Interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

@@ -24,7 +24,7 @@ ms.workload:
   - dotnet
 ---
 # Graphics How-to Topics
-The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## In This Section  
  [Animate a Rectangle](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  

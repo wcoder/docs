@@ -45,7 +45,7 @@ By default, `dotnet pack` builds the project first. If you wish to avoid this be
 
 You can provide MSBuild properties to the `dotnet pack` command for the packing process. For more information, see [NuGet metadata properties](csproj.md#nuget-metadata-properties) and the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference). The [Examples](#examples) section shows how to use the MSBuild /p switch for a couple of different scenarios.
 
-[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+[!INCLUDE [dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## Arguments
 

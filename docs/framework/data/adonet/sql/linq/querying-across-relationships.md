@@ -37,9 +37,9 @@ References to other objects or collections of other objects in your class defini
   
  With regard to this, relationship properties are more important on the results side of a query than as part of the query itself. After the query has retrieved data about a particular customer, the class definition indicates that customers have orders. In other words, you expect the `Orders` property of a particular customer to be a collection that is populated with all the orders from that customer. That is in fact the contract you declared by defining the classes in this manner. You expect to see the orders there even if the query did not request orders. You expect your object model to maintain an illusion that it is an in-memory extension of the database with related objects immediately available.  
   
- Now that you have relationships, you can write queries by referring to the relationship properties defined in your classes. These relationship references correspond to foreign-key relationships in the database. Operations that use these relationships translate to more complex joins in the equivalent SQL. As long as you have defined a relationship (using the <xref:System.Data.Linq.Mapping.AssociationAttribute> attribute), you do not have to code an explicit join in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ Now that you have relationships, you can write queries by referring to the relationship properties defined in your classes. These relationship references correspond to foreign-key relationships in the database. Operations that use these relationships translate to more complex joins in the equivalent SQL. As long as you have defined a relationship (using the <xref:System.Data.Linq.Mapping.AssociationAttribute> attribute), you do not have to code an explicit join in [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- To help maintain this illusion, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implements a technique called *deferred loading*. For more information, see [Deferred versus Immediate Loading](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+ To help maintain this illusion, [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implements a technique called *deferred loading*. For more information, see [Deferred versus Immediate Loading](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
   
  Consider the following SQL query to project a list of `CustomerID`-`OrderID` pairs:  
   
@@ -50,7 +50,7 @@ FROM   Customers AS t0 INNER JOIN
 WHERE  (t0.City = @p0)  
 ```  
   
- To obtain the same results by using [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], you use the `Orders` property reference already existing in the `Customer` class. The `Orders` reference provides the necessary information to execute the query and project the `CustomerID`-`OrderID` pairs, as in the following code:  
+ To obtain the same results by using [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], you use the `Orders` property reference already existing in the `Customer` class. The `Orders` reference provides the necessary information to execute the query and project the `CustomerID`-`OrderID` pairs, as in the following code:  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  

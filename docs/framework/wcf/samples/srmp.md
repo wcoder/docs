@@ -22,31 +22,31 @@ This sample demonstrates how to perform transacted queued communication by using
   
  In queued communication, the client communicates to the service using a queue. More precisely, the client sends messages to a queue. The service receives messages from the queue. The service and client therefore, do not have to be running at the same time to communicate using a queue.  
   
- MSMQ enables the use of HTTP (including the use of HTTPS) to send messages to a queue. In this example, we demonstrate using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] queued communication and how to send messages over HTTP. MSMQ uses a protocol called SRMP, which is a SOAP-based protocol for communication over HTTP.  
+ MSMQ enables the use of HTTP (including the use of HTTPS) to send messages to a queue. In this example, we demonstrate using [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] queued communication and how to send messages over HTTP. MSMQ uses a protocol called SRMP, which is a SOAP-based protocol for communication over HTTP.  
   
 ### To set up, build, and run the sample  
   
-1.  Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-4.  Before running the sample in **Add/Remove Windows Components**, ensure that MSMQ is installed with HTTP support. Installing HTTP support automatically installs Internet Information Services (IIS) and adds the protocol support in IIS for MSMQ.  
+4. Before running the sample in **Add/Remove Windows Components**, ensure that MSMQ is installed with HTTP support. Installing HTTP support automatically installs Internet Information Services (IIS) and adds the protocol support in IIS for MSMQ.  
   
-5.  If you want to be certain that HTTP is used for communication, you can enable MSMQ to run in hardened mode. This ensures that no messages to any queue hosted on the machine can arrive using any non-HTTP transport.  
+5. If you want to be certain that HTTP is used for communication, you can enable MSMQ to run in hardened mode. This ensures that no messages to any queue hosted on the machine can arrive using any non-HTTP transport.  
   
-6.  After you have selected MSMQ to run in hardened mode, the machine requires a re-boot on [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+6. After you have selected MSMQ to run in hardened mode, the machine requires a re-boot on [!INCLUDE [ws2003](../../../../includes/ws2003-md.md)].  
   
-7.  Run the service.  
+7. Run the service.  
   
-8.  Run the client. Ensure that you change the endpoint address to point to the machine name or IP address instead of localhost. The client sends a message and exits.  
+8. Run the client. Ensure that you change the endpoint address to point to the machine name or IP address instead of localhost. The client sends a message and exits.  
   
 ## Requirements  
  To run this sample, IIS must be installed on both the service and the client machines in addition to MSMQ.  
   
 ## Demonstrates  
- The sample demonstrates sending [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] queued messages using MSMQ over HTTP. This is also called SRMP messaging. When a queued message is sent, MSMQ on the sending machine transfers the messages to the receiving queue manager over TCP or HTTP transport. By choosing SRMP, the user indicates the choice of HTTP as a transport for queue transfer. SRMP Secure enables the use of HTTPS.  
+ The sample demonstrates sending [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] queued messages using MSMQ over HTTP. This is also called SRMP messaging. When a queued message is sent, MSMQ on the sending machine transfers the messages to the receiving queue manager over TCP or HTTP transport. By choosing SRMP, the user indicates the choice of HTTP as a transport for queue transfer. SRMP Secure enables the use of HTTPS.  
   
 ## Example  
  The sample code is based on the transacted sample. How you send a message to the queue and receive a message from the queue using SRMP is the same as sending and receiving messages using a Native protocol.  
@@ -97,11 +97,11 @@ OrderDetails
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  
   
 ## See Also

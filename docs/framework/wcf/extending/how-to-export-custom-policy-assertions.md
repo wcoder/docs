@@ -21,7 +21,7 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Export Custom Policy Assertions
-Policy assertions describe the capabilities and requirements of a service endpoint. Service applications can use custom policy assertions in service metadata to communicate endpoint, binding or contract customization information to the client application. You can use [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to export assertions in policy expressions attached in WSDL bindings at the endpoint, operation, or message subjects, depending upon the capabilities or requirements you are communicating.  
+Policy assertions describe the capabilities and requirements of a service endpoint. Service applications can use custom policy assertions in service metadata to communicate endpoint, binding or contract customization information to the client application. You can use [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] to export assertions in policy expressions attached in WSDL bindings at the endpoint, operation, or message subjects, depending upon the capabilities or requirements you are communicating.  
   
  Custom policy assertions are exported by implementing the <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interface on a <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> and either inserting the binding element directly into the binding of the service endpoint or by registering the binding element in your application configuration file. Your policy export implementation should add your custom policy assertion as a <xref:System.Xml.XmlElement?displayProperty=nameWithType> instance to the appropriate <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> on the <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> passed into the <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> method.  
   
@@ -31,12 +31,12 @@ Policy assertions describe the capabilities and requirements of a service endpoi
   
 ### To export custom policy assertions  
   
-1.  Implement the <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interface on a <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. The following code example shows the implementation of a custom policy assertion at the binding level.  
+1. Implement the <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interface on a <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. The following code example shows the implementation of a custom policy assertion at the binding level.  
   
-     [!code-csharp[CustomPolicySample#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
-     [!code-vb[CustomPolicySample#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
+    [!code-csharp[CustomPolicySample#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
+    [!code-vb[CustomPolicySample#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
   
-2.  Insert the binding element into the endpoint binding either programmatically or using an application configuration file. See the following procedures.  
+2. Insert the binding element into the endpoint binding either programmatically or using an application configuration file. See the following procedures.  
   
 ### To insert a binding element using an application configuration file  
   
@@ -48,14 +48,14 @@ Policy assertions describe the capabilities and requirements of a service endpoi
   
 ### To insert a binding element programmatically  
   
-1.  Create a new <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> and add it to a <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
+1. Create a new <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> and add it to a <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
-2.  Add the custom binding from step 1. to a new endpoint and add that new service endpoint to the <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> by calling the <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> method.  
+2. Add the custom binding from step 1. to a new endpoint and add that new service endpoint to the <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> by calling the <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> method.  
   
-3.  Open the <xref:System.ServiceModel.ServiceHost>. The following code example shows the creation of a custom binding and the programmatic insertion of binding elements.  
+3. Open the <xref:System.ServiceModel.ServiceHost>. The following code example shows the creation of a custom binding and the programmatic insertion of binding elements.  
   
-     [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
-     [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
+    [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
+    [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
 ## See Also  
  <xref:System.ServiceModel.Description.IPolicyImportExtension>  

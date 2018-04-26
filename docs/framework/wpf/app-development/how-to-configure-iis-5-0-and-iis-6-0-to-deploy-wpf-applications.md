@@ -29,31 +29,31 @@ ms.workload:
   - dotnet
 ---
 # How to: Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications
-You can deploy a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application from most Web servers, as long as they are configured with the appropriate [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] types. By default, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] is configured with these [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types, but [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] and [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] are not.  
+You can deploy a [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application from most Web servers, as long as they are configured with the appropriate [!INCLUDE [TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] types. By default, [!INCLUDE [TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] is configured with these [!INCLUDE [TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types, but [!INCLUDE [TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] and [!INCLUDE [TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] are not.  
   
- This topic describes how to configure [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] and [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] to deploy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.  
+ This topic describes how to configure [!INCLUDE [TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] and [!INCLUDE [TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] to deploy [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.  
   
   
 > [!NOTE]
->  You can check the *UserAgent* string in the registry to determine whether a system has [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] installed. For details and a script that examines the *UserAgent* string to determine whether [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] is installed on a system, see [Detect Whether the .NET Framework 3.0 Is Installed](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
+>  You can check the *UserAgent* string in the registry to determine whether a system has [!INCLUDE [TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] installed. For details and a script that examines the *UserAgent* string to determine whether [!INCLUDE [TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] is installed on a system, see [Detect Whether the .NET Framework 3.0 Is Installed](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
   
 <a name="content_expiration"></a>   
 ## Adjust the Content Expiration Setting  
- You should adjust the content expiration setting to 1 minute. The following procedure outlines how to do this with [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].  
+ You should adjust the content expiration setting to 1 minute. The following procedure outlines how to do this with [!INCLUDE [TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].  
   
-1.  Click the **Start** menu, point to **Administrative Tools**, and click **Internet Information Services (IIS) Manager**. You can also launch this application from the command line with "%SystemRoot%\system32\inetsrv\iis.msc".  
+1. Click the **Start** menu, point to **Administrative Tools**, and click **Internet Information Services (IIS) Manager**. You can also launch this application from the command line with "%SystemRoot%\system32\inetsrv\iis.msc".  
   
-2.  Expand the [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)] tree until you find the **Default Web site** node.  
+2. Expand the [!INCLUDE [TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)] tree until you find the **Default Web site** node.  
   
-3.  Right-click **Default Web site** and select **Properties** from the context menu.  
+3. Right-click **Default Web site** and select **Properties** from the context menu.  
   
-4.  Select the **HTTP Headers** tab and click "Enable Content Expiration".  
+4. Select the **HTTP Headers** tab and click "Enable Content Expiration".  
   
-5.  Set the content to expire after 1 minute.  
+5. Set the content to expire after 1 minute.  
   
 <a name="register_mime_types"></a>   
 ## Register MIME Types and File Extensions  
- You must register several [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types and file extensions so that the browser on the client's system can load the correct handler. You need to add the following types:  
+ You must register several [!INCLUDE [TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types and file extensions so that the browser on the client's system can load the correct handler. You need to add the following types:  
   
 |Extension|MIME Type|  
 |---------------|---------------|  
@@ -65,9 +65,9 @@ You can deploy a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-w
 |.xps|application/vnd.ms-xpsdocument|  
   
 > [!NOTE]
->  You do not need to register [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types or file extensions on client systems. They are registered automatically when you install Microsoft .NET Framework.  
+>  You do not need to register [!INCLUDE [TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types or file extensions on client systems. They are registered automatically when you install Microsoft .NET Framework.  
   
- The following Microsoft Visual Basic Scripting Edition (VBScript) sample automatically adds the necessary [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types to [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]. To use the script, copy the code to a .vbs file on your server. Then, run the script by running the file from the command line or double-clicking the file in [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].  
+ The following Microsoft Visual Basic Scripting Edition (VBScript) sample automatically adds the necessary [!INCLUDE [TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types to [!INCLUDE [TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]. To use the script, copy the code to a .vbs file on your server. Then, run the script by running the file from the command line or double-clicking the file in [!INCLUDE [TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].  
   
 ```  
 ' This script adds the necessary Windows Presentation Foundation MIME types   
@@ -130,9 +130,9 @@ End Sub
 ```  
   
 > [!NOTE]
->  Running this script multiple times creates multiple [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] map entries in the [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabase.  
+>  Running this script multiple times creates multiple [!INCLUDE [TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] map entries in the [!INCLUDE [TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE [TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabase.  
   
- After you have run this script, you may not see additional [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types from the [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)]. However, these [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types have been added to the [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabase. The following script will display all the [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types in the [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabase.  
+ After you have run this script, you may not see additional [!INCLUDE [TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types from the [!INCLUDE [TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE [TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE [TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)]. However, these [!INCLUDE [TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types have been added to the [!INCLUDE [TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE [TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabase. The following script will display all the [!INCLUDE [TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types in the [!INCLUDE [TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or [!INCLUDE [TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metabase.  
   
 ```  
 ' This script lists the MIME types for an IIS Server.  

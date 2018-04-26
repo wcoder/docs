@@ -28,7 +28,7 @@ GROUPPARTITION( [ALL|DISTINCT] expression )
   
 ## Arguments  
  `expression`  
- Any [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression.  
+ Any [!INCLUDE [esql](../../../../../../includes/esql-md.md)] expression.  
   
 ## Remarks  
  The following query produces a list of products and a collection of order line quantities per each product:  
@@ -64,7 +64,7 @@ select p, (select ol.Quantity as q from LOB.OrderLines as ol2 where ol2.Product 
   
  As seen from the example, the GROUPPARTITION aggregate operator makes it easier to get a reference to the input set after the grouping.  
   
- The GROUPPARTITION operator can specify any [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression in the operator input when you use the `expression` parameter.  
+ The GROUPPARTITION operator can specify any [!INCLUDE [esql](../../../../../../includes/esql-md.md)] expression in the operator input when you use the `expression` parameter.  
   
  For instance all of the following input expressions to the group partition are valid:  
   

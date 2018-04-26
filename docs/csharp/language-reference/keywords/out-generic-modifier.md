@@ -46,7 +46,7 @@ For generic type parameters, the `out` keyword specifies that the type parameter
  In a generic delegate, a type can be declared covariant if it is used only as a method return type and not used for method arguments.  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [Variance in Generic Interfaces](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  

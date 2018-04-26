@@ -554,6 +554,6 @@ If you're hosting your application on Azure, you can use Microsoft Azure Applica
 > - **Introducing Azure Application Gateway**  
 > <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
->[!div class="step-by-step"]
-[Previous] (common-client-side-web-technologies.md)
-[Next] (work-with-data-in-asp-net-core-apps.md)
+> [!div class="step-by-step"]
+> [Previous](common-client-side-web-technologies.md)
+> [Next](work-with-data-in-asp-net-core-apps.md)

@@ -19,14 +19,14 @@ ms.workload:
 ---
 # &lt;clear&gt;
 Clears all security token handlers from the current token handler collection.  
-  
+
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
 \<clear>  
-  
+
 ## Syntax  
-  
+
 ```xml  
 <system.identityModel>  
   <identityConfiguration>  
@@ -37,18 +37,20 @@ Clears all security token handlers from the current token handler collection.
   </identityConfiguration>  
 </system.identityModel>  
 ```  
-  
+
 ## Attributes and Elements  
  The following sections describe attributes, child elements, and parent elements.  
-  
+
 ### Attributes  
  None  
-  
+
 ### Child Elements  
  None  
-  
+
 ### Parent Elements  
-  
-|Element|Description|  
-|-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Specifies a collection of security token handlers that are registered with the endpoint.|
+
+
+|                                                                  Element                                                                  |                                       Description                                        |
+|-------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| [\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md) | Specifies a collection of security token handlers that are registered with the endpoint. |
+

@@ -23,15 +23,15 @@ The SQL generation module is responsible for generating a backend specific SQL q
 ## Query Command Trees Overview  
  A query command tree is an object model representation of a query. Query command trees serve two purposes:  
   
--   To express an input query that is specified against the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+- To express an input query that is specified against the [!INCLUDE [adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
--   To express an output query that is given to a provider and describes a query against the backend.  
+- To express an output query that is given to a provider and describes a query against the backend.  
   
  Query command trees support richer semantics than SQL:1999 compliant queries, including support for working with nested collections and type operations, like checking whether an entity is of a particular type, or filtering sets based on a type.  
   
  The DBQueryCommandTree.Query property is the root of the expression tree that describes the query logic. The DBQueryCommandTree.Parameters property contains a list of parameters that are used in the query. The expression tree is composed of DbExpression objects.  
   
- A DbExpression object represents some computation. Several kinds of expressions are provided by the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] for composing query expressions, including constants, variables, functions, constructors, and standard relational operators like filter and join. Every DbExpression object has a ResultType property that represents the type of the result produced by that expression. This type is expressed as a TypeUsage.  
+ A DbExpression object represents some computation. Several kinds of expressions are provided by the [!INCLUDE [adonet_ef](../../../../../includes/adonet-ef-md.md)] for composing query expressions, including constants, variables, functions, constructors, and standard relational operators like filter and join. Every DbExpression object has a ResultType property that represents the type of the result produced by that expression. This type is expressed as a TypeUsage.  
   
 ## Shapes of the Output Query Command Tree  
  Output query command trees closely represent relational (SQL) queries and adhere to much stricter rules than those that apply to query command trees. They typically contain constructs that are easily translated to SQL.  
@@ -77,7 +77,7 @@ The SQL generation module is responsible for generating a backend specific SQL q
   
 -   User-defined functions.  
   
- Canonical functions (see [Canonical Functions](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) for more information) are specified as part of the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], and providers should supply implementations for canonical functions based on those specifications. Store functions are based on the specifications in the corresponding provider manifest. User defined functions are based on specifications in the SSDL.  
+ Canonical functions (see [Canonical Functions](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) for more information) are specified as part of the [!INCLUDE [adonet_ef](../../../../../includes/adonet-ef-md.md)], and providers should supply implementations for canonical functions based on those specifications. Store functions are based on the specifications in the corresponding provider manifest. User defined functions are based on specifications in the SSDL.  
   
  Also, functions having the NiladicFunction attribute have no arguments and should be translated without the parenthesis at the end.  That is, to *\<functionName>* instead of *\<functionName>()*.  
   

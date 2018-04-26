@@ -16,29 +16,29 @@ ms.workload:
   - "dotnet"
 ---
 # Consuming OData Feeds from a Workflow
-WCF Data Services is a component of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] that enables you to create services that use the Open Data Protocol (OData) to expose and consume data over the Web or intranet by using the semantics of representational state transfer (REST). OData exposes data as resources that are addressable by URIs. Any application can interact with an OData-based data service if it can send an HTTP request and process the OData feed that a data service returns. In addition, WCF Data Services includes client libraries that provide a richer programming experience when you consume OData feeds from [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] applications. This topic provides an overview of consuming an OData feed in a workflow with and without using the client libraries.  
+WCF Data Services is a component of the [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)] that enables you to create services that use the Open Data Protocol (OData) to expose and consume data over the Web or intranet by using the semantics of representational state transfer (REST). OData exposes data as resources that are addressable by URIs. Any application can interact with an OData-based data service if it can send an HTTP request and process the OData feed that a data service returns. In addition, WCF Data Services includes client libraries that provide a richer programming experience when you consume OData feeds from [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)] applications. This topic provides an overview of consuming an OData feed in a workflow with and without using the client libraries.  
   
 ## Using the Sample Northwind OData Service  
  The examples in this topic use the sample Northwind data service located at [http://services.odata.org/Northwind/Northwind.svc/](http://go.microsoft.com/fwlink/?LinkID=187426). This service is provided as part of the [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) and provides read-only access to the sample Northwind database. If write access is desired, or if a local WCF Data Service is desired, you can follow the steps of the [WCF Data Services Quickstart](http://go.microsoft.com/fwlink/?LinkID=131076) to create a local OData service that provides access to the Northwind database. If you follow the quickstart, substitute the local URI for the one provided in the example code in this topic.  
   
 ## Consuming an OData Feed Using the Client Libraries  
- WCF Data Services includes client libraries that enable you to more easily consume an OData feed from [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] and client applications. These libraries simplify sending and receiving HTTP messages. They also translate the message payload into CLR objects that represent entity data. The client libraries feature the two core classes <xref:System.Data.Services.Client.DataServiceContext> and <xref:System.Data.Services.Client.DataServiceQuery%601>. These classes enable you to query a data service and then work with the returned entity data as CLR objects. This section covers two approaches to creating activities that use the client libraries.  
+ WCF Data Services includes client libraries that enable you to more easily consume an OData feed from [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)] and client applications. These libraries simplify sending and receiving HTTP messages. They also translate the message payload into CLR objects that represent entity data. The client libraries feature the two core classes <xref:System.Data.Services.Client.DataServiceContext> and <xref:System.Data.Services.Client.DataServiceQuery%601>. These classes enable you to query a data service and then work with the returned entity data as CLR objects. This section covers two approaches to creating activities that use the client libraries.  
   
 ### Adding a Service Reference to the WCF Data Service  
- To generate the Northwind client libraries, you can use the **Add Service Reference** dialog box in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] to add a reference to the Northwind OData service.  
+ To generate the Northwind client libraries, you can use the **Add Service Reference** dialog box in [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)] to add a reference to the Northwind OData service.  
   
  ![Add Service Reference](../../../docs/framework/windows-workflow-foundation/media/addservicereferencetonorthwindodataservice.gif "AddServiceReferencetoNorthwindODataService")  
   
  Note that there are no service operations exposed by the service, and in the **Services** list there are items representing the entities exposed by the Northwind data service. When the service reference is added, classes will be generated for these entities and they can be used in the client code. The examples in this topic use these classes and the `NorthwindEntities` class to perform the queries.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Generating the Data Service Client Library (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=191611).  
+>  [!INCLUDE [crdefault](../../../includes/crdefault-md.md)] [Generating the Data Service Client Library (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=191611).  
   
 ### Using Asynchronous Methods  
- To address possible latency issues that may occur when accessing resources over the Web, we recommend accessing WCF Data Services asynchronously. The WCF Data Services client libraries include asynchronous methods for invoking queries, and [!INCLUDE[wf](../../../includes/wf-md.md)] provides the <xref:System.Activities.AsyncCodeActivity> class for authoring asynchronous activities. <xref:System.Activities.AsyncCodeActivity> derived activities can be written to take advantage of [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] classes that have asynchronous methods, or the code to be executed asynchronously can be put into a method and invoked by using a delegate. This section provides two examples of an <xref:System.Activities.AsyncCodeActivity> derived activity; one that uses the asynchronous methods of the WCF Data Services client libraries and one that uses a delegate.  
+ To address possible latency issues that may occur when accessing resources over the Web, we recommend accessing WCF Data Services asynchronously. The WCF Data Services client libraries include asynchronous methods for invoking queries, and [!INCLUDE [wf](../../../includes/wf-md.md)] provides the <xref:System.Activities.AsyncCodeActivity> class for authoring asynchronous activities. <xref:System.Activities.AsyncCodeActivity> derived activities can be written to take advantage of [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)] classes that have asynchronous methods, or the code to be executed asynchronously can be put into a method and invoked by using a delegate. This section provides two examples of an <xref:System.Activities.AsyncCodeActivity> derived activity; one that uses the asynchronous methods of the WCF Data Services client libraries and one that uses a delegate.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Asynchronous Operations (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396) and [Creating Asynchronous Activities](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
+>  [!INCLUDE [crdefault](../../../includes/crdefault-md.md)] [Asynchronous Operations (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396) and [Creating Asynchronous Activities](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
   
 ### Using Client Library Asynchronous Methods  
  The <xref:System.Data.Services.Client.DataServiceQuery%601> class provides <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> and <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> methods for querying an OData service asynchronously. These methods can be called from the <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> and <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> overrides of an <xref:System.Activities.AsyncCodeActivity> derived class. When the <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> override returns, the workflow can go idle (but not persist), and when the asynchronous work is completed, <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> is invoked by the runtime.  
@@ -68,12 +68,12 @@ WCF Data Services is a component of the [!INCLUDE[dnprdnshort](../../../includes
  If any additional processing of the data returned by the query is required, it can be done in the activity's <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> override. Both <xref:System.Activities.AsyncCodeActivity%601.BeginExecute%2A> and <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> are invoked by using the workflow thread, and any code in these overrides does not run asynchronously. If the additional processing is extensive or long-running, or the query results are paged, you should consider the approach discussed in the next section, which uses a delegate to execute the query and perform additional processing asynchronously.  
   
 ### Using a Delegate  
- In addition to invoking the asynchronous method of a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] class, an <xref:System.Activities.AsyncCodeActivity>-based activity can also define the asynchronous logic in one of its methods. This method is specified by using a delegate in the activity's <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> override. When the method returns, the runtime invokes the activity's <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> override. When calling an OData service from a workflow, this method can be used to query the service and provide any additional processing.  
+ In addition to invoking the asynchronous method of a [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)] class, an <xref:System.Activities.AsyncCodeActivity>-based activity can also define the asynchronous logic in one of its methods. This method is specified by using a delegate in the activity's <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> override. When the method returns, the runtime invokes the activity's <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> override. When calling an OData service from a workflow, this method can be used to query the service and provide any additional processing.  
   
  In the following example, a `ListCustomers` activity is defined. This activity queries the sample Northwind data service and returns a `List<Customer>` that contains all of the customers in the Northwind database. The asynchronous work is performed by the `GetCustomers` method. This method queries the service for all customers, and then copies them into a `List<Customer>`. It then checks to see if the results are paged. If so, it queries the service for the next page of results, adds them to the list, and continues until all of the customer data has been retrieved.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] paging in WCF Data Services, see . [How to: Load Paged Results (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).  
+>  [!INCLUDE [crabout](../../../includes/crabout-md.md)] paging in WCF Data Services, see . [How to: Load Paged Results (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).  
   
  Once all customers are added, the list is returned. The `GetCustomers` method is specified in the activity's <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> override. Since the method has a return value, a `Func<string, List<Customer>>` is created to specify the method.  
   
@@ -106,7 +106,7 @@ WCF Data Services is a component of the [!INCLUDE[dnprdnshort](../../../includes
   
  **Raw data returned:**  
 **\<?xml version="1.0" encoding="utf-8" standalone="yes"?>**   
-**\<ContactName xmlns="http://schemas.microsoft.com/ado/2007/08/dataservices">Maria Anders\</ContactName>**  In a workflow, the code from this example could be incorporated into the <xref:System.Activities.CodeActivity.Execute%2A> override of a <xref:System.Activities.CodeActivity>-based custom activity, but the same functionality can also be accomplished by using the <xref:System.Activities.Expressions.InvokeMethod%601> activity. The <xref:System.Activities.Expressions.InvokeMethod%601> activity enables workflow authors to invoke static and instance methods of a class, and also has an option to invoke the specified method asynchronously. In the following example, an <xref:System.Activities.Expressions.InvokeMethod%601> activity is configured to call the <xref:System.Net.WebClient.DownloadString%2A> method of the <xref:System.Net.WebClient> class and return a list of customers.  
+**\<ContactName xmlns="<http://schemas.microsoft.com/ado/2007/08/dataservices">Maria> Anders\</ContactName>**  In a workflow, the code from this example could be incorporated into the <xref:System.Activities.CodeActivity.Execute%2A> override of a <xref:System.Activities.CodeActivity>-based custom activity, but the same functionality can also be accomplished by using the <xref:System.Activities.Expressions.InvokeMethod%601> activity. The <xref:System.Activities.Expressions.InvokeMethod%601> activity enables workflow authors to invoke static and instance methods of a class, and also has an option to invoke the specified method asynchronously. In the following example, an <xref:System.Activities.Expressions.InvokeMethod%601> activity is configured to call the <xref:System.Net.WebClient.DownloadString%2A> method of the <xref:System.Net.WebClient> class and return a list of customers.  
   
  [!code-csharp[CFX_WCFDataServicesActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#3)]  
   
@@ -120,10 +120,10 @@ WCF Data Services is a component of the [!INCLUDE[dnprdnshort](../../../includes
 **Raw data returned:**   
 **\<?xml version="1.0" encoding="utf-8" standalone="yes"?>**   
 **\<feed**   
- **xml:base="http://services.odata.org/Northwind/Northwind.svc/"**  
- **xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"**  
- **xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
- **xmlns="http://www.w3.org/2005/Atom">**  
+ **xml:base="<http://services.odata.org/Northwind/Northwind.svc/>"**  
+ **xmlns:d="<http://schemas.microsoft.com/ado/2007/08/dataservices>"**  
+ **xmlns:m="<http://schemas.microsoft.com/ado/2007/08/dataservices/metadata>"**  
+ **xmlns="<http://www.w3.org/2005/Atom">>**  
  **\<title type="text">Orders\</title>**  
  **\<id>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders\</id>**  
  **\<updated>2010-05-19T19:37:07Z\</updated>**  
@@ -136,6 +136,6 @@ WCF Data Services is a component of the [!INCLUDE[dnprdnshort](../../../includes
  **\<name />**  
  **\</author>**  
  **\<link rel="edit" title="Order" href="Orders(10643)" />**  
- **\<link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
+ **\<link rel="<http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer>"**  
  **type="application/atom+xml;type=entry" title="Customer" href="Orders(10643)/Customer" />**  
-**...**  This example provides one method that workflow application authors can use to consume the raw data returned from an OData service. [!INCLUDE[crabout](../../../includes/crabout-md.md)] accessing WCF Data Services using URIs, see [Accessing Data Service Resources (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397) and [OData: URI Conventions](http://go.microsoft.com/fwlink/?LinkId=185564).
+**...**  This example provides one method that workflow application authors can use to consume the raw data returned from an OData service. [!INCLUDE [crabout](../../../includes/crabout-md.md)] accessing WCF Data Services using URIs, see [Accessing Data Service Resources (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397) and [OData: URI Conventions](http://go.microsoft.com/fwlink/?LinkId=185564).

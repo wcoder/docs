@@ -212,80 +212,80 @@ Press <ENTER> to terminate client.
   
  The Setup.bat batch file included with the Message Security samples enables you to configure the client and server with relevant certificates to run a hosted application that requires certificate-based security. The batch file can be run in three modes. To run in single-computer mode type **setup.bat** in a Visual Studio Command Prompt ; for service mode type **setup.bat service**; and for client mode type **setup.bat client**. Use the client and server mode when running the sample across computers. See the setup procedure at the end of this topic for details. The following provides a brief overview of the different sections of the batch files so that they can be modified to run in appropriate configuration:  
   
--   Creating the client certificate.  
+- Creating the client certificate.  
   
-     The following line in the batch file creates the client certificate. The client name specified is used in the subject name of the certificate created. The certificate is stored in `My` store at the `CurrentUser` store location.  
+   The following line in the batch file creates the client certificate. The client name specified is used in the subject name of the certificate created. The certificate is stored in `My` store at the `CurrentUser` store location.  
   
-    ```  
-    echo ************  
-    echo making client cert  
-    echo ************  
-    makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
-    ```  
+  ```  
+  echo ************  
+  echo making client cert  
+  echo ************  
+  makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
+  ```  
   
--   Installing the client certificate into the server’s trusted certificate store.  
+- Installing the client certificate into the server’s trusted certificate store.  
   
-     The following line in the batch file copies the client certificate into the server's TrustedPeople store so that the server can make the relevant trust or no-trust decisions. In order for a certificate installed in the TrustedPeople store to be trusted by a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service, the client certificate validation mode must be set to `PeerOrChainTrust` or `PeerTrust`. See the previous service configuration sample to learn how this can be done by using a configuration file.  
+   The following line in the batch file copies the client certificate into the server's TrustedPeople store so that the server can make the relevant trust or no-trust decisions. In order for a certificate installed in the TrustedPeople store to be trusted by a [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] service, the client certificate validation mode must be set to `PeerOrChainTrust` or `PeerTrust`. See the previous service configuration sample to learn how this can be done by using a configuration file.  
   
-    ```  
-    echo ************  
-    echo copying client cert to server's LocalMachine store  
-    echo ************  
-    certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople   
-    ```  
+  ```  
+  echo ************  
+  echo copying client cert to server's LocalMachine store  
+  echo ************  
+  certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople   
+  ```  
   
--   Creating the server certificate.  
+- Creating the server certificate.  
   
-     The following lines from the Setup.bat batch file create the server certificate to be used.  
+   The following lines from the Setup.bat batch file create the server certificate to be used.  
   
-    ```  
-    echo ************  
-    echo Server cert setup starting  
-    echo %SERVER_NAME%  
-    echo ************  
-    echo making server cert  
-    echo ************  
-    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-    ```  
+  ```  
+  echo ************  
+  echo Server cert setup starting  
+  echo %SERVER_NAME%  
+  echo ************  
+  echo making server cert  
+  echo ************  
+  makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
+  ```  
   
-     The %SERVER_NAME% variable specifies the server name. The certificate is stored in the LocalMachine store. If the Setup.bat batch file is run with an argument of service (such as, **setup.bat service**) the %SERVER_NAME% contains the fully-qualified domain name of the computer. Otherwise it defaults to localhost.  
+   The %SERVER_NAME% variable specifies the server name. The certificate is stored in the LocalMachine store. If the Setup.bat batch file is run with an argument of service (such as, **setup.bat service**) the %SERVER_NAME% contains the fully-qualified domain name of the computer. Otherwise it defaults to localhost.  
   
--   Installing the server certificate into the client’s trusted certificate store.  
+- Installing the server certificate into the client’s trusted certificate store.  
   
-     The following line copies the server certificate into the client trusted people store. This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system. If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft-issued certificate—this step of populating the client certificate store with the server certificate is not required.  
+   The following line copies the server certificate into the client trusted people store. This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system. If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft-issued certificate—this step of populating the client certificate store with the server certificate is not required.  
   
-    ```  
-    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-    ```  
+  ```  
+  certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
+  ```  
   
--   Granting permissions on the certificate's private key.  
+- Granting permissions on the certificate's private key.  
   
-     The following lines in the Setup.bat file make the server certificate stored in the LocalMachine store accessible to the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] worker process account.  
+   The following lines in the Setup.bat file make the server certificate stored in the LocalMachine store accessible to the [!INCLUDE [vstecasp](../../../../includes/vstecasp-md.md)] worker process account.  
   
-    ```  
-    echo ************  
-    echo setting privileges on server certificates  
-    echo ************  
-    for /F "delims=" %%i in ('"%ProgramFiles%\ServiceModelSampleTools\FindPrivateKey.exe" My LocalMachine -n CN^=%SERVER_NAME% -a') do set PRIVATE_KEY_FILE=%%i  
-    set WP_ACCOUNT=NT AUTHORITY\NETWORK SERVICE  
-    (ver | findstr /C:"5.1") && set WP_ACCOUNT=%COMPUTERNAME%\ASPNET  
-    echo Y|cacls.exe "%PRIVATE_KEY_FILE%" /E /G "%WP_ACCOUNT%":R  
-    iisreset  
-    ```  
+  ```  
+  echo ************  
+  echo setting privileges on server certificates  
+  echo ************  
+  for /F "delims=" %%i in ('"%ProgramFiles%\ServiceModelSampleTools\FindPrivateKey.exe" My LocalMachine -n CN^=%SERVER_NAME% -a') do set PRIVATE_KEY_FILE=%%i  
+  set WP_ACCOUNT=NT AUTHORITY\NETWORK SERVICE  
+  (ver | findstr /C:"5.1") && set WP_ACCOUNT=%COMPUTERNAME%\ASPNET  
+  echo Y|cacls.exe "%PRIVATE_KEY_FILE%" /E /G "%WP_ACCOUNT%":R  
+  iisreset  
+  ```  
   
-    > [!NOTE]
-    >  If you are using a non-U.S. English edition of Windows, you must edit the Setup.bat file and replace the "NT AUTHORITY\NETWORK SERVICE" account name with your regional equivalent.  
+  > [!NOTE]
+  >  If you are using a non-U.S. English edition of Windows, you must edit the Setup.bat file and replace the "NT AUTHORITY\NETWORK SERVICE" account name with your regional equivalent.  
   
 > [!NOTE]
 >  The tools used in this batch file are located in either C:\Program Files\Microsoft Visual Studio 8\Common7\tools or C:\Program Files\Microsoft SDKs\Windows\v6.0\bin. One of these directories must be in your system path. If you have Visual Studio installed, the easiest way to get this directory in your path is to open the Visual Studio Command Prompt. Click **Start**, and then select **All Programs**, **Visual Studio 2012**, **Tools**. This command prompt has the appropriate paths already configured. Otherwise you must add the appropriate directory to your path manually.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing:  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory:  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory:  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
   
 ### To set up, build, and run the sample  
@@ -337,9 +337,9 @@ Press <ENTER> to terminate client.
   
 ### To clean up after the sample  
   
--   Run Cleanup.bat in the samples folder after you have finished running the sample.  
+- Run Cleanup.bat in the samples folder after you have finished running the sample.  
   
-    > [!NOTE]
-    >  This script does not remove service certificates on a client when running this sample across computers. If you have run [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store. To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+  > [!NOTE]
+  >  This script does not remove service certificates on a client when running this sample across computers. If you have run [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store. To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## See Also

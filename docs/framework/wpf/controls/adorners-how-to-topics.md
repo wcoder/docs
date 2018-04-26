@@ -22,7 +22,7 @@ ms.workload:
   - dotnet
 ---
 # Adorners How-to Topics
-The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.  
+The following examples demonstrate how to accomplish common tasks using the [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.  
   
 ## In This Section  
  [Implement an Adorner](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  

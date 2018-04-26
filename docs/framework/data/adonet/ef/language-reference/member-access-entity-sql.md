@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # . (Member Access) (Entity SQL)
-The dot operator (.) is the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] member access operator. You use the member access operator to yield the value of a property or field of an instance of structural conceptual model type.  
+The dot operator (.) is the [!INCLUDE [esql](../../../../../../includes/esql-md.md)] member access operator. You use the member access operator to yield the value of a property or field of an instance of structural conceptual model type.  
   
 ## Syntax  
   

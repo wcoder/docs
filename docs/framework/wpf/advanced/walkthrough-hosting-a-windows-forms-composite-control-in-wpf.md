@@ -24,11 +24,11 @@ ms.workload:
   - dotnet
 ---
 # Walkthrough: Hosting a Windows Forms Composite Control in WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides a rich environment for creating applications. However, when you have a substantial investment in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] code, it can be more effective to reuse at least some of that code in your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application rather than to rewrite it from scratch. The most common scenario is when you have existing [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] controls. In some cases, you might not even have access to the source code for these controls. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides a straightforward procedure for hosting such controls in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application. For example, you can use [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] for most of your programming while hosting your specialized <xref:System.Windows.Forms.DataGridView> controls.  
+[!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides a rich environment for creating applications. However, when you have a substantial investment in [!INCLUDE [TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] code, it can be more effective to reuse at least some of that code in your [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application rather than to rewrite it from scratch. The most common scenario is when you have existing [!INCLUDE [TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] controls. In some cases, you might not even have access to the source code for these controls. [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides a straightforward procedure for hosting such controls in a [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application. For example, you can use [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] for most of your programming while hosting your specialized <xref:System.Windows.Forms.DataGridView> controls.  
   
- This walkthrough steps you through an application that hosts a [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] composite control to perform data entry in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application. The composite control is packaged in a DLL. This general procedure can be extended to more complex applications and controls. This walkthrough is designed to be nearly identical in appearance and functionality to [Walkthrough: Hosting a WPF Composite Control in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). The primary difference is that the hosting scenario is reversed.  
+ This walkthrough steps you through an application that hosts a [!INCLUDE [TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] composite control to perform data entry in a [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application. The composite control is packaged in a DLL. This general procedure can be extended to more complex applications and controls. This walkthrough is designed to be nearly identical in appearance and functionality to [Walkthrough: Hosting a WPF Composite Control in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). The primary difference is that the hosting scenario is reversed.  
   
- The walkthrough is divided into two sections. The first section briefly describes the implementation of the [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] composite control. The second section discusses in detail how to host the composite control in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application, receive events from the control, and access some of the control's properties.  
+ The walkthrough is divided into two sections. The first section briefly describes the implementation of the [!INCLUDE [TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] composite control. The second section discusses in detail how to host the composite control in a [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application, receive events from the control, and access some of the control's properties.  
   
  Tasks illustrated in this walkthrough include:  
   
@@ -41,10 +41,10 @@ ms.workload:
 ## Prerequisites  
  You need the following components to complete this walkthrough:  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+- [!INCLUDE [vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
 ## Implementing the Windows Forms Composite Control  
- The [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] composite control used in this example is a simple data-entry form. This form takes the user's name and address and then uses a custom event to return that information to the host. The following illustration shows the rendered control.  
+ The [!INCLUDE [TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] composite control used in this example is a simple data-entry form. This form takes the user's name and address and then uses a custom event to return that information to the host. The following illustration shows the rendered control.  
   
  ![Simple Windows Forms control](../../../../docs/framework/wpf/advanced/media/wfcontrol.gif "WFControl")  
 Windows Forms composite control  
@@ -52,17 +52,17 @@ Windows Forms composite control
 ### Creating the Project  
  To start the project:  
   
-1.  Launch [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], and open the **New Project** dialog box.  
+1. Launch [!INCLUDE [TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], and open the **New Project** dialog box.  
   
-2.  In the Window category, select the **Windows Forms Control Library** template.  
+2. In the Window category, select the **Windows Forms Control Library** template.  
   
-3.  Name the new project `MyControls`.  
+3. Name the new project `MyControls`.  
   
-4.  For the location, specify a conveniently named top-level folder, such as `WpfHostingWindowsFormsControl`. Later, you will put the host application in this folder.  
+4. For the location, specify a conveniently named top-level folder, such as `WpfHostingWindowsFormsControl`. Later, you will put the host application in this folder.  
   
-5.  Click **OK** to create the project. The default project contains a single control named `UserControl1`.  
+5. Click **OK** to create the project. The default project contains a single control named `UserControl1`.  
   
-6.  In Solution Explorer, rename `UserControl1` to `MyControl1`.  
+6. In Solution Explorer, rename `UserControl1` to `MyControl1`.  
   
  Your project should have references to the following system DLLs. If any of these DLLs are not included by default, add them to the project.  
   
@@ -118,24 +118,24 @@ Windows Forms composite control
  [!code-vb[WpfHostingWindowsFormsControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/MyControls/MyControl1.vb#4)]  
   
 ### Giving the Assembly a Strong Name and Building the Assembly  
- For this assembly to be referenced by a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application, it must have a strong name. To create a strong name, create a key file with Sn.exe and add it to your project.  
+ For this assembly to be referenced by a [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application, it must have a strong name. To create a strong name, create a key file with Sn.exe and add it to your project.  
   
-1.  Open a [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] command prompt. To do so, click the **Start** menu, and then select **All Programs/Microsoft Visual Studio 2010/Visual Studio Tools/Visual Studio Command Prompt**. This launches a console window with customized environment variables.  
+1. Open a [!INCLUDE [TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] command prompt. To do so, click the **Start** menu, and then select **All Programs/Microsoft Visual Studio 2010/Visual Studio Tools/Visual Studio Command Prompt**. This launches a console window with customized environment variables.  
   
-2.  At the command prompt, use the `cd` command to go to your project folder.  
+2. At the command prompt, use the `cd` command to go to your project folder.  
   
-3.  Generate a key file named MyControls.snk by running the following command.  
+3. Generate a key file named MyControls.snk by running the following command.  
   
-    ```  
-    Sn.exe -k MyControls.snk  
-    ```  
+   ```  
+   Sn.exe -k MyControls.snk  
+   ```  
   
-4.  To include the key file in your project, right-click the project name in Solution Explorer and then click **Properties**. In the Project Designer, click the **Signing** tab, select the **Sign the assembly** check box and then browse to your key file.  
+4. To include the key file in your project, right-click the project name in Solution Explorer and then click **Properties**. In the Project Designer, click the **Signing** tab, select the **Sign the assembly** check box and then browse to your key file.  
   
-5.  Build the solution. The build will produce a DLL named MyControls.dll.  
+5. Build the solution. The build will produce a DLL named MyControls.dll.  
   
 ## Implementing the WPF Host Application  
- The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] host application uses the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control to host `MyControl1`. The application handles the `OnButtonClick` event to receive the data from the control. It also has a collection of option buttons that enable you to change some of the control's properties from the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application. The following illustration shows the finished application.  
+ The [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] host application uses the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control to host `MyControl1`. The application handles the `OnButtonClick` event to receive the data from the control. It also has a collection of option buttons that enable you to change some of the control's properties from the [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application. The following illustration shows the finished application.  
   
  ![A control embedded in a WPF page](../../../../docs/framework/wpf/advanced/media/avalonhost.gif "AvalonHost")  
 The complete application, showing the control embedded in the WPF application  
@@ -143,15 +143,15 @@ The complete application, showing the control embedded in the WPF application
 ### Creating the Project  
  To start the project:  
   
-1.  Open [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], and select **New Project**.  
+1. Open [!INCLUDE [TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], and select **New Project**.  
   
-2.  In the Window category, select the **WPF Application** template.
+2. In the Window category, select the **WPF Application** template.
   
-3.  Name the new project `WpfHost`.  
+3. Name the new project `WpfHost`.  
   
-4.  For the location, specify the same top-level folder that contains the MyControls project.  
+4. For the location, specify the same top-level folder that contains the MyControls project.  
   
-5.  Click **OK** to create the project.  
+5. Click **OK** to create the project.  
   
  You also need to add references to the DLL that contains `MyControl1` and other assemblies.  
   
@@ -164,7 +164,7 @@ The complete application, showing the control embedded in the WPF application
 4.  Add a reference to the WindowsFormsIntegration assembly, which is named WindowsFormsIntegration.dll.  
   
 ### Implementing the Basic Layout  
- The [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of the host application is implemented in MainWindow.xaml. This file contains [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] markup that defines the layout, and hosts the [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] control. The application is divided into three regions:  
+ The [!INCLUDE [TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of the host application is implemented in MainWindow.xaml. This file contains [!INCLUDE [TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] markup that defines the layout, and hosts the [!INCLUDE [TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] control. The application is divided into three regions:  
   
 -   The **Control Properties** panel, which contains a collection of option buttons that you can use to modify various properties of the hosted control.  
   
@@ -186,16 +186,16 @@ The complete application, showing the control embedded in the WPF application
  [!code-xaml[WpfHostingWindowsFormsControl#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml#101)]  
 [!code-xaml[WpfHostingWindowsFormsControl#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml#102)]  
   
- The `xmlns` namespace mapping attribute creates a reference to the `MyControls` namespace that contains the hosted control. This mapping enables you to represent `MyControl1` in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] as `<mcl:MyControl1>`.  
+ The `xmlns` namespace mapping attribute creates a reference to the `MyControls` namespace that contains the hosted control. This mapping enables you to represent `MyControl1` in [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] as `<mcl:MyControl1>`.  
   
  Two elements in the XAML handle the hosting:  
   
--   `WindowsFormsHost` represents the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element that enables you to host a [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] control in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.  
+- `WindowsFormsHost` represents the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element that enables you to host a [!INCLUDE [TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] control in a [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.  
   
--   `mcl:MyControl1`, which represents `MyControl1`, is added to the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's child collection. As a result, this [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] control is rendered as part of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] window, and you can communicate with the control from the application.  
+- `mcl:MyControl1`, which represents `MyControl1`, is added to the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's child collection. As a result, this [!INCLUDE [TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] control is rendered as part of the [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] window, and you can communicate with the control from the application.  
   
 ### Implementing the Code-Behind File  
- The code-behind file, MainWindow.xaml.vb or MainWindow.xaml.cs, contains the procedural code that implements the functionality of the [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] discussed in the preceding section. The primary tasks are:  
+ The code-behind file, MainWindow.xaml.vb or MainWindow.xaml.cs, contains the procedural code that implements the functionality of the [!INCLUDE [TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] discussed in the preceding section. The primary tasks are:  
   
 -   Attaching an event handler to `MyControl1`'s `OnButtonClick` event.  
   
@@ -211,7 +211,7 @@ The complete application, showing the control embedded in the WPF application
  [!code-csharp[WpfHostingWindowsFormsControl#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml.cs#11)]
  [!code-vb[WpfHostingWindowsFormsControl#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/WpfHost/Page1.xaml.vb#11)]  
   
- Because the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] discussed previously added `MyControl1` to the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's child element collection, you can cast the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> to get the reference to `MyControl1`. You can then use that reference to attach an event handler to `OnButtonClick`.  
+ Because the [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] discussed previously added `MyControl1` to the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's child element collection, you can cast the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element's <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> to get the reference to `MyControl1`. You can then use that reference to attach an event handler to `OnButtonClick`.  
   
  In addition to providing a reference to the control itself, <xref:System.Windows.Forms.Integration.WindowsFormsHost> exposes a number of the control's properties, which you can manipulate from the application. The initialization code assigns those values to private global variables for later use in the application.  
   

@@ -17,24 +17,26 @@ ms.workload:
 ---
 # 4205 - FoundProcessingError
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|4205|  
 |Keywords|WFInstanceStore|  
 |Level|Error|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates SQL provider command has failed.  
-  
+
 ## Message  
  Command failed: %1  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|ExceptionMessage|xs:string|The message from the SQL exception.|  
-|Exception|xs:string|The exception details for the exception|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+|  Data Item Name  | Data Item Type |                         Description                          |
+|------------------|----------------|--------------------------------------------------------------|
+| ExceptionMessage |   xs:string    |             The message from the SQL exception.              |
+|    Exception     |   xs:string    |           The exception details for the exception            |
+|    AppDomain     |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

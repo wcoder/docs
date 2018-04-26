@@ -15,7 +15,7 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ---
 # Sample XML File: Typical Purchase Order (LINQ to XML)
-The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. This file is a typical purchase order.  
+The following XML file is used in various examples in the [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation. This file is a typical purchase order.  
   
 ## PurchaseOrder.xml  
   

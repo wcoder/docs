@@ -23,7 +23,7 @@ ms.workload:
   - dotnet
 ---
 # Using a Pen to Draw Lines and Shapes
-Use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objects to draw line segments, curves, and the outlines of shapes. In this section, *line* refers to any of these, unless specified to mean only a line segment. Set the properties of a pen to control the color, width, alignment, and style of lines drawn with that pen.  
+Use [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objects to draw line segments, curves, and the outlines of shapes. In this section, *line* refers to any of these, unless specified to mean only a line segment. Set the properties of a pen to control the color, width, alignment, and style of lines drawn with that pen.  
   
 ## In This Section  
  [How to: Use a Pen to Draw Lines](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  

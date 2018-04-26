@@ -21,11 +21,11 @@ ms.workload:
 The WS-AtomicTransaction Configuration MMC Snap-in is used to configure a portion of the WS-AtomicTransaction settings on both local and remote machines.  
   
 ## Remarks  
- If you are running [!INCLUDE[wxp](../../../includes/wxp-md.md)] or [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], the MMC snap-in can be found by navigating to **Control Panel/Administrative Tools/Component Services/**, right-clicking **My Computer**, and selecting **Properties**. This is the same location where you can configure the MSDTC. Options available for configuration are grouped under the **WS-AT** tab.  
+ If you are running [!INCLUDE [wxp](../../../includes/wxp-md.md)] or [!INCLUDE [ws2003](../../../includes/ws2003-md.md)], the MMC snap-in can be found by navigating to **Control Panel/Administrative Tools/Component Services/**, right-clicking **My Computer**, and selecting **Properties**. This is the same location where you can configure the MSDTC. Options available for configuration are grouped under the **WS-AT** tab.  
   
- If you are running Windows Vista or [!INCLUDE[lserver](../../../includes/lserver-md.md)], MMC snap-in can be found by clicking the **Start** button, and typing in `dcomcnfg.exe` in the **Search** box. When the MMC is opened, navigate to the **My Computer\Distributed Transaction Coordinator\Local DTC** node, right click and select **Properties**. Options available for configuration are grouped under the **WS-AT** tab.  
+ If you are running Windows Vista or [!INCLUDE [lserver](../../../includes/lserver-md.md)], MMC snap-in can be found by clicking the **Start** button, and typing in `dcomcnfg.exe` in the **Search** box. When the MMC is opened, navigate to the **My Computer\Distributed Transaction Coordinator\Local DTC** node, right click and select **Properties**. Options available for configuration are grouped under the **WS-AT** tab.  
   
- The previous steps are used to launch the snap-in for configuring a local machine. If you want to configure a remote machine, you should locate the remote machine's name in **Control Panel/Administrative Tools/Component Services/**, and perform similar steps if you are running [!INCLUDE[wxp](../../../includes/wxp-md.md)] or [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. If you are running Windows Vista or [!INCLUDE[lserver](../../../includes/lserver-md.md)], follow the previous steps for Vista and [!INCLUDE[lserver](../../../includes/lserver-md.md)], but use the **Distributed Transaction Coordinator\Local DTC** node under the remote computer's node.  
+ The previous steps are used to launch the snap-in for configuring a local machine. If you want to configure a remote machine, you should locate the remote machine's name in **Control Panel/Administrative Tools/Component Services/**, and perform similar steps if you are running [!INCLUDE [wxp](../../../includes/wxp-md.md)] or [!INCLUDE [ws2003](../../../includes/ws2003-md.md)]. If you are running Windows Vista or [!INCLUDE [lserver](../../../includes/lserver-md.md)], follow the previous steps for Vista and [!INCLUDE [lserver](../../../includes/lserver-md.md)], but use the **Distributed Transaction Coordinator\Local DTC** node under the remote computer's node.  
   
  To use the user interface provided by the tool, you have to register the WsatUI.dll file, which is located at the following path,  
   
@@ -39,9 +39,9 @@ regasm.exe /codebase WsatUI.dll
   
  You can use this tool to modify the basic WS-AtomicTransaction settings. For example, you can enable and disable the WS-AtomicTransaction protocol support, configure the HTTP ports for WS-AT, bind an SSL Certificate to the HTTP port, configure certificates by specifying certificate subject names, select the Tracing mode and set default and maximum timeouts.  
   
- If you must configure WS-AtomicTransaction support on the local machine only, you can use the command line version of this tool. [!INCLUDE[crabout](../../../includes/crabout-md.md)] the command line tool, see the [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) topic.  
+ If you must configure WS-AtomicTransaction support on the local machine only, you can use the command line version of this tool. [!INCLUDE [crabout](../../../includes/crabout-md.md)] the command line tool, see the [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) topic.  
   
- You should be aware that both the MMC Snap-in and the command-line tool do not support configuring all WS-AT settings. These settings can be edited only by modifying the registry directly. [!INCLUDE[crabout](../../../includes/crabout-md.md)] these registry settings, see [Configuring WS-Atomic Transaction Support](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+ You should be aware that both the MMC Snap-in and the command-line tool do not support configuring all WS-AT settings. These settings can be edited only by modifying the registry directly. [!INCLUDE [crabout](../../../includes/crabout-md.md)] these registry settings, see [Configuring WS-Atomic Transaction Support](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
   
 ### User Interface Description  
  **Enable WS-Atomic Transaction Network Support**:  
@@ -92,7 +92,7 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  When another trace consumer is using the WS-AT trace provider, you cannot create a new logging session for trace events. Any attempt to configure logging during this time results in the error message "Failed to enable provider. Error code: 1".  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] tracing and logging, see [Administration and Diagnostics](../../../docs/framework/wcf/diagnostics/index.md).  
+ [!INCLUDE [crabout](../../../includes/crabout-md.md)] tracing and logging, see [Administration and Diagnostics](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## See Also  
  [Configuring WS-Atomic Transaction Support](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  

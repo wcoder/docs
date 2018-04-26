@@ -34,25 +34,25 @@ Deploying a framework-dependent deployment with no third-party dependencies simp
 
    Create a directory for your project and make it your current directory.
 
-1. Create the project.
+2. Create the project.
 
    From the command line, type [dotnet new console](../tools/dotnet-new.md) to create a new C# console project in that directory.
 
-1. Add the application's source code.
+3. Add the application's source code.
 
    Open the *Program.cs* file in your editor and replace the auto-generated code with the following code. It prompts the user to enter text and displays the individual words entered by the user. It uses the regular expression `\w+` to separate the words in the input text.
 
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
-1. Update the project's dependencies and tools.
+4. Update the project's dependencies and tools.
  
    Run the [dotnet restore](../tools/dotnet-restore.md) ([see note](#dotnet-restore-note)) command to restore the dependencies specified in your project.
 
-1. Create a Debug build of your app.
+5. Create a Debug build of your app.
 
    Use the [dotnet build](../tools/dotnet-build.md) command to build your application or the [dotnet run](../tools/dotnet-run.md) command to build and run it.
 
-1. Deploy your app.
+6. Deploy your app.
 
    After you've debugged and tested the program, create the deployment by using the following command:
 
@@ -91,17 +91,17 @@ Deploying a self-contained deployment without third-party dependencies involves 
 
    Create a directory for your project, and make it your current directory.
 
-1. Create the project.
+2. Create the project.
 
    From the command line, type [dotnet new console](../tools/dotnet-new.md) to create a new C# console project in that directory.
 
-1. Add the application's source code.
+3. Add the application's source code.
 
    Open the *Program.cs* file in your editor and replace the auto-generated code with the following code. It prompts the user to enter text and displays the individual words entered by the user. It uses the regular expression `\w+` to separate the words in the input text.
 
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
-1. Define the platforms that your app will target.
+4. Define the platforms that your app will target.
 
    Create a `<RuntimeIdentifiers>` tag in the `<PropertyGroup>` section of your *csproj* file that defines the platforms your app targets and specify the runtime identifier (RID) for each platform that you target. Note that you also need to add a semicolon to separate the RIDs. See [Runtime IDentifier catalog](../rid-catalog.md) for a list of runtime identifiers. 
 
@@ -115,15 +115,15 @@ Deploying a self-contained deployment without third-party dependencies involves 
 
    Note that the `<RuntimeIdentifiers>` element can appear in any `<PropertyGroup>` in your *csproj* file. A complete sample *csproj* file appears later in this section.
 
-1. Update the project's dependencies and tools.
+5. Update the project's dependencies and tools.
 
    Run the [dotnet restore](../tools/dotnet-restore.md) ([see note](#dotnet-restore-note)) command to restore the dependencies specified in your project.
 
-1. Create a Debug build of your app.
+6. Create a Debug build of your app.
 
    From the command line, use the [dotnet build](../tools/dotnet-build.md) command.
 
-1. After you've debugged and tested the program, create the files to be deployed with your app for each platform that it targets.
+7. After you've debugged and tested the program, create the files to be deployed with your app for each platform that it targets.
 
    Use the `dotnet publish` command for both target platforms as follows:
 
@@ -184,7 +184,7 @@ When you deploy your application, any third-party dependencies used in your app 
 Note that you can only deploy a self-contained deployment with a third-party library to platforms supported by that library. This is similar to having third-party dependencies with native dependencies in a framework-dependent deployment, where the native dependencies must be compatible with the platform to which the app is deployed.
 
 <a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE [DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 # See also
 

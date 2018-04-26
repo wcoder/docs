@@ -31,9 +31,9 @@ The <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=
   
 ### To set up, build, and run the sample  
   
-1.  Open the **UsingWorkflowItemsPresenter.sln** sample solution for C# or for VB in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1. Open the **UsingWorkflowItemsPresenter.sln** sample solution for C# or for VB in [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Build and run the solution. A rehosted workflow designer application should open, and you can drag activities onto the canvas.  
+2. Build and run the solution. A rehosted workflow designer application should open, and you can drag activities onto the canvas.  
   
 ## Sample Highlights  
  The code for this sample shows the following:  
@@ -156,11 +156,11 @@ End Sub
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   
 ## See Also  

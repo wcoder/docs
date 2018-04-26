@@ -62,7 +62,7 @@ typedef struct _COR_PRF_ASSEMBLY_REFERENCE_INFO {
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## See Also  
  [Profiling Structures](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)  

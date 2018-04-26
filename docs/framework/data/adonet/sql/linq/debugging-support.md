@@ -18,9 +18,9 @@ ms.workload:
   - "dotnet"
 ---
 # Debugging Support
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides general debugging support for [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projects.  Also see [Debugging LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\)) or [Debugging LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\)).  
+[!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides general debugging support for [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projects.  Also see [Debugging LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\)) or [Debugging LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\)).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] also provides special tools for viewing SQL code. For more information, see the topics in this section.  
+ [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] also provides special tools for viewing SQL code. For more information, see the topics in this section.  
   
 ## In This Section  
  [How to: Display Generated SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-generated-sql.md)  

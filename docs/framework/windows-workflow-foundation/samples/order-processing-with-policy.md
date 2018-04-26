@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # Order Processing with Policy
-The Order Processing Policy sample demonstrates some of the key features introduced in the [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] of the Windows Workflow Foundation (WF). The following functionality is new for the WF rules engine:  
+The Order Processing Policy sample demonstrates some of the key features introduced in the [!INCLUDE [netfx35_long](../../../../includes/netfx35-long-md.md)] of the Windows Workflow Foundation (WF). The following functionality is new for the WF rules engine:  
   
 -   Support for operator overloading.  
   
@@ -25,12 +25,12 @@ The Order Processing Policy sample demonstrates some of the key features introdu
 -   Support for extension methods to make the user experience in calling extension methods from WF rules compatible with C# coding styles.  
   
 > [!NOTE]
->  This sample requires that [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] is installed to build and run. [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] is required to open the project and solution files.  
+>  This sample requires that [!INCLUDE [netfx35_long](../../../../includes/netfx35-long-md.md)] is installed to build and run. [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] is required to open the project and solution files.  
   
  The sample demonstrates an `OrderProcessingPolicy` project in which a customer order, which consists of a numbered list of available items and a zip code, is entered. The order is processed successfully if both entries are correct; otherwise, the policy creates error objects, utilizing an overloaded `+` operator and a predefined extension method to inform the user of the errors.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] extension methods, see [C# Version 3.0 Specification](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  [!INCLUDE [crabout](../../../../includes/crabout-md.md)] extension methods, see [C# Version 3.0 Specification](http://go.microsoft.com/fwlink/?LinkId=95402).  
   
  The sample is comprised of the following projects:  
   
@@ -133,19 +133,19 @@ Another Order? (Y/N): n
   
 ### To set up, build, and run the sample  
   
-1.  Open the OrderProcessingPolicy.sln project file in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1. Open the OrderProcessingPolicy.sln project file in [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  There are two different projects in the solution: `OrderErrorLibrary` and `OrderProcessingPolicy`. The `OrderProcessingPolicy` project uses classes and methods defined in the `OrderErrorLibrary`.  
+2. There are two different projects in the solution: `OrderErrorLibrary` and `OrderProcessingPolicy`. The `OrderProcessingPolicy` project uses classes and methods defined in the `OrderErrorLibrary`.  
   
-3.  Build all projects.  
+3. Build all projects.  
   
-4.  Click **Run**.  
+4. Click **Run**.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing:  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory:  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory:  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`

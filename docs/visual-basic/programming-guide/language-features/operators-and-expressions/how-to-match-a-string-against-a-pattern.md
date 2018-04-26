@@ -33,54 +33,54 @@ If you want to find out if an expression of the [String Data Type](../../../../v
   
 ### To match a character in the string expression against a specific character  
   
--   Put the specific character directly in the pattern string. Certain special characters must be enclosed in brackets (`[ ]`). For more information, see [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
+- Put the specific character directly in the pattern string. Certain special characters must be enclosed in brackets (`[ ]`). For more information, see [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
-     The following example tests whether `myString` consists exactly of the single character `H`.  
+   The following example tests whether `myString` consists exactly of the single character `H`.  
   
-     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
+   [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
   
 ### To match a character in the string expression against a wildcard character  
   
--   Put a question mark (`?`) in the pattern string. Any valid character in this position makes a successful match.  
+- Put a question mark (`?`) in the pattern string. Any valid character in this position makes a successful match.  
   
-     The following example tests whether `myString` consists of the single character `W` followed by exactly two characters of any values.  
+   The following example tests whether `myString` consists of the single character `W` followed by exactly two characters of any values.  
   
-     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
+   [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
   
 ### To match a character in the string expression against a list of characters  
   
--   Put brackets (`[ ]`) in the pattern string, and inside the brackets put the list of characters. Do not separate the characters with commas or any other separator. Any single character in the list makes a successful match.  
+- Put brackets (`[ ]`) in the pattern string, and inside the brackets put the list of characters. Do not separate the characters with commas or any other separator. Any single character in the list makes a successful match.  
   
-     The following example tests whether `myString` consists of any valid character followed by exactly one of the characters `A`, `C`, or `E`.  
+   The following example tests whether `myString` consists of any valid character followed by exactly one of the characters `A`, `C`, or `E`.  
   
-     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
+   [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
   
-     Note that this match is case-sensitive.  
+   Note that this match is case-sensitive.  
   
 ### To match a character in the string expression against a range of characters  
   
--   Put brackets (`[ ]`) in the pattern string, and inside the brackets put the lowest and highest characters in the range, separated by a hyphen (`–`). Any single character within the range makes a successful match.  
+- Put brackets (`[ ]`) in the pattern string, and inside the brackets put the lowest and highest characters in the range, separated by a hyphen (`–`). Any single character within the range makes a successful match.  
   
-     The following example tests whether `myString` consists of the characters `num` followed by exactly one of the characters `i`, `j`, `k`, `l`, `m`, or `n`.  
+   The following example tests whether `myString` consists of the characters `num` followed by exactly one of the characters `i`, `j`, `k`, `l`, `m`, or `n`.  
   
-     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
+   [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
   
-     Note that this match is case-sensitive.  
+   Note that this match is case-sensitive.  
   
 ## Matching Empty Strings  
  `Like` treats the sequence `[]` as a zero-length string (`""`). You can use `[]` to test whether the entire string expression is empty, but you cannot use it to test if a particular position in the string expression is empty. If an empty position is one of the options you need to test for, you can use `Like` more than once.  
   
 #### To match a character in the string expression against a list of characters or no character  
   
-1.  Call the `Like` operator twice on the same string expression, and connect the two calls with either the [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) or the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
+1. Call the `Like` operator twice on the same string expression, and connect the two calls with either the [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) or the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
   
-2.  In the pattern string for the first `Like` clause, include the character list, enclosed in brackets (`[ ]`).  
+2. In the pattern string for the first `Like` clause, include the character list, enclosed in brackets (`[ ]`).  
   
-3.  In the pattern string for the second `Like` clause, do not put any character at the position in question.  
+3. In the pattern string for the second `Like` clause, do not put any character at the position in question.  
   
-     The following example tests the seven-digit telephone number `phoneNum` for exactly three numeric digits, followed by a space, a hyphen (`–`), a period (`.`), or no character at all, followed by exactly four numeric digits.  
+    The following example tests the seven-digit telephone number `phoneNum` for exactly three numeric digits, followed by a space, a hyphen (`–`), a period (`.`), or no character at all, followed by exactly four numeric digits.  
   
-     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
+    [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
   
 ## See Also  
  [Comparison Operators](../../../../visual-basic/language-reference/operators/comparison-operators.md)  

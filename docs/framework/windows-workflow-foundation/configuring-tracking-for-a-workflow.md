@@ -27,7 +27,7 @@ A workflow can execute in three ways:
  Depending on the workflow hosting option, a tracking participant can be added either through code or through a configuration file. This topic describes how tracking is configured by adding a tracking participant to a <xref:System.Activities.WorkflowApplication> and to a <xref:System.ServiceModel.Activities.WorkflowServiceHost>, and how to enable tracking when using <xref:System.Activities.WorkflowInvoker>.  
   
 ## Configuring Workflow Application Tracking  
- A workflow can run using the <xref:System.Activities.WorkflowApplication> class. This topic demonstrates how tracking is configured for a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] workflow application by adding a tracking participant to the <xref:System.Activities.WorkflowApplication> workflow host. In this case, the workflow runs as a workflow application. You configure a workflow application through code (rather than by using a configuration file), which is a self-hosted .exe file using the <xref:System.Activities.WorkflowApplication> class. The tracking participant is added as an extension to the <xref:System.Activities.WorkflowApplication> instance. This is done by adding the <xref:System.Activities.Tracking.TrackingParticipant> to the extensions collection for the WorkflowApplication instance.  
+ A workflow can run using the <xref:System.Activities.WorkflowApplication> class. This topic demonstrates how tracking is configured for a [!INCLUDE [netfx_current_long](../../../includes/netfx-current-long-md.md)] workflow application by adding a tracking participant to the <xref:System.Activities.WorkflowApplication> workflow host. In this case, the workflow runs as a workflow application. You configure a workflow application through code (rather than by using a configuration file), which is a self-hosted .exe file using the <xref:System.Activities.WorkflowApplication> class. The tracking participant is added as an extension to the <xref:System.Activities.WorkflowApplication> instance. This is done by adding the <xref:System.Activities.Tracking.TrackingParticipant> to the extensions collection for the WorkflowApplication instance.  
   
  For a workflow application, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> behavior extension as shown in the following code.  
   
@@ -53,7 +53,7 @@ instance.Extensions.Add(trackingParticipant);
 ```  
   
 ### Configuring Workflow Service Tracking  
- A workflow can be exposed as a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service when hosted in the <xref:System.ServiceModel.Activities.WorkflowServiceHost> service host. <xref:System.ServiceModel.Activities.WorkflowServiceHost> is a specialized .NET ServiceHost implementation for a workflow-based service. This section explains how to configure tracking for a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow service running in <xref:System.ServiceModel.Activities.WorkflowServiceHost>. It is configured through a Web.config file (for a Web-hosted service) or an App.config file (for a service hosted in a stand-alone application, such as a console application) by specifying a service behavior or through code by adding a tracking-specific behavior to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection for the service host.  
+ A workflow can be exposed as a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] service when hosted in the <xref:System.ServiceModel.Activities.WorkflowServiceHost> service host. <xref:System.ServiceModel.Activities.WorkflowServiceHost> is a specialized .NET ServiceHost implementation for a workflow-based service. This section explains how to configure tracking for a [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow service running in <xref:System.ServiceModel.Activities.WorkflowServiceHost>. It is configured through a Web.config file (for a Web-hosted service) or an App.config file (for a service hosted in a stand-alone application, such as a console application) by specifying a service behavior or through code by adding a tracking-specific behavior to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection for the service host.  
   
  For a workflow service hosted in <xref:System.ServiceModel.WorkflowServiceHost>, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <`behavior`> element in a configuration file, as shown in the following example.  
   
@@ -191,73 +191,73 @@ invoker.Invoke();
 ### Registering an application-specific provider ID  
  If events need to be written to a specific application log, follow these steps to register the new provider manifest.  
   
-1.  Declare the provider ID in the application configuration file.  
+1. Declare the provider ID in the application configuration file.  
   
-    ```xml  
-    <system.serviceModel>  
-        <diagnostics etwProviderId="2720e974-9fe9-477a-bb60-81fe3bf91eec"/>  
-    </system.serviceModel>  
-    ```  
+   ```xml  
+   <system.serviceModel>  
+       <diagnostics etwProviderId="2720e974-9fe9-477a-bb60-81fe3bf91eec"/>  
+   </system.serviceModel>  
+   ```  
   
-2.  Copy the manifest file from %windir%\Microsoft.NET\Framework\\<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]>\Microsoft.Windows.ApplicationServer.Applications.man to a temporary location, and rename it to Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
+2. Copy the manifest file from %windir%\Microsoft.NET\Framework\\<latest version of [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)]>\Microsoft.Windows.ApplicationServer.Applications.man to a temporary location, and rename it to Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
   
-3.  Change the GUID in the manifest file to the new GUID.  
+3. Change the GUID in the manifest file to the new GUID.  
   
-    ```xml  
-    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"  
-    ```  
+   ```xml  
+   <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"  
+   ```  
   
-4.  Change the provider name if you do not want to uninstall the default provider.  
+4. Change the provider name if you do not want to uninstall the default provider.  
   
-    ```xml  
-    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"  
-    ```  
+   ```xml  
+   <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"  
+   ```  
   
-5.  If you changed the provider name in the previous step, change the channel names in the manifest file to the new provider name.  
+5. If you changed the provider name in the previous step, change the channel names in the manifest file to the new provider name.  
   
-    ```xml  
-    <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Admin" chid="ADMIN_CHANNEL" symbol="ADMIN_CHANNEL" type="Admin" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ADMIN_CHANNEL.message)" />  
-    <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Operational" chid="OPERATIONAL_CHANNEL" symbol="OPERATIONAL_CHANNEL" type="Operational" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.OPERATIONAL_CHANNEL.message)" />  
-    <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Analytic" chid="ANALYTIC_CHANNEL" symbol="ANALYTIC_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ANALYTIC_CHANNEL.message)" />  
-    <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Debug" chid="DEBUG_CHANNEL" symbol="DEBUG_CHANNEL" type="Debug" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.DEBUG_CHANNEL.message)" />  
-    <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Perf" chid="PERF_CHANNEL" symbol="PERF_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.PERF_CHANNEL.message)" />  
-    ```  
+   ```xml  
+   <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Admin" chid="ADMIN_CHANNEL" symbol="ADMIN_CHANNEL" type="Admin" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ADMIN_CHANNEL.message)" />  
+   <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Operational" chid="OPERATIONAL_CHANNEL" symbol="OPERATIONAL_CHANNEL" type="Operational" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.OPERATIONAL_CHANNEL.message)" />  
+   <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Analytic" chid="ANALYTIC_CHANNEL" symbol="ANALYTIC_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ANALYTIC_CHANNEL.message)" />  
+   <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Debug" chid="DEBUG_CHANNEL" symbol="DEBUG_CHANNEL" type="Debug" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.DEBUG_CHANNEL.message)" />  
+   <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Perf" chid="PERF_CHANNEL" symbol="PERF_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.PERF_CHANNEL.message)" />  
+   ```  
   
-6.  Generate the resource DLL by following these steps.  
+6. Generate the resource DLL by following these steps.  
   
-    1.  Install the Windows SDK. The Windows SDK includes the message compiler ([mc.exe](http://go.microsoft.com/fwlink/?LinkId=184606)) and resource compiler ([rc.exe](http://go.microsoft.com/fwlink/?LinkId=184605)).  
+   1.  Install the Windows SDK. The Windows SDK includes the message compiler ([mc.exe](http://go.microsoft.com/fwlink/?LinkId=184606)) and resource compiler ([rc.exe](http://go.microsoft.com/fwlink/?LinkId=184605)).  
   
-    2.  In a Windows SDK command prompt, run mc.exe on the new manifest file.  
+   2.  In a Windows SDK command prompt, run mc.exe on the new manifest file.  
   
-        ```  
-        mc.exe Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
-        ```  
+       ```  
+       mc.exe Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
+       ```  
   
-    3.  Run rc.exe on the resource file generated in the previous step.  
+   3.  Run rc.exe on the resource file generated in the previous step.  
   
-        ```  
-        rc.exe  Microsoft.Windows.ApplicationServer.Applications_Provider1.rc  
-        ```  
+       ```  
+       rc.exe  Microsoft.Windows.ApplicationServer.Applications_Provider1.rc  
+       ```  
   
-    4.  Create an empty cs file called NewProviderReg.cs.  
+   4.  Create an empty cs file called NewProviderReg.cs.  
   
-    5.  Create a resource DLL using the C# compiler.  
+   5.  Create a resource DLL using the C# compiler.  
   
-        ```  
-        csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll  
-        ```  
+       ```  
+       csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll  
+       ```  
   
-    6.  Change the resource and message dl namel in the manifest file from `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` to the new dll name.  
+   6.  Change the resource and message dl namel in the manifest file from `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` to the new dll name.  
   
-        ```xml  
-        <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">  
-        ```  
+       ```xml  
+       <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">  
+       ```  
   
-    7.  Use [wevtutil](http://go.microsoft.com/fwlink/?LinkId=184608) to register the manifest.  
+   7.  Use [wevtutil](http://go.microsoft.com/fwlink/?LinkId=184608) to register the manifest.  
   
-        ```  
-        wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
-        ```  
+       ```  
+       wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
+       ```  
   
 ## See Also  
  [Windows Server App Fabric Monitoring](http://go.microsoft.com/fwlink/?LinkId=201273)  

@@ -77,4 +77,4 @@ The .NET Framework provides a number of objects that help you create and manage 
  Describes how I/O asynchronous completion ports use the thread pool to require processing only when an input/output operation completes.  
   
  [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- Describes the recommended approach for multithreaded programming in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] and later.
+ Describes the recommended approach for multithreaded programming in the [!INCLUDE [net_v40_long](../../../includes/net-v40-long-md.md)] and later.

@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 1005 - WorkflowApplicationIdled
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|1005|  
 |Keywords|WFRuntime|  
 |Level|Information|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates a workflow application has idled.  
-  
+
 ## Message  
  WorkflowApplication Id: '%1' went idle.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|WorkflowInstanceId|`xs:string`|The workflow application id|  
-|AppDomain|`xs:string`|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+|   Data Item Name   | Data Item Type |                         Description                          |
+|--------------------|----------------|--------------------------------------------------------------|
+| WorkflowInstanceId |  `xs:string`   |                 The workflow application id                  |
+|     AppDomain      |  `xs:string`   | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

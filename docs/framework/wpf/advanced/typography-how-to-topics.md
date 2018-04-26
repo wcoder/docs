@@ -22,7 +22,7 @@ ms.workload:
   - dotnet
 ---
 # Typography How-to Topics
-The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.  
+The topics in this section describe how to use [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.  
   
 ## In This Section  
  [Create a Text Decoration](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  

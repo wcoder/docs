@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Manage Change Conflicts
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides a collection of APIs to help you discover, evaluate, and resolve concurrency conflicts.  
+[!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides a collection of APIs to help you discover, evaluate, and resolve concurrency conflicts.  
   
 ## In This Section  
  [How to: Detect and Resolve Conflicting Submissions](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
@@ -47,4 +47,4 @@ ms.workload:
   
 ## Related Sections  
  [Optimistic Concurrency: Overview](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
- Explains the terms that apply to optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
+ Explains the terms that apply to optimistic concurrency in [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].

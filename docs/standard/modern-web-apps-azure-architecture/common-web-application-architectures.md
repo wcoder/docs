@@ -224,6 +224,6 @@ While monolithic apps can benefit from Docker, breaking up the monolithic applic
 > <https://github.com/ardalis/cleanarchitecture>
 > - **Architecting Microservices e-book** <http://aka.ms/MicroservicesEbook>
 
->[!div class="step-by-step"]
-[Previous] (architectural-principles.md)
-[Next] (common-client-side-web-technologies.md)
+> [!div class="step-by-step"]
+> [Previous](architectural-principles.md)
+> [Next](common-client-side-web-technologies.md)

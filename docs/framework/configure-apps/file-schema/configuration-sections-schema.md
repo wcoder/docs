@@ -32,11 +32,13 @@ The configuration sections schema contains elements that define custom settings 
 [**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md)   
 [**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
 
-|     | Description |
-| --- | ----------- |
-| [**\<clear>** for **\<configSections>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Clears all previously defined sections and section groups. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Clears all previously defined sections and section groups. |
-| [**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contains configuration section and namespace declarations. |
-| [**\<remove>** for **\<configSections>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Removes a predefined section or section group. |
-| [**\<section>** for **\<configSections>** and **\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/section-element.md) | Contains a configuration section declaration. |
-| [**\<sectionGroup>** for **\<configSections>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Defines a namespace for configuration sections. |
+
+|                                                                                                                                         |                        Description                         |
+|-----------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
+|        [**\<clear>** for **\<configSections>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)        | Clears all previously defined sections and section groups. |
+|                     [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)                     | Clears all previously defined sections and section groups. |
+|            [**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)             | Contains configuration section and namespace declarations. |
+|       [**\<remove>** for **\<configSections>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)       |       Removes a predefined section or section group.       |
+|   [**\<section>** for **\<configSections>** and **\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/section-element.md)    |       Contains a configuration section declaration.        |
+| [**\<sectionGroup>** for **\<configSections>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) |      Defines a namespace for configuration sections.       |
+

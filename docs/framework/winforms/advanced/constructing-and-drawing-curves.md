@@ -22,7 +22,7 @@ ms.workload:
   - dotnet
 ---
 # Constructing and Drawing Curves
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] supports several types of curves: ellipses, arcs, cardinal splines, and Bézier splines. An ellipse is defined by its bounding rectangle; an arc is a portion of an ellipse defined by a starting angle and a sweep angle. A cardinal spline is defined by an array of points and a tension parameter — the curve passes smoothly through each point in the array, and the tension parameter influences the way the curve bends. A Bézier spline is defined by two endpoints and two control points  the curve does not pass through the control points, but the control points influence the direction and bend as the curve goes from one endpoint to the other.  
+[!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] supports several types of curves: ellipses, arcs, cardinal splines, and Bézier splines. An ellipse is defined by its bounding rectangle; an arc is a portion of an ellipse defined by a starting angle and a sweep angle. A cardinal spline is defined by an array of points and a tension parameter — the curve passes smoothly through each point in the array, and the tension parameter influences the way the curve bends. A Bézier spline is defined by two endpoints and two control points  the curve does not pass through the control points, but the control points influence the direction and bend as the curve goes from one endpoint to the other.  
   
 ## In This Section  
  [How to: Draw Cardinal Splines](../../../../docs/framework/winforms/advanced/how-to-draw-cardinal-splines.md)  

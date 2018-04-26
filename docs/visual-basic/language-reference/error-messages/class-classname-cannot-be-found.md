@@ -26,13 +26,13 @@ Class '\<classname>' cannot be found. This condition is usually the result of a 
   
 ## To correct this error  
   
-1.  Compile the program again to see if the error recurs.  
+1. Compile the program again to see if the error recurs.  
   
-2.  If the error recurs, save your work and restart [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+2. If the error recurs, save your work and restart [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)].  
   
-3.  If the error persists, reinstall Visual Basic.  
+3. If the error persists, reinstall Visual Basic.  
   
-4.  If the error persists after reinstallation, notify Microsoft Product Support Services.  
+4. If the error persists after reinstallation, notify Microsoft Product Support Services.  
   
 ## See Also  
  [Talk to Us](/visualstudio/ide/talk-to-us)

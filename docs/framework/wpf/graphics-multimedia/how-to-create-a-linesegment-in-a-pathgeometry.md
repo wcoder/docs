@@ -34,7 +34,7 @@ A LineSegment drawn from (10,50) to (200,70)
   
  [xaml]  
   
- In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you may use attribute syntax to describe a path.  
+ In [!INCLUDE [TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you may use attribute syntax to describe a path.  
   
 ```xaml  
 <Path Stroke="Black" StrokeThickness="1"    
@@ -45,7 +45,7 @@ A LineSegment drawn from (10,50) to (200,70)
   
  (Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>. For more information, see the [Path Markup Syntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) page.)  
   
- In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a line segment by using object element syntax. The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.  
+ In [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a line segment by using object element syntax. The following is equivalent to the previous [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.  
   
 ```xaml  
 <Path Stroke="Black" StrokeThickness="1">  

@@ -27,21 +27,21 @@ Every class or struct in C# implicitly inherits the <xref:System.Object> class. 
   
 ### To override the ToString method in your class or struct  
   
-1.  Declare a `ToString` method with the following modifiers and return type:  
+1. Declare a `ToString` method with the following modifiers and return type:  
   
-    ```csharp  
-    public override string ToString(){}  
-    ```  
+   ```csharp  
+   public override string ToString(){}  
+   ```  
   
-2.  Implement the method so that it returns a string.  
+2. Implement the method so that it returns a string.  
   
-     The following example returns the name of the class in addition to the data specific to a particular instance of the class.  
+    The following example returns the name of the class in addition to the data specific to a particular instance of the class.  
   
-     [!code-csharp[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
+    [!code-csharp[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
   
-     You can test the `ToString` method as shown in the following code example:  
+    You can test the `ToString` method as shown in the following code example:  
   
-     [!code-csharp[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
+    [!code-csharp[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
 ## See Also  
  <xref:System.IFormattable>  

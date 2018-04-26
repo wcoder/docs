@@ -32,7 +32,7 @@ ms.workload:
 # GetRequestedRuntimeVersionForCLSID Function
 Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.  
   
- This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ This function has been deprecated in the [!INCLUDE [net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## Syntax  
   
@@ -81,7 +81,7 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
   
  **Header:** MSCorEE.h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## See Also  
  [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

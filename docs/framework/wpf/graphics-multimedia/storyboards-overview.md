@@ -63,7 +63,7 @@ This topic shows how to use <xref:System.Windows.Media.Animation.Storyboard> obj
 ## How to Apply Animations with a Storyboard  
  To use a <xref:System.Windows.Media.Animation.Storyboard> to organize and apply animations, you add the animations as child timelines of the <xref:System.Windows.Media.Animation.Storyboard>. The <xref:System.Windows.Media.Animation.Storyboard> class provides the <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType> and <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=nameWithType> attached properties. You set these properties on an animation to specify its target object and property.  
   
- To apply animations to their targets, you begin the <xref:System.Windows.Media.Animation.Storyboard> using a trigger action or a method. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you use a <xref:System.Windows.Media.Animation.BeginStoryboard> object with an <xref:System.Windows.EventTrigger>, <xref:System.Windows.Trigger>, or <xref:System.Windows.DataTrigger>. In code, you can also use the  <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method.  
+ To apply animations to their targets, you begin the <xref:System.Windows.Media.Animation.Storyboard> using a trigger action or a method. In [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you use a <xref:System.Windows.Media.Animation.BeginStoryboard> object with an <xref:System.Windows.EventTrigger>, <xref:System.Windows.Trigger>, or <xref:System.Windows.DataTrigger>. In code, you can also use the  <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method.  
   
  The following table shows the different places where each  <xref:System.Windows.Media.Animation.Storyboard> begin technique is supported: per-instance, style, control template, and data template. "Per-Instance" refers to the technique of applying an animation or storyboard directly to instances of an object, rather than in a style, control template, or data template.  
   
@@ -86,11 +86,11 @@ This topic shows how to use <xref:System.Windows.Media.Animation.Storyboard> obj
 ## Targeting Framework Elements, Framework Content Elements, and Freezables  
  The previous section mentioned that, for an animation to find its target, it must know the target's name and the property to animate. Specifying the property to animate is straight forward: simply set <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=nameWithType> with the name of the property to animate.  You specify the name of the object whose property you want to animate by setting the <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType> property on the animation.  
   
- For the <xref:System.Windows.Setter.TargetName%2A> property to work, the targeted object must have a name. Assigning a name to a <xref:System.Windows.FrameworkElement> or a <xref:System.Windows.FrameworkContentElement> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is different than assigning a name to a <xref:System.Windows.Freezable> object.  
+ For the <xref:System.Windows.Setter.TargetName%2A> property to work, the targeted object must have a name. Assigning a name to a <xref:System.Windows.FrameworkElement> or a <xref:System.Windows.FrameworkContentElement> in [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is different than assigning a name to a <xref:System.Windows.Freezable> object.  
   
  Framework elements are those classes that inherit from the <xref:System.Windows.FrameworkElement> class. Examples of framework elements include <xref:System.Windows.Window>, <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Button>, and <xref:System.Windows.Shapes.Rectangle>. Essentially all windows, panels, and controls are elements. Framework content elements are those classes that inherit from the <xref:System.Windows.FrameworkContentElement> class. Examples of framework content elements include <xref:System.Windows.Documents.FlowDocument> and <xref:System.Windows.Documents.Paragraph>. If you're not sure whether a type is a framework element or a framework content element, check to see whether it has a Name property. If it does, it's probably a framework element or a framework content element. To be sure, check the Inheritance Hierarchy section of its type page.  
   
- To enable the targeting of a framework element or a framework content element in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you set its <xref:System.Windows.FrameworkElement.Name%2A> property. In code, you also need to use the <xref:System.Windows.NameScope.RegisterName%2A> method to register the element's name with the element for which you've created a <xref:System.Windows.NameScope>.  
+ To enable the targeting of a framework element or a framework content element in [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you set its <xref:System.Windows.FrameworkElement.Name%2A> property. In code, you also need to use the <xref:System.Windows.NameScope.RegisterName%2A> method to register the element's name with the element for which you've created a <xref:System.Windows.NameScope>.  
   
  The following example, taken from the preceding example, assigns the name `MyRectangle` a <xref:System.Windows.Shapes.Rectangle>, a type of <xref:System.Windows.FrameworkElement>.  
   
@@ -106,7 +106,7 @@ This topic shows how to use <xref:System.Windows.Media.Animation.Storyboard> obj
   
  <xref:System.Windows.Freezable> types are those classes that inherit from the <xref:System.Windows.Freezable> class. Examples of <xref:System.Windows.Freezable> include <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, and <xref:System.Windows.Media.GradientStop>.  
   
- To enable the targeting of a <xref:System.Windows.Freezable> by an animation in  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you use the [x:Name Directive](../../../../docs/framework/xaml-services/x-name-directive.md) to assign it a name. In code, you use the  <xref:System.Windows.NameScope.RegisterName%2A> method to register its name with the element for which you've created a <xref:System.Windows.NameScope>.  
+ To enable the targeting of a <xref:System.Windows.Freezable> by an animation in  [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you use the [x:Name Directive](../../../../docs/framework/xaml-services/x-name-directive.md) to assign it a name. In code, you use the  <xref:System.Windows.NameScope.RegisterName%2A> method to register its name with the element for which you've created a <xref:System.Windows.NameScope>.  
   
  The following example assigns a name to a <xref:System.Windows.Freezable> object.  
   
@@ -140,7 +140,7 @@ This topic shows how to use <xref:System.Windows.Media.Animation.Storyboard> obj
   
 <a name="xamlsyntaxchangeableproperty"></a>   
 ### Indirectly Targeting a Property of a Freezable in XAML  
- To target a property of a freezable in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use the following syntax.  
+ To target a property of a freezable in [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use the following syntax.  
   
 ||  
 |-|  
@@ -231,7 +231,7 @@ This topic shows how to use <xref:System.Windows.Media.Animation.Storyboard> obj
   
 <a name="controllable_storyboards"></a>   
 ## Interactively Controlling a Storyboard in XAML  
- To start a storyboard in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you use a <xref:System.Windows.Media.Animation.BeginStoryboard> trigger action. <xref:System.Windows.Media.Animation.BeginStoryboard> distributes the animations to the objects and properties they animate, and starts the storyboard. (For details about this process, see the [Animation and Timing System Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) If you give the <xref:System.Windows.Media.Animation.BeginStoryboard> a name by specifying its <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> property, you make it a controllable storyboard. You can then interactively control the storyboard after it's started. The following is a list of controllable storyboard actions that you use with event triggers to control a storyboard.  
+ To start a storyboard in [!INCLUDE [TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you use a <xref:System.Windows.Media.Animation.BeginStoryboard> trigger action. <xref:System.Windows.Media.Animation.BeginStoryboard> distributes the animations to the objects and properties they animate, and starts the storyboard. (For details about this process, see the [Animation and Timing System Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) If you give the <xref:System.Windows.Media.Animation.BeginStoryboard> a name by specifying its <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> property, you make it a controllable storyboard. You can then interactively control the storyboard after it's started. The following is a list of controllable storyboard actions that you use with event triggers to control a storyboard.  
   
 -   <xref:System.Windows.Media.Animation.PauseStoryboard>: Pauses the storyboard.  
   
@@ -280,13 +280,13 @@ This topic shows how to use <xref:System.Windows.Media.Animation.Storyboard> obj
 ## Animate in a Style  
  You can use <xref:System.Windows.Media.Animation.Storyboard> objects to define animations in a <xref:System.Windows.Style>. Animating with a <xref:System.Windows.Media.Animation.Storyboard> in a <xref:System.Windows.Style> is similar to using a <xref:System.Windows.Media.Animation.Storyboard> elsewhere, with the following three exceptions:  
   
--   You don't specify a <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; the <xref:System.Windows.Media.Animation.Storyboard> always targets the element to which the <xref:System.Windows.Style> is applied. To target <xref:System.Windows.Freezable> objects, you must use indirect targeting. For more information about indirect targeting, see the [Indirect Targeting](#pathsyntaxforchangeable) section.  
+- You don't specify a <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; the <xref:System.Windows.Media.Animation.Storyboard> always targets the element to which the <xref:System.Windows.Style> is applied. To target <xref:System.Windows.Freezable> objects, you must use indirect targeting. For more information about indirect targeting, see the [Indirect Targeting](#pathsyntaxforchangeable) section.  
   
--   You can't specify a <xref:System.Windows.EventTrigger.SourceName%2A> for an <xref:System.Windows.EventTrigger> or a <xref:System.Windows.Trigger>.  
+- You can't specify a <xref:System.Windows.EventTrigger.SourceName%2A> for an <xref:System.Windows.EventTrigger> or a <xref:System.Windows.Trigger>.  
   
--   You can't use dynamic resource references or data binding expressions to set <xref:System.Windows.Media.Animation.Storyboard> or animation property values. That's because everything inside a <xref:System.Windows.Style> must be thread-safe, and the timing system must <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> objects to make them thread-safe. A <xref:System.Windows.Media.Animation.Storyboard> cannot be frozen if it or its child timelines contain dynamic resource references or data binding expressions. For more information about freezing and other <xref:System.Windows.Freezable> features, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+- You can't use dynamic resource references or data binding expressions to set <xref:System.Windows.Media.Animation.Storyboard> or animation property values. That's because everything inside a <xref:System.Windows.Style> must be thread-safe, and the timing system must <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> objects to make them thread-safe. A <xref:System.Windows.Media.Animation.Storyboard> cannot be frozen if it or its child timelines contain dynamic resource references or data binding expressions. For more information about freezing and other <xref:System.Windows.Freezable> features, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
--   In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can't declare event handlers for <xref:System.Windows.Media.Animation.Storyboard> or animation events.  
+- In [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can't declare event handlers for <xref:System.Windows.Media.Animation.Storyboard> or animation events.  
   
  For an example showing how to define a storyboard in a style, see the [Animate in a Style](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md) example.  
   
@@ -294,13 +294,13 @@ This topic shows how to use <xref:System.Windows.Media.Animation.Storyboard> obj
 ## Animate in a ControlTemplate  
  You can use <xref:System.Windows.Media.Animation.Storyboard> objects to define animations in a <xref:System.Windows.Controls.ControlTemplate>. Animating with a <xref:System.Windows.Media.Animation.Storyboard> in a <xref:System.Windows.Controls.ControlTemplate> is similar to using a <xref:System.Windows.Media.Animation.Storyboard> elsewhere, with the following two exceptions:  
   
--   The <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> may only refer to child objects of the <xref:System.Windows.Controls.ControlTemplate>. If <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> is not specified, the animation targets the element to which the <xref:System.Windows.Controls.ControlTemplate> is applied.  
+- The <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> may only refer to child objects of the <xref:System.Windows.Controls.ControlTemplate>. If <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> is not specified, the animation targets the element to which the <xref:System.Windows.Controls.ControlTemplate> is applied.  
   
--   The <xref:System.Windows.EventTrigger.SourceName%2A> for an <xref:System.Windows.EventTrigger> or a <xref:System.Windows.Trigger> may only refer to child objects of the <xref:System.Windows.Controls.ControlTemplate>.  
+- The <xref:System.Windows.EventTrigger.SourceName%2A> for an <xref:System.Windows.EventTrigger> or a <xref:System.Windows.Trigger> may only refer to child objects of the <xref:System.Windows.Controls.ControlTemplate>.  
   
--   You can't use dynamic resource references or data binding expressions to set <xref:System.Windows.Media.Animation.Storyboard> or animation property values. That's because everything inside a <xref:System.Windows.Controls.ControlTemplate> must be thread-safe, and the timing system must <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> objects to make them thread-safe. A <xref:System.Windows.Media.Animation.Storyboard> cannot be frozen if it or its child timelines contain dynamic resource references or data binding expressions. For more information about freezing and other <xref:System.Windows.Freezable> features, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+- You can't use dynamic resource references or data binding expressions to set <xref:System.Windows.Media.Animation.Storyboard> or animation property values. That's because everything inside a <xref:System.Windows.Controls.ControlTemplate> must be thread-safe, and the timing system must <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> objects to make them thread-safe. A <xref:System.Windows.Media.Animation.Storyboard> cannot be frozen if it or its child timelines contain dynamic resource references or data binding expressions. For more information about freezing and other <xref:System.Windows.Freezable> features, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
--   In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can't declare event handlers for <xref:System.Windows.Media.Animation.Storyboard> or animation events.  
+- In [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can't declare event handlers for <xref:System.Windows.Media.Animation.Storyboard> or animation events.  
   
  For an example showing how to define a storyboard in a <xref:System.Windows.Controls.ControlTemplate>, see the [Animate in a ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md) example.  
   

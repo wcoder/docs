@@ -59,7 +59,7 @@ ADO.NET is a set of classes that expose data access services for .NET Framework 
  Provides links to LINQ topics and samples.  
   
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
- Describes how to use [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to deploy data services on the Web or an intranet that implement the Open Data Protocol (OData).  
+ Describes how to use [!INCLUDE [ssAstoria](../../../../includes/ssastoria-md.md)] to deploy data services on the Web or an intranet that implement the Open Data Protocol (OData).  
   
  [Core Development Technologies](https://msdn.microsoft.com/library/csxbhtye.aspx)  
  Provides links to information about standard development tasks in the .NET Framework.  

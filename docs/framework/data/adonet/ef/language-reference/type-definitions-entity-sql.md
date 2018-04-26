@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Type Definitions (Entity SQL)
-A type definition is used in the declaration statement of an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline function.  
+A type definition is used in the declaration statement of an [!INCLUDE [esql](../../../../../../includes/esql-md.md)] Inline function.  
   
 ## Remarks  
  The declaration statement for an inline function consists of the [FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) keyword followed by the identifier representing the function name (for example, "MyAvg") followed by a parameter definition list in parenthesis (for example, "dues Collection(Decimal)").  

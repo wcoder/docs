@@ -39,67 +39,67 @@ ms.workload:
   
 ### To determine which panel was clicked  
   
-1.  In the <xref:System.Windows.Forms.StatusBar.PanelClick> event handler, use a `Select Case` (in Visual Basic) or `switch case` (Visual C# or [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) statement to determine which panel was clicked by examining the index of the clicked panel in the event arguments.  
+1. In the <xref:System.Windows.Forms.StatusBar.PanelClick> event handler, use a `Select Case` (in Visual Basic) or `switch case` (Visual C# or [!INCLUDE [vcprvc](../../../../includes/vcprvc-md.md)]) statement to determine which panel was clicked by examining the index of the clicked panel in the event arguments.  
   
-     The following code example requires the presence, on the form, of a <xref:System.Windows.Forms.StatusBar> control, `StatusBar1`, and two <xref:System.Windows.Forms.StatusBarPanel> objects, `StatusBarPanel1` and `StatusBarPanel2`.  
+    The following code example requires the presence, on the form, of a <xref:System.Windows.Forms.StatusBar> control, `StatusBar1`, and two <xref:System.Windows.Forms.StatusBarPanel> objects, `StatusBarPanel1` and `StatusBarPanel2`.  
   
-    ```vb  
-    Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
-       Select Case StatusBar1.Panels.IndexOf(e.StatusBarPanel)  
-         Case 0  
-           MessageBox.Show("You have clicked Panel One.")  
-         Case 1  
-           MessageBox.Show("You have clicked Panel Two.")  
-       End Select  
-    End Sub  
-    ```  
+   ```vb  
+   Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
+      Select Case StatusBar1.Panels.IndexOf(e.StatusBarPanel)  
+        Case 0  
+          MessageBox.Show("You have clicked Panel One.")  
+        Case 1  
+          MessageBox.Show("You have clicked Panel Two.")  
+      End Select  
+   End Sub  
+   ```  
   
-    ```csharp  
-    private void statusBar1_PanelClick(object sender,   
-    System.Windows.Forms.StatusBarPanelClickEventArgs e)  
-    {  
-       switch (statusBar1.Panels.IndexOf(e.StatusBarPanel))  
-       {  
-          case 0 :  
-             MessageBox.Show("You have clicked Panel One.");  
-             break;  
-          case 1 :  
-             MessageBox.Show("You have clicked Panel Two.");  
-             break;  
-       }  
-    }  
-    ```  
+   ```csharp  
+   private void statusBar1_PanelClick(object sender,   
+   System.Windows.Forms.StatusBarPanelClickEventArgs e)  
+   {  
+      switch (statusBar1.Panels.IndexOf(e.StatusBarPanel))  
+      {  
+         case 0 :  
+            MessageBox.Show("You have clicked Panel One.");  
+            break;  
+         case 1 :  
+            MessageBox.Show("You have clicked Panel Two.");  
+            break;  
+      }  
+   }  
+   ```  
   
-    ```cpp  
-    private:  
-       void statusBar1_PanelClick(System::Object ^  sender,  
-          System::Windows::Forms::StatusBarPanelClickEventArgs ^  e)  
-       {  
-          switch (statusBar1->Panels->IndexOf(e->StatusBarPanel))  
-          {  
-             case 0 :  
-                MessageBox::Show("You have clicked Panel One.");  
-                break;  
-             case 1 :  
-                MessageBox::Show("You have clicked Panel Two.");  
-                break;  
-          }  
-       }  
-    ```  
+   ```cpp  
+   private:  
+      void statusBar1_PanelClick(System::Object ^  sender,  
+         System::Windows::Forms::StatusBarPanelClickEventArgs ^  e)  
+      {  
+         switch (statusBar1->Panels->IndexOf(e->StatusBarPanel))  
+         {  
+            case 0 :  
+               MessageBox::Show("You have clicked Panel One.");  
+               break;  
+            case 1 :  
+               MessageBox::Show("You have clicked Panel Two.");  
+               break;  
+         }  
+      }  
+   ```  
   
-     (Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
+    (Visual C#, [!INCLUDE [vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
   
-    ```csharp  
-    this.statusBar1.PanelClick += new   
-       System.Windows.Forms.StatusBarPanelClickEventHandler   
-       (this.statusBar1_PanelClick);  
-    ```  
+   ```csharp  
+   this.statusBar1.PanelClick += new   
+      System.Windows.Forms.StatusBarPanelClickEventHandler   
+      (this.statusBar1_PanelClick);  
+   ```  
   
-    ```cpp  
-    this->statusBar1->PanelClick += gcnew  
-       System::Windows::Forms::StatusBarPanelClickEventHandler  
-       (this, &Form1::statusBar1_PanelClick);  
-    ```  
+   ```cpp  
+   this->statusBar1->PanelClick += gcnew  
+      System::Windows::Forms::StatusBarPanelClickEventHandler  
+      (this, &Form1::statusBar1_PanelClick);  
+   ```  
   
 ## See Also  
  <xref:System.Windows.Forms.StatusBar>  

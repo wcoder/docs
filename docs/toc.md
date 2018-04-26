@@ -1,4 +1,5 @@
-﻿# [Welcome](welcome.md)
+
+# [Welcome](welcome.md)
 
 <!-- Start of .NET Guide -->
 # [.NET Guide](standard/index.md)

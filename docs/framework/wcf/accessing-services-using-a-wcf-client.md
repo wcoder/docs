@@ -23,15 +23,15 @@ ms.workload:
   - "dotnet"
 ---
 # Accessing Services Using a WCF Client
-After you create a service, the next step is to create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client proxy. A client application uses the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client proxy to communicate with the service. Client applications usually import a service's metadata to generate [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client code that can be used to invoke the service.  
+After you create a service, the next step is to create a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client proxy. A client application uses the [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client proxy to communicate with the service. Client applications usually import a service's metadata to generate [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client code that can be used to invoke the service.  
   
- The basic steps for creating a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client include the following:  
+ The basic steps for creating a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client include the following:  
   
-1.  Compile the service code.  
+1. Compile the service code.  
   
-2.  Generate the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client proxy.  
+2. Generate the [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client proxy.  
   
-3.  Instantiate the WCF client proxy.  
+3. Instantiate the WCF client proxy.  
   
  The WCF client proxy can be generated manually by using the Service Model Metadata Utility Tool (SvcUtil.exe) for more information see, [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). The WCF client proxy can also be generated within Visual Studio using the Add Service Reference  feature. To generate the WCF client proxy using either method the service must be running. If the service is self-hosted you must run the host. If the service is hosted in IIS/WAS you do not need to do anything else.  
   
@@ -48,7 +48,7 @@ Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
 Svcutil.exe <list of WSDL and XSD files on file system>  
 ```  
   
- The result is a code file that contains [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client code that the client application can use to invoke the service.  
+ The result is a code file that contains [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client code that the client application can use to invoke the service.  
   
  You can also use the tool to generate configuration files.  
   
@@ -56,7 +56,7 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>  
 ```  
   
- If only one file name is given, that is the name of the output file. If two file names are given, then the first file is an input configuration file whose contents are merged with the generated configuration and written out into the second file. [!INCLUDE[crabout](../../../includes/crabout-md.md)] configuration, see [Configuring Bindings for Services](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
+ If only one file name is given, that is the name of the output file. If two file names are given, then the first file is an input configuration file whose contents are merged with the generated configuration and written out into the second file. [!INCLUDE [crabout](../../../includes/crabout-md.md)] configuration, see [Configuring Bindings for Services](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Unsecured metadata requests pose certain risks in the same way that any unsecured network request does: If you are not certain that the endpoint you are communicating with is who it says it is, the information you retrieve might be metadata from a malicious service.  
@@ -88,7 +88,7 @@ Public Interface ICalculator
 End Interface
 ```
   
- The ServiceModel Metadata utility tool and Add Service Reference in Visual Studio generates the following [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client class. The class inherits from the generic <xref:System.ServiceModel.ClientBase%601> class and implements the `ICalculator` interface. The tool also generates the `ICalculator` interface (not shown here).  
+ The ServiceModel Metadata utility tool and Add Service Reference in Visual Studio generates the following [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client class. The class inherits from the generic <xref:System.ServiceModel.ClientBase%601> class and implements the `ICalculator` interface. The tool also generates the `ICalculator` interface (not shown here).  
   
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
@@ -156,7 +156,7 @@ End Class
 ```
   
 ## Using the WCF Client  
- To use the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client, create an instance of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client, and then call its methods, as shown in the following code.  
+ To use the [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client, create an instance of the [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client, and then call its methods, as shown in the following code.  
   
 ```csharp
 // Create a client object with the given client endpoint configuration.
@@ -181,7 +181,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ```
   
 ## Debugging Exceptions Thrown by a Client  
- Many exceptions thrown by a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client are caused by an exception on the service. Some examples of this are:  
+ Many exceptions thrown by a [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] client are caused by an exception on the service. Some examples of this are:  
   
 -   <xref:System.Net.Sockets.SocketException>: An existing connection was forcibly closed by the remote host.  
   
@@ -189,7 +189,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
 -   <xref:System.ServiceModel.CommunicationObjectAbortedException>: The socket connection was aborted. This could be caused by an error processing your message, a receive time-out being exceeded by the remote host, or an underlying network resource issue.  
   
- When these types of exceptions occur, the best way to solve the problem is to turn on tracing on the service side and determine what exception occurred there. [!INCLUDE[crabout](../../../includes/crabout-md.md)] tracing, see [Tracing](../../../docs/framework/wcf/diagnostics/tracing/index.md) and [Using Tracing to Troubleshoot Your Application](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+ When these types of exceptions occur, the best way to solve the problem is to turn on tracing on the service side and determine what exception occurred there. [!INCLUDE [crabout](../../../includes/crabout-md.md)] tracing, see [Tracing](../../../docs/framework/wcf/diagnostics/tracing/index.md) and [Using Tracing to Troubleshoot Your Application](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## See Also  
  [How to: Create a Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

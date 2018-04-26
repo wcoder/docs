@@ -18,20 +18,20 @@ ms.workload:
   - "dotnet"
 ---
 # Custom Token
-This sample demonstrates how to add a custom token implementation into a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application. The example uses a `CreditCardToken` to securely pass information about client credit cards to the service. The token is passed in the WS-Security message header and is signed and encrypted using the symmetric security binding element along with message body and other message headers. This is useful in cases where the built-in tokens are not sufficient. This sample demonstrates how to provide a custom security token to a service instead of using one of the built-in tokens. The service implements a contract that defines a request-reply communication pattern.  
+This sample demonstrates how to add a custom token implementation into a [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] application. The example uses a `CreditCardToken` to securely pass information about client credit cards to the service. The token is passed in the WS-Security message header and is signed and encrypted using the symmetric security binding element along with message body and other message headers. This is useful in cases where the built-in tokens are not sufficient. This sample demonstrates how to provide a custom security token to a service instead of using one of the built-in tokens. The service implements a contract that defines a request-reply communication pattern.  
   
 > [!NOTE]
 >  The setup procedure and build instructions for this sample are located at the end of this topic.  
   
  To summarize, this sample demonstrates the following:  
   
--   How a client can pass a custom security token to a service.  
+- How a client can pass a custom security token to a service.  
   
--   How the service can consume and validate a custom security token.  
+- How the service can consume and validate a custom security token.  
   
--   How the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service code can obtain the information about received security tokens including the custom security token.  
+- How the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] service code can obtain the information about received security tokens including the custom security token.  
   
--   How the server's X.509 certificate is used to protect the symmetric key used for message encryption and signature.  
+- How the server's X.509 certificate is used to protect the symmetric key used for message encryption and signature.  
   
 ## Client Authentication Using a Custom Security Token  
  The service exposes a single endpoint that is programmatically created using `BindingHelper` and `EchoServiceHost` classes. The endpoint consists of an address, a binding, and a contract. The binding is configured with a custom binding using `SymmetricSecurityBindingElement` and `HttpTransportBindingElement`. This sample sets the `SymmetricSecurityBindingElement` to use a service's X.509 certificate to protect the symmetric key during transmission and to pass a custom `CreditCardToken` in a WS-Security message header as a signed and encrypted security token. The behavior specifies the service credentials that are to be used for client authentication and also information about the service X.509 certificate.  
@@ -123,9 +123,9 @@ channelFactory.Close();
 ```  
   
 ## Custom Security Token Implementation  
- To enable a custom security token in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], create an object representation of the custom security token. The sample has this representation in the `CreditCardToken` class. The object representation is responsible for holding all relevant security token information and to provide a list of security keys contained in the security token. In this case, the credit card security token does not contain any security key.  
+ To enable a custom security token in [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)], create an object representation of the custom security token. The sample has this representation in the `CreditCardToken` class. The object representation is responsible for holding all relevant security token information and to provide a list of security keys contained in the security token. In this case, the credit card security token does not contain any security key.  
   
- The next section describes what must be done to enable a custom token to be transmitted over the wire and consumed by a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint.  
+ The next section describes what must be done to enable a custom token to be transmitted over the wire and consumed by a [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] endpoint.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -163,7 +163,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## Getting the Custom Credit Card Token to and from the Message  
- Security token serializers in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] are responsible for creating an object representation of security tokens from the XML in the message and creating a XML form of the security tokens. They are also responsible for other functionality such as reading and writing key identifiers pointing to security tokens, but this example uses only security token-related functionality. To enable a custom token you must implement your own security token serializer. This sample uses the `CreditCardSecurityTokenSerializer` class for this purpose.  
+ Security token serializers in [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] are responsible for creating an object representation of security tokens from the XML in the message and creating a XML form of the security tokens. They are also responsible for other functionality such as reading and writing key identifiers pointing to security tokens, but this example uses only security token-related functionality. To enable a custom token you must implement your own security token serializer. This sample uses the `CreditCardSecurityTokenSerializer` class for this purpose.  
   
  On the service, the custom serializer reads the XML form of the custom token and creates the custom token object representation from it.  
   
@@ -597,7 +597,7 @@ string GetCallerCreditCardNumber()
     ```  
   
 > [!NOTE]
->  The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt. The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.  
+>  The Setup.bat batch file is designed to be run from a [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt. The PATH environment variable set within the [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.  
   
 #### To set up and build the sample  
   
@@ -607,7 +607,7 @@ string GetCallerCreditCardNumber()
   
 #### To run the sample on the same computer  
   
-1.  Open a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt window with administrator privileges and run Setup.bat from the sample install folder. This installs all the certificates required for running the sample.Make sure that the path includes the folder where Makecert.exe is located.  
+1. Open a [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt window with administrator privileges and run Setup.bat from the sample install folder. This installs all the certificates required for running the sample.Make sure that the path includes the folder where Makecert.exe is located.  
   
 > [!NOTE]
 >  Be sure to remove the certificates by running Cleanup.bat when finished with the sample. Other security samples use the same certificates.  

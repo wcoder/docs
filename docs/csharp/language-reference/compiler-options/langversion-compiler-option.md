@@ -1,3 +1,4 @@
+
 ---
 title: "-langversion (C# Compiler Options)"
 ms.date: 07/20/2015
@@ -18,28 +19,30 @@ ms.author: "wiwagn"
 ---
 # -langversion (C# Compiler Options)
 Causes the compiler to accept only syntax that is included in the chosen C# language specification.  
-  
+
 ## Syntax  
-  
+
 ```console  
 -langversion:option  
 ```  
-  
+
 ## Arguments  
  `option`  
  The following values are valid:  
-  
-|Option|Meaning|  
-|------------|-------------|  
-|default|The compiler accepts all valid language syntax from the latest major version that it can support. <sup id="TDefault">[Default](#FDefault)</sup>| 
-|ISO-1|The compiler accepts only syntax that is included in ISO/IEC 23270:2003 C# (1.0/1.1) <sup id="TISO1">[ISO1](#FISO1)</sup>|  
-|ISO-2|The compiler accepts only syntax that is included in ISO/IEC 23270:2006 C# (2.0) <sup id="TISO2">[ISO2](#FISO2)</sup>|
-|3|The compiler accepts only syntax that is included in C# 3.0 or lower <sup id="TCS3">[CS3](#FCS3)</sup>|
-|4|The compiler accepts only syntax that is included in C# 4.0 or lower <sup id="TCS4">[CS4](#FCS4)</sup>|
-|5|The compiler accepts only syntax that is included in C# 5.0 or lower <sup id="TCS5">[CS5](#FCS5)</sup>|
-|6|The compiler accepts only syntax that is included in C# 6.0 or lower <sup id="TCS6">[CS6](#FCS6)</sup>|
-|7|The compiler accepts only syntax that is included in C# 7.0 or lower <sup id="TCS7">[CS7](#FCS7)</sup>|
-|latest|The compiler accepts all valid language syntax that it can support. <sup id="TLatest">[Latest](#FLatest)</sup>|
+
+
+| Option  |                                                                     Meaning                                                                     |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| default | The compiler accepts all valid language syntax from the latest major version that it can support. <sup id="TDefault">[Default](#FDefault)</sup> |
+|  ISO-1  |            The compiler accepts only syntax that is included in ISO/IEC 23270:2003 C# (1.0/1.1) <sup id="TISO1">[ISO1](#FISO1)</sup>            |
+|  ISO-2  |              The compiler accepts only syntax that is included in ISO/IEC 23270:2006 C# (2.0) <sup id="TISO2">[ISO2](#FISO2)</sup>              |
+|    3    |                     The compiler accepts only syntax that is included in C# 3.0 or lower <sup id="TCS3">[CS3](#FCS3)</sup>                      |
+|    4    |                     The compiler accepts only syntax that is included in C# 4.0 or lower <sup id="TCS4">[CS4](#FCS4)</sup>                      |
+|    5    |                     The compiler accepts only syntax that is included in C# 5.0 or lower <sup id="TCS5">[CS5](#FCS5)</sup>                      |
+|    6    |                     The compiler accepts only syntax that is included in C# 6.0 or lower <sup id="TCS6">[CS6](#FCS6)</sup>                      |
+|    7    |                     The compiler accepts only syntax that is included in C# 7.0 or lower <sup id="TCS7">[CS7](#FCS7)</sup>                      |
+| latest  |                 The compiler accepts all valid language syntax that it can support. <sup id="TLatest">[Latest](#FLatest)</sup>                  |
+
 <!--- Uncomment and move these above
 |latest| once they're officially released
 |7.1|The compiler accepts only syntax that is included in C# 7.1 or lower <sup id="TCS71">[CS71](#FCS71)</sup>|
@@ -47,32 +50,32 @@ Causes the compiler to accept only syntax that is included in the chosen C# lang
 |8|The compiler accepts only syntax that is included in C# 8 or lower <sup id="TCS71">[CS8](#FCS8)</sup>|
 -->
 
-  
+
 ## Remarks  
  Metadata referenced by your C# application is not subject to **-langversion** compiler option.  
-  
+
  Because each version of the C# compiler contains extensions to the language specification, **-langversion** does not give you the equivalent functionality of an earlier version of the compiler.  
- 
+
  Additionally, while C# version updates generally coincide with major .Net Framework releases, the new syntax and features are not necessarily tied to that specific framework version. While the new features will definitely require a new compiler update that is also released alongside the C# revision, each specific feature has its own minimum .Net API or common language runtime requirements that may allow it to run on downlevel frameworks by including NuGet packages or other libraries.
-  
+
  Regardless of which **-langversion** setting you use, you will use the current version of the common language runtime to create your .exe or .dll. One exception is friend assemblies and [-moduleassemblyname (C# Compiler Option)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), which work under **-langversion:ISO-1**.  
-  
+
 ### To set this compiler option in the Visual Studio development environment  
-  
+
 1.  Open the project's **Properties** page.  
-  
+
 2.  Click the **Build** property page.  
-  
+
 3.  Click the **Advanced** button.  
-  
+
 4.  Modify the **Language Version** property.  
-  
+
  For information about how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.  
-    
+
 ## See Also  
  [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  
  [Managing Project and Solution Properties](/visualstudio/ide/managing-project-and-solution-properties)  
- 
+
 ### C# Language Specification
  [C# Language Specification Reference](../../../csharp/language-reference/language-specification/index.md) : .NET Foundation  
  C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) Information technology -- C# Language Specification : ISO Catalogue  

@@ -23,7 +23,7 @@ ms.workload:
   - dotnet
 ---
 # Imaging How-to Topics
-The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.  
+The topics in this section demonstrate how to use [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.  
   
 ## In This Section  
  [Use a BitmapImage in XAML](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  

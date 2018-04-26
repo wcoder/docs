@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Entity SQL Quick Reference
-This topic provides a quick reference to [!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries. The queries in this topic are based on the AdventureWorks Sales model.  
+This topic provides a quick reference to [!INCLUDE [esql](../../../../../../includes/esql-md.md)] queries. The queries in this topic are based on the AdventureWorks Sales model.  
   
 ## Literals  
   
@@ -75,7 +75,7 @@ DATETIME '2006-12-25 01:01'
 |3|  
   
 ### Other  
- Other literals supported by [!INCLUDE[esql](../../../../../../includes/esql-md.md)] are Guid, Binary, Float/Double, Decimal, and `null`. Null literals in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] are considered to be compatible with every other type in the conceptual model.  
+ Other literals supported by [!INCLUDE [esql](../../../../../../includes/esql-md.md)] are Guid, Binary, Float/Double, Decimal, and `null`. Null literals in [!INCLUDE [esql](../../../../../../includes/esql-md.md)] are considered to be compatible with every other type in the conceptual model.  
   
 ## Type Constructors  
   
@@ -324,7 +324,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## SELECT VALUE AND SELECT  
   
 ### SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] provides the SELECT VALUE clause to skip the implicit row construction. Only one item can be specified in a SELECT VALUE clause. When such a clause is used, no row wrapper is constructed around the items in the SELECT clause, and a collection of the desired shape can be produced, for example: `SELECT VALUE a`.  
+ [!INCLUDE [esql](../../../../../../includes/esql-md.md)] provides the SELECT VALUE clause to skip the implicit row construction. Only one item can be specified in a SELECT VALUE clause. When such a clause is used, no row wrapper is constructed around the items in the SELECT clause, and a collection of the desired shape can be produced, for example: `SELECT VALUE a`.  
   
  Example:  
   
@@ -342,7 +342,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|  
   
 ### SELECT  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] also provides the row constructor to construct arbitrary rows. SELECT takes one or more elements in the projection and results in a data record with fields, for example: `SELECT a, b, c`.  
+ [!INCLUDE [esql](../../../../../../includes/esql-md.md)] also provides the row constructor to construct arbitrary rows. SELECT takes one or more elements in the projection and results in a data record with fields, for example: `SELECT a, b, c`.  
   
  Example:  
   

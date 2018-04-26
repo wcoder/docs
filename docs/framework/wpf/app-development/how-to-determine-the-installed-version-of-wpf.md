@@ -20,7 +20,7 @@ ms.workload:
   - dotnet
 ---
 # How to: Determine the Installed Version of WPF
-The version number for the current installed version of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is located in the **Registry**.  
+The version number for the current installed version of [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is located in the **Registry**.  
   
  To find the version number:  
   
@@ -32,4 +32,4 @@ The version number for the current installed version of [!INCLUDE[TLA#tla_wincli
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.0\Setup\Windows Presentation Foundation`  
   
- The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] version number is stored in the **Version** value.
+ The [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] version number is stored in the **Version** value.

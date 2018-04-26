@@ -24,18 +24,18 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Specify the Client Credential Type
-After setting a security mode (either transport or message), you have the option of setting the client credential type. This property specifies what type of credential the client must provide to the service for authentication. [!INCLUDE[crabout](../../../includes/crabout-md.md)] setting the security mode (a necessary step before setting the client credential type), see [How to: Set the Security Mode](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+After setting a security mode (either transport or message), you have the option of setting the client credential type. This property specifies what type of credential the client must provide to the service for authentication. [!INCLUDE [crabout](../../../includes/crabout-md.md)] setting the security mode (a necessary step before setting the client credential type), see [How to: Set the Security Mode](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 ### To set the client credential type in code  
   
-1.  Create an instance of the binding that the service will use. This example uses the <xref:System.ServiceModel.WSHttpBinding> binding.  
+1. Create an instance of the binding that the service will use. This example uses the <xref:System.ServiceModel.WSHttpBinding> binding.  
   
-2.  Set the <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> property to an appropriate value. This example uses the Message mode.  
+2. Set the <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> property to an appropriate value. This example uses the Message mode.  
   
-3.  Set the <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> property to an appropriate value. This example sets it to use Windows authentication (<xref:System.ServiceModel.MessageCredentialType.Windows>).  
+3. Set the <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> property to an appropriate value. This example sets it to use Windows authentication (<xref:System.ServiceModel.MessageCredentialType.Windows>).  
   
-     [!code-csharp[c_ProgrammingSecurity#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#14)]
-     [!code-vb[c_ProgrammingSecurity#14](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#14)]  
+    [!code-csharp[c_ProgrammingSecurity#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#14)]
+    [!code-vb[c_ProgrammingSecurity#14](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#14)]  
   
 ### To set the client credential type in configuration  
   

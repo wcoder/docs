@@ -56,7 +56,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## See Also  
  [ModuleLoadFinished Method](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)  

@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # ICorDebugProcess8 Interface
-[Supported in the [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] and later versions]  
+[Supported in the [!INCLUDE [net_v46](../../../../includes/net-v46-md.md)] and later versions]  
   
  Logically extends the ICorDebugProcess interface to enable or disable certain types of [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) exception callbacks.  
   
@@ -37,7 +37,7 @@ ms.workload:
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## See Also  
  [Debugging Interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

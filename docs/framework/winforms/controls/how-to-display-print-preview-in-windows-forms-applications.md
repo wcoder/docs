@@ -37,57 +37,57 @@ You can use the <xref:System.Windows.Forms.PrintPreviewDialog> control to enable
   
 ### To view pages using the PrintPreviewDialog control  
   
--   Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box, specifying the <xref:System.Drawing.Printing.PrintDocument> to use.  
+- Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box, specifying the <xref:System.Drawing.Printing.PrintDocument> to use.  
   
-     In the following code example, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens an instance of the <xref:System.Windows.Forms.PrintPreviewDialog> control. The print document is specified in the <xref:System.Windows.Forms.PrintDialog.Document%2A> property. In the example below, no print document is specified.  
+   In the following code example, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens an instance of the <xref:System.Windows.Forms.PrintPreviewDialog> control. The print document is specified in the <xref:System.Windows.Forms.PrintDialog.Document%2A> property. In the example below, no print document is specified.  
   
-     The example requires that your form has a <xref:System.Windows.Forms.Button> control, a <xref:System.Drawing.Printing.PrintDocument> component named `myDocument`, and a <xref:System.Windows.Forms.PrintPreviewDialog> control.  
+   The example requires that your form has a <xref:System.Windows.Forms.Button> control, a <xref:System.Drawing.Printing.PrintDocument> component named `myDocument`, and a <xref:System.Windows.Forms.PrintPreviewDialog> control.  
   
-    ```vb  
-    Private Sub Button1_Click(ByVal sender As System.Object, _  
-       ByVal e As System.EventArgs) Handles Button1.Click  
-       ' The print document 'myDocument' used below  
-       ' is merely for an example.  
-       ' You will have to specify your own print document.  
-       PrintPreviewDialog1.Document = myDocument  
-       PrintPreviewDialog1.ShowDialog()  
-    End Sub  
-    ```  
+  ```vb  
+  Private Sub Button1_Click(ByVal sender As System.Object, _  
+     ByVal e As System.EventArgs) Handles Button1.Click  
+     ' The print document 'myDocument' used below  
+     ' is merely for an example.  
+     ' You will have to specify your own print document.  
+     PrintPreviewDialog1.Document = myDocument  
+     PrintPreviewDialog1.ShowDialog()  
+  End Sub  
+  ```  
   
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)  
-    {  
-       // The print document 'myDocument' used below  
-       // is merely for an example.  
-       // You will have to specify your own print document.  
-       printPreviewDialog1.Document = myDocument;  
-       printPreviewDialog1.ShowDialog();  
-    }  
-    ```  
+  ```csharp  
+  private void button1_Click(object sender, System.EventArgs e)  
+  {  
+     // The print document 'myDocument' used below  
+     // is merely for an example.  
+     // You will have to specify your own print document.  
+     printPreviewDialog1.Document = myDocument;  
+     printPreviewDialog1.ShowDialog();  
+  }  
+  ```  
   
-    ```cpp  
-    private:  
-       void button1_Click(System::Object ^ sender,  
-          System::EventArgs ^ e)  
-       {  
-          // The print document 'myDocument' used below  
-          // is merely for an example.  
-          // You will have to specify your own print document.  
-          printPreviewDialog1->Document = myDocument;  
-          printPreviewDialog1->ShowDialog();  
-       }  
-    ```  
+  ```cpp  
+  private:  
+     void button1_Click(System::Object ^ sender,  
+        System::EventArgs ^ e)  
+     {  
+        // The print document 'myDocument' used below  
+        // is merely for an example.  
+        // You will have to specify your own print document.  
+        printPreviewDialog1->Document = myDocument;  
+        printPreviewDialog1->ShowDialog();  
+     }  
+  ```  
   
-     (Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
+   (Visual C#, [!INCLUDE [vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
   
-    ```csharp  
-    this.button1.Click += new System.EventHandler(this.button1_Click);  
-    ```  
+  ```csharp  
+  this.button1.Click += new System.EventHandler(this.button1_Click);  
+  ```  
   
-    ```cpp  
-    this->button1->Click += gcnew  
-       System::EventHandler(this, &Form1::button1_Click);  
-    ```  
+  ```cpp  
+  this->button1->Click += gcnew  
+     System::EventHandler(this, &Form1::button1_Click);  
+  ```  
   
 ## See Also  
  [PrintDocument Component](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  

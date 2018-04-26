@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Represent Columns as Allowing Null Values
-Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> property on the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to specify that the associated database column can hold null values.  
+Use the [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> property on the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to specify that the associated database column can hold null values.  
   
  For code examples, see <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.  
   

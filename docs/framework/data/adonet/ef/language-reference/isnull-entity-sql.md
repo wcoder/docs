@@ -65,7 +65,7 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|Throws an error.|  
   
 ## Example  
- The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the IS NOT NULL operator to determine if a query expression is not null. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  
+ The following [!INCLUDE [esql](../../../../../../includes/esql-md.md)] query uses the IS NOT NULL operator to determine if a query expression is not null. The query is based on the AdventureWorks Sales Model. To compile and run this query, follow these steps:  
   
 1.  Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   

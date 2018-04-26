@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 2027 - CacheRootMetadataStart
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|2027|  
 |Keywords|WFRuntime|  
 |Level|Verbose|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates the start of CacheRootMetadata on an activity.  
-  
+
 ## Message  
  CacheRootMetadata started on activity '%1'  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|DisplayName|xs:string|The display name of the activity.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+|  DisplayName   |   xs:string    |              The display name of the activity.               |
+|   AppDomain    |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

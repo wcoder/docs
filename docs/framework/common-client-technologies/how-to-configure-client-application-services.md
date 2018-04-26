@@ -20,7 +20,7 @@ ms.workload:
   - dotnet
 ---
 # How to: Configure Client Application Services
-This topic describes how to use the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Project Designer** to enable and configure client application services. You can use client application services to validate users and retrieve user roles and settings from an existing [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] application service. After configuration, you can access the enabled services in your application code as described in [Client Application Services Overview](../../../docs/framework/common-client-technologies/client-application-services-overview.md). For more information about the [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] application services, see [ASP.NET Application Services Overview](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+This topic describes how to use the [!INCLUDE [vsprvs](../../../includes/vsprvs-md.md)] **Project Designer** to enable and configure client application services. You can use client application services to validate users and retrieve user roles and settings from an existing [!INCLUDE [ajax_current_short](../../../includes/ajax-current-short-md.md)] application service. After configuration, you can access the enabled services in your application code as described in [Client Application Services Overview](../../../docs/framework/common-client-technologies/client-application-services-overview.md). For more information about the [!INCLUDE [ajax_current_short](../../../includes/ajax-current-short-md.md)] application services, see [ASP.NET Application Services Overview](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
  You can enable and configure client application services on the **Services** page of the **Project Designer**. The **Services** page updates values in your project's App.config file. To access the **Project Designer**, use the **Properties** command on the **Project** menu. For more information about the **Services** page, see [Services Page, Project Designer](https://msdn.microsoft.com/library/bb398109).  
   
@@ -28,37 +28,37 @@ This topic describes how to use the [!INCLUDE[vsprvs](../../../includes/vsprvs-m
   
 ### To configure client application services  
   
-1.  In **Solution Explorer**, select a project node and then on the **Project** menu, click **Properties**.  
+1. In **Solution Explorer**, select a project node and then on the **Project** menu, click **Properties**.  
   
-     The **Project Designer** appears.  
+    The **Project Designer** appears.  
   
-2.  Click the **Services** tab. The **Services** page appears, as shown in the following illustration.  
+2. Click the **Services** tab. The **Services** page appears, as shown in the following illustration.  
   
-     ![The Services tab in the project designer](../../../docs/framework/common-client-technologies/media/casdesigner.png "casdesigner")  
+    ![The Services tab in the project designer](../../../docs/framework/common-client-technologies/media/casdesigner.png "casdesigner")  
   
-3.  On the **Services** page, select **Enable client application services**.  
+3. On the **Services** page, select **Enable client application services**.  
   
-    > [!NOTE]
-    >  Client application services require the full version of the .NET Framework, and are not supported in the .NET Framework Client Profile. If the **Enable client application services** check box is disabled, verify that the **Target framework** is set to the .NET Framework 3.5 or later. To view the **Target framework** setting in C#, open the Project Designer and then click the **Application** page. To view the **Target framework** setting in Visual Basic, open the Project Designer, click the **Compile** page, and then click **Advanced Compile Options**.  
+   > [!NOTE]
+   >  Client application services require the full version of the .NET Framework, and are not supported in the .NET Framework Client Profile. If the **Enable client application services** check box is disabled, verify that the **Target framework** is set to the .NET Framework 3.5 or later. To view the **Target framework** setting in C#, open the Project Designer and then click the **Application** page. To view the **Target framework** setting in Visual Basic, open the Project Designer, click the **Compile** page, and then click **Advanced Compile Options**.  
   
-4.  Select **Use Forms authentication** if you plan to provide your own login controls or dialog box, or select **Use Windows authentication** to use the identity supplied by the operating system. For more information, see [Client Application Services Overview](../../../docs/framework/common-client-technologies/client-application-services-overview.md).  
+4. Select **Use Forms authentication** if you plan to provide your own login controls or dialog box, or select **Use Windows authentication** to use the identity supplied by the operating system. For more information, see [Client Application Services Overview](../../../docs/framework/common-client-technologies/client-application-services-overview.md).  
   
-    > [!NOTE]
-    >  If you select **Use Windows authentication**, client application services will automatically be configured to use a SQL Server Compact database. This is indicated in the **Advanced Settings for Services** dialog box as described in the next section. If you then select **Use Forms authentication**, the **Use custom connection string** setting will not be cleared automatically. This could result in errors if the [!INCLUDE[ssEW](../../../includes/ssew-md.md)] database has already been generated for use with Windows authentication. To fix these errors, clear the **Use custom connection string** setting in the **Advanced Settings for Services** dialog box.  
+   > [!NOTE]
+   >  If you select **Use Windows authentication**, client application services will automatically be configured to use a SQL Server Compact database. This is indicated in the **Advanced Settings for Services** dialog box as described in the next section. If you then select **Use Forms authentication**, the **Use custom connection string** setting will not be cleared automatically. This could result in errors if the [!INCLUDE [ssEW](../../../includes/ssew-md.md)] database has already been generated for use with Windows authentication. To fix these errors, clear the **Use custom connection string** setting in the **Advanced Settings for Services** dialog box.  
   
-5.  If you selected **Use Forms authentication**, in the **Authentication service location** box, specify the URL of the service host, not including the file name. The designer will automatically append the standard file name (Authentication_JSON_AppService.axd) when it writes the value to the configuration file.  
+5. If you selected **Use Forms authentication**, in the **Authentication service location** box, specify the URL of the service host, not including the file name. The designer will automatically append the standard file name (Authentication_JSON_AppService.axd) when it writes the value to the configuration file.  
   
-6.  Optionally, if you selected **Use Forms authentication**, you can specify a value in the **Credentials provider** box. The credentials provider must implement the <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> interface. By using a credentials provider, you can separate your login user interface from your other application code. This enables you to create a single login dialog box for use in multiple applications. For more information, see [How to: Implement User Login with Client Application Services](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md).  
+6. Optionally, if you selected **Use Forms authentication**, you can specify a value in the **Credentials provider** box. The credentials provider must implement the <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> interface. By using a credentials provider, you can separate your login user interface from your other application code. This enables you to create a single login dialog box for use in multiple applications. For more information, see [How to: Implement User Login with Client Application Services](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md).  
   
-     If you specify a credentials provider, you must specify it as an assembly-qualified type name. For more information, see <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> and [Assembly Names](../../../docs/framework/app-domains/assembly-names.md). In its simplest form, an assembly-qualified type name looks similar to the following example:  
+    If you specify a credentials provider, you must specify it as an assembly-qualified type name. For more information, see <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> and [Assembly Names](../../../docs/framework/app-domains/assembly-names.md). In its simplest form, an assembly-qualified type name looks similar to the following example:  
   
-    ```  
-    MyNamespace.MyLoginClass, MyAssembly  
-    ```  
+   ```  
+   MyNamespace.MyLoginClass, MyAssembly  
+   ```  
   
-7.  In the **Roles service location** and **Web settings service location** text boxes, specify the service location for each service, not including the file name. The designer will automatically append the standard file names (Role_JSON_AppService.axd and Profile_JSON_AppService.axd) when it writes the value to the configuration file.  
+7. In the **Roles service location** and **Web settings service location** text boxes, specify the service location for each service, not including the file name. The designer will automatically append the standard file names (Role_JSON_AppService.axd and Profile_JSON_AppService.axd) when it writes the value to the configuration file.  
   
-8.  Optionally, click **Advanced** to modify advanced settings, such as the local caching behavior. For more information, see the next procedure.  
+8. Optionally, click **Advanced** to modify advanced settings, such as the local caching behavior. For more information, see the next procedure.  
   
 ## Advanced Configuration  
  The following procedures describe how to configure client application services for less common scenarios. For example, you can use these configuration options for applications deployed in public locations, or to use an encrypted SQL Server Compact database as the local data cache.  
@@ -87,37 +87,37 @@ This topic describes how to use the [!INCLUDE[vsprvs](../../../includes/vsprvs-m
   
 #### To configure client application services to use a database for the local cache  
   
-1.  On the **Services** page of the **Project Designer**, click **Advanced**.  
+1. On the **Services** page of the **Project Designer**, click **Advanced**.  
   
-     The **Advanced Settings for Services** dialog box appears.  
+    The **Advanced Settings for Services** dialog box appears.  
   
-2.  Select **Use custom connection string**.  
+2. Select **Use custom connection string**.  
   
-     The default value of `Data Source = |SQL/CE|` appears in the text box.  
+    The default value of `Data Source = |SQL/CE|` appears in the text box.  
   
-3.  To generate and use a SQL Server Compact database, keep the default connection string value. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] will generate a database file and put it in the directory indicated by the <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> property.  
+3. To generate and use a SQL Server Compact database, keep the default connection string value. [!INCLUDE [vsprvs](../../../includes/vsprvs-md.md)] will generate a database file and put it in the directory indicated by the <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> property.  
   
-4.  To generate and use an encrypted [!INCLUDE[ssEW](../../../includes/ssew-md.md)] database, add `password` and `encrypt database` values to the connection string as shown in the following example.  
+4. To generate and use an encrypted [!INCLUDE [ssEW](../../../includes/ssew-md.md)] database, add `password` and `encrypt database` values to the connection string as shown in the following example.  
   
-    > [!NOTE]
-    >  Be sure to specify a strong password. You cannot change the password after the database is generated.  
+   > [!NOTE]
+   >  Be sure to specify a strong password. You cannot change the password after the database is generated.  
   
-    ```  
-    Data Source = |SQL/CE|;password=<password>;encrypt database=true  
-    ```  
+   ```  
+   Data Source = |SQL/CE|;password=<password>;encrypt database=true  
+   ```  
   
-5.  To use your own SQL Server database, specify your own connection string. For information about valid connection string formats, see the SQL Server documentation. This database is not generated automatically. The connection string must refer to an existing database that you can create using the following SQL statements.  
+5. To use your own SQL Server database, specify your own connection string. For information about valid connection string formats, see the SQL Server documentation. This database is not generated automatically. The connection string must refer to an existing database that you can create using the following SQL statements.  
   
-    ```  
-    CREATE TABLE ApplicationProperties (PropertyName nvarchar(256),  
-        PropertyValue nvarchar(256))  
-    CREATE TABLE UserProperties (PropertyName nvarchar(256),  
-        PropertyValue nvarchar(256))  
-    CREATE TABLE Roles (UserName nvarchar(256),   
-        RoleName nvarchar(256))  
-    CREATE TABLE Settings (PropertyName nvarchar(256),   
-        PropertyStoredAs nvarchar(1), PropertyValue nvarchar(2048))  
-    ```  
+   ```  
+   CREATE TABLE ApplicationProperties (PropertyName nvarchar(256),  
+       PropertyValue nvarchar(256))  
+   CREATE TABLE UserProperties (PropertyName nvarchar(256),  
+       PropertyValue nvarchar(256))  
+   CREATE TABLE Roles (UserName nvarchar(256),   
+       RoleName nvarchar(256))  
+   CREATE TABLE Settings (PropertyName nvarchar(256),   
+       PropertyStoredAs nvarchar(1), PropertyValue nvarchar(2048))  
+   ```  
   
 ## Using Custom Providers  
  By default, the client application services feature uses the providers in the <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType> namespace. When you configure your application by using the **Services** page of the **Project Designer**, references to these providers are added to your App.config file. These default providers access corresponding providers on the server. Web services are often configured to access user data through providers such as <xref:System.Web.Security.SqlMembershipProvider> and <xref:System.Web.Security.SqlRoleProvider>.  

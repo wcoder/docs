@@ -34,4 +34,4 @@ Public Class TextFieldParser
   
  **Class:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]
+ **Assembly:** [!INCLUDE [vbprvbruntime](~/includes/vbprvbruntime-md.md)]

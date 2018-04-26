@@ -39,7 +39,7 @@ For generic type parameters, the `in` keyword specifies that the type parameter 
  [!code-csharp[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)  

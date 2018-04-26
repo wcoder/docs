@@ -27,66 +27,66 @@ ms.workload:
 # Walkthrough: Caching Application Data in a WPF Application
 Caching enables you to store data in memory for rapid access. When the data is accessed again, applications can get the data from the cache instead retrieving it from the original source. This can improve performance and scalability. In addition, caching makes data available when the data source is temporarily unavailable.  
   
- The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provides classes that enable you to use caching in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications. These classes are located in the <xref:System.Runtime.Caching> namespace.  
+ The [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)] provides classes that enable you to use caching in [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications. These classes are located in the <xref:System.Runtime.Caching> namespace.  
   
 > [!NOTE]
->  The <xref:System.Runtime.Caching> namespace is new in the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. This namespace makes caching is available to all [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications. In previous versions of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes.  
+>  The <xref:System.Runtime.Caching> namespace is new in the [!INCLUDE [net_v40_short](../../../../includes/net-v40-short-md.md)]. This namespace makes caching is available to all [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications. In previous versions of the [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)], caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes.  
   
- This walkthrough shows you how to use the caching functionality that is available in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] as part of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application. In the walkthrough, you cache the contents of a text file.  
+ This walkthrough shows you how to use the caching functionality that is available in the [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)] as part of a [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application. In the walkthrough, you cache the contents of a text file.  
   
  Tasks illustrated in this walkthrough include the following:  
   
--   Creating a WPF application project.  
+- Creating a WPF application project.  
   
--   Adding a reference to the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+- Adding a reference to the [!INCLUDE [net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
--   Initializing a cache.  
+- Initializing a cache.  
   
--   Adding a cache entry that contains the contents of a text file.  
+- Adding a cache entry that contains the contents of a text file.  
   
--   Providing an eviction policy for the cache entry.  
+- Providing an eviction policy for the cache entry.  
   
--   Monitoring the path of the cached file and notifying the cache instance about changes to the monitored item.  
+- Monitoring the path of the cached file and notifying the cache instance about changes to the monitored item.  
   
 ## Prerequisites  
  In order to complete this walkthrough, you will need:  
   
--   Microsoft [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+- Microsoft [!INCLUDE [vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
--   A text file that contains a small amount of text. (You will display the contents of the text file in a message box.) The code illustrated in the walkthrough assumes that you are working with the following file:  
+- A text file that contains a small amount of text. (You will display the contents of the text file in a message box.) The code illustrated in the walkthrough assumes that you are working with the following file:  
   
-     `c:\cache\cacheText.txt`  
+   `c:\cache\cacheText.txt`  
   
-     However, you can use any text file and make small changes to the code in this walkthrough.  
+   However, you can use any text file and make small changes to the code in this walkthrough.  
   
 ## Creating a WPF Application Project  
  You will start by creating a WPF application project.  
   
 #### To create a WPF application  
   
-1.  Start [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+1. Start [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)].  
   
-2.  In the **File** menu, click **New**, and then click **New Project**.  
+2. In the **File** menu, click **New**, and then click **New Project**.  
   
-     The **New Project** dialog box is displayed.  
+    The **New Project** dialog box is displayed.  
   
-3.  Under **Installed Templates**, select the programming language you want to use (**Visual Basic** or **Visual C#**).  
+3. Under **Installed Templates**, select the programming language you want to use (**Visual Basic** or **Visual C#**).  
   
-4.  In the **New Project** dialog box, select **WPF Application**.  
+4. In the **New Project** dialog box, select **WPF Application**.  
   
-    > [!NOTE]
-    >  If you do not see the **WPF Application** template, make sure that you are targeting a version of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] that supports WPF. In the **New Project** dialog box, select [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] from the list.  
+   > [!NOTE]
+   >  If you do not see the **WPF Application** template, make sure that you are targeting a version of the [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)] that supports WPF. In the **New Project** dialog box, select [!INCLUDE [net_v40_short](../../../../includes/net-v40-short-md.md)] from the list.  
   
-5.  In the **Name** text box, enter a name for your project. For example, you can enter **WPFCaching**.  
+5. In the **Name** text box, enter a name for your project. For example, you can enter **WPFCaching**.  
   
-6.  Select the **Create directory for solution** check box.  
+6. Select the **Create directory for solution** check box.  
   
-7.  Click **OK**.  
+7. Click **OK**.  
   
-     The WPF Designer opens in **Design** view and displays the MainWindow.xaml file. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] creates the **My Project** folder, the Application.xaml file, and the MainWindow.xaml file.  
+    The WPF Designer opens in **Design** view and displays the MainWindow.xaml file. [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)] creates the **My Project** folder, the Application.xaml file, and the MainWindow.xaml file.  
   
 ## Targeting the .NET Framework and Adding a Reference to the Caching Assemblies  
- By default, WPF applications target the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. To use the <xref:System.Runtime.Caching> namespace in a WPF application, the application must target the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (not the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) and must include a reference to the namespace.  
+ By default, WPF applications target the [!INCLUDE [net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. To use the <xref:System.Runtime.Caching> namespace in a WPF application, the application must target the [!INCLUDE [net_v40_short](../../../../includes/net-v40-short-md.md)] (not the [!INCLUDE [net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) and must include a reference to the namespace.  
   
  Therefore, the next step is to change the .NET Framework target and add a reference to the <xref:System.Runtime.Caching> namespace.  
   
@@ -95,47 +95,47 @@ Caching enables you to store data in memory for rapid access. When the data is a
   
 #### To change the target .NET Framework in Visual Basic  
   
-1.  In **Solutions Explorer**, right-click the project name, and then click **Properties**.  
+1. In **Solutions Explorer**, right-click the project name, and then click **Properties**.  
   
-     The properties window for the application is displayed.  
+    The properties window for the application is displayed.  
   
-2.  Click the **Compile** tab.  
+2. Click the **Compile** tab.  
   
-3.  At the bottom of the window, click **Advanced Compile Options…**.  
+3. At the bottom of the window, click **Advanced Compile Options…**.  
   
-     The **Advanced Compiler Settings** dialog box is displayed.  
+    The **Advanced Compiler Settings** dialog box is displayed.  
   
-4.  In the **Target framework (all configurations)** list, select [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Do not select [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)  
+4. In the **Target framework (all configurations)** list, select [!INCLUDE [net_v40_short](../../../../includes/net-v40-short-md.md)]. (Do not select [!INCLUDE [net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)  
   
-5.  Click **OK**.  
+5. Click **OK**.  
   
-     The **Target Framework Change** dialog box is displayed.  
+    The **Target Framework Change** dialog box is displayed.  
   
-6.  In the **Target Framework Change** dialog box, click **Yes**.  
+6. In the **Target Framework Change** dialog box, click **Yes**.  
   
-     The project is closed and is then reopened.  
+    The project is closed and is then reopened.  
   
-7.  Add a reference to the caching assembly by following these steps:  
+7. Add a reference to the caching assembly by following these steps:  
   
-    1.  In **Solution Explorer**, right-click the name of the project and then click **Add Reference**.  
+   1.  In **Solution Explorer**, right-click the name of the project and then click **Add Reference**.  
   
-    2.  Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.  
+   2.  Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.  
   
 #### To change the target .NET Framework in a Visual C# project  
   
-1.  In **Solution Explorer**, right-click the project name and then click **Properties**.  
+1. In **Solution Explorer**, right-click the project name and then click **Properties**.  
   
-     The properties window for the application is displayed.  
+    The properties window for the application is displayed.  
   
-2.  Click the **Application** tab.  
+2. Click the **Application** tab.  
   
-3.  In the **Target framework** list, select [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Do not select **.NET Framework 4 Client Profile**.)  
+3. In the **Target framework** list, select [!INCLUDE [net_v40_short](../../../../includes/net-v40-short-md.md)]. (Do not select **.NET Framework 4 Client Profile**.)  
   
-4.  Add a reference to the caching assembly by following these steps:  
+4. Add a reference to the caching assembly by following these steps:  
   
-    1.  Right-click the **References** folder and then click **Add Reference**.  
+   1.  Right-click the **References** folder and then click **Add Reference**.  
   
-    2.  Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.  
+   2.  Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.  
   
 ## Adding a Button to the WPF Window  
  Next, you will add a button control and create an event handler for the button's `Click` event. Later you will add code to so when you click the button, the contents of the text file are cached and displayed.  
@@ -296,36 +296,36 @@ Caching enables you to store data in memory for rapid access. When the data is a
   
 #### To test caching in the WPF application  
   
-1.  Press CTRL+F5 to run the application.  
+1. Press CTRL+F5 to run the application.  
   
-     The `MainWindow` window is displayed.  
+    The `MainWindow` window is displayed.  
   
-2.  Click **Get Cache**.  
+2. Click **Get Cache**.  
   
-     The cached content from the text file is displayed in a message box. Notice the timestamp on the file.  
+    The cached content from the text file is displayed in a message box. Notice the timestamp on the file.  
   
-3.  Close the message box and then click **Get Cache** again**.**  
+3. Close the message box and then click **Get Cache** again<strong>.</strong>  
   
-     The timestamp is unchanged. This indicates the cached content is displayed.  
+    The timestamp is unchanged. This indicates the cached content is displayed.  
   
-4.  Wait 10 seconds or more and then click **Get Cache** again.  
+4. Wait 10 seconds or more and then click **Get Cache** again.  
   
-     This time a new timestamp is displayed. This indicates that the policy let the cache entry expire and that new cached content is displayed.  
+    This time a new timestamp is displayed. This indicates that the policy let the cache entry expire and that new cached content is displayed.  
   
-5.  In a text editor, open the text file that you created. Do not make any changes yet.  
+5. In a text editor, open the text file that you created. Do not make any changes yet.  
   
-6.  Close the message box and then click **Get Cache** again**.**  
+6. Close the message box and then click **Get Cache** again<strong>.</strong>  
   
-     Notice the timestamp again.  
+    Notice the timestamp again.  
   
-7.  Make a change to the text file and then save the file.  
+7. Make a change to the text file and then save the file.  
   
-8.  Close the message box and then click **Get Cache** again.  
+8. Close the message box and then click **Get Cache** again.  
   
-     This message box contains the updated content from the text file and a new timestamp. This indicates that the host-file change monitor evicted the cache entry immediately when you changed the file, even though the absolute timeout period had not expired.  
+    This message box contains the updated content from the text file and a new timestamp. This indicates that the host-file change monitor evicted the cache entry immediately when you changed the file, even though the absolute timeout period had not expired.  
   
-    > [!NOTE]
-    >  You can increase the eviction time to 20 seconds or more to allow more time for you to make a change in the file.  
+   > [!NOTE]
+   >  You can increase the eviction time to 20 seconds or more to allow more time for you to make a change in the file.  
   
 ## Code Example  
  After you have completed this walkthrough, the code for the project you created will resemble the following example.  

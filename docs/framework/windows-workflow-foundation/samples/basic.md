@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # Basic
-This section provides samples that demonstrate basic [!INCLUDE[wf](../../../../includes/wf-md.md)] functionality.  
+This section provides samples that demonstrate basic [!INCLUDE [wf](../../../../includes/wf-md.md)] functionality.  
   
 ## In This Section  
  [Built-in Activities](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
@@ -29,7 +29,7 @@ This section provides samples that demonstrate basic [!INCLUDE[wf](../../../../i
  Contains samples that demonstrate creating custom activities.  
   
  [Designer](../../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
- Contains samples that demonstrate how to use [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].  
+ Contains samples that demonstrate how to use [!INCLUDE [wfd1](../../../../includes/wfd1-md.md)].  
   
  [Designer ReHosting](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
  Contains samples that demonstrate re-hosting the activity designer.  
@@ -38,16 +38,16 @@ This section provides samples that demonstrate basic [!INCLUDE[wf](../../../../i
  Contains samples that demonstrate executing workflows.  
   
  [Expressions](../../../../docs/framework/windows-workflow-foundation/samples/expressions.md)  
- Contains samples that demonstrate [!INCLUDE[wf](../../../../includes/wf-md.md)] expressions.  
+ Contains samples that demonstrate [!INCLUDE [wf](../../../../includes/wf-md.md)] expressions.  
   
  [Migration](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
- Contains samples that demonstrate migrating workflows created with previous versions of [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ Contains samples that demonstrate migrating workflows created with previous versions of [!INCLUDE [wf](../../../../includes/wf-md.md)].  
   
  [Persistence](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
  Contains samples that demonstrate persisting workflows to a durable medium.  
   
  [Rules Samples](../../../../docs/framework/windows-workflow-foundation/samples/rules-samples.md)  
- Contains samples that demonstrate using the workflow rules engine from [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)].  
+ Contains samples that demonstrate using the workflow rules engine from [!INCLUDE [netfx35_short](../../../../includes/netfx35-short-md.md)].  
   
  [Services](../../../../docs/framework/windows-workflow-foundation/samples/services.md)  
  Contains samples that demonstrate workflow services.  
@@ -59,6 +59,6 @@ This section provides samples that demonstrate basic [!INCLUDE[wf](../../../../i
  Contains samples that demonstrate workflow transactions.  
   
  [Validation](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
- Contains samples that demonstrate validation in [!INCLUDE[wf2](../../../../includes/wf2-md.md)].  
+ Contains samples that demonstrate validation in [!INCLUDE [wf2](../../../../includes/wf2-md.md)].  
   
 ## Reference

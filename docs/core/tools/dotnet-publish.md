@@ -47,7 +47,7 @@ dotnet publish [-h|--help]
 
 The `dotnet publish` command's output is ready for deployment to a hosting system (for example, a server, PC, Mac, laptop) for execution and is the only officially supported way to prepare the application for deployment. Depending on the type of deployment that the project specifies, the hosting system may or may not have the .NET Core shared runtime installed on it. For more information, see [.NET Core Application Deployment](../deploying/index.md). For the directory structure of a published application, see [Directory structure](/aspnet/core/hosting/directory-structure).
 
-[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+[!INCLUDE [dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## Arguments
 

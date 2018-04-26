@@ -29,5 +29,5 @@ in fixing any errors you find, you may submit a [Pull Request](https://github.co
  [C# Reference](../../language-reference/index.md)  
  [C# Programming Guide](../../programming-guide/index.md)
 
->[!div class="step-by-step"]
-[Next](../../../../_csharplang/spec/introduction.md)
+> [!div class="step-by-step"]
+> [Next](../../../../_csharplang/spec/introduction.md)

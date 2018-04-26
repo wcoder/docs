@@ -18,10 +18,10 @@ ms.workload:
   - "dotnet"
 ---
 # What&#39;s New in ADO.NET
-The following features are new in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] in the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+The following features are new in [!INCLUDE [vstecado](../../../../includes/vstecado-md.md)] in the [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)].  
   
 ## SqlClient Data Provider  
- The following features are new in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
+ The following features are new in the [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server in [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)]:  
   
 -   The ConnectRetryCount and ConnectRetryInterval connection string keywords (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) let you control the idle connection resiliency feature.  
   
@@ -56,7 +56,7 @@ The following features are new in [!INCLUDE[vstecado](../../../../includes/vstec
 -   The assembly Microsoft.SqlServer.Types.dll, which contains the spatial data types, has been upgraded from version 10.0 to version 11.0. Applications that reference this assembly may fail. For more information, see [Breaking Changes to Database Engine Features](http://go.microsoft.com/fwlink/?LinkId=224367).  
   
 ## ADO.NET Entity Framework  
- The [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] adds APIs that enable new scenarios when working with the Entity Framework 5.0. For more information about improvements and features that were added to the Entity Framework 5.0, see the following topics: [What’s New](http://go.microsoft.com/fwlink/?LinkID=251106) and [Entity Framework Releases and Versioning](http://go.microsoft.com/fwlink/?LinkId=234899).  
+ The [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)] adds APIs that enable new scenarios when working with the Entity Framework 5.0. For more information about improvements and features that were added to the Entity Framework 5.0, see the following topics: [What’s New](http://go.microsoft.com/fwlink/?LinkID=251106) and [Entity Framework Releases and Versioning](http://go.microsoft.com/fwlink/?LinkId=234899).  
   
 ## See Also  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  

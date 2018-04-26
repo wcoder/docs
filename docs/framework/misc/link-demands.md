@@ -30,7 +30,7 @@ ms.workload:
   - "dotnet"
 ---
 # Link Demands
-[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
+[!INCLUDE [net_security_note](../../../includes/net-security-note-md.md)]
   
  A link demand causes a security check during just-in-time compilation and checks only the immediate calling assembly of your code. Linking occurs when your code is bound to a type reference, including function pointer references and method calls. If the calling assembly does not have sufficient permission to link to your code, the link is not allowed and a runtime exception is thrown when the code is loaded and run. Link demands can be overridden in classes that inherit from your code.  
   

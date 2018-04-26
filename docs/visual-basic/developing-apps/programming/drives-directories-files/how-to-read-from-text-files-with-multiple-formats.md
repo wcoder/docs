@@ -27,32 +27,32 @@ The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object provides a way to
   
 ### To parse a text file with multiple formats  
   
-1.  Add a text file named testfile.txt to your project. Add the following content to the text file.  
+1. Add a text file named testfile.txt to your project. Add the following content to the text file.  
   
-    ```  
-    Err  1001 Cannot access resource.  
-    Err  2014 Resource not found.  
-    Acc  10/03/2009User1      Administrator.  
-    Err  0323 Warning: Invalid access attempt.  
-    Acc  10/03/2009User2      Standard user.  
-    Acc  10/04/2009User2      Standard user.  
-    ```  
+   ```  
+   Err  1001 Cannot access resource.  
+   Err  2014 Resource not found.  
+   Acc  10/03/2009User1      Administrator.  
+   Err  0323 Warning: Invalid access attempt.  
+   Acc  10/03/2009User2      Standard user.  
+   Acc  10/04/2009User2      Standard user.  
+   ```  
   
-2.  Define the expected format and the format used when an error is reported. The last entry in each array is -1, therefore the last field is assumed to be of variable width. This occurs when the last entry in the array is less than or equal to 0.  
+2. Define the expected format and the format used when an error is reported. The last entry in each array is -1, therefore the last field is assumed to be of variable width. This occurs when the last entry in the array is less than or equal to 0.  
   
-     [!code-vb[VbFileIORead#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_1.vb)]  
+    [!code-vb[VbFileIORead#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_1.vb)]  
   
-3.  Create a new <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object, defining the width and format.  
+3. Create a new <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object, defining the width and format.  
   
-     [!code-vb[VbFileIORead#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_2.vb)]  
+    [!code-vb[VbFileIORead#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_2.vb)]  
   
-4.  Loop through the rows, testing for format before reading.  
+4. Loop through the rows, testing for format before reading.  
   
-     [!code-vb[VbFileIORead#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_3.vb)]  
+    [!code-vb[VbFileIORead#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_3.vb)]  
   
-5.  Write errors to the console.  
+5. Write errors to the console.  
   
-     [!code-vb[VbFileIORead#7](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_4.vb)]  
+    [!code-vb[VbFileIORead#7](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_4.vb)]  
   
 ## Example  
  Following is the complete example that reads from the file `testfile.txt`.  

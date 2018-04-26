@@ -23,7 +23,7 @@ ms.workload:
   - dotnet
 ---
 # Getting Started with Graphics Programming
-This section shows how to get started using [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in a Windows Forms application. The following topics show how to complete several [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tasks such as drawing and filling shapes and text.  
+This section shows how to get started using [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in a Windows Forms application. The following topics show how to complete several [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tasks such as drawing and filling shapes and text.  
   
 ## In This Section  
  [How to: Create Graphics Objects for Drawing](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  

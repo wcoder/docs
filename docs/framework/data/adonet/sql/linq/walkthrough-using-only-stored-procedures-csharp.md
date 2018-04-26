@@ -18,16 +18,16 @@ ms.workload:
   - "dotnet"
 ---
 # Walkthrough: Using Only Stored Procedures (C#)
-This walkthrough provides a basic end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for accessing data by executing stored procedures only. This approach is often used by database administrators to limit how the datastore is accessed.  
+This walkthrough provides a basic end-to-end [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for accessing data by executing stored procedures only. This approach is often used by database administrators to limit how the datastore is accessed.  
   
 > [!NOTE]
->  You can also use stored procedures in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications to override default behavior, especially for `Create`, `Update`, and `Delete` processes. For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+>  You can also use stored procedures in [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications to override default behavior, especially for `Create`, `Update`, and `Delete` processes. For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
   
  For purposes of this walkthrough, you will use two methods that have been mapped to stored procedures in the Northwind sample database: CustOrdersDetail and CustOrderHist. The mapping occurs when you run the SqlMetal command-line tool to generate a C# file. For more information, see the Prerequisites section later in this walkthrough.  
   
- This walkthrough does not rely on the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Developers using Visual Studio can also use the [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] to implement stored procedure functionality. See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ This walkthrough does not rely on the [!INCLUDE [vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Developers using Visual Studio can also use the [!INCLUDE [vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] to implement stored procedure functionality. See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
- [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
+[!INCLUDE [note_settings_general](../../../../../../includes/note-settings-general-md.md)]
   
  This walkthrough was written by using Visual C# Development Settings.  
   
@@ -51,20 +51,20 @@ This walkthrough provides a basic end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## Overview  
  This walkthrough consists of six main tasks:  
   
--   Setting up the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in Visual Studio.  
+- Setting up the [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in Visual Studio.  
   
--   Adding the System.Data.Linq assembly to the project.  
+- Adding the System.Data.Linq assembly to the project.  
   
--   Adding the database code file to the project.  
+- Adding the database code file to the project.  
   
--   Creating a connection with the database.  
+- Creating a connection with the database.  
   
--   Setting up the user interface.  
+- Setting up the user interface.  
   
--   Running and testing the application.  
+- Running and testing the application.  
   
 ## Creating a LINQ to SQL Solution  
- In this first task, you create a Visual Studio solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.  
+ In this first task, you create a Visual Studio solution that contains the necessary references to build and run a [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.  
   
 #### To create a LINQ to SQL solution  
   
@@ -83,7 +83,7 @@ This walkthrough provides a basic end-to-end [!INCLUDE[vbtecdlinq](../../../../.
      The Windows Forms Designer opens.  
   
 ## Adding the LINQ to SQL Assembly Reference  
- The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] assembly is not included in the standard Windows Forms Application template. You will have to add the assembly yourself, as explained in the following steps:  
+ The [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] assembly is not included in the standard Windows Forms Application template. You will have to add the assembly yourself, as explained in the following steps:  
   
 #### To add System.Data.Linq.dll  
   
@@ -109,11 +109,11 @@ This walkthrough provides a basic end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### To create the database connection  
   
-1.  In **Solution Explorer**, right-click **Form1.cs**, and then click **View Code**.  
+1. In **Solution Explorer**, right-click **Form1.cs**, and then click **View Code**.  
   
-2.  Type the following code into the `Form1` class:  
+2. Type the following code into the `Form1` class:  
   
-     [!code-csharp[DLinqWalk4CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#1)]  
+    [!code-csharp[DLinqWalk4CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#1)]  
   
 ## Setting up the User Interface  
  In this task you set up an interface so that users can execute stored procedures to access data in the database. In the applications that you are developing with this walkthrough, users can access data in the database only by using the stored procedures embedded in the application.  
@@ -147,17 +147,17 @@ This walkthrough provides a basic end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### To handle button clicks  
   
-1.  Double-click **Order Details** on **Form1** to open the button1 event handler in the code editor.  
+1. Double-click **Order Details** on **Form1** to open the button1 event handler in the code editor.  
   
-2.  Type the following code into the `button1` handler:  
+2. Type the following code into the `button1` handler:  
   
-     [!code-csharp[DLinqWalk4CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#2)]  
+    [!code-csharp[DLinqWalk4CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#2)]  
   
-3.  Now double-click **button2** on **Form1** to open the `button2` handler  
+3. Now double-click **button2** on **Form1** to open the `button2` handler  
   
-4.  Type the following code into the `button2` handler:  
+4. Type the following code into the `button2` handler:  
   
-     [!code-csharp[DLinqWalk4CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#3)]  
+    [!code-csharp[DLinqWalk4CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#3)]  
   
 ## Testing the Application  
  Now it is time to test your application. Note that your contact with the datastore is limited to whatever actions the two stored procedures can take. Those actions are to return the products included for any orderID you enter, or to return a history of products ordered for any CustomerID you enter.  

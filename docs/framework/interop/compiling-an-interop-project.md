@@ -24,9 +24,9 @@ COM interop projects that reference one or more assemblies containing imported C
   
  There are two ways to reference interop assemblies:  
   
--   Embedded interop types: Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] and [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)], you can instruct the compiler to embed type information from an interop assembly into your executable. This is the recommended technique.  
+- Embedded interop types: Beginning with the [!INCLUDE [net_v40_long](../../../includes/net-v40-long-md.md)] and [!INCLUDE [vs_dev10_long](../../../includes/vs-dev10-long-md.md)], you can instruct the compiler to embed type information from an interop assembly into your executable. This is the recommended technique.  
   
--   Deploying interop assemblies: You can create a standard reference to an interop assembly. In this case, the interop assembly must be deployed with your application.  
+- Deploying interop assemblies: You can create a standard reference to an interop assembly. In this case, the interop assembly must be deployed with your application.  
   
  The differences between these two techniques are discussed in greater detail in [Using COM Types in Managed Code](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100)).  
   

@@ -24,53 +24,53 @@ This sample demonstrates the usefulness of <xref:System.ServiceModel.Channels.Re
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing:  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory:  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory:  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\ReceiveContextProductGenerator`  
   
 #### To use this sample  
   
-1.  Ensure that Microsoft Message Queuing (MSMQ) is installed.  
+1. Ensure that Microsoft Message Queuing (MSMQ) is installed.  
   
-    1.  To install MSMQ on [!INCLUDE[lserver](../../../../includes/lserver-md.md)]:  
+   1. To install MSMQ on [!INCLUDE [lserver](../../../../includes/lserver-md.md)]:  
   
-        1.  In **Server Manager**, click **Features**.  
+      1.  In **Server Manager**, click **Features**.  
   
-        2.  In the right pane under **Features Summary**, click **Add Features**.  
+      2.  In the right pane under **Features Summary**, click **Add Features**.  
   
-        3.  In the resulting window, expand **Message Queuing**.  
+      3.  In the resulting window, expand **Message Queuing**.  
   
-        4.  Expand **Message Queuing Services**.  
+      4.  Expand **Message Queuing Services**.  
   
-        5.  Click **Directory Services Integration** (for computers joined to a domain), and then click **HTTP Support**.  
+      5.  Click **Directory Services Integration** (for computers joined to a domain), and then click **HTTP Support**.  
   
-        6.  Click **Next**, and then click **Install**.  
+      6.  Click **Next**, and then click **Install**.  
   
-    2.  To install MSMQ on [!INCLUDE[wv](../../../../includes/wv-md.md)]:  
+   2. To install MSMQ on [!INCLUDE [wv](../../../../includes/wv-md.md)]:  
   
-        1.  Open **Control Panel**.  
+      1.  Open **Control Panel**.  
   
-        2.  Click **Programs** and then, under **Programs and Features**, click **Turn Windows Features on and off**.  
+      2.  Click **Programs** and then, under **Programs and Features**, click **Turn Windows Features on and off**.  
   
-        3.  Expand **Microsoft Message Queue (MSMQ) Server**, expand **Microsoft Message Queue (MSMQ) Server Core**, and then select the check boxes for the following Message Queuing features to install:  
+      3.  Expand **Microsoft Message Queue (MSMQ) Server**, expand **Microsoft Message Queue (MSMQ) Server Core**, and then select the check boxes for the following Message Queuing features to install:  
   
-            -   Message Queuing Server  
+          -   Message Queuing Server  
   
-            -   MSMQ Active Directory Domain Services Integration (for computers joined to a domain)  
+          -   MSMQ Active Directory Domain Services Integration (for computers joined to a domain)  
   
-            -   MSMQ HTTP Support  
+          -   MSMQ HTTP Support  
   
-        4.  Click **OK**.  
+      4.  Click **OK**.  
   
-        5.  If you are prompted to restart the computer, click **OK** to complete the installation.  
+      5.  If you are prompted to restart the computer, click **OK** to complete the installation.  
   
-2.  Ensure that [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] is installed on the computer.  
+2. Ensure that [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] is installed on the computer.  
   
-3.  Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the ReceiveContextProductGenerator.sln solution file.  
+3. Using [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)], open the ReceiveContextProductGenerator.sln solution file.  
   
-4.  To build the solution, press CTRL+SHIFT+B.  
+4. To build the solution, press CTRL+SHIFT+B.  
   
-5.  To run the solution, press CTRL+F5.
+5. To run the solution, press CTRL+F5.

@@ -21,7 +21,7 @@ ms.workload:
 There are several times during a transformation when you may need to resolve external resources.  
   
 > [!NOTE]
->  The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.  
+>  The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE [dnprdnext](../../../../includes/dnprdnext-md.md)]. You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.  
   
  There are several times during a transformation when you may need to resolve external resources:  
   

@@ -20,12 +20,12 @@ ms.workload:
   - "dotnet"
 ---
 # Load Balancing
-One way to increase the capacity of [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] applications is to scale them out by deploying them into a load-balanced server farm. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications can be load balanced using standard load balancing techniques, including software load balancers such as Windows Network Load Balancing as well as hardware-based load balancing appliances.  
+One way to increase the capacity of [!INCLUDE [indigo1](../../../includes/indigo1-md.md)] applications is to scale them out by deploying them into a load-balanced server farm. [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] applications can be load balanced using standard load balancing techniques, including software load balancers such as Windows Network Load Balancing as well as hardware-based load balancing appliances.  
   
- The following sections discuss considerations for load balancing [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications built using various system-provided bindings.  
+ The following sections discuss considerations for load balancing [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] applications built using various system-provided bindings.  
   
 ## Load Balancing with the Basic HTTP Binding  
- From the perspective of load balancing, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications that communicate using the <xref:System.ServiceModel.BasicHttpBinding> are no different than other common types of HTTP network traffic (static HTML content, ASP.NET pages, or ASMX Web Services). [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] channels that use this binding are inherently stateless, and terminate their connections when the channel closes. As such, the <xref:System.ServiceModel.BasicHttpBinding> works well with existing HTTP load balancing techniques.  
+ From the perspective of load balancing, [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] applications that communicate using the <xref:System.ServiceModel.BasicHttpBinding> are no different than other common types of HTTP network traffic (static HTML content, ASP.NET pages, or ASMX Web Services). [!INCLUDE [indigo2](../../../includes/indigo2-md.md)] channels that use this binding are inherently stateless, and terminate their connections when the channel closes. As such, the <xref:System.ServiceModel.BasicHttpBinding> works well with existing HTTP load balancing techniques.  
   
  By default, the <xref:System.ServiceModel.BasicHttpBinding> sends a connection HTTP header in messages with a `Keep-Alive` value, which enables clients to establish persistent connections to the services that support them. This configuration offers enhanced throughput because previously established connections can be reused to send subsequent messages to the same server. However, connection reuse may cause clients to become strongly associated to a specific server within the load-balanced farm, which reduces the effectiveness of round-robin load balancing. If this behavior is undesirable, HTTP `Keep-Alive` can be disabled on the server using the <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> property with a <xref:System.ServiceModel.Channels.CustomBinding> or user-defined <xref:System.ServiceModel.Channels.Binding>. The following example shows how to do this using configuration.  
   
@@ -64,7 +64,7 @@ One way to increase the capacity of [!INCLUDE[indigo1](../../../includes/indigo1
 </configuration>  
 ```  
   
- Using the simplified configuration introduced in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], the same behavior can be accomplished using the following simplified configuration.  
+ Using the simplified configuration introduced in [!INCLUDE [netfx40_short](../../../includes/netfx40-short-md.md)], the same behavior can be accomplished using the following simplified configuration.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -85,7 +85,7 @@ One way to increase the capacity of [!INCLUDE[indigo1](../../../includes/indigo1
 </configuration>  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ [!INCLUDE [crabout](../../../includes/crabout-md.md)] default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## Load Balancing with the WSHttp Binding and the WSDualHttp Binding  
  Both the <xref:System.ServiceModel.WSHttpBinding> and the <xref:System.ServiceModel.WSDualHttpBinding> can be load balanced using HTTP load balancing techniques provided several modifications are made to the default binding configuration.  

@@ -27,44 +27,44 @@ The `My.Application.Log` object can write information to several log listeners. 
   
 ### To determine the listeners for My.Application.Log  
   
-1.  Locate the assembly's configuration file. If you are developing the assembly, you can access the app.config in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] from the **Solution Explorer**. Otherwise, the configuration file name is the assembly's name appended with ".config", and it is located in the same directory as the assembly.  
+1. Locate the assembly's configuration file. If you are developing the assembly, you can access the app.config in [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)] from the **Solution Explorer**. Otherwise, the configuration file name is the assembly's name appended with ".config", and it is located in the same directory as the assembly.  
   
-    > [!NOTE]
-    >  Not every assembly has a configuration file.  
+   > [!NOTE]
+   >  Not every assembly has a configuration file.  
   
-     The configuration file is an XML file.  
+    The configuration file is an XML file.  
   
-2.  Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", located in the `<sources>` section. The `<sources>` section is located in the `<system.diagnostics>` section, in the top-level `<configuration>` section.  
+2. Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", located in the `<sources>` section. The `<sources>` section is located in the `<system.diagnostics>` section, in the top-level `<configuration>` section.  
   
-     If these sections do not exist, then the computer's configuration file may configure the `My.Application.Log` log listeners. The following steps describe how to determine what the computer configuration file defines:  
+    If these sections do not exist, then the computer's configuration file may configure the `My.Application.Log` log listeners. The following steps describe how to determine what the computer configuration file defines:  
   
-    1.  Locate the computer's machine.config file. Typically, it is located in the *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* directory, where `SystemRoot` is the operating system directory, and `frameworkVersion` is the version of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+   1. Locate the computer's machine.config file. Typically, it is located in the *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* directory, where `SystemRoot` is the operating system directory, and `frameworkVersion` is the version of the [!INCLUDE [dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
-         The settings in machine.config can be overridden by an application's configuration file.  
+       The settings in machine.config can be overridden by an application's configuration file.  
   
-         If the optional elements listed below do not exist, you can create them.  
+       If the optional elements listed below do not exist, you can create them.  
   
-    2.  Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", in the `<sources>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.  
+   2. Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", in the `<sources>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.  
   
-         If these sections do not exist, then the `My.Application.Log` has only the default log listeners.  
+       If these sections do not exist, then the `My.Application.Log` has only the default log listeners.  
   
-3.  Locate the <`add>` elements in the <`listeners>` section.  
+3. Locate the <`add>` elements in the <`listeners>` section.  
   
-     These elements add the named log listeners to `My.Application.Log` source.  
+    These elements add the named log listeners to `My.Application.Log` source.  
   
-4.  Locate the `<add>` elements with the names of the log listeners in the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.  
+4. Locate the `<add>` elements with the names of the log listeners in the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.  
   
-5.  For many types of shared listeners, the listener's initialization data includes a description of where the listener directs the data:  
+5. For many types of shared listeners, the listener's initialization data includes a description of where the listener directs the data:  
   
-    -   A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> listener writes to a file log, as described in the introduction.  
+   -   A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> listener writes to a file log, as described in the introduction.  
   
-    -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> listener writes information to the computer event log specified by the `initializeData` parameter. To view an event log, you can use **Server Explorer** or **Windows Event Viewer**. For more information, see [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).  
+   -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> listener writes information to the computer event log specified by the `initializeData` parameter. To view an event log, you can use **Server Explorer** or **Windows Event Viewer**. For more information, see [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).  
   
-    -   The <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> and <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> listeners write to the file specified in the `initializeData` parameter.  
+   -   The <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> and <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> listeners write to the file specified in the `initializeData` parameter.  
   
-    -   A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> listener writes to the command-line console.  
+   -   A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> listener writes to the command-line console.  
   
-    -   For information about where other types of log listeners write information, consult that type's documentation.  
+   -   For information about where other types of log listeners write information, consult that type's documentation.  
   
 ## See Also  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  

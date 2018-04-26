@@ -27,22 +27,22 @@ This topic shows how to add a startup window, or *splash screen*, to a Windows P
   
 ### To add an existing image as a splash screen  
   
-1.  Create or find an image that you want to use for the splash screen. You can use any image format that is supported by the Windows Imaging Component (WIC). For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.  
+1. Create or find an image that you want to use for the splash screen. You can use any image format that is supported by the Windows Imaging Component (WIC). For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.  
   
-2.  Add the image file to the WPF Application project. For more information, see [NIB:How to: Add Existing Items to a Project](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+2. Add the image file to the WPF Application project. For more information, see [NIB:How to: Add Existing Items to a Project](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
-3.  In Solution Explorer, select the image.  
+3. In Solution Explorer, select the image.  
   
-4.  In the Properties window, click the drop-down arrow for the **Build Action** property.  
+4. In the Properties window, click the drop-down arrow for the **Build Action** property.  
   
-5.  Select **SplashScreen** from the drop-down list.  
+5. Select **SplashScreen** from the drop-down list.  
   
-    > [!NOTE]
-    >  If you do not see the **SplashScreen** option, be sure to check that you are using [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] SP1 or later.  
+   > [!NOTE]
+   >  If you do not see the **SplashScreen** option, be sure to check that you are using [!INCLUDE [vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] SP1 or later.  
   
-6.  Press F5 to build and run the application.  
+6. Press F5 to build and run the application.  
   
-     The splash screen image appears in the center of the screen, and then fades when the main application window appears.  
+    The splash screen image appears in the center of the screen, and then fades when the main application window appears.  
   
 ### To remove the splash screen from an application  
   

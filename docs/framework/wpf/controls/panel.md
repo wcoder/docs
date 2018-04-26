@@ -24,7 +24,7 @@ ms.workload:
   - dotnet
 ---
 # Panel
-<xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+<xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## In This Section  
  [Panels Overview](../../../../docs/framework/wpf/controls/panels-overview.md)  

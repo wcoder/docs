@@ -31,62 +31,62 @@ Frequently, word processors and other applications that involve printing will pr
   
 ### To complete a print job  
   
-1.  Set the <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> property of the <xref:System.Drawing.Printing.PrintDocument> component.  
+1. Set the <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> property of the <xref:System.Drawing.Printing.PrintDocument> component.  
   
-    ```vb  
-    PrintDocument1.DocumentName = "MyTextFile"  
-    ```  
+   ```vb  
+   PrintDocument1.DocumentName = "MyTextFile"  
+   ```  
   
-    ```csharp  
-    printDocument1.DocumentName = "MyTextFile";  
-    ```  
+   ```csharp  
+   printDocument1.DocumentName = "MyTextFile";  
+   ```  
   
-    ```cpp  
-    printDocument1->DocumentName = "MyTextFile";  
-    ```  
+   ```cpp  
+   printDocument1->DocumentName = "MyTextFile";  
+   ```  
   
-2.  Write code to handle the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event.  
+2. Write code to handle the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event.  
   
-     In the following code example, a message box is displayed, indicating that the document has finished printing.  
+    In the following code example, a message box is displayed, indicating that the document has finished printing.  
   
-    ```vb  
-    Private Sub PrintDocument1_EndPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint  
-       MessageBox.Show(PrintDocument1.DocumentName + " has finished printing.")  
-    End Sub  
-    ```  
+   ```vb  
+   Private Sub PrintDocument1_EndPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint  
+      MessageBox.Show(PrintDocument1.DocumentName + " has finished printing.")  
+   End Sub  
+   ```  
   
-    ```csharp  
-    private void printDocument1_EndPrint(object sender,   
-    System.Drawing.Printing.PrintEventArgs e)  
-    {  
-       MessageBox.Show(printDocument1.DocumentName +   
-          " has finished printing.");  
-    }  
-    ```  
+   ```csharp  
+   private void printDocument1_EndPrint(object sender,   
+   System.Drawing.Printing.PrintEventArgs e)  
+   {  
+      MessageBox.Show(printDocument1.DocumentName +   
+         " has finished printing.");  
+   }  
+   ```  
   
-    ```cpp  
-    private:  
-       void printDocument1_EndPrint(System::Object ^ sender,  
-          System::Drawing::Printing::PrintEventArgs ^ e)  
-       {  
-          MessageBox::Show(String::Concat(printDocument1->DocumentName,  
-             " has finished printing."));  
-       }  
-    ```  
+   ```cpp  
+   private:  
+      void printDocument1_EndPrint(System::Object ^ sender,  
+         System::Drawing::Printing::PrintEventArgs ^ e)  
+      {  
+         MessageBox::Show(String::Concat(printDocument1->DocumentName,  
+            " has finished printing."));  
+      }  
+   ```  
   
-     (Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
+    (Visual C# and [!INCLUDE [vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.  
   
-    ```csharp  
-    this.printDocument1.EndPrint += new  
-       System.Drawing.Printing.PrintEventHandler  
-       (this.printDocument1_EndPrint);  
-    ```  
+   ```csharp  
+   this.printDocument1.EndPrint += new  
+      System.Drawing.Printing.PrintEventHandler  
+      (this.printDocument1_EndPrint);  
+   ```  
   
-    ```cpp  
-    this->printDocument1->EndPrint += gcnew  
-       System::Drawing::Printing::PrintEventHandler  
-       (this, &Form1::printDocument1_EndPrint);  
-    ```  
+   ```cpp  
+   this->printDocument1->EndPrint += gcnew  
+      System::Drawing::Printing::PrintEventHandler  
+      (this, &Form1::printDocument1_EndPrint);  
+   ```  
   
 ## See Also  
  <xref:System.Drawing.Printing.PrintDocument>  

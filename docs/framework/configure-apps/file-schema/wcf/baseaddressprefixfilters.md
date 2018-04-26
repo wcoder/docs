@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # &lt;baseAddressPrefixFilters&gt;
-Represents a collection of configuration elements that specify pass through filters, which provide a mechanism to pick the appropriate Internet Information Services (IIS) bindings when hosting the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] application in IIS.  
+Represents a collection of configuration elements that specify pass through filters, which provide a mechanism to pick the appropriate Internet Information Services (IIS) bindings when hosting the [!INCLUDE [indigo1](../../../../../includes/indigo1-md.md)] application in IIS.  
   
 > [!WARNING]
 >  \<baseAddressPrefixFilters> does not recognize "localhost", use the fully qualified machine name instead.  
@@ -59,7 +59,7 @@ Represents a collection of configuration elements that specify pass through filt
   
  IIS Web sites are containers for virtual applications which contain virtual directories. The application in a site can be accessed through one or more IIS bindings. IIS bindings provide two pieces of information: binding protocol and binding information. Binding protocol (for example, HTTP) defines the scheme over which communication occurs, and binding information (for example, IP Address, Port, Hostheader) contains data used to access the site.  
   
- IIS supports specifying multiple IIS bindings for each site, which results in multiple base addresses for each scheme. Because a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service hosted under a site allows binding to only one base address for each scheme, you can use the prefix filter feature to pick the required base address of the hosted service. The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list filter.  
+ IIS supports specifying multiple IIS bindings for each site, which results in multiple base addresses for each scheme. Because a [!INCLUDE [indigo2](../../../../../includes/indigo2-md.md)] service hosted under a site allows binding to only one base address for each scheme, you can use the prefix filter feature to pick the required base address of the hosted service. The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list filter.  
   
  For example, your site can contain the following base addresses.  
   

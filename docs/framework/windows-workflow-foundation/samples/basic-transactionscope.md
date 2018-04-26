@@ -31,17 +31,17 @@ This sample consists of four scenarios that run showing how to nest <xref:System
   
 #### To run the sample  
   
-1.  Open the BasicTransactionScopeSample.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1. Open the BasicTransactionScopeSample.sln solution in [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.  
+2. To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.  
   
-3.  Once the build has succeeded, press F5 or select **Start Debugging** from the **Debug** menu. Alternatively you can press CTRL+F5 or select **Start Without Debugging** from the **Debug** menu to run without debugging.  
+3. Once the build has succeeded, press F5 or select **Start Debugging** from the **Debug** menu. Alternatively you can press CTRL+F5 or select **Start Without Debugging** from the **Debug** menu to run without debugging.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`

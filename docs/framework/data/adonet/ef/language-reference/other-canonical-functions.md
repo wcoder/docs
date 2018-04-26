@@ -18,9 +18,9 @@ ms.workload:
   - "dotnet"
 ---
 # Other Canonical Functions
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] includes canonical functions not classified as bitwise, aggregate, math, date/time, or string.  
+[!INCLUDE [esql](../../../../../../includes/esql-md.md)] includes canonical functions not classified as bitwise, aggregate, math, date/time, or string.  
   
- The following table shows the other [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.  
+ The following table shows the other [!INCLUDE [esql](../../../../../../includes/esql-md.md)] canonical functions.  
   
 |Function|Description|  
 |--------------|-----------------|  

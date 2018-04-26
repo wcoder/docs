@@ -18,8 +18,8 @@ ms.workload:
   - "dotnet"
 ---
 # Security in WCF
-This section contains samples relating to [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] security.  
+This section contains samples relating to [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] security.  
   
 ## In This Section  
  [Cryptographic Agility in WCF Security](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)  
- Demonstrates how to specify in a standard or custom algorithm to provide a cryptographic, agile implementation in a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client and service.
+ Demonstrates how to specify in a standard or custom algorithm to provide a cryptographic, agile implementation in a [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] client and service.

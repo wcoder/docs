@@ -23,7 +23,7 @@ ms.workload:
   - "dotnet"
 ---
 # Mapping Algorithm Names to Cryptography Classes
-There are four ways a developer can create a cryptography object using the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
+There are four ways a developer can create a cryptography object using the [!INCLUDE [winsdklong](../../../includes/winsdklong-md.md)]:  
   
 -   Create an object by using the **new** operator.  
   

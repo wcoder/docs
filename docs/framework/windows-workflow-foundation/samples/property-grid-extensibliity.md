@@ -23,11 +23,11 @@ A developer can customize the property grid that is displayed when a given activ
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`  
   
 ## Discussion  
@@ -68,57 +68,57 @@ A developer can customize the property grid that is displayed when a given activ
 ## Dialog Editor  
  The dialog editor sample demonstrates the following:  
   
-1.  Creates a type that derives from <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.  
+1. Creates a type that derives from <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.  
   
-2.  Sets the <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> value in the constructor with a [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] data template. This can be created in XAML, but in this sample, this is created in code.  
+2. Sets the <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> value in the constructor with a [!INCLUDE [avalon2](../../../../includes/avalon2-md.md)] data template. This can be created in XAML, but in this sample, this is created in code.  
   
-3.  The data template has a data context of the <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> of the item rendered in the property grid. In the following code, this then binds to the `Value` property. It is critical to also include an <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> to provide the button that raises the dialog in FilePickerEditor.cs.  
+3. The data template has a data context of the <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> of the item rendered in the property grid. In the following code, this then binds to the `Value` property. It is critical to also include an <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> to provide the button that raises the dialog in FilePickerEditor.cs.  
   
-    ```  
-    this.InlineEditorTemplate = new DataTemplate();  
+   ```  
+   this.InlineEditorTemplate = new DataTemplate();  
   
-    FrameworkElementFactory stack = new FrameworkElementFactory(typeof(StackPanel));  
-    stack.SetValue(StackPanel.OrientationProperty, Orientation.Horizontal);  
-    FrameworkElementFactory label = new FrameworkElementFactory(typeof(Label));  
-    Binding labelBinding = new Binding("Value");  
-    label.SetValue(Label.ContentProperty, labelBinding);  
-    label.SetValue(Label.MaxWidthProperty, 90.0);  
+   FrameworkElementFactory stack = new FrameworkElementFactory(typeof(StackPanel));  
+   stack.SetValue(StackPanel.OrientationProperty, Orientation.Horizontal);  
+   FrameworkElementFactory label = new FrameworkElementFactory(typeof(Label));  
+   Binding labelBinding = new Binding("Value");  
+   label.SetValue(Label.ContentProperty, labelBinding);  
+   label.SetValue(Label.MaxWidthProperty, 90.0);  
   
-    stack.AppendChild(label);  
+   stack.AppendChild(label);  
   
-    FrameworkElementFactory editModeSwitch = new FrameworkElementFactory(typeof(EditModeSwitchButton));  
+   FrameworkElementFactory editModeSwitch = new FrameworkElementFactory(typeof(EditModeSwitchButton));  
   
-    editModeSwitch.SetValue(EditModeSwitchButton.TargetEditModeProperty, PropertyContainerEditMode.Dialog);  
+   editModeSwitch.SetValue(EditModeSwitchButton.TargetEditModeProperty, PropertyContainerEditMode.Dialog);  
   
-    stack.AppendChild(editModeSwitch);  
+   stack.AppendChild(editModeSwitch);  
   
-    this.InlineEditorTemplate.VisualTree = stack;  
-    ```  
+   this.InlineEditorTemplate.VisualTree = stack;  
+   ```  
   
-4.  Overrides the <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` method in the designer type to handle the display of the dialog. In this sample, a basic <xref:System.Windows.Forms.FileDialog> is shown.  
+4. Overrides the <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` method in the designer type to handle the display of the dialog. In this sample, a basic <xref:System.Windows.Forms.FileDialog> is shown.  
   
-    ```  
-    public override void ShowDialog(PropertyValue propertyValue, IInputElement commandSource)  
-    {  
-        Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();  
-        if (ofd.ShowDialog() == true)  
-        {  
-            propertyValue.Value = ofd.FileName;  
-        }  
-    }  
-    ```  
+   ```  
+   public override void ShowDialog(PropertyValue propertyValue, IInputElement commandSource)  
+   {  
+       Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();  
+       if (ofd.ShowDialog() == true)  
+       {  
+           propertyValue.Value = ofd.FileName;  
+       }  
+   }  
+   ```  
   
-5.  Because the activity and the designer are in the same assembly, registration of the activity designer attributes are accomplished in the static constructor of the activity itself, as shown in the following example from SimpleCodeActivity.cs.  
+5. Because the activity and the designer are in the same assembly, registration of the activity designer attributes are accomplished in the static constructor of the activity itself, as shown in the following example from SimpleCodeActivity.cs.  
   
-    ```  
-    static SimpleCodeActivity()  
-    {  
-        AttributeTableBuilder builder = new AttributeTableBuilder();  
-        builder.AddCustomAttributes(typeof(SimpleCodeActivity), "RepeatCount", new EditorAttribute(typeof(CustomInlineEditor), typeof(PropertyValueEditor)));  
-        builder.AddCustomAttributes(typeof(SimpleCodeActivity), "FileName", new EditorAttribute(typeof(FilePickerEditor), typeof(DialogPropertyValueEditor)));  
-        MetadataStore.AddAttributeTable(builder.CreateTable());  
-    }  
-    ```  
+   ```  
+   static SimpleCodeActivity()  
+   {  
+       AttributeTableBuilder builder = new AttributeTableBuilder();  
+       builder.AddCustomAttributes(typeof(SimpleCodeActivity), "RepeatCount", new EditorAttribute(typeof(CustomInlineEditor), typeof(PropertyValueEditor)));  
+       builder.AddCustomAttributes(typeof(SimpleCodeActivity), "FileName", new EditorAttribute(typeof(FilePickerEditor), typeof(DialogPropertyValueEditor)));  
+       MetadataStore.AddAttributeTable(builder.CreateTable());  
+   }  
+   ```  
   
 ## To set up, build, and run the sample  
   
@@ -130,9 +130,9 @@ A developer can customize the property grid that is displayed when a given activ
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`

@@ -25,11 +25,11 @@ This sample demonstrates hosting a service that uses Windows Process Activation 
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
   
  The sample consists of a client console program (.exe) and a service library (.dll) hosted in a worker process activated by WAS. Client activity is visible in the console window.  
@@ -148,70 +148,70 @@ Press <ENTER> to terminate client.
   
 ### To set up, build, and run the sample  
   
-1.  Ensure that [!INCLUDE[iisver](../../../../includes/iisver-md.md)] is installed. [!INCLUDE[iisver](../../../../includes/iisver-md.md)] is required for WAS activation.  
+1. Ensure that [!INCLUDE [iisver](../../../../includes/iisver-md.md)] is installed. [!INCLUDE [iisver](../../../../includes/iisver-md.md)] is required for WAS activation.  
   
-2.  Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-     In addition, you must install the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non-HTTP activation components:  
+    In addition, you must install the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] non-HTTP activation components:  
   
-    1.  From the **Start** menu, choose **Control Panel**.  
+   1.  From the **Start** menu, choose **Control Panel**.  
   
-    2.  Select **Programs and Features**.  
+   2.  Select **Programs and Features**.  
   
-    3.  Click **Turn Windows Components on or Off**.  
+   3.  Click **Turn Windows Components on or Off**.  
   
-    4.  Expand the **Microsoft .NET Framework 3.0** node and check the **Windows Communication Foundation Non-HTTP Activation** feature.  
+   4.  Expand the **Microsoft .NET Framework 3.0** node and check the **Windows Communication Foundation Non-HTTP Activation** feature.  
   
-3.  Configure WAS to support TCP activation.  
+3. Configure WAS to support TCP activation.  
   
-     As a convenience, the following two steps are implemented in a batch file called AddNetTcpSiteBinding.cmd located in the sample directory.  
+    As a convenience, the following two steps are implemented in a batch file called AddNetTcpSiteBinding.cmd located in the sample directory.  
   
-    1.  To support net.tcp activation, the default Web site must first be bound to a net.tcp port. This can be done using Appcmd.exe, which is installed with the Internet Information Services 7.0 (IIS) management toolset. From an administrator-level command prompt, run the following command:  
+   1.  To support net.tcp activation, the default Web site must first be bound to a net.tcp port. This can be done using Appcmd.exe, which is installed with the Internet Information Services 7.0 (IIS) management toolset. From an administrator-level command prompt, run the following command:  
   
-        ```  
-        %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
-        ```  
+       ```  
+       %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
+       ```  
   
-        > [!TIP]
-        >  This command is a single line of text. This command adds a net.tcp site binding to the default Web site listening on TCP port 808 with any hostname.  
+       > [!TIP]
+       >  This command is a single line of text. This command adds a net.tcp site binding to the default Web site listening on TCP port 808 with any hostname.  
   
-    2.  Although all applications within a site share a common net.tcp binding, each application can enable net.tcp support individually. To enable net.tcp for the /servicemodelsamples application, run the following command from an administrator-level command prompt:  
+   2.  Although all applications within a site share a common net.tcp binding, each application can enable net.tcp support individually. To enable net.tcp for the /servicemodelsamples application, run the following command from an administrator-level command prompt:  
   
-        ```  
-        %windir%\system32\inetsrv\appcmd.exe set app   
-        "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.tcp  
-        ```  
+       ```  
+       %windir%\system32\inetsrv\appcmd.exe set app   
+       "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.tcp  
+       ```  
   
-        > [!NOTE]
-        >  This command is a single line of text. This command enables the /servicemodelsamples application to be accessed using both http://localhost/servicemodelsamples and net.tcp://localhost/servicemodelsamples.  
+       > [!NOTE]
+       >  This command is a single line of text. This command enables the /servicemodelsamples application to be accessed using both http://localhost/servicemodelsamples and net.tcp://localhost/servicemodelsamples.  
   
-4.  To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5. To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-     Remove the net.tcp site binding you added for this sample.  
+    Remove the net.tcp site binding you added for this sample.  
   
-     As a convenience, the following two steps are implemented in a batch file called RemoveNetTcpSiteBinding.cmd located in the sample directory.  
+    As a convenience, the following two steps are implemented in a batch file called RemoveNetTcpSiteBinding.cmd located in the sample directory.  
   
-    1.  Remove net.tcp from the list of enabled protocols by running the following command from an administrator-level command prompt:  
+   1.  Remove net.tcp from the list of enabled protocols by running the following command from an administrator-level command prompt:  
   
-        ```  
-        %windir%\system32\inetsrv\appcmd.exe set app   
-        "Default Web Site/servicemodelsamples" /enabledProtocols:http  
-        ```  
+       ```  
+       %windir%\system32\inetsrv\appcmd.exe set app   
+       "Default Web Site/servicemodelsamples" /enabledProtocols:http  
+       ```  
   
-        > [!NOTE]
-        >  This command must be entered as a single line of text.  
+       > [!NOTE]
+       >  This command must be entered as a single line of text.  
   
-    2.  Remove the net.tcp site binding by running the following command from an administrator-level command prompt:  
+   2.  Remove the net.tcp site binding by running the following command from an administrator-level command prompt:  
   
-        ```  
-        %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
-        --bindings.[protocol='net.tcp',bindingInformation='808:*']  
-        ```  
+       ```  
+       %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
+       --bindings.[protocol='net.tcp',bindingInformation='808:*']  
+       ```  
   
-        > [!NOTE]
-        >  This command must be typed in as a single line of text.  
+       > [!NOTE]
+       >  This command must be typed in as a single line of text.  
   
 ## See Also  
  [AppFabric Hosting and Persistence Samples](http://go.microsoft.com/fwlink/?LinkId=193961)

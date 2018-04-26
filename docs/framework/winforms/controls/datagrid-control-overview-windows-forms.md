@@ -50,7 +50,7 @@ A DataGrid bound to data with multiple tables
   
  The <xref:System.Windows.Forms.DataGrid> can provide a user interface for a dataset, navigation between related tables, and rich formatting and editing capabilities.  
   
- The display and manipulation of data are separate functions: The control handles the user interface, whereas data updates are handled by the Windows Forms data-binding architecture and by [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] data providers. Therefore, multiple controls bound to the same data source will stay in sync.  
+ The display and manipulation of data are separate functions: The control handles the user interface, whereas data updates are handled by the Windows Forms data-binding architecture and by [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)] data providers. Therefore, multiple controls bound to the same data source will stay in sync.  
   
 > [!NOTE]
 >  If you are familiar with the DataGrid control in Visual Basic 6.0, you will find some significant differences in the Windows Forms <xref:System.Windows.Forms.DataGrid> control.  
@@ -62,7 +62,7 @@ A DataGrid bound to data with multiple tables
   
  If the data in the bound dataset is updated through any mechanism, the <xref:System.Windows.Forms.DataGrid> control reflects the changes. If the data grid and its table styles and column styles have the `ReadOnly` property set to `false`, the data in the dataset can be updated through the <xref:System.Windows.Forms.DataGrid> control.  
   
- Only one table can be shown in the <xref:System.Windows.Forms.DataGrid> at a time. If a parent-child relationship is defined between tables, the user can move between the related tables to select the table to be displayed in the <xref:System.Windows.Forms.DataGrid> control. For information about binding a <xref:System.Windows.Forms.DataGrid> control to an [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] data source at either design time or run time, see [How to: Bind the Windows Forms DataGrid Control to a Data Source](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+ Only one table can be shown in the <xref:System.Windows.Forms.DataGrid> at a time. If a parent-child relationship is defined between tables, the user can move between the related tables to select the table to be displayed in the <xref:System.Windows.Forms.DataGrid> control. For information about binding a <xref:System.Windows.Forms.DataGrid> control to an [!INCLUDE [vstecado](../../../../includes/vstecado-md.md)] data source at either design time or run time, see [How to: Bind the Windows Forms DataGrid Control to a Data Source](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
  Valid data sources for the <xref:System.Windows.Forms.DataGrid> include:  
   
@@ -132,7 +132,7 @@ The following illustration shows the objects included in the DataGrid control.
   
  Column styles are related to columns in a dataset just like table styles are related to data tables. Just as each table may only have one table style defined for it at a time, so too can each column only have one column style defined for it, in a particular table style. This relationship is defined in the column's <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> property.  
   
- If you have created a table style without column styles added to it, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] will add default column styles when the form and grid are created at run time. However, if you have created a table style and added any column styles to it, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] will not create any column styles. Also, you will need to define column styles and assign them with the mapping name to have the columns that you want appear in the grid.  
+ If you have created a table style without column styles added to it, [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)] will add default column styles when the form and grid are created at run time. However, if you have created a table style and added any column styles to it, [!INCLUDE [vsprvs](../../../../includes/vsprvs-md.md)] will not create any column styles. Also, you will need to define column styles and assign them with the mapping name to have the columns that you want appear in the grid.  
   
  Because you specify which columns are included in the data grid by assigning them a column style and no column style has been assigned to the columns, you can include columns of data in the dataset that are not displayed in the grid. However, because the data column is included in the dataset, you can programmatically edit the data that is not displayed.  
   

@@ -32,33 +32,34 @@ ms.workload:
   - "dotnet"
 ---
 # CorDebugGuidToTypeMapping Structure
-Maps a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID to its corresponding ICorDebugType object.  
-  
+Maps a [!INCLUDE [wrt](../../../../includes/wrt-md.md)] GUID to its corresponding ICorDebugType object.  
+
 ## Syntax  
-  
+
 ```cpp
 typedef struct CorDebugGuidToTypeMapping {  
     GUID iid;  
     ICorDebugType *pType;  
 } CorDebugGuidToTypeMapping;  
 ```  
-  
+
 ## Members  
-  
-|Member|Description|  
-|------------|-----------------|  
-|`iid`|The GUID of the cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type.|  
-|`pType`|A pointer to an ICorDebugType object that provides information about the cached type.|  
-  
+
+
+| Member  |                                      Description                                      |
+|---------|---------------------------------------------------------------------------------------|
+|  `iid`  |     The GUID of the cached [!INCLUDE [wrt](../../../../includes/wrt-md.md)] type.     |
+| `pType` | A pointer to an ICorDebugType object that provides information about the cached type. |
+
 ## Requirements  
- **Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].  
-  
+ **Platforms:** [!INCLUDE [wrt](../../../../includes/wrt-md.md)].  
+
  **Header:** CorDebug.idl, CorDebug.h  
-  
+
  **Library:** CorGuids.lib  
-  
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
-  
+
+ **.NET Framework Versions:** [!INCLUDE [net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+
 ## See Also  
  [Debugging Structures](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [Debugging](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -19,46 +19,46 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Create an Activity
-Activities are the core unit of behavior in [!INCLUDE[wf1](../../../includes/wf1-md.md)]. The execution logic of an activity can be implemented in managed code or it can be implemented by using other activities. This topic demonstrates how to create two activities. The first activity is a simple activity that uses code to implement its execution logic. The implementation of the second activity is defined by using other activities. These activities are used in following steps in the tutorial.  
+Activities are the core unit of behavior in [!INCLUDE [wf1](../../../includes/wf1-md.md)]. The execution logic of an activity can be implemented in managed code or it can be implemented by using other activities. This topic demonstrates how to create two activities. The first activity is a simple activity that uses code to implement its execution logic. The implementation of the second activity is defined by using other activities. These activities are used in following steps in the tutorial.  
   
 > [!NOTE]
 >  To download a completed version of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### To create the activity library project  
   
-1.  Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] and choose **New**,  **Project** from the **File** menu.  
+1. Open [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)] and choose **New**,  **Project** from the **File** menu.  
   
-2.  Expand the **Other Project Types** node in the **Installed**, **Templates** list and select **Visual Studio Solutions**.  
+2. Expand the **Other Project Types** node in the **Installed**, **Templates** list and select **Visual Studio Solutions**.  
   
-3.  Select **Blank Solution** from the **Visual Studio Solutions** list. Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list. Type `WF45GettingStartedTutorial` in the **Name** box and then click **OK**.  
+3. Select **Blank Solution** from the **Visual Studio Solutions** list. Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list. Type `WF45GettingStartedTutorial` in the **Name** box and then click **OK**.  
   
-4.  Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.  
+4. Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.  
   
-    > [!TIP]
-    >  If the **Solution Explorer** window is not displayed, select **Solution Explorer** from the **View** menu.  
+   > [!TIP]
+   >  If the **Solution Explorer** window is not displayed, select **Solution Explorer** from the **View** menu.  
   
-5.  In the **Installed** node, select **Visual C#**, **Workflow** (or **Visual Basic**, **Workflow**). Ensure that **.NET Framework 4.5** is selected in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version drop-down list. Select **Activity Library** from the **Workflow** list. Type `NumberGuessWorkflowActivities` in the **Name** box and then click **OK**.  
+5. In the **Installed** node, select **Visual C#**, **Workflow** (or **Visual Basic**, **Workflow**). Ensure that **.NET Framework 4.5** is selected in the [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)] version drop-down list. Select **Activity Library** from the **Workflow** list. Type `NumberGuessWorkflowActivities` in the **Name** box and then click **OK**.  
   
-    > [!NOTE]
-    >  Depending on which programming language is configured as the primary language in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.  
+   > [!NOTE]
+   >  Depending on which programming language is configured as the primary language in [!INCLUDE [vsprvs](../../../includes/vsprvs-md.md)], the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.  
   
-6.  Right-click **Activity1.xaml** in **Solution Explorer** and choose **Delete**. Click **OK** to confirm.  
+6. Right-click **Activity1.xaml** in **Solution Explorer** and choose **Delete**. Click **OK** to confirm.  
   
 ### To create the ReadInt activity  
   
-1.  Choose **Add New Item** from the **Project** menu.  
+1. Choose **Add New Item** from the **Project** menu.  
   
-2.  In the **Installed**, **Common Items** node, select **Workflow**. Select **Code Activity** from the **Workflow** list.  
+2. In the **Installed**, **Common Items** node, select **Workflow**. Select **Code Activity** from the **Workflow** list.  
   
-3.  Type `ReadInt` into the **Name** box and then click **Add**.  
+3. Type `ReadInt` into the **Name** box and then click **Add**.  
   
-4.  Replace the existing `ReadInt` definition with the following definition.  
+4. Replace the existing `ReadInt` definition with the following definition.  
   
-     [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
-     [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]  
+    [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
+    [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]  
   
-    > [!NOTE]
-    >  The `ReadInt` activity derives from <xref:System.Activities.NativeActivity%601> instead of <xref:System.Activities.CodeActivity>, which is the default for the code activity template. <xref:System.Activities.CodeActivity%601> can be used if the activity provides a single result, which is exposed through the <xref:System.Activities.Activity%601.Result%2A> argument, but <xref:System.Activities.CodeActivity%601> does not support the use of bookmarks, so <xref:System.Activities.NativeActivity%601> is used.  
+   > [!NOTE]
+   >  The `ReadInt` activity derives from <xref:System.Activities.NativeActivity%601> instead of <xref:System.Activities.CodeActivity>, which is the default for the code activity template. <xref:System.Activities.CodeActivity%601> can be used if the activity provides a single result, which is exposed through the <xref:System.Activities.Activity%601.Result%2A> argument, but <xref:System.Activities.CodeActivity%601> does not support the use of bookmarks, so <xref:System.Activities.NativeActivity%601> is used.  
   
 ### To create the Prompt activity  
   

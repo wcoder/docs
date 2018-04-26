@@ -19,7 +19,7 @@ ms.author: dotnetcontent
 # How to: Create XML Documentation in Visual Basic
 This example shows how to add XML documentation comments to your code.  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE [note_settings_general](~/includes/note-settings-general-md.md)]
   
 ### To create XML documentation for a type or member  
   

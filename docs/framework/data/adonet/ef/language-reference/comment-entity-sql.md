@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # -- (Comment) (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries can contain comments. Two dashes (`--`) start a comment line.  
+[!INCLUDE [esql](../../../../../../includes/esql-md.md)] queries can contain comments. Two dashes (`--`) start a comment line.  
   
 ## Syntax  
   

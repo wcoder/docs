@@ -22,17 +22,17 @@ Events enable a [class](../../../csharp/language-reference/keywords/class.md) or
 ## Events Overview  
  Events have the following properties:  
   
--   The publisher determines when an event is raised; the subscribers determine what action is taken in response to the event.  
+- The publisher determines when an event is raised; the subscribers determine what action is taken in response to the event.  
   
--   An event can have multiple subscribers. A subscriber can handle multiple events from multiple publishers.  
+- An event can have multiple subscribers. A subscriber can handle multiple events from multiple publishers.  
   
--   Events that have no subscribers are never raised.  
+- Events that have no subscribers are never raised.  
   
--   Events are typically used to signal user actions such as button clicks or menu selections in graphical user interfaces.  
+- Events are typically used to signal user actions such as button clicks or menu selections in graphical user interfaces.  
   
--   When an event has multiple subscribers, the event handlers are invoked synchronously when an event is raised. To invoke events asynchronously, see [Calling Synchronous Methods Asynchronously](../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+- When an event has multiple subscribers, the event handlers are invoked synchronously when an event is raised. To invoke events asynchronously, see [Calling Synchronous Methods Asynchronously](../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
   
--   In the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class library, events are based on the <xref:System.EventHandler> delegate and the <xref:System.EventArgs> base class.  
+- In the [!INCLUDE [dnprdnshort](~/includes/dnprdnshort-md.md)] class library, events are based on the <xref:System.EventHandler> delegate and the <xref:System.EventArgs> base class.  
   
 ## Related Sections  
  For more information, see:  
@@ -52,7 +52,7 @@ Events enable a [class](../../../csharp/language-reference/keywords/class.md) or
 -   [How to: Implement Custom Event Accessors](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## Featured Book Chapters  
  [Delegates, Events, and Lambda Expressions](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) in [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  

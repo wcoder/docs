@@ -22,11 +22,11 @@ ms.workload:
   - "dotnet"
 ---
 # Analytic Tracing with ETW
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] analytic tracing offers a way to capture diagnostic information during the execution of a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analytic tracing events are emitted at key points in the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stack to allow troubleshooting of [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services in a production environment. Analytic tracing for [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services has minimal impact on the performance of a product server that hosts [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services as these events are very efficiently emitted to an Event Tracing for Windows (ETW) session.  
+[!INCLUDE [indigo1](../../../../../includes/indigo1-md.md)] analytic tracing offers a way to capture diagnostic information during the execution of a [!INCLUDE [indigo2](../../../../../includes/indigo2-md.md)] service. [!INCLUDE [indigo2](../../../../../includes/indigo2-md.md)] analytic tracing events are emitted at key points in the [!INCLUDE [indigo2](../../../../../includes/indigo2-md.md)] stack to allow troubleshooting of [!INCLUDE [indigo2](../../../../../includes/indigo2-md.md)] services in a production environment. Analytic tracing for [!INCLUDE [indigo2](../../../../../includes/indigo2-md.md)] services has minimal impact on the performance of a product server that hosts [!INCLUDE [netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE [indigo2](../../../../../includes/indigo2-md.md)] services as these events are very efficiently emitted to an Event Tracing for Windows (ETW) session.  
   
 ## In This Section  
  [Analytic Tracing Overview](../../../../../docs/framework/wcf/diagnostics/etw/analytic-tracing-overview.md)  
- Discusses how [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analytic tracing works in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)].  
+ Discusses how [!INCLUDE [indigo2](../../../../../includes/indigo2-md.md)] analytic tracing works in [!INCLUDE [netfx_current_long](../../../../../includes/netfx-current-long-md.md)].  
   
  [Dynamically Enabling Analytic Tracing](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)  
  Discusses how to enable or disable tracing dynamically using ETW.  

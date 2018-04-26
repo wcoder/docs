@@ -86,7 +86,7 @@ The following table lists the operators and statements that can operate on point
 
 ## C# Language Specification
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## See Also
  [C# Programming Guide](../index.md)  

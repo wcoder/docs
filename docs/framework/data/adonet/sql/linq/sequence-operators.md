@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Sequence Operators
-Generally speaking, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support sequence operators that have one or more of the following qualities:  
+Generally speaking, [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support sequence operators that have one or more of the following qualities:  
   
 -   Take a lambda with an index parameter.  
   

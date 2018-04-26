@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # SqlClient Streaming Support
-Streaming support between SQL Server and an application (new in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) supports unstructured data on the server (documents, images, and media files). A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.  
+Streaming support between SQL Server and an application (new in [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)]) supports unstructured data on the server (documents, images, and media files). A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.  
   
  Streaming support to and from SQL Server simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.  
   
@@ -82,7 +82,7 @@ Streaming support between SQL Server and an application (new in [!INCLUDE[net_v4
  The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.  
   
 ## Sample -- Streaming from SQL Server  
- Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:  
+ Use the following [!INCLUDE [tsql](../../../../includes/tsql-md.md)] to create the sample database:  
   
 ```  
 CREATE DATABASE [Demo]  
@@ -103,15 +103,15 @@ GO
   
  The sample shows how to do the following:  
   
--   Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.  
+- Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.  
   
--   Transfer a large text file from SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+- Transfer a large text file from SQL Server in [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)].  
   
--   Transfer a large XML file from SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+- Transfer a large XML file from SQL Server in [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)].  
   
--   Retrieve data from SQL Server.  
+- Retrieve data from SQL Server.  
   
--   Transfer large files (BLOBs) from one SQL Server database to another without running out of memory.  
+- Transfer large files (BLOBs) from one SQL Server database to another without running out of memory.  
   
 ```  
 using System;  
@@ -303,7 +303,7 @@ namespace StreamingFromServer {
 ```  
   
 ## Sample -- Streaming to SQL Server  
- Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:  
+ Use the following [!INCLUDE [tsql](../../../../includes/tsql-md.md)] to create the sample database:  
   
 ```  
 CREATE DATABASE [Demo2]  
@@ -326,17 +326,17 @@ GO
   
  The sample shows how to do the following:  
   
--   Transferring a large BLOB to SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+- Transferring a large BLOB to SQL Server in [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)].  
   
--   Transferring a large text file to SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+- Transferring a large text file to SQL Server in [!INCLUDE [net_v45](../../../../includes/net-v45-md.md)].  
   
--   Using the new asynchronous feature to transfer a large BLOB.  
+- Using the new asynchronous feature to transfer a large BLOB.  
   
--   Using the new asynchronous feature and the await keyword to transfer a large BLOB.  
+- Using the new asynchronous feature and the await keyword to transfer a large BLOB.  
   
--   Cancelling the transfer of a large BLOB..  
+- Cancelling the transfer of a large BLOB..  
   
--   Streaming from one SQL Server to another using the new asynchronous feature.  
+- Streaming from one SQL Server to another using the new asynchronous feature.  
   
 ```  
 using System;  

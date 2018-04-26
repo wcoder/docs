@@ -71,7 +71,7 @@ HRESULT Next(
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## See Also  
  [ICorDebugVariableHomeEnum Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  

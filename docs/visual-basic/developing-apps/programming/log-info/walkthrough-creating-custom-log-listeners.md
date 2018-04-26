@@ -24,16 +24,16 @@ This walkthrough demonstrates how to create a custom log listener and configure 
   
 #### To create the listener  
   
--   In your application, create a class named `SimpleListener` that inherits from <xref:System.Diagnostics.TraceListener>.  
+- In your application, create a class named `SimpleListener` that inherits from <xref:System.Diagnostics.TraceListener>.  
   
-     [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
+   [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
   
-     The <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods, required by the base class, call `MsgBox` to display their input.  
+   The <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods, required by the base class, call `MsgBox` to display their input.  
   
-     The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is applied to the <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods so that their attributes match the base class methods. The <xref:System.Security.Permissions.HostProtectionAttribute> attribute allows the host that runs the code to determine that the code exposes host-protection synchronization.  
+   The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is applied to the <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods so that their attributes match the base class methods. The <xref:System.Security.Permissions.HostProtectionAttribute> attribute allows the host that runs the code to determine that the code exposes host-protection synchronization.  
   
-    > [!NOTE]
-    >  The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is effective only on unmanaged applications that host the common language runtime and that implement host protection, such as SQL Server.  
+  > [!NOTE]
+  >  The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is effective only on unmanaged applications that host the common language runtime and that implement host protection, such as SQL Server.  
   
  To ensure that `My.Application.Log` uses your log listener, you should strongly name the assembly that contains your log listener.  
   
@@ -68,11 +68,11 @@ This walkthrough demonstrates how to create a custom log listener and configure 
   
 #### To determine the strong name of the listener  
   
--   The following code shows how to determine the strongly named type name for `SimpleListener`.  
+- The following code shows how to determine the strongly named type name for `SimpleListener`.  
   
-     [!code-vb[VbVbalrMyApplicationLog#17](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_2.vb)]  
+   [!code-vb[VbVbalrMyApplicationLog#17](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_2.vb)]  
   
-     The strong name of the type depends on your project.  
+   The strong name of the type depends on your project.  
   
  With the strong name, you can add the listener to the `My.Application.Log` log-listener collection.  
   

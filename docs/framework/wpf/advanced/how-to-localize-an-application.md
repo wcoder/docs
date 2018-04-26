@@ -32,87 +32,87 @@ This tutorial explains how to create a localized application by using the LocBam
   
 <a name="Requirements"></a>   
 ## Requirements  
- Over the course of this discussion, you will use [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], which is a compiler that runs from the command line.  
+ Over the course of this discussion, you will use [!INCLUDE [TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], which is a compiler that runs from the command line.  
   
- Also, you will be instructed to use a project file. For instructions on how to use [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] and project files, see [Build and Deploy](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).  
+ Also, you will be instructed to use a project file. For instructions on how to use [!INCLUDE [TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] and project files, see [Build and Deploy](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).  
   
  All the examples in this discussion use en-US (English-US) as the culture. This enables you to work through the steps of the examples without installing a different language.  
   
 <a name="create_sample_app"></a>   
 ## Create a Sample Application  
- In this step, you will prepare your application for localization. In the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] samples, a HelloApp sample is supplied that will be used for the code examples in this discussion. If you would like to use this sample, download the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] files from the [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
+ In this step, you will prepare your application for localization. In the [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] samples, a HelloApp sample is supplied that will be used for the code examples in this discussion. If you would like to use this sample, download the [!INCLUDE [TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] files from the [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
   
-1.  Develop your application to the point where you want to start localization.  
+1. Develop your application to the point where you want to start localization.  
   
-2.  Specify the development language in the project file so that [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] generates a main assembly and a satellite assembly (a file with the .resources.dll extension) to contain the neutral language resources. The project file in the HelloApp sample is HelloApp.csproj. In that file, you will find the development language identified as follows:  
+2. Specify the development language in the project file so that [!INCLUDE [TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] generates a main assembly and a satellite assembly (a file with the .resources.dll extension) to contain the neutral language resources. The project file in the HelloApp sample is HelloApp.csproj. In that file, you will find the development language identified as follows:  
   
-     `<UICulture>en-US</UICulture>`  
+    `<UICulture>en-US</UICulture>`  
   
-3.  Add Uids to your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files. Uids are used to keep track of changes to files and to identify items that must be translated. To add Uids to your files, run **updateuid** on your project file:  
+3. Add Uids to your [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files. Uids are used to keep track of changes to files and to identify items that must be translated. To add Uids to your files, run **updateuid** on your project file:  
   
-     **msbuild /t:updateuid helloapp.csproj**  
+    **msbuild /t:updateuid helloapp.csproj**  
   
-     To verify that you have no missing or duplicate Uids, run **checkuid**:  
+    To verify that you have no missing or duplicate Uids, run **checkuid**:  
   
-     **msbuild /t:checkuid helloapp.csproj**  
+    **msbuild /t:checkuid helloapp.csproj**  
   
-     After running **updateuid**, your files should contain Uids. For example, in the Pane1.xaml file of HelloApp, you should find the following:  
+    After running **updateuid**, your files should contain Uids. For example, in the Pane1.xaml file of HelloApp, you should find the following:  
   
-     `<StackPanel x:Uid="StackPanel_1">`  
+    `<StackPanel x:Uid="StackPanel_1">`  
   
-     `<TextBlock x:Uid="TextBlock_1">Hello World</TextBlock>`  
+    `<TextBlock x:Uid="TextBlock_1">Hello World</TextBlock>`  
   
-     `<TextBlock x:Uid="TextBlock_2">Goodbye World</TextBlock>`  
+    `<TextBlock x:Uid="TextBlock_2">Goodbye World</TextBlock>`  
   
-     `</StackPanel>`  
+    `</StackPanel>`  
   
 <a name="create_dll"></a>   
 ## Create the Neutral Language Resources Satellite Assembly  
  After the application is configured to generate a neutral language resources satellite assembly, you build the application. This generates the main application assembly, as well as the neutral language resources satellite assembly that is required by LocBaml for localization. To build the application:  
   
-1.  Compile HelloApp to create a [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
+1. Compile HelloApp to create a [!INCLUDE [TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
   
-     **msbuild helloapp.csproj**  
+    **msbuild helloapp.csproj**  
   
-2.  The newly created main application assembly, HelloApp.exe, is created in the following folder:  
+2. The newly created main application assembly, HelloApp.exe, is created in the following folder:  
   
-     `C:\HelloApp\Bin\Debug\`  
+    `C:\HelloApp\Bin\Debug\`  
   
-3.  The newly created neutral language resources satellite assembly, HelloApp.resources.dll, is created in the following folder:  
+3. The newly created neutral language resources satellite assembly, HelloApp.resources.dll, is created in the following folder:  
   
-     `C:\HelloApp\Bin\Debug\en-US\`  
+    `C:\HelloApp\Bin\Debug\en-US\`  
   
 <a name="build_locbaml"></a>   
 ## Build the LocBaml Tool  
   
-1.  All the files necessary to build LocBaml are located in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] samples. Download the C# files from the [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
+1. All the files necessary to build LocBaml are located in the [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] samples. Download the C# files from the [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
   
-2.  From the command line, run the project file (locbaml.csproj) to build the tool:  
+2. From the command line, run the project file (locbaml.csproj) to build the tool:  
   
-     **msbuild locbaml.csproj**  
+    **msbuild locbaml.csproj**  
   
-3.  Go to the Bin\Release directory to find the newly created executable file (locbaml.exe). Example:C:\LocBaml\Bin\Release\locbaml.exe.  
+3. Go to the Bin\Release directory to find the newly created executable file (locbaml.exe). Example:C:\LocBaml\Bin\Release\locbaml.exe.  
   
-4.  The options that you can specify when you run LocBaml are as follows:  
+4. The options that you can specify when you run LocBaml are as follows:  
   
-    -   **parse** or **-p:** Parses Baml, resources, or [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] files to generate a .csv or .txt file.  
+   - **parse** or **-p:** Parses Baml, resources, or [!INCLUDE [TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] files to generate a .csv or .txt file.  
   
-    -   **generate** or **-g:** Generates a localized binary file by using a translated file.  
+   - **generate** or **-g:** Generates a localized binary file by using a translated file.  
   
-    -   **out** or **-o** {*filedirectory*] **:** Output file name.  
+   - **out** or **-o** {*filedirectory*] **:** Output file name.  
   
-    -   **culture** or **-cul** {*culture*] **:** Locale of output assemblies.  
+   - **culture** or **-cul** {*culture*] **:** Locale of output assemblies.  
   
-    -   **translation** or **-trans** {*translation.csv*] **:** Translated or localized file.  
+   - **translation** or **-trans** {*translation.csv*] **:** Translated or localized file.  
   
-    -   **asmpath** or **-asmpath:** {*filedirectory*] **:** If your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] code contains custom controls, you must supply the **asmpath** to the custom control assembly.  
+   - **asmpath** or **-asmpath:** {*filedirectory*] **:** If your [!INCLUDE [TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] code contains custom controls, you must supply the **asmpath** to the custom control assembly.  
   
-    -   **nologo:** Displays no logo or copyright information.  
+   - **nologo:** Displays no logo or copyright information.  
   
-    -   **verbose:** Displays verbose mode information.  
+   - **verbose:** Displays verbose mode information.  
   
-    > [!NOTE]
-    >  If you need a list of the options when you are running the tool, type     **LocBaml.exe** and press ENTER.  
+   > [!NOTE]
+   >  If you need a list of the options when you are running the tool, type     **LocBaml.exe** and press ENTER.  
   
 <a name="parse_dll"></a>   
 ## Use LocBaml to Parse a File  
@@ -165,7 +165,7 @@ This tutorial explains how to create a localized application by using the LocBam
   
 <a name="translate_loc_content"></a>   
 ## Translate the Localizable Content  
- Use any tool that you have available to translate the extracted content. A good way to do this is to write the resources to a .csv file and view them in [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], making translation changes to the last column (value).  
+ Use any tool that you have available to translate the extracted content. A good way to do this is to write the resources to a .csv file and view them in [!INCLUDE [TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], making translation changes to the last column (value).  
   
 <a name="merge_translations"></a>   
 ## Use LocBaml to Generate a New .resources.dll File  
@@ -203,11 +203,11 @@ This tutorial explains how to create a localized application by using the LocBam
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## Some Tips for Using LocBaml  
   
--   All dependent assemblies that define custom controls must be copied into the local directory of LocBaml or installed into the GAC. This is necessary because the localization API must have access to the dependent assemblies when it reads the [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
+- All dependent assemblies that define custom controls must be copied into the local directory of LocBaml or installed into the GAC. This is necessary because the localization API must have access to the dependent assemblies when it reads the [!INCLUDE [TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
   
--   If the main assembly is signed, the generated resource DLL must also be signed in order for it to be loaded.  
+- If the main assembly is signed, the generated resource DLL must also be signed in order for it to be loaded.  
   
--   The version of the localized resource DLL needs to be synchronized with the main assembly.  
+- The version of the localized resource DLL needs to be synchronized with the main assembly.  
   
 <a name="Whats_Next"></a>   
 ## What's Next  

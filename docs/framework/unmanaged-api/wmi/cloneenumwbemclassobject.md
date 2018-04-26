@@ -27,7 +27,7 @@ ms.workload:
 # CloneEnumWbemClassObject function
 Makes a logical copy of an enumerator, retaining its current position in an enumeration.  
   
-[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+[!INCLUDE [internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
 ## Syntax  
   
@@ -95,7 +95,7 @@ For an example, see the [IEnumWbemClassObject::Clone](https://msdn.microsoft.com
   
  **Header:** WMINet_Utils.idl  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## See also  
 [WMI and Performance Counters (Unmanaged API Reference)](index.md)

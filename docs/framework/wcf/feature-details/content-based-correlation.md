@@ -24,7 +24,7 @@ When workflow services communicate with clients and other services, often there 
  Content-based correlation is used when a workflow service has multiple methods that are accessed by a single client and a piece of data in the exchanged messages identifies the desired instance.  
   
 > [!NOTE]
->  Content-based correlation is useful when context correlation cannot be used because the binding is not one of the supported context exchange bindings. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] context correlation, see [Context Exchange](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+>  Content-based correlation is useful when context correlation cannot be used because the binding is not one of the supported context exchange bindings. [!INCLUDE [crabout](../../../../includes/crabout-md.md)] context correlation, see [Context Exchange](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
  Each messaging activity used in these communications must specify the location of the data in the message that uniquely identifies the instance. This is done by providing a <xref:System.ServiceModel.MessageQuerySet>, using either a <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> or <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>, that queries the message for the piece or pieces of data that uniquely identify the instance.  
   
@@ -55,7 +55,7 @@ When workflow services communicate with clients and other services, often there 
  [!code-csharp[CFX_ContentCorrelation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_contentcorrelation/cs/program.cs#5)]  
   
 ## Configuring XPath Queries Using the Workflow Designer  
- In the previous examples, the activities and the XPath queries used in the message queries were specified in code. The workflow designer in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] also provides the ability to generate XPaths from `DataContract` types for content-based correlation. The first XPath configured in the previous example was configured for the <xref:System.ServiceModel.Activities.SendReply>.  
+ In the previous examples, the activities and the XPath queries used in the message queries were specified in code. The workflow designer in [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] also provides the ability to generate XPaths from `DataContract` types for content-based correlation. The first XPath configured in the previous example was configured for the <xref:System.ServiceModel.Activities.SendReply>.  
   
  [!code-csharp[CFX_ContentCorrelation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_contentcorrelation/cs/program.cs#2)]  
   

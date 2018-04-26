@@ -23,7 +23,7 @@ ms.workload:
   - dotnet
 ---
 # Animation and Timing How-to Topics
-The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.  
+The following topics demonstrate how to use the [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.  
   
 ## In This Section  
  [Accelerate or Decelerate an Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  

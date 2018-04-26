@@ -22,19 +22,19 @@ ms.workload:
 ---
 # Caching in UI Automation Clients
 > [!NOTE]
->  This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- This topic introduces caching of [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties and control patterns.  
+ This topic introduces caching of [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties and control patterns.  
   
- In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], caching means pre-fetching of data. The data can then be accessed without further cross-process communication. Caching is typically used by UI Automation client applications to retrieve properties and control patterns in bulk. Information is then retrieved from the cache as needed. The application updates the cache periodically, usually in response to events signifying that something in the [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] has changed.  
+ In [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], caching means pre-fetching of data. The data can then be accessed without further cross-process communication. Caching is typically used by UI Automation client applications to retrieve properties and control patterns in bulk. Information is then retrieved from the cache as needed. The application updates the cache periodically, usually in response to events signifying that something in the [!INCLUDE [TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] has changed.  
   
- The benefits of caching are most noticeable with [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] controls and custom controls that have server-side UI Automation providers. There is less benefit when accessing client-side providers such as the default providers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controls.  
+ The benefits of caching are most noticeable with [!INCLUDE [TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] controls and custom controls that have server-side UI Automation providers. There is less benefit when accessing client-side providers such as the default providers for [!INCLUDE [TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controls.  
   
  Caching occurs when the application activates a <xref:System.Windows.Automation.CacheRequest> and then uses any method or property that returns an <xref:System.Windows.Automation.AutomationElement>; for example, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. The methods of the <xref:System.Windows.Automation.TreeWalker> class are an exception; caching is only done if a <xref:System.Windows.Automation.CacheRequest> is specified as a parameter (for example, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   
  Caching also occurs when you subscribe to an event while a <xref:System.Windows.Automation.CacheRequest> is active. The <xref:System.Windows.Automation.AutomationElement> passed to your event handler as the source of an event contains the cached properties and patterns specified by the original <xref:System.Windows.Automation.CacheRequest>. Any changes made to the <xref:System.Windows.Automation.CacheRequest> after you subscribe to the event have no effect.  
   
- The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties and control patterns of an element can be cached.  
+ The [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties and control patterns of an element can be cached.  
   
 <a name="Options_for_Caching"></a>   
 ## Options for Caching  
@@ -52,7 +52,7 @@ ms.workload:
 ### Scope and Filtering of Caching  
  You can specify the elements whose properties and patterns you want to cache by setting the <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> property before activating the request. The scope is relative to the elements that are retrieved while the request is active. For example, if you set only <xref:System.Windows.Automation.TreeScope.Children>, and then retrieve an <xref:System.Windows.Automation.AutomationElement>, the properties and patterns of children of that element are cached, but not those of the element itself. To ensure that caching is done for the retrieved element itself, you must include <xref:System.Windows.Automation.TreeScope.Element> in the <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> property. It is not possible to set the scope to <xref:System.Windows.Automation.TreeScope.Parent> or <xref:System.Windows.Automation.TreeScope.Ancestors>. However, a parent element can be cached when a child element is cached; see Retrieving Cached Children and Parents in this topic.  
   
- The extent of caching is also affected by the <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> property. By default, caching is performed only for elements that appear in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree. However, you can change this property to apply caching to all elements, or only to elements that appear in the content view.  
+ The extent of caching is also affected by the <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> property. By default, caching is performed only for elements that appear in the control view of the [!INCLUDE [TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree. However, you can change this property to apply caching to all elements, or only to elements that appear in the content view.  
   
 <a name="Strength_of_the_Element_References"></a>   
 ### Strength of the Element References  
@@ -103,7 +103,7 @@ ms.workload:
   
 <a name="Updating_the_Cache"></a>   
 ## Updating the Cache  
- The cache is valid only as long as nothing changes in the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Your application is responsible for updating the cache, typically in response to events.  
+ The cache is valid only as long as nothing changes in the [!INCLUDE [TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Your application is responsible for updating the cache, typically in response to events.  
   
  If you subscribe to an event while a <xref:System.Windows.Automation.CacheRequest> is active, you obtain an <xref:System.Windows.Automation.AutomationElement> with an updated cache as the source of the event whenever your event-handler delegate is called. You can also update cached information for an element by calling <xref:System.Windows.Automation.AutomationElement.GetUpdatedCache%2A>. You can pass in the original <xref:System.Windows.Automation.CacheRequest> to update all information that was previously cached.  
   

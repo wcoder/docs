@@ -17,23 +17,25 @@ ms.workload:
 ---
 # 4206 - UnlockInstanceException
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|4206|  
 |Keywords|WFInstanceStore|  
 |Level|Error|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates an exception was encountered while trying to unlock an instance.  
-  
+
 ## Message  
  Encountered exception %1 while attempting to unlock instance.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|ExceptionMessage|xs:string|The message from the SQL exception.|  
-|AppDomain|xs:string|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+|  Data Item Name  | Data Item Type |                         Description                          |
+|------------------|----------------|--------------------------------------------------------------|
+| ExceptionMessage |   xs:string    |             The message from the SQL exception.              |
+|    AppDomain     |   xs:string    | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

@@ -45,7 +45,7 @@ The .NET Framework enables you to call any method asynchronously. To do this you
  The `EndInvoke` method retrieves the results of the asynchronous call. It can be called any time after `BeginInvoke`. If the asynchronous call has not completed, `EndInvoke` blocks the calling thread until it completes. The parameters of `EndInvoke` include the `out` and `ref` parameters (`<Out>` `ByRef` and `ByRef` in Visual Basic) of the method that you want to execute asynchronously, plus the <xref:System.IAsyncResult> returned by `BeginInvoke`.  
   
 > [!NOTE]
->  The IntelliSense feature in [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] displays the parameters of `BeginInvoke` and `EndInvoke`. If you are not using Visual Studio or a similar tool, or if you are using C# with [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], see [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) for a description of the parameters defined for these methods.  
+>  The IntelliSense feature in [!INCLUDE [vsprvslong](../../../includes/vsprvslong-md.md)] displays the parameters of `BeginInvoke` and `EndInvoke`. If you are not using Visual Studio or a similar tool, or if you are using C# with [!INCLUDE [vsprvslong](../../../includes/vsprvslong-md.md)], see [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) for a description of the parameters defined for these methods.  
   
  The code examples in this topic demonstrate four common ways to use `BeginInvoke` and `EndInvoke` to make asynchronous calls. After calling `BeginInvoke` you can do the following:  
   

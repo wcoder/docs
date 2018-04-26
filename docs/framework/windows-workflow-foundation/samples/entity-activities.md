@@ -16,24 +16,24 @@ ms.workload:
   - "dotnet"
 ---
 # Entity Activities
-This sample shows how to use the ADO.NET Entity Framework with [!INCLUDE[wf2](../../../../includes/wf2-md.md)] to simplify data access.  
+This sample shows how to use the ADO.NET Entity Framework with [!INCLUDE [wf2](../../../../includes/wf2-md.md)] to simplify data access.  
   
- The ADO.NET Entity Framework enables developers to work with data in the form of domain-specific objects, properties and relationships such as Customers, Orders, Order Details and the relationships between these entities. The ADO.NET Entity Framework does this by providing a level of abstraction that enables programming against a conceptual application model instead of programming directly against a relational storage schema. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] the ADO.NET Entity Framework see [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ The ADO.NET Entity Framework enables developers to work with data in the form of domain-specific objects, properties and relationships such as Customers, Orders, Order Details and the relationships between these entities. The ADO.NET Entity Framework does this by providing a level of abstraction that enables programming against a conceptual application model instead of programming directly against a relational storage schema. [!INCLUDE [crabout](../../../../includes/crabout-md.md)] the ADO.NET Entity Framework see [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## Sample details  
  This sample uses the `Northwind` database and includes scripts for creating and removing the `Northwind` database (Setup.cmd and Cleanup.cmd). The projects in this sample include an Entity Data Model based on the `Northwind` database. You can find the model by opening the `Northwind.edmx` file that is included in the project. This is the model that defines the shape of the objects that can be accessed using the ADO.NET Entity Framework.  
   
  The following activities are included in this sample:  
   
--   `EntitySQLQuery`: The `EntitySQLQuery` activity allows you to retrieve objects from the database based on an Entity SQL query string. Entity SQL is a store independent language that is similar to SQL and it allows you to specify queries based on the conceptual model and the entities that are a part of the model or domain. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Entity SQL Language, see [Entity SQL Language](http://go.microsoft.com/fwlink/?LinkId=165646).  
+- `EntitySQLQuery`: The `EntitySQLQuery` activity allows you to retrieve objects from the database based on an Entity SQL query string. Entity SQL is a store independent language that is similar to SQL and it allows you to specify queries based on the conceptual model and the entities that are a part of the model or domain. [!INCLUDE [crabout](../../../../includes/crabout-md.md)] Entity SQL Language, see [Entity SQL Language](http://go.microsoft.com/fwlink/?LinkId=165646).  
   
--   `EntityLinqQuery`: This activity allows you to retrieve objects from the database based on a LINQ query or predicate.  
+- `EntityLinqQuery`: This activity allows you to retrieve objects from the database based on a LINQ query or predicate.  
   
--   `EntityAdd`: The `EntityAdd` activity allows you to add an entity or a collection of entities to the database.  
+- `EntityAdd`: The `EntityAdd` activity allows you to add an entity or a collection of entities to the database.  
   
--   `EntityDelete`: The `EntityDelete` activity allows you to delete an entity or a collection of entities from the database.  
+- `EntityDelete`: The `EntityDelete` activity allows you to delete an entity or a collection of entities from the database.  
   
--   `ObjectContextScope`: The previously mentioned activities can only be used within a containing `ObjectContextScope` activity instance. The `ObjectContextScope` activity sets up the connection to the database. It requires a connection string (that is either passed in or retrieved using a configuration file setting). The `ObjectContextScope` activity makes it easy to perform a group of related operations on entities. Because this scope maintains an active connection, it is a No Persist scope. In addition, when the `ObjectContextScope` activity exits, any changes that are made to objects retrieved using Entity Activities within that scope automatically get persisted back to the database, and no explicit or subsequent action is required to save objects back to the database.  
+- `ObjectContextScope`: The previously mentioned activities can only be used within a containing `ObjectContextScope` activity instance. The `ObjectContextScope` activity sets up the connection to the database. It requires a connection string (that is either passed in or retrieved using a configuration file setting). The `ObjectContextScope` activity makes it easy to perform a group of related operations on entities. Because this scope maintains an active connection, it is a No Persist scope. In addition, when the `ObjectContextScope` activity exits, any changes that are made to objects retrieved using Entity Activities within that scope automatically get persisted back to the database, and no explicit or subsequent action is required to save objects back to the database.  
   
 ## Using the entity activities  
  The following code snippets demonstrate how to use the entity activities presented in this sample.  
@@ -237,11 +237,11 @@ return new ObjectContextScope
   
 #### To run the sample  
   
-1.  Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the EntityActivities.sln solution file.  
+1. Using [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)], open the EntityActivities.sln solution file.  
   
-2.  To build the solution, press CTRL+SHIFT+B.  
+2. To build the solution, press CTRL+SHIFT+B.  
   
-3.  To run the solution, press CTRL+F5.  
+3. To run the solution, press CTRL+F5.  
   
  After running this sample, you may want to remove the `Northwind` database.  
   
@@ -255,9 +255,9 @@ return new ObjectContextScope
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

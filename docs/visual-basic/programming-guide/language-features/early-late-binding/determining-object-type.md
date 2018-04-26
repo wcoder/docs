@@ -40,13 +40,13 @@ Generic object variables (that is, variables you declare as `Object`) can hold o
   
 #### To run the example  
   
-1.  Create a new Windows Application project and add a <xref:System.Windows.Forms.Button> control, a <xref:System.Windows.Forms.CheckBox> control, and a <xref:System.Windows.Forms.RadioButton> control to the form.  
+1. Create a new Windows Application project and add a <xref:System.Windows.Forms.Button> control, a <xref:System.Windows.Forms.CheckBox> control, and a <xref:System.Windows.Forms.RadioButton> control to the form.  
   
-2.  From the button on your form, call the `TestObject` procedure.  
+2. From the button on your form, call the `TestObject` procedure.  
   
-3.  Add the following code to your form:  
+3. Add the following code to your form:  
   
-     [!code-vb[VbVbalrOOP#95](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_4.vb)]  
+    [!code-vb[VbVbalrOOP#95](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_4.vb)]  
   
 ## See Also  
  <xref:Microsoft.VisualBasic.Information.TypeName%2A>  

@@ -58,7 +58,7 @@ class DerivedClass : BaseClass
  Struct members cannot be `protected internal` because the struct cannot be inherited.  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Reference](../../../csharp/language-reference/index.md)   

@@ -59,7 +59,7 @@ typedef struct _ASSEMBLY_INFO {
   
  **Header:** Fusion.h  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## See Also  
  [Fusion Structures](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  

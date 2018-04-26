@@ -135,6 +135,6 @@ ACS is currently available for Standard A, D, DS, G, and GS series Linux virtual
     [*https://kubernetes.io/*](https://kubernetes.io/)
 
 
->[!div class="step-by-step"]
-[Previous] (resilient-high-availability-microservices.md)
-[Next] (using-azure-service-fabric.md)
+> [!div class="step-by-step"]
+> [Previous](resilient-high-availability-microservices.md)
+> [Next](using-azure-service-fabric.md)

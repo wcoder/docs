@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # Designer
-This section contains samples that demonstrate how to use [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].  
+This section contains samples that demonstrate how to use [!INCLUDE [wfd1](../../../../includes/wfd1-md.md)].  
   
 ## In This Section  
  [Removing the View State the Designer Adds to an XAML File](../../../../docs/framework/windows-workflow-foundation/samples/removing-the-view-state-the-designer-adds-to-an-xaml-file.md)  
@@ -29,4 +29,4 @@ This section contains samples that demonstrate how to use [!INCLUDE[wfd1](../../
  Demonstrates how to customize the property grid that is displayed when a given activity is selected within the designer.  
   
  [Toolbox Service](../../../../docs/framework/windows-workflow-foundation/samples/toolbox-service.md)  
- Demonstrates how to update the [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] Toolbox activities based on the context of the workflow.
+ Demonstrates how to update the [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] Toolbox activities based on the context of the workflow.

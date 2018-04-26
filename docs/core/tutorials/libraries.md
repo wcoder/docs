@@ -61,9 +61,9 @@ You have three primary options when targeting the .NET Standard, depending on yo
     ```
 
 2. You can use a lower or higher version of the .NET Standard by modifying the value in the `TargetFramework` node of your project file.
-    
+
     .NET Standard versions are backward compatible. That means that `netstandard1.0` libraries run on `netstandard1.1` platforms and higher. However, there is no forward compatibility - lower .NET Standard platforms cannot reference higher ones. This means that `netstandard1.0` libraries cannot reference libraries targeting `netstandard1.1` or higher. Select the Standard version that has the right mix of APIs and platform support for your needs. We recommend `netstandard1.4` for now.
-    
+
 3. If you want to target the .NET Framework versions 4.0 or below, or you wish to use an API available in the .NET Framework but not in the .NET Standard (for example, `System.Drawing`), read the following sections and learn how to multitarget.
 
 ## How to target the .NET Framework
@@ -242,24 +242,25 @@ It's important to be able to test across platforms. You can use either [xUnit](h
    |__MyProject.Test/
    ```
 
-1. Navigate to the test project's directory and add a reference to `MyProject.Test` from `MyProject`.
+2. Navigate to the test project's directory and add a reference to `MyProject.Test` from `MyProject`.
 
    ```bash
    cd MyProject.Test
    dotnet add reference ../MyProject/MyProject.csproj
    ```
 
-1. Restore packages and build projects:
+3. Restore packages and build projects:
 
    ```bash
    dotnet restore
    dotnet build
    ```
 
-   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE [DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-1. Verify that xUnit runs by executing the `dotnet test` command. If you chose to use MSTest, then the MSTest console runner should run instead.
-    
+
+4. Verify that xUnit runs by executing the `dotnet test` command. If you chose to use MSTest, then the MSTest console runner should run instead.
+
 And that's it! You can now test your library across all platforms using command line tools. To continue testing now that you have everything set up, testing your library is very simple:
 
 1. Make changes to your library.

@@ -61,7 +61,7 @@ ms.workload:
   
 <a name="compiling_msil_to_native_code"></a>   
 ## Compiling MSIL to Native Code  
- Before you can run Microsoft intermediate language (MSIL), it must be compiled against the common language runtime to native code for the target machine architecture. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides two ways to perform this conversion:  
+ Before you can run Microsoft intermediate language (MSIL), it must be compiled against the common language runtime to native code for the target machine architecture. The [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] provides two ways to perform this conversion:  
   
 -   A .NET Framework just-in-time (JIT) compiler.  
   
@@ -102,7 +102,7 @@ ms.workload:
   
  During execution, managed code receives services such as garbage collection, security, interoperability with unmanaged code, cross-language debugging support, and enhanced deployment and versioning support.  
   
- In Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] and [!INCLUDE[windowsver](../../includes/windowsver-md.md)], the operating system loader checks for managed modules by examining a bit in the COFF header. The bit being set denotes a managed module. If the loader detects managed modules, it loads mscoree.dll, and `_CorValidateImage` and `_CorImageUnloading` notify the loader when the managed module images are loaded and unloaded. `_CorValidateImage` performs the following actions:  
+ In Microsoft [!INCLUDE [winxp](../../includes/winxp-md.md)] and [!INCLUDE [windowsver](../../includes/windowsver-md.md)], the operating system loader checks for managed modules by examining a bit in the COFF header. The bit being set denotes a managed module. If the loader detects managed modules, it loads mscoree.dll, and `_CorValidateImage` and `_CorImageUnloading` notify the loader when the managed module images are loaded and unloaded. `_CorValidateImage` performs the following actions:  
   
 1.  Ensures that the code is valid managed code.  
   

@@ -20,11 +20,11 @@ This sample demonstrates the use and configuration of the SQL workflow instance 
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to (download page) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to (download page) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
 ## Sample Details  
@@ -32,7 +32,7 @@ This sample demonstrates the use and configuration of the SQL workflow instance 
   
  The counting workflow is self-hosted by a workflow service host. The program's `Main` method creates an instance of the workflow service host that hosts the counting workflow. It defines the endpoints under which the counting workflow can be reached. After that, it defines a SQL workflow instance store behavior, which is used to configure the SQL workflow instance store. Next, the program creates a client that calls the start method of the counting workflow.  
   
- Once the program is started, the counter automatically starts counting. Note that it might take a few seconds to load the instance and configure the SQL workflow instance store. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] the workflow instance store, see [SQL Workflow Instance Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+ Once the program is started, the counter automatically starts counting. Note that it might take a few seconds to load the instance and configure the SQL workflow instance store. [!INCLUDE [crabout](../../../../includes/crabout-md.md)] the workflow instance store, see [SQL Workflow Instance Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
  The sample consists of two parts:  
   
@@ -71,19 +71,19 @@ This sample demonstrates the use and configuration of the SQL workflow instance 
   
 #### To use this sample  
   
-1.  Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt as an Administrator if permissions are available.  
+1. Open a [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] command prompt as an Administrator if permissions are available.  
   
-2.  Navigate to the sample directory (\WF\Basic\Persistence\BuiltInConfiguration\CS) and run CreateInstanceStore.cmd.  
+2. Navigate to the sample directory (\WF\Basic\Persistence\BuiltInConfiguration\CS) and run CreateInstanceStore.cmd.  
   
-3.  If Administrator privileges are not available, Create SQL Server login. Go to `Security`, **Logins**. Right-click **Logins** and create a new login.  
+3. If Administrator privileges are not available, Create SQL Server login. Go to `Security`, **Logins**. Right-click **Logins** and create a new login.  
   
-4.  Add your ACL user to SQL role. Open **Databases**, **InstanceStore**, **Security**. Right-click **Users** and select **New users**. Set the **Login name** to the user created in the previous step. Add the user to the Database role membership **System.Activities.DurableInstancing.InstanceStoreUsers** (and others). Note that the user might exist already (for example, user dbo).  
+4. Add your ACL user to SQL role. Open **Databases**, **InstanceStore**, **Security**. Right-click **Users** and select **New users**. Set the **Login name** to the user created in the previous step. Add the user to the Database role membership **System.Activities.DurableInstancing.InstanceStoreUsers** (and others). Note that the user might exist already (for example, user dbo).  
   
-5.  Open the InstanceStore.sln file in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] and build the solution by pressing CTRL+SHIFT+B.  
+5. Open the InstanceStore.sln file in [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] and build the solution by pressing CTRL+SHIFT+B.  
   
-6.  In [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], navigate to the sample’s appropriate bin\debug directory (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug), right click InstanceStore.exe and select **Run as administrator**. This sample must be run with administrative privileges because it opens a channel listener.  
+6. In [!INCLUDE [fileExplorer](../../../../includes/fileexplorer-md.md)], navigate to the sample’s appropriate bin\debug directory (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug), right click InstanceStore.exe and select **Run as administrator**. This sample must be run with administrative privileges because it opens a channel listener.  
   
-7.  If you created the instance store in a database other than a local installation of SQL Server Express you must update the database connection string (`const string ConnectionString` in Program.cs of the InstanceStore1 project, and the `connectionString` attribute in App.config of the InstanceStore2 project) in the sample and recompile the sample.  
+7. If you created the instance store in a database other than a local installation of SQL Server Express you must update the database connection string (`const string ConnectionString` in Program.cs of the InstanceStore1 project, and the `connectionString` attribute in App.config of the InstanceStore2 project) in the sample and recompile the sample.  
   
 #### To verify the sample is running correctly  
   
@@ -105,11 +105,11 @@ This sample demonstrates the use and configuration of the SQL workflow instance 
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
 ## See Also  

@@ -22,7 +22,7 @@ ms.workload:
   - dotnet
 ---
 # Window Management How-to Topics
-The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.  
+The following topics show how to manage [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.  
   
 ## In This Section  
  [Automatically Size a Window to Fit Its Content](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  

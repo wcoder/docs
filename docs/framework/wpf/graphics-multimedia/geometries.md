@@ -25,7 +25,7 @@ ms.workload:
   - dotnet
 ---
 # Geometries
-<xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions  
+<xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE [TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions  
   
 ## In This Section  
  [Path Markup Syntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  

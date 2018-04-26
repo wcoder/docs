@@ -92,7 +92,7 @@ Types declared inside a class without an access modifier default to `private`, s
 Finally, notice that for the object created using the default constructor (`child3`), the age field was initialized to zero by default.
 
 ## C# Language Specification
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## See Also
  [C# Reference](../../../csharp/language-reference/index.md)  

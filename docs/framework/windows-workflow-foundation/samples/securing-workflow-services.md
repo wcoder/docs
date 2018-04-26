@@ -18,17 +18,17 @@ ms.workload:
 # Securing Workflow Services
 The Secured Workflow Service sample shows the following procedures:  
   
--   Creating a basic workflow service using the <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply> activities.  
+- Creating a basic workflow service using the <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply> activities.  
   
--   Using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] configuration to define secure endpoints for use by the workflow service.  
+- Using [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] configuration to define secure endpoints for use by the workflow service.  
   
--   Creating claims inside a custom policy and using the <xref:System.ServiceModel.ServiceAuthorizationManager> to validate claims.  
+- Creating claims inside a custom policy and using the <xref:System.ServiceModel.ServiceAuthorizationManager> to validate claims.  
   
 ## Demonstrates  
  Using WCF security to secure communication between client and Workflow service, Claims based authorization  
   
 ## Discussion  
- This sample demonstrates the use of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security infrastructure to secure a workflow service just like you would with a normal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service. Specifically, it uses a custom claim for authorization. In this case, it uses <xref:System.ServiceModel.WSHttpBinding> and message mode security with Windows credentials.  
+ This sample demonstrates the use of [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] security infrastructure to secure a workflow service just like you would with a normal [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] service. Specifically, it uses a custom claim for authorization. In this case, it uses <xref:System.ServiceModel.WSHttpBinding> and message mode security with Windows credentials.  
   
  The custom <xref:System.IdentityModel.Policy.IAuthorizationPolicy> (`CustomNameCheckerPolicy`) checks the client's Windows username and for a specific character. If that character is present, it creates and adds the claim to the <xref:System.IdentityModel.Policy.EvaluationContext>. By doing this, the custom policy is making the statement that the client has this character in the username. This claim can be queried throughout the lifetime of the call. You can find that character in `Constants.cs`.  
   
@@ -36,25 +36,25 @@ The Secured Workflow Service sample shows the following procedures:
   
 #### To run this sample  
   
-1.  Run [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] with administrator privileges.  
+1. Run [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] with administrator privileges.  
   
-2.  Load SecuringWorkflowServices.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+2. Load SecuringWorkflowServices.sln in [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)].  
   
-3.  Press CTRL+SHIFT+B to compile the solution.  
+3. Press CTRL+SHIFT+B to compile the solution.  
   
-4.  Set the Service project as the start-up project for the solution.  
+4. Set the Service project as the start-up project for the solution.  
   
-5.  Press CTRL+F5 to start the service without debugging.  
+5. Press CTRL+F5 to start the service without debugging.  
   
-6.  Set the Client project as the start-up project for the solution.  
+6. Set the Client project as the start-up project for the solution.  
   
-7.  Press CTRL+F5 to start the client without debugging.  
+7. Press CTRL+F5 to start the client without debugging.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\SecuringWorkflowServices`

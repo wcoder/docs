@@ -84,7 +84,7 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
  **Library:** CorGuids.lib  
   
- **.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## See Also  
  [ICorDebugSymbolProvider2 Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  

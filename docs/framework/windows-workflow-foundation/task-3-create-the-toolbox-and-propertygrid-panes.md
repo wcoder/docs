@@ -16,7 +16,7 @@ ms.workload:
   - "dotnet"
 ---
 # Task 3: Create the Toolbox and PropertyGrid Panes
-In this task, you will create the **Toolbox** and **PropertyGrid** panes and add them to the rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
+In this task, you will create the **Toolbox** and **PropertyGrid** panes and add them to the rehosted [!INCLUDE [wfd1](../../../includes/wfd1-md.md)].  
   
  For reference, the code that should be in the MainWindow.xaml.cs file after completing the three tasks in the [Rehosting the Workflow Designer](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) series of topics is provided at the end of this topic.  
   

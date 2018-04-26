@@ -22,7 +22,7 @@ ms.workload:
   - dotnet
 ---
 # Fonts How-to Topics
-The topics in this section demonstrate how to use the font features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+The topics in this section demonstrate how to use the font features included with [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## In This Section  
  [Enumerate System Fonts](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  

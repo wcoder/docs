@@ -18,96 +18,96 @@ ms.workload:
   - "dotnet"
 ---
 # How to: Programmatically Add Discoverability to a WCF Service and Client
-This topic explains how to make a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service discoverable. It is based on the [Self-Host](http://go.microsoft.com/fwlink/?LinkId=145523) sample.  
+This topic explains how to make a [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] service discoverable. It is based on the [Self-Host](http://go.microsoft.com/fwlink/?LinkId=145523) sample.  
   
 ### To configure the existing Self-Host service sample for Discovery  
   
-1.  Open the Self-Host solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. The sample is located in the TechnologySamples\Basic\Service\Hosting\SelfHost directory.  
+1. Open the Self-Host solution in [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)]. The sample is located in the TechnologySamples\Basic\Service\Hosting\SelfHost directory.  
   
-2.  Add a reference to `System.ServiceModel.Discovery.dll` to the service project. You may see an error message saying "System. ServiceModel.Discovery.dll or one of its dependencies requires a later version of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] than the one specified in the project …" If you see this message, right-click the project in the Solution Explorer and choose **Properties**. In the **Project Properties** window, make sure that the **Target Framework** is [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Add a reference to `System.ServiceModel.Discovery.dll` to the service project. You may see an error message saying "System. ServiceModel.Discovery.dll or one of its dependencies requires a later version of the [!INCLUDE [dnprdnshort](../../../../includes/dnprdnshort-md.md)] than the one specified in the project …" If you see this message, right-click the project in the Solution Explorer and choose **Properties**. In the **Project Properties** window, make sure that the **Target Framework** is [!INCLUDE [netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
-3.  Open the Service.cs file and add the following `using` statement.  
+3. Open the Service.cs file and add the following `using` statement.  
   
-    ```csharp  
-    using System.ServiceModel.Discovery;  
-    ```  
+   ```csharp  
+   using System.ServiceModel.Discovery;  
+   ```  
   
-4.  In the `Main()` method, inside the `using` statement, add a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> instance to the service host.  
+4. In the `Main()` method, inside the `using` statement, add a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> instance to the service host.  
   
-    ```csharp  
-    public static void Main()  
-    {  
-        // Create a ServiceHost for the CalculatorService type.  
-        using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService)))  
-        {  
-            // Add a ServiceDiscoveryBehavior  
-            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());                  
+   ```csharp  
+   public static void Main()  
+   {  
+       // Create a ServiceHost for the CalculatorService type.  
+       using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService)))  
+       {  
+           // Add a ServiceDiscoveryBehavior  
+           serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());                  
   
-            // ...  
-        }  
-    }  
-    ```  
+           // ...  
+       }  
+   }  
+   ```  
   
-     The <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> specifies that the service it is applied to is discoverable.  
+    The <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> specifies that the service it is applied to is discoverable.  
   
-5.  Add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the service host right after the code that adds the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
+5. Add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the service host right after the code that adds the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
   
-    ```csharp  
-    // Add ServiceDiscoveryBehavior  
-    serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());  
+   ```csharp  
+   // Add ServiceDiscoveryBehavior  
+   serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());  
   
-    // Add a UdpDiscoveryEndpoint  
-    serviceHost.AddServiceEndpoint(new UdpDiscoveryEndpoint());  
-    ```  
+   // Add a UdpDiscoveryEndpoint  
+   serviceHost.AddServiceEndpoint(new UdpDiscoveryEndpoint());  
+   ```  
   
-     This code specifies that discovery messages should be sent to the standard UDP discovery endpoint.  
+    This code specifies that discovery messages should be sent to the standard UDP discovery endpoint.  
   
 ### To create a client application that uses discovery to call the service  
   
-1.  Add a new console application to the solution called `DiscoveryClientApp`.  
+1. Add a new console application to the solution called `DiscoveryClientApp`.  
   
-2.  Add a reference to `System.ServiceModel.dll` and `System.ServiceModel.Discovery.dll`  
+2. Add a reference to `System.ServiceModel.dll` and `System.ServiceModel.Discovery.dll`  
   
-3.  Copy the GeneratedClient.cs and App.config files from the existing client project to the new DiscoveryClientApp project. To do this, right-click the files in the **Solution Explorer**, select **Copy**, and then select the **DiscoveryClientApp** project, right-click and select **Paste**.  
+3. Copy the GeneratedClient.cs and App.config files from the existing client project to the new DiscoveryClientApp project. To do this, right-click the files in the **Solution Explorer**, select **Copy**, and then select the **DiscoveryClientApp** project, right-click and select **Paste**.  
   
-4.  Open Program.cs.  
+4. Open Program.cs.  
   
-5.  Add the following `using` statements.  
+5. Add the following `using` statements.  
   
-    ```csharp  
-    using System.ServiceModel;  
-    using System.ServiceModel.Discovery;  
-    using Microsoft.ServiceModel.Samples;  
-    ```  
+   ```csharp  
+   using System.ServiceModel;  
+   using System.ServiceModel.Discovery;  
+   using Microsoft.ServiceModel.Samples;  
+   ```  
   
-6.  Add a static method called `FindCalculatorServiceAddress()` to the `Program` class.  
+6. Add a static method called `FindCalculatorServiceAddress()` to the `Program` class.  
   
-    ```csharp  
-    static EndpointAddress FindCalculatorServiceAddress()  
-    {  
-    }  
-    ```  
+   ```csharp  
+   static EndpointAddress FindCalculatorServiceAddress()  
+   {  
+   }  
+   ```  
   
-     This method uses discovery to search for the `CalculatorService` service.  
+    This method uses discovery to search for the `CalculatorService` service.  
   
-7.  Inside the `FindCalculatorServiceAddress` method, create a new <xref:System.ServiceModel.Discovery.DiscoveryClient> instance, passing in a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the constructor.  
+7. Inside the `FindCalculatorServiceAddress` method, create a new <xref:System.ServiceModel.Discovery.DiscoveryClient> instance, passing in a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the constructor.  
   
-    ```csharp  
-    static EndpointAddress FindCalculatorServiceAddress()  
-    {  
-        // Create DiscoveryClient  
-        DiscoveryClient discoveryClient = new DiscoveryClient(new UdpDiscoveryEndpoint());  
-    }  
-    ```  
+   ```csharp  
+   static EndpointAddress FindCalculatorServiceAddress()  
+   {  
+       // Create DiscoveryClient  
+       DiscoveryClient discoveryClient = new DiscoveryClient(new UdpDiscoveryEndpoint());  
+   }  
+   ```  
   
-     This tells [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] that the <xref:System.ServiceModel.Discovery.DiscoveryClient> class should use the standard UDP discovery endpoint to send and receive discovery messages.  
+    This tells [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] that the <xref:System.ServiceModel.Discovery.DiscoveryClient> class should use the standard UDP discovery endpoint to send and receive discovery messages.  
   
-8.  On the next line, call the <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> method and specify a <xref:System.ServiceModel.Discovery.FindCriteria> instance that contains the service contract you want to search for. In this case, specify `ICalculator`.  
+8. On the next line, call the <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> method and specify a <xref:System.ServiceModel.Discovery.FindCriteria> instance that contains the service contract you want to search for. In this case, specify `ICalculator`.  
   
-    ```csharp  
-    // Find ICalculatorService endpoints              
-    FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
-    ```  
+   ```csharp  
+   // Find ICalculatorService endpoints              
+   FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
+   ```  
   
 9. After the call to <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, check to see if there is at least one matching service and return the <xref:System.ServiceModel.EndpointAddress> of the first matching service. Otherwise return `null`.  
   
@@ -228,7 +228,7 @@ This topic explains how to make a [!INCLUDE[indigo1](../../../../includes/indigo
     ```  
   
 ## Example  
- The following is a listing of the code for this sample. Because this code is based on the [Self-Host](http://go.microsoft.com/fwlink/?LinkId=145523) sample, only those files that are changed are listed. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] the Self-Host sample, see [Setup Instructions](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ The following is a listing of the code for this sample. Because this code is based on the [Self-Host](http://go.microsoft.com/fwlink/?LinkId=145523) sample, only those files that are changed are listed. [!INCLUDE [crabout](../../../../includes/crabout-md.md)] the Self-Host sample, see [Setup Instructions](http://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

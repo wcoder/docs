@@ -25,32 +25,32 @@ When workflow applications and components have the potential to be localized int
   
 #### Using resource files for localized strings  
   
-1.  In [!INCLUDE[vs2010](../../../includes/vs2010-md.md)], right-click your project in **Solution Explorer** and select **Add…**, **New Item…**.  
+1. In [!INCLUDE [vs2010](../../../includes/vs2010-md.md)], right-click your project in **Solution Explorer** and select **Add…**, **New Item…**.  
   
-2.  Select **Resources File** and name the file ErrorResources.resx. Click **Add**.  
+2. Select **Resources File** and name the file ErrorResources.resx. Click **Add**.  
   
-3.  Open the resource file. Add a new entry with a **Name** of ErrorString and a **Value** of "The activity is not valid."  
+3. Open the resource file. Add a new entry with a **Name** of ErrorString and a **Value** of "The activity is not valid."  
   
-4.  Add the following `using` statements to your class.  
+4. Add the following `using` statements to your class.  
   
-    ```  
-    using System.Reflection;  
-    using System.Resources;  
-    ```  
+   ```  
+   using System.Reflection;  
+   using System.Resources;  
+   ```  
   
-5.  Create a resource manager in your project.  
+5. Create a resource manager in your project.  
   
-    ```  
-    ResourceManager ErrorManager;  
-    ...  
-    ErrorManager = new ResourceManager("MyNamespace.ErrorResources", Assembly.GetExecutingAssembly());  
-    ```  
+   ```  
+   ResourceManager ErrorManager;  
+   ...  
+   ErrorManager = new ResourceManager("MyNamespace.ErrorResources", Assembly.GetExecutingAssembly());  
+   ```  
   
-6.  Get the string from the resource manager where it is required.  
+6. Get the string from the resource manager where it is required.  
   
-    ```  
-    String errorMessage = ErrorManager.GetString("ErrorString");  
-    ```  
+   ```  
+   String errorMessage = ErrorManager.GetString("ErrorString");  
+   ```  
   
  The following code sample demonstrates how to utilize localized strings in the <xref:System.Activities.Activity.CacheMetadata%2A> method.  
   

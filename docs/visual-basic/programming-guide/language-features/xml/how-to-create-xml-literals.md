@@ -19,43 +19,43 @@ ms.author: dotnetcontent
 # How to: Create XML Literals (Visual Basic)
 You can create an XML document, fragment, or element directly in code by using an XML literal. The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.  
   
- You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. For more information, see <xref:System.Xml.Linq.XElement>.  
+ You can also use the [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. For more information, see <xref:System.Xml.Linq.XElement>.  
   
 ### To create an XML element  
   
--   Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.  
+- Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.  
   
-     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
+   [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
   
-     Run the code. The output of this code is:  
+   Run the code. The output of this code is:  
   
-     `<contact>`  
+   `<contact>`  
   
-     `<name>Patrick Hines</name>`  
+   `<name>Patrick Hines</name>`  
   
-     `<phone type="home">206-555-0144</phone>`  
+   `<phone type="home">206-555-0144</phone>`  
   
-     `<phone type="work">425-555-0145</phone>`  
+   `<phone type="work">425-555-0145</phone>`  
   
-     `</contact>`  
+   `</contact>`  
   
 ### To create an XML document  
   
--   Create the XML document inline. The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.  
+- Create the XML document inline. The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.  
   
-     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
+   [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
   
-     Run the code. The output of this code is:  
+   Run the code. The output of this code is:  
   
-     `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
+   `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   
-     `<!-- Tests that the application works. -->`  
+   `<!-- Tests that the application works. -->`  
   
-     `<books>`  
+   `<books>`  
   
-     `<book/>`  
+   `<book/>`  
   
-     `</books>`  
+   `</books>`  
   
 ## See Also  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  

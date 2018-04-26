@@ -18,10 +18,10 @@ ms.workload:
   - "dotnet"
 ---
 # Accessing the Service from a Web Browser (WCF Data Services Quickstart)
-In this task, you will start the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] from Visual Studio and optionally disable feed reading in the Web browser. You will then retrieve the service definition document as well as access data service resources by submitting HTTP GET requests through a Web browser to the exposed resources.  
+In this task, you will start the [!INCLUDE [ssAstoria](../../../../includes/ssastoria-md.md)] from Visual Studio and optionally disable feed reading in the Web browser. You will then retrieve the service definition document as well as access data service resources by submitting HTTP GET requests through a Web browser to the exposed resources.  
   
 > [!NOTE]
->  By default, Visual Studio auto-assigns a port number to the `localhost` URI on your computer. This task uses the port number `12345` in the URI examples. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] how to set a specific port number in your Visual Studio project see [Creating the Data Service](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+>  By default, Visual Studio auto-assigns a port number to the `localhost` URI on your computer. This task uses the port number `12345` in the URI examples. [!INCLUDE [crabout](../../../../includes/crabout-md.md)] how to set a specific port number in your Visual Studio project see [Creating the Data Service](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ### To request the default service document by using Internet Explorer  
   
@@ -77,7 +77,7 @@ In this task, you will start the [!INCLUDE[ssAstoria](../../../../includes/ssast
      This filters orders that belong to the specific customer `ALFKI` so that only a specific order is returned based on the supplied `OrderID` value.  
   
 ## Next Steps  
- You have successfully accessed the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] from a Web browser, with the browser issuing HTTP GET requests to specified resources. A Web browser provides an easy way to experiment with the addressing syntax of requests and view the results. However, a production data service is not generally accessed by this method. Typically, applications interact with the data service through application code or scripting languages. Next, you will create a client application that uses client libraries to access data service resources as if they were common language runtime (CLR) objects:  
+ You have successfully accessed the [!INCLUDE [ssAstoria](../../../../includes/ssastoria-md.md)] from a Web browser, with the browser issuing HTTP GET requests to specified resources. A Web browser provides an easy way to experiment with the addressing syntax of requests and view the results. However, a production data service is not generally accessed by this method. Typically, applications interact with the data service through application code or scripting languages. Next, you will create a client application that uses client libraries to access data service resources as if they were common language runtime (CLR) objects:  
   
  [Creating the .NET Framework Client Application](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
   

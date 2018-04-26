@@ -23,24 +23,24 @@ ms.workload:
   - "dotnet"
 ---
 # Data Contract Names
-Sometimes a client and a service do not share the same types. They can still pass data to each other as long as the data contracts are equivalent on both sides. [Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) is based on data contract and data member names, and therefore a mechanism is provided to map types and members to those names. This topic explains the rules for naming data contracts as well as the default behavior of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infrastructure when creating names.  
+Sometimes a client and a service do not share the same types. They can still pass data to each other as long as the data contracts are equivalent on both sides. [Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) is based on data contract and data member names, and therefore a mechanism is provided to map types and members to those names. This topic explains the rules for naming data contracts as well as the default behavior of the [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] infrastructure when creating names.  
   
 ## Basic Rules  
  Basic rules regarding naming data contracts include:  
   
--   A fully-qualified data contract name consists of a namespace and a name.  
+- A fully-qualified data contract name consists of a namespace and a name.  
   
--   Data members have only names, but no namespaces.  
+- Data members have only names, but no namespaces.  
   
--   When processing data contracts, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure is case-sensitive to both the namespaces and the names of data contracts and data members.  
+- When processing data contracts, the [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] infrastructure is case-sensitive to both the namespaces and the names of data contracts and data members.  
   
 ## Data Contract Namespaces  
  A data contract namespace takes the form of a Uniform Resource Identifier (URI). The URI can be either absolute or relative. By default, data contracts for a particular type are assigned a namespace that comes from the common language runtime (CLR) namespace of that type.  
   
- By default, any given CLR namespace (in the format *Clr.Namespace*) is mapped to the namespace "http://schemas.datacontract.org/2004/07/Clr.Namespace". To override this default, apply the <xref:System.Runtime.Serialization.ContractNamespaceAttribute> attribute to the entire module or assembly. Alternatively, to control the data contract namespace for each type, set the <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> property of the <xref:System.Runtime.Serialization.DataContractAttribute>.  
+ By default, any given CLR namespace (in the format *Clr.Namespace*) is mapped to the namespace "<http://schemas.datacontract.org/2004/07/Clr.Namespace>". To override this default, apply the <xref:System.Runtime.Serialization.ContractNamespaceAttribute> attribute to the entire module or assembly. Alternatively, to control the data contract namespace for each type, set the <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> property of the <xref:System.Runtime.Serialization.DataContractAttribute>.  
   
 > [!NOTE]
->  The "http://schemas.microsoft.com/2003/10/Serialization"namespace is reserved and cannot be used as a data contract namespace.  
+>  The "<http://schemas.microsoft.com/2003/10/Serialization"namespace> is reserved and cannot be used as a data contract namespace.  
   
 > [!NOTE]
 >  You cannot override the default namespace in data contract types that contain `delegate` declarations.  

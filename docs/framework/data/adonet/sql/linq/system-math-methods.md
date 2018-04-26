@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # System.Math Methods
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support the following <xref:System.Math> methods.  
+[!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support the following <xref:System.Math> methods.  
   
 -   <xref:System.Math.DivRem%28System.Int32%2CSystem.Int32%2CSystem.Int32%40%29?displayProperty=nameWithType>  
   
@@ -31,7 +31,7 @@ ms.workload:
   
  In SQL, the `ROUND` function instead always rounds away from 0. Therefore 2.5 rounds to 3, contrasted with its rounding to 2 in the .NET Framework.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] passes through to the SQL `ROUND` semantics and does not try to implement Banker's rounding.  
+ [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] passes through to the SQL `ROUND` semantics and does not try to implement Banker's rounding.  
   
 ## See Also  
  [Data Types and Functions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

@@ -18,39 +18,40 @@ ms.workload:
   - "dotnet"
 ---
 # &lt;add&gt; of &lt;allowAccounts&gt;
-Specifies a user account for processes that host [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services, and are granted connection access to the sharing service.  
-  
+Specifies a user account for processes that host [!INCLUDE [indigo2](../../../../../includes/indigo2-md.md)] services, and are granted connection access to the sharing service.  
+
  \<system.serviceModel.activation>  
-  
+
 ## Syntax  
-  
+
 ```xml  
 <allowAccounts>  
    <add securityIdentifier="String"/>  
 </allowAccounts>  
 ```  
-  
+
 ## Attributes and Elements  
  The following sections describe attributes, child elements, and parent elements.  
-  
+
 ### Attributes  
-  
+
 |Attribute|Description|  
 |---------------|-----------------|  
 |securityIdentifier|A string that specifies a unique identifier used to identify a user account. The default values are LocalSystem, Administrators, NS, LS, and IIS_USRS.|  
-  
+
 ### Child Elements  
  None.  
-  
+
 ### Parent Elements  
-  
-|Element|Description|  
-|-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services, and are granted connection access to the sharing service.|  
-  
+
+
+|                                              Element                                              |                                                                                                                              Description                                                                                                                              |
+|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md) | A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host [!INCLUDE [indigo2](../../../../../includes/indigo2-md.md)] services, and are granted connection access to the sharing service. |
+
 ## Example  
  The following configuration example adds the five default identifiers for user accounts to this collection.  
-  
+
 ```xml  
 <allowAccounts>  
    // LocalSystem account  
@@ -65,7 +66,7 @@ Specifies a user account for processes that host [!INCLUDE[indigo2](../../../../
    <add securityIdentifier="S-1-5-32-568"/>  
 </allowAccounts>  
 ```  
-  
+
 ## See Also  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>  
  <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>  

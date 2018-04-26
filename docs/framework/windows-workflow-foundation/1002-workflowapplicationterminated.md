@@ -17,24 +17,26 @@ ms.workload:
 ---
 # 1002 - WorkflowApplicationTerminated
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|1002|  
 |Keywords|WFRuntime|  
 |Level|Information|  
 |Channel|Microsoft-Windows-Application Server-Applications/Debug|  
-  
+
 ## Description  
  Indicates a workflow application has terminated in the Faulted state with an exception.  
-  
+
 ## Message  
  WorkflowApplication Id: '%1' was terminated. It has completed in the Faulted state with an exception.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|WorkflowApplicationId|`xs:string`|The workflow application id|  
-|Exception|`xs:string`|The exception details for the exception|  
-|AppDomain|`xs:string`|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+|    Data Item Name     | Data Item Type |                         Description                          |
+|-----------------------|----------------|--------------------------------------------------------------|
+| WorkflowApplicationId |  `xs:string`   |                 The workflow application id                  |
+|       Exception       |  `xs:string`   |           The exception details for the exception            |
+|       AppDomain       |  `xs:string`   | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+

@@ -38,7 +38,7 @@ Create your class library project:
 
 1. In **Solution Explorer**, right-click on the **ClassLibraryProjects** solution file and from the context menu, select **Add** > **New Project**.
 
-1. In the **Add New Project** dialog, expand the **Visual C#** node, then select the **.NET Standard** node followed by the **Class Library (.NET Standard)** project template. In the **Name** text box, enter "StringLibrary" as the name of the project. Select **OK** to create the class library project.
+2. In the **Add New Project** dialog, expand the **Visual C#** node, then select the **.NET Standard** node followed by the **Class Library (.NET Standard)** project template. In the **Name** text box, enter "StringLibrary" as the name of the project. Select **OK** to create the class library project.
 
    ![Add New Project dialog](./media/library-with-visual-studio/libproject.png)
 
@@ -46,17 +46,17 @@ Create your class library project:
 
    ![Visual Studio application window showing the default class library template code](./media/library-with-visual-studio/stringlibrary.png)
 
-1. Check to make sure that our library targets the correct version of the .NET Standard. Right-click on the library project in the **Solution Explorer** windows, then select **Properties**. The **Target Framework** text box shows that we're targeting .NET Standard 2.0.
+3. Check to make sure that our library targets the correct version of the .NET Standard. Right-click on the library project in the **Solution Explorer** windows, then select **Properties**. The **Target Framework** text box shows that we're targeting .NET Standard 2.0.
 
    ![Project properties for the class library](./media/library-with-visual-studio/properties.png)
 
-1. Replace the code in the code window with the following code and save the file:
+4. Replace the code in the code window with the following code and save the file:
 
    [!CODE-csharp[ClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
 
    The class library, `UtilityLibraries.StringLibrary`, contains a method named `StartsWithUpper`, which returns a <xref:System.Boolean> value that indicates whether the current string instance begins with an uppercase character. The Unicode standard distinguishes uppercase characters from lowercase characters. The <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> method returns `true` if a character is uppercase.
 
-1. On the menu bar, select **Build** > **Build Solution**. The project should compile without error.
+5. On the menu bar, select **Build** > **Build Solution**. The project should compile without error.
 
    ![Output pane showing that the build succeeded](./media/library-with-visual-studio/buildsucceeds.png)
 

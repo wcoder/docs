@@ -138,7 +138,7 @@ The following example shows how to register a standard endpoint in the extension
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- To add a standard endpoint in configuration, add an <`endpoint`> element to the <`service`> element and any needed configuration settings in the <`standardEndpoints`> element. The following example shows how to add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, one of the standard endpoints that ships with [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ To add a standard endpoint in configuration, add an <`endpoint`> element to the <`service`> element and any needed configuration settings in the <`standardEndpoints`> element. The following example shows how to add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, one of the standard endpoints that ships with [!INCLUDE [netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 ```xml  
 <services>  
@@ -156,7 +156,7 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
  The type of standard endpoint is specified using the kind attribute in the <`endpoint`> element. The endpoint is configured within the <`standardEndpoints`> element. In the example above, a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> endpoint is added and configured. The <`udpDiscoveryEndpoint`> element contains a <`standardEndpoint`> that sets the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> property of the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
 ## Standard Endpoints Shipped with the .NET Framework  
- The following table lists the standard endpoints shipped with [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ The following table lists the standard endpoints shipped with [!INCLUDE [netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
  `Mex Endpoint`  
  A standard endpoint that is used to expose service metadata.  

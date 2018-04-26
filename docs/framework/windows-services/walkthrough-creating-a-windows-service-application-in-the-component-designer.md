@@ -43,7 +43,7 @@ This article demonstrates how to create a simple Windows Service application in 
 > [!WARNING]
 >  The Windows Services project template that is required for this walkthrough is not available in the Express edition of Visual Studio.  
   
- [!INCLUDE[note_settings_general](../../../includes/note-settings-general-md.md)]  
+[!INCLUDE [note_settings_general](../../../includes/note-settings-general-md.md)]
   
 <a name="BK_CreateProject"></a>   
 ## Creating a Service  
@@ -71,93 +71,93 @@ This article demonstrates how to create a simple Windows Service application in 
   
 #### To add custom event log functionality to your service  
   
-1.  In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Designer**.  
+1. In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Designer**.  
   
-2.  From the **Components** section of the **Toolbox**, drag an <xref:System.Diagnostics.EventLog> component to the designer.  
+2. From the **Components** section of the **Toolbox**, drag an <xref:System.Diagnostics.EventLog> component to the designer.  
   
-3.  In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Code**.  
+3. In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Code**.  
   
-4.  Add a declaration for the **eventLog** object in the `MyNewService` class, right after the line that declares the `components` variable:  
+4. Add a declaration for the **eventLog** object in the `MyNewService` class, right after the line that declares the `components` variable:  
   
-     [!code-csharp[VbRadconService#16](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#16)]
-     [!code-vb[VbRadconService#16](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#16)]  
+    [!code-csharp[VbRadconService#16](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#16)]
+    [!code-vb[VbRadconService#16](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#16)]  
   
-5.  Add or edit the constructor to define a custom event log:  
+5. Add or edit the constructor to define a custom event log:  
   
-     [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
-     [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]  
+    [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
+    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]  
   
 #### To define what occurs when the service starts  
   
--   In the Code Editor, locate the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method that was automatically overridden when you created the project, and replace the code with the following. This adds an entry to the event log when the service starts running:  
+- In the Code Editor, locate the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method that was automatically overridden when you created the project, and replace the code with the following. This adds an entry to the event log when the service starts running:  
   
-     [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
-     [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]  
+   [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
+   [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]  
   
-     A service application is designed to be long-running, so it usually polls or monitors something in the system. The monitoring is set up in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method. However, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> doesn’t actually do the monitoring. The <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method must return to the operating system after the service's operation has begun. It must not loop forever or block. To set up a simple polling mechanism, you can use the <xref:System.Timers.Timer?displayProperty=nameWithType> component as follows: In the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, set parameters on the component, and then set the <xref:System.Timers.Timer.Enabled%2A> property to `true`. The timer raises events in your code periodically, at which time your service could do its monitoring. You can use the following code to do this:  
+   A service application is designed to be long-running, so it usually polls or monitors something in the system. The monitoring is set up in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method. However, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> doesn’t actually do the monitoring. The <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method must return to the operating system after the service's operation has begun. It must not loop forever or block. To set up a simple polling mechanism, you can use the <xref:System.Timers.Timer?displayProperty=nameWithType> component as follows: In the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, set parameters on the component, and then set the <xref:System.Timers.Timer.Enabled%2A> property to `true`. The timer raises events in your code periodically, at which time your service could do its monitoring. You can use the following code to do this:  
   
-    ```csharp  
-    // Set up a timer to trigger every minute.  
-    System.Timers.Timer timer = new System.Timers.Timer();  
-    timer.Interval = 60000; // 60 seconds  
-    timer.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);  
-    timer.Start();  
-    ```  
+  ```csharp  
+  // Set up a timer to trigger every minute.  
+  System.Timers.Timer timer = new System.Timers.Timer();  
+  timer.Interval = 60000; // 60 seconds  
+  timer.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);  
+  timer.Start();  
+  ```  
   
-    ```vb  
-    ' Set up a timer to trigger every minute.  
-    Dim timer As System.Timers.Timer = New System.Timers.Timer()  
-    timer.Interval = 60000 ' 60 seconds  
-    AddHandler timer.Elapsed, AddressOf Me.OnTimer  
-    timer.Start()  
-    ```  
-     Add a member variable to the class. It will contain the identifier of the next event to write into the event log.
+  ```vb  
+  ' Set up a timer to trigger every minute.  
+  Dim timer As System.Timers.Timer = New System.Timers.Timer()  
+  timer.Interval = 60000 ' 60 seconds  
+  AddHandler timer.Elapsed, AddressOf Me.OnTimer  
+  timer.Start()  
+  ```  
+   Add a member variable to the class. It will contain the identifier of the next event to write into the event log.
 
-    ```csharp
-    private int eventId = 1;
-    ```
+  ```csharp
+  private int eventId = 1;
+  ```
 
-    ```vb
-    Private eventId As Integer = 1
-    ```
+  ```vb
+  Private eventId As Integer = 1
+  ```
 
-     Add code to handle the timer event:  
+   Add code to handle the timer event:  
   
-    ```csharp  
-    public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)  
-    {  
-        // TODO: Insert monitoring activities here.  
-        eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);  
-    }  
-    ```  
+  ```csharp  
+  public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)  
+  {  
+      // TODO: Insert monitoring activities here.  
+      eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);  
+  }  
+  ```  
   
-    ```vb  
-    Private Sub OnTimer(sender As Object, e As Timers.ElapsedEventArgs)  
-        ' TODO: Insert monitoring activities here.  
-        eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId)  
-        eventId = eventId + 1  
-    End Sub  
-    ```  
+  ```vb  
+  Private Sub OnTimer(sender As Object, e As Timers.ElapsedEventArgs)  
+      ' TODO: Insert monitoring activities here.  
+      eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId)  
+      eventId = eventId + 1  
+  End Sub  
+  ```  
   
-     You might want to perform tasks by using background worker threads instead of running all your work on the main thread. For an example of this, see the <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> reference page.  
+   You might want to perform tasks by using background worker threads instead of running all your work on the main thread. For an example of this, see the <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> reference page.  
   
 #### To define what occurs when the service is stopped  
   
--   Replace the code for the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method with the following. This adds an entry to the event log when the service is stopped:  
+- Replace the code for the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method with the following. This adds an entry to the event log when the service is stopped:  
   
-     [!code-csharp[VbRadconService#4](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#4)]
-     [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]  
+   [!code-csharp[VbRadconService#4](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#4)]
+   [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]  
   
  In the next section, you can override the <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, and <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> methods to define additional processing for your component.  
   
 #### To define other actions for the service  
   
--   Locate the method that you want to handle, and override it to define what you want to occur.  
+- Locate the method that you want to handle, and override it to define what you want to occur.  
   
-     The following code shows how you can override the <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> method:  
+   The following code shows how you can override the <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> method:  
   
-     [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
-     [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]  
+   [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
+   [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]  
   
  Some custom actions have to occur when a Windows service is installed by the <xref:System.Configuration.Install.Installer> class. Visual Studio can create these installers specifically for a Windows service and add them to your project.  
   

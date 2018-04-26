@@ -108,28 +108,27 @@ You'll define three methods, each of which calls its [Assert](https://msdn.micro
 
 To create the test methods:
 
-# [C#](#tab/csharp) 
+#### [C#](#tab/csharp/)
 1. In the *UnitTest1.cs* code window, replace the code with the following code:
 
    [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
 
    Note that your test of uppercase characters in the `TestStartsWithUpper` method includes the Greek capital letter alpha (U+0391) and the Cyrillic capital letter EM (U+041C), and the test of lowercase characters in the `TestDoesNotStartWithUpper` method includes the Greek small letter alpha (U+03B1) and the Cyrillic small letter Ghe (U+0433).
 
-1. On the menu bar, select **File** > **Save UnitTest1.cs As**. In the **Save File As** dialog, select the arrow beside the **Save** button, and select **Save with Encoding**.
+2. On the menu bar, select **File** > **Save UnitTest1.cs As**. In the **Save File As** dialog, select the arrow beside the **Save** button, and select **Save with Encoding**.
 
    ![Save File As dialog](./media/testing-library-with-visual-studio/savefileas.png)
-# [Visual Basic](#tab/visual-basic) 
+#### [Visual Basic](#tab/visual-basic/)
 1. In the *UnitTest1.vb* code window, replace the code with the following code:
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
    Note that your test of uppercase characters in the `TestStartsWithUpper` method includes the Greek capital letter alpha (U+0391) and the Cyrillic capital letter EM (U+041C), and the test of lowercase characters in the `TestDoesNotStartWithUpper` method includes the Greek small letter alpha (U+03B1) and the Cyrillic small letter Ghe (U+0433).
 
-1. On the menu bar, select **File** > **Save UnitTest1.vb As**. In the **Save File As** dialog, select the arrow beside the **Save** button, and select **Save with Encoding**.
+2. On the menu bar, select **File** > **Save UnitTest1.vb As**. In the **Save File As** dialog, select the arrow beside the **Save** button, and select **Save with Encoding**.
 
    ![Save File As dialog](./media/testing-library-with-visual-studio/savefileas.png)
----
-
+* * *
 1. In the **Confirm Save As** dialog, select the **Yes** button to save the file.
 
 1. In the **Advanced Save Options** dialog, select **Unicode (UTF-8 with signature) - Codepage 65001** from the **Encoding** drop-down list and select **OK**.

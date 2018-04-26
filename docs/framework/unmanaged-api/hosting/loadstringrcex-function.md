@@ -32,7 +32,7 @@ ms.workload:
 # LoadStringRCEx Function
 Translates an HRESULT value to an appropriate error message for the specified culture.  
   
- This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ This function has been deprecated in the [!INCLUDE [net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## Syntax  
   
@@ -84,7 +84,7 @@ HRESULT LoadStringRCEx (
   
  **Library:** MSCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>  

@@ -21,9 +21,9 @@ ms.workload:
   - "dotnet"
 ---
 # Table-Valued Parameters
-Table-valued parameters provide an easy way to marshal multiple rows of data from a client application to SQL Server without requiring multiple round trips or special server-side logic for processing the data. You can use table-valued parameters to encapsulate rows of data in a client application and send the data to the server in a single parameterized command. The incoming data rows are stored in a table variable that can then be operated on by using [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
+Table-valued parameters provide an easy way to marshal multiple rows of data from a client application to SQL Server without requiring multiple round trips or special server-side logic for processing the data. You can use table-valued parameters to encapsulate rows of data in a client application and send the data to the server in a single parameterized command. The incoming data rows are stored in a table variable that can then be operated on by using [!INCLUDE [tsql](../../../../../includes/tsql-md.md)].  
   
- Column values in table-valued parameters can be accessed using standard [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] SELECT statements. Table-valued parameters are strongly typed and their structure is automatically validated. The size of table-valued parameters is limited only by server memory.  
+ Column values in table-valued parameters can be accessed using standard [!INCLUDE [tsql](../../../../../includes/tsql-md.md)] SELECT statements. Table-valued parameters are strongly typed and their structure is automatically validated. The size of table-valued parameters is limited only by server memory.  
   
 > [!NOTE]
 >  You cannot return data in a table-valued parameter. Table-valued parameters are input-only; the OUTPUT keyword is not supported.  
@@ -47,7 +47,7 @@ Table-valued parameters provide an easy way to marshal multiple rows of data fro
 -   Use the `bcp` utility program or the <xref:System.Data.SqlClient.SqlBulkCopy> object to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.  
   
 ## Creating Table-Valued Parameter Types  
- Table-valued parameters are based on strongly-typed table structures that are defined by using [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](http://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server Books Online.  
+ Table-valued parameters are based on strongly-typed table structures that are defined by using [!INCLUDE [tsql](../../../../../includes/tsql-md.md)] CREATE TYPE statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](http://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server Books Online.  
   
  The following statement creates a table type named CategoryTableType that consists of CategoryID and CategoryName columns:  
   
@@ -56,7 +56,7 @@ CREATE TYPE dbo.CategoryTableType AS TABLE
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
- After you create a table type, you can declare table-valued parameters based on that type. The following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] fragment demonstrates how to declare a table-valued parameter in a stored procedure definition. Note that the READONLY keyword is required for declaring a table-valued parameter.  
+ After you create a table type, you can declare table-valued parameters based on that type. The following [!INCLUDE [tsql](../../../../../includes/tsql-md.md)] fragment demonstrates how to declare a table-valued parameter in a stored procedure definition. Note that the READONLY keyword is required for declaring a table-valued parameter.  
   
 ```  
 CREATE PROCEDURE usp_UpdateCategories   
@@ -66,7 +66,7 @@ CREATE PROCEDURE usp_UpdateCategories
 ## Modifying Data with Table-Valued Parameters (Transact-SQL)  
  Table-valued parameters can be used in set-based data modifications that affect multiple rows by executing a single statement. For example, you can select all the rows in a table-valued parameter and insert them into a database table, or you can create an update statement by joining a table-valued parameter to the table you want to update.  
   
- The following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] UPDATE statement demonstrates how to use a table-valued parameter by joining it to the Categories table. When you use a table-valued parameter with a JOIN in a FROM clause, you must also alias it, as shown here, where the table-valued parameter is aliased as "ec":  
+ The following [!INCLUDE [tsql](../../../../../includes/tsql-md.md)] UPDATE statement demonstrates how to use a table-valued parameter by joining it to the Categories table. When you use a table-valued parameter with a JOIN in a FROM clause, you must also alias it, as shown here, where the table-valued parameter is aliased as "ec":  
   
 ```  
 UPDATE dbo.Categories  
@@ -75,7 +75,7 @@ UPDATE dbo.Categories
     ON dbo.Categories.CategoryID = ec.CategoryID;  
 ```  
   
- This [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] example demonstrates how to select rows from a table-valued parameter to perform an INSERT in a single set-based operation.  
+ This [!INCLUDE [tsql](../../../../../includes/tsql-md.md)] example demonstrates how to select rows from a table-valued parameter to perform an INSERT in a single set-based operation.  
   
 ```  
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
@@ -85,13 +85,13 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## Limitations of Table-Valued Parameters  
  There are several limitations to table-valued parameters:  
   
--   You cannot pass table-valued parameters to [CLR user-defined functions](http://msdn.microsoft.com/library/ms131077.aspx).  
+- You cannot pass table-valued parameters to [CLR user-defined functions](http://msdn.microsoft.com/library/ms131077.aspx).  
   
--   Table-valued parameters can only be indexed to support UNIQUE or PRIMARY KEY constraints. SQL Server does not maintain statistics on table-valued parameters.  
+- Table-valued parameters can only be indexed to support UNIQUE or PRIMARY KEY constraints. SQL Server does not maintain statistics on table-valued parameters.  
   
--   Table-valued parameters are read-only in [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] code. You cannot update the column values in the rows of a table-valued parameter and you cannot insert or delete rows. To modify the data that is passed to a stored procedure or parameterized statement in table-valued parameter, you must insert the data into a temporary table or into a table variable.  
+- Table-valued parameters are read-only in [!INCLUDE [tsql](../../../../../includes/tsql-md.md)] code. You cannot update the column values in the rows of a table-valued parameter and you cannot insert or delete rows. To modify the data that is passed to a stored procedure or parameterized statement in table-valued parameter, you must insert the data into a temporary table or into a table variable.  
   
--   You cannot use ALTER TABLE statements to modify the design of table-valued parameters.  
+- You cannot use ALTER TABLE statements to modify the design of table-valued parameters.  
   
 ## Configuring a SqlParameter Example  
  <xref:System.Data.SqlClient> supports populating table-valued parameters from <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> or <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord> objects. You must specify a type name for the table-valued parameter by using the <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> property of a <xref:System.Data.SqlClient.SqlParameter>. The `TypeName` must match the name of a compatible type previously created on the server. The following code fragment demonstrates how to configure <xref:System.Data.SqlClient.SqlParameter> to insert data.  

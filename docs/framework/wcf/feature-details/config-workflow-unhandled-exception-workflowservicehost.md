@@ -22,42 +22,42 @@ The <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionB
   
 ### To configure WorkflowUnhandledExceptionBehavior  
   
-1.  Add a <`workflowUnhandledException`> element in a <`behavior`> element within a <`serviceBehaviors`> element, using the `action` attribute to specify the action to take when an unhandled exception occurs as shown in the following example.  
+1. Add a <`workflowUnhandledException`> element in a <`behavior`> element within a <`serviceBehaviors`> element, using the `action` attribute to specify the action to take when an unhandled exception occurs as shown in the following example.  
   
-    ```xml  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="">  
-          <workflowUnhandledException action="abandonAndSuspend"/>   
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
-    ```  
+   ```xml  
+   <behaviors>  
+     <serviceBehaviors>  
+       <behavior name="">  
+         <workflowUnhandledException action="abandonAndSuspend"/>   
+       </behavior>  
+     </serviceBehaviors>  
+   </behaviors>  
+   ```  
   
-    > [!NOTE]
-    >  The preceding configuration sample is using simplified configuration. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md).  
+   > [!NOTE]
+   >  The preceding configuration sample is using simplified configuration. [!INCLUDE [crdefault](../../../../includes/crdefault-md.md)] [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md).  
   
-     This behavior can be configured in code as shown in the following example.  
+    This behavior can be configured in code as shown in the following example.  
   
-    ```csharp  
-    host.Description.Behaviors.Add(new WorkflowUnhandledExceptionBehavior { Action = WorkflowUnhandledExceptionAction.AbandonAndSuspend });  
-    ```  
+   ```csharp  
+   host.Description.Behaviors.Add(new WorkflowUnhandledExceptionBehavior { Action = WorkflowUnhandledExceptionAction.AbandonAndSuspend });  
+   ```  
   
-     The `action` attribute of the <`workflowUnhandledException`> element can be set to one of the following values:  
+    The `action` attribute of the <`workflowUnhandledException`> element can be set to one of the following values:  
   
-     **abandon**  
-     Aborts the instance in memory without touching the persisted instance state (that is, roll back to the last persist point).  
+    **abandon**  
+    Aborts the instance in memory without touching the persisted instance state (that is, roll back to the last persist point).  
   
-     **abandonAndSuspend**  
-     Aborts the instance in memory and updates the persisted instance to be suspended.  
+    **abandonAndSuspend**  
+    Aborts the instance in memory and updates the persisted instance to be suspended.  
   
-     **cancel**  
-     Calls cancellation handlers for the instance and then completes the instance in memory, which may also remove it from the instance store  
+    **cancel**  
+    Calls cancellation handlers for the instance and then completes the instance in memory, which may also remove it from the instance store  
   
-     **terminate**  
-     Completes the instance in memory and removes it from the instance store.  
+    **terminate**  
+    Completes the instance in memory and removes it from the instance store.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, see [Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
+    [!INCLUDE [crabout](../../../../includes/crabout-md.md)] <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, see [Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## See Also  
  [Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  

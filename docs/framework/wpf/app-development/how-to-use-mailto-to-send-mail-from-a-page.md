@@ -22,10 +22,10 @@ ms.workload:
   - dotnet
 ---
 # How to: Use mailto: to Send Mail From a Page
-This example shows how to use <xref:System.Windows.Documents.Hyperlink> in conjunction with a **mailto:**[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
+This example shows how to use <xref:System.Windows.Documents.Hyperlink> in conjunction with a **mailto:**[!INCLUDE [TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
 ## Example  
- The following code shows how to use a **mailto:**[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] to open a new mail window that contains an email address, and email address and a subject, and an email address, subject, and body.  
+ The following code shows how to use a **mailto:**[!INCLUDE [TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] to open a new mail window that contains an email address, and email address and a subject, and an email address, subject, and body.  
   
  [!code-xaml[HOWTONavigationMailToSnippet#MailToMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationMailToSnippet/CS/HomePage.xaml#mailtomarkup)]  
   

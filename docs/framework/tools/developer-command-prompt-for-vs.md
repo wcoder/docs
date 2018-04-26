@@ -74,21 +74,21 @@ The Developer Command Prompt for Visual Studio automatically sets the environmen
 ## Running command prompt from inside Visual Studio  
  For easier access, you can add the Visual Studio Developer Command Prompt  or any other command prompt to the Tools menu on Visual Studio, by adding it to the external tools list. This is how you can accomplish that:  
   
-1.  Open Visual Studio.  
+1. Open Visual Studio.  
   
-2.  Select the **Tools** menu and choose **External Tools...**.  
+2. Select the **Tools** menu and choose **External Tools...**.  
   
-3.  On the **External Tools** dialog box, choose the **Add** button. A new entry appears  
+3. On the **External Tools** dialog box, choose the **Add** button. A new entry appears  
   
-4.  Enter a **Title** for your new menu item such as `Command Prompt`.  
+4. Enter a **Title** for your new menu item such as `Command Prompt`.  
   
-5.  In the **Command** field, specify the file you want to launch such as `%comspec%` or `C:\Windows\System32\cmd.exe` .  
+5. In the **Command** field, specify the file you want to launch such as `%comspec%` or `C:\Windows\System32\cmd.exe` .  
   
-6.  In the **Arguments** field, specify where to find the specific command prompt you want to use such as `/k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat"` (this will launch the Developer Command Prompt installed with [!INCLUDE[vs_dev14](../../../includes/vs-dev14-md.md)]). This value needs to be changed according to your Visual Studio version and installation location.  
+6. In the **Arguments** field, specify where to find the specific command prompt you want to use such as `/k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat"` (this will launch the Developer Command Prompt installed with [!INCLUDE [vs_dev14](../../../includes/vs-dev14-md.md)]). This value needs to be changed according to your Visual Studio version and installation location.  
   
-7.  Choose a value for the **Initial directory** field such as **Project Directory** .  
+7. Choose a value for the **Initial directory** field such as **Project Directory** .  
   
-8.  Choose the **OK** button.  
+8. Choose the **OK** button.  
   
  After that, the new menu item is added and you can access the command prompt from the **Tools** menu.  
   

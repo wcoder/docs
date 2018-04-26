@@ -59,22 +59,23 @@ The following table shows aspects of the type syntax for F# types.
 ## Related Topics
 
 
-|Topic|Description|
-|-----|-----------|
-|[Primitive Types](primitive-types.md)|Describes built-in simple types such as integral types, the Boolean type, and character types.|
-|[Unit Type](unit-type.md)|Describes the `unit` type, a type that has one value and that is indicated by (); equivalent to `void` in C# and `Nothing` in Visual Basic.|
-|[Tuples](tuples.md)|Describes the tuple type, a type that consists of associated values of any type grouped in pairs, triples, quadruples, and so on.|
-|[Options](options.md)|Describes the option type, a type that may either have a value or be empty.|
-|[Lists](lists.md)|Describes lists, which are ordered, immutable series of elements all of the same type.|
-|[Arrays](arrays.md)|Describes arrays, which are ordered sets of mutable elements of the same type that occupy a contiguous block of memory and are of fixed size.|
-|[Sequences](sequences.md)|Describes the sequence type, which represents a logical series of values; individual values are computed only as necessary.|
-|[Records](records.md)|Describes the record type, a small aggregate of named values.|
-|[Discriminated Unions](discriminated-unions.md)|Describes the discriminated union type, a type whose values can be any one of a set of possible types.|
-|[Functions](functions/index.md)|Describes function values.|
-|[Classes](classes.md)|Describes the class type, an object type that corresponds to a .NET reference type. Class types can contain members, properties, implemented interfaces, and a base type.|
-|[Structures](structures.md)|Describes the `struct` type, an object type that corresponds to a .NET value type. The `struct` type usually represents a small aggregate of data.|
-|[Interfaces](interfaces.md)|Describes interface types, which are types that represent a set of members that provide certain functionality but that contain no data. An interface type must be implemented by an object type to be useful.|
-|[Delegates](delegates.md)|Describes the delegate type, which represents a function as an object.|
-|[Enumerations](enumerations.md)|Describes enumeration types, whose values belong to a set of named values.|
-|[Attributes](attributes.md)|Describes attributes, which are used to specify metadata for another type.|
-|[Exception Types](exception-handling/exception-types.md)|Describes exceptions, which specify error information.|
+|                          Topic                           |                                                                                                  Description                                                                                                  |
+|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|          [Primitive Types](primitive-types.md)           |                                                        Describes built-in simple types such as integral types, the Boolean type, and character types.                                                         |
+|                [Unit Type](unit-type.md)                 |                                  Describes the `unit` type, a type that has one value and that is indicated by (); equivalent to `void` in C# and `Nothing` in Visual Basic.                                  |
+|                   [Tuples](tuples.md)                    |                                       Describes the tuple type, a type that consists of associated values of any type grouped in pairs, triples, quadruples, and so on.                                       |
+|                  [Options](options.md)                   |                                                                  Describes the option type, a type that may either have a value or be empty.                                                                  |
+|                    [Lists](lists.md)                     |                                                            Describes lists, which are ordered, immutable series of elements all of the same type.                                                             |
+|                   [Arrays](arrays.md)                    |                                 Describes arrays, which are ordered sets of mutable elements of the same type that occupy a contiguous block of memory and are of fixed size.                                 |
+|                [Sequences](sequences.md)                 |                                          Describes the sequence type, which represents a logical series of values; individual values are computed only as necessary.                                          |
+|                  [Records](records.md)                   |                                                                         Describes the record type, a small aggregate of named values.                                                                         |
+|     [Discriminated Unions](discriminated-unions.md)      |                                                    Describes the discriminated union type, a type whose values can be any one of a set of possible types.                                                     |
+|             [Functions](functions/index.md)              |                                                                                          Describes function values.                                                                                           |
+|                  [Classes](classes.md)                   |                   Describes the class type, an object type that corresponds to a .NET reference type. Class types can contain members, properties, implemented interfaces, and a base type.                   |
+|               [Structures](structures.md)                |                              Describes the `struct` type, an object type that corresponds to a .NET value type. The `struct` type usually represents a small aggregate of data.                               |
+|               [Interfaces](interfaces.md)                | Describes interface types, which are types that represent a set of members that provide certain functionality but that contain no data. An interface type must be implemented by an object type to be useful. |
+|                [Delegates](delegates.md)                 |                                                                    Describes the delegate type, which represents a function as an object.                                                                     |
+|             [Enumerations](enumerations.md)              |                                                                  Describes enumeration types, whose values belong to a set of named values.                                                                   |
+|               [Attributes](attributes.md)                |                                                                  Describes attributes, which are used to specify metadata for another type.                                                                   |
+| [Exception Types](exception-handling/exception-types.md) |                                                                            Describes exceptions, which specify error information.                                                                             |
+

@@ -25,7 +25,7 @@ ms.workload:
   - dotnet
 ---
 # Working with Images, Bitmaps, Icons, and Metafiles
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] provides the `Bitmap` class for working with raster images and the `Metafile` class for working with vector images. The `Bitmap` and the `Metafile` classes both inherit from the `Image` class.  
+[!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] provides the `Bitmap` class for working with raster images and the `Metafile` class for working with vector images. The `Bitmap` and the `Metafile` classes both inherit from the `Image` class.  
   
 ## In This Section  
  [How to: Draw an Existing Bitmap to the Screen](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  

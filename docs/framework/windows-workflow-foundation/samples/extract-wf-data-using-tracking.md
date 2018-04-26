@@ -19,7 +19,7 @@ ms.workload:
 This sample demonstrates how to use workflow tracking to extract workflow variables and arguments from activities. It also shows the addition of annotations to tracking records and the extraction of data payload within custom tracking records. The sample uses the Event Tracing for Windows (ETW) tracking participant to extract data from the workflow.  
   
 ## Sample Details  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] provides tracking to gain visibility into the execution of a workflow instance. The tracking runtime emits workflow tracking records during the execution of the workflow. Along with the workflow tracking records, data within the workflow instance can be extracted from the workflow. The following list details the types of data that can be extracted from tracking records:  
+ [!INCLUDE [wf](../../../../includes/wf-md.md)] provides tracking to gain visibility into the execution of a workflow instance. The tracking runtime emits workflow tracking records during the execution of the workflow. Along with the workflow tracking records, data within the workflow instance can be extracted from the workflow. The following list details the types of data that can be extracted from tracking records:  
   
 1.  Workflow variables within an activity and tracking records during activity execution.  
   
@@ -86,35 +86,35 @@ This sample demonstrates how to use workflow tracking to extract workflow variab
   
 #### To use this sample  
   
-1.  Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the WFStockPriceApplication.sln solution file.  
+1. Using [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)], open the WFStockPriceApplication.sln solution file.  
   
-2.  To build the solution, press CTRL+SHIFT+B.  
+2. To build the solution, press CTRL+SHIFT+B.  
   
-3.  To run the solution, press F5.  
+3. To run the solution, press F5.  
   
-     The browser window opens and shows the directory listing for the application.  
+    The browser window opens and shows the directory listing for the application.  
   
-4.  In the browser, click StockPriceService.xamlx.  
+4. In the browser, click StockPriceService.xamlx.  
   
-5.  The browser displays the StockPriceService page, which contains the local service WSDL address. Copy this address.  
+5. The browser displays the StockPriceService page, which contains the local service WSDL address. Copy this address.  
   
-     The following example shows a local service WSDL address. `http://localhost:53797/StockPriceService.xamlx?wsdl`  
+    The following example shows a local service WSDL address. `http://localhost:53797/StockPriceService.xamlx?wsdl`  
   
-6.  Before invoking the service, start Event Viewer and ensure that the event log is listening for tracking events emitted from the workflow service.  
+6. Before invoking the service, start Event Viewer and ensure that the event log is listening for tracking events emitted from the workflow service.  
   
-7.  From the **Start** menu, select **Administrative Tools** and then **Event Viewer**.  
+7. From the **Start** menu, select **Administrative Tools** and then **Event Viewer**.  
   
-8.  In the tree view in Event Viewer, navigate to **Event Viewer**, **Applications and Services Logs**, and **Microsoft**. Right-click **Microsoft** and select **View** and then **Show Analytic and Debug Logs**.  
+8. In the tree view in Event Viewer, navigate to **Event Viewer**, **Applications and Services Logs**, and **Microsoft**. Right-click **Microsoft** and select **View** and then **Show Analytic and Debug Logs**.  
   
-     Ensure that the **Show Analytic and Debug Logs** option is checked.  
+    Ensure that the **Show Analytic and Debug Logs** option is checked.  
   
 9. In the tree view in Event Viewer, navigate to **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, **Application Server-Applications**. Right-click **Analytic** and select **Enable Log**.  
   
-10. Using [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], open the WCF test client.  
+10. Using [!INCLUDE [fileExplorer](../../../../includes/fileexplorer-md.md)], open the WCF test client.  
   
-     The WCF test client (WcfTestClient.exe) is located in the \<[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] installation folder>\Common7\IDE\ folder.  
+     The WCF test client (WcfTestClient.exe) is located in the \<[!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] installation folder>\Common7\IDE\ folder.  
   
-     The default [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] installation folder is C:\Program Files\Microsoft Visual Studio 10.0.  
+     The default [!INCLUDE [vs2010](../../../../includes/vs2010-md.md)] installation folder is C:\Program Files\Microsoft Visual Studio 10.0.  
   
 11. In WCF test client, select **Add Service** from the **File** menu.  
   
@@ -154,11 +154,11 @@ This sample demonstrates how to use workflow tracking to extract workflow variab
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
 ## See Also  

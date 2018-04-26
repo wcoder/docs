@@ -261,6 +261,6 @@ The `IHostedService` interface provides a convenient way to start background tas
 
 
 
->[!div class="step-by-step"]
-[Previous] (test-aspnet-core-services-web-apps.md)
-[Next] (../microservice-ddd-cqrs-patterns/index.md)
+> [!div class="step-by-step"]
+> [Previous](test-aspnet-core-services-web-apps.md)
+> [Next](../microservice-ddd-cqrs-patterns/index.md)

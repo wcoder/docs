@@ -21,13 +21,13 @@ Visual Basic includes several new features to assist in developing applications 
  Provides links to pages that discuss incorporating data access functionality into your applications.
 
  [Visual Studio data tools for .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- Provides links to pages on creating applications that work with data, using [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Provides links to pages on creating applications that work with data, using [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)].  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Provides links to topics that describe how to use LINQ with Visual Basic.  
   
  [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
- Provides information about [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Includes programming examples.  
+ Provides information about [!INCLUDE [vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Includes programming examples.  
   
  [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
  Provides links to topics about how to create a [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) object model in applications.  
@@ -36,7 +36,7 @@ Visual Basic includes several new features to assist in developing applications 
  Provides links to topics about how to create multitiered data applications.  
      
  [Add new connections](/visualstudio/data-tools/add-new-connections)  
- Provides links to pages on connecting your application to data with design-time tools and ADO.NET connection objects, using [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Provides links to pages on connecting your application to data with design-time tools and ADO.NET connection objects, using [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)].  
 
  [Dataset Tools in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  Provides links to pages describing how to load data into datasets and how to execute SQL statements and stored procedures.  

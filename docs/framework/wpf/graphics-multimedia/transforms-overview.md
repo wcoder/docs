@@ -28,7 +28,7 @@ ms.workload:
   - dotnet
 ---
 # Transforms Overview
-This topic describes how to use the [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes to rotate, scale, move (translate), and skew <xref:System.Windows.FrameworkElement> objects.  
+This topic describes how to use the [!INCLUDE [TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes to rotate, scale, move (translate), and skew <xref:System.Windows.FrameworkElement> objects.  
   
   
 <a name="whatIsATransformSection"></a>   
@@ -36,9 +36,9 @@ This topic describes how to use the [!INCLUDE[TLA#tla_2d](../../../../includes/t
  A <xref:System.Windows.Media.Transform> defines how to map, or transform, points from one coordinate space to another coordinate space. This mapping is described by a transformation <xref:System.Windows.Media.Matrix>, which is a collection of three rows with three columns of <xref:System.Double> values.  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uses row-major matrices. Vectors are expressed as row-vectors, not column vectors.  
+>  [!INCLUDE [TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uses row-major matrices. Vectors are expressed as row-vectors, not column vectors.  
   
- The following table shows the structure of a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] matrix.  
+ The following table shows the structure of a [!INCLUDE [TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] matrix.  
   
 ### A 2-D transformation matrix  
   
@@ -48,13 +48,13 @@ This topic describes how to use the [!INCLUDE[TLA#tla_2d](../../../../includes/t
 |<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Default: 0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Default: 1.0|0.0|  
 |<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Default: 0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Default: 0.0|1.0|  
   
- By manipulating matrix values, you can rotate, scale, skew, and move (translate) an object. For example, if you change the value in the first column of the third row (the <xref:System.Windows.Media.Matrix.OffsetX%2A> value) to 100, you can use it to move an object 100 units along the x-axis. If you change the value in the second column of the second row to 3, you can use it to stretch an object to three times its current height. If you change both values, you move the object 100 units along the x-axis and stretch its height by a factor of 3. Because [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] only supports affine transforms, the values in the right column are always 0, 0, 1.  
+ By manipulating matrix values, you can rotate, scale, skew, and move (translate) an object. For example, if you change the value in the first column of the third row (the <xref:System.Windows.Media.Matrix.OffsetX%2A> value) to 100, you can use it to move an object 100 units along the x-axis. If you change the value in the second column of the second row to 3, you can use it to stretch an object to three times its current height. If you change both values, you move the object 100 units along the x-axis and stretch its height by a factor of 3. Because [!INCLUDE [TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] only supports affine transforms, the values in the right column are always 0, 0, 1.  
   
- Although [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] enables you to directly manipulate matrix values, it also provides several <xref:System.Windows.Media.Transform> classes that enable you to transform an object without knowing how the underlying matrix structure is configured. For example, the <xref:System.Windows.Media.ScaleTransform> class enables you to scale an object by setting its <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> and <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> properties, instead of manipulating a transformation matrix. Likewise, the <xref:System.Windows.Media.RotateTransform> class enables you to rotate an object by just setting its <xref:System.Windows.Media.RotateTransform.Angle%2A> property.  
+ Although [!INCLUDE [TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] enables you to directly manipulate matrix values, it also provides several <xref:System.Windows.Media.Transform> classes that enable you to transform an object without knowing how the underlying matrix structure is configured. For example, the <xref:System.Windows.Media.ScaleTransform> class enables you to scale an object by setting its <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> and <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> properties, instead of manipulating a transformation matrix. Likewise, the <xref:System.Windows.Media.RotateTransform> class enables you to rotate an object by just setting its <xref:System.Windows.Media.RotateTransform.Angle%2A> property.  
   
 <a name="transformClassesSection"></a>   
 ## Transform Classes  
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] provides the following [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes for common transformation operations:  
+ [!INCLUDE [TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] provides the following [!INCLUDE [TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes for common transformation operations:  
   
 |Class|Description|Example|Illustration|  
 |-----------|-----------------|-------------|------------------|  
@@ -63,18 +63,18 @@ This topic describes how to use the [!INCLUDE[TLA#tla_2d](../../../../includes/t
 |<xref:System.Windows.Media.SkewTransform>|Skews an element by the specified <xref:System.Windows.Media.SkewTransform.AngleX%2A> and <xref:System.Windows.Media.SkewTransform.AngleY%2A> amounts.|[Skew an Element](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|![Skew illustration](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
 |<xref:System.Windows.Media.TranslateTransform>|Moves (translates) an element by the specified <xref:System.Windows.Media.TranslateTransform.X%2A> and <xref:System.Windows.Media.TranslateTransform.Y%2A> amounts.|[Translate an Element](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![Translate illustration](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
- For creating more complex transformations, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] provides the following two classes:  
+ For creating more complex transformations, [!INCLUDE [TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] provides the following two classes:  
   
 |Class|Description|Example|  
 |-----------|-----------------|-------------|  
 |<xref:System.Windows.Media.TransformGroup>|Groups multiple <xref:System.Windows.Media.TransformGroup> objects into a single <xref:System.Windows.Media.Transform> that you can then apply to transform properties.|[Apply Multiple Transforms to an Object](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|Creates custom transformations that are not provided by the other <xref:System.Windows.Media.Transform> classes. When you use a <xref:System.Windows.Media.MatrixTransform>, you manipulate a Matrix directly.|[Use a MatrixTransform to Create Custom Transforms](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] also provides [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] transformations. For more information, see the <xref:System.Windows.Media.Media3D.Transform3D> class.  
+ [!INCLUDE [TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] also provides [!INCLUDE [TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] transformations. For more information, see the <xref:System.Windows.Media.Media3D.Transform3D> class.  
   
 <a name="transformationproperties"></a>   
 ## Common Transformation Properties  
- One way to transform an object is to declare the appropriate <xref:System.Windows.Media.Transform> type and apply it to the transformation property of the object. Different types of objects have different types of transformation properties. The following table lists several commonly used [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] types and their transformation properties.  
+ One way to transform an object is to declare the appropriate <xref:System.Windows.Media.Transform> type and apply it to the transformation property of the object. Different types of objects have different types of transformation properties. The following table lists several commonly used [!INCLUDE [TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] types and their transformation properties.  
   
 |Type|Transformation properties|  
 |----------|-------------------------------|  
@@ -116,7 +116,7 @@ A Rectangle element rotated 45 degrees about the point (25, 25)
   
  Which property should you use? Because of the performance benefits that it provides, use the <xref:System.Windows.UIElement.RenderTransform%2A> property whenever possible, especially when you use animated <xref:System.Windows.Media.Transform> objects. Use the <xref:System.Windows.FrameworkElement.LayoutTransform%2A> property when scaling, rotating, or skewing and you need the  parent of the element to adjust to the transformed size of the element. Note that, when they are used with the <xref:System.Windows.FrameworkElement.LayoutTransform%2A> property, <xref:System.Windows.Media.TranslateTransform> objects appear to have no effect on elements. That is because the layout system returns the translated element to its original position as part of its processing.  
   
- For additional information about layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], see [Layout](../../../../docs/framework/wpf/advanced/layout.md) overview.  
+ For additional information about layout in [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], see [Layout](../../../../docs/framework/wpf/advanced/layout.md) overview.  
   
 <a name="exampleRotateAnElement45degSection"></a>   
 ## Example: Rotate a FrameworkElement 45 Degrees  

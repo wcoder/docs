@@ -653,26 +653,26 @@ Dynamic update provides a mechanism for workflow application developers to updat
   
 ###  <a name="BKMK_BuildAssembly"></a> To build the updated workflow assembly  
   
-1.  Open a second instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+1. Open a second instance of [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)].  
   
-2.  Choose **Open**, **Project/Solution** from the **File** menu.  
+2. Choose **Open**, **Project/Solution** from the **File** menu.  
   
-3.  Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), select **NumberGuessWorkflowActivities.csproj** (or **vbproj**), and click **Open**.  
+3. Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), select **NumberGuessWorkflowActivities.csproj** (or **vbproj**), and click **Open**.  
   
-4.  In **Solution Explorer**, right click **SequentialNumberGuessWorkflow.xaml** and choose **Exclude From Project**. Do the same thing for **FlowchartNumberGuessWorkflow.xaml** and **StateMachineNumberGuessWorkflow.xaml**. This step removes the previous versions of the workflow definitions from the project.  
+4. In **Solution Explorer**, right click **SequentialNumberGuessWorkflow.xaml** and choose **Exclude From Project**. Do the same thing for **FlowchartNumberGuessWorkflow.xaml** and **StateMachineNumberGuessWorkflow.xaml**. This step removes the previous versions of the workflow definitions from the project.  
   
-5.  Choose **Add Existing Item** from the **Project** menu.  
+5. Choose **Add Existing Item** from the **Project** menu.  
   
-6.  Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+6. Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
-7.  Choose **XAML Files (\*.xaml;\*.xoml)** from the **Files of type** drop-down list.  
+7. Choose **XAML Files (\*.xaml;\*.xoml)** from the **Files of type** drop-down list.  
   
-8.  Select **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, and **StateMachineNumberGuessWorkflow_du.xaml** and click **Add**.  
+8. Select **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, and **StateMachineNumberGuessWorkflow_du.xaml** and click **Add**.  
   
-    > [!NOTE]
-    >  CTRL+Click to select multiple items at a time.  
+   > [!NOTE]
+   >  CTRL+Click to select multiple items at a time.  
   
-     This step adds the updated versions of the workflow definitions to the project.  
+    This step adds the updated versions of the workflow definitions to the project.  
   
 9. Press CTRL+SHIFT+B to build the project.  
   
@@ -684,390 +684,390 @@ Dynamic update provides a mechanism for workflow application developers to updat
   
 ###  <a name="BKMK_UpdateWorkflowVersionMap"></a> To update WorkflowVersionMap with the new versions  
   
-1.  Switch back to the initial instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
-  
-2.  Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.  
-  
-3.  Add three new workflow identities just below the six existing workflow identity declarations. In this tutorial, `1.5.0.0` is used as the `WorkflowIdentity.Version` for the dynamic update identities. These new `v15` workflow identities will be used provide the correct workflow definition for the dynamically updated persisted workflow instances.  
-  
-    ```vb  
-    'Current version identities.  
-    Public StateMachineNumberGuessIdentity As WorkflowIdentity  
-    Public FlowchartNumberGuessIdentity As WorkflowIdentity  
-    Public SequentialNumberGuessIdentity As WorkflowIdentity  
-  
-    'v1 identities.  
-    Public StateMachineNumberGuessIdentity_v1 As WorkflowIdentity  
-    Public FlowchartNumberGuessIdentity_v1 As WorkflowIdentity  
-    Public SequentialNumberGuessIdentity_v1 As WorkflowIdentity  
-  
-    'v1.5 (Dynamimc Update) identities.  
-    Public StateMachineNumberGuessIdentity_v15 As WorkflowIdentity  
-    Public FlowchartNumberGuessIdentity_v15 As WorkflowIdentity  
-    Public SequentialNumberGuessIdentity_v15 As WorkflowIdentity  
-    ```  
-  
-    ```csharp  
-    // Current version identities.  
-    static public WorkflowIdentity StateMachineNumberGuessIdentity;  
-    static public WorkflowIdentity FlowchartNumberGuessIdentity;  
-    static public WorkflowIdentity SequentialNumberGuessIdentity;  
-  
-    // v1 identities.  
-    static public WorkflowIdentity StateMachineNumberGuessIdentity_v1;  
-    static public WorkflowIdentity FlowchartNumberGuessIdentity_v1;  
-    static public WorkflowIdentity SequentialNumberGuessIdentity_v1;  
-  
-    // v1.5 (Dynamic Update) identities.  
-    static public WorkflowIdentity StateMachineNumberGuessIdentity_v15;  
-    static public WorkflowIdentity FlowchartNumberGuessIdentity_v15;  
-    static public WorkflowIdentity SequentialNumberGuessIdentity_v15;  
-    ```  
-  
-4.  Add the following code at the end of the constructor. This code initializes the dynamic update workflow identities, loads the corresponding workflow definitions, and adds them to the workflow version dictionary.  
-  
-    ```vb  
-    'Initialize the dynamic update workflow identities.  
-    StateMachineNumberGuessIdentity_v15 = New WorkflowIdentity With  
-    {  
-        .Name = "StateMachineNumberGuessWorkflow",  
-        .Version = New Version(1, 5, 0, 0)  
-    }  
-  
-    FlowchartNumberGuessIdentity_v15 = New WorkflowIdentity With  
-    {  
-        .Name = "FlowchartNumberGuessWorkflow",  
-        .Version = New Version(1, 5, 0, 0)  
-    }  
-  
-    SequentialNumberGuessIdentity_v15 = New WorkflowIdentity With  
-    {  
-        .Name = "SequentialNumberGuessWorkflow",  
-        .Version = New Version(1, 5, 0, 0)  
-    }  
-  
-    'Add the dynamic update workflow identities to the dictionary along with  
-    'the corresponding workflow definitions loaded from the v15 assembly.  
-    'Assembly.LoadFile requires an absolute path so convert this relative path  
-    'to an absolute path.  
-    Dim v15AssemblyPath As String = "..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v15.dll"  
-    v15AssemblyPath = Path.GetFullPath(v15AssemblyPath)  
-    Dim v15Assembly As Assembly = Assembly.LoadFile(v15AssemblyPath)  
-  
-    map.Add(StateMachineNumberGuessIdentity_v15,  
-        v15Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow"))  
-  
-    map.Add(SequentialNumberGuessIdentity_v15,  
-        v15Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow"))  
-  
-    map.Add(FlowchartNumberGuessIdentity_v15,  
-        v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow"))  
-    ```  
-  
-    ```csharp  
-    // Initialize the dynamic update workflow identities.  
-    StateMachineNumberGuessIdentity_v15 = new WorkflowIdentity  
-    {  
-        Name = "StateMachineNumberGuessWorkflow",  
-        Version = new Version(1, 5, 0, 0)  
-    };  
-  
-    FlowchartNumberGuessIdentity_v15 = new WorkflowIdentity  
-    {  
-        Name = "FlowchartNumberGuessWorkflow",  
-        Version = new Version(1, 5, 0, 0)  
-    };  
-  
-    SequentialNumberGuessIdentity_v15 = new WorkflowIdentity  
-    {  
-        Name = "SequentialNumberGuessWorkflow",  
-        Version = new Version(1, 5, 0, 0)  
-    };  
-  
-    // Add the dynamic update workflow identities to the dictionary along with  
-    // the corresponding workflow definitions loaded from the v15 assembly.  
-    // Assembly.LoadFile requires an absolute path so convert this relative path  
-    // to an absolute path.  
-    string v15AssemblyPath = @"..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v15.dll";  
-    v15AssemblyPath = Path.GetFullPath(v15AssemblyPath);  
-    Assembly v15Assembly = Assembly.LoadFile(v15AssemblyPath);  
-  
-    map.Add(StateMachineNumberGuessIdentity_v15,  
-        v15Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow") as Activity);  
-  
-    map.Add(SequentialNumberGuessIdentity_v15,  
-        v15Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow") as Activity);  
-  
-    map.Add(FlowchartNumberGuessIdentity_v15,  
-        v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);  
-    ```  
-  
-     The following example is the completed `WorkflowVersionMap` class.  
-  
-    ```vb  
-    Public Module WorkflowVersionMap  
-        Dim map As Dictionary(Of WorkflowIdentity, Activity)  
-  
-        'Current version identities.  
-        Public StateMachineNumberGuessIdentity As WorkflowIdentity  
-        Public FlowchartNumberGuessIdentity As WorkflowIdentity  
-        Public SequentialNumberGuessIdentity As WorkflowIdentity  
-  
-        'v1 identities.  
-        Public StateMachineNumberGuessIdentity_v1 As WorkflowIdentity  
-        Public FlowchartNumberGuessIdentity_v1 As WorkflowIdentity  
-        Public SequentialNumberGuessIdentity_v1 As WorkflowIdentity  
-  
-        'v1.5 (Dynamimc Update) identities.  
-        Public StateMachineNumberGuessIdentity_v15 As WorkflowIdentity  
-        Public FlowchartNumberGuessIdentity_v15 As WorkflowIdentity  
-        Public SequentialNumberGuessIdentity_v15 As WorkflowIdentity  
-  
-        Sub New()  
-            map = New Dictionary(Of WorkflowIdentity, Activity)  
-  
-            'Add the current workflow version identities.  
-            StateMachineNumberGuessIdentity = New WorkflowIdentity With  
-            {  
-                .Name = "StateMachineNumberGuessWorkflow",  
-                .Version = New Version(2, 0, 0, 0)  
-            }  
-  
-            FlowchartNumberGuessIdentity = New WorkflowIdentity With  
-            {  
-                .Name = "FlowchartNumberGuessWorkflow",  
-                .Version = New Version(2, 0, 0, 0)  
-            }  
-  
-            SequentialNumberGuessIdentity = New WorkflowIdentity With  
-            {  
-                .Name = "SequentialNumberGuessWorkflow",  
-                .Version = New Version(2, 0, 0, 0)  
-            }  
-  
-            map.Add(StateMachineNumberGuessIdentity, New StateMachineNumberGuessWorkflow())  
-            map.Add(FlowchartNumberGuessIdentity, New FlowchartNumberGuessWorkflow())  
-            map.Add(SequentialNumberGuessIdentity, New SequentialNumberGuessWorkflow())  
-  
-            'Initialize the previous workflow version identities.  
-            StateMachineNumberGuessIdentity_v1 = New WorkflowIdentity With  
-            {  
-                .Name = "StateMachineNumberGuessWorkflow",  
-                .Version = New Version(1, 0, 0, 0)  
-            }  
-  
-            FlowchartNumberGuessIdentity_v1 = New WorkflowIdentity With  
-            {  
-                .Name = "FlowchartNumberGuessWorkflow",  
-                .Version = New Version(1, 0, 0, 0)  
-            }  
-  
-            SequentialNumberGuessIdentity_v1 = New WorkflowIdentity With  
-            {  
-                .Name = "SequentialNumberGuessWorkflow",  
-                .Version = New Version(1, 0, 0, 0)  
-            }  
-  
-            'Add the previous version workflow identities to the dictionary along with  
-            'the corresponding workflow definitions loaded from the v1 assembly.  
-            'Assembly.LoadFile requires an absolute path so convert this relative path  
-            'to an absolute path.  
-            Dim v1AssemblyPath As String = "..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll"  
-            v1AssemblyPath = Path.GetFullPath(v1AssemblyPath)  
-            Dim v1Assembly As Assembly = Assembly.LoadFile(v1AssemblyPath)  
-  
-            map.Add(StateMachineNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow"))  
-  
-            map.Add(SequentialNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow"))  
-  
-            map.Add(FlowchartNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow"))  
-  
-            'Initialize the dynamic update workflow identities.  
-            StateMachineNumberGuessIdentity_v15 = New WorkflowIdentity With  
-            {  
-                .Name = "StateMachineNumberGuessWorkflow",  
-                .Version = New Version(1, 5, 0, 0)  
-            }  
-  
-            FlowchartNumberGuessIdentity_v15 = New WorkflowIdentity With  
-            {  
-                .Name = "FlowchartNumberGuessWorkflow",  
-                .Version = New Version(1, 5, 0, 0)  
-            }  
-  
-            SequentialNumberGuessIdentity_v15 = New WorkflowIdentity With  
-            {  
-                .Name = "SequentialNumberGuessWorkflow",  
-                .Version = New Version(1, 5, 0, 0)  
-            }  
-  
-            'Add the dynamic update workflow identities to the dictionary along with  
-            'the corresponding workflow definitions loaded from the v15 assembly.  
-            'Assembly.LoadFile requires an absolute path so convert this relative path  
-            'to an absolute path.  
-            Dim v15AssemblyPath As String = "..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v15.dll"  
-            v15AssemblyPath = Path.GetFullPath(v15AssemblyPath)  
-            Dim v15Assembly As Assembly = Assembly.LoadFile(v15AssemblyPath)  
-  
-            map.Add(StateMachineNumberGuessIdentity_v15,  
-                v15Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow"))  
-  
-            map.Add(SequentialNumberGuessIdentity_v15,  
-                v15Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow"))  
-  
-            map.Add(FlowchartNumberGuessIdentity_v15,  
-                v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow"))  
-        End Sub  
-  
-        Public Function GetWorkflowDefinition(identity As WorkflowIdentity) As Activity  
-            Return map(identity)  
-        End Function  
-  
-        Public Function GetIdentityDescription(identity As WorkflowIdentity) As String  
-            Return identity.ToString()  
-        End Function  
-    End Module  
-    ```  
-  
-    ```csharp  
-    public static class WorkflowVersionMap  
-    {  
-        static Dictionary<WorkflowIdentity, Activity> map;  
-  
-        // Current version identities.  
-        static public WorkflowIdentity StateMachineNumberGuessIdentity;  
-        static public WorkflowIdentity FlowchartNumberGuessIdentity;  
-        static public WorkflowIdentity SequentialNumberGuessIdentity;  
-  
-        // v1 identities.  
-        static public WorkflowIdentity StateMachineNumberGuessIdentity_v1;  
-        static public WorkflowIdentity FlowchartNumberGuessIdentity_v1;  
-        static public WorkflowIdentity SequentialNumberGuessIdentity_v1;  
-  
-        // v1.5 (Dynamic Update) identities.  
-        static public WorkflowIdentity StateMachineNumberGuessIdentity_v15;  
-        static public WorkflowIdentity FlowchartNumberGuessIdentity_v15;  
-        static public WorkflowIdentity SequentialNumberGuessIdentity_v15;  
-  
-        static WorkflowVersionMap()  
-        {  
-            map = new Dictionary<WorkflowIdentity, Activity>();  
-  
-            // Add the current workflow version identities.  
-            StateMachineNumberGuessIdentity = new WorkflowIdentity  
-            {  
-                Name = "StateMachineNumberGuessWorkflow",  
-                // Version = new Version(1, 0, 0, 0),  
-                Version = new Version(2, 0, 0, 0)  
-            };  
-  
-            FlowchartNumberGuessIdentity = new WorkflowIdentity  
-            {  
-                Name = "FlowchartNumberGuessWorkflow",  
-                // Version = new Version(1, 0, 0, 0),  
-                Version = new Version(2, 0, 0, 0)  
-            };  
-  
-            SequentialNumberGuessIdentity = new WorkflowIdentity  
-            {  
-                Name = "SequentialNumberGuessWorkflow",  
-                // Version = new Version(1, 0, 0, 0),  
-                Version = new Version(2, 0, 0, 0)  
-            };  
-  
-            map.Add(StateMachineNumberGuessIdentity, new StateMachineNumberGuessWorkflow());  
-            map.Add(FlowchartNumberGuessIdentity, new FlowchartNumberGuessWorkflow());  
-            map.Add(SequentialNumberGuessIdentity, new SequentialNumberGuessWorkflow());  
-  
-            // Initialize the previous workflow version identities.  
-            StateMachineNumberGuessIdentity_v1 = new WorkflowIdentity  
-            {  
-                Name = "StateMachineNumberGuessWorkflow",  
-                Version = new Version(1, 0, 0, 0)  
-            };  
-  
-            FlowchartNumberGuessIdentity_v1 = new WorkflowIdentity  
-            {  
-                Name = "FlowchartNumberGuessWorkflow",  
-                Version = new Version(1, 0, 0, 0)  
-            };  
-  
-            SequentialNumberGuessIdentity_v1 = new WorkflowIdentity  
-            {  
-                Name = "SequentialNumberGuessWorkflow",  
-                Version = new Version(1, 0, 0, 0)  
-            };  
-  
-            // Add the previous version workflow identities to the dictionary along with  
-            // the corresponding workflow definitions loaded from the v1 assembly.  
-            // Assembly.LoadFile requires an absolute path so convert this relative path  
-            // to an absolute path.  
-            string v1AssemblyPath = @"..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll";  
-            v1AssemblyPath = Path.GetFullPath(v1AssemblyPath);  
-            Assembly v1Assembly = Assembly.LoadFile(v1AssemblyPath);  
-  
-            map.Add(StateMachineNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow") as Activity);  
-  
-            map.Add(SequentialNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow") as Activity);  
-  
-            map.Add(FlowchartNumberGuessIdentity_v1,  
-                v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);  
-  
-            // Initialize the dynamic update workflow identities.  
-            StateMachineNumberGuessIdentity_v15 = new WorkflowIdentity  
-            {  
-                Name = "StateMachineNumberGuessWorkflow",  
-                Version = new Version(1, 5, 0, 0)  
-            };  
-  
-            FlowchartNumberGuessIdentity_v15 = new WorkflowIdentity  
-            {  
-                Name = "FlowchartNumberGuessWorkflow",  
-                Version = new Version(1, 5, 0, 0)  
-            };  
-  
-            SequentialNumberGuessIdentity_v15 = new WorkflowIdentity  
-            {  
-                Name = "SequentialNumberGuessWorkflow",  
-                Version = new Version(1, 5, 0, 0)  
-            };  
-  
-            // Add the dynamic update workflow identities to the dictionary along with  
-            // the corresponding workflow definitions loaded from the v15 assembly.  
-            // Assembly.LoadFile requires an absolute path so convert this relative path  
-            // to an absolute path.  
-            string v15AssemblyPath = @"..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v15.dll";  
-            v15AssemblyPath = Path.GetFullPath(v15AssemblyPath);  
-            Assembly v15Assembly = Assembly.LoadFile(v15AssemblyPath);  
-  
-            map.Add(StateMachineNumberGuessIdentity_v15,  
-                v15Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow") as Activity);  
-  
-            map.Add(SequentialNumberGuessIdentity_v15,  
-                v15Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow") as Activity);  
-  
-            map.Add(FlowchartNumberGuessIdentity_v15,  
-                v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);  
-        }  
-  
-        public static Activity GetWorkflowDefinition(WorkflowIdentity identity)  
-        {  
-            return map[identity];  
-        }  
-  
-        public static string GetIdentityDescription(WorkflowIdentity identity)  
-        {  
-            return identity.ToString();  
-        }  
-    }  
-    ```  
-  
-5.  Press CTRL+SHIFT+B to build the project.  
+1. Switch back to the initial instance of [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)].  
+  
+2. Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.  
+  
+3. Add three new workflow identities just below the six existing workflow identity declarations. In this tutorial, `1.5.0.0` is used as the `WorkflowIdentity.Version` for the dynamic update identities. These new `v15` workflow identities will be used provide the correct workflow definition for the dynamically updated persisted workflow instances.  
+  
+   ```vb  
+   'Current version identities.  
+   Public StateMachineNumberGuessIdentity As WorkflowIdentity  
+   Public FlowchartNumberGuessIdentity As WorkflowIdentity  
+   Public SequentialNumberGuessIdentity As WorkflowIdentity  
+  
+   'v1 identities.  
+   Public StateMachineNumberGuessIdentity_v1 As WorkflowIdentity  
+   Public FlowchartNumberGuessIdentity_v1 As WorkflowIdentity  
+   Public SequentialNumberGuessIdentity_v1 As WorkflowIdentity  
+  
+   'v1.5 (Dynamimc Update) identities.  
+   Public StateMachineNumberGuessIdentity_v15 As WorkflowIdentity  
+   Public FlowchartNumberGuessIdentity_v15 As WorkflowIdentity  
+   Public SequentialNumberGuessIdentity_v15 As WorkflowIdentity  
+   ```  
+  
+   ```csharp  
+   // Current version identities.  
+   static public WorkflowIdentity StateMachineNumberGuessIdentity;  
+   static public WorkflowIdentity FlowchartNumberGuessIdentity;  
+   static public WorkflowIdentity SequentialNumberGuessIdentity;  
+  
+   // v1 identities.  
+   static public WorkflowIdentity StateMachineNumberGuessIdentity_v1;  
+   static public WorkflowIdentity FlowchartNumberGuessIdentity_v1;  
+   static public WorkflowIdentity SequentialNumberGuessIdentity_v1;  
+  
+   // v1.5 (Dynamic Update) identities.  
+   static public WorkflowIdentity StateMachineNumberGuessIdentity_v15;  
+   static public WorkflowIdentity FlowchartNumberGuessIdentity_v15;  
+   static public WorkflowIdentity SequentialNumberGuessIdentity_v15;  
+   ```  
+  
+4. Add the following code at the end of the constructor. This code initializes the dynamic update workflow identities, loads the corresponding workflow definitions, and adds them to the workflow version dictionary.  
+  
+   ```vb  
+   'Initialize the dynamic update workflow identities.  
+   StateMachineNumberGuessIdentity_v15 = New WorkflowIdentity With  
+   {  
+       .Name = "StateMachineNumberGuessWorkflow",  
+       .Version = New Version(1, 5, 0, 0)  
+   }  
+  
+   FlowchartNumberGuessIdentity_v15 = New WorkflowIdentity With  
+   {  
+       .Name = "FlowchartNumberGuessWorkflow",  
+       .Version = New Version(1, 5, 0, 0)  
+   }  
+  
+   SequentialNumberGuessIdentity_v15 = New WorkflowIdentity With  
+   {  
+       .Name = "SequentialNumberGuessWorkflow",  
+       .Version = New Version(1, 5, 0, 0)  
+   }  
+  
+   'Add the dynamic update workflow identities to the dictionary along with  
+   'the corresponding workflow definitions loaded from the v15 assembly.  
+   'Assembly.LoadFile requires an absolute path so convert this relative path  
+   'to an absolute path.  
+   Dim v15AssemblyPath As String = "..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v15.dll"  
+   v15AssemblyPath = Path.GetFullPath(v15AssemblyPath)  
+   Dim v15Assembly As Assembly = Assembly.LoadFile(v15AssemblyPath)  
+  
+   map.Add(StateMachineNumberGuessIdentity_v15,  
+       v15Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow"))  
+  
+   map.Add(SequentialNumberGuessIdentity_v15,  
+       v15Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow"))  
+  
+   map.Add(FlowchartNumberGuessIdentity_v15,  
+       v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow"))  
+   ```  
+  
+   ```csharp  
+   // Initialize the dynamic update workflow identities.  
+   StateMachineNumberGuessIdentity_v15 = new WorkflowIdentity  
+   {  
+       Name = "StateMachineNumberGuessWorkflow",  
+       Version = new Version(1, 5, 0, 0)  
+   };  
+  
+   FlowchartNumberGuessIdentity_v15 = new WorkflowIdentity  
+   {  
+       Name = "FlowchartNumberGuessWorkflow",  
+       Version = new Version(1, 5, 0, 0)  
+   };  
+  
+   SequentialNumberGuessIdentity_v15 = new WorkflowIdentity  
+   {  
+       Name = "SequentialNumberGuessWorkflow",  
+       Version = new Version(1, 5, 0, 0)  
+   };  
+  
+   // Add the dynamic update workflow identities to the dictionary along with  
+   // the corresponding workflow definitions loaded from the v15 assembly.  
+   // Assembly.LoadFile requires an absolute path so convert this relative path  
+   // to an absolute path.  
+   string v15AssemblyPath = @"..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v15.dll";  
+   v15AssemblyPath = Path.GetFullPath(v15AssemblyPath);  
+   Assembly v15Assembly = Assembly.LoadFile(v15AssemblyPath);  
+  
+   map.Add(StateMachineNumberGuessIdentity_v15,  
+       v15Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow") as Activity);  
+  
+   map.Add(SequentialNumberGuessIdentity_v15,  
+       v15Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow") as Activity);  
+  
+   map.Add(FlowchartNumberGuessIdentity_v15,  
+       v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);  
+   ```  
+  
+    The following example is the completed `WorkflowVersionMap` class.  
+  
+   ```vb  
+   Public Module WorkflowVersionMap  
+       Dim map As Dictionary(Of WorkflowIdentity, Activity)  
+  
+       'Current version identities.  
+       Public StateMachineNumberGuessIdentity As WorkflowIdentity  
+       Public FlowchartNumberGuessIdentity As WorkflowIdentity  
+       Public SequentialNumberGuessIdentity As WorkflowIdentity  
+  
+       'v1 identities.  
+       Public StateMachineNumberGuessIdentity_v1 As WorkflowIdentity  
+       Public FlowchartNumberGuessIdentity_v1 As WorkflowIdentity  
+       Public SequentialNumberGuessIdentity_v1 As WorkflowIdentity  
+  
+       'v1.5 (Dynamimc Update) identities.  
+       Public StateMachineNumberGuessIdentity_v15 As WorkflowIdentity  
+       Public FlowchartNumberGuessIdentity_v15 As WorkflowIdentity  
+       Public SequentialNumberGuessIdentity_v15 As WorkflowIdentity  
+  
+       Sub New()  
+           map = New Dictionary(Of WorkflowIdentity, Activity)  
+  
+           'Add the current workflow version identities.  
+           StateMachineNumberGuessIdentity = New WorkflowIdentity With  
+           {  
+               .Name = "StateMachineNumberGuessWorkflow",  
+               .Version = New Version(2, 0, 0, 0)  
+           }  
+  
+           FlowchartNumberGuessIdentity = New WorkflowIdentity With  
+           {  
+               .Name = "FlowchartNumberGuessWorkflow",  
+               .Version = New Version(2, 0, 0, 0)  
+           }  
+  
+           SequentialNumberGuessIdentity = New WorkflowIdentity With  
+           {  
+               .Name = "SequentialNumberGuessWorkflow",  
+               .Version = New Version(2, 0, 0, 0)  
+           }  
+  
+           map.Add(StateMachineNumberGuessIdentity, New StateMachineNumberGuessWorkflow())  
+           map.Add(FlowchartNumberGuessIdentity, New FlowchartNumberGuessWorkflow())  
+           map.Add(SequentialNumberGuessIdentity, New SequentialNumberGuessWorkflow())  
+  
+           'Initialize the previous workflow version identities.  
+           StateMachineNumberGuessIdentity_v1 = New WorkflowIdentity With  
+           {  
+               .Name = "StateMachineNumberGuessWorkflow",  
+               .Version = New Version(1, 0, 0, 0)  
+           }  
+  
+           FlowchartNumberGuessIdentity_v1 = New WorkflowIdentity With  
+           {  
+               .Name = "FlowchartNumberGuessWorkflow",  
+               .Version = New Version(1, 0, 0, 0)  
+           }  
+  
+           SequentialNumberGuessIdentity_v1 = New WorkflowIdentity With  
+           {  
+               .Name = "SequentialNumberGuessWorkflow",  
+               .Version = New Version(1, 0, 0, 0)  
+           }  
+  
+           'Add the previous version workflow identities to the dictionary along with  
+           'the corresponding workflow definitions loaded from the v1 assembly.  
+           'Assembly.LoadFile requires an absolute path so convert this relative path  
+           'to an absolute path.  
+           Dim v1AssemblyPath As String = "..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll"  
+           v1AssemblyPath = Path.GetFullPath(v1AssemblyPath)  
+           Dim v1Assembly As Assembly = Assembly.LoadFile(v1AssemblyPath)  
+  
+           map.Add(StateMachineNumberGuessIdentity_v1,  
+               v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow"))  
+  
+           map.Add(SequentialNumberGuessIdentity_v1,  
+               v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow"))  
+  
+           map.Add(FlowchartNumberGuessIdentity_v1,  
+               v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow"))  
+  
+           'Initialize the dynamic update workflow identities.  
+           StateMachineNumberGuessIdentity_v15 = New WorkflowIdentity With  
+           {  
+               .Name = "StateMachineNumberGuessWorkflow",  
+               .Version = New Version(1, 5, 0, 0)  
+           }  
+  
+           FlowchartNumberGuessIdentity_v15 = New WorkflowIdentity With  
+           {  
+               .Name = "FlowchartNumberGuessWorkflow",  
+               .Version = New Version(1, 5, 0, 0)  
+           }  
+  
+           SequentialNumberGuessIdentity_v15 = New WorkflowIdentity With  
+           {  
+               .Name = "SequentialNumberGuessWorkflow",  
+               .Version = New Version(1, 5, 0, 0)  
+           }  
+  
+           'Add the dynamic update workflow identities to the dictionary along with  
+           'the corresponding workflow definitions loaded from the v15 assembly.  
+           'Assembly.LoadFile requires an absolute path so convert this relative path  
+           'to an absolute path.  
+           Dim v15AssemblyPath As String = "..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v15.dll"  
+           v15AssemblyPath = Path.GetFullPath(v15AssemblyPath)  
+           Dim v15Assembly As Assembly = Assembly.LoadFile(v15AssemblyPath)  
+  
+           map.Add(StateMachineNumberGuessIdentity_v15,  
+               v15Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow"))  
+  
+           map.Add(SequentialNumberGuessIdentity_v15,  
+               v15Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow"))  
+  
+           map.Add(FlowchartNumberGuessIdentity_v15,  
+               v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow"))  
+       End Sub  
+  
+       Public Function GetWorkflowDefinition(identity As WorkflowIdentity) As Activity  
+           Return map(identity)  
+       End Function  
+  
+       Public Function GetIdentityDescription(identity As WorkflowIdentity) As String  
+           Return identity.ToString()  
+       End Function  
+   End Module  
+   ```  
+  
+   ```csharp  
+   public static class WorkflowVersionMap  
+   {  
+       static Dictionary<WorkflowIdentity, Activity> map;  
+  
+       // Current version identities.  
+       static public WorkflowIdentity StateMachineNumberGuessIdentity;  
+       static public WorkflowIdentity FlowchartNumberGuessIdentity;  
+       static public WorkflowIdentity SequentialNumberGuessIdentity;  
+  
+       // v1 identities.  
+       static public WorkflowIdentity StateMachineNumberGuessIdentity_v1;  
+       static public WorkflowIdentity FlowchartNumberGuessIdentity_v1;  
+       static public WorkflowIdentity SequentialNumberGuessIdentity_v1;  
+  
+       // v1.5 (Dynamic Update) identities.  
+       static public WorkflowIdentity StateMachineNumberGuessIdentity_v15;  
+       static public WorkflowIdentity FlowchartNumberGuessIdentity_v15;  
+       static public WorkflowIdentity SequentialNumberGuessIdentity_v15;  
+  
+       static WorkflowVersionMap()  
+       {  
+           map = new Dictionary<WorkflowIdentity, Activity>();  
+  
+           // Add the current workflow version identities.  
+           StateMachineNumberGuessIdentity = new WorkflowIdentity  
+           {  
+               Name = "StateMachineNumberGuessWorkflow",  
+               // Version = new Version(1, 0, 0, 0),  
+               Version = new Version(2, 0, 0, 0)  
+           };  
+  
+           FlowchartNumberGuessIdentity = new WorkflowIdentity  
+           {  
+               Name = "FlowchartNumberGuessWorkflow",  
+               // Version = new Version(1, 0, 0, 0),  
+               Version = new Version(2, 0, 0, 0)  
+           };  
+  
+           SequentialNumberGuessIdentity = new WorkflowIdentity  
+           {  
+               Name = "SequentialNumberGuessWorkflow",  
+               // Version = new Version(1, 0, 0, 0),  
+               Version = new Version(2, 0, 0, 0)  
+           };  
+  
+           map.Add(StateMachineNumberGuessIdentity, new StateMachineNumberGuessWorkflow());  
+           map.Add(FlowchartNumberGuessIdentity, new FlowchartNumberGuessWorkflow());  
+           map.Add(SequentialNumberGuessIdentity, new SequentialNumberGuessWorkflow());  
+  
+           // Initialize the previous workflow version identities.  
+           StateMachineNumberGuessIdentity_v1 = new WorkflowIdentity  
+           {  
+               Name = "StateMachineNumberGuessWorkflow",  
+               Version = new Version(1, 0, 0, 0)  
+           };  
+  
+           FlowchartNumberGuessIdentity_v1 = new WorkflowIdentity  
+           {  
+               Name = "FlowchartNumberGuessWorkflow",  
+               Version = new Version(1, 0, 0, 0)  
+           };  
+  
+           SequentialNumberGuessIdentity_v1 = new WorkflowIdentity  
+           {  
+               Name = "SequentialNumberGuessWorkflow",  
+               Version = new Version(1, 0, 0, 0)  
+           };  
+  
+           // Add the previous version workflow identities to the dictionary along with  
+           // the corresponding workflow definitions loaded from the v1 assembly.  
+           // Assembly.LoadFile requires an absolute path so convert this relative path  
+           // to an absolute path.  
+           string v1AssemblyPath = @"..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v1.dll";  
+           v1AssemblyPath = Path.GetFullPath(v1AssemblyPath);  
+           Assembly v1Assembly = Assembly.LoadFile(v1AssemblyPath);  
+  
+           map.Add(StateMachineNumberGuessIdentity_v1,  
+               v1Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow") as Activity);  
+  
+           map.Add(SequentialNumberGuessIdentity_v1,  
+               v1Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow") as Activity);  
+  
+           map.Add(FlowchartNumberGuessIdentity_v1,  
+               v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);  
+  
+           // Initialize the dynamic update workflow identities.  
+           StateMachineNumberGuessIdentity_v15 = new WorkflowIdentity  
+           {  
+               Name = "StateMachineNumberGuessWorkflow",  
+               Version = new Version(1, 5, 0, 0)  
+           };  
+  
+           FlowchartNumberGuessIdentity_v15 = new WorkflowIdentity  
+           {  
+               Name = "FlowchartNumberGuessWorkflow",  
+               Version = new Version(1, 5, 0, 0)  
+           };  
+  
+           SequentialNumberGuessIdentity_v15 = new WorkflowIdentity  
+           {  
+               Name = "SequentialNumberGuessWorkflow",  
+               Version = new Version(1, 5, 0, 0)  
+           };  
+  
+           // Add the dynamic update workflow identities to the dictionary along with  
+           // the corresponding workflow definitions loaded from the v15 assembly.  
+           // Assembly.LoadFile requires an absolute path so convert this relative path  
+           // to an absolute path.  
+           string v15AssemblyPath = @"..\..\..\PreviousVersions\NumberGuessWorkflowActivities_v15.dll";  
+           v15AssemblyPath = Path.GetFullPath(v15AssemblyPath);  
+           Assembly v15Assembly = Assembly.LoadFile(v15AssemblyPath);  
+  
+           map.Add(StateMachineNumberGuessIdentity_v15,  
+               v15Assembly.CreateInstance("NumberGuessWorkflowActivities.StateMachineNumberGuessWorkflow") as Activity);  
+  
+           map.Add(SequentialNumberGuessIdentity_v15,  
+               v15Assembly.CreateInstance("NumberGuessWorkflowActivities.SequentialNumberGuessWorkflow") as Activity);  
+  
+           map.Add(FlowchartNumberGuessIdentity_v15,  
+               v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);  
+       }  
+  
+       public static Activity GetWorkflowDefinition(WorkflowIdentity identity)  
+       {  
+           return map[identity];  
+       }  
+  
+       public static string GetIdentityDescription(WorkflowIdentity identity)  
+       {  
+           return identity.ToString();  
+       }  
+   }  
+   ```  
+  
+5. Press CTRL+SHIFT+B to build the project.  
   
 ###  <a name="BKMK_ApplyUpdate"></a> To apply the dynamic updates  
   

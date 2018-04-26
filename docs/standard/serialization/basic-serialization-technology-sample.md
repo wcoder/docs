@@ -31,11 +31,11 @@ ms.workload:
   
 ### To build the sample using Visual Studio  
   
-1.  Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.  
+1. Open [!INCLUDE [fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.  
   
-2.  Double-click the icon for the SerializationCS.sln, SerializationJSL.sln or SerializationVB.sln file, depending on your choice of programming language, to open the file in Visual Studio.  
+2. Double-click the icon for the SerializationCS.sln, SerializationJSL.sln or SerializationVB.sln file, depending on your choice of programming language, to open the file in Visual Studio.  
   
-3.  In the **Build** menu, select **Build Solution**.  
+3. In the **Build** menu, select **Build Solution**.  
   
  The sample application will be built in the default \bin or \bin\Debug subdirectory.  
   

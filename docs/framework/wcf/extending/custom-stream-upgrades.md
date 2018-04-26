@@ -38,7 +38,7 @@ Stream-oriented transports such as TCP and Named Pipes operate on a continuous s
  Note that in the case of multiple upgrades, the Initiator and Acceptor encapsulate state machines to enforce which upgrade transitions are valid for each Initiation.  
   
 ## How to Implement a Stream Upgrade  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] provides four `abstract` classes that you can implement:  
+ [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] provides four `abstract` classes that you can implement:  
   
 -   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
@@ -75,7 +75,7 @@ Stream-oriented transports such as TCP and Named Pipes operate on a continuous s
 ## Security Upgrades  
  Adding a security upgrade is a specialized version of the general stream upgrade process.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] already provides two binding elements for upgrading stream security. The configuration of transport-level security is encapsulated by the <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> and the <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> which can be configured and added to a custom binding. These binding elements extend the <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> class that builds the client and server stream upgrade providers. These binding elements have methods that create the specialized security stream upgrade provider classes, which are not `public`, so for these two cases all you need to do is to add the binding element to the binding.  
+ [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] already provides two binding elements for upgrading stream security. The configuration of transport-level security is encapsulated by the <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> and the <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> which can be configured and added to a custom binding. These binding elements extend the <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> class that builds the client and server stream upgrade providers. These binding elements have methods that create the specialized security stream upgrade provider classes, which are not `public`, so for these two cases all you need to do is to add the binding element to the binding.  
   
  For security scenarios not met by the above two binding elements, three security-related `abstract` classes are derived from the above initiator, acceptor and provider base classes:  
   

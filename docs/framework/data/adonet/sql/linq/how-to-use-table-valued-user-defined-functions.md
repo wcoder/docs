@@ -36,7 +36,7 @@ RETURN
     WHERE UnitPrice > @cost  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] maps the function as follows:  
+ [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] maps the function as follows:  
   
  [!code-csharp[DLinqUDFS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/northwind-tfunc.cs#1)]
  [!code-vb[DLinqUDFS#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#1)]  
@@ -50,7 +50,7 @@ FROM dbo.ProductsCostingMoreThan(80.50)
 AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID  
 ```  
   
- In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the query would be rendered as follows:  
+ In [!INCLUDE [vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the query would be rendered as follows:  
   
  [!code-csharp[DLinqUDFS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#2)]
  [!code-vb[DLinqUDFS#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#2)]  

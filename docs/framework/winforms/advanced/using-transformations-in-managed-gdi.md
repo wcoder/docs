@@ -21,7 +21,7 @@ ms.workload:
   - dotnet
 ---
 # Using Transformations in Managed GDI+
-Affine transformations include rotating, scaling, reflecting, shearing, and translating. In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], the <xref:System.Drawing.Drawing2D.Matrix> class provides the foundation for performing affine transformations on vector drawings, images, and text.  
+Affine transformations include rotating, scaling, reflecting, shearing, and translating. In [!INCLUDE [ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], the <xref:System.Drawing.Drawing2D.Matrix> class provides the foundation for performing affine transformations on vector drawings, images, and text.  
   
 ## In This Section  
  [Using the World Transformation](../../../../docs/framework/winforms/advanced/using-the-world-transformation.md)  

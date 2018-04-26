@@ -16,10 +16,11 @@ ms.author: dotnetcontent
 
 ---
 # Basic Queries (LINQ to XML) (Visual Basic)
-This section provides examples of basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.  
-  
+This section provides examples of basic [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.  
+
 ## In This Section  
-  
+
+
 |Topic|Description|  
 |-----------|-----------------|  
 |[How to: Find an Element with a Specific Attribute (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Shows how to find a particular element that has an attribute that has a specific value.|  
@@ -35,6 +36,6 @@ This section provides examples of basic [!INCLUDE[sqltecxlinq](~/includes/sqltec
 |[How to: Calculate Intermediate Values (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Shows how to use the `Let` clause to calculate intermediate values in a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query.|  
 |[How to: Write a Query that Finds Elements Based on Context (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|Shows how to select elements based on other elements in the tree.|  
 |[How to: Debug Empty Query Results Sets (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Shows the appropriate fix when debugging queries on XML that is in a default namespace.|  
-  
+
 ## See Also  
  [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

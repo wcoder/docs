@@ -110,7 +110,7 @@ Option Strict { On | Off }
  If you are using the command-line compiler, you can use the [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option to specify a setting for `Option Strict`.  
   
 ### To set Option Strict in the IDE  
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE [note_settings_general](~/includes/note-settings-general-md.md)]
   
 1.  In **Solution Explorer**, select a project. On the **Project** menu, click **Properties**.  
   

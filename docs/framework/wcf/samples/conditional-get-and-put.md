@@ -18,7 +18,7 @@ ms.workload:
   - "dotnet"
 ---
 # Conditional Get and Put
-This sample demonstrates how to use the new conditional retrieve and update APIs for the WCF REST programming model. Because conditional retrieve and update are most appropriate for resource-oriented and REST services, this sample extends the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample. This sample focuses on adding support for conditional retrieve and update to the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample using the new APIs introduced in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
+This sample demonstrates how to use the new conditional retrieve and update APIs for the WCF REST programming model. Because conditional retrieve and update are most appropriate for resource-oriented and REST services, this sample extends the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample. This sample focuses on adding support for conditional retrieve and update to the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample using the new APIs introduced in [!INCLUDE [netfx40_long](../../../../includes/netfx40-long-md.md)].  
   
 ## Demonstrates  
  Conditional Retrieve and Update  
@@ -36,21 +36,21 @@ This sample demonstrates how to use the new conditional retrieve and update APIs
   
 #### To run the sample  
   
-1.  Open the solution for the Conditional Get and Put sample. When launching [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], you must run as an administrator to execute the sample successfully. Do this by right-clicking the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icon and choosing **Run as Administrator** from the context menu.  
+1. Open the solution for the Conditional Get and Put sample. When launching [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)], you must run as an administrator to execute the sample successfully. Do this by right-clicking the [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)] icon and choosing **Run as Administrator** from the context menu.  
   
-2.  Press CTRL+SHIFT+B to build the solution and then press CTRL+F5 to run the console application project. If running this project with debugging enabled (by pressing F5 instead of CTRL+F5), the debugger stops when an exception is thrown by the conditional GET and PUT checking. When this happens, press F5 to continue executing the sample.  
+2. Press CTRL+SHIFT+B to build the solution and then press CTRL+F5 to run the console application project. If running this project with debugging enabled (by pressing F5 instead of CTRL+F5), the debugger stops when an exception is thrown by the conditional GET and PUT checking. When this happens, press F5 to continue executing the sample.  
   
-3.  The console window appear sand provides the URI of the running service and the URI of the HTML help page for the running service.  
+3. The console window appear sand provides the URI of the running service and the URI of the HTML help page for the running service.  
   
-4.  As the sample runs, the client sends requests to the service and writes the responses to the console window.  
+4. As the sample runs, the client sends requests to the service and writes the responses to the console window.  
   
-5.  Press any key to terminate the sample.  
+5. Press any key to terminate the sample.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\ConditionalGetAndPut`

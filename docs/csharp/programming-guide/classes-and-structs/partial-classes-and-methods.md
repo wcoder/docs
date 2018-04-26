@@ -72,41 +72,41 @@ It is possible to split the definition of a [class](../../../csharp/language-ref
 ### Restrictions  
  There are several rules to follow when you are working with partial class definitions:  
   
--   All partial-type definitions meant to be parts of the same type must be modified with `partial`. For example, the following class declarations generate an error:  
+- All partial-type definitions meant to be parts of the same type must be modified with `partial`. For example, the following class declarations generate an error:  
   
-     [!code-csharp[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
+   [!code-csharp[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
   
--   The `partial` modifier can only appear immediately before the keywords `class`, `struct`, or `interface`.  
+- The `partial` modifier can only appear immediately before the keywords `class`, `struct`, or `interface`.  
   
--   Nested partial types are allowed in partial-type definitions as illustrated in the following example:  
+- Nested partial types are allowed in partial-type definitions as illustrated in the following example:  
   
-     [!code-csharp[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
+   [!code-csharp[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
   
--   All partial-type definitions meant to be parts of the same type must be defined in the same assembly and the same module (.exe or .dll file). Partial definitions cannot span multiple modules.  
+- All partial-type definitions meant to be parts of the same type must be defined in the same assembly and the same module (.exe or .dll file). Partial definitions cannot span multiple modules.  
   
--   The class name and generic-type parameters must match on all partial-type definitions. Generic types can be partial. Each partial declaration must use the same parameter names in the same order.  
+- The class name and generic-type parameters must match on all partial-type definitions. Generic types can be partial. Each partial declaration must use the same parameter names in the same order.  
   
--   The following keywords on a partial-type definition are optional, but if present on one partial-type definition, cannot conflict with the keywords specified on another partial definition for the same type:  
+- The following keywords on a partial-type definition are optional, but if present on one partial-type definition, cannot conflict with the keywords specified on another partial definition for the same type:  
   
-    -   [public](../../../csharp/language-reference/keywords/public.md)  
+  -   [public](../../../csharp/language-reference/keywords/public.md)  
   
-    -   [private](../../../csharp/language-reference/keywords/private.md)  
+  -   [private](../../../csharp/language-reference/keywords/private.md)  
   
-    -   [protected](../../../csharp/language-reference/keywords/protected.md)  
+  -   [protected](../../../csharp/language-reference/keywords/protected.md)  
   
-    -   [internal](../../../csharp/language-reference/keywords/internal.md)  
+  -   [internal](../../../csharp/language-reference/keywords/internal.md)  
   
-    -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+  -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
   
-    -   [sealed](../../../csharp/language-reference/keywords/sealed.md)  
+  -   [sealed](../../../csharp/language-reference/keywords/sealed.md)  
   
-    -   base class  
+  -   base class  
   
-    -   [new](../../../csharp/language-reference/keywords/new.md) modifier (nested parts)  
+  -   [new](../../../csharp/language-reference/keywords/new.md) modifier (nested parts)  
   
-    -   generic constraints  
+  -   generic constraints  
   
-         For more information, see [Constraints on Type Parameters](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
+       For more information, see [Constraints on Type Parameters](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
   
 ## Example 1  
   
@@ -159,7 +159,7 @@ partial void onNameChanged()
 -   You can make a [delegate](../../../csharp/language-reference/keywords/delegate.md) to a partial method that has been defined and implemented, but not to a partial method that has only been defined.  
   
 ## C# Language Specification  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See Also  
  [C# Programming Guide](../../../csharp/programming-guide/index.md)  

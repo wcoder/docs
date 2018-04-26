@@ -18,10 +18,10 @@ ms.workload:
   - "dotnet"
 ---
 # WCF and .NET Framework Client Profile
-[!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] is a lightweight version of the full .Net Framework designed for clients that don’t need the entire framework. Not all of Windows Communication Foundation is supported by the client framework.  
+[!INCLUDE [arrowhead](../../../includes/arrowhead-md.md)] is a lightweight version of the full .Net Framework designed for clients that don’t need the entire framework. Not all of Windows Communication Foundation is supported by the client framework.  
   
 ## WCF features supported by the .Net Framework Client Profile  
- The following Windows Communication Foundation features are supported by [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)]:  
+ The following Windows Communication Foundation features are supported by [!INCLUDE [arrowhead](../../../includes/arrowhead-md.md)]:  
   
 -   All of WCF is supported except for Cardspace and web hosting.  
   

@@ -16,35 +16,35 @@ ms.workload:
   - "dotnet"
 ---
 # Using the Interop Activity in a .NET Framework 4 Workflow
-Activities created using [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] or [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] can be used in a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow by using the <xref:System.Activities.Statements.Interop> activity. This topic provides an overview of using the <xref:System.Activities.Statements.Interop> activity.  
+Activities created using [!INCLUDE [vstecwinfx](../../../includes/vstecwinfx-md.md)] or [!INCLUDE [netfx35_short](../../../includes/netfx35-short-md.md)] can be used in a [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow by using the <xref:System.Activities.Statements.Interop> activity. This topic provides an overview of using the <xref:System.Activities.Statements.Interop> activity.  
   
 > [!NOTE]
 >  The <xref:System.Activities.Statements.Interop> activity does not appear in the workflow designer toolbox unless the workflow's project has its **Target Framework** setting set to **.Net Framework 4** or later.  
   
 ## Using the Interop Activity in .NET Framework 4.5 Workflows  
- In this topic, a [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] activity library is created that contains a `DiscountCalculator` activity. The `DiscountCalculator` calculates a discount based on a purchase amount and consists of a <xref:System.Workflow.Activities.SequenceActivity> that contains a <xref:System.Workflow.Activities.PolicyActivity>.  
+ In this topic, a [!INCLUDE [netfx35_short](../../../includes/netfx35-short-md.md)] activity library is created that contains a `DiscountCalculator` activity. The `DiscountCalculator` calculates a discount based on a purchase amount and consists of a <xref:System.Workflow.Activities.SequenceActivity> that contains a <xref:System.Workflow.Activities.PolicyActivity>.  
   
 > [!NOTE]
->  The [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] activity created in this topic uses a <xref:System.Workflow.Activities.PolicyActivity> to implement the logic of the activity. It is not required to use a custom [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] activity or the <xref:System.Activities.Statements.Interop> activity in order to use rules in a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow. For an example of using rules in a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow without using the <xref:System.Activities.Statements.Interop> activity, see the [Policy Activity in .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) sample.  
+>  The [!INCLUDE [netfx35_short](../../../includes/netfx35-short-md.md)] activity created in this topic uses a <xref:System.Workflow.Activities.PolicyActivity> to implement the logic of the activity. It is not required to use a custom [!INCLUDE [netfx35_short](../../../includes/netfx35-short-md.md)] activity or the <xref:System.Activities.Statements.Interop> activity in order to use rules in a [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow. For an example of using rules in a [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow without using the <xref:System.Activities.Statements.Interop> activity, see the [Policy Activity in .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) sample.  
   
 #### To create the .NET Framework 3.5 activity library project  
   
-1.  Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] and select **New** and then **Project…** from the **File** menu.  
+1. Open [!INCLUDE [vs_current_long](../../../includes/vs-current-long-md.md)] and select **New** and then **Project…** from the **File** menu.  
   
-2.  Expand the **Other Project Types** node in the **Installed Templates** pane and select **Visual Studio Solutions**.  
+2. Expand the **Other Project Types** node in the **Installed Templates** pane and select **Visual Studio Solutions**.  
   
-3.  Select **Blank Solution** from the **Visual Studio Solutions** list. Type `PolicyInteropDemo` in the **Name** box and click **OK**.  
+3. Select **Blank Solution** from the **Visual Studio Solutions** list. Type `PolicyInteropDemo` in the **Name** box and click **OK**.  
   
-4.  Right-click **PolicyInteropDemo** in **Solution Explorer** and select **Add** and then **New Project…**.  
+4. Right-click **PolicyInteropDemo** in **Solution Explorer** and select **Add** and then **New Project…**.  
   
-    > [!TIP]
-    >  If the **Solution Explorer** window is not visible, select **Solution Explorer** from the **View** menu.  
+   > [!TIP]
+   >  If the **Solution Explorer** window is not visible, select **Solution Explorer** from the **View** menu.  
   
-5.  In the **Installed Templates** list, select **Visual C#** and then **Workflow**. Select **.NET Framework 3.5** from the .NET Framework version drop-down list, and then select **Workflow Activity Library** from the **Templates** list.  
+5. In the **Installed Templates** list, select **Visual C#** and then **Workflow**. Select **.NET Framework 3.5** from the .NET Framework version drop-down list, and then select **Workflow Activity Library** from the **Templates** list.  
   
-6.  Type `PolicyActivityLibrary` in the **Name** box and click **OK**.  
+6. Type `PolicyActivityLibrary` in the **Name** box and click **OK**.  
   
-7.  Right-click **Activity1.cs** in **Solution Explorer** and select **Delete**. Click **OK** to confirm.  
+7. Right-click **Activity1.cs** in **Solution Explorer** and select **Delete**. Click **OK** to confirm.  
   
 #### To create the DiscountCalculator activity  
   
@@ -154,7 +154,7 @@ Rule3: IF this.DiscountPercent > 0
  When the <xref:System.Workflow.Activities.PolicyActivity> executes, these three rules evaluate and modify the `Subtotal`, `DiscountPercent`, and `Total` property values of the `DiscountCalculator` activity to calculate the desired discount.  
   
 ## Using the DiscountCalculator Activity with the Interop Activity  
- To use the `DiscountCalculator` activity inside a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow, the <xref:System.Activities.Statements.Interop> activity is used. In this section two workflows are created, one using code and one using the workflow designer, which show how to use the <xref:System.Activities.Statements.Interop> activity with the `DiscountCalculator` activity. The same host application is used for both workflows.  
+ To use the `DiscountCalculator` activity inside a [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow, the <xref:System.Activities.Statements.Interop> activity is used. In this section two workflows are created, one using code and one using the workflow designer, which show how to use the <xref:System.Activities.Statements.Interop> activity with the `DiscountCalculator` activity. The same host application is used for both workflows.  
   
 #### To create the host application  
   
@@ -361,7 +361,7 @@ Rule3: IF this.DiscountPercent > 0
     ```  
   
 ## Rules Features Overview  
- The [!INCLUDE[wf1](../../../includes/wf1-md.md)] rules engine provides support for processing rules in a priority-based manner with support for forward chaining. Rules can be evaluated for a single item or for items in a collection. For an overview of rules and information on specific rules functionality, please refer to the following table.  
+ The [!INCLUDE [wf1](../../../includes/wf1-md.md)] rules engine provides support for processing rules in a priority-based manner with support for forward chaining. Rules can be evaluated for a single item or for items in a collection. For an overview of rules and information on specific rules functionality, please refer to the following table.  
   
 |Rules Feature|Documentation|  
 |-------------------|-------------------|  
@@ -372,4 +372,4 @@ Rule3: IF this.DiscountPercent > 0
 |Processing Collections in Rules|[Processing Collections in Rules](http://go.microsoft.com/fwlink/?LinkId=178520)|  
 |Using the PolicyActivity|[Using the PolicyActivity Activity](http://go.microsoft.com/fwlink/?LinkId=178521) and <xref:System.Workflow.Activities.PolicyActivity>|  
   
- Workflows created in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] do not use all of the rules features provided by [!INCLUDE[wf1](../../../includes/wf1-md.md)], such as declarative activity conditions and conditional activities such as the <xref:System.Workflow.Activities.ConditionedActivityGroup> and <xref:System.Workflow.Activities.ReplicatorActivity>. If required, this functionality is available for workflows created using [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] and [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Migration Guidance](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+ Workflows created in [!INCLUDE [netfx_current_short](../../../includes/netfx-current-short-md.md)] do not use all of the rules features provided by [!INCLUDE [wf1](../../../includes/wf1-md.md)], such as declarative activity conditions and conditional activities such as the <xref:System.Workflow.Activities.ConditionedActivityGroup> and <xref:System.Workflow.Activities.ReplicatorActivity>. If required, this functionality is available for workflows created using [!INCLUDE [vstecwinfx](../../../includes/vstecwinfx-md.md)] and [!INCLUDE [netfx35_short](../../../includes/netfx35-short-md.md)]. [!INCLUDE [crdefault](../../../includes/crdefault-md.md)] [Migration Guidance](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).

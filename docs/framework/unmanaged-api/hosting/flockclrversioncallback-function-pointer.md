@@ -32,7 +32,7 @@ ms.workload:
 # FLockClrVersionCallback Function Pointer
 Points to a function that the common language runtime (CLR) calls to indicate that initialization has either started or completed.  
   
- This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ This function pointer has been deprecated in the [!INCLUDE [net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## Syntax  
   
@@ -50,7 +50,7 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
   
  **Library:** MSCorWks.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## See Also  
  [LockClrVersion Function](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)  

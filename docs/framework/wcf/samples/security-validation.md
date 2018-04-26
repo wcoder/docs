@@ -85,7 +85,7 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  When adding behavior to all services, it is suggested to backup the Machine.config file before making any change.  
   
- Now run the client provided in the client\bin directory of this sample. An exception has occurs with the following message: "The requested service, 'http://localhost/servicemodelsamples/service.svc' could not be activated." This is expected because an endpoint is considered insecure by the endpoint validating behavior and prevents the service from being started. The behavior also throws an internal exception that describes which endpoint is insecure and writes a message to the system Event Viewer under the "System.ServiceModel 4.0.0.0" source and the "WebHost" category. It is also possible to turn on tracing on the service in this sample. This allows the user to view the exceptions thrown by endpoint validating behavior by opening the resulting service traces using the Service Trace Viewer tool.  
+ Now run the client provided in the client\bin directory of this sample. An exception has occurs with the following message: "The requested service, '<http://localhost/servicemodelsamples/service.svc>' could not be activated." This is expected because an endpoint is considered insecure by the endpoint validating behavior and prevents the service from being started. The behavior also throws an internal exception that describes which endpoint is insecure and writes a message to the system Event Viewer under the "System.ServiceModel 4.0.0.0" source and the "WebHost" category. It is also possible to turn on tracing on the service in this sample. This allows the user to view the exceptions thrown by endpoint validating behavior by opening the resulting service traces using the Service Trace Viewer tool.  
   
 #### To view failed endpoint validation exception messages in the Event Viewer  
   
@@ -107,11 +107,11 @@ public void Validate(ServiceDescription serviceDescription,
   
 > [!IMPORTANT]
 >  The samples may already be installed on your computer. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
 ## See Also  

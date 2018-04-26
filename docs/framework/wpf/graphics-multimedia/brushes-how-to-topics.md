@@ -23,7 +23,7 @@ ms.workload:
   - dotnet
 ---
 # Brushes How-to Topics
-The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.  
+The following topics demonstrate how to use [!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.  
   
 ## In This Section  
  [Animate the Color or Opacity of a SolidColorBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  

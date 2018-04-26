@@ -18,17 +18,17 @@ ms.workload:
   - "dotnet"
 ---
 # Transport: WSE 3.0 TCP Interoperability
-The WSE 3.0 TCP Interoperability Transport sample demonstrates how to implement a TCP duplex session as a custom [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transport. It also demonstrates how you can use the extensibility of the channel layer to interface over the wire with existing deployed systems. The following steps show how to build this custom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transport:  
+The WSE 3.0 TCP Interoperability Transport sample demonstrates how to implement a TCP duplex session as a custom [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] transport. It also demonstrates how you can use the extensibility of the channel layer to interface over the wire with existing deployed systems. The following steps show how to build this custom [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] transport:  
   
-1.  Starting with a TCP socket, create client and server implementations of <xref:System.ServiceModel.Channels.IDuplexSessionChannel> that use DIME Framing to delineate message boundaries.  
+1. Starting with a TCP socket, create client and server implementations of <xref:System.ServiceModel.Channels.IDuplexSessionChannel> that use DIME Framing to delineate message boundaries.  
   
-2.  Create a channel factory that connects to a WSE TCP service and sends framed messages over the client <xref:System.ServiceModel.Channels.IDuplexSessionChannel>s.  
+2. Create a channel factory that connects to a WSE TCP service and sends framed messages over the client <xref:System.ServiceModel.Channels.IDuplexSessionChannel>s.  
   
-3.  Create a channel listener to accept incoming TCP connections and produce corresponding channels.  
+3. Create a channel listener to accept incoming TCP connections and produce corresponding channels.  
   
-4.  Ensure that any network-specific exceptions are normalized to the appropriate derived class of <xref:System.ServiceModel.CommunicationException>.  
+4. Ensure that any network-specific exceptions are normalized to the appropriate derived class of <xref:System.ServiceModel.CommunicationException>.  
   
-5.  Add a binding element that adds the custom transport to a channel stack. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Adding a Binding Element].  
+5. Add a binding element that adds the custom transport to a channel stack. [!INCLUDE [crdefault](../../../../includes/crdefault-md.md)] [Adding a Binding Element].  
   
 ## Creating IDuplexSessionChannel  
  The first step in writing the WSE 3.0 TCP Interoperability Transport is to create an implementation of <xref:System.ServiceModel.Channels.IDuplexSessionChannel> on top of a <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` derives from <xref:System.ServiceModel.Channels.ChannelBase>. The logic of sending a message consists of two main pieces: (1) Encoding the message into bytes, and (2) framing those bytes and sending them on the wire.  
@@ -137,7 +137,7 @@ The WSE 3.0 TCP Interoperability Transport sample demonstrates how to implement 
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- It consists of two tests—one test sets up a typed client using code generated from the WSE 3.0 WSDL. The second test uses [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] as both the client and the server by sending messages directly on top of the channel APIs.  
+ It consists of two tests—one test sets up a typed client using code generated from the WSE 3.0 WSDL. The second test uses [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] as both the client and the server by sending messages directly on top of the channel APIs.  
   
  When running the sample, the following output is expected.  
   
@@ -183,24 +183,24 @@ Symbols:
 1.  To run this sample, you must have WSE 3.0 and the WSE `TcpSyncStockService` sample installed. You can download [WSE 3.0 from MSDN](http://go.microsoft.com/fwlink/?LinkId=95000).  
   
 > [!NOTE]
->  Because WSE 3.0 is not supported on [!INCLUDE[lserver](../../../../includes/lserver-md.md)], you cannot install or run the `TcpSyncStockService` sample on that operating system.  
+>  Because WSE 3.0 is not supported on [!INCLUDE [lserver](../../../../includes/lserver-md.md)], you cannot install or run the `TcpSyncStockService` sample on that operating system.  
   
-1.  Once you install the `TcpSyncStockService` sample, do the following:  
+1. Once you install the `TcpSyncStockService` sample, do the following:  
   
-    1.  Open the `TcpSyncStockService` in Visual Studio (Note that the TcpSyncStockService sample is installed with WSE 3.0. It is not part of this sample's code).  
+   1. Open the `TcpSyncStockService` in Visual Studio (Note that the TcpSyncStockService sample is installed with WSE 3.0. It is not part of this sample's code).  
   
-    2.  Set the StockService project as the start up project.  
+   2. Set the StockService project as the start up project.  
   
-    3.  Open StockService.cs in the StockService project and comment out the [Policy] attribute on the `StockService` class. This disables security from the sample. While [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] can interoperate with WSE 3.0 secure endpoints, security is disabled to keep this sample focused on the custom TCP transport.  
+   3. Open StockService.cs in the StockService project and comment out the [Policy] attribute on the `StockService` class. This disables security from the sample. While [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] can interoperate with WSE 3.0 secure endpoints, security is disabled to keep this sample focused on the custom TCP transport.  
   
-    4.  Press F5 to start the `TcpSyncStockService`. The service starts in a new console window.  
+   4. Press F5 to start the `TcpSyncStockService`. The service starts in a new console window.  
   
-    5.  Open this TCP transport sample in Visual Studio.  
+   5. Open this TCP transport sample in Visual Studio.  
   
-    6.  Update the "hostname" variable in TestCode.cs to match the machine name running the `TcpSyncStockService`.  
+   6. Update the "hostname" variable in TestCode.cs to match the machine name running the `TcpSyncStockService`.  
   
-    7.  Press F5 to start the TCP transport sample.  
+   7. Press F5 to start the TCP transport sample.  
   
-    8.  The TCP transport test client starts in a new console. The client requests stock quotes from the service and then displays the results in its console window.  
+   8. The TCP transport test client starts in a new console. The client requests stock quotes from the service and then displays the results in its console window.  
   
 ## See Also

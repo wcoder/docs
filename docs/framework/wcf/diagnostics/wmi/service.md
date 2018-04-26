@@ -19,9 +19,9 @@ ms.workload:
 ---
 # Service
 Service  
-  
+
 ## Syntax  
-  
+
 ```  
 class Service  
 {  
@@ -39,99 +39,101 @@ class Service
   sint32 ProcessId;  
 };  
 ```  
-  
+
 ## Methods  
  The Service class does not define any methods.  
-  
+
 ## Properties  
  The Service class has the following properties:  
-  
+
 ### BaseAddresses  
  Data type: string array  
-  
+
  Access type: Read-only  
-  
+
  The base addresses used by the service.  
-  
+
 ### Behaviors  
  Data type: Behavior array  
-  
+
  Access type: Read-only  
-  
+
  The behaviors associated with this service.  
-  
+
 ### ConfigurationName  
  Data type: string  
-  
+
  Access type: Read-only  
-  
+
  ServiceElement_BehaviorConfiguration  
-  
+
 ### CounterInstanceName  
  Data type: string  
-  
+
  Access type: Read-only  
-  
+
  Instance name of the instance of the performance counters of the service.  
-  
+
 ### DistinguishedName  
  Data type: string  
-  
+
  Access type: Read-only  
-  
+
  Service name at the address.  
-  
+
 ### Extensions  
  Data type: string array  
-  
+
  Access type: Read-only  
-  
+
  The instance contexts for the extensions of the service instance.  
-  
+
 ### Metadata  
  Data type: string array  
-  
+
  Access type: Read-only  
-  
+
  The service metadata settings.  
-  
+
 ### Name  
  Data type: string  
-  
+
  Access type: Read-only  
-  
+
  The unique name of this service.  
-  
+
 ### Namespace  
  Data type: string  
-  
+
  Access type: Read-only  
-  
+
  The namespace of the service.  
-  
+
 ### Opened  
  Data type: datetime  
-  
+
  Access type: Read-only  
-  
+
  The time the service was opened.  
-  
+
 ### OutgoingChannels  
  Data type: Channel array  
-  
+
  Access type: Read-only  
-  
+
  The channels that are outgoing from the service instance.  
-  
+
 ### ProcessId  
  Data type: sint32  
-  
+
  Access type: Read-only  
-  
+
  The process id of the process that hosts the service.  
-  
+
 ## Requirements  
-  
-|MOF|Declared in Servicemodel.mof.|  
-|---------|-----------------------------------|  
-|Namespace|Defined in root\ServiceModel|
+
+
+|    MOF    | Declared in Servicemodel.mof. |
+|-----------|-------------------------------|
+| Namespace | Defined in root\ServiceModel  |
+

@@ -14,12 +14,12 @@ author: rpetrusha
 ms.author: ronpet
 ---
 # Visual Basic compiler options listed by category
-The Visual Basic command-line compiler is provided as an alternative to compiling programs from within the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrated development environment (IDE). The following is a list of the Visual Basic command-line compiler options sorted by functional category.  
+The Visual Basic command-line compiler is provided as an alternative to compiling programs from within the [!INCLUDE [vsprvs](~/includes/vsprvs-md.md)] integrated development environment (IDE). The following is a list of the Visual Basic command-line compiler options sorted by functional category.  
 
-[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
-  
+[!INCLUDE [compiler-options](~/includes/compiler-options.md)]
+
 ## Compiler output  
-  
+
 |Option|Purpose|  
 |---|---|  
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Suppresses compiler banner information.|  
@@ -27,16 +27,17 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Outputs extra information during compilation.|  
 |`-modulename:<string>`|Specify the name of the source module|  
 |[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Specify a language for compiler output.|  
-  
+
 ## Optimization  
-  
+
 |Option|Purpose|  
 |---|---|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Specifies where to align the sections of the output file.|  
 |[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|Enables/disables optimizations.|  
-  
+
 ## Output files  
-  
+
+
 |Option|Purpose|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Process documentation comments to an XML file.|  
@@ -45,9 +46,9 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |[-refonly](refonly-compiler-option.md)|Outputs only a reference assembly.|
 |[-refout](refout-compiler-option.md)|Specifies the output path of a reference assembly.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Specifies the format of the output.|  
-  
+
 ## .NET assemblies  
-  
+
 |Option|Purpose|  
 |---|---|  
 |[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|Causes the compiler to make all type information from the specified file(s) available to the project you are currently compiling.|  
@@ -60,9 +61,9 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Specifies the name of the assembly that a module will be a part of.|  
 |`-analyzer`|Run the analyzers from this assembly (Short form: -a)|  
 |`-additionalfile`|Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.|  
-  
+
 ## Debugging/error checking  
-  
+
 |Option|Purpose|  
 |---|---|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Creates a file that contains information that makes it easy to report a bug.|  
@@ -72,16 +73,16 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|Disables integer overflow checking.|  
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Promotes warnings to errors.|  
 |`-ruleset:<file>`|Specify a ruleset file that disables specific diagnostics.|  
-  
+
 ## Help  
-  
+
 |Option|Purpose|  
 |---|---|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Displays the compiler options. This command is the same as specifying the `-help` option. No compilation occurs.|  
 |[-help](../../../visual-basic/reference/command-line-compiler/help.md)|Displays the compiler options. This command is the same as specifying the `-?` option. No compilation occurs.|  
-  
+
 ## Language  
-  
+
 |Option|Purpose|  
 |---|---|  
 |[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
@@ -89,24 +90,24 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Enforces strict type semantics.|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Specifies whether string comparisons should be binary or use locale-specific text semantics.|  
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Enables the use of local type inference in variable declarations.|  
-  
+
 ## Preprocessor  
-  
+
 |Option|Purpose|  
 |---|---|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Defines symbols for conditional compilation.|  
-  
+
 ## Resources  
-  
+
 |Option|Purpose|  
 |---|---|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Creates a link to a managed resource.|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Embeds a managed resource in an assembly.|  
 |[-win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|Inserts an .ico file into the output file.|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Inserts a Win32 resource into the output file.|  
-  
+
 ## Miscellaneous  
-  
+
 |Option|Purpose|  
 |---|---|  
 |[@ (Specify Response File)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Specifies a response file.|  
@@ -126,7 +127,7 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.|  
 |`-parallel[+&#124;-]`|Specifies whether to use concurrent build (+).|  
 |`-checksumalgorithm:<alg>`|Specify the algorithm for calculating the source file checksum stored in PDB.  Supported values are: SHA1 (default) or SHA256.|  
-  
+
 ## See Also  
  [Visual Basic Compiler Options Listed Alphabetically](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
  [Introduction to the Project Designer](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  

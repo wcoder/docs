@@ -43,27 +43,27 @@ The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayPrope
   
  **CharSet.Ansi** (default value)  
   
--   String marshaling  
+- String marshaling  
   
-     Platform invoke marshals strings from their managed format (Unicode) to ANSI format.  
+   Platform invoke marshals strings from their managed format (Unicode) to ANSI format.  
   
--   Name matching  
+- Name matching  
   
-     When the <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> field is **true**, as it is by default in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform invoke searches only for the name you specify. For example, if you specify **MessageBox**, platform invoke searches for **MessageBox** and fails when it cannot locate the exact spelling.  
+   When the <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> field is **true**, as it is by default in [!INCLUDE [vbprvblong](../../../includes/vbprvblong-md.md)], platform invoke searches only for the name you specify. For example, if you specify **MessageBox**, platform invoke searches for **MessageBox** and fails when it cannot locate the exact spelling.  
   
-     When the **ExactSpelling** field is **false**, as it is by default in C++ and C#, platform invoke searches for the unmangled alias first (**MessageBox**), then the mangled name (**MessageBoxA**) if the unmangled alias is not found. Notice that ANSI name-matching behavior differs from Unicode name-matching behavior.  
+   When the **ExactSpelling** field is **false**, as it is by default in C++ and C#, platform invoke searches for the unmangled alias first (**MessageBox**), then the mangled name (**MessageBoxA**) if the unmangled alias is not found. Notice that ANSI name-matching behavior differs from Unicode name-matching behavior.  
   
  **CharSet.Unicode**  
   
--   String marshaling  
+- String marshaling  
   
-     Platform invoke copies strings from their managed format (Unicode) to Unicode format.  
+   Platform invoke copies strings from their managed format (Unicode) to Unicode format.  
   
--   Name matching  
+- Name matching  
   
-     When the **ExactSpelling** field is **true**, as it is by default in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform invoke searches only for the name you specify. For example, if you specify **MessageBox**, platform invoke searches for **MessageBox** and fails if it cannot locate the exact spelling.  
+   When the **ExactSpelling** field is **true**, as it is by default in [!INCLUDE [vbprvblong](../../../includes/vbprvblong-md.md)], platform invoke searches only for the name you specify. For example, if you specify **MessageBox**, platform invoke searches for **MessageBox** and fails if it cannot locate the exact spelling.  
   
-     When the **ExactSpelling** field is **false**, as it is by default in C++ and C#, platform invoke searches for the mangled name first (**MessageBoxW**), then the unmangled alias (**MessageBox**) if the mangled name is not found. Notice that Unicode name-matching behavior differs from ANSI name-matching behavior.  
+   When the **ExactSpelling** field is **false**, as it is by default in C++ and C#, platform invoke searches for the mangled name first (**MessageBoxW**), then the unmangled alias (**MessageBox**) if the mangled name is not found. Notice that Unicode name-matching behavior differs from ANSI name-matching behavior.  
   
  **CharSet.Auto**  
   

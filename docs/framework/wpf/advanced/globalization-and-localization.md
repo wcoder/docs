@@ -27,7 +27,7 @@ ms.workload:
   - dotnet
 ---
 # Globalization and Localization
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides extensive support for the development of world-ready applications.  
+[!INCLUDE [TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides extensive support for the development of world-ready applications.  
   
 ## In This Section  
  [WPF Globalization and Localization Overview](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  

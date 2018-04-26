@@ -18,15 +18,15 @@ ms.workload:
   - "dotnet"
 ---
 # Advanced Error Handling
-This sample demonstrates the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] routing service. The routing service is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] component that makes it easy to include a content-based router in your application. This sample shows how the routing service intelligently recovers from errors, using transactions and other more complex messaging concepts such as multicasting.  
+This sample demonstrates the [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] routing service. The routing service is a [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] component that makes it easy to include a content-based router in your application. This sample shows how the routing service intelligently recovers from errors, using transactions and other more complex messaging concepts such as multicasting.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedErrorHandling`  
   
 ## Sample Details  
@@ -36,63 +36,63 @@ This sample demonstrates the [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
 #### To use this sample  
   
-1.  > [!IMPORTANT]
-    >  Install MSMQ before running this sample. If MSMQ is not installed, an exception message is returned when running the sample. Instructions for installing MSMQ can be found at [Installing Message Queuing (MSMQ)](http://go.microsoft.com/fwlink/?LinkId=166437).  
+1. > [!IMPORTANT]
+   >  Install MSMQ before running this sample. If MSMQ is not installed, an exception message is returned when running the sample. Instructions for installing MSMQ can be found at [Installing Message Queuing (MSMQ)](http://go.microsoft.com/fwlink/?LinkId=166437).  
   
-     Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open AdvancedErrorHandling.sln.  
+    Using [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)], open AdvancedErrorHandling.sln.  
   
-2.  Press **F5** or **CTRL+SHIFT+B** in Visual Studio.  
+2. Press **F5** or **CTRL+SHIFT+B** in Visual Studio.  
   
-    1.  If you build the application with CTRL+SHIFT+B, you must start the application at ./RoutingService/bin/debug/RoutingService.exe.  
+   1.  If you build the application with CTRL+SHIFT+B, you must start the application at ./RoutingService/bin/debug/RoutingService.exe.  
   
-3.  In the console window, press ENTER to start the client.  
+3. In the console window, press ENTER to start the client.  
   
-4.  The client returns different statistics about the queues for each case.  
+4. The client returns different statistics about the queues for each case.  
   
-    1.  The following is the output returned for case 1 (no failures).  
+   1.  The following is the output returned for case 1 (no failures).  
   
-        ```Output  
-        The inbound queue has 0 messages.  
-        The primary service queue has 1 messages.   
-        The backup service queue has 0 messages.   
-        The primary logging queue has 1 messages.   
-        The backup logging queue has 0 messages.   
-        Press <Enter> to continue  
-        ```  
+       ```Output  
+       The inbound queue has 0 messages.  
+       The primary service queue has 1 messages.   
+       The backup service queue has 0 messages.   
+       The primary logging queue has 1 messages.   
+       The backup logging queue has 0 messages.   
+       Press <Enter> to continue  
+       ```  
   
-    2.  The following is the output returned for case 3 (primary service and logging queue failures).  
+   2.  The following is the output returned for case 3 (primary service and logging queue failures).  
   
-        ```Output  
-        The inbound queue has 0 messages.   
-        The primary service queue does not exist.   
-        The backup service queue has 1 messages.   
-        The primary logging queue does not exist.   
-        The backup logging queue has 1 messages.   
-        Press <ENTER> to continue.  
-        ```  
+       ```Output  
+       The inbound queue has 0 messages.   
+       The primary service queue does not exist.   
+       The backup service queue has 1 messages.   
+       The primary logging queue does not exist.   
+       The backup logging queue has 1 messages.   
+       Press <ENTER> to continue.  
+       ```  
   
-    3.  The following is the output returned for case 4 (primary service queue and primary and backup logging queue failures).  
+   3.  The following is the output returned for case 4 (primary service queue and primary and backup logging queue failures).  
   
-        ```Output  
-        The inbound queue has 0 messages.   
-        The primary service queue does not exist.  
-        The backup service queue has 0 messages.   
-        The primary logging queue does not exist.   
-        The backup logging queue does not exist.   
-        The System Dead Letter queue has 1 messages.   
-        Press <ENTER> to Quit.  
-        ```  
+       ```Output  
+       The inbound queue has 0 messages.   
+       The primary service queue does not exist.  
+       The backup service queue has 0 messages.   
+       The primary logging queue does not exist.   
+       The backup logging queue does not exist.   
+       The System Dead Letter queue has 1 messages.   
+       Press <ENTER> to Quit.  
+       ```  
   
-    4.  The following is the output returned for case 2 (primary service queue failure).  
+   4.  The following is the output returned for case 2 (primary service queue failure).  
   
-        ```Output  
-        The inbound queue has 0 messages.   
-        The primary service queue does not exist.  
-        The backup service queue has 1 messages.   
-        The primary logging queue has 1 messages.   
-        The backup logging queue has 0 messages.   
-        Press <ENTER> to continue.  
-        ```  
+       ```Output  
+       The inbound queue has 0 messages.   
+       The primary service queue does not exist.  
+       The backup service queue has 1 messages.   
+       The primary logging queue has 1 messages.   
+       The backup logging queue has 0 messages.   
+       Press <ENTER> to continue.  
+       ```  
   
 ## Configurable Via Code or App.config  
  The sample ships configured to use an App.config file to define the router’s behavior. You can also change the name of the RoutingService\App.config file to something else so that it is not recognized and change the value of the `configDriven` field in RoutingService\Program.cs to `false` to use the configuration defined in the code. Either method results in the same behavior from the router.  

@@ -16,10 +16,11 @@ ms.author: dotnetcontent
 
 ---
 # Advanced LINQ to XML Programming (Visual Basic)
-This section provides information that will only be applicable to advanced developers in certain [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] scenarios.  
-  
+This section provides information that will only be applicable to advanced developers in certain [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] scenarios.  
+
 ## In This Section  
-  
+
+
 |Topic|Description|  
 |-----------|-----------------|  
 |[LINQ to XML Annotations](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)|Describes how to add annotations to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nodes and attributes.|  
@@ -33,6 +34,6 @@ This section provides information that will only be applicable to advanced devel
 |[How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|Describes how annotations can be used to facilitate transforms of an XML tree.|  
 |[Serializing Object Graphs that Contain XElement Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|Describes how to serialize object graphs that contain <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XDocument> objects.|  
 |[WPF Data Binding with LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|Describes how to use LINQ to XML as the data source for data binding in Windows Presentation Foundation applications.|  
-  
+
 ## See Also  
  [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

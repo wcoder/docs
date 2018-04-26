@@ -14,17 +14,18 @@ author: "BillWagner"
 ms.author: "wiwagn"
 ---
 # Programming Guide (LINQ to XML) (C#)
-This section provides conceptual and how-to information about programming with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
-  
+This section provides conceptual and how-to information about programming with [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+
 ## Who Should Read This Documentation  
- This documentation targets developers who already understand C# and some basic aspects of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
-  
- The goal of this documentation is to make [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] easy to use for all kinds of developers. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] makes XML programming easier. You do not have to be an expert developer to use it.  
-  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] relies heavily on generic classes. Therefore, is very important that you understand the use of generic classes. Further, it is helpful if you are familiar with delegates that are declared as parameterized types. If you are not familiar with C# generic classes, see [Generic Classes](../../../../csharp/programming-guide/generics/generic-classes.md).  
-  
+ This documentation targets developers who already understand C# and some basic aspects of the [!INCLUDE [dnprdnshort](~/includes/dnprdnshort-md.md)].  
+
+ The goal of this documentation is to make [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] easy to use for all kinds of developers. [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] makes XML programming easier. You do not have to be an expert developer to use it.  
+
+ [!INCLUDE [sqltecxlinq](~/includes/sqltecxlinq-md.md)] relies heavily on generic classes. Therefore, is very important that you understand the use of generic classes. Further, it is helpful if you are familiar with delegates that are declared as parameterized types. If you are not familiar with C# generic classes, see [Generic Classes](../../../../csharp/programming-guide/generics/generic-classes.md).  
+
 ## In This Section  
-  
+
+
 |Topic|Description|  
 |-----------|-----------------|  
 |[LINQ to XML Programming Overview (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Provides an overview of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes, and detailed information about three of the most important classes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>, and <xref:System.Xml.Linq.XDocument>.|  
@@ -37,7 +38,7 @@ This section provides conceptual and how-to information about programming with [
 |[Advanced LINQ to XML Programming (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|Provides information about annotations, events, streaming, and other advanced scenarios.|  
 |[LINQ to XML Security (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-security.md)|Describes security issues associated with LINQ to XML and provides some guidance for mitigating security exposure.|  
 |[Sample XML Documents (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Contains the sample XML documents that are used by many examples in this documentation.|  
-  
+
 ## See Also  
  [Getting Started (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
  [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)

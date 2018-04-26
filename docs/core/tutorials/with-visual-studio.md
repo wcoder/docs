@@ -68,13 +68,13 @@ Enhance your application to prompt the user for their name and display it along 
 
    This code displays "What is your name?" in the console window and waits until the user enters a string followed by the Enter key. It stores this string into a variable named `name`. It also retrieves the value of the <xref:System.DateTime.Now?displayProperty=nameWithType> property, which contains the current local time, and assigns it to a variable named `date`. Finally, it uses an [interpolated string](../../csharp/language-reference/tokens/interpolated.md) to display these values in the console window.
 
-1. Compile the program by choosing **Build** > **Build Solution**.
+2. Compile the program by choosing **Build** > **Build Solution**.
 
-1. Run the program in Debug mode in Visual Studio by selecting the green arrow on the toolbar, pressing F5, or choosing the **Debug** > **Start Debugging** menu item. Respond to the prompt by entering a name and pressing the Enter key.
+3. Run the program in Debug mode in Visual Studio by selecting the green arrow on the toolbar, pressing F5, or choosing the **Debug** > **Start Debugging** menu item. Respond to the prompt by entering a name and pressing the Enter key.
 
    ![Console window with modified program output](./media/with-visual-studio/helloworld2.png)
 
-1. Press any key to close the console window.
+4. Press any key to close the console window.
 
 You've created and run your application. To develop a professional application, take some additional steps to make your application ready for release:
 

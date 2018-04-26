@@ -27,6 +27,6 @@ This guide focuses on microservices, because a SOA approach is less prescriptive
 
 
 
->[!div class="step-by-step"]
-[Previous] (docker-application-state-data.md)
-[Next] (microservices-architecture.md)
+> [!div class="step-by-step"]
+> [Previous](docker-application-state-data.md)
+> [Next](microservices-architecture.md)

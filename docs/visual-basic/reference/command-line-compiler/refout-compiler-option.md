@@ -19,7 +19,7 @@ ms.author: "ronpet"
 
 The **-refout** option specifies a file path where the reference assembly should be output.
 
-[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
+[!INCLUDE [compiler-options](~/includes/compiler-options.md)]
 
 ## Syntax
 

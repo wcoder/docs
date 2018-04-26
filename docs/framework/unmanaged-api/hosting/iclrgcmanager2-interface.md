@@ -50,7 +50,7 @@ Provides methods that allow a host to interact with the common language runtime'
   
  **Library:** Included as a resource in MSCorEE.dll  
   
- **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE [net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## See Also  
  [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)  

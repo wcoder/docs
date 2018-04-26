@@ -147,7 +147,7 @@ Note that if *expr* is `null`, the `is` expression still is true and assigns `nu
 
 # C# Language Specification
   
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE [CSharplangspec](~/includes/csharplangspec-md.md)]
   
 ## See also  
  [C# Reference](../../../csharp/language-reference/index.md)  

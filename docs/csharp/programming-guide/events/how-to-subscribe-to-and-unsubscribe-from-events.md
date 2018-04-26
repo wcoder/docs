@@ -19,21 +19,21 @@ You subscribe to an event that is published by another class when you want to wr
   
 ### To subscribe to events by using the Visual Studio IDE  
   
-1.  If you cannot see the **Properties** window, in **Design** view, right-click the form or control for which you want to create an event handler, and select **Properties**.  
+1. If you cannot see the **Properties** window, in **Design** view, right-click the form or control for which you want to create an event handler, and select **Properties**.  
   
-2.  On top of the **Properties** window, click the **Events** icon.  
+2. On top of the **Properties** window, click the **Events** icon.  
   
-3.  Double-click the event that you want to create, for example the `Load` event.  
+3. Double-click the event that you want to create, for example the `Load` event.  
   
-     Visual C# creates an empty event handler method and adds it to your code. Alternatively you can add the code manually in **Code** view. For example, the following lines of code declare an event handler method that will be called when the `Form` class raises the `Load` event.  
+    Visual C# creates an empty event handler method and adds it to your code. Alternatively you can add the code manually in **Code** view. For example, the following lines of code declare an event handler method that will be called when the `Form` class raises the `Load` event.  
   
-     [!code-csharp[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
+    [!code-csharp[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   
-     The line of code that is required to subscribe to the event is also automatically generated in the `InitializeComponent` method in the Form1.Designer.cs file in your project. It resembles this:  
+    The line of code that is required to subscribe to the event is also automatically generated in the `InitializeComponent` method in the Form1.Designer.cs file in your project. It resembles this:  
   
-    ```csharp
-    this.Load += new System.EventHandler(this.Form1_Load);  
-    ```  
+   ```csharp
+   this.Load += new System.EventHandler(this.Form1_Load);  
+   ```  
   
 ### To subscribe to events programmatically  
   

@@ -18,10 +18,10 @@ ms.workload:
   - "dotnet"
 ---
 # Date and Time Canonical Functions
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] includes date and time canonical functions.  
+[!INCLUDE [esql](../../../../../../includes/esql-md.md)] includes date and time canonical functions.  
   
 ## Remarks  
- The following table shows the date and time [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions. `datetime` is a <xref:System.DateTime> value.  
+ The following table shows the date and time [!INCLUDE [esql](../../../../../../includes/esql-md.md)] canonical functions. `datetime` is a <xref:System.DateTime> value.  
   
 |Function|Description|  
 |--------------|-----------------|  

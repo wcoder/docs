@@ -18,7 +18,7 @@ In this tutorial, you explore the **Symbol** and **Binding APIs**. These APIs pr
 
 You'll need to install the **.NET Compiler Platform SDK**:
 
-[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+[!INCLUDE [interactive-note](~/includes/roslyn-installation.md)]
 
 ## Understanding Compilations and Symbols
 

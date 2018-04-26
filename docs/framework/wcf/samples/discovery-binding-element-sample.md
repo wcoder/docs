@@ -20,19 +20,19 @@ ms.workload:
 # Discovery Binding Element Sample
 This sample demonstrates how to use the discovery client binding element to discover a service. This feature enables developers to add a discovery client channel to their existing client channel stack, making the programming model very intuitive. When the associated channel is opened, the address of the service is resolved using discovery. This sample consists of the following projects:  
   
--   **CalculatorService**: A discoverable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.  
+- **CalculatorService**: A discoverable [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] service.  
   
--   **CalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application that uses the discovery client channel to search for and call the CalculatorService.  
+- **CalculatorClient**: A [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] client application that uses the discovery client channel to search for and call the CalculatorService.  
   
--   **DynamicCalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application that uses a dynamic endpoint to search for and call the CalculatorService.  
+- **DynamicCalculatorClient**: A [!INCLUDE [indigo2](../../../../includes/indigo2-md.md)] client application that uses a dynamic endpoint to search for and call the CalculatorService.  
   
 > [!IMPORTANT]
 >  The samples may already be installed on your machine. Check for the following (default) directory before continuing.  
->   
+> 
 >  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
->   
+> 
+>  If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE [indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE [wf1](../../../../includes/wf1-md.md)] samples. This sample is located in the following directory.  
+> 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
   
 ## CalculatorService  
@@ -90,7 +90,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- After the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> is instantiated, the developer specifies the criteria to use when searching for a service. In this case, the discovery find criterion is the `ICalculatorService` type. Additionally, the developer specifies a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> which returns a <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> that specifies where to look for the services. The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> returns a new <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instance. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using a Custom Binding with the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
+ After the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> is instantiated, the developer specifies the criteria to use when searching for a service. In this case, the discovery find criterion is the `ICalculatorService` type. Additionally, the developer specifies a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> which returns a <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> that specifies where to look for the services. The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> returns a new <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instance. [!INCLUDE [crdefault](../../../../includes/crdefault-md.md)] [Using a Custom Binding with the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -120,12 +120,12 @@ CalculatorServiceClient client = new CalculatorServiceClient(CreateCustomBinding
   
 #### To use this sample  
   
-1.  Open the solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1. Open the solution in [!INCLUDE [vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-2.  Build the solution.  
+2. Build the solution.  
   
-3.  Run the service application and each of the client applications.  
+3. Run the service application and each of the client applications.  
   
-4.  Observe that the client was able to find the service without knowing its address.  
+4. Observe that the client was able to find the service without knowing its address.  
   
 ## See Also

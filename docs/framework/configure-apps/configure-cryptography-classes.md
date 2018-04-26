@@ -25,7 +25,7 @@ ms.workload:
   - "dotnet"
 ---
 # Configuring Cryptography Classes
-The [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] allows computer administrators to configure the default cryptographic algorithms and algorithm implementations that the .NET Framework and appropriately written applications use.  For example, an enterprise that has its own implementation of a cryptographic algorithm can make that implementation the default instead of the implementation shipped in the [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Although managed applications that use cryptography can always choose to explicitly bind to a particular implementation, it is recommended that they create cryptographic objects by using the crypto configuration system.  
+The [!INCLUDE [winsdklong](../../../includes/winsdklong-md.md)] allows computer administrators to configure the default cryptographic algorithms and algorithm implementations that the .NET Framework and appropriately written applications use.  For example, an enterprise that has its own implementation of a cryptographic algorithm can make that implementation the default instead of the implementation shipped in the [!INCLUDE [winsdkshort](../../../includes/winsdkshort-md.md)]. Although managed applications that use cryptography can always choose to explicitly bind to a particular implementation, it is recommended that they create cryptographic objects by using the crypto configuration system.  
   
 ## In This Section  
  [Mapping Algorithm Names to Cryptography Classes](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  
@@ -36,7 +36,7 @@ The [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] allows computer a
   
 ## Related Sections  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
- Provides an overview of cryptographic services provided by the [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)].  
+ Provides an overview of cryptographic services provided by the [!INCLUDE [winsdkshort](../../../includes/winsdkshort-md.md)].  
   
  [Cryptography Settings Schema](../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  Describes elements that map friendly algorithm names to classes that implement cryptography algorithms.

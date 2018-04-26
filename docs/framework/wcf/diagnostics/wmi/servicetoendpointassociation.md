@@ -19,9 +19,9 @@ ms.workload:
 ---
 # ServiceToEndpointAssociation
 Maps a service to an endpoint.  
-  
+
 ## Syntax  
-  
+
 ```  
 class ServiceToEndpointAssociation  
 {  
@@ -29,31 +29,33 @@ class ServiceToEndpointAssociation
   Endpoint ref;  
 };  
 ```  
-  
+
 ## Methods  
  The ServiceToEndpointAssociation class does not define any methods.  
-  
+
 ## Properties  
  The ServiceToEndpointAssociation class has the following properties:  
-  
+
 ### ref  
  Data type: Service  
-  
+
  Access type: Read-only  
 Qualifiers: Key  
-  
+
  The service associated with the endpoint.  
-  
+
 ### ref  
  Data type: Endpoint  
-  
+
  Access type: Read-only  
 Qualifiers: Key  
-  
+
  The endpoint associated with the service.  
-  
+
 ## Requirements  
-  
-|MOF|Declared in Servicemodel.mof.|  
-|---------|-----------------------------------|  
-|Namespace|Defined in root\ServiceModel|
+
+
+|    MOF    | Declared in Servicemodel.mof. |
+|-----------|-------------------------------|
+| Namespace | Defined in root\ServiceModel  |
+

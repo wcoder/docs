@@ -19,23 +19,25 @@ ms.workload:
 ---
 # 401- StopSignPostEvent
 ## Properties  
-  
+
 |||  
 |-|-|  
 |ID|401|  
 |Keywords|Troubleshooting|  
 |Level|Information|  
 |Channel|Microsoft-Windows-Application Server-Applications/Analytic|  
-  
+
 ## Description  
  This event marks the end of an end-to-end activity. It contains the name of the activity.  
-  
+
 ## Message  
  Activity boundary.  
-  
+
 ## Details  
-  
-|Data Item Name|Data Item Type|Description|  
-|--------------------|--------------------|-----------------|  
-|Extended Data|`xs:string`|The name of the activity.|  
-|AppDomain|`xs:string`|The string returned by AppDomain.CurrentDomain.FriendlyName.|
+
+
+| Data Item Name | Data Item Type |                         Description                          |
+|----------------|----------------|--------------------------------------------------------------|
+| Extended Data  |  `xs:string`   |                  The name of the activity.                   |
+|   AppDomain    |  `xs:string`   | The string returned by AppDomain.CurrentDomain.FriendlyName. |
+
