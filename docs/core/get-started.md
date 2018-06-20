@@ -7,7 +7,25 @@ ms.date: 09/14/2017
 ---
 # Get started with .NET Core
 
-.NET Core runs on [Windows](#windows), [Linux](#linux), and [macOS / OS X](#os-x--macos).
+.NET Core runs on [Windows](#tab/windows), [Linux](#linux), and [macOS / OS X](#os-x--macos).
+
+
+# [Windows](#tab/windows)
+
+Tab content-1-1.
+
+# [Linux](#tab/linux)
+
+Tab content-2-1.
+
+# [macOS / OS X](#tab/mac)
+
+Child content
+
+***
+
+
+
 
 ## Windows
 
