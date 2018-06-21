@@ -5,29 +5,12 @@ author: johalex
 ms.author: johalex
 ms.date: 09/14/2017
 ---
+
 # Get started with .NET Core
 
-.NET Core runs on [Windows](#tab/windows), [Linux](#linux), and [macOS / OS X](#os-x--macos).
-
+This article provides Links to .NET Core tutorials for installing and creating .NET Core apps on Windows, Mac, and Linux.
 
 # [Windows](#tab/windows)
-
-Tab content-1-1.
-
-# [Linux](#tab/linux)
-
-Tab content-2-1.
-
-# [macOS / OS X](#tab/mac)
-
-Child content
-
-***
-
-
-
-
-## Windows
 
 Install .NET Core on [Windows](https://www.microsoft.com/net/core#windows). 
 
@@ -43,18 +26,7 @@ You can get started developing .NET Core apps by following these step-by-step tu
 
 See the [Prerequisites for Windows development](windows-prerequisites.md) topic for a list of the supported Windows versions.
 
-## Linux
-
-Install .NET Core on [Linux](https://www.microsoft.com/net/core#linuxredhat).
-
-You can get started developing .NET Core apps by following these step-by-step tutorials.
-
-* [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) - Use any code editor with the [.NET Core cross-platform command-line interface (CLI)](tools/index.md).
-* [Get started with Visual Studio Code using C# and .NET Core on Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) - This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio Code](https://code.visualstudio.com/), Microsoft's lightweight cross-platform code editor, to create your first console application in .NET Core on Ubuntu 14.04.
-
-See the [Prerequisites for Linux development](linux-prerequisites.md) topic for a list of the supported Linux distros and versions.
-
-## OS X / macOS
+# [macOS / OS X](#tab/mac)
 
 Install .NET Core for [macOS](https://www.microsoft.com/net/core#macos). .NET Core is supported on OS X El Capitan (version 10.11) and macOS Sierra (version 10.12).
 
@@ -67,3 +39,16 @@ You can get started developing .NET Core apps by following these step-by-step tu
 * [Building a complete .NET Core solution on macOS using Visual Studio for Mac](tutorials/using-on-mac-vs-full-solution.md) - This tutorial shows you how to build a complete .NET Core solution that includes a reusable library and unit testing.
 
 See the [Prerequisites for macOS development](macos-prerequisites.md) topic for a list of the supported OS X / macOS versions.
+
+# [Linux](#tab/linux)
+
+Install .NET Core on [Linux](https://www.microsoft.com/net/core#linuxredhat).
+
+You can get started developing .NET Core apps by following these step-by-step tutorials.
+
+* [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) - Use any code editor with the [.NET Core cross-platform command-line interface (CLI)](tools/index.md).
+* [Get started with Visual Studio Code using C# and .NET Core on Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) - This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio Code](https://code.visualstudio.com/), Microsoft's lightweight cross-platform code editor, to create your first console application in .NET Core on Ubuntu 14.04.
+
+See the [Prerequisites for Linux development](linux-prerequisites.md) topic for a list of the supported Linux distros and versions.
+
+***
