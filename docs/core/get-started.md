@@ -31,13 +31,15 @@ Learn to build, debug, and publish a simple .NET Core console application using 
 Learn how to build a class library written in Visual Basic using Visual Studio 2017.
 
 
-* Get started with Visual Studio Code using C# and .NET Core on Windows  
-[!VIDEO https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/player]
+* Get started with Visual Studio Code using C# and .NET Core on Windows
+
+  > [!VIDEO https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/player]
 
   This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio Code](https://code.visualstudio.com/), Microsoft's lightweight cross-platform code editor, to create your first console application in .NET Core.
 
-* Get Started with .NET Core and Visual Studio 2017  
-[!VIDEO https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/player)
+* Get Started with .NET Core and Visual Studio 2017
+
+  > [!VIDEO https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/player)
 
   This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), Microsoft's fully-featured IDE, to create your first cross-platform console application in .NET Core.
 
