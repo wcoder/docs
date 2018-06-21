@@ -8,11 +8,13 @@ ms.date: 09/14/2017
 
 # Get started with .NET Core
 
-This article provides Links to .NET Core tutorials for installing and creating .NET Core apps on Windows, Linux, and Mac.
+This article provides information on getting started with .NET Core. .NET Core can be installed on Windows, Linux, and macOS. You can code in your favorite text editor while your code produces cross-platform libraries and applications. 
+
+If you're unsure what .NET Core is, or how it relates to other .NET technologies, start with the [.NET Core Guide](./). Put simply, .NET Core is an open-source, cross-platform, implementation of .NET.
+
+Download and install the latest [.NET Core SDK](https://www.microsoft.com/net/download/) to get started.
 
 # [Windows](#tab/windows)
-
-Install .NET Core on [Windows](https://www.microsoft.com/net/core#windows). 
 
 You can get started developing .NET Core apps by following these step-by-step tutorials.
 
@@ -28,11 +30,16 @@ Learn to build, debug, and publish a simple .NET Core console application using 
 * [Build a class library with Visual Basic and .NET Core in Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md)  
 Learn how to build a class library written in Visual Basic using Visual Studio 2017.
 
-* [Get started with Visual Studio Code using C# and .NET Core on Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core)  
-This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio Code](https://code.visualstudio.com/), Microsoft's lightweight cross-platform code editor, to create your first console application in .NET Core.
 
-* [Get Started with .NET Core and Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017)  
-This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), Microsoft's fully-featured IDE, to create your first cross-platform console application in .NET Core.
+* Get started with Visual Studio Code using C# and .NET Core on Windows  
+[!VIDEO https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/player]
+
+  This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio Code](https://code.visualstudio.com/), Microsoft's lightweight cross-platform code editor, to create your first console application in .NET Core.
+
+* Get Started with .NET Core and Visual Studio 2017  
+[!VIDEO https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/player)
+
+  This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), Microsoft's fully-featured IDE, to create your first cross-platform console application in .NET Core.
 
 * [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md)  
 Use any code editor with the [.NET Core cross-platform command-line interface (CLI)](tools/index.md).
