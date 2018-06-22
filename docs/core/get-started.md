@@ -16,6 +16,35 @@ Download and install the latest [.NET Core SDK](https://www.microsoft.com/net/do
 
 # [Windows](#tab/windows)
 
+This article demonstrates how to quickly create a .NET Core app from the command line. You can also use [Visual Studio 2017](tutorials/with-visual-studio-code.md) or [Visual Studio Code](tutorials/with-visual-studio.md) to create .NET Core app.
+
+First, open a command prompt such as **PowerShell** or **cmd.exe**.
+
+Next, create a folder and enter it.
+
+```console
+mkdir samplecode
+cd samplecode
+```
+
+Use the `dotnet` command to create, build, and run, an application.
+
+```console
+dotnet new console --language c# --output sample1
+dotnet build sample1
+dotnet run --project sample1
+```
+
+After you run the project, you'll see the following output:
+
+```console
+Hello World!
+```
+
+Congratulations! You've created a simple .NET Core application. This application can be copied and run on any other supported operating system.
+
+## Next steps
+
 You can get started developing .NET Core apps by following these step-by-step tutorials.
 
 * [Building a C# Hello World Application with .NET Core in Visual Studio 2017](./tutorials/with-visual-studio.md)  
@@ -39,14 +68,14 @@ Learn how to build a class library written in Visual Basic using Visual Studio 2
 
 * Get Started with .NET Core and Visual Studio 2017
 
-  > [!VIDEO https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/player)
+  > [!VIDEO https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/player]
 
-  This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), Microsoft's fully-featured IDE, to create your first cross-platform console application in .NET Core.
+  This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), Microsoft's fully featured IDE, to create your first cross-platform console application in .NET Core.
 
 * [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md)  
 Use any code editor with the [.NET Core cross-platform command-line interface (CLI)](tools/index.md).
 
-See the [Prerequisites for Windows development](windows-prerequisites.md) topic for a list of the supported Windows versions.
+See the [Prerequisites for Windows development](windows-prerequisites.md) article for a list of the supported Windows versions.
 
 # [Linux](#tab/linux)
 
@@ -60,7 +89,7 @@ Use any code editor with the [.NET Core cross-platform command-line interface (C
 * [Get started with Visual Studio Code using C# and .NET Core on Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)  
 This [Channel9](https://channel9.msdn.com) video shows you how to install and use [Visual Studio Code](https://code.visualstudio.com/), Microsoft's lightweight cross-platform code editor, to create your first console application in .NET Core on Ubuntu 14.04.
 
-See the [Prerequisites for Linux development](linux-prerequisites.md) topic for a list of the supported Linux distros and versions.
+See the [Prerequisites for Linux development](linux-prerequisites.md) article for a list of the supported Linux distros and versions.
 
 # [macOS / OS X](#tab/mac)
 
@@ -83,6 +112,6 @@ This tutorial shows you how to build a simple .NET Core console application usin
 * [Building a complete .NET Core solution on macOS using Visual Studio for Mac](tutorials/using-on-mac-vs-full-solution.md)  
 This tutorial shows you how to build a complete .NET Core solution that includes a reusable library and unit testing.
 
-See the [Prerequisites for macOS development](macos-prerequisites.md) topic for a list of the supported OS X / macOS versions.
+See the [Prerequisites for macOS development](macos-prerequisites.md) article for a list of the supported OS X / macOS versions.
 
 ***
